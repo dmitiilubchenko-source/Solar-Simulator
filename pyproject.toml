@@ -1,0 +1,18 @@
+[project]
+name = "solar-simulator"
+version = "0.1.0"
+description = "Учебный симулятор движения и гравитационных систем"
+requires-python = ">=3.11"
+
+dependencies = [
+    "numpy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
