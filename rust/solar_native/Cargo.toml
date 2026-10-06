@@ -1,0 +1,12 @@
+[package]
+name = "solar_native"
+version = "0.2.0"
+edition = "2021"
+
+[lib]
+name = "solar_native"
+crate-type = ["cdylib"]
+
+[dependencies]
+solar_core = { path = "../solar_core" }
+pyo3 = "0.29.3"

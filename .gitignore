@@ -7,3 +7,10 @@ __pycache__/
 build/
 dist/
 *.egg-info/
+
+/rust/solar_core/target/
+
+/rust/solar_native/target/
+/rust/solar_native/wheels/
+
+/.tools/

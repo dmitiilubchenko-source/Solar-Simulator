@@ -1,0 +1,44 @@
+[
+  {
+    "restitution": 0,
+    "contact_time_s": 23.830470833028926,
+    "velocities_before_m_s": [
+      0.6327384509365194,
+      -0.6327384509365194
+    ],
+    "velocities_after_m_s": [
+      0.0,
+      0.0
+    ],
+    "dissipated_energy_j": 5998500925.843102,
+    "energy_budget_residual_j": 0.0
+  },
+  {
+    "restitution": 0.5,
+    "contact_time_s": 23.830470833028926,
+    "velocities_before_m_s": [
+      0.6327384509365194,
+      -0.6327384509365194
+    ],
+    "velocities_after_m_s": [
+      -0.31636922546825963,
+      0.31636922546825963
+    ],
+    "dissipated_energy_j": 4498875694.382327,
+    "energy_budget_residual_j": 0.0
+  },
+  {
+    "restitution": 1,
+    "contact_time_s": 23.830470833028926,
+    "velocities_before_m_s": [
+      0.6327384509365194,
+      -0.6327384509365194
+    ],
+    "velocities_after_m_s": [
+      -0.6327384509365194,
+      0.6327384509365194
+    ],
+    "dissipated_energy_j": 0.0,
+    "energy_budget_residual_j": 0.0
+  }
+]

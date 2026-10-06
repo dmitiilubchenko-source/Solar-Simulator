@@ -1,0 +1,47 @@
+[
+  {
+    "scenario": "circle",
+    "steps": 8000,
+    "dt": 7889.358357775018,
+    "max_position_error_m": 0.00030438375109586387,
+    "max_velocity_error_m_s": 4.806398519153622e-11,
+    "python_seconds": 0.1571360999951139,
+    "rust_process_seconds": 0.008856499989633448
+  },
+  {
+    "scenario": "ellipse",
+    "steps": 8000,
+    "dt": 7889.358357775018,
+    "max_position_error_m": 0.028698060804639405,
+    "max_velocity_error_m_s": 1.7798050361801366e-08,
+    "python_seconds": 0.1570891000010306,
+    "rust_process_seconds": 0.006043199988198467
+  },
+  {
+    "scenario": "earth-moon",
+    "steps": 8000,
+    "dt": 589.3477919291636,
+    "max_position_error_m": 4.011342653412874e-06,
+    "max_velocity_error_m_s": 8.993946453556765e-12,
+    "python_seconds": 0.15785329999926034,
+    "rust_process_seconds": 0.005850300003658049
+  },
+  {
+    "scenario": "binary-star",
+    "steps": 8000,
+    "dt": 5578.627171313607,
+    "max_position_error_m": 0.0037220760064534436,
+    "max_velocity_error_m_s": 1.0232930535195206e-09,
+    "python_seconds": 0.15782770000805613,
+    "rust_process_seconds": 0.005864799997652881
+  },
+  {
+    "scenario": "sun-earth-moon",
+    "steps": 8000,
+    "dt": 589.3477919291636,
+    "max_position_error_m": 0.001672212914159849,
+    "max_velocity_error_m_s": 3.695393260545193e-09,
+    "python_seconds": 0.3368929999996908,
+    "rust_process_seconds": 0.006070500006899238
+  }
+]

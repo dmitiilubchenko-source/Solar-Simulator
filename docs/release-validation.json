@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-06",
+  "project_version": "0.2.0",
+  "python_tests_passed": 247,
+  "rust_tests_passed": 15,
+  "rustfmt_check": true,
+  "tk_event_loop": true,
+  "checkpoint_resume_both_backends": true,
+  "portable_relocation": true,
+  "system_only_path": true,
+  "other_computer_tested": false,
+  "archive": "dist\\SolarSimulator-0.2.0-20261006-204333.zip",
+  "archive_bytes": 61914017,
+  "sha256": "7191853c31180ff9cae11c80c8f5de0b01fbdc571940443f00466e8e7595f30e"
+}

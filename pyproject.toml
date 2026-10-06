@@ -1,6 +1,10 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "solar-simulator"
-version = "0.1.0"
+version = "0.2.0"
 description = "Учебный симулятор движения и гравитационных систем"
 requires-python = ">=3.11"
 
@@ -10,9 +14,16 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+native = ["maturin>=1.9,<2"]
 dev = [
     "pytest",
+    "scipy",
 ]
+
+[project.scripts]
+solar-simulator = "solar_simulator.cli:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+[tool.setuptools.packages.find]
+where = ["src"]

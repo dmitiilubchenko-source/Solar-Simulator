@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from src.motion import calculate_position
+from solar_simulator.motion import calculate_position
 
 
 times = np.linspace(0.0, 10.0, 21)

@@ -1,0 +1,12 @@
+[build-system]
+requires = ["maturin>=1.9,<2"]
+build-backend = "maturin"
+
+[project]
+name = "solar-native"
+version = "0.2.0"
+requires-python = ">=3.11"
+description = "Native physics backend for Solar Simulator"
+
+[tool.maturin]
+bindings = "pyo3"
