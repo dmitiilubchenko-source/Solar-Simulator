@@ -12,8 +12,10 @@
 .\.venv\Scripts\python.exe -B -m solar_simulator gui
 ```
 
-Готовая переносимая Windows-сборка находится в `dist`: распакуй ZIP
-и открой `Solar Simulator.cmd`. В ней собственные Python/Tk и библиотеки.
+Готовую переносимую Windows-сборку можно скачать из
+[первого релиза v0.2.0](https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/tag/v0.2.0).
+Распакуй ZIP и открой `Solar Simulator.cmd`. В ней собственные Python/Tk
+и библиотеки. Локальные результаты сборки находятся в `dist`.
 
 [Полное руководство](docs/user-guide.md) — управление, физические
 допущения, сохранение, выбор шага, CLI и сборка.
