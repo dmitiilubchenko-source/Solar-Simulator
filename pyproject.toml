@@ -11,13 +11,13 @@ requires-python = ">=3.11"
 dependencies = [
     "numpy",
     "matplotlib",
+    "scipy>=1.11",
 ]
 
 [project.optional-dependencies]
 native = ["maturin>=1.9,<2"]
 dev = [
     "pytest",
-    "scipy",
 ]
 
 [project.scripts]
@@ -27,3 +27,6 @@ solar-simulator = "solar_simulator.cli:main"
 testpaths = ["tests"]
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+"solar_simulator.data" = ["*.json", "*.txt"]

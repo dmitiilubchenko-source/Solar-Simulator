@@ -29,7 +29,7 @@ def test_checkpoint_resume_matches_uninterrupted(tmp_path,backend,name):
         assert a.velocity.distance_to(b.velocity)==0
 
 
-@pytest.mark.parametrize("field,value",[("schema_version",True),("schema_version",3),
+@pytest.mark.parametrize("field,value",[("schema_version",True),("schema_version",8),
     ("units","km"),("time",-1),("time",True),("dissipated_energy",float("nan")),
     ("halted",1),("bodies",[]),("events",[dict(first="A",second="B",time=1)])])
 def test_reject_malformed_checkpoint(field,value):

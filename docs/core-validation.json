@@ -1,0 +1,461 @@
+{
+  "schema": 1,
+  "generated_utc": "2026-10-08T20:31:33.105063+00:00",
+  "fingerprints_sha256": {
+    "assess_core.py": "573e66dc0e611b4c85b9d5634ee8c675395f2daef3e44fed4c7c1e239601a27c",
+    "simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 191 Stepping 2, GenuineIntel",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1"
+  },
+  "model": "Newtonian point masses; SI; unsoftened Velocity Verlet; one orbital period",
+  "reference": {
+    "method": "DOP853, dimensionless relative motion",
+    "rtol": 2e-13,
+    "atol": 2e-15,
+    "closure_checks": [
+      {
+        "eccentricity": 0.0,
+        "closure_norm": 6.900616039321377e-13
+      },
+      {
+        "eccentricity": 0.3,
+        "closure_norm": 8.200657628723632e-12
+      },
+      {
+        "eccentricity": 0.6,
+        "closure_norm": 2.7344374391583884e-11
+      }
+    ]
+  },
+  "sampling_warning": "Maxima are over 101 snapshots, not every physical step",
+  "runs": [
+    {
+      "backend": "python",
+      "eccentricity": 0.0,
+      "steps_per_period": 2000,
+      "dt_seconds": 15778.716715550036,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 2.159772231816699e-05,
+        "velocity_units": 2.0670760143649306e-05,
+        "energy_relative": 2.4352302371748715e-11,
+        "momentum_scaled": 1.7329919904488865e-15,
+        "angular_relative": 4.1795105320521434e-15,
+        "com_au": 2.0038463998658653e-20
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.0,
+      "steps_per_period": 4000,
+      "dt_seconds": 7889.358357775018,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 5.399444525747849e-06,
+        "velocity_units": 5.167706712158821e-06,
+        "energy_relative": 1.5323413124646328e-12,
+        "momentum_scaled": 2.813898034946989e-15,
+        "angular_relative": 6.178406873468386e-15,
+        "com_au": 5.444712363011054e-20
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.0,
+      "steps_per_period": 8000,
+      "dt_seconds": 3944.679178887509,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 1.3498616169311112e-06,
+        "velocity_units": 1.2919272955043055e-06,
+        "energy_relative": 9.378572929171497e-14,
+        "momentum_scaled": 5.842348208382448e-15,
+        "angular_relative": 8.904174611763263e-15,
+        "com_au": 1.1910098605957272e-19
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.0,
+      "steps_per_period": 2000,
+      "dt_seconds": 15778.716715550036,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 2.1597722308702623e-05,
+        "velocity_units": 2.0670760129549264e-05,
+        "energy_relative": 2.4351214370248813e-11,
+        "momentum_scaled": 1.416852848552875e-15,
+        "angular_relative": 3.45263913517351e-15,
+        "com_au": 1.9813801701844846e-20
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.0,
+      "steps_per_period": 4000,
+      "dt_seconds": 7889.358357775018,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 5.39944452446866e-06,
+        "velocity_units": 5.167706711502317e-06,
+        "energy_relative": 1.5319061118646714e-12,
+        "momentum_scaled": 2.341146523248546e-15,
+        "angular_relative": 6.178406873468386e-15,
+        "com_au": 4.1905032292872064e-20
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.0,
+      "steps_per_period": 8000,
+      "dt_seconds": 3944.679178887509,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 1.3498616166175307e-06,
+        "velocity_units": 1.2919272959347772e-06,
+        "energy_relative": 9.378572929171497e-14,
+        "momentum_scaled": 5.819911128717347e-15,
+        "angular_relative": 8.722456762543604e-15,
+        "com_au": 1.168545350262764e-19
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.3,
+      "steps_per_period": 2000,
+      "dt_seconds": 15778.716715550036,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 8.164254815472388e-05,
+        "velocity_units": 0.00012801289670666389,
+        "energy_relative": 5.365696283347009e-06,
+        "momentum_scaled": 4.327695047592879e-16,
+        "angular_relative": 2.0954127248855652e-15,
+        "com_au": 8.889758987860331e-21
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.3,
+      "steps_per_period": 4000,
+      "dt_seconds": 7889.358357775018,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 2.0410435454762248e-05,
+        "velocity_units": 3.200305942385463e-05,
+        "energy_relative": 1.341413972659631e-06,
+        "momentum_scaled": 2.4287226929196804e-15,
+        "angular_relative": 5.714761976960633e-15,
+        "com_au": 6.532920390836756e-20
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.3,
+      "steps_per_period": 8000,
+      "dt_seconds": 3944.679178887509,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 5.10259305510839e-06,
+        "velocity_units": 8.000750013770104e-06,
+        "energy_relative": 3.3535287599605695e-07,
+        "momentum_scaled": 2.0755689275904166e-15,
+        "angular_relative": 1.1239031888022577e-14,
+        "com_au": 1.0270188620418312e-19
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.3,
+      "steps_per_period": 2000,
+      "dt_seconds": 15778.716715550036,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 8.164254815590304e-05,
+        "velocity_units": 0.00012801289670902086,
+        "energy_relative": 5.36569628356461e-06,
+        "momentum_scaled": 6.884648362769496e-16,
+        "angular_relative": 2.285904790784253e-15,
+        "com_au": 8.641483048271652e-21
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.3,
+      "steps_per_period": 4000,
+      "dt_seconds": 7889.358357775018,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 2.0410435459910026e-05,
+        "velocity_units": 3.200305942897067e-05,
+        "energy_relative": 1.3414139730948316e-06,
+        "momentum_scaled": 1.9188926273135616e-15,
+        "angular_relative": 5.524269911061945e-15,
+        "com_au": 6.216542990780601e-20
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.3,
+      "steps_per_period": 8000,
+      "dt_seconds": 3944.679178887509,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 5.102593050950255e-06,
+        "velocity_units": 8.000750009369243e-06,
+        "energy_relative": 3.3535287556085635e-07,
+        "momentum_scaled": 2.6416084658079638e-15,
+        "angular_relative": 1.104853982212389e-14,
+        "com_au": 1.0152007958529597e-19
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.6,
+      "steps_per_period": 2000,
+      "dt_seconds": 15778.716715550036,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 0.0013482036571854745,
+        "velocity_units": 0.004261221149793865,
+        "energy_relative": 7.31233906158465e-05,
+        "momentum_scaled": 6.152564581596357e-16,
+        "angular_relative": 2.2714731152457302e-15,
+        "com_au": 2.2663260726136084e-20
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.6,
+      "steps_per_period": 4000,
+      "dt_seconds": 7889.358357775018,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 0.00033701138950761406,
+        "velocity_units": 0.001065231151231137,
+        "energy_relative": 1.8279933368656404e-05,
+        "momentum_scaled": 5.589335526249498e-16,
+        "angular_relative": 5.565109132352039e-15,
+        "com_au": 1.5684887860169832e-20
+      }
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.6,
+      "steps_per_period": 8000,
+      "dt_seconds": 3944.679178887509,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 8.425036280463283e-05,
+        "velocity_units": 0.00026630305254960254,
+        "energy_relative": 4.569925945515374e-06,
+        "momentum_scaled": 1.4916731123722117e-15,
+        "angular_relative": 3.180062361344022e-15,
+        "com_au": 6.904676089514083e-20
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.6,
+      "steps_per_period": 2000,
+      "dt_seconds": 15778.716715550036,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 0.0013482036571858943,
+        "velocity_units": 0.004261221149795071,
+        "energy_relative": 7.31233906167169e-05,
+        "momentum_scaled": 5.954549261402857e-16,
+        "angular_relative": 1.817178492196584e-15,
+        "com_au": 1.8293986506628034e-20
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.6,
+      "steps_per_period": 4000,
+      "dt_seconds": 7889.358357775018,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 0.00033701138949939716,
+        "velocity_units": 0.0010652311512008268,
+        "energy_relative": 1.8279933368221202e-05,
+        "momentum_scaled": 7.08102769455185e-16,
+        "angular_relative": 5.565109132352039e-15,
+        "com_au": 1.9280884876451323e-20
+      }
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.6,
+      "steps_per_period": 8000,
+      "dt_seconds": 3944.679178887509,
+      "sample_count": 101,
+      "max_sampled_errors": {
+        "position_au": 8.425036278713252e-05,
+        "velocity_units": 0.00026630305249770585,
+        "energy_relative": 4.569925944209773e-06,
+        "momentum_scaled": 1.325592446344973e-15,
+        "angular_relative": 2.952915049819449e-15,
+        "com_au": 4.903281436858324e-20
+      }
+    }
+  ],
+  "convergence": [
+    {
+      "backend": "python",
+      "eccentricity": 0.0,
+      "position_error_ratios": [
+        3.999989668414197,
+        3.999998561351348
+      ]
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.0,
+      "position_error_ratios": [
+        3.999989667608999,
+        3.999998561332925
+      ]
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.3,
+      "position_error_ratios": [
+        4.000039506049574,
+        4.000012392587064
+      ]
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.3,
+      "position_error_ratios": [
+        4.000039505098483,
+        4.0000123968555545
+      ]
+    },
+    {
+      "backend": "python",
+      "eccentricity": 0.6,
+      "position_error_ratios": [
+        4.000469121103738,
+        4.000117961380247
+      ]
+    },
+    {
+      "backend": "rust",
+      "eccentricity": 0.6,
+      "position_error_ratios": [
+        4.0004691212025225,
+        4.000117962113614
+      ]
+    }
+  ],
+  "benchmarks": [
+    {
+      "backend": "python",
+      "bodies": 2,
+      "steps": 100,
+      "seconds_per_batch_samples": [
+        0.002753957894655239,
+        0.002922516668655185,
+        0.0029127222207737053
+      ],
+      "batch_counts": [
+        19,
+        18,
+        18
+      ],
+      "median_seconds": 0.0029127222207737053
+    },
+    {
+      "backend": "rust",
+      "bodies": 2,
+      "steps": 100,
+      "seconds_per_batch_samples": [
+        1.6922673427967855e-05,
+        1.7343808534550936e-05,
+        1.6901520790293658e-05
+      ],
+      "batch_counts": [
+        2955,
+        2883,
+        2959
+      ],
+      "median_seconds": 1.6922673427967855e-05
+    },
+    {
+      "backend": "python",
+      "bodies": 16,
+      "steps": 100,
+      "seconds_per_batch_samples": [
+        0.10749179997947067,
+        0.10935119999339804,
+        0.10735219996422529
+      ],
+      "batch_counts": [
+        1,
+        1,
+        1
+      ],
+      "median_seconds": 0.10749179997947067
+    },
+    {
+      "backend": "rust",
+      "bodies": 16,
+      "steps": 100,
+      "seconds_per_batch_samples": [
+        0.00026062291696386336,
+        0.00024397512216393542,
+        0.00024863564360905253
+      ],
+      "batch_counts": [
+        192,
+        205,
+        202
+      ],
+      "median_seconds": 0.00024863564360905253
+    },
+    {
+      "backend": "python",
+      "bodies": 64,
+      "steps": 100,
+      "seconds_per_batch_samples": [
+        1.63683500001207,
+        1.6113722000154667,
+        1.6186842999886721
+      ],
+      "batch_counts": [
+        1,
+        1,
+        1
+      ],
+      "median_seconds": 1.6186842999886721
+    },
+    {
+      "backend": "rust",
+      "bodies": 64,
+      "steps": 100,
+      "seconds_per_batch_samples": [
+        0.002953041177106035,
+        0.00294422941035865,
+        0.003068347057491979
+      ],
+      "batch_counts": [
+        17,
+        17,
+        17
+      ],
+      "median_seconds": 0.002953041177106035
+    }
+  ],
+  "checks": {
+    "all_orbit_thresholds": true,
+    "second_order_position": true
+  }
+}

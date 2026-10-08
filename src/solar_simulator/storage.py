@@ -10,8 +10,11 @@ import tempfile
 from .experiment import Event, Experiment, Settings
 from .simulation import Body, total_energy
 from .vector3 import Vector3
+from .ephemerides import EphemerisOrigin
+from .oblateness import (FixedJ2, PrescribedQuadrupole, prescribed, validate_figures,
+                         validate_orientation_origin)
 
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 7
 MAX_BYTES = 10_000_000
 
 
@@ -22,12 +25,16 @@ def _body(b):
 
 
 def to_document(experiment: Experiment) -> dict:
-    document = dict(schema_version=SCHEMA_VERSION,units="SI",model="newtonian-verlet",
+    document = dict(schema_version=SCHEMA_VERSION,units="SI",model=experiment.settings.physics+"-"+experiment.settings.integrator,
         settings=asdict(experiment.settings),initial=[_body(b) for b in experiment.initial],
         bodies=[_body(b) for b in experiment.bodies],time=experiment.time,
         dissipated_energy=experiment.dissipated_energy,halted=experiment.halted,
-        model_energy_offset=experiment.model_energy_offset,
-        events=[asdict(e) for e in experiment.events])
+        model_energy_offset=experiment.model_energy_offset, orientation_work=experiment.orientation_work,
+        events=[asdict(e) for e in experiment.events], origin=asdict(experiment.origin) if experiment.origin else None)
+    document["settings"]["figures"] = [dict(asdict(f), axis=list(f.axis)) if isinstance(f, FixedJ2)
+                                        else dict(asdict(f), kind="prescribed-q2") for f in experiment.settings.figures]
+    if experiment.settings.figures:
+        document["model"] += "-prescribed-q2" if prescribed(experiment.settings.figures) else "-fixed-j2"
     from_document(document)  # Одинаковые гарантии при записи и чтении.
     return document
 
@@ -70,7 +77,7 @@ def from_document(document: dict) -> Experiment:
         _keys(document,("schema_version","units","model","settings","initial","bodies",
                         "time","dissipated_energy","halted","events"))
         document=deepcopy(document)
-        document["schema_version"]=SCHEMA_VERSION
+        document["schema_version"]=2
         document["model_energy_offset"]=0.0
         for field in ("initial","bodies"):
             if type(document[field]) is not list:
@@ -83,15 +90,91 @@ def from_document(document: dict) -> Experiment:
         for event in document["events"]:
             _keys(event,("first","second","time"))
             event.update(outcome="contact",result=None)
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 2:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+                        "time","dissipated_energy","halted","events","model_energy_offset"))
+        _keys(document["settings"], ("dt", "backend", "contact_mode", "restitution"))
+        if document["model"] != "newtonian-verlet":
+            raise ValueError("Неподдерживаемая физическая модель")
+        document = deepcopy(document)
+        document["schema_version"] = 3
+        document["settings"].update(integrator="verlet", rtol=1e-13, position_atol=1e-3, velocity_atol=1e-9)
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 3:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+                        "time","dissipated_energy","halted","events","model_energy_offset"))
+        document=deepcopy(document)
+        document["schema_version"]=4
+        document["origin"]=None
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 4:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+                        "time","dissipated_energy","halted","events","model_energy_offset","origin"))
+        _keys(document["settings"],("dt","backend","contact_mode","restitution","integrator",
+                                    "rtol","position_atol","velocity_atol"))
+        if document["model"] != "newtonian-"+str(document["settings"]["integrator"]):
+            raise ValueError("Неподдерживаемая физическая модель старой схемы")
+        document=deepcopy(document)
+        document["schema_version"]=5
+        document["settings"]["physics"]="newtonian"
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 5:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+                        "time","dissipated_energy","halted","events","model_energy_offset","origin"))
+        _keys(document["settings"],("dt","backend","contact_mode","restitution","integrator",
+                                    "rtol","position_atol","velocity_atol","physics"))
+        document=deepcopy(document)
+        document["schema_version"]=6
+        document["settings"]["figures"]=[]
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 6:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+                        "time","dissipated_energy","halted","events","model_energy_offset","origin"))
+        if type(document["settings"]) is not dict or type(document["settings"].get("figures")) is not list:
+            raise ValueError("Неверные параметры фигур старой схемы")
+        for figure in document["settings"]["figures"]:
+            _keys(figure,("body","coefficient","reference_radius","axis","provenance"))
+        document=deepcopy(document)
+        document["schema_version"]=7
+        document["orientation_work"]=0.0
     _keys(document,("schema_version","units","model","settings","initial","bodies",
-                    "time","dissipated_energy","halted","events","model_energy_offset"))
+                    "time","dissipated_energy","halted","events","model_energy_offset","origin","orientation_work"))
+    origin=None
+    if document["origin"] is not None:
+        _keys(document["origin"],("epoch_jd_tdb","frame","center","ephemeris","dataset_sha256","gm_sha256"))
+        origin=EphemerisOrigin(**document["origin"])
     if (type(document["schema_version"]) is not int or document["schema_version"]!=SCHEMA_VERSION
-            or document["units"]!="SI" or document["model"]!="newtonian-verlet"):
+            or document["units"]!="SI"):
         raise ValueError("Неподдерживаемая версия, единицы или физическая модель")
-    _keys(document["settings"],("dt","backend","contact_mode","restitution"))
-    settings = Settings(**document["settings"])
+    _keys(document["settings"],("dt","backend","contact_mode","restitution","integrator","rtol","position_atol","velocity_atol","physics","figures"))
+    values=document["settings"]["figures"]
+    if type(values) is not list or len(values)>1000:
+        raise ValueError("Неверный список фигур J2")
+    figures=[]
+    for value in values:
+        if type(value) is dict and value.get("kind") == "prescribed-q2":
+            _keys(value,("kind","body","coefficient","reference_radius","c22","orientation","profile_sha256","provenance"))
+            figures.append(PrescribedQuadrupole(**{k:v for k,v in value.items() if k != "kind"}))
+        else:
+            _keys(value,("body","coefficient","reference_radius","axis","provenance"))
+            if type(value["axis"]) is not list or len(value["axis"])!=3:
+                raise ValueError("Неверная ось J2")
+            figures.append(FixedJ2(**dict(value,axis=tuple(value["axis"]))))
+    settings = Settings(**dict(document["settings"],figures=tuple(figures)))
+    suffix = ("-prescribed-q2" if prescribed(figures) else "-fixed-j2") if figures else ""
+    if document["model"] != settings.physics+"-"+settings.integrator+suffix:
+        raise ValueError("Физическая модель не соответствует интегратору")
     initial,bodies = _bodies(document["initial"]),_bodies(document["bodies"])
+    validate_figures(initial, settings.figures)
+    validate_figures(bodies, settings.figures)
+    if settings.integrator == "dop853" and any(b.radius > 0 for b in initial+bodies):
+        raise ValueError("DOP853 поддерживает только точечные тела без контактов")
+    if settings.physics == "eih-1pn":
+        from .relativity import validate_bodies
+        validate_bodies(initial)
+        validate_bodies(bodies)
     time = _number(document["time"],nonnegative=True)
+    validate_figures(bodies, settings.figures, time)
+    validate_orientation_origin(settings.figures, origin)
+    work = _number(document["orientation_work"])
+    if work != 0 and (not prescribed(settings.figures) or time == 0):
+        raise ValueError("Работа ориентации требует продолжающегося расчёта с заданными осями")
     loss = _number(document["dissipated_energy"],nonnegative=True)
     offset = _number(document["model_energy_offset"])
     if type(document["halted"]) is not bool or type(document["events"]) is not list or len(document["events"])>100000:
@@ -125,7 +208,7 @@ def from_document(document: dict) -> Experiment:
     if document["halted"] and (not events or settings.contact_mode!="stop"
                                or events[-1].time!=time or events[-1].outcome!="contact"):
         raise ValueError("Остановка должна соответствовать последнему контакту")
-    return Experiment(initial,bodies,settings,time,loss,tuple(events),document["halted"],offset)
+    return Experiment(initial,bodies,settings,time,loss,tuple(events),document["halted"],offset,origin,work)
 
 
 def save(experiment: Experiment, path: str | Path):

@@ -54,3 +54,23 @@ def test_newtonian_similarity(backend):
     for x,y in zip(a.bodies,b.bodies):
         assert x.position.multiply(length).distance_to(y.position)<1e-7
         assert x.velocity.multiply(length/time).distance_to(y.velocity)<1e-5
+
+@pytest.mark.parametrize("eccentricity", [0.0, 0.6])
+def test_smooth_motion_is_time_reversible(backend, eccentricity):
+    # Flip velocities, run the same positive interval, then flip back.
+    # This checks the Verlet map rather than reproducing its formula.
+    from solar_simulator.rust_backend import evolve
+    from solar_simulator.simulation import AU, step, sun_earth
+    initial, period = sun_earth(eccentricity)
+    def run(bodies):
+        if backend == "rust":
+            return evolve(bodies, period/4000, 1000)
+        for _ in range(1000):
+            bodies = step(bodies, period/4000)
+        return bodies
+    forward = run(initial)
+    reverse = [Body(b.name, b.mass, b.position, b.velocity.multiply(-1)) for b in forward]
+    recovered = run(reverse)
+    for original, result in zip(initial, recovered):
+        assert original.position.distance_to(result.position)/AU < 1e-11
+        assert original.velocity.distance_to(result.velocity.multiply(-1)) < 1e-6

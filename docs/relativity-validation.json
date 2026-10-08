@@ -1,0 +1,110 @@
+{
+  "physics": "eih-1pn",
+  "c_metres_per_second": 299792458.0,
+  "epoch_jd_tdb": 2461321.5,
+  "dataset_sha256": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+  "duration_seconds": 31557600.0,
+  "samples": 13,
+  "bodies": [
+    {
+      "name": "Sun",
+      "newtonian_jpl_position_discrepancy_metres": 218.11632099983723,
+      "eih_1pn_jpl_position_discrepancy_metres": 218.50972929127303,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 1.3769301740937557e-05,
+      "numerical_position_agreement_metres": 1.6741864510834023e-06,
+      "numerical_velocity_agreement_m_per_s": 1.8594297642340066e-13
+    },
+    {
+      "name": "Mercury",
+      "newtonian_jpl_position_discrepancy_metres": 154005.77039397796,
+      "eih_1pn_jpl_position_discrepancy_metres": 311.3876489021229,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 9.640694453607666e-05,
+      "numerical_position_agreement_metres": 1.496825839293307,
+      "numerical_velocity_agreement_m_per_s": 1.1844373854070815e-06
+    },
+    {
+      "name": "Venus",
+      "newtonian_jpl_position_discrepancy_metres": 95579.70031567896,
+      "eih_1pn_jpl_position_discrepancy_metres": 229.3940480988137,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 1.5261096406277647e-05,
+      "numerical_position_agreement_metres": 0.0014418054431898659,
+      "numerical_velocity_agreement_m_per_s": 5.044745532332781e-10
+    },
+    {
+      "name": "Earth-Moon",
+      "newtonian_jpl_position_discrepancy_metres": 42718.461563996025,
+      "eih_1pn_jpl_position_discrepancy_metres": 97598.25678825384,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 0.019514533001461578,
+      "numerical_position_agreement_metres": 0.0076599273200774415,
+      "numerical_velocity_agreement_m_per_s": 1.5487583900058647e-09
+    },
+    {
+      "name": "Mars",
+      "newtonian_jpl_position_discrepancy_metres": 32503.26848014301,
+      "eih_1pn_jpl_position_discrepancy_metres": 571.7305197560567,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 4.407944964693033e-05,
+      "numerical_position_agreement_metres": 0.0019902399853779893,
+      "numerical_velocity_agreement_m_per_s": 2.2552010173174484e-10
+    },
+    {
+      "name": "Jupiter",
+      "newtonian_jpl_position_discrepancy_metres": 329.303532552505,
+      "eih_1pn_jpl_position_discrepancy_metres": 273.30419328031894,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 1.8872077147250097e-05,
+      "numerical_position_agreement_metres": 0.0027164829928206136,
+      "numerical_velocity_agreement_m_per_s": 3.8604382544722283e-11
+    },
+    {
+      "name": "Saturn",
+      "newtonian_jpl_position_discrepancy_metres": 80.08023014665594,
+      "eih_1pn_jpl_position_discrepancy_metres": 31.103834379710662,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 1.911519335615094e-06,
+      "numerical_position_agreement_metres": 0.007106341779960391,
+      "numerical_velocity_agreement_m_per_s": 1.3853056135371385e-11
+    },
+    {
+      "name": "Uranus",
+      "newtonian_jpl_position_discrepancy_metres": 28.516180355466602,
+      "eih_1pn_jpl_position_discrepancy_metres": 17.11327165983971,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 1.0823329401903131e-06,
+      "numerical_position_agreement_metres": 0.006422340597462167,
+      "numerical_velocity_agreement_m_per_s": 1.467311867343254e-11
+    },
+    {
+      "name": "Neptune",
+      "newtonian_jpl_position_discrepancy_metres": 67.94990975057924,
+      "eih_1pn_jpl_position_discrepancy_metres": 64.78831851568582,
+      "eih_1pn_jpl_velocity_discrepancy_m_per_s": 4.113518135561604e-06,
+      "numerical_position_agreement_metres": 0.004910225212990659,
+      "numerical_velocity_agreement_m_per_s": 1.0025181392908484e-11
+    }
+  ],
+  "independent_reference_position_consistency_metres": 1.5119951060292598,
+  "precession": [
+    {
+      "physics": "newtonian",
+      "orbits": 5,
+      "expected_radians_per_orbit": 5.018652900930273e-07,
+      "measured_radians_per_orbit": 1.3453881096339168e-12,
+      "expected_arcsec_per_century": 42.98047104091076,
+      "measured_arcsec_per_century": 0.00011522098823408873,
+      "relative_difference": null
+    },
+    {
+      "physics": "eih-1pn",
+      "orbits": 5,
+      "expected_radians_per_orbit": 5.018652900930273e-07,
+      "measured_radians_per_orbit": 5.018659823457134e-07,
+      "expected_arcsec_per_century": 42.98047104091076,
+      "measured_arcsec_per_century": 42.98053032643441,
+      "relative_difference": 1.3793595607468287e-06
+    }
+  ],
+  "diagnostics": {
+    "maximum_relative_energy_residual": 1.8627045195248005e-15,
+    "maximum_momentum_change_kg_m_per_s": 2.5385561357648016e+16,
+    "maximum_relative_angular_change": 7.907645442359474e-16
+  },
+  "checks_passed": true,
+  "limitation": "Sampled agreement is not a global bound. 1PN invariant residual includes O(c^-4) truncation. Nine bodies omit resolved moons, asteroids, solar oblateness and higher PN terms."
+}

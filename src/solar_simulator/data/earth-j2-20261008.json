@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "model": "fixed-axis-j2",
+  "body": "Earth",
+  "units": "SI",
+  "coefficient": 0.00108262539,
+  "reference_radius_metres": 6378136.6,
+  "axis": [
+    0.0026020959422886785,
+    0.39776866017225926,
+    0.9174820554547499
+  ],
+  "frame": "Ecliptic J2000",
+  "epoch_jd_tdb": 2461321.5,
+  "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+  "bodies": [
+    "Sun",
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Moon",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+  ],
+  "pole_ra_degrees": -0.1715738945927447,
+  "pole_dec_degrees": 89.8509100479124,
+  "obliquity_arcsec": 84381.448,
+  "sources": [
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+      "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c"
+    },
+    {
+      "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc",
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+    }
+  ],
+  "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec",
+  "limitation": "Constant nominal J2 and approximate IAU pole frozen at initial epoch; no precession/nutation evolution, secular J2 change, higher harmonics, lunar figure, spin dynamics or tides.",
+  "lunar_constants_not_enabled": {
+    "reference_radius_km": 1738.0,
+    "J2M": 0.000203214360135,
+    "C22M": 2.2380850528171017e-05
+  }
+}

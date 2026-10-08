@@ -20,7 +20,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 
 def dependency_closure():
-    queue=deque(["matplotlib","numpy"])
+    queue=deque(["matplotlib","numpy","scipy"])
     found={}
     while queue:
         name=queue.popleft().lower().replace("_","-")
@@ -96,23 +96,41 @@ def build():
     dll_name=f"python{sys.version_info.major}{sys.version_info.minor}"+("t" if __import__("sysconfig").get_config_var("Py_GIL_DISABLED") else "")
     (runtime/f"{dll_name}._pth").write_text(".\nLib\nDLLs\nLib/site-packages\nimport site\n",encoding="utf-8")
     (output/"Solar Simulator.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui\r\nif errorlevel 1 pause\r\n',encoding="ascii")
-    shutil.copy2(ROOT/"docs/user-guide.md",output/"USER-GUIDE.md")
-    shutil.copy2(ROOT/"docs/physics.md",output/"PHYSICS.md")
+    (output/"USER-GUIDE.md").write_text(
+        (ROOT/"docs/user-guide.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)", "(docs/accuracy-validation.md)").replace("(ephemerides.md)", "(docs/ephemerides.md)").replace("(relativity.md)", "(docs/relativity.md)").replace("(moon.md)", "(docs/moon.md)").replace("(oblateness.md)", "(docs/oblateness.md)").replace("(orientation.md)", "(docs/orientation.md)"),
+        encoding="utf-8")
+    (output/"PHYSICS.md").write_text(
+        (ROOT/"docs/physics.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)","(docs/accuracy-validation.md)").replace("(relativity.md)","(docs/relativity.md)").replace("(oblateness.md)","(docs/oblateness.md)").replace("(orientation.md)","(docs/orientation.md)").replace("(user-guide.md)","(docs/user-guide.md)"),
+        encoding="utf-8")
     documents=output/"docs"
     documents.mkdir()
-    for name in ("physics.md","rust.md","user-guide.md"):
+    for name in ("physics.md","rust.md","user-guide.md","core-validation.md","core-validation.json","accuracy-validation.md","accuracy-validation.json","ephemerides.md","solar-system-reference.json","solar-system-validation.json","relativity.md","relativity-validation.json","moon.md","solar-system-moon-reference.json","moon-validation.json","oblateness.md","oblateness-validation.json","orientation.md","orientation-validation.json","orientation-spice-reference.json"):
         shutil.copy2(ROOT/"docs"/name,documents/name)
-    from solar_simulator.experiment import preset
+    orientation_doc=documents/"orientation.md"
+    orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
+        "../src/solar_simulator/data/ERFA-LICENSE.txt",
+        "../runtime/Lib/site-packages/solar_simulator/data/ERFA-LICENSE.txt"),encoding="utf-8")
+    from solar_simulator.experiment import preset, PRESETS
     from solar_simulator.storage import save
     scenarios=output/"scenarios"
     scenarios.mkdir()
-    for name in ("sun-earth","earth-moon","binary-star","sun-earth-moon","spheres"):
-        save(preset(name,backend="rust"),scenarios/f"{name}.json")
+    for name in PRESETS:
+        save(preset(name,backend="python" if name.startswith("solar-system") else "rust"),scenarios/f"{name}.json")
+    from dataclasses import replace
+    system=preset("solar-system")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn")),scenarios/"solar-system-1pn.json")
+    system=preset("solar-system-moon")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn")),scenarios/"solar-system-moon-1pn.json")
+    from solar_simulator.oblateness import earth_j2, earth_moon_quadrupoles
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=earth_j2(system.bodies,system.origin))),
+         scenarios/"solar-system-moon-1pn-j2.json")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=earth_moon_quadrupoles(system.bodies,system.origin))),
+         scenarios/"solar-system-moon-1pn-q2.json")
     manifest=dict(python=sys.version,python_abi=dll_name,project_version=project_version,
                   native_wheel=native_wheel.name,dependencies={name:d.version for name,d in dependencies.items()})
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     # Prove the copied runtime imports local packages and initializes real Tk.
-    probe="import sys,pathlib,tkinter,solar_simulator,solar_native,numpy,matplotlib; from solar_simulator.experiment import advance,preset; r=tkinter.Tk(); r.withdraw(); r.destroy(); s=advance(preset('spheres',backend='rust'),2000); assert len(s.events)==2; print(sys.prefix); print(pathlib.Path(solar_simulator.__file__).resolve()); print('portable Tk + native physics OK')"
+    probe="import sys,pathlib,tkinter,solar_simulator,solar_native,numpy,matplotlib,scipy; from solar_simulator.experiment import advance,preset; r=tkinter.Tk(); r.withdraw(); r.destroy(); s=advance(preset('spheres',backend='rust'),2000); assert len(s.events)==2; from dataclasses import replace; a=preset('sun-earth'); a=replace(a,settings=replace(a.settings,integrator='dop853')); assert advance(a,20).time>0; assert len(advance(preset('solar-system'),20).bodies)==9; print(sys.prefix); print(pathlib.Path(solar_simulator.__file__).resolve()); print('portable Tk + native physics OK')"
     subprocess.run([str(runtime/"python.exe"),"-B","-I","-c",probe],check=True,cwd=output)
     smoke="import tkinter; from solar_simulator.app import Laboratory; from solar_simulator.experiment import preset; r=tkinter.Tk(); r.withdraw(); a=Laboratory(r,preset('spheres',backend='rust')); a._start(); r.after(1000,a.close); r.mainloop(); print('portable application OK')"
     subprocess.run([str(runtime/"python.exe"),"-B","-I","-c",smoke],check=True,cwd=output)

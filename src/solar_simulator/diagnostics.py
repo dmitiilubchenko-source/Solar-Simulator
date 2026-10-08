@@ -6,6 +6,22 @@ from .simulation import Body, G
 from .vector3 import Vector3
 
 
+def model_invariants(bodies, physics="newtonian", figures=(), time=0.):
+    """Select diagnostics consistent with the force law, not the integrator."""
+    if physics == "eih-1pn":
+        from .relativity import invariants
+        result = invariants(bodies)
+    elif physics != "newtonian":
+        raise ValueError("Неизвестная физическая модель")
+    else:
+        from .simulation import total_energy, total_momentum
+        result = total_energy(bodies), total_momentum(bodies), angular_momentum(bodies)
+    if figures:
+        from .oblateness import potential_energy
+        return result[0]+potential_energy(bodies, figures, time), result[1], result[2]
+    return result
+
+
 def angular_momentum(bodies: list[Body]) -> Vector3:
     """Общий L = Σ (r × mv + spin), spin в кг·м²/с."""
     result = Vector3(0, 0, 0)

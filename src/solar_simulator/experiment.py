@@ -7,6 +7,8 @@ from .contacts import run_until_contact
 from .simulation import Body, G, step, sun_earth, total_energy
 from .scenarios import binary_star, earth_moon, sun_earth_moon
 from .vector3 import Vector3
+from .ephemerides import EphemerisOrigin
+from .oblateness import FixedJ2, PrescribedQuadrupole, validate_figures, validate_orientation_origin
 
 
 @dataclass(frozen=True)
@@ -15,8 +17,32 @@ class Settings:
     backend: str = "python"
     contact_mode: str = "stop"
     restitution: float = 1.0
+    integrator: str = "verlet"
+    rtol: float = 1e-13
+    position_atol: float = 1e-3
+    velocity_atol: float = 1e-9
+    physics: str = "newtonian"
+    figures: tuple[FixedJ2 | PrescribedQuadrupole, ...] = ()
 
     def __post_init__(self):
+        if (type(self.figures) is not tuple or any(not isinstance(f, (FixedJ2, PrescribedQuadrupole)) for f in self.figures)
+                or len({f.body for f in self.figures}) != len(self.figures)):
+            raise ValueError("Неверные параметры фигур J2")
+        if self.figures and (self.integrator != "dop853" or self.backend != "python"):
+            raise ValueError("J2 требует Python/DOP853")
+        if self.physics not in ("newtonian", "eih-1pn"):
+            raise ValueError("Физика: newtonian или eih-1pn")
+        if self.physics == "eih-1pn" and (self.integrator != "dop853" or self.backend != "python"):
+            raise ValueError("1PN требует Python/DOP853")
+        if self.integrator not in ("verlet", "dop853"):
+            raise ValueError("Интегратор: verlet или dop853")
+        for value in (self.rtol, self.position_atol, self.velocity_atol):
+            if type(value) not in (int, float) or not isfinite(value) or value <= 0:
+                raise ValueError("Допуски должны быть положительными конечными числами")
+        if not 3e-14 <= self.rtol <= 1e-2:
+            raise ValueError("rtol должен быть от 3e-14 до 1e-2")
+        if self.integrator == "dop853" and self.backend != "python":
+            raise ValueError("DOP853 использует Python/SciPy; выберите ядро python")
         if type(self.dt) not in (int,float) or not isfinite(self.dt) or self.dt <= 0:
             raise ValueError("dt должен быть положительным конечным числом")
         if self.backend not in ("python","rust"):
@@ -46,6 +72,8 @@ class Experiment:
     events: tuple[Event,...] = ()
     halted: bool = False
     model_energy_offset: float = 0.0
+    origin: EphemerisOrigin | None = None
+    orientation_work: float = 0.0
 
 
 def copy_bodies(bodies):
@@ -54,16 +82,25 @@ def copy_bodies(bodies):
                  Vector3(b.spin.x,b.spin.y,b.spin.z)) for b in bodies]
 
 
-def create_experiment(bodies: list[Body], settings: Settings) -> Experiment:
+def create_experiment(bodies: list[Body], settings: Settings, *, origin: EphemerisOrigin | None = None) -> Experiment:
     if not bodies or len({b.name for b in bodies}) != len(bodies):
         raise ValueError("Нужны тела с уникальными именами")
+    if settings.integrator == "dop853" and any(b.radius > 0 for b in bodies):
+        raise ValueError("DOP853 поддерживает только точечные тела без контактов")
+    if settings.physics == "eih-1pn":
+        from .relativity import validate_bodies
+        validate_bodies(bodies)
+    validate_figures(bodies, settings.figures)
+    validate_orientation_origin(settings.figures, origin)
     if not isfinite(total_energy(bodies)):
         raise ValueError("Энергия исходной системы должна быть конечной")
-    return Experiment(copy_bodies(bodies),copy_bodies(bodies),settings)
+    if origin is not None and not isinstance(origin, EphemerisOrigin):
+        raise ValueError("Неверное происхождение начального состояния")
+    return Experiment(copy_bodies(bodies),copy_bodies(bodies),settings,origin=origin)
 
 
 def reset(experiment: Experiment) -> Experiment:
-    return create_experiment(experiment.initial,experiment.settings)
+    return create_experiment(experiment.initial,experiment.settings,origin=experiment.origin)
 
 
 def advance(experiment: Experiment, steps: int) -> Experiment:
@@ -78,6 +115,16 @@ def advance(experiment: Experiment, steps: int) -> Experiment:
     if experiment.time+duration == experiment.time:
         raise ValueError("Шаг меньше разрешения времени float")
     has_radii = any(b.radius>0 for b in experiment.bodies)
+    if settings.integrator == "dop853":
+        from .accuracy import evolve_accurate
+        bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,
+                                position_atol=settings.position_atol, velocity_atol=settings.velocity_atol,
+                                physics=settings.physics, figures=settings.figures,
+                                start_time=experiment.time, return_work=True)
+        work += experiment.orientation_work
+        if not isfinite(work):
+            raise ValueError("Переполнение работы заданной ориентации")
+        return replace(experiment, bodies=bodies, time=experiment.time+duration, orientation_work=work)
     if has_radii and settings.contact_mode == "merge":
         return _advance_mergers(experiment,steps)
     events = []
@@ -149,10 +196,14 @@ def _advance_mergers(experiment,steps):
                    events=tuple(history),model_energy_offset=offset)
 
 
-PRESETS = ("sun-earth","earth-moon","binary-star","sun-earth-moon","spheres")
+PRESETS = ("sun-earth","earth-moon","binary-star","sun-earth-moon","spheres","solar-system","solar-system-moon")
 
 
 def preset(name: str, *, backend: str = "python", eccentricity: float = 0.0) -> Experiment:
+    if name in ("solar-system", "solar-system-moon"):
+        from .ephemerides import solar_system
+        bodies,origin=solar_system(resolved_moon=name=="solar-system-moon")
+        return create_experiment(bodies,Settings(3600,backend,integrator="dop853" if backend=="python" else "verlet"),origin=origin)
     if name == "sun-earth":
         bodies,period = sun_earth(eccentricity)
     elif name == "earth-moon":

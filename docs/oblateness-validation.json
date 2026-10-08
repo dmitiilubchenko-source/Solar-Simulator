@@ -1,0 +1,133 @@
+{
+  "physics": "eih-1pn + fixed Earth J2",
+  "epoch_jd_tdb": 2461321.5,
+  "duration_seconds": 31557600.0,
+  "samples": 45,
+  "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+  "reference_sha256": "07717d8792d4afa297441a0b1751672de4bc492f41802d9224525f905e15bd24",
+  "profile_sha256": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+  "independent_reference_position_consistency_metres": 1.6361520976435195,
+  "numerical_agreement": [
+    {
+      "name": "Sun",
+      "agreement": {
+        "maximum_position_metres": 3.7113469854975052e-06,
+        "maximum_velocity_m_per_s": 8.113294212273761e-14
+      }
+    },
+    {
+      "name": "Mercury",
+      "agreement": {
+        "maximum_position_metres": 0.2938272906509554,
+        "maximum_velocity_m_per_s": 2.5993856353342843e-07
+      }
+    },
+    {
+      "name": "Venus",
+      "agreement": {
+        "maximum_position_metres": 0.0048122103611150605,
+        "maximum_velocity_m_per_s": 1.4089212138075024e-09
+      }
+    },
+    {
+      "name": "Earth",
+      "agreement": {
+        "maximum_position_metres": 0.0946852236785602,
+        "maximum_velocity_m_per_s": 2.220016441330341e-07
+      }
+    },
+    {
+      "name": "Moon",
+      "agreement": {
+        "maximum_position_metres": 7.675538946480305,
+        "maximum_velocity_m_per_s": 1.8049527934771247e-05
+      }
+    },
+    {
+      "name": "Mars",
+      "agreement": {
+        "maximum_position_metres": 0.0007918152019109414,
+        "maximum_velocity_m_per_s": 5.463832473174998e-11
+      }
+    },
+    {
+      "name": "Jupiter",
+      "agreement": {
+        "maximum_position_metres": 0.006173040957129847,
+        "maximum_velocity_m_per_s": 8.103920042640318e-11
+      }
+    },
+    {
+      "name": "Saturn",
+      "agreement": {
+        "maximum_position_metres": 0.004908019803589769,
+        "maximum_velocity_m_per_s": 2.2794318386006587e-11
+      }
+    },
+    {
+      "name": "Uranus",
+      "agreement": {
+        "maximum_position_metres": 0.01598142439208459,
+        "maximum_velocity_m_per_s": 2.1000321050774417e-11
+      }
+    },
+    {
+      "name": "Neptune",
+      "agreement": {
+        "maximum_position_metres": 0.008881624564266083,
+        "maximum_velocity_m_per_s": 1.2794576346139663e-11
+      }
+    }
+  ],
+  "tolerance_sensitivity": {
+    "maximum_position_metres": 2.2032056220858593,
+    "maximum_velocity_m_per_s": 4.779735068877085e-06
+  },
+  "maximum_relative_model_energy_residual": 4.284219567084545e-15,
+  "point_mass_pair": {
+    "earth": {
+      "maximum_position_metres": 391.6558430938124,
+      "maximum_velocity_m_per_s": 0.0007754593774544791
+    },
+    "moon": {
+      "maximum_position_metres": 25323.47783533985,
+      "maximum_velocity_m_per_s": 0.06419161584902736
+    },
+    "barycentre": {
+      "maximum_position_metres": 164.59730312165755,
+      "maximum_velocity_m_per_s": 1.988988470140116e-05
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 25611.846046886123,
+      "maximum_velocity_m_per_s": 0.06496694596013323
+    },
+    "first_32_days_relative": {
+      "maximum_position_metres": 2010.501574426149,
+      "maximum_velocity_m_per_s": 0.005406898851300359
+    }
+  },
+  "fixed_earth_j2_pair": {
+    "earth": {
+      "maximum_position_metres": 161.54489116411284,
+      "maximum_velocity_m_per_s": 1.945556626575023e-05
+    },
+    "moon": {
+      "maximum_position_metres": 670.6848290333047,
+      "maximum_velocity_m_per_s": 0.0016577014041076253
+    },
+    "barycentre": {
+      "maximum_position_metres": 162.1299416342409,
+      "maximum_velocity_m_per_s": 2.0413633528670848e-05
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 637.1438207441189,
+      "maximum_velocity_m_per_s": 0.0016632772417375736
+    },
+    "first_32_days_relative": {
+      "maximum_position_metres": 53.34476604912849,
+      "maximum_velocity_m_per_s": 0.0001440368849379995
+    }
+  },
+  "checks_passed": true,
+  "limitation": "45 sampled epochs, not a global error bound. Approximate Earth pole frozen at start, constant nominal J2. No lunar figure/rotation/tides, higher harmonics, asteroids or mixed 1PN/J2 terms. Orbital angular momentum need not be conserved with fixed axes."
+}

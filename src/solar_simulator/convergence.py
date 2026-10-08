@@ -4,11 +4,14 @@ from math import isfinite, sqrt
 
 from .experiment import advance
 from .simulation import total_energy
+from .diagnostics import model_invariants
 
 
 def compare_steps(experiment, steps: int) -> dict:
     if type(steps) is not int or steps<=0:
         raise ValueError("Для сравнения нужно положительное целое steps")
+    if experiment.settings.integrator != "verlet":
+        return compare_tolerances(experiment, steps)
     if experiment.halted:
         raise ValueError("Остановленный эксперимент сначала нужно сбросить")
     runs=[]
@@ -42,3 +45,37 @@ def compare_steps(experiment, steps: int) -> dict:
     if not all(isfinite(v) for v in position+velocity):
         raise ValueError("Переполнение разностей при сравнении")
     return result
+
+
+def compare_tolerances(experiment, steps: int) -> dict:
+    """Sensitivity to adaptive tolerances; differences are not global bounds."""
+    if type(steps) is not int or steps <= 0 or experiment.halted:
+        raise ValueError("Нужен положительный steps и неостановленный эксперимент")
+    if experiment.settings.integrator != "dop853":
+        raise ValueError("Сравнение допусков требует DOP853")
+    base = experiment.settings
+    tolerances = [base.rtol, max(3e-14, base.rtol/2), max(3e-14, base.rtol/4)]
+    if len(set(tolerances)) < 3:
+        raise ValueError("Недостаточно диапазона rtol для трёх запусков: достигнут предел float64")
+    runs, states = [], []
+    initial_energy = model_invariants(experiment.initial, base.physics, base.figures)[0]
+    for factor, tolerance in zip((1, 2, 4), tolerances):
+        settings = replace(base, rtol=tolerance, position_atol=base.position_atol/factor,
+                           velocity_atol=base.velocity_atol/factor)
+        state = advance(replace(experiment, settings=settings), steps)
+        residual = model_invariants(state.bodies, base.physics, base.figures, state.time)[0]+state.dissipated_energy+state.model_energy_offset-state.orientation_work-initial_energy
+        runs.append(dict(rtol=tolerance, position_atol_metres=settings.position_atol,
+                         velocity_atol_m_per_s=settings.velocity_atol, final_time_seconds=state.time,
+                         energy_budget_residual_joules=residual, orientation_work_joules=state.orientation_work))
+        states.append(state)
+    def difference(a, b, field):
+        return sqrt(sum(getattr(x, field).distance_to(getattr(y, field))**2
+                        for x, y in zip(a.bodies, b.bodies)))
+    from dataclasses import asdict
+    return dict(comparison="adaptive_tolerances", physics=base.physics, figures=[asdict(f) for f in base.figures], runs=runs,
+                position_differences_metres=[difference(states[0], states[1], "position"),
+                                            difference(states[1], states[2], "position")],
+                velocity_differences_m_per_s=[difference(states[0], states[1], "velocity"),
+                                             difference(states[1], states[2], "velocity")],
+                finest_position_error_estimate_metres=None,
+                estimate_assumption="Tolerance sensitivity only; no Richardson order or guaranteed global error bound")

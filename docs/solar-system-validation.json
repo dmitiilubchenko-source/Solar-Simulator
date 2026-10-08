@@ -1,0 +1,78 @@
+{
+  "schema": 1,
+  "dataset_sha256": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+  "interval_seconds": 31557600.0,
+  "sample_count": 13,
+  "reference": "RK45, dimensionless full interaction matrix; rtol 3e-14; atol 1e-15",
+  "reference_position_consistency_metres": 1.4905818008403833,
+  "relative_energy_error": 3.725409003918965e-15,
+  "warning": "JPL discrepancies include omitted physics/bodies and are not pure integration errors",
+  "bodies": [
+    {
+      "name": "Sun",
+      "numerical_position_error_metres": 5.7270111011009205e-06,
+      "numerical_velocity_error_m_per_s": 2.1403353783190483e-13,
+      "jpl_position_discrepancy_metres": 218.11632099983723,
+      "jpl_velocity_discrepancy_m_per_s": 1.3786484289775342e-05
+    },
+    {
+      "name": "Mercury",
+      "numerical_position_error_metres": 1.502304557436601,
+      "numerical_velocity_error_m_per_s": 1.190595496249419e-06,
+      "jpl_position_discrepancy_metres": 154005.77039397796,
+      "jpl_velocity_discrepancy_m_per_s": 0.14011645740458095
+    },
+    {
+      "name": "Venus",
+      "numerical_position_error_metres": 0.01823803093035233,
+      "numerical_velocity_error_m_per_s": 5.856652415387029e-09,
+      "jpl_position_discrepancy_metres": 95579.70031567896,
+      "jpl_velocity_discrepancy_m_per_s": 0.02984517574407225
+    },
+    {
+      "name": "Earth-Moon",
+      "numerical_position_error_metres": 0.009003112274598329,
+      "numerical_velocity_error_m_per_s": 1.7459692757066663e-09,
+      "jpl_position_discrepancy_metres": 42718.461563996025,
+      "jpl_velocity_discrepancy_m_per_s": 0.008406342120256226
+    },
+    {
+      "name": "Mars",
+      "numerical_position_error_metres": 0.004677322907572279,
+      "numerical_velocity_error_m_per_s": 5.727163313955553e-10,
+      "jpl_position_discrepancy_metres": 32503.26848014301,
+      "jpl_velocity_discrepancy_m_per_s": 0.0034898343780239223
+    },
+    {
+      "name": "Jupiter",
+      "numerical_position_error_metres": 0.0015307551194463963,
+      "numerical_velocity_error_m_per_s": 4.556346636343675e-11,
+      "jpl_position_discrepancy_metres": 329.303532552505,
+      "jpl_velocity_discrepancy_m_per_s": 2.0368782383653858e-05
+    },
+    {
+      "name": "Saturn",
+      "numerical_position_error_metres": 0.0037030867929741017,
+      "numerical_velocity_error_m_per_s": 3.869670862373604e-11,
+      "jpl_position_discrepancy_metres": 80.08023014665594,
+      "jpl_velocity_discrepancy_m_per_s": 5.191629459159262e-06
+    },
+    {
+      "name": "Uranus",
+      "numerical_position_error_metres": 0.008343759107687998,
+      "numerical_velocity_error_m_per_s": 9.837853568892557e-12,
+      "jpl_position_discrepancy_metres": 28.516180355466602,
+      "jpl_velocity_discrepancy_m_per_s": 1.8081913391898393e-06
+    },
+    {
+      "name": "Neptune",
+      "numerical_position_error_metres": 0.007861223871712642,
+      "numerical_velocity_error_m_per_s": 1.9104595502175537e-11,
+      "jpl_position_discrepancy_metres": 67.94990975057924,
+      "jpl_velocity_discrepancy_m_per_s": 4.313686813218104e-06
+    }
+  ],
+  "checks": {
+    "numerical_targets": true
+  }
+}

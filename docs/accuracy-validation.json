@@ -1,0 +1,131 @@
+{
+  "schema": 1,
+  "fingerprints_sha256": {
+    "assess_accuracy.py": "e2a546699dc603f4af10dfbe806959508a04a72cc2504ffd93a276d53e56f0e4",
+    "accuracy.py": "76e3e6f1d96fd3194c59a44e1b1fb6ad0f6076fa2589062844e253e7c535568b"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "scipy": "1.18.1",
+    "numpy": "2.5.1"
+  },
+  "reference": "Analytic two-body Kepler orbit; bisection of eccentric anomaly",
+  "interval": "one period",
+  "samples": 100,
+  "position_atol_metres": 0.001,
+  "velocity_atol_m_per_s": 1e-09,
+  "warning": "Sampled global errors on specified orbits; local tolerances are not global guarantees",
+  "runs": [
+    {
+      "eccentricity": 0.0,
+      "integrator": "verlet",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 201936.49625415425,
+      "maximum_velocity_error_m_per_s": 0.038480600660082756,
+      "maximum_relative_energy_error": 9.378572929171497e-14,
+      "seconds": 0.2115017999894917
+    },
+    {
+      "eccentricity": 0.0,
+      "integrator": "dop853",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 0.0022006538546533137,
+      "maximum_velocity_error_m_per_s": 4.058914981136725e-10,
+      "maximum_relative_energy_error": 2.611203599769326e-15,
+      "seconds": 0.7102422000025399
+    },
+    {
+      "eccentricity": 0.0,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "maximum_position_error_metres": 0.009649262595721849,
+      "maximum_velocity_error_m_per_s": 1.8638123036475297e-09,
+      "maximum_relative_energy_error": 1.1750416198961968e-14,
+      "seconds": 0.31103590002749115
+    },
+    {
+      "eccentricity": 0.3,
+      "integrator": "verlet",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 763337.7573906122,
+      "maximum_velocity_error_m_per_s": 0.2383058302447141,
+      "maximum_relative_energy_error": 3.3535287599605695e-07,
+      "seconds": 0.21085269999457523
+    },
+    {
+      "eccentricity": 0.3,
+      "integrator": "dop853",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 0.057602910130498314,
+      "maximum_velocity_error_m_per_s": 1.5565124271884653e-08,
+      "maximum_relative_energy_error": 2.981124109736647e-14,
+      "seconds": 0.3132812999538146
+    },
+    {
+      "eccentricity": 0.3,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "maximum_position_error_metres": 0.1062796027658555,
+      "maximum_velocity_error_m_per_s": 2.9451562235776882e-08,
+      "maximum_relative_energy_error": 5.3747274095251953e-14,
+      "seconds": 0.3240800000494346
+    },
+    {
+      "eccentricity": 0.6,
+      "integrator": "verlet",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 12603676.137656648,
+      "maximum_velocity_error_m_per_s": 7.931946800412784,
+      "maximum_relative_energy_error": 4.569925945515374e-06,
+      "seconds": 0.20737359998747706
+    },
+    {
+      "eccentricity": 0.6,
+      "integrator": "dop853",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 0.764344847309011,
+      "maximum_velocity_error_m_per_s": 4.7166069166517767e-07,
+      "maximum_relative_energy_error": 2.876675965745871e-13,
+      "seconds": 0.3143954999977723
+    },
+    {
+      "eccentricity": 0.6,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "maximum_position_error_metres": 0.42330784651147,
+      "maximum_velocity_error_m_per_s": 2.61233722255202e-07,
+      "maximum_relative_energy_error": 1.5297301088648617e-13,
+      "seconds": 0.3271466000005603
+    },
+    {
+      "eccentricity": 0.9,
+      "integrator": "verlet",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 8712304911.648985,
+      "maximum_velocity_error_m_per_s": 37962.44288072235,
+      "maximum_relative_energy_error": 0.0015211945525173529,
+      "seconds": 0.20802479999838397
+    },
+    {
+      "eccentricity": 0.9,
+      "integrator": "dop853",
+      "rtol": 1e-13,
+      "maximum_position_error_metres": 8.858833225687393,
+      "maximum_velocity_error_m_per_s": 4.045787102366859e-05,
+      "maximum_relative_energy_error": 1.498395665667627e-12,
+      "seconds": 0.3475889000110328
+    },
+    {
+      "eccentricity": 0.9,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "maximum_position_error_metres": 2.777872324249234,
+      "maximum_velocity_error_m_per_s": 1.2684783442110955e-05,
+      "maximum_relative_energy_error": 4.956934833562089e-13,
+      "seconds": 0.34685390000231564
+    }
+  ],
+  "checks": {
+    "accurate_orbits": true
+  }
+}

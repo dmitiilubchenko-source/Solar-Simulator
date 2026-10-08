@@ -70,7 +70,11 @@ def test_v1_checkpoint_migrates_without_mutating_document():
     from solar_simulator.storage import from_document
     document=to_document(preset("sun-earth"))
     document["schema_version"]=1
+    del document["orientation_work"]
+    del document["origin"]
     del document["model_energy_offset"]
+    for key in ("integrator", "rtol", "position_atol", "velocity_atol", "physics", "figures"):
+        del document["settings"][key]
     for field in ("initial","bodies"):
         for body in document[field]:
             del body["spin"]
