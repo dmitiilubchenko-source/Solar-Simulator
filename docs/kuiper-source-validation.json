@@ -1,0 +1,201 @@
+{
+  "oracle": "CSPICE spkgeo on original SB441-N373s coefficients; no shared Chebyshev evaluator",
+  "spiceypy": "6.0.3",
+  "manifest_sha256": "e64668e4c375d262d197bda4d7e45ef7074c273288ae4f67d2562cc03d12c3da",
+  "packed_source_sha256": "c456421c59c9712f0d59ed2af749d1e5dd583000777b4e601e9a39a1260af267",
+  "bodies": {
+    "Orcus": {
+      "id": 2090482,
+      "samples": 112,
+      "maximum_position_metres": 0.0013147375017418222,
+      "maximum_velocity_m_per_s": 1.8269655220124374e-12
+    },
+    "2002 MS4": {
+      "id": 2307261,
+      "samples": 112,
+      "maximum_position_metres": 0.0020859384143841627,
+      "maximum_velocity_m_per_s": 1.3877247074257982e-12
+    },
+    "2006 QH181": {
+      "id": 3361580,
+      "samples": 112,
+      "maximum_position_metres": 0.00413059675675992,
+      "maximum_velocity_m_per_s": 8.507543922801099e-13
+    },
+    "Salacia": {
+      "id": 2120347,
+      "samples": 112,
+      "maximum_position_metres": 0.001118792894276328,
+      "maximum_velocity_m_per_s": 1.8682815641051087e-12
+    },
+    "2003 UZ413": {
+      "id": 2455502,
+      "samples": 112,
+      "maximum_position_metres": 0.0029700988917471774,
+      "maximum_velocity_m_per_s": 1.0638227236207116e-12
+    },
+    "2003 AZ84": {
+      "id": 2208996,
+      "samples": 112,
+      "maximum_position_metres": 0.002237585788552656,
+      "maximum_velocity_m_per_s": 1.5793880253852199e-12
+    },
+    "2002 AW197": {
+      "id": 2055565,
+      "samples": 112,
+      "maximum_position_metres": 0.0014024811148774484,
+      "maximum_velocity_m_per_s": 1.8749713606747085e-12
+    },
+    "Haumea": {
+      "id": 2136108,
+      "samples": 112,
+      "maximum_position_metres": 0.0020132351687586233,
+      "maximum_velocity_m_per_s": 1.0725194820289065e-12
+    },
+    "Varuna": {
+      "id": 2020000,
+      "samples": 112,
+      "maximum_position_metres": 0.0014024811148774484,
+      "maximum_velocity_m_per_s": 1.4559018921847493e-12
+    },
+    "Ixion": {
+      "id": 2028978,
+      "samples": 112,
+      "maximum_position_metres": 0.001953125,
+      "maximum_velocity_m_per_s": 1.306162322757252e-12
+    },
+    "Varda": {
+      "id": 2174567,
+      "samples": 112,
+      "maximum_position_metres": 0.0020132353946375136,
+      "maximum_velocity_m_per_s": 1.822760253256088e-12
+    },
+    "2004 GV9": {
+      "id": 2090568,
+      "samples": 112,
+      "maximum_position_metres": 0.0020215448195409175,
+      "maximum_velocity_m_per_s": 1.5082263372984925e-12
+    },
+    "2004 XA192": {
+      "id": 2230965,
+      "samples": 112,
+      "maximum_position_metres": 0.0016377451007078539,
+      "maximum_velocity_m_per_s": 1.7015087845602199e-12
+    },
+    "2005 RN43": {
+      "id": 2145452,
+      "samples": 112,
+      "maximum_position_metres": 0.001001050992850142,
+      "maximum_velocity_m_per_s": 1.9501518179832195e-12
+    },
+    "Makemake": {
+      "id": 2136472,
+      "samples": 112,
+      "maximum_position_metres": 0.0014024811148774484,
+      "maximum_velocity_m_per_s": 1.4779288903810084e-12
+    },
+    "2010 KZ39": {
+      "id": 3525142,
+      "samples": 112,
+      "maximum_position_metres": 0.00218451295998209,
+      "maximum_velocity_m_per_s": 9.97597952322408e-13
+    },
+    "2004 XR190": {
+      "id": 3308265,
+      "samples": 112,
+      "maximum_position_metres": 0.0020132351687586233,
+      "maximum_velocity_m_per_s": 1.4380373887290168e-12
+    },
+    "2001 UR163": {
+      "id": 2042301,
+      "samples": 112,
+      "maximum_position_metres": 0.0022936959746232364,
+      "maximum_velocity_m_per_s": 1.9984322342733034e-12
+    },
+    "2007 JJ43": {
+      "id": 2278361,
+      "samples": 112,
+      "maximum_position_metres": 0.0021198187239761055,
+      "maximum_velocity_m_per_s": 9.79621742067939e-13
+    },
+    "Gonggong": {
+      "id": 2225088,
+      "samples": 112,
+      "maximum_position_metres": 0.002822339806027295,
+      "maximum_velocity_m_per_s": 9.374856803373542e-13
+    },
+    "2010 FX86": {
+      "id": 3515022,
+      "samples": 112,
+      "maximum_position_metres": 0.002489755621871477,
+      "maximum_velocity_m_per_s": 1.6553053431563326e-12
+    },
+    "Chaos": {
+      "id": 2019521,
+      "samples": 112,
+      "maximum_position_metres": 0.0020859384143841627,
+      "maximum_velocity_m_per_s": 1.8225386545374702e-12
+    },
+    "Eris": {
+      "id": 2136199,
+      "samples": 112,
+      "maximum_position_metres": 0.0027621358640099515,
+      "maximum_velocity_m_per_s": 8.507543922801099e-13
+    },
+    "2002 TC302": {
+      "id": 2084522,
+      "samples": 112,
+      "maximum_position_metres": 0.0013810679320049757,
+      "maximum_velocity_m_per_s": 1.8189894035458565e-12
+    },
+    "2008 ST291": {
+      "id": 2528381,
+      "samples": 112,
+      "maximum_position_metres": 0.002237585788552656,
+      "maximum_velocity_m_per_s": 1.4570111509301906e-12
+    },
+    "2010 RE64": {
+      "id": 2523639,
+      "samples": 112,
+      "maximum_position_metres": 0.001118792894276328,
+      "maximum_velocity_m_per_s": 1.850687635408088e-12
+    },
+    "2002 UX25": {
+      "id": 2055637,
+      "samples": 112,
+      "maximum_position_metres": 0.0020462713152148695,
+      "maximum_velocity_m_per_s": 1.306162322757252e-12
+    },
+    "2010 RF43": {
+      "id": 3545742,
+      "samples": 112,
+      "maximum_position_metres": 0.0011516090249092533,
+      "maximum_velocity_m_per_s": 1.4380373887290168e-12
+    },
+    "Quaoar": {
+      "id": 2050000,
+      "samples": 112,
+      "maximum_position_metres": 0.0020859384143841627,
+      "maximum_velocity_m_per_s": 1.8334894098262547e-12
+    },
+    "Sedna": {
+      "id": 2090377,
+      "samples": 112,
+      "maximum_position_metres": 0.004171876828768325,
+      "maximum_velocity_m_per_s": 9.713407672867936e-13
+    }
+  },
+  "body_count": 30,
+  "samples": 3360,
+  "maximum_position_metres": 0.004171876828768325,
+  "maximum_velocity_m_per_s": 1.9984322342733034e-12,
+  "record_boundaries_and_neighbours_included": true,
+  "checks_passed": true,
+  "code_sha256": {
+    "scripts/fetch_kuiper_data.py": "c461ba2e7698fead601daf41c7ecc272689a076af5ef8c0454f9d05ba6ef748c",
+    "scripts/check_kuiper_data.py": "744cd57ac29d33de47a2f80fdb4a3d637bf18962191cc3ee7e82ce7d4ecdbb01",
+    "scripts/fetch_asteroid_catalog.py": "8792c91727b561f47a5a12846b69ad6527bb181b1fc5ef6a9ce44cf4b08bffad",
+    "scripts/fetch_asteroid_data.py": "8fd64f88a3751f40bf1f799e4f66c254b851ffeb8a6729ba9bee2aced53ae454"
+  },
+  "limitation": "Validates source decoding, analytic velocity and frame. Does not establish physical ephemeris accuracy or millimetre accuracy of a propagated orbit."
+}

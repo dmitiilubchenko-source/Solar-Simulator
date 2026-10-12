@@ -1,0 +1,30 @@
+{
+  "change": 59,
+  "model": "finite H of change 57; separate canonical research checkpoint",
+  "initial_state": "immutable initial state in docs/rigid-pn-validation.json, verified archive and source hashes",
+  "periods": 4,
+  "nominal_period": 6.283185307179586,
+  "samples": 257,
+  "split_sample": 128,
+  "production_rtol": 1e-11,
+  "production_atol_over_rtol": 0.01,
+  "max_step_over_period": 0.0078125,
+  "error_control": "worst independent three-vector x/p/S blocks and four-vector q",
+  "reference": "reuse BOTH immutable independent matrix/body-Euler RK45 levels from change 57 only after all source/initial/parameter/grid/archive SHA checks",
+  "lunar_roundtrip": "conditional one-epoch state from change 58; no trajectory or physical migration",
+  "lunar_zero_point_spin_atol": 1e-30,
+  "criteria": {
+    "energy_relative": 1e-9,
+    "momentum_scaled": 1e-10,
+    "angular_momentum_relative": 1e-9,
+    "point_spin_norm_relative": 1e-9,
+    "quaternion_norm": 1e-9,
+    "reference_difference": 1e-7,
+    "reference_uncertainty": 1e-8,
+    "restart_difference": 1e-8,
+    "lunar_export_velocity_relative": 1e-12,
+    "lunar_export_rate_relative": 1e-12
+  },
+  "required_true": ["synthetic_roundtrip_bitwise", "lunar_roundtrip_bitwise", "metadata_preserved", "loaded_sources_verified", "legacy_rejected", "velocity_export_rejected"],
+  "future_ephemerides": "not called"
+}

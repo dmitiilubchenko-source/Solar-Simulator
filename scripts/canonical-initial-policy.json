@@ -1,0 +1,58 @@
+{
+  "change": 58,
+  "model": "finite rigid H of change 57; initial canonical-basis inversion only",
+  "units": "G=M0=L0=1, explicit SI similarity for conditional lunar diagnostic",
+  "seed": 58,
+  "states": 24,
+  "masses": [0.3, 0.7, 0.05],
+  "c": 316.22776601683796,
+  "moments": [0.002, 0.0025, 0.003],
+  "bounding_radius": 0.15,
+  "figure_index": 0,
+  "base_blocks": [
+    [[0.56, 0, 0], [-0.24, 0, 0], [3.5, 0.4, 0.6]],
+    [[0, 0.257, 0], [0, -0.257, 0], [-0.003, 0.025, 0.004]],
+    [[0.003, -0.004, 0.002], [-0.002, 0.001, 0.003], [0.0002, 0.0003, -0.0001]]
+  ],
+  "perturbation_scales": [0.03, 0.001, 0.0001],
+  "production_tolerance": 1e-13,
+  "production_max_iterations": 12,
+  "independent_least_squares_tolerance": 1e-14,
+  "metric_field": 0.7,
+  "metric_velocity": [0.3, -0.2, 0.1],
+  "metric_cs": [10, 20],
+  "lunar_diagnostic": {
+    "enabled": true,
+    "epoch_jd_tdb": 2461321.5,
+    "frame": "Ecliptic J2000",
+    "center": "Solar System Barycenter",
+    "interpretation": "conditional surrogate: stored x and R/Rdot are declared canonical-basis boundary values; physical SSC/tetrad/time mapping is NOT certified",
+    "length_scale_m": 149597870700,
+    "mass_scale": "Sun GM divided by the same stored G",
+    "c_m_s": 299792458,
+    "orbital_data_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "spin_profile_sha256": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba"
+  },
+  "criteria": {
+    "model_roundtrip_relative_max": 1e-11,
+    "independent_inverse_relative_max": 1e-11,
+    "velocity_residual_max": 1e-13,
+    "attitude_rate_residual_max": 1e-13,
+    "independent_gradient_velocity_relative_max": 1e-12,
+    "independent_gradient_rate_relative_max": 1e-12,
+    "metric_square_root_relative": 1e-14,
+    "centre_rate_relative_max": 1e-12,
+    "lunar_velocity_residual": 1e-13,
+    "lunar_attitude_rate_residual": 1e-13,
+    "lunar_gradient_velocity_relative": 1e-12,
+    "lunar_gradient_rate_relative": 1e-12
+  },
+  "lower_bound_controls": {
+    "naive_m_v_error_max": 1e-5,
+    "naive_I_W_error_max": 1e-6
+  },
+  "interval_controls": {
+    "metric_fourth_order_ratio": [15.9, 16.2]
+  },
+  "future_ephemerides": "never queried; no fit or trajectory propagation in this audit"
+}

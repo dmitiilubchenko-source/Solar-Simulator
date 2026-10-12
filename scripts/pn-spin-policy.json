@@ -1,0 +1,31 @@
+{
+  "model": "Independent two-body ADM canonical COM model: Newton + orbital 1PN + leading spin-orbit, one constant-magnitude canonical spin; no rigid attitude/Q2 or Solar Simulator runtime activation",
+  "units": "dimensionless G=1; r unit a0=1, mass unit M0=1, time unit sqrt(a0^3/(G M0)); p unit M0 sqrt(G M0/a0), S unit M0 sqrt(G M0 a0)",
+  "mass1": 0.3,
+  "mass2": 0.7,
+  "c": 316.22776601683796,
+  "semimajor_axis": 1.0,
+  "eccentricity": 0.2,
+  "initial_spin": [0.003, -0.004, 0.002],
+  "orbits": 16,
+  "samples": 1025,
+  "production_rtol": 1e-11,
+  "production_atol": 1e-13,
+  "reference_rtols": [3e-13, 3e-14],
+  "reference_atol_over_rtol": 0.01,
+  "max_step_over_period": 0.0078125,
+  "SO_exact_duration_periods": 32,
+  "criteria": {
+    "energy_relative": 1e-9,
+    "angular_momentum_relative": 1e-9,
+    "spin_norm_relative": 1e-9,
+    "reference_difference": 1e-7,
+    "reference_uncertainty": 1e-8,
+    "SO_exact_difference": 1e-9,
+    "SO_exchange_relative": 1e-9,
+    "negative_control_J_drift_minimum": 1e-5,
+    "hamiltonian_gradient_relative": 1e-11
+  },
+  "future_ephemeris_use": false,
+  "warning": "Finite truncated Hamiltonian evolved without subsequent order reduction: exact invariants of this model do not certify full PN equations or the physical Moon. Artificial dimensionless c amplifies weak-field corrections. Omitted 2PN, higher SO, spin-spin, Q2, deformation, dissipation and N-body terms."
+}

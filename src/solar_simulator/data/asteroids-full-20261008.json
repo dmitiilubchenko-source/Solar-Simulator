@@ -1,0 +1,513 @@
+{
+  "schema": 1,
+  "base_origin": {
+    "epoch_jd_tdb": 2461321.5,
+    "frame": "Ecliptic J2000",
+    "center": "Solar System Barycenter",
+    "ephemeris": "DE441",
+    "dataset_sha256": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+    "gm_sha256": "96b099179df4afa33220fb0adb58aadff75fd54a12d4e77511e63f2ed0d54468"
+  },
+  "gm_sha256": "f93053a476eca58623aa0a2d5b34828543fcee54a8a5a9c86cdd4b091bd8d114",
+  "units": "SI",
+  "vector_correction": "NONE",
+  "sources": [
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+      "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/ascp02000.441",
+      "byte_range": [
+        8180405,
+        8529077
+      ],
+      "sha256": "1699167f07cf3ec4ee5d5827b99e2ada335ccb32b5ddec939c24eb50f81a21ab"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        0,
+        1023
+      ],
+      "sha256": "01aa6aae6f4285850ca61e61834da51e82cc8e7f4ce8e38221cb463e86590103"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        2048,
+        3071
+      ],
+      "sha256": "dda56c2d220212572f64061e952ff9c71cab442dd6225ee1e96025a933a44233"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        252547072,
+        252548095
+      ],
+      "sha256": "4f1e11c216aff91150fc7bac49a8f3a1cf7bb480b088abb44144890f98fdabe9"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        505092096,
+        505093119
+      ],
+      "sha256": "e1a157270910d310031ff18816e312cfe31c5652040fb1510c96d82e18599d9b"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        71561280,
+        71561311
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        64163136,
+        64165839
+      ],
+      "sha256": "db82f58478e8c6bff4e51c43ca2414521a42fd9f8a5109b8414c74ad98abbe7d"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        475134752,
+        475134783
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        467736608,
+        467739311
+      ],
+      "sha256": "fe234ffc332094d9a2005aef98ceae1f6b1995cc183a12d90d7ba3c8c0944aac"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        636565504,
+        636565535
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        629167360,
+        629170063
+      ],
+      "sha256": "8ac7a394203553f40edb21b6f9c2d7860e26d984aa412019b7151e42f706dfef"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        434777632,
+        434777663
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        427379488,
+        427382191
+      ],
+      "sha256": "5aa76110c49cc3b4ecff0eac2f335a54b0feede833424990be55efe13d921c11"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        394420512,
+        394420543
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        387022368,
+        387025071
+      ],
+      "sha256": "b145d85dbacf4d3130dfb9c6726f748e769155bc86919b6c48f6cb2a533eafb6"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        313706272,
+        313706303
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        306308128,
+        306310831
+      ],
+      "sha256": "43c954078e920238dbc59300e61e4a6ea872665b04c12a314cfbbf27ec3485b7"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        192632640,
+        192632671
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        185234496,
+        185237199
+      ],
+      "sha256": "db07bf6de850a1eaca20258148d2b4e3b32dfe01f44f4366a37f8f6f59e0d01b"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        515494144,
+        515494175
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        508096000,
+        508098703
+      ],
+      "sha256": "db1f5236c43a90479542151f7154b6741b15fc7be62511fddee9f9c93987b71f"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        232989760,
+        232989791
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        225591616,
+        225594319
+      ],
+      "sha256": "8b4b58274780969429a22ace94a6deab91d857a2bb9e32a54e35bec4442f87ec"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        273349152,
+        273349183
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        265951008,
+        265953711
+      ],
+      "sha256": "1218b848f54dc17bda00d0468d1699d3a8c39a977d174be8f443bf22216a0567"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        111918400,
+        111918431
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        104520256,
+        104522959
+      ],
+      "sha256": "17042049019dcded1644a2199aec4862efb14bf95d31233b00a16378689099a0"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        555851264,
+        555851295
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        548453120,
+        548455823
+      ],
+      "sha256": "ab20d494195dbd0411032d9db624ab0a4d61fd339577b002ceb400c50dd1a27d"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        596208384,
+        596208415
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        588810240,
+        588812943
+      ],
+      "sha256": "be2a58e72f64fba0cb1d7136dda2f7347c45a12a4d28882ff6e6f10098d8482e"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        31204160,
+        31204191
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        23806016,
+        23808719
+      ],
+      "sha256": "af4b8ec68350d85a8b65b14737fbd68615c7307d12602937525c2fa2097c0064"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        152275520,
+        152275551
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        144877376,
+        144880079
+      ],
+      "sha256": "64ba62ac904f01ef49937c6d0e3091a4960fb472873eafc5bd8dbf1175bcdb19"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        354063392,
+        354063423
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        346665248,
+        346667951
+      ],
+      "sha256": "0479785ac8264f039baf8606e4a5599bf2e84a33b8965a6b3b5fea09cfbf5edc"
+    }
+  ],
+  "bodies": [
+    {
+      "id": 2000003,
+      "name": "Juno",
+      "gm_m3_s2": 1920570700.2025895,
+      "position": [
+        291560503039.1039,
+        -255248819170.15955,
+        45875676438.837135
+      ],
+      "velocity": [
+        8409.740518576918,
+        16191.83824070408,
+        -4017.3439256686966
+      ]
+    },
+    {
+      "id": 2000007,
+      "name": "Iris",
+      "gm_m3_s2": 1139872323.218411,
+      "position": [
+        -392363486659.53827,
+        -174909802694.15973,
+        -34170143938.72076
+      ],
+      "velocity": [
+        4759.805429045177,
+        -14883.564135458626,
+        713.5111668230142
+      ]
+    },
+    {
+      "id": 2000010,
+      "name": "Hygiea",
+      "gm_m3_s2": 5625147645.38523,
+      "position": [
+        -344409608501.83203,
+        324410842853.5162,
+        -17479587875.316956
+      ],
+      "velocity": [
+        -10059.99388964113,
+        -13277.756033664147,
+        -857.3363171306642
+      ]
+    },
+    {
+      "id": 2000015,
+      "name": "Eunomia",
+      "gm_m3_s2": 2023020987.1098285,
+      "position": [
+        -368173384559.83435,
+        -276274901178.173,
+        -92880127630.94153
+      ],
+      "velocity": [
+        9221.630115435642,
+        -12024.24847531049,
+        792.9407417548202
+      ]
+    },
+    {
+      "id": 2000016,
+      "name": "Psyche",
+      "gm_m3_s2": 1589658244.1709428,
+      "position": [
+        -340680400732.2758,
+        306579683640.2586,
+        -5164471031.901505
+      ],
+      "velocity": [
+        -12574.068419952824,
+        -10782.066721717072,
+        846.9634235130773
+      ]
+    },
+    {
+      "id": 2000031,
+      "name": "Euphrosyne",
+      "gm_m3_s2": 1079371457.7033563,
+      "position": [
+        154113302954.95523,
+        -489711557491.3305,
+        -246710454842.45248
+      ],
+      "velocity": [
+        12452.38675807666,
+        5525.91363334125,
+        -802.9860529336393
+      ]
+    },
+    {
+      "id": 2000052,
+      "name": "Europa",
+      "gm_m3_s2": 2683035924.2821803,
+      "position": [
+        -236792295033.74185,
+        336514432174.915,
+        -3309218616.350393
+      ],
+      "velocity": [
+        -15609.811451286372,
+        -10369.455942403662,
+        2453.1340989044793
+      ]
+    },
+    {
+      "id": 2000065,
+      "name": "Cybele",
+      "gm_m3_s2": 938105756.3915136,
+      "position": [
+        -390559283344.52313,
+        -245332759622.5578,
+        24076555313.914013
+      ],
+      "velocity": [
+        10712.586563728843,
+        -14145.303670603762,
+        518.7072516370797
+      ]
+    },
+    {
+      "id": 2000087,
+      "name": "Sylvia",
+      "gm_m3_s2": 2168232073.6996913,
+      "position": [
+        -341034396093.2798,
+        438481564720.0814,
+        87115526374.6111
+      ],
+      "velocity": [
+        -11901.394957808378,
+        -8536.96839823633,
+        1694.1409670799467
+      ]
+    },
+    {
+      "id": 2000088,
+      "name": "Thisbe",
+      "gm_m3_s2": 1189807708.812191,
+      "position": [
+        -383666896948.49774,
+        -179405478236.66446,
+        -36648229081.026276
+      ],
+      "velocity": [
+        9814.161907351741,
+        -14406.316672654702,
+        746.0177911880454
+      ]
+    },
+    {
+      "id": 2000107,
+      "name": "Camilla",
+      "gm_m3_s2": 1443738403.1866007,
+      "position": [
+        -377801424674.9255,
+        309474895326.19464,
+        -45401167288.447044
+      ],
+      "velocity": [
+        -11155.381649320974,
+        -12499.35509689041,
+        2451.422662752748
+      ]
+    },
+    {
+      "id": 2000511,
+      "name": "Davida",
+      "gm_m3_s2": 3894483148.1705656,
+      "position": [
+        -453137942386.8927,
+        -137200879910.63518,
+        135199885396.26794
+      ],
+      "velocity": [
+        1844.158585278762,
+        -15955.855907680558,
+        875.7529719351056
+      ]
+    },
+    {
+      "id": 2000704,
+      "name": "Interamnia",
+      "gm_m3_s2": 2830409639.3299856,
+      "position": [
+        -210746765629.46555,
+        -441926659995.3452,
+        -88879827569.60033
+      ],
+      "velocity": [
+        14141.981923565532,
+        -5283.35054145727,
+        4045.0847282974637
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3005 @@
+{
+  "schema": 1,
+  "source": {
+    "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/SB441_IOM392R-21-005_perturbers.pdf",
+    "sha256": "124fe0fb48f8e71f3f1dba9607cfe5b47a016b95aa5429b61bf7cba301ed4b22",
+    "table": 1,
+    "pages_1based": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "bodies": [
+    {
+      "id": 2000001,
+      "name": "Ceres",
+      "number": 1,
+      "constant": "MA0001",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.396451812308107e-13
+    },
+    {
+      "id": 2000004,
+      "name": "Vesta",
+      "number": 4,
+      "constant": "MA0004",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.8548000225257904e-14
+    },
+    {
+      "id": 2000002,
+      "name": "Pallas",
+      "number": 2,
+      "constant": "MA0002",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.04711463300432e-14
+    },
+    {
+      "id": 2000010,
+      "name": "Hygiea",
+      "number": 10,
+      "constant": "MA0010",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.254253076164081e-14
+    },
+    {
+      "id": 2000511,
+      "name": "Davida",
+      "number": 511,
+      "constant": "MA0511",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.683625349228654e-15
+    },
+    {
+      "id": 2000704,
+      "name": "Interamnia",
+      "number": 704,
+      "constant": "MA0704",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.311034342087889e-15
+    },
+    {
+      "id": 2000052,
+      "name": "Europa",
+      "number": 52,
+      "constant": "MA0052",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.982431526486984e-15
+    },
+    {
+      "id": 2000087,
+      "name": "Sylvia",
+      "number": 87,
+      "constant": "MA0087",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.834560654610552e-15
+    },
+    {
+      "id": 2000015,
+      "name": "Eunomia",
+      "number": 15,
+      "constant": "MA0015",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.5107799051436795e-15
+    },
+    {
+      "id": 2000003,
+      "name": "Juno",
+      "number": 3,
+      "constant": "MA0003",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.282343967799501e-15
+    },
+    {
+      "id": 2000016,
+      "name": "Psyche",
+      "number": 16,
+      "constant": "MA0016",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.5445002842488978e-15
+    },
+    {
+      "id": 2000107,
+      "name": "Camilla",
+      "number": 107,
+      "constant": "MA0107",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.219139207587859e-15
+    },
+    {
+      "id": 2000088,
+      "name": "Thisbe",
+      "number": 88,
+      "constant": "MA0088",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.6529436610356353e-15
+    },
+    {
+      "id": 2000007,
+      "name": "Iris",
+      "number": 7,
+      "constant": "MA0007",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.5416014973471498e-15
+    },
+    {
+      "id": 2000031,
+      "name": "Euphrosyne",
+      "number": 31,
+      "constant": "MA0031",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.4067012218937576e-15
+    },
+    {
+      "id": 2000065,
+      "name": "Cybele",
+      "number": 65,
+      "constant": "MA0065",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.0917175955133682e-15
+    },
+    {
+      "id": 2000209,
+      "name": "Dido",
+      "number": 209,
+      "constant": "MA0209",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.951100813450661e-15
+    },
+    {
+      "id": 2000094,
+      "name": "Aurora",
+      "number": 94,
+      "constant": "MA0094",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9476499609659456e-15
+    },
+    {
+      "id": 2000048,
+      "name": "Doris",
+      "number": 48,
+      "constant": "MA0048",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.908516195648564e-15
+    },
+    {
+      "id": 2000154,
+      "name": "Bertha",
+      "number": 154,
+      "constant": "MA0154",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9062882233624486e-15
+    },
+    {
+      "id": 2000029,
+      "name": "Amphitrite",
+      "number": 29,
+      "constant": "MA0029",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.778875957037877e-15
+    },
+    {
+      "id": 2000375,
+      "name": "Ursula",
+      "number": 375,
+      "constant": "MA0375",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.771687529490865e-15
+    },
+    {
+      "id": 2000532,
+      "name": "Herculina",
+      "number": 532,
+      "constant": "MA0532",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.765129565112637e-15
+    },
+    {
+      "id": 2000566,
+      "name": "Stereoskopia",
+      "number": 566,
+      "constant": "MA0566",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.7007818925283807e-15
+    },
+    {
+      "id": 2000386,
+      "name": "Siegena",
+      "number": 386,
+      "constant": "MA0386",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6744520343182799e-15
+    },
+    {
+      "id": 2000702,
+      "name": "Alauda",
+      "number": 702,
+      "constant": "MA0702",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6730262398441171e-15
+    },
+    {
+      "id": 2000039,
+      "name": "Laetitia",
+      "number": 39,
+      "constant": "MA0039",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6238080168284406e-15
+    },
+    {
+      "id": 2000009,
+      "name": "Metis",
+      "number": 9,
+      "constant": "MA0009",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4490138025867273e-15
+    },
+    {
+      "id": 2000006,
+      "name": "Hebe",
+      "number": 6,
+      "constant": "MA0006",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4423591761343029e-15
+    },
+    {
+      "id": 2000324,
+      "name": "Bamberga",
+      "number": 324,
+      "constant": "MA0324",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3808681586222395e-15
+    },
+    {
+      "id": 2000130,
+      "name": "Elektra",
+      "number": 130,
+      "constant": "MA0130",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3272835717079433e-15
+    },
+    {
+      "id": 2000024,
+      "name": "Themis",
+      "number": 24,
+      "constant": "MA0024",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3109170444249925e-15
+    },
+    {
+      "id": 2000451,
+      "name": "Patientia",
+      "number": 451,
+      "constant": "MA0451",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2973797046097596e-15
+    },
+    {
+      "id": 2000019,
+      "name": "Fortuna",
+      "number": 19,
+      "constant": "MA0019",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2396175182794244e-15
+    },
+    {
+      "id": 2000372,
+      "name": "Palma",
+      "number": 372,
+      "constant": "MA0372",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2340564359220072e-15
+    },
+    {
+      "id": 2000041,
+      "name": "Daphne",
+      "number": 41,
+      "constant": "MA0041",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2055616051144469e-15
+    },
+    {
+      "id": 2000014,
+      "name": "Irene",
+      "number": 14,
+      "constant": "MA0014",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1863795139948057e-15
+    },
+    {
+      "id": 2000423,
+      "name": "Diotima",
+      "number": 423,
+      "constant": "MA0423",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1511452195400677e-15
+    },
+    {
+      "id": 2000013,
+      "name": "Egeria",
+      "number": 13,
+      "constant": "MA0013",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1389436761809467e-15
+    },
+    {
+      "id": 2000069,
+      "name": "Hesperia",
+      "number": 69,
+      "constant": "MA0069",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1215489958719225e-15
+    },
+    {
+      "id": 2000011,
+      "name": "Parthenope",
+      "number": 11,
+      "constant": "MA0011",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0258530487431674e-15
+    },
+    {
+      "id": 2000471,
+      "name": "Papagena",
+      "number": 471,
+      "constant": "MA0471",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0154946317000345e-15
+    },
+    {
+      "id": 2000120,
+      "name": "Lachesis",
+      "number": 120,
+      "constant": "MA0120",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0049283867977807e-15
+    },
+    {
+      "id": 2000047,
+      "name": "Aglaja",
+      "number": 47,
+      "constant": "MA0047",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.548452182565237e-16
+    },
+    {
+      "id": 2000096,
+      "name": "Aegle",
+      "number": 96,
+      "constant": "MA0096",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.42942121305823e-16
+    },
+    {
+      "id": 2000476,
+      "name": "Hedwig",
+      "number": 476,
+      "constant": "MA0476",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.329084948707906e-16
+    },
+    {
+      "id": 2000409,
+      "name": "Aspasia",
+      "number": 409,
+      "constant": "MA0409",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.307130180298934e-16
+    },
+    {
+      "id": 2000139,
+      "name": "Juewa",
+      "number": 139,
+      "constant": "MA0139",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.259555216971151e-16
+    },
+    {
+      "id": 2000747,
+      "name": "Winchester",
+      "number": 747,
+      "constant": "MA0747",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.916216061479975e-16
+    },
+    {
+      "id": 2000022,
+      "name": "Kalliope",
+      "number": 22,
+      "constant": "MA0022",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.805494503588215e-16
+    },
+    {
+      "id": 2000117,
+      "name": "Lomia",
+      "number": 117,
+      "constant": "MA0117",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.795632662491299e-16
+    },
+    {
+      "id": 2000596,
+      "name": "Scheila",
+      "number": 596,
+      "constant": "MA0596",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.750385462374579e-16
+    },
+    {
+      "id": 2000128,
+      "name": "Nemesis",
+      "number": 128,
+      "constant": "MA0128",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.584786131141037e-16
+    },
+    {
+      "id": 2000085,
+      "name": "Io",
+      "number": 85,
+      "constant": "MA0085",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.410568113447993e-16
+    },
+    {
+      "id": 2000046,
+      "name": "Hestia",
+      "number": 46,
+      "constant": "MA0046",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.292410989683984e-16
+    },
+    {
+      "id": 2000168,
+      "name": "Sibylla",
+      "number": 168,
+      "constant": "MA0168",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.286215123097553e-16
+    },
+    {
+      "id": 2000241,
+      "name": "Germania",
+      "number": 241,
+      "constant": "MA0241",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.257891885518958e-16
+    },
+    {
+      "id": 2000045,
+      "name": "Eugenia",
+      "number": 45,
+      "constant": "MA0045",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.037535169551508e-16
+    },
+    {
+      "id": 2000049,
+      "name": "Pales",
+      "number": 49,
+      "constant": "MA0049",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.030901956158537e-16
+    },
+    {
+      "id": 2000488,
+      "name": "Kreusa",
+      "number": 488,
+      "constant": "MA0488",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.952288319351003e-16
+    },
+    {
+      "id": 2000349,
+      "name": "Dembowska",
+      "number": 349,
+      "constant": "MA0349",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.777039207208923e-16
+    },
+    {
+      "id": 2000146,
+      "name": "Lucina",
+      "number": 146,
+      "constant": "MA0146",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.414551782088354e-16
+    },
+    {
+      "id": 2000247,
+      "name": "Eukrate",
+      "number": 247,
+      "constant": "MA0247",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.216647312452579e-16
+    },
+    {
+      "id": 2000076,
+      "name": "Freia",
+      "number": 76,
+      "constant": "MA0076",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.196534867203428e-16
+    },
+    {
+      "id": 2000196,
+      "name": "Philomela",
+      "number": 196,
+      "constant": "MA0196",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.188369171784315e-16
+    },
+    {
+      "id": 2000187,
+      "name": "Lamberta",
+      "number": 187,
+      "constant": "MA0187",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.998876221714286e-16
+    },
+    {
+      "id": 2000354,
+      "name": "Eleonora",
+      "number": 354,
+      "constant": "MA0354",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.979942758868987e-16
+    },
+    {
+      "id": 2000776,
+      "name": "Berbericia",
+      "number": 776,
+      "constant": "MA0776",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.914477361926693e-16
+    },
+    {
+      "id": 2000059,
+      "name": "Elpis",
+      "number": 59,
+      "constant": "MA0059",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.124244003827881e-16
+    },
+    {
+      "id": 2000093,
+      "name": "Minerva",
+      "number": 93,
+      "constant": "MA0093",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.890932368757391e-16
+    },
+    {
+      "id": 2000008,
+      "name": "Flora",
+      "number": 8,
+      "constant": "MA0008",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.740266647501823e-16
+    },
+    {
+      "id": 2000020,
+      "name": "Massalia",
+      "number": 20,
+      "constant": "MA0020",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.71341843864351e-16
+    },
+    {
+      "id": 2000089,
+      "name": "Julia",
+      "number": 89,
+      "constant": "MA0089",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.699803244510909e-16
+    },
+    {
+      "id": 2000780,
+      "name": "Armenia",
+      "number": 780,
+      "constant": "MA0780",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.683773262812121e-16
+    },
+    {
+      "id": 2000051,
+      "name": "Nemausa",
+      "number": 51,
+      "constant": "MA0051",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.596605208562996e-16
+    },
+    {
+      "id": 2000227,
+      "name": "Philosophia",
+      "number": 227,
+      "constant": "MA0227",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.294972789322552e-16
+    },
+    {
+      "id": 2000203,
+      "name": "Pompeja",
+      "number": 203,
+      "constant": "MA0203",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.180479043790148e-16
+    },
+    {
+      "id": 2000181,
+      "name": "Eucharis",
+      "number": 181,
+      "constant": "MA0181",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.123339897726351e-16
+    },
+    {
+      "id": 2000790,
+      "name": "Pretoria",
+      "number": 790,
+      "constant": "MA0790",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.043148194735074e-16
+    },
+    {
+      "id": 2000036,
+      "name": "Atalante",
+      "number": 36,
+      "constant": "MA0036",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.013597383486977e-16
+    },
+    {
+      "id": 2000328,
+      "name": "Gudrun",
+      "number": 328,
+      "constant": "MA0328",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.998246830863383e-16
+    },
+    {
+      "id": 2000018,
+      "name": "Melpomene",
+      "number": 18,
+      "constant": "MA0018",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.818114984817475e-16
+    },
+    {
+      "id": 2000250,
+      "name": "Bettina",
+      "number": 250,
+      "constant": "MA0250",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.69449662479354e-16
+    },
+    {
+      "id": 2000095,
+      "name": "Arethusa",
+      "number": 95,
+      "constant": "MA0095",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.60264620685128e-16
+    },
+    {
+      "id": 2000259,
+      "name": "Aletheia",
+      "number": 259,
+      "constant": "MA0259",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.525108943500125e-16
+    },
+    {
+      "id": 2000381,
+      "name": "Myrrha",
+      "number": 381,
+      "constant": "MA0381",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.49332166347459e-16
+    },
+    {
+      "id": 2000212,
+      "name": "Medea",
+      "number": 212,
+      "constant": "MA0212",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.460510689200354e-16
+    },
+    {
+      "id": 2000104,
+      "name": "Klymene",
+      "number": 104,
+      "constant": "MA0104",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.4137261924065115e-16
+    },
+    {
+      "id": 2000056,
+      "name": "Melete",
+      "number": 56,
+      "constant": "MA0056",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.3334389285268117e-16
+    },
+    {
+      "id": 2000444,
+      "name": "Gyptis",
+      "number": 444,
+      "constant": "MA0444",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.24710309935973e-16
+    },
+    {
+      "id": 2000216,
+      "name": "Kleopatra",
+      "number": 216,
+      "constant": "MA0216",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.142728844408081e-16
+    },
+    {
+      "id": 2000762,
+      "name": "Pulcova",
+      "number": 762,
+      "constant": "MA0762",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.114622959542111e-16
+    },
+    {
+      "id": 2000144,
+      "name": "Vibilia",
+      "number": 144,
+      "constant": "MA0144",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.073838070777593e-16
+    },
+    {
+      "id": 2000705,
+      "name": "Erminia",
+      "number": 705,
+      "constant": "MA0705",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.9116752395114746e-16
+    },
+    {
+      "id": 2000268,
+      "name": "Adorea",
+      "number": 268,
+      "constant": "MA0268",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.8623042613708653e-16
+    },
+    {
+      "id": 2000283,
+      "name": "Emma",
+      "number": 283,
+      "constant": "MA0283",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.8354815246046577e-16
+    },
+    {
+      "id": 2000040,
+      "name": "Harmonia",
+      "number": 40,
+      "constant": "MA0040",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.7393826630015266e-16
+    },
+    {
+      "id": 2000469,
+      "name": "Argentina",
+      "number": 469,
+      "constant": "MA0469",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.6478450110028057e-16
+    },
+    {
+      "id": 2000173,
+      "name": "Ino",
+      "number": 173,
+      "constant": "MA0173",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.494445297018901e-16
+    },
+    {
+      "id": 2000387,
+      "name": "Aquitania",
+      "number": 387,
+      "constant": "MA0387",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.438304449717668e-16
+    },
+    {
+      "id": 2000028,
+      "name": "Bellona",
+      "number": 28,
+      "constant": "MA0028",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.4043931236013436e-16
+    },
+    {
+      "id": 2000393,
+      "name": "Lampetia",
+      "number": 393,
+      "constant": "MA0393",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.3572279402433382e-16
+    },
+    {
+      "id": 2000140,
+      "name": "Siwa",
+      "number": 140,
+      "constant": "MA0140",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.345175275226785e-16
+    },
+    {
+      "id": 2000012,
+      "name": "Victoria",
+      "number": 12,
+      "constant": "MA0012",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.2843482824404967e-16
+    },
+    {
+      "id": 2000426,
+      "name": "Hippo",
+      "number": 426,
+      "constant": "MA0426",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.2507694999797983e-16
+    },
+    {
+      "id": 2000005,
+      "name": "Astraea",
+      "number": 5,
+      "constant": "MA0005",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.2161933241855116e-16
+    },
+    {
+      "id": 2000098,
+      "name": "Ianthe",
+      "number": 98,
+      "constant": "MA0098",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.1864312654754617e-16
+    },
+    {
+      "id": 2000410,
+      "name": "Chloris",
+      "number": 410,
+      "constant": "MA0410",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.152731937031252e-16
+    },
+    {
+      "id": 2000034,
+      "name": "Circe",
+      "number": 34,
+      "constant": "MA0034",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.139214460205205e-16
+    },
+    {
+      "id": 2000145,
+      "name": "Adeona",
+      "number": 145,
+      "constant": "MA0145",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.131949350342742e-16
+    },
+    {
+      "id": 2000171,
+      "name": "Ophelia",
+      "number": 171,
+      "constant": "MA0171",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.026253130619937e-16
+    },
+    {
+      "id": 2000121,
+      "name": "Hermione",
+      "number": 121,
+      "constant": "MA0121",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.002775558113526e-16
+    },
+    {
+      "id": 2000489,
+      "name": "Comacina",
+      "number": 489,
+      "constant": "MA0489",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.8775529812775966e-16
+    },
+    {
+      "id": 2000357,
+      "name": "Ninina",
+      "number": 357,
+      "constant": "MA0357",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.8721263188047396e-16
+    },
+    {
+      "id": 2000063,
+      "name": "Ausonia",
+      "number": 63,
+      "constant": "MA0063",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.859883377373698e-16
+    },
+    {
+      "id": 2000405,
+      "name": "Thia",
+      "number": 405,
+      "constant": "MA0405",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.834344202759018e-16
+    },
+    {
+      "id": 2000156,
+      "name": "Xanthippe",
+      "number": 156,
+      "constant": "MA0156",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.7907996428036474e-16
+    },
+    {
+      "id": 2000350,
+      "name": "Ornamenta",
+      "number": 350,
+      "constant": "MA0350",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.7857999144799436e-16
+    },
+    {
+      "id": 2000023,
+      "name": "Thalia",
+      "number": 23,
+      "constant": "MA0023",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.7673067211701877e-16
+    },
+    {
+      "id": 2000148,
+      "name": "Gallia",
+      "number": 148,
+      "constant": "MA0148",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.7635117872432285e-16
+    },
+    {
+      "id": 2000536,
+      "name": "Merapi",
+      "number": 536,
+      "constant": "MA0536",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.7333272315776016e-16
+    },
+    {
+      "id": 2000150,
+      "name": "Nuwa",
+      "number": 150,
+      "constant": "MA0150",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.690665426465701e-16
+    },
+    {
+      "id": 2000388,
+      "name": "Charybdis",
+      "number": 388,
+      "constant": "MA0388",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.6866209145075665e-16
+    },
+    {
+      "id": 2000164,
+      "name": "Eva",
+      "number": 164,
+      "constant": "MA0164",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.685636326205827e-16
+    },
+    {
+      "id": 2000230,
+      "name": "Athamantis",
+      "number": 230,
+      "constant": "MA0230",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.6546896309806863e-16
+    },
+    {
+      "id": 2000165,
+      "name": "Loreley",
+      "number": 165,
+      "constant": "MA0165",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.645429961552526e-16
+    },
+    {
+      "id": 2000090,
+      "name": "Antiope",
+      "number": 90,
+      "constant": "MA0090",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.642881600589284e-16
+    },
+    {
+      "id": 2000137,
+      "name": "Meliboea",
+      "number": 137,
+      "constant": "MA0137",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.6291667570900683e-16
+    },
+    {
+      "id": 2000508,
+      "name": "Princetonia",
+      "number": 508,
+      "constant": "MA0508",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.600374703356517e-16
+    },
+    {
+      "id": 2000690,
+      "name": "Wratislavia",
+      "number": 690,
+      "constant": "MA0690",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.5859089556681753e-16
+    },
+    {
+      "id": 2000027,
+      "name": "Euterpe",
+      "number": 27,
+      "constant": "MA0027",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.561386580415216e-16
+    },
+    {
+      "id": 2000054,
+      "name": "Alexandra",
+      "number": 54,
+      "constant": "MA0054",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.561364385673563e-16
+    },
+    {
+      "id": 2000804,
+      "name": "Hispania",
+      "number": 804,
+      "constant": "MA0804",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.552783047004986e-16
+    },
+    {
+      "id": 2000618,
+      "name": "Elfriede",
+      "number": 618,
+      "constant": "MA0618",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.519320488920722e-16
+    },
+    {
+      "id": 2000356,
+      "name": "Liguria",
+      "number": 356,
+      "constant": "MA0356",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.5189815204630036e-16
+    },
+    {
+      "id": 2000143,
+      "name": "Adria",
+      "number": 143,
+      "constant": "MA0143",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.49831855261886e-16
+    },
+    {
+      "id": 2000114,
+      "name": "Kassandra",
+      "number": 114,
+      "constant": "MA0114",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.488406700654089e-16
+    },
+    {
+      "id": 2000147,
+      "name": "Protogeneia",
+      "number": 147,
+      "constant": "MA0147",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.485857842368132e-16
+    },
+    {
+      "id": 2000127,
+      "name": "Johanna",
+      "number": 127,
+      "constant": "MA0127",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.475490134670677e-16
+    },
+    {
+      "id": 2000194,
+      "name": "Prokne",
+      "number": 194,
+      "constant": "MA0194",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.4561528144043314e-16
+    },
+    {
+      "id": 2000037,
+      "name": "Fides",
+      "number": 37,
+      "constant": "MA0037",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.428130550827187e-16
+    },
+    {
+      "id": 2000334,
+      "name": "Chicago",
+      "number": 334,
+      "constant": "MA0334",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.413622033962929e-16
+    },
+    {
+      "id": 2000419,
+      "name": "Aurelia",
+      "number": 419,
+      "constant": "MA0419",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.377357820920586e-16
+    },
+    {
+      "id": 2000420,
+      "name": "Bertholda",
+      "number": 420,
+      "constant": "MA0420",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.3670178521081795e-16
+    },
+    {
+      "id": 2000602,
+      "name": "Marianna",
+      "number": 602,
+      "constant": "MA0602",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.280967490901478e-16
+    },
+    {
+      "id": 2000595,
+      "name": "Polyxena",
+      "number": 595,
+      "constant": "MA0595",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.2465030240169206e-16
+    },
+    {
+      "id": 2000363,
+      "name": "Padua",
+      "number": 363,
+      "constant": "MA0363",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.239212640831399e-16
+    },
+    {
+      "id": 2000238,
+      "name": "Hypatia",
+      "number": 238,
+      "constant": "MA0238",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.2188561497353161e-16
+    },
+    {
+      "id": 2000141,
+      "name": "Lumen",
+      "number": 141,
+      "constant": "MA0141",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.1889333845457843e-16
+    },
+    {
+      "id": 2000308,
+      "name": "Polyxo",
+      "number": 308,
+      "constant": "MA0308",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.1647804370959252e-16
+    },
+    {
+      "id": 2000791,
+      "name": "Ani",
+      "number": 791,
+      "constant": "MA0791",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.1076085204803308e-16
+    },
+    {
+      "id": 2000335,
+      "name": "Roberta",
+      "number": 335,
+      "constant": "MA0335",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.084313266700059e-16
+    },
+    {
+      "id": 2000360,
+      "name": "Carlova",
+      "number": 360,
+      "constant": "MA0360",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.0487987640827176e-16
+    },
+    {
+      "id": 2000078,
+      "name": "Diana",
+      "number": 78,
+      "constant": "MA0078",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.0368097558802117e-16
+    },
+    {
+      "id": 2000092,
+      "name": "Undina",
+      "number": 92,
+      "constant": "MA0092",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.0222499285918262e-16
+    },
+    {
+      "id": 2000233,
+      "name": "Asterope",
+      "number": 233,
+      "constant": "MA0233",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.997962433107355e-16
+    },
+    {
+      "id": 2000276,
+      "name": "Adelheid",
+      "number": 276,
+      "constant": "MA0276",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9922195146137866e-16
+    },
+    {
+      "id": 2000021,
+      "name": "Lutetia",
+      "number": 21,
+      "constant": "MA0021",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9760028913855683e-16
+    },
+    {
+      "id": 2000663,
+      "name": "Gerlinde",
+      "number": 663,
+      "constant": "MA0663",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9725537729863713e-16
+    },
+    {
+      "id": 2000786,
+      "name": "Bredichina",
+      "number": 786,
+      "constant": "MA0786",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9534428745516884e-16
+    },
+    {
+      "id": 2000545,
+      "name": "Messalina",
+      "number": 545,
+      "constant": "MA0545",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9519850083243681e-16
+    },
+    {
+      "id": 2000159,
+      "name": "Aemilia",
+      "number": 159,
+      "constant": "MA0159",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9236219019969684e-16
+    },
+    {
+      "id": 2000506,
+      "name": "Marion",
+      "number": 506,
+      "constant": "MA0506",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9069839846057659e-16
+    },
+    {
+      "id": 2000074,
+      "name": "Galatea",
+      "number": 74,
+      "constant": "MA0074",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.901171693675278e-16
+    },
+    {
+      "id": 2000895,
+      "name": "Helio",
+      "number": 895,
+      "constant": "MA0895",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.8942493318435747e-16
+    },
+    {
+      "id": 2000514,
+      "name": "Armida",
+      "number": 514,
+      "constant": "MA0514",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.886129575533859e-16
+    },
+    {
+      "id": 2000042,
+      "name": "Isis",
+      "number": 42,
+      "constant": "MA0042",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.8735257964754667e-16
+    },
+    {
+      "id": 2000083,
+      "name": "Beatrix",
+      "number": 83,
+      "constant": "MA0083",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.8459902693767395e-16
+    },
+    {
+      "id": 2000654,
+      "name": "Zelinda",
+      "number": 654,
+      "constant": "MA0654",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.827115384502823e-16
+    },
+    {
+      "id": 2000058,
+      "name": "Concordia",
+      "number": 58,
+      "constant": "MA0058",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.8012505811829385e-16
+    },
+    {
+      "id": 2000026,
+      "name": "Proserpina",
+      "number": 26,
+      "constant": "MA0026",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.7812616814154862e-16
+    },
+    {
+      "id": 2000788,
+      "name": "Hohensteina",
+      "number": 788,
+      "constant": "MA0788",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.771187154994267e-16
+    },
+    {
+      "id": 2000517,
+      "name": "Edith",
+      "number": 517,
+      "constant": "MA0517",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.765592961183617e-16
+    },
+    {
+      "id": 2000206,
+      "name": "Hersilia",
+      "number": 206,
+      "constant": "MA0206",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.7485910807435368e-16
+    },
+    {
+      "id": 2000772,
+      "name": "Tanete",
+      "number": 772,
+      "constant": "MA0772",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.736544758134813e-16
+    },
+    {
+      "id": 2000667,
+      "name": "Denise",
+      "number": 667,
+      "constant": "MA0667",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.7174750596131368e-16
+    },
+    {
+      "id": 2000201,
+      "name": "Penelope",
+      "number": 201,
+      "constant": "MA0201",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6663045771433504e-16
+    },
+    {
+      "id": 2000266,
+      "name": "Aline",
+      "number": 266,
+      "constant": "MA0266",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6594282580293835e-16
+    },
+    {
+      "id": 2000416,
+      "name": "Vaticana",
+      "number": 416,
+      "constant": "MA0416",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6511852151088483e-16
+    },
+    {
+      "id": 2000498,
+      "name": "Tokio",
+      "number": 498,
+      "constant": "MA0498",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6166164033700236e-16
+    },
+    {
+      "id": 2000404,
+      "name": "Arsinoe",
+      "number": 404,
+      "constant": "MA0404",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6144760474032773e-16
+    },
+    {
+      "id": 2000554,
+      "name": "Peraga",
+      "number": 554,
+      "constant": "MA0554",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.5935521711557882e-16
+    },
+    {
+      "id": 2000345,
+      "name": "Tercidina",
+      "number": 345,
+      "constant": "MA0345",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.5891479446112133e-16
+    },
+    {
+      "id": 2000176,
+      "name": "Iduna",
+      "number": 176,
+      "constant": "MA0176",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.5731944639940773e-16
+    },
+    {
+      "id": 2000521,
+      "name": "Brixia",
+      "number": 521,
+      "constant": "MA0521",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.558411364789865e-16
+    },
+    {
+      "id": 2000751,
+      "name": "Faina",
+      "number": 751,
+      "constant": "MA0751",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.5375064738104504e-16
+    },
+    {
+      "id": 2000062,
+      "name": "Erato",
+      "number": 62,
+      "constant": "MA0062",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.5213428223941847e-16
+    },
+    {
+      "id": 2000072,
+      "name": "Feronia",
+      "number": 72,
+      "constant": "MA0072",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.5086969937360234e-16
+    },
+    {
+      "id": 2000200,
+      "name": "Dynamene",
+      "number": 200,
+      "constant": "MA0200",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.506374322665671e-16
+    },
+    {
+      "id": 2001015,
+      "name": "Christa",
+      "number": 1015,
+      "constant": "MA1015",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.477401852453462e-16
+    },
+    {
+      "id": 2000185,
+      "name": "Eunike",
+      "number": 185,
+      "constant": "MA0185",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4541092712549263e-16
+    },
+    {
+      "id": 2000221,
+      "name": "Eos",
+      "number": 221,
+      "constant": "MA0221",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4535063882245356e-16
+    },
+    {
+      "id": 2000135,
+      "name": "Hertha",
+      "number": 135,
+      "constant": "MA0135",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4516053346827936e-16
+    },
+    {
+      "id": 2000086,
+      "name": "Semele",
+      "number": 86,
+      "constant": "MA0086",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.436757702345231e-16
+    },
+    {
+      "id": 2000490,
+      "name": "Veritas",
+      "number": 490,
+      "constant": "MA0490",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4268068051088923e-16
+    },
+    {
+      "id": 2000481,
+      "name": "Emita",
+      "number": 481,
+      "constant": "MA0481",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4232478918230183e-16
+    },
+    {
+      "id": 2000091,
+      "name": "Aegina",
+      "number": 91,
+      "constant": "MA0091",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4195955177021533e-16
+    },
+    {
+      "id": 2000124,
+      "name": "Alkeste",
+      "number": 124,
+      "constant": "MA0124",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4082516742158776e-16
+    },
+    {
+      "id": 2000105,
+      "name": "Artemis",
+      "number": 105,
+      "constant": "MA0105",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.404934369679812e-16
+    },
+    {
+      "id": 2000431,
+      "name": "Nephele",
+      "number": 431,
+      "constant": "MA0431",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.398133673348538e-16
+    },
+    {
+      "id": 2001093,
+      "name": "Freda",
+      "number": 1093,
+      "constant": "MA1093",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3774121589661637e-16
+    },
+    {
+      "id": 2000129,
+      "name": "Antigone",
+      "number": 129,
+      "constant": "MA0129",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3694441284769087e-16
+    },
+    {
+      "id": 2000163,
+      "name": "Erigone",
+      "number": 163,
+      "constant": "MA0163",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.350142511906315e-16
+    },
+    {
+      "id": 2000017,
+      "name": "Thetis",
+      "number": 17,
+      "constant": "MA0017",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3398683097840782e-16
+    },
+    {
+      "id": 2000344,
+      "name": "Desiderata",
+      "number": 344,
+      "constant": "MA0344",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3166985822586556e-16
+    },
+    {
+      "id": 2000071,
+      "name": "Niobe",
+      "number": 71,
+      "constant": "MA0071",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3120783938467559e-16
+    },
+    {
+      "id": 2001171,
+      "name": "Rusthawelia",
+      "number": 1171,
+      "constant": "MA1171",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3076632020262883e-16
+    },
+    {
+      "id": 2001107,
+      "name": "Lictoria",
+      "number": 1107,
+      "constant": "MA1107",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2924733629447915e-16
+    },
+    {
+      "id": 2000373,
+      "name": "Melusina",
+      "number": 373,
+      "constant": "MA0373",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2907423434479045e-16
+    },
+    {
+      "id": 2000103,
+      "name": "Hera",
+      "number": 103,
+      "constant": "MA0103",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2873552745693193e-16
+    },
+    {
+      "id": 2000111,
+      "name": "Ate",
+      "number": 111,
+      "constant": "MA0111",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2685989278560462e-16
+    },
+    {
+      "id": 2000043,
+      "name": "Ariadne",
+      "number": 43,
+      "constant": "MA0043",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2683502962561622e-16
+    },
+    {
+      "id": 2000081,
+      "name": "Terpsichore",
+      "number": 81,
+      "constant": "MA0081",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2659277966238143e-16
+    },
+    {
+      "id": 2000712,
+      "name": "Boliviana",
+      "number": 712,
+      "constant": "MA0712",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2600845433723963e-16
+    },
+    {
+      "id": 2000412,
+      "name": "Elisabetha",
+      "number": 412,
+      "constant": "MA0412",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2572594904492957e-16
+    },
+    {
+      "id": 2000275,
+      "name": "Sapientia",
+      "number": 275,
+      "constant": "MA0275",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.256041563617464e-16
+    },
+    {
+      "id": 2000769,
+      "name": "Tatjana",
+      "number": 769,
+      "constant": "MA0769",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2538556013158105e-16
+    },
+    {
+      "id": 2000303,
+      "name": "Josephina",
+      "number": 303,
+      "constant": "MA0303",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2250630736040161e-16
+    },
+    {
+      "id": 2000070,
+      "name": "Panopaea",
+      "number": 70,
+      "constant": "MA0070",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.221013302136009e-16
+    },
+    {
+      "id": 2000407,
+      "name": "Arachne",
+      "number": 407,
+      "constant": "MA0407",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.215964969184977e-16
+    },
+    {
+      "id": 2000134,
+      "name": "Sophrosyne",
+      "number": 134,
+      "constant": "MA0134",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2041493785248888e-16
+    },
+    {
+      "id": 2000683,
+      "name": "Lanzia",
+      "number": 683,
+      "constant": "MA0683",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.2001846940536772e-16
+    },
+    {
+      "id": 2000709,
+      "name": "Fringilla",
+      "number": 709,
+      "constant": "MA0709",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.193204585427415e-16
+    },
+    {
+      "id": 2000739,
+      "name": "Mandeville",
+      "number": 739,
+      "constant": "MA0739",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.189570423520968e-16
+    },
+    {
+      "id": 2000068,
+      "name": "Leto",
+      "number": 68,
+      "constant": "MA0068",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1706570191254942e-16
+    },
+    {
+      "id": 2000740,
+      "name": "Cantabia",
+      "number": 740,
+      "constant": "MA0740",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1508271223874676e-16
+    },
+    {
+      "id": 2000773,
+      "name": "Irmintraud",
+      "number": 773,
+      "constant": "MA0773",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1496018031508255e-16
+    },
+    {
+      "id": 2000455,
+      "name": "Bruchsalia",
+      "number": 455,
+      "constant": "MA0455",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1481333345022554e-16
+    },
+    {
+      "id": 2000505,
+      "name": "Cava",
+      "number": 505,
+      "constant": "MA0505",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1434524745954757e-16
+    },
+    {
+      "id": 2000449,
+      "name": "Hamburga",
+      "number": 449,
+      "constant": "MA0449",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.138171532831636e-16
+    },
+    {
+      "id": 2000362,
+      "name": "Havnia",
+      "number": 362,
+      "constant": "MA0362",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1276722765420132e-16
+    },
+    {
+      "id": 2000110,
+      "name": "Lydia",
+      "number": 110,
+      "constant": "MA0110",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.127327762395292e-16
+    },
+    {
+      "id": 2000713,
+      "name": "Luscinia",
+      "number": 713,
+      "constant": "MA0713",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.114915570450872e-16
+    },
+    {
+      "id": 2000424,
+      "name": "Gratia",
+      "number": 424,
+      "constant": "MA0424",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.1020156825676931e-16
+    },
+    {
+      "id": 2000346,
+      "name": "Hermentaria",
+      "number": 346,
+      "constant": "MA0346",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0985328629139597e-16
+    },
+    {
+      "id": 2000635,
+      "name": "Vundtia",
+      "number": 635,
+      "constant": "MA0635",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0924383869373906e-16
+    },
+    {
+      "id": 2000675,
+      "name": "Ludmilla",
+      "number": 675,
+      "constant": "MA0675",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0490232752479031e-16
+    },
+    {
+      "id": 2000097,
+      "name": "Klotho",
+      "number": 97,
+      "constant": "MA0097",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0268048353591737e-16
+    },
+    {
+      "id": 2000599,
+      "name": "Luisa",
+      "number": 599,
+      "constant": "MA0599",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0123777316180206e-16
+    },
+    {
+      "id": 2000385,
+      "name": "Ilmatar",
+      "number": 385,
+      "constant": "MA0385",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.976185628516443e-17
+    },
+    {
+      "id": 2000674,
+      "name": "Rachele",
+      "number": 674,
+      "constant": "MA0674",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.935357257488864e-17
+    },
+    {
+      "id": 2000162,
+      "name": "Laurentia",
+      "number": 162,
+      "constant": "MA0162",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.901268916551379e-17
+    },
+    {
+      "id": 2000358,
+      "name": "Apollonia",
+      "number": 358,
+      "constant": "MA0358",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.670798400851406e-17
+    },
+    {
+      "id": 2001467,
+      "name": "Mashona",
+      "number": 1467,
+      "constant": "MA1467",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.53947556947391e-17
+    },
+    {
+      "id": 2000849,
+      "name": "Ara",
+      "number": 849,
+      "constant": "MA0849",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.51207551986228e-17
+    },
+    {
+      "id": 2000377,
+      "name": "Campania",
+      "number": 377,
+      "constant": "MA0377",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.303415960975477e-17
+    },
+    {
+      "id": 2000191,
+      "name": "Kolga",
+      "number": 191,
+      "constant": "MA0191",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.270050959529838e-17
+    },
+    {
+      "id": 2000240,
+      "name": "Vanadis",
+      "number": 240,
+      "constant": "MA0240",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.25549528015023e-17
+    },
+    {
+      "id": 2000598,
+      "name": "Octavia",
+      "number": 598,
+      "constant": "MA0598",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.203383666159985e-17
+    },
+    {
+      "id": 2000050,
+      "name": "Virginia",
+      "number": 50,
+      "constant": "MA0050",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.065813600941014e-17
+    },
+    {
+      "id": 2000491,
+      "name": "Carina",
+      "number": 491,
+      "constant": "MA0491",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.032721399920834e-17
+    },
+    {
+      "id": 2000195,
+      "name": "Eurykleia",
+      "number": 195,
+      "constant": "MA0195",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.831697737909073e-17
+    },
+    {
+      "id": 2000109,
+      "name": "Felicitas",
+      "number": 109,
+      "constant": "MA0109",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.73429262293014e-17
+    },
+    {
+      "id": 2000100,
+      "name": "Hekate",
+      "number": 100,
+      "constant": "MA0100",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.550862140934806e-17
+    },
+    {
+      "id": 2000445,
+      "name": "Edna",
+      "number": 445,
+      "constant": "MA0445",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.531561503523623e-17
+    },
+    {
+      "id": 2000365,
+      "name": "Corduba",
+      "number": 365,
+      "constant": "MA0365",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.439600858609733e-17
+    },
+    {
+      "id": 2000369,
+      "name": "Aeria",
+      "number": 369,
+      "constant": "MA0369",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.336782410225417e-17
+    },
+    {
+      "id": 2000035,
+      "name": "Leukothea",
+      "number": 35,
+      "constant": "MA0035",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.270923167880293e-17
+    },
+    {
+      "id": 2000503,
+      "name": "Evelyn",
+      "number": 503,
+      "constant": "MA0503",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.207675177228163e-17
+    },
+    {
+      "id": 2000038,
+      "name": "Leda",
+      "number": 38,
+      "constant": "MA0038",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.166207221102614e-17
+    },
+    {
+      "id": 2000680,
+      "name": "Genoveva",
+      "number": 680,
+      "constant": "MA0680",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.150019061382226e-17
+    },
+    {
+      "id": 2000192,
+      "name": "Nausikaa",
+      "number": 192,
+      "constant": "MA0192",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.142129140295343e-17
+    },
+    {
+      "id": 2000044,
+      "name": "Nysa",
+      "number": 44,
+      "constant": "MA0044",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.119998868610499e-17
+    },
+    {
+      "id": 2000322,
+      "name": "Phaeo",
+      "number": 322,
+      "constant": "MA0322",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.072837727772762e-17
+    },
+    {
+      "id": 2000415,
+      "name": "Palatia",
+      "number": 415,
+      "constant": "MA0415",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.057307747567055e-17
+    },
+    {
+      "id": 2001021,
+      "name": "Flammario",
+      "number": 1021,
+      "constant": "MA1021",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.020428649722863e-17
+    },
+    {
+      "id": 2000304,
+      "name": "Olga",
+      "number": 304,
+      "constant": "MA0304",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.00596320733248e-17
+    },
+    {
+      "id": 2000389,
+      "name": "Industria",
+      "number": 389,
+      "constant": "MA0389",
+      "group": "asteroid",
+      "gm_au3_per_day2": 8.005933925741988e-17
+    },
+    {
+      "id": 2000366,
+      "name": "Vincentina",
+      "number": 366,
+      "constant": "MA0366",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.978946832542661e-17
+    },
+    {
+      "id": 2000568,
+      "name": "Cheruskia",
+      "number": 568,
+      "constant": "MA0568",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.974665095828324e-17
+    },
+    {
+      "id": 2000032,
+      "name": "Pomona",
+      "number": 32,
+      "constant": "MA0032",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.874507166651942e-17
+    },
+    {
+      "id": 2000053,
+      "name": "Kalypso",
+      "number": 53,
+      "constant": "MA0053",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.709568502565123e-17
+    },
+    {
+      "id": 2000210,
+      "name": "Isabella",
+      "number": 210,
+      "constant": "MA0210",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.66348632340929e-17
+    },
+    {
+      "id": 2000735,
+      "name": "Marghanna",
+      "number": 735,
+      "constant": "MA0735",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.565550192634045e-17
+    },
+    {
+      "id": 2000211,
+      "name": "Isolda",
+      "number": 211,
+      "constant": "MA0211",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.560179850744221e-17
+    },
+    {
+      "id": 2000466,
+      "name": "Tisiphone",
+      "number": 466,
+      "constant": "MA0466",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.528350655020485e-17
+    },
+    {
+      "id": 2000084,
+      "name": "Klio",
+      "number": 84,
+      "constant": "MA0084",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.495697601430942e-17
+    },
+    {
+      "id": 2000057,
+      "name": "Mnemosyne",
+      "number": 57,
+      "constant": "MA0057",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.472641289359161e-17
+    },
+    {
+      "id": 2000175,
+      "name": "Andromache",
+      "number": 175,
+      "constant": "MA0175",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.312424159554999e-17
+    },
+    {
+      "id": 2000337,
+      "name": "Devosa",
+      "number": 337,
+      "constant": "MA0337",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.310312768200536e-17
+    },
+    {
+      "id": 2000213,
+      "name": "Lilaea",
+      "number": 213,
+      "constant": "MA0213",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.281410210178525e-17
+    },
+    {
+      "id": 2000102,
+      "name": "Miriam",
+      "number": 102,
+      "constant": "MA0102",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.271262098124241e-17
+    },
+    {
+      "id": 2000313,
+      "name": "Chaldaea",
+      "number": 313,
+      "constant": "MA0313",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.187570798689379e-17
+    },
+    {
+      "id": 2000626,
+      "name": "Notburga",
+      "number": 626,
+      "constant": "MA0626",
+      "group": "asteroid",
+      "gm_au3_per_day2": 7.02207690642838e-17
+    },
+    {
+      "id": 2000115,
+      "name": "Thyra",
+      "number": 115,
+      "constant": "MA0115",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.973540602439245e-17
+    },
+    {
+      "id": 2000326,
+      "name": "Tamara",
+      "number": 326,
+      "constant": "MA0326",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.832658092241454e-17
+    },
+    {
+      "id": 2000760,
+      "name": "Massinga",
+      "number": 760,
+      "constant": "MA0760",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.805013604111056e-17
+    },
+    {
+      "id": 2000696,
+      "name": "Leonora",
+      "number": 696,
+      "constant": "MA0696",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.773715668991604e-17
+    },
+    {
+      "id": 2000454,
+      "name": "Mathesis",
+      "number": 454,
+      "constant": "MA0454",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.679819241829383e-17
+    },
+    {
+      "id": 2000160,
+      "name": "Una",
+      "number": 160,
+      "constant": "MA0160",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.514251331550227e-17
+    },
+    {
+      "id": 2000980,
+      "name": "Anacostia",
+      "number": 980,
+      "constant": "MA0980",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.347027638446878e-17
+    },
+    {
+      "id": 2000236,
+      "name": "Honoria",
+      "number": 236,
+      "constant": "MA0236",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.25172630260285e-17
+    },
+    {
+      "id": 2000225,
+      "name": "Henrietta",
+      "number": 225,
+      "constant": "MA0225",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.148848913653127e-17
+    },
+    {
+      "id": 2000535,
+      "name": "Montague",
+      "number": 535,
+      "constant": "MA0535",
+      "group": "asteroid",
+      "gm_au3_per_day2": 6.050663786253968e-17
+    },
+    {
+      "id": 2000106,
+      "name": "Dione",
+      "number": 106,
+      "constant": "MA0106",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.933985070091769e-17
+    },
+    {
+      "id": 2000464,
+      "name": "Megaira",
+      "number": 464,
+      "constant": "MA0464",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.823302640284164e-17
+    },
+    {
+      "id": 2000075,
+      "name": "Eurydike",
+      "number": 75,
+      "constant": "MA0075",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.802745629798349e-17
+    },
+    {
+      "id": 2000814,
+      "name": "Tauris",
+      "number": 814,
+      "constant": "MA0814",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.745072085427062e-17
+    },
+    {
+      "id": 2000030,
+      "name": "Urania",
+      "number": 30,
+      "constant": "MA0030",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.705726375789753e-17
+    },
+    {
+      "id": 2000516,
+      "name": "Amherstia",
+      "number": 516,
+      "constant": "MA0516",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.663027638551713e-17
+    },
+    {
+      "id": 2000080,
+      "name": "Sappho",
+      "number": 80,
+      "constant": "MA0080",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.647115427506023e-17
+    },
+    {
+      "id": 2000569,
+      "name": "Misa",
+      "number": 569,
+      "constant": "MA0569",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.56926103195199e-17
+    },
+    {
+      "id": 2000223,
+      "name": "Rosa",
+      "number": 223,
+      "constant": "MA0223",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.521083382556173e-17
+    },
+    {
+      "id": 2000752,
+      "name": "Sulamitis",
+      "number": 752,
+      "constant": "MA0752",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.5029875850101036e-17
+    },
+    {
+      "id": 2000784,
+      "name": "Pickeringia",
+      "number": 784,
+      "constant": "MA0784",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.318933742144326e-17
+    },
+    {
+      "id": 2000077,
+      "name": "Frigga",
+      "number": 77,
+      "constant": "MA0077",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.2724601168331567e-17
+    },
+    {
+      "id": 2000205,
+      "name": "Martha",
+      "number": 205,
+      "constant": "MA0205",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.23643121338054e-17
+    },
+    {
+      "id": 2000465,
+      "name": "Alekto",
+      "number": 465,
+      "constant": "MA0465",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.186719528510211e-17
+    },
+    {
+      "id": 2000691,
+      "name": "Lehigh",
+      "number": 691,
+      "constant": "MA0691",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.120974853484182e-17
+    },
+    {
+      "id": 2000287,
+      "name": "Nephthys",
+      "number": 287,
+      "constant": "MA0287",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.1065425768005637e-17
+    },
+    {
+      "id": 2000694,
+      "name": "Ekard",
+      "number": 694,
+      "constant": "MA0694",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.1009798048889617e-17
+    },
+    {
+      "id": 2000329,
+      "name": "Svea",
+      "number": 329,
+      "constant": "MA0329",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.022579920320677e-17
+    },
+    {
+      "id": 2000099,
+      "name": "Dike",
+      "number": 99,
+      "constant": "MA0099",
+      "group": "asteroid",
+      "gm_au3_per_day2": 5.014607211190043e-17
+    },
+    {
+      "id": 2000079,
+      "name": "Eurynome",
+      "number": 79,
+      "constant": "MA0079",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.824226918174613e-17
+    },
+    {
+      "id": 2000172,
+      "name": "Baucis",
+      "number": 172,
+      "constant": "MA0172",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.658827122108877e-17
+    },
+    {
+      "id": 2000604,
+      "name": "Tekmessa",
+      "number": 604,
+      "constant": "MA0604",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.6458511951546986e-17
+    },
+    {
+      "id": 2000224,
+      "name": "Oceana",
+      "number": 224,
+      "constant": "MA0224",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.638450322774714e-17
+    },
+    {
+      "id": 2000485,
+      "name": "Genua",
+      "number": 485,
+      "constant": "MA0485",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.5881147721288083e-17
+    },
+    {
+      "id": 2000914,
+      "name": "Palisana",
+      "number": 914,
+      "constant": "MA0914",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.449283120191586e-17
+    },
+    {
+      "id": 2000593,
+      "name": "Titania",
+      "number": 593,
+      "constant": "MA0593",
+      "group": "asteroid",
+      "gm_au3_per_day2": 4.3152660225791144e-17
+    },
+    {
+      "id": 2000909,
+      "name": "Ulla",
+      "number": 909,
+      "constant": "MA0909",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.964693261446294e-17
+    },
+    {
+      "id": 2000584,
+      "name": "Semiramis",
+      "number": 584,
+      "constant": "MA0584",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.8849243156686706e-17
+    },
+    {
+      "id": 2000082,
+      "name": "Alkmene",
+      "number": 82,
+      "constant": "MA0082",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.828565766724855e-17
+    },
+    {
+      "id": 2000442,
+      "name": "Eichsfeldia",
+      "number": 442,
+      "constant": "MA0442",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.7681035098461244e-17
+    },
+    {
+      "id": 2000198,
+      "name": "Ampella",
+      "number": 198,
+      "constant": "MA0198",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.4690964938059876e-17
+    },
+    {
+      "id": 2000547,
+      "name": "Praxedis",
+      "number": 547,
+      "constant": "MA0547",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.289014852337975e-17
+    },
+    {
+      "id": 2000025,
+      "name": "Phocaea",
+      "number": 25,
+      "constant": "MA0025",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.256080020069492e-17
+    },
+    {
+      "id": 2000177,
+      "name": "Irma",
+      "number": 177,
+      "constant": "MA0177",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.194885761351898e-17
+    },
+    {
+      "id": 2000113,
+      "name": "Amalthea",
+      "number": 113,
+      "constant": "MA0113",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.081992520561064e-17
+    },
+    {
+      "id": 2000112,
+      "name": "Iphigenia",
+      "number": 112,
+      "constant": "MA0112",
+      "group": "asteroid",
+      "gm_au3_per_day2": 3.051962645845043e-17
+    },
+    {
+      "id": 2000338,
+      "name": "Budrosa",
+      "number": 338,
+      "constant": "MA0338",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.864982709174516e-17
+    },
+    {
+      "id": 2000347,
+      "name": "Pariana",
+      "number": 347,
+      "constant": "MA0347",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.4842140182945907e-17
+    },
+    {
+      "id": 2001036,
+      "name": "Ganymed",
+      "number": 1036,
+      "constant": "MA1036",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.112761621018509e-17
+    },
+    {
+      "id": 2000778,
+      "name": "Theobalda",
+      "number": 778,
+      "constant": "MA0778",
+      "group": "asteroid",
+      "gm_au3_per_day2": 2.0592519759347046e-17
+    },
+    {
+      "id": 2000132,
+      "name": "Aethra",
+      "number": 132,
+      "constant": "MA0132",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.7504352843147015e-17
+    },
+    {
+      "id": 2000591,
+      "name": "Irmgard",
+      "number": 591,
+      "constant": "MA0591",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.5650082930549903e-17
+    },
+    {
+      "id": 2000060,
+      "name": "Echo",
+      "number": 60,
+      "constant": "MA0060",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.48260785652372e-17
+    },
+    {
+      "id": 2000336,
+      "name": "Lacadiera",
+      "number": 336,
+      "constant": "MA0336",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4252117646877083e-17
+    },
+    {
+      "id": 2000432,
+      "name": "Pythia",
+      "number": 432,
+      "constant": "MA0432",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3601888558172924e-17
+    },
+    {
+      "id": 2000118,
+      "name": "Peitho",
+      "number": 118,
+      "constant": "MA0118",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3157171164548998e-17
+    },
+    {
+      "id": 2000623,
+      "name": "Chimaera",
+      "number": 623,
+      "constant": "MA0623",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.0120911587092832e-17
+    },
+    {
+      "id": 2000585,
+      "name": "Bilkis",
+      "number": 585,
+      "constant": "MA0585",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.502726030864262e-18
+    },
+    {
+      "id": 2000433,
+      "name": "Eros",
+      "number": 433,
+      "constant": "MA0433",
+      "group": "asteroid",
+      "gm_au3_per_day2": 9.950600155464848e-19
+    },
+    {
+      "id": 2090482,
+      "name": "Orcus",
+      "number": 90482,
+      "constant": "MA8007",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 9.409624643156109e-14
+    },
+    {
+      "id": 2307261,
+      "name": "2002 MS4",
+      "number": 307261,
+      "constant": "MA8011",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 7.653501749067198e-14
+    },
+    {
+      "id": 3361580,
+      "name": "2006 QH181",
+      "number": null,
+      "constant": "MA8013",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 6.991602589737882e-14
+    },
+    {
+      "id": 2120347,
+      "name": "Salacia",
+      "number": 120347,
+      "constant": "MA8021",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 6.511702079363127e-14
+    },
+    {
+      "id": 2455502,
+      "name": "2003 UZ413",
+      "number": 455502,
+      "constant": "MA8026",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 6.483858075581723e-14
+    },
+    {
+      "id": 2208996,
+      "name": "2003 AZ84",
+      "number": 208996,
+      "constant": "MA8018",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 6.082123528394769e-14
+    },
+    {
+      "id": 2055565,
+      "name": "2002 AW197",
+      "number": 55565,
+      "constant": "MA8015",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 6.02473242459976e-14
+    },
+    {
+      "id": 2136108,
+      "name": "Haumea",
+      "number": 136108,
+      "constant": "MA8002",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 5.961630054504284e-13
+    },
+    {
+      "id": 2020000,
+      "name": "Varuna",
+      "number": 20000,
+      "constant": "MA8008",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 5.495075223411865e-14
+    },
+    {
+      "id": 2028978,
+      "name": "Ixion",
+      "number": 28978,
+      "constant": "MA8010",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 4.517665622509759e-14
+    },
+    {
+      "id": 2174567,
+      "name": "Varda",
+      "number": 174567,
+      "constant": "MA8012",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 3.965776886964191e-14
+    },
+    {
+      "id": 2090568,
+      "name": "2004 GV9",
+      "number": 90568,
+      "constant": "MA8017",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 3.719350237382443e-14
+    },
+    {
+      "id": 2230965,
+      "name": "2004 XA192",
+      "number": 230965,
+      "constant": "MA8024",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 3.645022602009109e-15
+    },
+    {
+      "id": 2145452,
+      "name": "2005 RN43",
+      "number": 145452,
+      "constant": "MA8016",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 3.6285479917789626e-14
+    },
+    {
+      "id": 2136472,
+      "name": "Makemake",
+      "number": 136472,
+      "constant": "MA8004",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 3.431855500629209e-13
+    },
+    {
+      "id": 3525142,
+      "name": "2010 KZ39",
+      "number": null,
+      "constant": "MA8023",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.9579875156960054e-14
+    },
+    {
+      "id": 3308265,
+      "name": "2004 XR190",
+      "number": null,
+      "constant": "MA8014",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.904099518188484e-14
+    },
+    {
+      "id": 2042301,
+      "name": "2001 UR163",
+      "number": 42301,
+      "constant": "MA8025",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.7251938920337723e-14
+    },
+    {
+      "id": 2278361,
+      "name": "2007 JJ43",
+      "number": 278361,
+      "constant": "MA8022",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.67691589753377e-14
+    },
+    {
+      "id": 2225088,
+      "name": "Gonggong",
+      "number": 225088,
+      "constant": "MA8019",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.585678827709039e-13
+    },
+    {
+      "id": 3515022,
+      "name": "2010 FX86",
+      "number": null,
+      "constant": "MA8030",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.571034257081021e-14
+    },
+    {
+      "id": 2019521,
+      "name": "Chaos",
+      "number": 19521,
+      "constant": "MA8020",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.538379645629731e-14
+    },
+    {
+      "id": 2136199,
+      "name": "Eris",
+      "number": 136199,
+      "constant": "MA8001",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.485448030287316e-12
+    },
+    {
+      "id": 2084522,
+      "name": "2002 TC302",
+      "number": 84522,
+      "constant": "MA8006",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.281996343120454e-13
+    },
+    {
+      "id": 2528381,
+      "name": "2008 ST291",
+      "number": 528381,
+      "constant": "MA8029",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 2.1338903510045792e-14
+    },
+    {
+      "id": 2523639,
+      "name": "2010 RE64",
+      "number": 523639,
+      "constant": "MA8028",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 1.912886696869436e-14
+    },
+    {
+      "id": 2055637,
+      "name": "2002 UX25",
+      "number": 55637,
+      "constant": "MA8009",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 1.8603512445448687e-14
+    },
+    {
+      "id": 3545742,
+      "name": "2010 RF43",
+      "number": null,
+      "constant": "MA8027",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 1.7561425934907343e-14
+    },
+    {
+      "id": 2050000,
+      "name": "Quaoar",
+      "number": 50000,
+      "constant": "MA8005",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 1.5294877459751145e-13
+    },
+    {
+      "id": 2090377,
+      "name": "Sedna",
+      "number": 90377,
+      "constant": "MA8003",
+      "group": "kuiper-belt-object",
+      "gm_au3_per_day2": 1.4934867884244863e-13
+    }
+  ]
+}

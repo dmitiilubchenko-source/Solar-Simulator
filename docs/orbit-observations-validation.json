@@ -1,0 +1,1504 @@
+{
+  "schema_version": 1,
+  "dataset_sha256": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+  "epoch_jd_tdb": 2458900.5,
+  "frame": "ICRF",
+  "center": "SSB",
+  "units": "AU-D",
+  "fit": {
+    "state_au_day": [
+      -2.4360547613020502,
+      1.2083661206357066,
+      0.5913848765034877,
+      -0.005305949906608921,
+      -0.008158306761158614,
+      -0.00384581937907474
+    ],
+    "rank": 6,
+    "identifiable_locally": true,
+    "jacobian_condition": 3641.5024737088165,
+    "covariance_au_day": [
+      [
+        1.414884820269575e-09,
+        -6.967531886324426e-10,
+        -3.61904914626225e-10,
+        -3.0837813216413995e-12,
+        -4.1983566390685186e-12,
+        -1.5782042346157774e-12
+      ],
+      [
+        -6.967531886324425e-10,
+        3.4323557905937384e-10,
+        1.7824445032334337e-10,
+        1.4822026078519485e-12,
+        2.085295061488044e-12,
+        7.859672140794061e-13
+      ],
+      [
+        -3.6190491462622493e-10,
+        1.7824445032334337e-10,
+        9.264385409355568e-11,
+        7.740443397575748e-13,
+        1.080684611179502e-12,
+        4.083765508354869e-13
+      ],
+      [
+        -3.0837813216413995e-12,
+        1.4822026078519485e-12,
+        7.740443397575748e-13,
+        3.751425511220856e-14,
+        -4.600377559740541e-15,
+        -3.801606724384635e-15
+      ],
+      [
+        -4.198356639068518e-12,
+        2.0852950614880443e-12,
+        1.080684611179502e-12,
+        -4.600377559740541e-15,
+        1.879523898401708e-14,
+        7.935997033977484e-15
+      ],
+      [
+        -1.5782042346157774e-12,
+        7.859672140794063e-13,
+        4.083765508354869e-13,
+        -3.801606724384634e-15,
+        7.935997033977484e-15,
+        3.632735907031973e-15
+      ]
+    ],
+    "training_chi_square": 174.6613172150477,
+    "degrees_of_freedom": 112,
+    "reduced_chi_square": 1.5594760465629258,
+    "training_rms_arcsec": 0.29836941228990144,
+    "heliocentric_specific_energy_au2_day2": -5.192644487709988e-05,
+    "attempts": [
+      {
+        "success": true,
+        "evaluations": 7,
+        "training_chi_square": 174.66131721629324,
+        "message": "Both `ftol` and `xtol` termination conditions are satisfied."
+      },
+      {
+        "success": true,
+        "evaluations": 6,
+        "training_chi_square": 174.6613172150477,
+        "message": "Both `ftol` and `xtol` termination conditions are satisfied."
+      },
+      {
+        "success": true,
+        "evaluations": 7,
+        "training_chi_square": 174.66131721614988,
+        "message": "Both `ftol` and `xtol` termination conditions are satisfied."
+      },
+      {
+        "success": true,
+        "evaluations": 9,
+        "training_chi_square": 174.66131721673008,
+        "message": "Both `ftol` and `xtol` termination conditions are satisfied."
+      }
+    ],
+    "model": "Prescribed-background Newtonian restricted",
+    "numerical_tolerances": {
+      "rtol": 3e-12,
+      "atol_au_and_au_day": 1e-13
+    },
+    "uncertainty_scope": "Local linear covariance conditional on fixed model and reported ADES uncertainties; inflated for excess scatter. No global uniqueness or physical metre-accuracy guarantee."
+  },
+  "training": {
+    "count": 59,
+    "nights": 13,
+    "rms_arcsec": 0.29836941228990144,
+    "median_arcsec": 0.18109647922867855,
+    "max_arcsec": 0.991616652292985,
+    "chi_square": 174.66131721504772,
+    "residuals": [
+      {
+        "id": "LI3H0iDg0000DO170100004r9",
+        "night": "2020-01-04",
+        "time_days": -47.473393819401366,
+        "east_arcsec": -0.34585724176008187,
+        "north_arcsec": -0.8204662931813055,
+        "radial_arcsec": 0.8903831590526426
+      },
+      {
+        "id": "LI3H0iDg0000DO170100004rA",
+        "night": "2020-01-04",
+        "time_days": -47.47049266202554,
+        "east_arcsec": -0.16895475280862682,
+        "north_arcsec": -0.24772953568787145,
+        "radial_arcsec": 0.2998593526117746
+      },
+      {
+        "id": "LI3H0iDg0000DO170100004rB",
+        "night": "2020-01-04",
+        "time_days": -47.46494555529386,
+        "east_arcsec": 0.0153426748399742,
+        "north_arcsec": 0.31526776316619687,
+        "radial_arcsec": 0.3156408721364557
+      },
+      {
+        "id": "LI3H0iDg0000DO170100004rC",
+        "night": "2020-01-04",
+        "time_days": -47.45484243063435,
+        "east_arcsec": 0.025309152095247492,
+        "north_arcsec": -0.20362338425453674,
+        "radial_arcsec": 0.20519024293335952
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006U6",
+        "night": "2020-01-20",
+        "time_days": -31.583018698191758,
+        "east_arcsec": -0.0641365762747989,
+        "north_arcsec": -0.12239350962961301,
+        "radial_arcsec": 0.13817985242323597
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006U7",
+        "night": "2020-01-20",
+        "time_days": -31.574222633531406,
+        "east_arcsec": 0.05278302540142097,
+        "north_arcsec": -0.05385937365933992,
+        "radial_arcsec": 0.07541140431992664
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006U8",
+        "night": "2020-01-20",
+        "time_days": -31.57133524903105,
+        "east_arcsec": -0.07015666383714096,
+        "north_arcsec": 0.17779125974173557,
+        "radial_arcsec": 0.19113264901976032
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006U9",
+        "night": "2020-01-20",
+        "time_days": -31.560490110339686,
+        "east_arcsec": -0.12376192259244048,
+        "north_arcsec": 0.05791941650194664,
+        "radial_arcsec": 0.1366443276967734
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006UA",
+        "night": "2020-01-20",
+        "time_days": -31.48889728623704,
+        "east_arcsec": -0.24509457860944192,
+        "north_arcsec": -0.0345911868846778,
+        "radial_arcsec": 0.2475235396357902
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006UB",
+        "night": "2020-01-20",
+        "time_days": -31.488437911377112,
+        "east_arcsec": -0.31989808964733457,
+        "north_arcsec": 0.07181700398471022,
+        "radial_arcsec": 0.32786044259921626
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006UC",
+        "night": "2020-01-20",
+        "time_days": -31.487978420567522,
+        "east_arcsec": -0.07667651661417214,
+        "north_arcsec": -0.0017622139183017622,
+        "radial_arcsec": 0.07669676393419264
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006UD",
+        "night": "2020-01-20",
+        "time_days": -31.487519740008572,
+        "east_arcsec": 0.3082221912032529,
+        "north_arcsec": 0.14052936920912665,
+        "radial_arcsec": 0.3387468416981177
+      },
+      {
+        "id": "LIJIIO9k0000DOu40100006UE",
+        "night": "2020-01-20",
+        "time_days": -31.487058397264043,
+        "east_arcsec": 0.1972654838171294,
+        "north_arcsec": -0.6167762960667491,
+        "radial_arcsec": 0.6475543764777011
+      },
+      {
+        "id": "LIKIVd9Q0000DP0W0100000WH",
+        "night": "2020-01-21",
+        "time_days": -30.529526105185287,
+        "east_arcsec": 0.14020199644657164,
+        "north_arcsec": -0.06773780432409746,
+        "radial_arcsec": 0.1557080920898275
+      },
+      {
+        "id": "LIKIVd9Q0000DP0W0100000WI",
+        "night": "2020-01-21",
+        "time_days": -30.524345549789505,
+        "east_arcsec": 0.30185677270904465,
+        "north_arcsec": -0.05937771113859039,
+        "radial_arcsec": 0.3076413883247469
+      },
+      {
+        "id": "LIKIVd9Q0000DP0W0100000WJ",
+        "night": "2020-01-21",
+        "time_days": -30.50412112849284,
+        "east_arcsec": 0.14214968805095463,
+        "north_arcsec": -0.11220249986537505,
+        "radial_arcsec": 0.18109647922867855
+      },
+      {
+        "id": "LIOHs4510000DPZ3010000EQ9",
+        "night": "2020-01-25",
+        "time_days": -26.48727170575459,
+        "east_arcsec": -0.21372883498787498,
+        "north_arcsec": 0.04342763003561295,
+        "radial_arcsec": 0.2180962492932521
+      },
+      {
+        "id": "LIOHs4510000DPZ3010000EQA",
+        "night": "2020-01-25",
+        "time_days": -26.483871358559025,
+        "east_arcsec": 0.03824171503657712,
+        "north_arcsec": 0.24944983662359188,
+        "radial_arcsec": 0.25236412138114134
+      },
+      {
+        "id": "LIOHs4510000DPZ3010000EQB",
+        "night": "2020-01-25",
+        "time_days": -26.47870226169054,
+        "east_arcsec": 0.0458784235669697,
+        "north_arcsec": 0.06674898896776771,
+        "radial_arcsec": 0.08099541516165873
+      },
+      {
+        "id": "LIOHs4510000DPZ3010000EQC",
+        "night": "2020-01-25",
+        "time_days": -26.46794832647601,
+        "east_arcsec": 0.31122853028072234,
+        "north_arcsec": 0.20897481451714303,
+        "radial_arcsec": 0.374878208439985
+      },
+      {
+        "id": "LISHdvA70000DQ4R010000D8J",
+        "night": "2020-01-29",
+        "time_days": -22.525589644702475,
+        "east_arcsec": -0.11526803932526872,
+        "north_arcsec": 0.15046175846117799,
+        "radial_arcsec": 0.18954013202781506
+      },
+      {
+        "id": "LISHdvA70000DQ4R010000D8K",
+        "night": "2020-01-29",
+        "time_days": -22.509263602810304,
+        "east_arcsec": 0.0953949614168141,
+        "north_arcsec": 0.19319383659707598,
+        "radial_arcsec": 0.21546242633650337
+      },
+      {
+        "id": "LISHdvA70000DQ4R010000D8L",
+        "night": "2020-01-29",
+        "time_days": -22.50634346416066,
+        "east_arcsec": -0.019877546201031982,
+        "north_arcsec": -0.23225626261885698,
+        "radial_arcsec": 0.23310531604545964
+      },
+      {
+        "id": "LISHdvA70000DQ4R010000D8M",
+        "night": "2020-01-29",
+        "time_days": -22.493597051842062,
+        "east_arcsec": 0.07071012088088632,
+        "north_arcsec": 0.16080792245545444,
+        "radial_arcsec": 0.17566760976181411
+      },
+      {
+        "id": "LIWHS5Ci0000DQSM0100007tj",
+        "night": "2020-02-02",
+        "time_days": -18.544140916304553,
+        "east_arcsec": 0.06472074041245589,
+        "north_arcsec": 0.10733064144279472,
+        "radial_arcsec": 0.12533411679210998
+      },
+      {
+        "id": "LIWHS5Ci0000DQSM0100007tk",
+        "night": "2020-02-02",
+        "time_days": -18.541170893223846,
+        "east_arcsec": 0.045342834174613475,
+        "north_arcsec": -0.10317353033586622,
+        "radial_arcsec": 0.1126976041136297
+      },
+      {
+        "id": "LIWHS5Ci0000DQSM0100007tl",
+        "night": "2020-02-02",
+        "time_days": -18.531163601657266,
+        "east_arcsec": -0.009265535836311484,
+        "north_arcsec": 0.16606178780431588,
+        "radial_arcsec": 0.16632007552637657
+      },
+      {
+        "id": "LIWHS5Ci0000DQSM0100007tm",
+        "night": "2020-02-02",
+        "time_days": -18.518521124937994,
+        "east_arcsec": -0.09078116551368098,
+        "north_arcsec": -0.03787911582631989,
+        "radial_arcsec": 0.09836690209519715
+      },
+      {
+        "id": "LIaGfOG20000DQjk0100002Ot",
+        "night": "2020-02-06",
+        "time_days": -14.608059896883002,
+        "east_arcsec": -0.1231375176583929,
+        "north_arcsec": -0.07641718122147322,
+        "radial_arcsec": 0.1449221647675279
+      },
+      {
+        "id": "LIaGfOG20000DQjk0100002Ou",
+        "night": "2020-02-06",
+        "time_days": -14.60472309102116,
+        "east_arcsec": 0.05173322976062913,
+        "north_arcsec": -0.0029354360482224196,
+        "radial_arcsec": 0.051816443782444654
+      },
+      {
+        "id": "LIaGfOG20000DQjk0100002Ov",
+        "night": "2020-02-06",
+        "time_days": -14.595613021653126,
+        "east_arcsec": 0.13127799993289682,
+        "north_arcsec": -0.07987864180413264,
+        "radial_arcsec": 0.15367013594987994
+      },
+      {
+        "id": "LIaGfOG20000DQjk0100002Ow",
+        "night": "2020-02-06",
+        "time_days": -14.58546799865363,
+        "east_arcsec": 0.22882552132435982,
+        "north_arcsec": -0.08253279528889491,
+        "radial_arcsec": 0.243254561123864
+      },
+      {
+        "id": "LIpHNk7U0000DRYc0100006BW",
+        "night": "2020-02-21",
+        "time_days": 0.47277980611696924,
+        "east_arcsec": -0.08576988570637846,
+        "north_arcsec": 0.29692786171160074,
+        "radial_arcsec": 0.30906735245688555
+      },
+      {
+        "id": "LIpHNk7U0000DRYc0100006BX",
+        "night": "2020-02-21",
+        "time_days": 0.47654948185235346,
+        "east_arcsec": 0.09281272952436508,
+        "north_arcsec": 0.1336898872222546,
+        "radial_arcsec": 0.16274885163116237
+      },
+      {
+        "id": "LIpHNk7U0000DRYc0100006BY",
+        "night": "2020-02-21",
+        "time_days": 0.4830701997343716,
+        "east_arcsec": -0.18199485181893924,
+        "north_arcsec": 0.19634696985539002,
+        "radial_arcsec": 0.2677204860670753
+      },
+      {
+        "id": "LIpHNk7U0000DRYc0100006BZ",
+        "night": "2020-02-21",
+        "time_days": 0.49376221362764805,
+        "east_arcsec": 0.04126407406795176,
+        "north_arcsec": 0.012532954175321336,
+        "radial_arcsec": 0.04312538404520142
+      },
+      {
+        "id": "LIqHFUCS0000DRab010000CHQ",
+        "night": "2020-02-22",
+        "time_days": 1.534054806589901,
+        "east_arcsec": -0.13982363159825675,
+        "north_arcsec": -0.08633873333779765,
+        "radial_arcsec": 0.1643320566040003
+      },
+      {
+        "id": "LIqHFUCS0000DRab010000CHR",
+        "night": "2020-02-22",
+        "time_days": 1.5371538802458042,
+        "east_arcsec": -0.18693815367117134,
+        "north_arcsec": -0.9738365939965289,
+        "radial_arcsec": 0.991616652292985
+      },
+      {
+        "id": "LIqHFUCS0000DRab010000CHS",
+        "night": "2020-02-22",
+        "time_days": 1.5380721675640041,
+        "east_arcsec": 0.14473845304824784,
+        "north_arcsec": 0.0818119399609678,
+        "radial_arcsec": 0.16626007732157724
+      },
+      {
+        "id": "LIqHFUCS0000DRab010000CHT",
+        "night": "2020-02-22",
+        "time_days": 1.5432420751487905,
+        "east_arcsec": -0.12169761503721434,
+        "north_arcsec": 0.102900662100287,
+        "radial_arcsec": 0.15937018468466257
+      },
+      {
+        "id": "LIqHFUCS0000DRab010000CHU",
+        "night": "2020-02-22",
+        "time_days": 1.5437033019436592,
+        "east_arcsec": 0.25320796956189706,
+        "north_arcsec": 0.5051456291958539,
+        "radial_arcsec": 0.5650543182255434
+      },
+      {
+        "id": "LIqHFUCS0000DRab010000CHV",
+        "night": "2020-02-22",
+        "time_days": 1.5482020286319846,
+        "east_arcsec": -0.25570944264561773,
+        "north_arcsec": 0.43108382702724024,
+        "radial_arcsec": 0.5012190987807468
+      },
+      {
+        "id": "LIqHFUCS0000DRab010000CHW",
+        "night": "2020-02-22",
+        "time_days": 1.5664536488766176,
+        "east_arcsec": -0.11755665530730965,
+        "north_arcsec": 0.19146763959995367,
+        "radial_arcsec": 0.2246762653709095
+      },
+      {
+        "id": "LItHGSAV0000DRkO0100003NB",
+        "night": "2020-02-25",
+        "time_days": 4.460715918163672,
+        "east_arcsec": -0.1083678332705492,
+        "north_arcsec": -0.05013730861212846,
+        "radial_arcsec": 0.11940409123066664
+      },
+      {
+        "id": "LItHGSAV0000DRkO0100003NC",
+        "night": "2020-02-25",
+        "time_days": 4.464399714316144,
+        "east_arcsec": -0.07965293648343423,
+        "north_arcsec": -0.09494478723767102,
+        "radial_arcsec": 0.12393184786018736
+      },
+      {
+        "id": "LItHGSAV0000DRkO0100003ND",
+        "night": "2020-02-25",
+        "time_days": 4.475607006172552,
+        "east_arcsec": 0.028796733109177547,
+        "north_arcsec": -0.19532608058465434,
+        "radial_arcsec": 0.1974374067757275
+      },
+      {
+        "id": "LItHGSAV0000DRkO0100003NE",
+        "night": "2020-02-25",
+        "time_days": 4.481281658939388,
+        "east_arcsec": 0.1878869889640166,
+        "north_arcsec": -0.05044877010406112,
+        "radial_arcsec": 0.19454202380713762
+      },
+      {
+        "id": "LIuImCAM0000DRnw0100008Ty",
+        "night": "2020-02-26",
+        "time_days": 5.42416071009465,
+        "east_arcsec": 0.10934721689234227,
+        "north_arcsec": -0.06612511483267568,
+        "radial_arcsec": 0.1277863242046483
+      },
+      {
+        "id": "LIuImCAM0000DRnw0100008Tz",
+        "night": "2020-02-26",
+        "time_days": 5.427450177749773,
+        "east_arcsec": -0.033030221294165954,
+        "north_arcsec": -0.2128409547086594,
+        "radial_arcsec": 0.21538864296901816
+      },
+      {
+        "id": "LIuImCAM0000DRnw0100008U0",
+        "night": "2020-02-26",
+        "time_days": 5.435948441295107,
+        "east_arcsec": 0.010856498643826104,
+        "north_arcsec": 0.02396456805291704,
+        "radial_arcsec": 0.026309011474517436
+      },
+      {
+        "id": "LIuImCAM0000DRnw0100008U1",
+        "night": "2020-02-26",
+        "time_days": 5.446122978384227,
+        "east_arcsec": -0.09171997685022315,
+        "north_arcsec": -0.02580883449784464,
+        "radial_arcsec": 0.0952819505024042
+      },
+      {
+        "id": "LJ4Gmi8K0000DSDV0100005dS",
+        "night": "2020-03-05",
+        "time_days": 13.40965770241289,
+        "east_arcsec": 0.07919233686462046,
+        "north_arcsec": -0.13114413255231172,
+        "radial_arcsec": 0.1531999011780942
+      },
+      {
+        "id": "LJ4Gmi8K0000DSDV0100005dT",
+        "night": "2020-03-05",
+        "time_days": 13.417884785313593,
+        "east_arcsec": 0.06631242154697128,
+        "north_arcsec": 0.013443002615968539,
+        "radial_arcsec": 0.06766130039214557
+      },
+      {
+        "id": "LJ4Gmi8K0000DSDV0100005dU",
+        "night": "2020-03-05",
+        "time_days": 13.421240919832574,
+        "east_arcsec": -0.11749357970203009,
+        "north_arcsec": 0.0762831904385466,
+        "radial_arcsec": 0.14008521126329096
+      },
+      {
+        "id": "LJ4Gmi8K0000DSDV0100005dV",
+        "night": "2020-03-05",
+        "time_days": 13.431523211397664,
+        "east_arcsec": 0.09066632375129721,
+        "north_arcsec": 0.12442674039916025,
+        "radial_arcsec": 0.1539558247970341
+      },
+      {
+        "id": "LJOGbm7b0000DTJc0100003yV",
+        "night": "2020-03-25",
+        "time_days": 33.33296430149674,
+        "east_arcsec": -0.20080839406662473,
+        "north_arcsec": -0.13147215643608054,
+        "radial_arcsec": 0.2400186222891259
+      },
+      {
+        "id": "LJOGbm7b0000DTJc0100003yW",
+        "night": "2020-03-25",
+        "time_days": 33.33909300520643,
+        "east_arcsec": 0.040445348775556896,
+        "north_arcsec": -0.005994289872126678,
+        "radial_arcsec": 0.040887134267976306
+      },
+      {
+        "id": "LJOGbm7b0000DTJc0100003yX",
+        "night": "2020-03-25",
+        "time_days": 33.35123293606191,
+        "east_arcsec": 0.15133512471293326,
+        "north_arcsec": -0.12783337385696947,
+        "radial_arcsec": 0.1981002055615662
+      },
+      {
+        "id": "LJOGbm7b0000DTJc0100003yY",
+        "night": "2020-03-25",
+        "time_days": 33.35415932481735,
+        "east_arcsec": 0.15028681270573233,
+        "north_arcsec": 0.661965410392688,
+        "radial_arcsec": 0.678810968259653
+      }
+    ]
+  },
+  "holdout": {
+    "count": 24,
+    "nights": 6,
+    "rms_arcsec": 0.5975191111021643,
+    "median_arcsec": 0.492036121161244,
+    "max_arcsec": 1.1774649437325988,
+    "chi_square": 143.76023328031619,
+    "residuals": [
+      {
+        "id": "LJiG1rCO0000DUQk01000032B",
+        "night": "2020-04-14",
+        "time_days": 53.39506777357696,
+        "east_arcsec": 0.24628294014287946,
+        "north_arcsec": -0.36407539520840165,
+        "radial_arcsec": 0.43955224945571036
+      },
+      {
+        "id": "LJiG1rCO0000DUQk01000032C",
+        "night": "2020-04-14",
+        "time_days": 53.39831661647572,
+        "east_arcsec": 0.684181858196835,
+        "north_arcsec": 0.08715689433442583,
+        "radial_arcsec": 0.6897109099584378
+      },
+      {
+        "id": "LJiG1rCO0000DUQk01000032D",
+        "night": "2020-04-14",
+        "time_days": 53.40347031997903,
+        "east_arcsec": 0.10876547605493016,
+        "north_arcsec": 0.17894924632837364,
+        "radial_arcsec": 0.20941050962869207
+      },
+      {
+        "id": "LJiG1rCO0000DUQk01000032E",
+        "night": "2020-04-14",
+        "time_days": 53.413553653102504,
+        "east_arcsec": -0.3857573535697341,
+        "north_arcsec": 0.02101305142302621,
+        "radial_arcsec": 0.3863292432152032
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xs",
+        "night": "2020-04-22",
+        "time_days": 61.354824717711445,
+        "east_arcsec": 0.20560275103861192,
+        "north_arcsec": 0.047020220504983765,
+        "radial_arcsec": 0.21091086356796024
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xt",
+        "night": "2020-04-22",
+        "time_days": 61.35814103679338,
+        "east_arcsec": 0.514842522274948,
+        "north_arcsec": -0.1178539094314227,
+        "radial_arcsec": 0.5281594141078054
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xu",
+        "night": "2020-04-22",
+        "time_days": 61.36392101374992,
+        "east_arcsec": 0.3118815244031152,
+        "north_arcsec": -0.5748338884897948,
+        "radial_arcsec": 0.6539908903190539
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xv",
+        "night": "2020-04-22",
+        "time_days": 61.383263027850326,
+        "east_arcsec": 0.8200940860038838,
+        "north_arcsec": -0.3414637780490666,
+        "radial_arcsec": 0.8883421759761763
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021c",
+        "night": "2020-04-26",
+        "time_days": 65.31068559653228,
+        "east_arcsec": 0.05042603608377713,
+        "north_arcsec": -0.026762719789593707,
+        "radial_arcsec": 0.05708789964308289
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021e",
+        "night": "2020-04-26",
+        "time_days": 65.32175747175803,
+        "east_arcsec": 0.09560416962210501,
+        "north_arcsec": -0.024108444545577222,
+        "radial_arcsec": 0.09859703011520883
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021d",
+        "night": "2020-04-26",
+        "time_days": 65.32500967067769,
+        "east_arcsec": -0.10209682200422464,
+        "north_arcsec": -0.3686461707367296,
+        "radial_arcsec": 0.3825228885468376
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021f",
+        "night": "2020-04-26",
+        "time_days": 65.34431696227854,
+        "east_arcsec": 0.2748801627132203,
+        "north_arcsec": 0.36372709972926714,
+        "radial_arcsec": 0.4559128282146826
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zQ",
+        "night": "2020-04-30",
+        "time_days": 69.28228929968498,
+        "east_arcsec": 1.1522530595104747,
+        "north_arcsec": -0.24235630911524098,
+        "radial_arcsec": 1.1774649437325988
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zR",
+        "night": "2020-04-30",
+        "time_days": 69.28531661447084,
+        "east_arcsec": -0.264329467963279,
+        "north_arcsec": 0.3522090161795817,
+        "radial_arcsec": 0.44036491539624156
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zS",
+        "night": "2020-04-30",
+        "time_days": 69.29270874433166,
+        "east_arcsec": 0.34208833875397043,
+        "north_arcsec": -0.45029893272156224,
+        "radial_arcsec": 0.5655029268904178
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zT",
+        "night": "2020-04-30",
+        "time_days": 69.30394149900135,
+        "east_arcsec": -0.12017909735594279,
+        "north_arcsec": -0.13832522328883337,
+        "radial_arcsec": 0.1832399597227493
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e3",
+        "night": "2020-05-16",
+        "time_days": 85.29091186617339,
+        "east_arcsec": 1.0173756124358875,
+        "north_arcsec": -0.1712803605537742,
+        "radial_arcsec": 1.0316928315592429
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e4",
+        "night": "2020-05-16",
+        "time_days": 85.29414369520569,
+        "east_arcsec": 0.41399315058919883,
+        "north_arcsec": 0.4515971206954642,
+        "radial_arcsec": 0.6126420554901572
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e5",
+        "night": "2020-05-16",
+        "time_days": 85.31348651909107,
+        "east_arcsec": -0.795035205924141,
+        "north_arcsec": -0.12345540158553378,
+        "radial_arcsec": 0.8045633690639207
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e6",
+        "night": "2020-05-16",
+        "time_days": 85.32963651913056,
+        "east_arcsec": 0.2981849928942485,
+        "north_arcsec": 0.784853019453199,
+        "radial_arcsec": 0.8395883230084531
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pj",
+        "night": "2020-05-20",
+        "time_days": 89.27269450420413,
+        "east_arcsec": -0.3349948491149885,
+        "north_arcsec": -0.17396639131577202,
+        "radial_arcsec": 0.37747298478302554
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pk",
+        "night": "2020-05-20",
+        "time_days": 89.28293455051157,
+        "east_arcsec": 0.5586022395922763,
+        "north_arcsec": -0.1771592357452687,
+        "radial_arcsec": 0.5860220617752838
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pl",
+        "night": "2020-05-20",
+        "time_days": 89.30198431884769,
+        "east_arcsec": 0.726696878004078,
+        "north_arcsec": 0.03079010007353733,
+        "radial_arcsec": 0.7273488727999874
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pm",
+        "night": "2020-05-20",
+        "time_days": 89.31041267545793,
+        "east_arcsec": 0.2311968892618016,
+        "north_arcsec": 0.0719219723060237,
+        "radial_arcsec": 0.24212552881660823
+      }
+    ]
+  },
+  "holdout_uncertainty": {
+    "scope": "Local linear conditional 1-sigma axes of prediction alone; excluding measurement noise, catalog biases and background/model errors.",
+    "epoch_position_sigma_trace_metres": 6435776.645070571,
+    "predictions": [
+      {
+        "id": "LJiG1rCO0000DUQk01000032B",
+        "time_days": 53.39506777357696,
+        "covariance_arcsec2": [
+          [
+            0.06817929510845687,
+            -0.025292397479068512
+          ],
+          [
+            -0.025292397479068116,
+            0.016527032619841148
+          ]
+        ],
+        "minor_sigma_arcsec": 0.07877141195909428,
+        "major_sigma_arcsec": 0.2801809993312692
+      },
+      {
+        "id": "LJiG1rCO0000DUQk01000032C",
+        "time_days": 53.39831661647572,
+        "covariance_arcsec2": [
+          [
+            0.06819750802262418,
+            -0.0252997445226492
+          ],
+          [
+            -0.02529974452264894,
+            0.01653048296471768
+          ]
+        ],
+        "minor_sigma_arcsec": 0.07877406162901233,
+        "major_sigma_arcsec": 0.2802189112137338
+      },
+      {
+        "id": "LJiG1rCO0000DUQk01000032D",
+        "time_days": 53.40347031997903,
+        "covariance_arcsec2": [
+          [
+            0.06822634180803785,
+            -0.025311490731953133
+          ],
+          [
+            -0.025311490731953094,
+            0.01653604016240917
+          ]
+        ],
+        "minor_sigma_arcsec": 0.0787782624384177,
+        "major_sigma_arcsec": 0.28027908829884335
+      },
+      {
+        "id": "LJiG1rCO0000DUQk01000032E",
+        "time_days": 53.413553653102504,
+        "covariance_arcsec2": [
+          [
+            0.0682828791501867,
+            -0.02533446443311257
+          ],
+          [
+            -0.02533446443311274,
+            0.016546884272492624
+          ]
+        ],
+        "minor_sigma_arcsec": 0.07878647218646537,
+        "major_sigma_arcsec": 0.28039696008175735
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xs",
+        "time_days": 61.354824717711445,
+        "covariance_arcsec2": [
+          [
+            0.126423063610973,
+            -0.0485970389468852
+          ],
+          [
+            -0.04859703894688555,
+            0.02696091074669507
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08461020041744888,
+        "major_sigma_arcsec": 0.3823938916130685
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xt",
+        "time_days": 61.35814103679338,
+        "covariance_arcsec2": [
+          [
+            0.1264522424742518,
+            -0.04860884867263747
+          ],
+          [
+            -0.048608848672638004,
+            0.026966163104338498
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08461259632378323,
+        "major_sigma_arcsec": 0.38243837950961307
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xu",
+        "time_days": 61.36392101374992,
+        "covariance_arcsec2": [
+          [
+            0.12650304182786967,
+            -0.0486295361676943
+          ],
+          [
+            -0.04862953616769399,
+            0.026975411443341688
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08461676999239308,
+        "major_sigma_arcsec": 0.3825159545787153
+      },
+      {
+        "id": "LJqG2S1q0000DVIE0100002xv",
+        "time_days": 61.383263027850326,
+        "covariance_arcsec2": [
+          [
+            0.12667349972341554,
+            -0.04869874874272305
+          ],
+          [
+            -0.04869874874272343,
+            0.027006265972914417
+          ]
+        ],
+        "minor_sigma_arcsec": 0.0846307141496416,
+        "major_sigma_arcsec": 0.38277592390176735
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021c",
+        "time_days": 65.31068559653228,
+        "covariance_arcsec2": [
+          [
+            0.16570429951271004,
+            -0.06436562278362903
+          ],
+          [
+            -0.0643656227836287,
+            0.03382071535537899
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08726116261240441,
+        "major_sigma_arcsec": 0.4380759116495913
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021e",
+        "time_days": 65.32175747175803,
+        "covariance_arcsec2": [
+          [
+            0.16582158444387513,
+            -0.06441340866610176
+          ],
+          [
+            -0.06441340866610146,
+            0.033841721440786635
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08726871438792105,
+        "major_sigma_arcsec": 0.4382322185482729
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021d",
+        "time_days": 65.32500967067769,
+        "covariance_arcsec2": [
+          [
+            0.16585602684199685,
+            -0.06442749086531914
+          ],
+          [
+            -0.06442749086531943,
+            0.03384793016041884
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08727093158170034,
+        "major_sigma_arcsec": 0.4382781554027966
+      },
+      {
+        "id": "LJuFioDs0000DVid01000021f",
+        "time_days": 65.34431696227854,
+        "covariance_arcsec2": [
+          [
+            0.16606100020293024,
+            -0.0645109605553911
+          ],
+          [
+            -0.06451096055539174,
+            0.033884596817600796
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08728408175849227,
+        "major_sigma_arcsec": 0.43855112141243907
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zQ",
+        "time_days": 69.28228929968498,
+        "covariance_arcsec2": [
+          [
+            0.2127925674008726,
+            -0.08334508078490059
+          ],
+          [
+            -0.08334508078490059,
+            0.04198839595489533
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08977388846548229,
+        "major_sigma_arcsec": 0.49671079342566643
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zR",
+        "time_days": 69.28531661447084,
+        "covariance_arcsec2": [
+          [
+            0.21283022694436213,
+            -0.08336088995439143
+          ],
+          [
+            -0.08336088995439128,
+            0.04199543473171154
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08977583915287524,
+        "major_sigma_arcsec": 0.4967554331665339
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zS",
+        "time_days": 69.29270874433166,
+        "covariance_arcsec2": [
+          [
+            0.212923028185537,
+            -0.08339868092034643
+          ],
+          [
+            -0.08339868092034658,
+            0.042011820989244594
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08978060157886754,
+        "major_sigma_arcsec": 0.49686446115104493
+      },
+      {
+        "id": "LJyFkZ8q0000DWAF0100000zT",
+        "time_days": 69.30394149900135,
+        "covariance_arcsec2": [
+          [
+            0.2130638668418715,
+            -0.08345644295019469
+          ],
+          [
+            -0.08345644295019489,
+            0.042037023820756206
+          ]
+        ],
+        "minor_sigma_arcsec": 0.08978783537253926,
+        "major_sigma_arcsec": 0.49703021566273164
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e3",
+        "time_days": 85.29091186617339,
+        "covariance_arcsec2": [
+          [
+            0.4876516419089423,
+            -0.19619206898397576
+          ],
+          [
+            -0.19619206898397545,
+            0.09026952702136033
+          ]
+        ],
+        "minor_sigma_arcsec": 0.0986430774074365,
+        "major_sigma_arcsec": 0.7537842610521217
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e4",
+        "time_days": 85.29414369520569,
+        "covariance_arcsec2": [
+          [
+            0.4877199067318841,
+            -0.196221231868424
+          ],
+          [
+            -0.19622123186842347,
+            0.09028235415658034
+          ]
+        ],
+        "minor_sigma_arcsec": 0.09864475915081516,
+        "major_sigma_arcsec": 0.7538378289662453
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e5",
+        "time_days": 85.31348651909107,
+        "covariance_arcsec2": [
+          [
+            0.4881299012678854,
+            -0.19639488524822032
+          ],
+          [
+            -0.19639488524822046,
+            0.09035815227315334
+          ]
+        ],
+        "minor_sigma_arcsec": 0.09865480797332629,
+        "major_sigma_arcsec": 0.7541586586420558
+      },
+      {
+        "id": "LKFFhe7g0000DX7v0100001e6",
+        "time_days": 85.32963651913056,
+        "covariance_arcsec2": [
+          [
+            0.48847369638780574,
+            -0.19653917668664514
+          ],
+          [
+            -0.19653917668664508,
+            0.09042061158137776
+          ]
+        ],
+        "minor_sigma_arcsec": 0.09866317340649854,
+        "major_sigma_arcsec": 0.7544268593989365
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pj",
+        "time_days": 89.27269450420413,
+        "covariance_arcsec2": [
+          [
+            0.5784118340570454,
+            -0.23424663385575667
+          ],
+          [
+            -0.2342466338557566,
+            0.10667249388385569
+          ]
+        ],
+        "minor_sigma_arcsec": 0.10058705887745545,
+        "major_sigma_arcsec": 0.821563492085234
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pk",
+        "time_days": 89.28293455051157,
+        "covariance_arcsec2": [
+          [
+            0.578652665385245,
+            -0.2343485432288992
+          ],
+          [
+            -0.23434854322889936,
+            0.10671678633262369
+          ]
+        ],
+        "minor_sigma_arcsec": 0.1005921479111628,
+        "major_sigma_arcsec": 0.8217363759116956
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pl",
+        "time_days": 89.30198431884769,
+        "covariance_arcsec2": [
+          [
+            0.5791004161135199,
+            -0.2345390881102591
+          ],
+          [
+            -0.2345390881102592,
+            0.10680001840263537
+          ]
+        ],
+        "minor_sigma_arcsec": 0.10060159492730225,
+        "major_sigma_arcsec": 0.8220582422275433
+      },
+      {
+        "id": "LKJFjcA80000DXZn0100001Pm",
+        "time_days": 89.31041267545793,
+        "covariance_arcsec2": [
+          [
+            0.5792984568592149,
+            -0.23462377151233743
+          ],
+          [
+            -0.23462377151233765,
+            0.10683716426576789
+          ]
+        ],
+        "minor_sigma_arcsec": 0.10060576517430075,
+        "major_sigma_arcsec": 0.8222007669290246
+      }
+    ]
+  },
+  "separation": "Initial hypotheses, optimization, multistart selection and covariance use training only. No clipping; every fixed holdout measurement is evaluated.",
+  "limitation": "Angular prediction experiment for one massless target with externally prescribed JPL observer/perturbers; not independent astronomical measurements or a fit of the whole Solar System.",
+  "controls": {
+    "independent_rk45_max_arcsec": 2.2813957259714596e-10,
+    "stricter_tolerances_max_arcsec": 8.335724094835468e-11,
+    "background_12h_vs_24h_max_arcsec": 0.0,
+    "sun_only_training_fit": {
+      "state_au_day": [
+        -2.436077397823542,
+        1.2083773165905953,
+        0.5913906815795074,
+        -0.005306358419143956,
+        -0.008158005826931327,
+        -0.0038456741215112094
+      ],
+      "rank": 6,
+      "identifiable_locally": true,
+      "jacobian_condition": 3641.4626791395954,
+      "covariance_au_day": [
+        [
+          1.4197127682159033e-09,
+          -6.991306067091846e-10,
+          -3.63139796581391e-10,
+          -3.0945801626681148e-12,
+          -4.21254107129436e-12,
+          -1.5835178399271816e-12
+        ],
+        [
+          -6.991306067091845e-10,
+          3.4440670997863416e-10,
+          1.7885263103453787e-10,
+          1.4873948825014081e-12,
+          2.092341328585118e-12,
+          7.886140555163854e-13
+        ],
+        [
+          -3.6313979658139094e-10,
+          1.788526310345379e-10,
+          9.295996571451996e-11,
+          7.767556646808783e-13,
+          1.0843361378225e-12,
+          4.097518594218382e-13
+        ],
+        [
+          -3.0945801626681148e-12,
+          1.4873948825014081e-12,
+          7.767556646808783e-13,
+          3.764470219108295e-14,
+          -4.616095193846329e-15,
+          -3.8147098041516385e-15
+        ],
+        [
+          -4.212541071294359e-12,
+          2.092341328585118e-12,
+          1.0843361378225e-12,
+          -4.61609519384633e-15,
+          1.885876768519e-14,
+          7.962828556172004e-15
+        ],
+        [
+          -1.5835178399271816e-12,
+          7.886140555163856e-13,
+          4.097518594218382e-13,
+          -3.8147098041516385e-15,
+          7.962828556172005e-15,
+          3.6450416042743106e-15
+        ]
+      ],
+      "training_chi_square": 175.2576095977151,
+      "degrees_of_freedom": 112,
+      "reduced_chi_square": 1.5648000856938846,
+      "training_rms_arcsec": 0.29887117244977585,
+      "heliocentric_specific_energy_au2_day2": -5.192629826690771e-05,
+      "attempts": [
+        {
+          "success": true,
+          "evaluations": 7,
+          "training_chi_square": 175.2576095977151,
+          "message": "`xtol` termination condition is satisfied."
+        },
+        {
+          "success": true,
+          "evaluations": 6,
+          "training_chi_square": 175.25760959930696,
+          "message": "Both `ftol` and `xtol` termination conditions are satisfied."
+        },
+        {
+          "success": true,
+          "evaluations": 7,
+          "training_chi_square": 175.257609600941,
+          "message": "`xtol` termination condition is satisfied."
+        },
+        {
+          "success": true,
+          "evaluations": 9,
+          "training_chi_square": 175.25760960005368,
+          "message": "Both `ftol` and `xtol` termination conditions are satisfied."
+        }
+      ],
+      "model": "Sun-only Newtonian restricted",
+      "numerical_tolerances": {
+        "rtol": 3e-12,
+        "atol_au_and_au_day": 1e-13
+      },
+      "uncertainty_scope": "Local linear covariance conditional on fixed model and reported ADES uncertainties; inflated for excess scatter. No global uniqueness or physical metre-accuracy guarantee."
+    },
+    "sun_only_holdout": {
+      "count": 24,
+      "nights": 6,
+      "rms_arcsec": 0.7818188861677887,
+      "median_arcsec": 0.5573638419937419,
+      "max_arcsec": 1.7996045629588804,
+      "chi_square": 207.5031554788515,
+      "residuals": [
+        {
+          "id": "LJiG1rCO0000DUQk01000032B",
+          "night": "2020-04-14",
+          "time_days": 53.39506777357696,
+          "east_arcsec": 0.07657209318104172,
+          "north_arcsec": -0.26795729872904556,
+          "radial_arcsec": 0.27868333175181664
+        },
+        {
+          "id": "LJiG1rCO0000DUQk01000032C",
+          "night": "2020-04-14",
+          "time_days": 53.39831661647572,
+          "east_arcsec": 0.5144264412286352,
+          "north_arcsec": 0.18329613469270375,
+          "radial_arcsec": 0.5461062501276142
+        },
+        {
+          "id": "LJiG1rCO0000DUQk01000032D",
+          "night": "2020-04-14",
+          "time_days": 53.40347031997903,
+          "east_arcsec": -0.06106056855797313,
+          "north_arcsec": 0.27512232033388134,
+          "radial_arcsec": 0.28181675638350845
+        },
+        {
+          "id": "LJiG1rCO0000DUQk01000032E",
+          "night": "2020-04-14",
+          "time_days": 53.413553653102504,
+          "east_arcsec": -0.5557219475074497,
+          "north_arcsec": 0.11725226469236334,
+          "radial_arcsec": 0.5679568438860129
+        },
+        {
+          "id": "LJqG2S1q0000DVIE0100002xs",
+          "night": "2020-04-22",
+          "time_days": 61.354824717711445,
+          "east_arcsec": -0.09834087019321051,
+          "north_arcsec": 0.2024619916258967,
+          "radial_arcsec": 0.22508172916405841
+        },
+        {
+          "id": "LJqG2S1q0000DVIE0100002xt",
+          "night": "2020-04-22",
+          "time_days": 61.35814103679338,
+          "east_arcsec": 0.21083603358688358,
+          "north_arcsec": 0.03761627888145906,
+          "radial_arcsec": 0.21416539752148853
+        },
+        {
+          "id": "LJqG2S1q0000DVIE0100002xu",
+          "night": "2020-04-22",
+          "time_days": 61.36392101374992,
+          "east_arcsec": 0.007765521521705425,
+          "north_arcsec": -0.4193138650898453,
+          "radial_arcsec": 0.41938576606877
+        },
+        {
+          "id": "LJqG2S1q0000DVIE0100002xv",
+          "night": "2020-04-22",
+          "time_days": 61.383263027850326,
+          "east_arcsec": 0.5156105398937727,
+          "north_arcsec": -0.1857771670531866,
+          "radial_arcsec": 0.5480578296565568
+        },
+        {
+          "id": "LJuFioDs0000DVid01000021c",
+          "night": "2020-04-26",
+          "time_days": 65.31068559653228,
+          "east_arcsec": -0.336315776387514,
+          "north_arcsec": 0.1645560518061253,
+          "radial_arcsec": 0.37441553871755445
+        },
+        {
+          "id": "LJuFioDs0000DVid01000021e",
+          "night": "2020-04-26",
+          "time_days": 65.32175747175803,
+          "east_arcsec": -0.2913771298612166,
+          "north_arcsec": 0.16731759581894598,
+          "radial_arcsec": 0.3359997167808218
+        },
+        {
+          "id": "LJuFioDs0000DVid01000021d",
+          "night": "2020-04-26",
+          "time_days": 65.32500967067769,
+          "east_arcsec": -0.4891484754668389,
+          "north_arcsec": -0.17718849440307724,
+          "radial_arcsec": 0.5202518559316843
+        },
+        {
+          "id": "LJuFioDs0000DVid01000021f",
+          "night": "2020-04-26",
+          "time_days": 65.34431696227854,
+          "east_arcsec": -0.11259012166414956,
+          "north_arcsec": 0.5553721169730128,
+          "radial_arcsec": 0.5666698543309269
+        },
+        {
+          "id": "LJyFkZ8q0000DWAF0100000zQ",
+          "night": "2020-04-30",
+          "time_days": 69.28228929968498,
+          "east_arcsec": 0.6713145246394447,
+          "north_arcsec": -0.01047897250779774,
+          "radial_arcsec": 0.6713963061089202
+        },
+        {
+          "id": "LJyFkZ8q0000DWAF0100000zR",
+          "night": "2020-04-30",
+          "time_days": 69.28531661447084,
+          "east_arcsec": -0.7453414866787086,
+          "north_arcsec": 0.5841199605950004,
+          "radial_arcsec": 0.9469583201651128
+        },
+        {
+          "id": "LJyFkZ8q0000DWAF0100000zS",
+          "night": "2020-04-30",
+          "time_days": 69.29270874433166,
+          "east_arcsec": -0.1391043109764149,
+          "north_arcsec": -0.2183082165228445,
+          "radial_arcsec": 0.25885997514797127
+        },
+        {
+          "id": "LJyFkZ8q0000DWAF0100000zT",
+          "night": "2020-04-30",
+          "time_days": 69.30394149900135,
+          "east_arcsec": -0.6016460515240357,
+          "north_arcsec": 0.0937876356593643,
+          "radial_arcsec": 0.6089122202066866
+        },
+        {
+          "id": "LKFFhe7g0000DX7v0100001e3",
+          "night": "2020-05-16",
+          "time_days": 85.29091186617339,
+          "east_arcsec": 0.04261748565711459,
+          "north_arcsec": 0.2735850542674553,
+          "radial_arcsec": 0.2768845102244992
+        },
+        {
+          "id": "LKFFhe7g0000DX7v0100001e4",
+          "night": "2020-05-16",
+          "time_days": 85.29414369520569,
+          "east_arcsec": -0.5608807882693325,
+          "north_arcsec": 0.8965147891255502,
+          "radial_arcsec": 1.0575093502047428
+        },
+        {
+          "id": "LKFFhe7g0000DX7v0100001e5",
+          "night": "2020-05-16",
+          "time_days": 85.31348651909107,
+          "east_arcsec": -1.7706041164196589,
+          "north_arcsec": 0.3217726618906302,
+          "radial_arcsec": 1.7996045629588804
+        },
+        {
+          "id": "LKFFhe7g0000DX7v0100001e6",
+          "night": "2020-05-16",
+          "time_days": 85.32963651913056,
+          "east_arcsec": -0.6779661500299256,
+          "north_arcsec": 1.2303382764370785,
+          "radial_arcsec": 1.4047670180683203
+        },
+        {
+          "id": "LKJFjcA80000DXZn0100001Pj",
+          "night": "2020-05-20",
+          "time_days": 89.27269450420413,
+          "east_arcsec": -1.4612579844588902,
+          "north_arcsec": 0.3370111653966389,
+          "radial_arcsec": 1.4996170920427851
+        },
+        {
+          "id": "LKJFjcA80000DXZn0100001Pk",
+          "night": "2020-05-20",
+          "time_days": 89.28293455051157,
+          "east_arcsec": -0.5680586753982877,
+          "north_arcsec": 0.3339947637675919,
+          "radial_arcsec": 0.6589712899052785
+        },
+        {
+          "id": "LKJFjcA80000DXZn0100001Pl",
+          "night": "2020-05-20",
+          "time_days": 89.30198431884769,
+          "east_arcsec": -0.40070399232373055,
+          "north_arcsec": 0.5422744314403855,
+          "radial_arcsec": 0.6742590366158763
+        },
+        {
+          "id": "LKJFjcA80000DXZn0100001Pm",
+          "night": "2020-05-20",
+          "time_days": 89.31041267545793,
+          "east_arcsec": -0.8965314143493229,
+          "north_arcsec": 0.5835532605999569,
+          "radial_arcsec": 1.069720984589925
+        }
+      ]
+    },
+    "comparison_policy": "Both predeclared models use training only; prescribed Sun+planets model is the primary. No model/tolerance/selection tuning to holdout.",
+    "independent_scope": "RK45 with separately coded Hermite interpolation, force sum and light-time iteration; same frozen physical inputs."
+  },
+  "checks_passed": true,
+  "code_sha256": {
+    "src/solar_simulator/orbit_determination.py": "416886773ebcd9ab9f722e6e94963e5d54419f2483131b8ecd6b9babd6158a60",
+    "scripts/assess_orbit_observations.py": "d9792cc92e1a02039c5ce02450c2aacec7ac9e6d3bccfdc2c9d43371b3b5c4dd"
+  },
+  "versions": {
+    "python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1"
+  },
+  "elapsed_seconds": 25.76201000000583
+}

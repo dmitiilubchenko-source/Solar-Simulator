@@ -1,0 +1,275 @@
+{
+  "schema": 1,
+  "model": "own fully interacting ring: 144-point resolution refinement",
+  "body_count": 528,
+  "dataset_sha256": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+  "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+  "policy_sha256": "19b1eae2abd37d1ca4bfca94b517a2f580693e73a9c8cdd9bd5175e23ee56a81",
+  "policy": {
+    "schema": 1,
+    "iteration": 47,
+    "reason": "36-point phase comparison changed Pluto-System by 0.9537802792694771 m, above the unchanged 0.1 m major-system criterion",
+    "selected_points": 144,
+    "selected_phase_index": 0,
+    "selection_rule": "densest originally declared quadrature, chosen by phase/count sensitivity, not by JPL residual",
+    "mass_radius_and_original_states": "unchanged",
+    "numerical_all_bodies_metres": 0.1,
+    "numerical_relative_moon_metres": 0.02,
+    "geometry_major_systems_metres": 0.1,
+    "geometry_relative_moon_metres": 0.02,
+    "geometry_comparisons": [
+      "72_vs_144_phase_0",
+      "72_vs_144_phase_1",
+      "phase_0_vs_1_72",
+      "phase_0_vs_1_144"
+    ],
+    "relative_energy_budget": 1e-10,
+    "all_original_KBO_sensitivity": "reported separately; not certified by major-system criterion"
+  },
+  "epoch_jd_tdb": 2461321.5,
+  "duration_seconds": 31557600.0,
+  "samples": 45,
+  "original_audit_sha256": "ab4116dfe1e4234f85226d48e52765a5755ec18cbe29dc53c0d789a337fef7fd",
+  "original_audit_passed": false,
+  "numerical_checks": {
+    "agreement": {
+      "all_bodies": {
+        "maximum_position_metres": 0.04125800495792655,
+        "maximum_velocity_m_per_s": 2.863936506586703e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.0008085065609369384,
+        "maximum_velocity_m_per_s": 1.9870450119338176e-09
+      }
+    },
+    "tighter_agreement": {
+      "all_bodies": {
+        "maximum_position_metres": 0.06353663023286375,
+        "maximum_velocity_m_per_s": 1.3439705415846829e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.003867034774711688,
+        "maximum_velocity_m_per_s": 1.0224454720820848e-08
+      }
+    },
+    "tolerance_sensitivity": {
+      "all_bodies": {
+        "maximum_position_metres": 0.056653777601415864,
+        "maximum_velocity_m_per_s": 1.5207733447187243e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.004674895404921845,
+        "maximum_velocity_m_per_s": 1.221117496677603e-08
+      }
+    },
+    "reference_convergence": {
+      "all_bodies": {
+        "maximum_position_metres": 0.04347017862557343,
+        "maximum_velocity_m_per_s": 3.483733076707572e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.0032194649176574435,
+        "maximum_velocity_m_per_s": 8.420655830357197e-09
+      }
+    }
+  },
+  "geometry_comparisons": {
+    "72_vs_144_phase_0": {
+      "major_systems": {
+        "maximum_position_metres": 0.01660252315883302,
+        "maximum_velocity_m_per_s": 1.0517388709736117e-08
+      },
+      "all_original_384": {
+        "maximum_position_metres": 5.557969525140966,
+        "maximum_velocity_m_per_s": 3.542142597091239e-07
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.0038929204564283064,
+        "maximum_velocity_m_per_s": 9.928969043273688e-09
+      }
+    },
+    "72_vs_144_phase_1": {
+      "major_systems": {
+        "maximum_position_metres": 0.012326086880816323,
+        "maximum_velocity_m_per_s": 1.1339976713450326e-08
+      },
+      "all_original_384": {
+        "maximum_position_metres": 5.511727139442414,
+        "maximum_velocity_m_per_s": 3.522888931692695e-07
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.004458644803219002,
+        "maximum_velocity_m_per_s": 1.1535772313219665e-08
+      }
+    },
+    "phase_0_vs_1_72": {
+      "major_systems": {
+        "maximum_position_metres": 0.019538973234964917,
+        "maximum_velocity_m_per_s": 3.967564179874089e-09
+      },
+      "all_original_384": {
+        "maximum_position_metres": 11.099616992477282,
+        "maximum_velocity_m_per_s": 7.084274782877129e-07
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.0014471874100879971,
+        "maximum_velocity_m_per_s": 3.632121540117774e-09
+      }
+    },
+    "phase_0_vs_1_144": {
+      "major_systems": {
+        "maximum_position_metres": 0.00939227737386296,
+        "maximum_velocity_m_per_s": 1.8009676809202027e-08
+      },
+      "all_original_384": {
+        "maximum_position_metres": 0.06718437719850338,
+        "maximum_velocity_m_per_s": 1.8009676809202027e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.006904438817590619,
+        "maximum_velocity_m_per_s": 1.785690137694446e-08
+      }
+    }
+  },
+  "checks": {
+    "agreement": true,
+    "tighter_agreement": true,
+    "tolerance_sensitivity": true,
+    "reference_convergence": true,
+    "geometry": true,
+    "energy": true
+  },
+  "checks_passed": true,
+  "recommended_options": {
+    "backend": "rust",
+    "relative_pair": [
+      "Earth",
+      "Moon"
+    ],
+    "error_control": "per-body",
+    "rtol": 3e-14,
+    "position_atol": 1e-07,
+    "velocity_atol": 1e-13
+  },
+  "variant": {
+    "body_count": 528,
+    "dataset_sha256": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+    "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+    "points": 144,
+    "phase_index": 0,
+    "options": {
+      "backend": "rust",
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "error_control": "per-body",
+      "rtol": 3e-14,
+      "position_atol": 1e-07,
+      "velocity_atol": 1e-13
+    },
+    "elapsed_seconds": 183.59833900000012,
+    "maximum_relative_energy_budget_residual": 2.4214885803908006e-15,
+    "maximum_relative_raw_energy_change": 2.6077569327285545e-15,
+    "final_orientation_work_joules": -2.8637751208238203e+19,
+    "pair": {
+      "earth": {
+        "maximum_position_metres": 5.453735322454865,
+        "maximum_velocity_m_per_s": 1.1236202959022355e-06
+      },
+      "moon": {
+        "maximum_position_metres": 7.870849238671851,
+        "maximum_velocity_m_per_s": 1.5652677299714223e-05
+      },
+      "barycentre": {
+        "maximum_position_metres": 5.443824213141208,
+        "maximum_velocity_m_per_s": 1.0832349638740613e-06
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 5.959490676408349,
+        "maximum_velocity_m_per_s": 1.5942628836793815e-05
+      },
+      "first_32_days_relative": {
+        "maximum_position_metres": 0.13454460813689326,
+        "maximum_velocity_m_per_s": 3.451328661867394e-07
+      }
+    },
+    "planets": {
+      "Sun": {
+        "maximum_position_metres": 0.005647865757320729,
+        "maximum_velocity_m_per_s": 2.340263273306711e-09
+      },
+      "Mercury": {
+        "maximum_position_metres": 11.086419636662475,
+        "maximum_velocity_m_per_s": 1.0523303188973782e-05
+      },
+      "Venus": {
+        "maximum_position_metres": 7.458087742166192,
+        "maximum_velocity_m_per_s": 2.334372170726812e-06
+      },
+      "Earth-Moon": {
+        "maximum_position_metres": 5.443824213141208,
+        "maximum_velocity_m_per_s": 1.0832349638740613e-06
+      },
+      "Mars": {
+        "maximum_position_metres": 4.221754728064428,
+        "maximum_velocity_m_per_s": 4.638704955542755e-07
+      },
+      "Jupiter": {
+        "maximum_position_metres": 0.26300554803615395,
+        "maximum_velocity_m_per_s": 1.8013004069625336e-08
+      },
+      "Saturn": {
+        "maximum_position_metres": 0.0833676005496359,
+        "maximum_velocity_m_per_s": 5.417867571770413e-09
+      },
+      "Uranus": {
+        "maximum_position_metres": 0.011117033333684979,
+        "maximum_velocity_m_per_s": 1.2379660574190942e-09
+      },
+      "Neptune": {
+        "maximum_position_metres": 0.01274474314292096,
+        "maximum_velocity_m_per_s": 1.7200847861252595e-09
+      }
+    },
+    "pluto_system": {
+      "maximum_position_metres": 0.5865305760089247,
+      "maximum_velocity_m_per_s": 3.790420204928705e-08
+    }
+  },
+  "tighter_diagnostics": {
+    "maximum_relative_energy_budget_residual": 8.009539150523417e-15,
+    "maximum_relative_raw_energy_change": 7.823270798185664e-15,
+    "final_orientation_work_joules": -2.8637751114775294e+19
+  },
+  "independent_elapsed_seconds": 2177.007507899999,
+  "production_archive_sha256": "095d9944e5020d4d65ca48c98c27555599965e7eb96d2f335fc8a27caf12cc9b",
+  "reference_archive_sha256": "b1a6ff54d6ebdf44714d75446af3ec7e47da5bc7f139e65d62d48241bbc5e461",
+  "tighter_archive_sha256": "b1666b3de95b95d68ebb23d8c9b3ead5aef05365481f3633b4dc107a518f6dd2",
+  "code_sha256": {
+    "scripts/assess_kuiper_ring.py": "408901afa599806e1ffb22091fa7027f830d061f16fc7a5eac72de6df5994f51",
+    "scripts/build_kuiper_ring.py": "2cc64746a85971c1d023fa0dc62a316a5effcac30cd6bbfbc8bf028e0fae49fb",
+    "scripts/independent_anchored_reference.py": "5f7ca98203e18ca6e2a40ff8b2d5660fe6f1a96b85b37abadd8a7cc71b13e581",
+    "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+    "scripts/validation/eih_scalar.rs": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+    "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/experiment.py": "3f17bc93f5ef21ee22503d55a31c9f3e83e360f2fb5d5a48a9a7e9726b4ebe81",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "scripts/assess_ring_resolution.py": "3bc2ec35886d971feaf5119c26405bfcb3dddb3630b86f7299214dec8c0a1471",
+    "scripts/kuiper-ring-refinement-policy.json": "19b1eae2abd37d1ca4bfca94b517a2f580693e73a9c8cdd9bd5175e23ee56a81"
+  },
+  "limitations": [
+    "45 samples are not a continuous global error bound.",
+    "Initial phases, circular velocities and ring-ring interactions are own explicit choices.",
+    "Discrete point ring is not recovered DE441 or EPM2017 dynamics.",
+    "All original KBO variations reported separately; no equivalence to a finite-width belt.",
+    "Thin self-gravitating rings have singular continuum self-interactions; finite-count checks do not prove an infinite-point limit.",
+    "No automatic geometry choice or fit to future JPL vectors.",
+    "Prescribed lunar orientation remains conditional; no autonomous tides/spin.",
+    "Failed 36-point geometry criterion preserved; model phase/counts changed for convergence, not fitted to future JPL states."
+  ]
+}

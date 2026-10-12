@@ -1,0 +1,88 @@
+{
+  "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+  "total_bytes": 645727232,
+  "epoch_jd_tdb": 2461321.5,
+  "duration_seconds": 31557600,
+  "entries": [
+    {
+      "role": "header",
+      "byte_range": [
+        0,
+        1023
+      ],
+      "sha256": "01aa6aae6f4285850ca61e61834da51e82cc8e7f4ce8e38221cb463e86590103"
+    },
+    {
+      "role": "summary-3",
+      "byte_range": [
+        2048,
+        3071
+      ],
+      "sha256": "dda56c2d220212572f64061e952ff9c71cab442dd6225ee1e96025a933a44233"
+    },
+    {
+      "role": "summary-246629",
+      "byte_range": [
+        252547072,
+        252548095
+      ],
+      "sha256": "4f1e11c216aff91150fc7bac49a8f3a1cf7bb480b088abb44144890f98fdabe9"
+    },
+    {
+      "role": "summary-493255",
+      "byte_range": [
+        505092096,
+        505093119
+      ],
+      "sha256": "e1a157270910d310031ff18816e312cfe31c5652040fb1510c96d82e18599d9b"
+    },
+    {
+      "role": "tail-2000001",
+      "byte_range": [
+        71561280,
+        71561311
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "role": "records-2000001",
+      "byte_range": [
+        64163136,
+        64165839
+      ],
+      "sha256": "db82f58478e8c6bff4e51c43ca2414521a42fd9f8a5109b8414c74ad98abbe7d"
+    },
+    {
+      "role": "tail-2000002",
+      "byte_range": [
+        475134752,
+        475134783
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "role": "records-2000002",
+      "byte_range": [
+        467736608,
+        467739311
+      ],
+      "sha256": "fe234ffc332094d9a2005aef98ceae1f6b1995cc183a12d90d7ba3c8c0944aac"
+    },
+    {
+      "role": "tail-2000004",
+      "byte_range": [
+        636565504,
+        636565535
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "role": "records-2000004",
+      "byte_range": [
+        629167360,
+        629170063
+      ],
+      "sha256": "8ac7a394203553f40edb21b6f9c2d7860e26d984aa412019b7151e42f706dfef"
+    }
+  ]
+}

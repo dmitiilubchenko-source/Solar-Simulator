@@ -57,7 +57,7 @@ def test_free_motion_in_shifted_frame_and_metadata():
 
 
 @pytest.mark.parametrize("values", [{"rtol":0}, {"rtol":1e-16}, {"position_atol":True},
-    {"velocity_atol":float("nan")}, {"integrator":"unknown"}, {"backend":"rust", "integrator":"dop853"}])
+    {"velocity_atol":float("nan")}, {"integrator":"unknown"}, {"backend":"unknown", "integrator":"dop853"}])
 def test_invalid_accuracy_settings(values):
     with pytest.raises(ValueError):
         Settings(1, **values)
@@ -77,13 +77,15 @@ def test_v2_checkpoint_migration_is_exact_and_non_mutating():
     document["schema_version"] = 2
     del document["orientation_work"]
     del document["origin"]
-    for key in ("integrator", "rtol", "position_atol", "velocity_atol", "physics", "figures"):
+    for key in ("integrator", "rtol", "position_atol", "velocity_atol", "physics", "figures", "relative_pair", "error_control"):
         del document["settings"][key]
     restored = from_document(document)
     assert restored.settings.integrator == "verlet"
     assert restored.settings.backend == "rust"
     assert "integrator" not in document["settings"]
-    assert to_document(restored)["schema_version"] == 7
+    from solar_simulator.storage import SCHEMA_VERSION
+    assert to_document(restored)["schema_version"] == SCHEMA_VERSION
+    assert restored.settings.error_control == "global-rms"
 
 
 def test_point_mass_singularity_fails_explicitly():

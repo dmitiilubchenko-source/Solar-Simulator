@@ -1,0 +1,10 @@
+{
+  "reason": "Annual independent-reference sensitivity reached 8.207367559854468e-9 against the unchanged 1e-8 limit; check an additional numerical refinement without changing physics or selecting by DE441 residual",
+  "parent_audit": "docs/rotation-year-validation.json",
+  "new_reference_rtol": 3e-14,
+  "reference_atol_over_rtol": 0.01,
+  "reference_max_step": 21600,
+  "criteria_source": "unchanged criteria in parent annual audit",
+  "physical_model_changes": false,
+  "future_ephemeris_calls": false
+}

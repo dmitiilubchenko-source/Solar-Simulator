@@ -1,0 +1,163 @@
+{
+  "model": "Newtonian rigid figure/point Q2; SI; COM; no tides/EIH/Q2-Q2",
+  "policy": {
+    "energy_relative": 1e-08,
+    "angular_momentum_relative": 1e-08,
+    "quaternion_norm": 1e-08,
+    "reference_difference": 1e-07,
+    "reference_uncertainty": 1e-08,
+    "analytic_attitude": 1e-06
+  },
+  "production_rtol": [
+    1e-11,
+    3e-13
+  ],
+  "reference_rtol": [
+    3e-11,
+    3e-12
+  ],
+  "code_sha256": {
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "scripts/assess_rotation.py": "47be5e3ea1b04f42885033dc1bc9de28e28aa161179474e3ad72e14003464b8b",
+    "tests/test_rotation.py": "f443b11b39e9de6ab22a0aee7091e716edb8e65ee7bb3e98d87adee5dd5ee587"
+  },
+  "cases": [
+    {
+      "name": "sphere",
+      "mass_kg": 1000000000000000.0,
+      "moments_kg_m2": [
+        2e+20,
+        2e+20,
+        2e+20
+      ],
+      "bounding_radius_m": 1000.0,
+      "point_mass_kg": null,
+      "initial": [
+        0.9639684818261637,
+        0.148194058982302,
+        -0.09879603932153468,
+        0.19759207864306935,
+        3.638576242630373e+19,
+        -2.2978397673122796e+19,
+        6.122147934371081e+19
+      ],
+      "duration_seconds": 100.0,
+      "samples": 401,
+      "max_step_seconds": 1.0,
+      "metrics": {
+        "energy_relative": 4.388571428571428e-16,
+        "angular_momentum_relative": 0.0,
+        "quaternion_norm": 1.0613732115416497e-12,
+        "reference_difference": 1.7442326212413824e-11,
+        "reference_uncertainty": 1.5233175289773913e-10,
+        "production_sensitivity": 5.1116287498011945e-12,
+        "analytic_attitude": 5.1236780400874604e-12
+      },
+      "passed": true
+    },
+    {
+      "name": "symmetric",
+      "mass_kg": 1000000000000000.0,
+      "moments_kg_m2": [
+        2e+20,
+        2e+20,
+        3e+20
+      ],
+      "bounding_radius_m": 1000.0,
+      "point_mass_kg": null,
+      "initial": [
+        0.9639684818261637,
+        0.148194058982302,
+        -0.09879603932153468,
+        0.19759207864306935,
+        3.2428504673602666e+19,
+        -3.272094068256706e+19,
+        8.931815115351446e+19
+      ],
+      "duration_seconds": 100.0,
+      "samples": 401,
+      "max_step_seconds": 1.0,
+      "metrics": {
+        "energy_relative": 1.1091746594594595e-11,
+        "angular_momentum_relative": 0.0,
+        "quaternion_norm": 7.245648525611159e-12,
+        "reference_difference": 4.394288225081466e-11,
+        "reference_uncertainty": 1.6652602432988113e-10,
+        "production_sensitivity": 4.319394432843572e-11,
+        "analytic_attitude": 4.3516484692150824e-11
+      },
+      "passed": true
+    },
+    {
+      "name": "triaxial",
+      "mass_kg": 1000000000000000.0,
+      "moments_kg_m2": [
+        2e+20,
+        2.5e+20,
+        3e+20
+      ],
+      "bounding_radius_m": 1000.0,
+      "point_mass_kg": null,
+      "initial": [
+        0.9639684818261637,
+        0.148194058982302,
+        -0.09879603932153468,
+        0.19759207864306935,
+        3.4479639895091356e+19,
+        -3.711089959596567e+19,
+        8.808482028069865e+19
+      ],
+      "duration_seconds": 100.0,
+      "samples": 401,
+      "max_step_seconds": 1.0,
+      "metrics": {
+        "energy_relative": 6.4642525866666655e-12,
+        "angular_momentum_relative": 0.0,
+        "quaternion_norm": 6.463052315552886e-12,
+        "reference_difference": 3.469040702529253e-11,
+        "reference_uncertainty": 1.6690255504299452e-10,
+        "production_sensitivity": 3.0861798937991596e-11
+      },
+      "passed": true
+    },
+    {
+      "name": "figure_point",
+      "mass_kg": 1000000000000000.0,
+      "moments_kg_m2": [
+        2e+20,
+        2.5e+20,
+        3e+20
+      ],
+      "bounding_radius_m": 1000.0,
+      "point_mass_kg": 200000000000000.0,
+      "initial": [
+        12000.0,
+        0.0,
+        0.0,
+        0.0,
+        2.583466663225984,
+        0.0,
+        0.9639684818261637,
+        0.148194058982302,
+        -0.09879603932153468,
+        0.19759207864306935,
+        -1096452882496049.1,
+        -2.8964176895662504e+16,
+        7.94526955344773e+16
+      ],
+      "duration_seconds": 583698.0578027279,
+      "samples": 401,
+      "max_step_seconds": 291.8490289013639,
+      "metrics": {
+        "energy_relative": 5.508018408915016e-15,
+        "angular_momentum_relative": 2.732507163434214e-15,
+        "quaternion_norm": 2.1094237467877974e-15,
+        "reference_difference": 4.183293255654038e-09,
+        "reference_uncertainty": 3.698655910861318e-08,
+        "production_sensitivity": 4.445110132509422e-12
+      },
+      "passed": false
+    }
+  ],
+  "passed": false
+}

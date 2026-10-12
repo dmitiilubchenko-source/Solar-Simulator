@@ -1,0 +1,25 @@
+{
+  "model": "Newtonian initial DE441 10 bodies; one Moon effective solid-inertia rigid Q2, other bodies point masses",
+  "duration_seconds": 31557600,
+  "samples": 1462,
+  "production": {"rtol": 1e-11, "position_atol": 1e-4, "velocity_atol": 1e-10, "max_step": 21600},
+  "strict": {"rtol": 3e-13, "position_atol": 3e-6, "velocity_atol": 3e-12, "max_step": 10800, "spin_atol_factor": 0.03},
+  "reference_rtols": [3e-12, 3e-13],
+  "reference_max_step": 21600,
+  "checkpoint_steps": [730, 731],
+  "criteria": {
+    "energy_relative": 1e-8,
+    "angular_momentum_relative": 1e-8,
+    "quaternion_norm": 1e-8,
+    "linear_momentum_scaled": 1e-10,
+    "reference_difference": 1e-7,
+    "reference_uncertainty": 1e-8,
+    "per_body_reference_difference": 1e-7,
+    "per_body_reference_uncertainty": 1e-8,
+    "reference_matrix_orthogonality": 1e-8,
+    "reference_matrix_determinant": 1e-8,
+    "restart_difference": 1e-8
+  },
+  "physical_DE441_accuracy_threshold": null,
+  "warning": "Criteria fixed before annual runs. Six-hour grid does not certify every instant or physical accuracy. No EIH, tides, core, deformations, asteroid/Kuiper extensions or 528-body certification."
+}

@@ -1,0 +1,41 @@
+{
+  "model": "six equal masses at +/- axes, centered and inversion symmetric",
+  "criterion": {
+    "radius_ratio": 40,
+    "error_max": 0.002,
+    "reduction_min": 10
+  },
+  "samples": [
+    {
+      "distance_m": 6000.0,
+      "radius_ratio": 10.0,
+      "q2_relative_torque_error": 0.07672463077981967,
+      "q2_q4_relative_torque_error": 0.0010803849152051443,
+      "reduction_factor": 71.01601447781334
+    },
+    {
+      "distance_m": 12000.0,
+      "radius_ratio": 20.0,
+      "q2_relative_torque_error": 0.018978602730595366,
+      "q2_q4_relative_torque_error": 6.667845584301493e-05,
+      "reduction_factor": 284.62870788846436
+    },
+    {
+      "distance_m": 24000.0,
+      "radius_ratio": 40.0,
+      "q2_relative_torque_error": 0.004732190196138118,
+      "q2_q4_relative_torque_error": 4.154333215613522e-06,
+      "reduction_factor": 1139.0974075822312
+    },
+    {
+      "distance_m": 48000.0,
+      "radius_ratio": 80.0,
+      "q2_relative_torque_error": 0.0011822718463075149,
+      "q2_q4_relative_torque_error": 2.5944222830238317e-07,
+      "reduction_factor": 4556.9753776920315
+    }
+  ],
+  "passed": true,
+  "conclusion": "Q2 failure is the omitted fourth mass moment for this source; not a wrong Q2 sign/torque",
+  "limitations": "No general Q4 can be reconstructed from the inertia alone; do not apply this synthetic distribution to the Moon"
+}

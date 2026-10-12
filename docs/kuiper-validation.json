@@ -1,0 +1,1995 @@
+{
+  "schema": 1,
+  "body_count": 384,
+  "added_kuiper_bodies": 30,
+  "epoch_jd_tdb": 2461321.5,
+  "duration_seconds": 31557600.0,
+  "samples": 45,
+  "dataset_sha256": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+  "gm_sha256": "cc3d3e7d8492230ef0ce52d530531c0d7a5a8abfbf5d75e3a49e814b7ff04d78",
+  "base_dataset_sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+  "source_initial_sha256": "2d2454c8b5a04382779991151fdb3475b5f63512325b5bde3708b476cbcf3bda",
+  "source_manifest_sha256": "e64668e4c375d262d197bda4d7e45ef7074c273288ae4f67d2562cc03d12c3da",
+  "packed_source_sha256": "c456421c59c9712f0d59ed2af749d1e5dd583000777b4e601e9a39a1260af267",
+  "physics": "384 interacting point masses; Rust EIH 1PN; prescribed Sun/Earth/Moon quadrupoles; relative Earth-Moon; per-body DOP853. No Kuiper ring.",
+  "variants": {
+    "parent_354": {
+      "elapsed_seconds": 92.5344964999822,
+      "options": {
+        "backend": "rust",
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body",
+        "rtol": 3e-14,
+        "position_atol": 1e-07,
+        "velocity_atol": 1e-13
+      },
+      "maximum_relative_energy_budget_residual": 8.382144486104887e-15,
+      "maximum_relative_raw_energy_change": 8.382144486104887e-15,
+      "final_orientation_work_joules": -2.8637751092943475e+19,
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 6.64462306930251,
+          "maximum_velocity_m_per_s": 1.3252914331974658e-06
+        },
+        "moon": {
+          "maximum_position_metres": 8.856217681523585,
+          "maximum_velocity_m_per_s": 1.564021402285524e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 6.643865036889029,
+          "maximum_velocity_m_per_s": 1.2857268596419433e-06
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.962934195025662,
+          "maximum_velocity_m_per_s": 1.595160909354034e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13454462892829422,
+          "maximum_velocity_m_per_s": 3.4511613299047957e-07
+        }
+      },
+      "planets": {
+        "Sun": {
+          "maximum_position_metres": 1.6810089706909956,
+          "maximum_velocity_m_per_s": 1.0684210045031271e-07
+        },
+        "Mercury": {
+          "maximum_position_metres": 10.9510900740519,
+          "maximum_velocity_m_per_s": 1.0600148600662429e-05
+        },
+        "Venus": {
+          "maximum_position_metres": 7.4740242660096525,
+          "maximum_velocity_m_per_s": 2.423805153288435e-06
+        },
+        "Earth-Moon": {
+          "maximum_position_metres": 6.643865036889029,
+          "maximum_velocity_m_per_s": 1.2857268596419433e-06
+        },
+        "Mars": {
+          "maximum_position_metres": 6.483267101305918,
+          "maximum_velocity_m_per_s": 7.584122485636224e-07
+        },
+        "Jupiter": {
+          "maximum_position_metres": 6.319972301717935,
+          "maximum_velocity_m_per_s": 4.1798241844097157e-07
+        },
+        "Saturn": {
+          "maximum_position_metres": 14.063011626700488,
+          "maximum_velocity_m_per_s": 8.995622451807926e-07
+        },
+        "Uranus": {
+          "maximum_position_metres": 33.28011809778437,
+          "maximum_velocity_m_per_s": 2.105635061710524e-06
+        },
+        "Neptune": {
+          "maximum_position_metres": 74.2193720311541,
+          "maximum_velocity_m_per_s": 4.706052434012847e-06
+        }
+      },
+      "pluto_system": {
+        "maximum_position_metres": 130.0673529158747,
+        "maximum_velocity_m_per_s": 8.276455356784788e-06
+      }
+    },
+    "kuiper_384": {
+      "elapsed_seconds": 105.26557779998984,
+      "options": {
+        "backend": "rust",
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body",
+        "rtol": 3e-14,
+        "position_atol": 1e-07,
+        "velocity_atol": 1e-13
+      },
+      "maximum_relative_energy_budget_residual": 3.3528532026099746e-15,
+      "maximum_relative_raw_energy_change": 3.725392447344416e-15,
+      "final_orientation_work_joules": -2.8637751140476183e+19,
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 6.205850395000218,
+          "maximum_velocity_m_per_s": 1.271874527034197e-06
+        },
+        "moon": {
+          "maximum_position_metres": 8.466799707185082,
+          "maximum_velocity_m_per_s": 1.5650867740687215e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 6.1961272716999725,
+          "maximum_velocity_m_per_s": 1.2330868125048733e-06
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.962476608501083,
+          "maximum_velocity_m_per_s": 1.5950554736353534e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.1345446159335754,
+          "maximum_velocity_m_per_s": 3.4511702494840475e-07
+        }
+      },
+      "planets": {
+        "Sun": {
+          "maximum_position_metres": 0.005658727018746607,
+          "maximum_velocity_m_per_s": 2.341373109168021e-09
+        },
+        "Mercury": {
+          "maximum_position_metres": 11.160611749961522,
+          "maximum_velocity_m_per_s": 1.060559691700258e-05
+        },
+        "Venus": {
+          "maximum_position_metres": 7.7952155117538995,
+          "maximum_velocity_m_per_s": 2.4395481421010456e-06
+        },
+        "Earth-Moon": {
+          "maximum_position_metres": 6.1961272716999725,
+          "maximum_velocity_m_per_s": 1.2330868125048733e-06
+        },
+        "Mars": {
+          "maximum_position_metres": 6.966390794841219,
+          "maximum_velocity_m_per_s": 7.590146741387455e-07
+        },
+        "Jupiter": {
+          "maximum_position_metres": 6.809093098663344,
+          "maximum_velocity_m_per_s": 4.487575206270974e-07
+        },
+        "Saturn": {
+          "maximum_position_metres": 11.710734991418756,
+          "maximum_velocity_m_per_s": 7.464304422385483e-07
+        },
+        "Uranus": {
+          "maximum_position_metres": 28.858514787898258,
+          "maximum_velocity_m_per_s": 1.8290898766064177e-06
+        },
+        "Neptune": {
+          "maximum_position_metres": 69.11835318512047,
+          "maximum_velocity_m_per_s": 4.381355645611828e-06
+        }
+      },
+      "pluto_system": {
+        "maximum_position_metres": 130.07005265881742,
+        "maximum_velocity_m_per_s": 8.276206397419578e-06
+      },
+      "kuiper_bodies": {
+        "Orcus": {
+          "maximum_position_metres": 4.3337963488080575,
+          "maximum_velocity_m_per_s": 1.2192457352269552e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 4.340931979996907,
+          "maximum_velocity_m_per_s": 1.2191530512257804e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 4.3737153475805775,
+          "maximum_velocity_m_per_s": 1.2194342951402175e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 4.334342759499973,
+          "maximum_velocity_m_per_s": 1.2193005135874141e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 4.322661714810644,
+          "maximum_velocity_m_per_s": 1.2192816469882278e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 4.335342950696796,
+          "maximum_velocity_m_per_s": 1.2191157865550585e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 4.342892033763512,
+          "maximum_velocity_m_per_s": 1.2190690208140028e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 4.3437151187072525,
+          "maximum_velocity_m_per_s": 1.219065897958289e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 4.3447495277914205,
+          "maximum_velocity_m_per_s": 1.2192249412353646e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 4.359305263289646,
+          "maximum_velocity_m_per_s": 1.2191819156404841e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 4.3213438548975915,
+          "maximum_velocity_m_per_s": 1.219227610088628e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 4.349559323297372,
+          "maximum_velocity_m_per_s": 1.2191507815326741e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 4.33710460592147,
+          "maximum_velocity_m_per_s": 1.2192167194923167e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 4.333846414939462,
+          "maximum_velocity_m_per_s": 1.2193239454548377e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 4.331434121009717,
+          "maximum_velocity_m_per_s": 1.2192796826807793e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 4.330747337144531,
+          "maximum_velocity_m_per_s": 1.2192431464008247e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 4.323643550505346,
+          "maximum_velocity_m_per_s": 1.2193282394611208e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 4.32595870246806,
+          "maximum_velocity_m_per_s": 1.2194495859108062e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 4.330842442886705,
+          "maximum_velocity_m_per_s": 1.2191933759660802e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 4.339291764190173,
+          "maximum_velocity_m_per_s": 1.2195005582430246e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 4.333494965888938,
+          "maximum_velocity_m_per_s": 1.2192255507075956e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 4.336162561297653,
+          "maximum_velocity_m_per_s": 1.2192902807828344e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 4.320157646728917,
+          "maximum_velocity_m_per_s": 1.2194132839251798e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 4.321010519414826,
+          "maximum_velocity_m_per_s": 1.2192501694813032e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 4.329142894930493,
+          "maximum_velocity_m_per_s": 1.2194437968421016e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 4.333612736381338,
+          "maximum_velocity_m_per_s": 1.2193883355110051e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 4.332372173863125,
+          "maximum_velocity_m_per_s": 1.2193420550303225e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 4.338973046418869,
+          "maximum_velocity_m_per_s": 1.2193237014224704e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 4.3400787921644275,
+          "maximum_velocity_m_per_s": 1.219268985372313e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 4.2977610558824795,
+          "maximum_velocity_m_per_s": 1.219497199750347e-05
+        }
+      }
+    },
+    "kuiper_384_tighter": {
+      "elapsed_seconds": 107.19649239996215,
+      "options": {
+        "backend": "rust",
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body",
+        "rtol": 3e-14,
+        "position_atol": 1e-08,
+        "velocity_atol": 1e-14
+      },
+      "maximum_relative_energy_budget_residual": 4.4704709368132994e-15,
+      "maximum_relative_raw_energy_change": 4.65674055918052e-15,
+      "final_orientation_work_joules": -2.863775105806789e+19,
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 6.203001602145127,
+          "maximum_velocity_m_per_s": 1.2714346337181528e-06
+        },
+        "moon": {
+          "maximum_position_metres": 8.46596356882083,
+          "maximum_velocity_m_per_s": 1.565825737501558e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 6.193273059638891,
+          "maximum_velocity_m_per_s": 1.23261471326042e-06
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.965377803107809,
+          "maximum_velocity_m_per_s": 1.5958045150417966e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13454461640610518,
+          "maximum_velocity_m_per_s": 3.4511613379345897e-07
+        }
+      },
+      "planets": {
+        "Sun": {
+          "maximum_position_metres": 0.005658252668106096,
+          "maximum_velocity_m_per_s": 2.341380392922374e-09
+        },
+        "Mercury": {
+          "maximum_position_metres": 11.143325409462472,
+          "maximum_velocity_m_per_s": 1.0590963477849849e-05
+        },
+        "Venus": {
+          "maximum_position_metres": 7.793579971336208,
+          "maximum_velocity_m_per_s": 2.4391541379701346e-06
+        },
+        "Earth-Moon": {
+          "maximum_position_metres": 6.193273059638891,
+          "maximum_velocity_m_per_s": 1.23261471326042e-06
+        },
+        "Mars": {
+          "maximum_position_metres": 6.976722162739144,
+          "maximum_velocity_m_per_s": 7.601861142906321e-07
+        },
+        "Jupiter": {
+          "maximum_position_metres": 6.812055465607536,
+          "maximum_velocity_m_per_s": 4.4878318129705924e-07
+        },
+        "Saturn": {
+          "maximum_position_metres": 11.713315157230547,
+          "maximum_velocity_m_per_s": 7.46455307132046e-07
+        },
+        "Uranus": {
+          "maximum_position_metres": 28.845893958333043,
+          "maximum_velocity_m_per_s": 1.8290712508649427e-06
+        },
+        "Neptune": {
+          "maximum_position_metres": 69.11639627739713,
+          "maximum_velocity_m_per_s": 4.381355719204342e-06
+        }
+      },
+      "pluto_system": {
+        "maximum_position_metres": 130.06771602372694,
+        "maximum_velocity_m_per_s": 8.276202946305906e-06
+      }
+    }
+  },
+  "numerical_agreement": {
+    "all_bodies": {
+      "maximum_position_metres": 0.07226805425117834,
+      "maximum_velocity_m_per_s": 4.125888511165164e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.0011671066369624329,
+      "maximum_velocity_m_per_s": 3.1911392096964675e-09
+    }
+  },
+  "tighter_numerical_agreement": {
+    "all_bodies": {
+      "maximum_position_metres": 0.038882029397692294,
+      "maximum_velocity_m_per_s": 2.6569729069701625e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.004066474205370983,
+      "maximum_velocity_m_per_s": 1.0677849385257323e-08
+    }
+  },
+  "reference_coordinates": "Per-body constant position origins, with the Earth-Moon relative vector retained directly; reconstructed SSB force geometry",
+  "cache_provenance": {
+    "production_reused": true,
+    "reference_reused": true,
+    "production_sha256": "bf095d09a5bb3002fd9b5b4fc5aa311b7e1aa8903e6c64e0aea8aed44ee854be",
+    "reference_sha256": "bd165005131b5fc51a7ce94d97da650b0a01893c06fc0567bd53e6d9a284b6b4",
+    "previous_absolute_report_sha256": "3fa40b283889967fb38290709a95810b61873a9986e2df56a85f919ad7f60a18"
+  },
+  "tolerance_sensitivity": {
+    "all_bodies": {
+      "maximum_position_metres": 0.08487087716193345,
+      "maximum_velocity_m_per_s": 1.469430915177865e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.0029015555535903464,
+      "maximum_velocity_m_per_s": 7.4906651645827e-09
+    }
+  },
+  "independent_reference_convergence": {
+    "all_bodies": {
+      "maximum_position_metres": 0.030011979215740687,
+      "maximum_velocity_m_per_s": 3.1644792618773976e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.002650430428121495,
+      "maximum_velocity_m_per_s": 6.840703965493516e-09
+    }
+  },
+  "added_kuiper_increment": {
+    "all_bodies": {
+      "maximum_position_metres": 6.413532529070302,
+      "maximum_velocity_m_per_s": 4.0517428520694196e-07
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.0010295267964774658,
+      "maximum_velocity_m_per_s": 2.9800552605818568e-09
+    }
+  },
+  "increment_by_parent_body": {
+    "Sun": {
+      "maximum_position_metres": 1.6812031997687424,
+      "maximum_velocity_m_per_s": 1.0685572442019786e-07
+    },
+    "Mercury": {
+      "maximum_position_metres": 1.6820087586198524,
+      "maximum_velocity_m_per_s": 1.0702671012870628e-07
+    },
+    "Venus": {
+      "maximum_position_metres": 1.672592804223925,
+      "maximum_velocity_m_per_s": 1.0613137931792369e-07
+    },
+    "Earth": {
+      "maximum_position_metres": 1.6880893034504698,
+      "maximum_velocity_m_per_s": 1.0706376779301261e-07
+    },
+    "Moon": {
+      "maximum_position_metres": 1.688305002602642,
+      "maximum_velocity_m_per_s": 1.0692253893464981e-07
+    },
+    "Mars": {
+      "maximum_position_metres": 1.7004483384580176,
+      "maximum_velocity_m_per_s": 1.0656709010396838e-07
+    },
+    "Jupiter": {
+      "maximum_position_metres": 1.7080827818267335,
+      "maximum_velocity_m_per_s": 1.0940075186555335e-07
+    },
+    "Saturn": {
+      "maximum_position_metres": 2.6285246511814195,
+      "maximum_velocity_m_per_s": 1.690495667058199e-07
+    },
+    "Uranus": {
+      "maximum_position_metres": 5.401529010999808,
+      "maximum_velocity_m_per_s": 3.4090320587579106e-07
+    },
+    "Neptune": {
+      "maximum_position_metres": 5.919218321419287,
+      "maximum_velocity_m_per_s": 3.7524607877787196e-07
+    },
+    "Pluto-System": {
+      "maximum_position_metres": 6.413532529070302,
+      "maximum_velocity_m_per_s": 4.0517428520694196e-07
+    },
+    "Ceres": {
+      "maximum_position_metres": 1.6807239737672985,
+      "maximum_velocity_m_per_s": 1.0719306788549979e-07
+    },
+    "Pallas": {
+      "maximum_position_metres": 1.8146723914010159,
+      "maximum_velocity_m_per_s": 1.0298134572809608e-07
+    },
+    "Vesta": {
+      "maximum_position_metres": 1.872077642663263,
+      "maximum_velocity_m_per_s": 1.1783714710184951e-07
+    },
+    "Juno": {
+      "maximum_position_metres": 1.7387726927035962,
+      "maximum_velocity_m_per_s": 1.1693078336739015e-07
+    },
+    "Iris": {
+      "maximum_position_metres": 1.8063866091305751,
+      "maximum_velocity_m_per_s": 1.1504896759835928e-07
+    },
+    "Hygiea": {
+      "maximum_position_metres": 1.7313183988526148,
+      "maximum_velocity_m_per_s": 1.0906282620270428e-07
+    },
+    "Eunomia": {
+      "maximum_position_metres": 1.8398079404932868,
+      "maximum_velocity_m_per_s": 1.1416086629428003e-07
+    },
+    "Psyche": {
+      "maximum_position_metres": 1.7129206102957895,
+      "maximum_velocity_m_per_s": 1.0875631343996339e-07
+    },
+    "Euphrosyne": {
+      "maximum_position_metres": 1.9220361365826866,
+      "maximum_velocity_m_per_s": 1.1998922497711889e-07
+    },
+    "Europa": {
+      "maximum_position_metres": 1.6852964228331313,
+      "maximum_velocity_m_per_s": 1.0680434785643046e-07
+    },
+    "Cybele": {
+      "maximum_position_metres": 1.7766251053858453,
+      "maximum_velocity_m_per_s": 1.1316227429694517e-07
+    },
+    "Sylvia": {
+      "maximum_position_metres": 1.6076117412266098,
+      "maximum_velocity_m_per_s": 1.029435488179557e-07
+    },
+    "Thisbe": {
+      "maximum_position_metres": 1.7843186825245343,
+      "maximum_velocity_m_per_s": 1.1419686876746847e-07
+    },
+    "Camilla": {
+      "maximum_position_metres": 1.741256296344736,
+      "maximum_velocity_m_per_s": 1.0995371957293584e-07
+    },
+    "Davida": {
+      "maximum_position_metres": 1.7341792038665425,
+      "maximum_velocity_m_per_s": 1.1377408386775505e-07
+    },
+    "Interamnia": {
+      "maximum_position_metres": 1.7748250230845986,
+      "maximum_velocity_m_per_s": 1.0936933985162338e-07
+    },
+    "Dido": {
+      "maximum_position_metres": 1.6833876736821212,
+      "maximum_velocity_m_per_s": 1.0766720875902356e-07
+    },
+    "Aurora": {
+      "maximum_position_metres": 1.6975362738744129,
+      "maximum_velocity_m_per_s": 1.0887585907743756e-07
+    },
+    "Doris": {
+      "maximum_position_metres": 1.603415789017114,
+      "maximum_velocity_m_per_s": 1.0125215327470753e-07
+    },
+    "Bertha": {
+      "maximum_position_metres": 1.8401955654916058,
+      "maximum_velocity_m_per_s": 1.1566920424375642e-07
+    },
+    "Amphitrite": {
+      "maximum_position_metres": 1.6783594998711107,
+      "maximum_velocity_m_per_s": 1.0462060170808533e-07
+    },
+    "Ursula": {
+      "maximum_position_metres": 1.7541397350574317,
+      "maximum_velocity_m_per_s": 1.1220980919420446e-07
+    },
+    "Herculina": {
+      "maximum_position_metres": 1.9802804234183526,
+      "maximum_velocity_m_per_s": 1.252511549565246e-07
+    },
+    "Stereoskopia": {
+      "maximum_position_metres": 1.7343839977441529,
+      "maximum_velocity_m_per_s": 1.0827913464499883e-07
+    },
+    "Siegena": {
+      "maximum_position_metres": 1.7425230774466625,
+      "maximum_velocity_m_per_s": 1.0906635492345008e-07
+    },
+    "Alauda": {
+      "maximum_position_metres": 1.7246635413384923,
+      "maximum_velocity_m_per_s": 1.1114486671004561e-07
+    },
+    "Laetitia": {
+      "maximum_position_metres": 1.742018353385676,
+      "maximum_velocity_m_per_s": 1.1352008227549029e-07
+    },
+    "Metis": {
+      "maximum_position_metres": 1.8611985131111755,
+      "maximum_velocity_m_per_s": 1.2150555130678995e-07
+    },
+    "Hebe": {
+      "maximum_position_metres": 1.6914392352742187,
+      "maximum_velocity_m_per_s": 1.0627293473220335e-07
+    },
+    "Bamberga": {
+      "maximum_position_metres": 1.7649522525543202,
+      "maximum_velocity_m_per_s": 1.1206899644200214e-07
+    },
+    "Elektra": {
+      "maximum_position_metres": 1.7330994391797256,
+      "maximum_velocity_m_per_s": 1.0822288114842674e-07
+    },
+    "Themis": {
+      "maximum_position_metres": 1.67458302453271,
+      "maximum_velocity_m_per_s": 1.051519699935246e-07
+    },
+    "Patientia": {
+      "maximum_position_metres": 1.7586302394975855,
+      "maximum_velocity_m_per_s": 1.1286360014025033e-07
+    },
+    "Fortuna": {
+      "maximum_position_metres": 1.7774217087134931,
+      "maximum_velocity_m_per_s": 1.1406112945994223e-07
+    },
+    "Palma": {
+      "maximum_position_metres": 1.780581820970328,
+      "maximum_velocity_m_per_s": 1.0944510496055842e-07
+    },
+    "Daphne": {
+      "maximum_position_metres": 1.6560064842087125,
+      "maximum_velocity_m_per_s": 1.0453108087519218e-07
+    },
+    "Irene": {
+      "maximum_position_metres": 1.703469239127055,
+      "maximum_velocity_m_per_s": 1.0908607596001715e-07
+    },
+    "Diotima": {
+      "maximum_position_metres": 1.6342081272586513,
+      "maximum_velocity_m_per_s": 1.0434806292168396e-07
+    },
+    "Egeria": {
+      "maximum_position_metres": 1.7756181336138879,
+      "maximum_velocity_m_per_s": 1.1154389914037271e-07
+    },
+    "Hesperia": {
+      "maximum_position_metres": 1.718228219224168,
+      "maximum_velocity_m_per_s": 1.0866783969196991e-07
+    },
+    "Parthenope": {
+      "maximum_position_metres": 1.7518652614066321,
+      "maximum_velocity_m_per_s": 1.1398526677362862e-07
+    },
+    "Papagena": {
+      "maximum_position_metres": 1.6028990170574098,
+      "maximum_velocity_m_per_s": 1.0323754487407223e-07
+    },
+    "Lachesis": {
+      "maximum_position_metres": 1.812285210430081,
+      "maximum_velocity_m_per_s": 1.1328149154678728e-07
+    },
+    "Aglaja": {
+      "maximum_position_metres": 1.7845857909860945,
+      "maximum_velocity_m_per_s": 1.134101605469282e-07
+    },
+    "Aegle": {
+      "maximum_position_metres": 1.7197465735853368,
+      "maximum_velocity_m_per_s": 1.085624080843245e-07
+    },
+    "Hedwig": {
+      "maximum_position_metres": 1.7474751718359638,
+      "maximum_velocity_m_per_s": 1.1885931665819098e-07
+    },
+    "Aspasia": {
+      "maximum_position_metres": 1.6129859418686632,
+      "maximum_velocity_m_per_s": 1.0776318378993828e-07
+    },
+    "Juewa": {
+      "maximum_position_metres": 1.7136182917102165,
+      "maximum_velocity_m_per_s": 1.0981048542216268e-07
+    },
+    "Winchester": {
+      "maximum_position_metres": 1.6568081533723675,
+      "maximum_velocity_m_per_s": 1.0445612797673475e-07
+    },
+    "Kalliope": {
+      "maximum_position_metres": 1.6537496902190214,
+      "maximum_velocity_m_per_s": 1.0462146737022722e-07
+    },
+    "Lomia": {
+      "maximum_position_metres": 1.8002636635896159,
+      "maximum_velocity_m_per_s": 1.2132307524818027e-07
+    },
+    "Scheila": {
+      "maximum_position_metres": 1.72672186766047,
+      "maximum_velocity_m_per_s": 1.1328015940700913e-07
+    },
+    "Nemesis": {
+      "maximum_position_metres": 1.730707638047044,
+      "maximum_velocity_m_per_s": 1.1423891197992358e-07
+    },
+    "Io": {
+      "maximum_position_metres": 1.818253664482227,
+      "maximum_velocity_m_per_s": 1.1567353035610276e-07
+    },
+    "Hestia": {
+      "maximum_position_metres": 1.7801698089654614,
+      "maximum_velocity_m_per_s": 1.0977460999472251e-07
+    },
+    "Sibylla": {
+      "maximum_position_metres": 1.8016478445511315,
+      "maximum_velocity_m_per_s": 1.12054762332281e-07
+    },
+    "Germania": {
+      "maximum_position_metres": 1.787248375479567,
+      "maximum_velocity_m_per_s": 1.1197655253772517e-07
+    },
+    "Eugenia": {
+      "maximum_position_metres": 1.688081316157227,
+      "maximum_velocity_m_per_s": 1.0785350861874573e-07
+    },
+    "Pales": {
+      "maximum_position_metres": 1.7296478841806748,
+      "maximum_velocity_m_per_s": 1.0854905940597104e-07
+    },
+    "Kreusa": {
+      "maximum_position_metres": 1.7282904661483114,
+      "maximum_velocity_m_per_s": 1.1043526031909137e-07
+    },
+    "Dembowska": {
+      "maximum_position_metres": 1.8172978962370923,
+      "maximum_velocity_m_per_s": 1.2230639005197785e-07
+    },
+    "Lucina": {
+      "maximum_position_metres": 1.6799307895283206,
+      "maximum_velocity_m_per_s": 1.1179788915809394e-07
+    },
+    "Eukrate": {
+      "maximum_position_metres": 1.9500507856099816,
+      "maximum_velocity_m_per_s": 1.203497162093202e-07
+    },
+    "Freia": {
+      "maximum_position_metres": 1.7406244135044842,
+      "maximum_velocity_m_per_s": 1.1069332545082221e-07
+    },
+    "Philomela": {
+      "maximum_position_metres": 1.653628558583106,
+      "maximum_velocity_m_per_s": 1.0570914619568903e-07
+    },
+    "Lamberta": {
+      "maximum_position_metres": 1.6591520202771932,
+      "maximum_velocity_m_per_s": 1.0696763717722197e-07
+    },
+    "Eleonora": {
+      "maximum_position_metres": 1.811299380869669,
+      "maximum_velocity_m_per_s": 1.1978805307529296e-07
+    },
+    "Berbericia": {
+      "maximum_position_metres": 1.7338156007422583,
+      "maximum_velocity_m_per_s": 1.0989194582771354e-07
+    },
+    "Elpis": {
+      "maximum_position_metres": 1.770368915999486,
+      "maximum_velocity_m_per_s": 1.1122127650553258e-07
+    },
+    "Minerva": {
+      "maximum_position_metres": 1.7023051372331452,
+      "maximum_velocity_m_per_s": 1.0571872858527039e-07
+    },
+    "Flora": {
+      "maximum_position_metres": 1.7736121443398711,
+      "maximum_velocity_m_per_s": 1.1634948371129134e-07
+    },
+    "Massalia": {
+      "maximum_position_metres": 1.732604225924008,
+      "maximum_velocity_m_per_s": 1.0931646842576961e-07
+    },
+    "Julia": {
+      "maximum_position_metres": 1.7007942810559278,
+      "maximum_velocity_m_per_s": 1.1078089016218966e-07
+    },
+    "Armenia": {
+      "maximum_position_metres": 1.599610071119693,
+      "maximum_velocity_m_per_s": 1.0442578760441823e-07
+    },
+    "Nemausa": {
+      "maximum_position_metres": 1.639233218450691,
+      "maximum_velocity_m_per_s": 1.0817566182248928e-07
+    },
+    "Philosophia": {
+      "maximum_position_metres": 1.7421840423425503,
+      "maximum_velocity_m_per_s": 1.0810680567654046e-07
+    },
+    "Pompeja": {
+      "maximum_position_metres": 1.7853108852872464,
+      "maximum_velocity_m_per_s": 1.1372874455851098e-07
+    },
+    "Eucharis": {
+      "maximum_position_metres": 1.7836361049603926,
+      "maximum_velocity_m_per_s": 1.1057489710407987e-07
+    },
+    "Pretoria": {
+      "maximum_position_metres": 1.7804920993557944,
+      "maximum_velocity_m_per_s": 1.1134521091101432e-07
+    },
+    "Atalante": {
+      "maximum_position_metres": 1.9333481825699426,
+      "maximum_velocity_m_per_s": 1.1930055171568802e-07
+    },
+    "Gudrun": {
+      "maximum_position_metres": 1.8317626105979399,
+      "maximum_velocity_m_per_s": 1.2332287462065015e-07
+    },
+    "Melpomene": {
+      "maximum_position_metres": 1.7605210195504455,
+      "maximum_velocity_m_per_s": 1.1264835376549626e-07
+    },
+    "Bettina": {
+      "maximum_position_metres": 1.629354586360265,
+      "maximum_velocity_m_per_s": 1.0535002190082787e-07
+    },
+    "Arethusa": {
+      "maximum_position_metres": 1.7369771574811002,
+      "maximum_velocity_m_per_s": 1.0865907587198405e-07
+    },
+    "Aletheia": {
+      "maximum_position_metres": 1.9318870538153006,
+      "maximum_velocity_m_per_s": 1.2749926766048226e-07
+    },
+    "Myrrha": {
+      "maximum_position_metres": 1.6876360046611643,
+      "maximum_velocity_m_per_s": 1.1016764210952927e-07
+    },
+    "Medea": {
+      "maximum_position_metres": 1.8405939477705668,
+      "maximum_velocity_m_per_s": 1.1723533452791114e-07
+    },
+    "Klymene": {
+      "maximum_position_metres": 1.690188217666578,
+      "maximum_velocity_m_per_s": 1.0800244228644847e-07
+    },
+    "Melete": {
+      "maximum_position_metres": 1.7825635489259126,
+      "maximum_velocity_m_per_s": 1.132680637870979e-07
+    },
+    "Gyptis": {
+      "maximum_position_metres": 1.8003506037568155,
+      "maximum_velocity_m_per_s": 1.1443007834755708e-07
+    },
+    "Kleopatra": {
+      "maximum_position_metres": 1.5629426324637712,
+      "maximum_velocity_m_per_s": 1.0271941619742246e-07
+    },
+    "Pulcova": {
+      "maximum_position_metres": 1.7331753247732566,
+      "maximum_velocity_m_per_s": 1.0857722141954854e-07
+    },
+    "Vibilia": {
+      "maximum_position_metres": 1.685131114897394,
+      "maximum_velocity_m_per_s": 1.0454851625800335e-07
+    },
+    "Erminia": {
+      "maximum_position_metres": 1.582196107284142,
+      "maximum_velocity_m_per_s": 1.0434274095970963e-07
+    },
+    "Adorea": {
+      "maximum_position_metres": 1.7552010027943277,
+      "maximum_velocity_m_per_s": 1.0921192797153035e-07
+    },
+    "Emma": {
+      "maximum_position_metres": 1.7236904732377443,
+      "maximum_velocity_m_per_s": 1.1095263962485197e-07
+    },
+    "Harmonia": {
+      "maximum_position_metres": 1.7367022859795975,
+      "maximum_velocity_m_per_s": 1.1543456047004606e-07
+    },
+    "Argentina": {
+      "maximum_position_metres": 1.7016430540104956,
+      "maximum_velocity_m_per_s": 1.0621477892902833e-07
+    },
+    "Ino": {
+      "maximum_position_metres": 1.6116324266773736,
+      "maximum_velocity_m_per_s": 1.029735391115635e-07
+    },
+    "Aquitania": {
+      "maximum_position_metres": 1.6530240332412718,
+      "maximum_velocity_m_per_s": 1.0678259922660985e-07
+    },
+    "Bellona": {
+      "maximum_position_metres": 1.6153699561286052,
+      "maximum_velocity_m_per_s": 1.0276525433853645e-07
+    },
+    "Lampetia": {
+      "maximum_position_metres": 1.7749642777820243,
+      "maximum_velocity_m_per_s": 1.0985066026615336e-07
+    },
+    "Siwa": {
+      "maximum_position_metres": 1.746957403487135,
+      "maximum_velocity_m_per_s": 1.1229304070729599e-07
+    },
+    "Victoria": {
+      "maximum_position_metres": 1.7772453351106705,
+      "maximum_velocity_m_per_s": 1.1288922578759413e-07
+    },
+    "Hippo": {
+      "maximum_position_metres": 1.6694870300539815,
+      "maximum_velocity_m_per_s": 1.0945712491361424e-07
+    },
+    "Astraea": {
+      "maximum_position_metres": 1.8414208258638511,
+      "maximum_velocity_m_per_s": 1.2593154643837397e-07
+    },
+    "Ianthe": {
+      "maximum_position_metres": 1.7416513686784867,
+      "maximum_velocity_m_per_s": 1.0999841134907515e-07
+    },
+    "Chloris": {
+      "maximum_position_metres": 1.657556559210421,
+      "maximum_velocity_m_per_s": 1.0557740042742896e-07
+    },
+    "Circe": {
+      "maximum_position_metres": 1.7448452381801887,
+      "maximum_velocity_m_per_s": 1.1363575225654632e-07
+    },
+    "Adeona": {
+      "maximum_position_metres": 1.6416183252013463,
+      "maximum_velocity_m_per_s": 1.050053602249588e-07
+    },
+    "Ophelia": {
+      "maximum_position_metres": 1.7132043882040562,
+      "maximum_velocity_m_per_s": 1.0964394741881375e-07
+    },
+    "Hermione": {
+      "maximum_position_metres": 1.7047495323944655,
+      "maximum_velocity_m_per_s": 1.0748920840531706e-07
+    },
+    "Comacina": {
+      "maximum_position_metres": 1.9537655579276574,
+      "maximum_velocity_m_per_s": 1.2168340802973378e-07
+    },
+    "Ninina": {
+      "maximum_position_metres": 1.6999958410456661,
+      "maximum_velocity_m_per_s": 1.0692988304863645e-07
+    },
+    "Ausonia": {
+      "maximum_position_metres": 1.703701502796065,
+      "maximum_velocity_m_per_s": 1.0715182628248183e-07
+    },
+    "Thia": {
+      "maximum_position_metres": 1.787664761553807,
+      "maximum_velocity_m_per_s": 1.1227638913635372e-07
+    },
+    "Xanthippe": {
+      "maximum_position_metres": 1.7165856193607945,
+      "maximum_velocity_m_per_s": 1.0794649506333974e-07
+    },
+    "Ornamenta": {
+      "maximum_position_metres": 1.7138546523426421,
+      "maximum_velocity_m_per_s": 1.1289968520515716e-07
+    },
+    "Thalia": {
+      "maximum_position_metres": 1.924355197718078,
+      "maximum_velocity_m_per_s": 1.3149939515370758e-07
+    },
+    "Gallia": {
+      "maximum_position_metres": 1.5572259544698948,
+      "maximum_velocity_m_per_s": 1.0137277852993197e-07
+    },
+    "Merapi": {
+      "maximum_position_metres": 1.5469121642537091,
+      "maximum_velocity_m_per_s": 1.008771473199362e-07
+    },
+    "Nuwa": {
+      "maximum_position_metres": 1.732381243375467,
+      "maximum_velocity_m_per_s": 1.099008785447115e-07
+    },
+    "Charybdis": {
+      "maximum_position_metres": 1.7376082323630737,
+      "maximum_velocity_m_per_s": 1.1570034468089159e-07
+    },
+    "Eva": {
+      "maximum_position_metres": 1.794229982463107,
+      "maximum_velocity_m_per_s": 1.1044365392428506e-07
+    },
+    "Athamantis": {
+      "maximum_position_metres": 1.737299273168464,
+      "maximum_velocity_m_per_s": 1.1006399660907595e-07
+    },
+    "Loreley": {
+      "maximum_position_metres": 1.8099725415705903,
+      "maximum_velocity_m_per_s": 1.203761354607581e-07
+    },
+    "Antiope": {
+      "maximum_position_metres": 1.800885160738491,
+      "maximum_velocity_m_per_s": 1.1535581928519042e-07
+    },
+    "Meliboea": {
+      "maximum_position_metres": 1.8485055284288674,
+      "maximum_velocity_m_per_s": 1.1713812133993895e-07
+    },
+    "Princetonia": {
+      "maximum_position_metres": 1.7918878387192307,
+      "maximum_velocity_m_per_s": 1.1450817172329933e-07
+    },
+    "Wratislavia": {
+      "maximum_position_metres": 1.8030852348786877,
+      "maximum_velocity_m_per_s": 1.205732881427787e-07
+    },
+    "Euterpe": {
+      "maximum_position_metres": 1.710098673691351,
+      "maximum_velocity_m_per_s": 1.0884803874465697e-07
+    },
+    "Alexandra": {
+      "maximum_position_metres": 1.760818820240897,
+      "maximum_velocity_m_per_s": 1.0884446197493753e-07
+    },
+    "Hispania": {
+      "maximum_position_metres": 1.6910704165487827,
+      "maximum_velocity_m_per_s": 1.0635938596466446e-07
+    },
+    "Elfriede": {
+      "maximum_position_metres": 1.8820736440947683,
+      "maximum_velocity_m_per_s": 1.1506246452090368e-07
+    },
+    "Liguria": {
+      "maximum_position_metres": 1.8547329689840046,
+      "maximum_velocity_m_per_s": 1.1686349187815704e-07
+    },
+    "Adria": {
+      "maximum_position_metres": 1.7370726436855926,
+      "maximum_velocity_m_per_s": 1.0866123462945259e-07
+    },
+    "Kassandra": {
+      "maximum_position_metres": 1.738285023237805,
+      "maximum_velocity_m_per_s": 1.1030484872346271e-07
+    },
+    "Protogeneia": {
+      "maximum_position_metres": 1.8934174689571799,
+      "maximum_velocity_m_per_s": 1.218144218775326e-07
+    },
+    "Johanna": {
+      "maximum_position_metres": 1.7132077141940472,
+      "maximum_velocity_m_per_s": 1.0760187714168658e-07
+    },
+    "Prokne": {
+      "maximum_position_metres": 1.7049451858246174,
+      "maximum_velocity_m_per_s": 1.0761569177486258e-07
+    },
+    "Fides": {
+      "maximum_position_metres": 1.6731904574803373,
+      "maximum_velocity_m_per_s": 1.0820575744679008e-07
+    },
+    "Chicago": {
+      "maximum_position_metres": 1.7170182616023713,
+      "maximum_velocity_m_per_s": 1.0955995824120136e-07
+    },
+    "Aurelia": {
+      "maximum_position_metres": 1.87018896703518,
+      "maximum_velocity_m_per_s": 1.1893438569957123e-07
+    },
+    "Bertholda": {
+      "maximum_position_metres": 1.8580151968106973,
+      "maximum_velocity_m_per_s": 1.175753571073094e-07
+    },
+    "Marianna": {
+      "maximum_position_metres": 1.9597391667484687,
+      "maximum_velocity_m_per_s": 1.2102194592571243e-07
+    },
+    "Polyxena": {
+      "maximum_position_metres": 1.8292374810530554,
+      "maximum_velocity_m_per_s": 1.1407982016516373e-07
+    },
+    "Padua": {
+      "maximum_position_metres": 1.6848637242082265,
+      "maximum_velocity_m_per_s": 1.0599265281543985e-07
+    },
+    "Hypatia": {
+      "maximum_position_metres": 1.7387773639622512,
+      "maximum_velocity_m_per_s": 1.1187162783691917e-07
+    },
+    "Lumen": {
+      "maximum_position_metres": 1.697192740123775,
+      "maximum_velocity_m_per_s": 1.1000835225067414e-07
+    },
+    "Polyxo": {
+      "maximum_position_metres": 1.751167131436858,
+      "maximum_velocity_m_per_s": 1.1175192883914973e-07
+    },
+    "Ani": {
+      "maximum_position_metres": 1.821501177629726,
+      "maximum_velocity_m_per_s": 1.1270111537757827e-07
+    },
+    "Roberta": {
+      "maximum_position_metres": 1.6876502420348718,
+      "maximum_velocity_m_per_s": 1.0602102535319557e-07
+    },
+    "Carlova": {
+      "maximum_position_metres": 1.8418470019544857,
+      "maximum_velocity_m_per_s": 1.1196953348260301e-07
+    },
+    "Diana": {
+      "maximum_position_metres": 1.8022364436982634,
+      "maximum_velocity_m_per_s": 1.2551827513253267e-07
+    },
+    "Undina": {
+      "maximum_position_metres": 1.6808063265664905,
+      "maximum_velocity_m_per_s": 1.0649433204077658e-07
+    },
+    "Asterope": {
+      "maximum_position_metres": 1.6867072456541992,
+      "maximum_velocity_m_per_s": 1.0569730825041752e-07
+    },
+    "Adelheid": {
+      "maximum_position_metres": 1.459492786966744,
+      "maximum_velocity_m_per_s": 9.139225916207191e-08
+    },
+    "Lutetia": {
+      "maximum_position_metres": 1.6944028308870027,
+      "maximum_velocity_m_per_s": 1.1118187143232227e-07
+    },
+    "Gerlinde": {
+      "maximum_position_metres": 1.4543139845831419,
+      "maximum_velocity_m_per_s": 9.275220121587422e-08
+    },
+    "Bredichina": {
+      "maximum_position_metres": 1.6657595794250366,
+      "maximum_velocity_m_per_s": 1.1085402163848103e-07
+    },
+    "Messalina": {
+      "maximum_position_metres": 1.7797883990013608,
+      "maximum_velocity_m_per_s": 1.1207476619355547e-07
+    },
+    "Aemilia": {
+      "maximum_position_metres": 1.637657175524994,
+      "maximum_velocity_m_per_s": 1.0374048125729253e-07
+    },
+    "Marion": {
+      "maximum_position_metres": 1.8084074419390053,
+      "maximum_velocity_m_per_s": 1.113266072928469e-07
+    },
+    "Galatea": {
+      "maximum_position_metres": 1.76870277017588,
+      "maximum_velocity_m_per_s": 1.1212669505395744e-07
+    },
+    "Helio": {
+      "maximum_position_metres": 1.7653986492481906,
+      "maximum_velocity_m_per_s": 1.0891857043587823e-07
+    },
+    "Armida": {
+      "maximum_position_metres": 1.8218489489443146,
+      "maximum_velocity_m_per_s": 1.1378213931719709e-07
+    },
+    "Isis": {
+      "maximum_position_metres": 1.652647492786086,
+      "maximum_velocity_m_per_s": 1.061971177389364e-07
+    },
+    "Beatrix": {
+      "maximum_position_metres": 1.7341484049577474,
+      "maximum_velocity_m_per_s": 1.066600204591974e-07
+    },
+    "Zelinda": {
+      "maximum_position_metres": 1.7568037364675142,
+      "maximum_velocity_m_per_s": 1.1056142028644421e-07
+    },
+    "Concordia": {
+      "maximum_position_metres": 1.9040434866222145,
+      "maximum_velocity_m_per_s": 1.226131279704546e-07
+    },
+    "Proserpina": {
+      "maximum_position_metres": 1.6987358258310727,
+      "maximum_velocity_m_per_s": 1.0643385041897054e-07
+    },
+    "Hohensteina": {
+      "maximum_position_metres": 1.8907442282513045,
+      "maximum_velocity_m_per_s": 1.2651385908705313e-07
+    },
+    "Edith": {
+      "maximum_position_metres": 1.824063676377299,
+      "maximum_velocity_m_per_s": 1.1423065760124259e-07
+    },
+    "Hersilia": {
+      "maximum_position_metres": 1.731536182220625,
+      "maximum_velocity_m_per_s": 1.1201147360021437e-07
+    },
+    "Tanete": {
+      "maximum_position_metres": 2.0188346341735603,
+      "maximum_velocity_m_per_s": 1.30856117954318e-07
+    },
+    "Denise": {
+      "maximum_position_metres": 1.5322691496357919,
+      "maximum_velocity_m_per_s": 9.814476205607054e-08
+    },
+    "Penelope": {
+      "maximum_position_metres": 1.741927971133702,
+      "maximum_velocity_m_per_s": 1.1249240787407193e-07
+    },
+    "Aline": {
+      "maximum_position_metres": 1.8230904252042088,
+      "maximum_velocity_m_per_s": 1.1387554173094e-07
+    },
+    "Vaticana": {
+      "maximum_position_metres": 1.716796451054283,
+      "maximum_velocity_m_per_s": 1.0896190415217087e-07
+    },
+    "Tokio": {
+      "maximum_position_metres": 1.6696714840942255,
+      "maximum_velocity_m_per_s": 1.0567934055649949e-07
+    },
+    "Arsinoe": {
+      "maximum_position_metres": 1.8588481863667323,
+      "maximum_velocity_m_per_s": 1.1312157708295943e-07
+    },
+    "Peraga": {
+      "maximum_position_metres": 1.780181941831352,
+      "maximum_velocity_m_per_s": 1.1318718308363885e-07
+    },
+    "Tercidina": {
+      "maximum_position_metres": 1.71686284956438,
+      "maximum_velocity_m_per_s": 1.1797136458666174e-07
+    },
+    "Iduna": {
+      "maximum_position_metres": 1.8674849283185035,
+      "maximum_velocity_m_per_s": 1.1687180310776035e-07
+    },
+    "Brixia": {
+      "maximum_position_metres": 1.6533467324613786,
+      "maximum_velocity_m_per_s": 1.0507884026763226e-07
+    },
+    "Faina": {
+      "maximum_position_metres": 1.6735551566598172,
+      "maximum_velocity_m_per_s": 1.1095448529271067e-07
+    },
+    "Erato": {
+      "maximum_position_metres": 1.7725694383877155,
+      "maximum_velocity_m_per_s": 1.0930126576630671e-07
+    },
+    "Feronia": {
+      "maximum_position_metres": 1.7675798790222232,
+      "maximum_velocity_m_per_s": 1.0829680161326891e-07
+    },
+    "Dynamene": {
+      "maximum_position_metres": 1.7693362604901648,
+      "maximum_velocity_m_per_s": 1.1189148722167033e-07
+    },
+    "Christa": {
+      "maximum_position_metres": 1.709186500534348,
+      "maximum_velocity_m_per_s": 1.0798355600601179e-07
+    },
+    "Eunike": {
+      "maximum_position_metres": 1.8120664430504732,
+      "maximum_velocity_m_per_s": 1.1298986720665156e-07
+    },
+    "Eos": {
+      "maximum_position_metres": 1.9034947630649142,
+      "maximum_velocity_m_per_s": 1.1819939123765038e-07
+    },
+    "Hertha": {
+      "maximum_position_metres": 1.6555307776851174,
+      "maximum_velocity_m_per_s": 1.0644948382454673e-07
+    },
+    "Semele": {
+      "maximum_position_metres": 1.7784988949075164,
+      "maximum_velocity_m_per_s": 1.145560403053742e-07
+    },
+    "Veritas": {
+      "maximum_position_metres": 1.7286992562808412,
+      "maximum_velocity_m_per_s": 1.1670036244385672e-07
+    },
+    "Emita": {
+      "maximum_position_metres": 1.711742126529057,
+      "maximum_velocity_m_per_s": 1.0765952380930578e-07
+    },
+    "Aegina": {
+      "maximum_position_metres": 1.770345494954319,
+      "maximum_velocity_m_per_s": 1.1349326883024709e-07
+    },
+    "Alkeste": {
+      "maximum_position_metres": 1.8836576643020888,
+      "maximum_velocity_m_per_s": 1.2074426258214124e-07
+    },
+    "Artemis": {
+      "maximum_position_metres": 1.8487292306530247,
+      "maximum_velocity_m_per_s": 1.1396031001985237e-07
+    },
+    "Nephele": {
+      "maximum_position_metres": 1.7239759188291413,
+      "maximum_velocity_m_per_s": 1.0963473290122255e-07
+    },
+    "Freda": {
+      "maximum_position_metres": 1.916797481878922,
+      "maximum_velocity_m_per_s": 1.2235336197970996e-07
+    },
+    "Antigone": {
+      "maximum_position_metres": 1.9928403171758236,
+      "maximum_velocity_m_per_s": 1.260381129335627e-07
+    },
+    "Erigone": {
+      "maximum_position_metres": 1.6438079514789246,
+      "maximum_velocity_m_per_s": 1.0687069174757566e-07
+    },
+    "Thetis": {
+      "maximum_position_metres": 1.713547364687868,
+      "maximum_velocity_m_per_s": 1.1542266256948478e-07
+    },
+    "Desiderata": {
+      "maximum_position_metres": 1.7610324720431936,
+      "maximum_velocity_m_per_s": 1.0934990387740665e-07
+    },
+    "Niobe": {
+      "maximum_position_metres": 1.6776746302370826,
+      "maximum_velocity_m_per_s": 1.1149852212389972e-07
+    },
+    "Rusthawelia": {
+      "maximum_position_metres": 1.7567517159746038,
+      "maximum_velocity_m_per_s": 1.0858286256198034e-07
+    },
+    "Lictoria": {
+      "maximum_position_metres": 1.7332278058708215,
+      "maximum_velocity_m_per_s": 1.0925997982159078e-07
+    },
+    "Melusina": {
+      "maximum_position_metres": 1.6128970092265755,
+      "maximum_velocity_m_per_s": 1.0227628809765244e-07
+    },
+    "Hera": {
+      "maximum_position_metres": 1.7703207872627158,
+      "maximum_velocity_m_per_s": 1.1604361048826534e-07
+    },
+    "Ate": {
+      "maximum_position_metres": 1.7271658063330404,
+      "maximum_velocity_m_per_s": 1.1121273715270551e-07
+    },
+    "Ariadne": {
+      "maximum_position_metres": 1.6804087691117142,
+      "maximum_velocity_m_per_s": 1.0865469419722783e-07
+    },
+    "Terpsichore": {
+      "maximum_position_metres": 1.834134050564569,
+      "maximum_velocity_m_per_s": 1.139235578053615e-07
+    },
+    "Boliviana": {
+      "maximum_position_metres": 1.7987420007994266,
+      "maximum_velocity_m_per_s": 1.1571270090287952e-07
+    },
+    "Elisabetha": {
+      "maximum_position_metres": 1.6883825090987092,
+      "maximum_velocity_m_per_s": 1.0844462088492206e-07
+    },
+    "Sapientia": {
+      "maximum_position_metres": 1.7452757786808282,
+      "maximum_velocity_m_per_s": 1.1250498513432026e-07
+    },
+    "Tatjana": {
+      "maximum_position_metres": 1.7787551913430328,
+      "maximum_velocity_m_per_s": 1.1785604081808092e-07
+    },
+    "Josephina": {
+      "maximum_position_metres": 1.8055721334861428,
+      "maximum_velocity_m_per_s": 1.2220063994078897e-07
+    },
+    "Panopaea": {
+      "maximum_position_metres": 1.715125288368924,
+      "maximum_velocity_m_per_s": 1.0947400704214497e-07
+    },
+    "Arachne": {
+      "maximum_position_metres": 1.6587989666871445,
+      "maximum_velocity_m_per_s": 1.10169636657647e-07
+    },
+    "Sophrosyne": {
+      "maximum_position_metres": 1.6887417897327601,
+      "maximum_velocity_m_per_s": 1.0787996840077422e-07
+    },
+    "Lanzia": {
+      "maximum_position_metres": 1.8070990527891913,
+      "maximum_velocity_m_per_s": 1.1380979495834865e-07
+    },
+    "Fringilla": {
+      "maximum_position_metres": 1.8615852350033348,
+      "maximum_velocity_m_per_s": 1.1402240595508059e-07
+    },
+    "Mandeville": {
+      "maximum_position_metres": 1.7049149280022522,
+      "maximum_velocity_m_per_s": 1.1303088499604479e-07
+    },
+    "Leto": {
+      "maximum_position_metres": 1.6431647646809386,
+      "maximum_velocity_m_per_s": 1.0537301525763172e-07
+    },
+    "Cantabia": {
+      "maximum_position_metres": 1.6538608265325878,
+      "maximum_velocity_m_per_s": 1.0558288898267726e-07
+    },
+    "Irmintraud": {
+      "maximum_position_metres": 1.8173021039210182,
+      "maximum_velocity_m_per_s": 1.1155647203668619e-07
+    },
+    "Bruchsalia": {
+      "maximum_position_metres": 1.8142575782857824,
+      "maximum_velocity_m_per_s": 1.1717690740218298e-07
+    },
+    "Cava": {
+      "maximum_position_metres": 1.7449544287604841,
+      "maximum_velocity_m_per_s": 1.058974715189773e-07
+    },
+    "Hamburga": {
+      "maximum_position_metres": 1.716013189994705,
+      "maximum_velocity_m_per_s": 1.1101446627079049e-07
+    },
+    "Havnia": {
+      "maximum_position_metres": 1.7141185792299083,
+      "maximum_velocity_m_per_s": 1.0683836894611613e-07
+    },
+    "Lydia": {
+      "maximum_position_metres": 1.7101425946384492,
+      "maximum_velocity_m_per_s": 1.0699951906440965e-07
+    },
+    "Luscinia": {
+      "maximum_position_metres": 1.8317244088231852,
+      "maximum_velocity_m_per_s": 1.2324072521988707e-07
+    },
+    "Gratia": {
+      "maximum_position_metres": 1.6696771333780949,
+      "maximum_velocity_m_per_s": 1.0776247952279871e-07
+    },
+    "Hermentaria": {
+      "maximum_position_metres": 1.6832765562680465,
+      "maximum_velocity_m_per_s": 1.0642160817311534e-07
+    },
+    "Vundtia": {
+      "maximum_position_metres": 1.8172380739757092,
+      "maximum_velocity_m_per_s": 1.1300520339651163e-07
+    },
+    "Ludmilla": {
+      "maximum_position_metres": 1.8037983373488027,
+      "maximum_velocity_m_per_s": 1.1287327841984657e-07
+    },
+    "Klotho": {
+      "maximum_position_metres": 1.6012076100345691,
+      "maximum_velocity_m_per_s": 1.0193103635208834e-07
+    },
+    "Luisa": {
+      "maximum_position_metres": 1.718546905290234,
+      "maximum_velocity_m_per_s": 1.053654024044958e-07
+    },
+    "Ilmatar": {
+      "maximum_position_metres": 1.8379894227123208,
+      "maximum_velocity_m_per_s": 1.21611285593348e-07
+    },
+    "Rachele": {
+      "maximum_position_metres": 1.776293658160258,
+      "maximum_velocity_m_per_s": 1.1181291791699657e-07
+    },
+    "Laurentia": {
+      "maximum_position_metres": 1.75150853862727,
+      "maximum_velocity_m_per_s": 1.073438581970117e-07
+    },
+    "Apollonia": {
+      "maximum_position_metres": 1.640945574490826,
+      "maximum_velocity_m_per_s": 1.0332033121467334e-07
+    },
+    "Mashona": {
+      "maximum_position_metres": 1.6930375995220688,
+      "maximum_velocity_m_per_s": 1.0880559453979535e-07
+    },
+    "Ara": {
+      "maximum_position_metres": 1.5641895075545973,
+      "maximum_velocity_m_per_s": 1.051916587727408e-07
+    },
+    "Campania": {
+      "maximum_position_metres": 1.7590063466471266,
+      "maximum_velocity_m_per_s": 1.1204240189217474e-07
+    },
+    "Kolga": {
+      "maximum_position_metres": 1.8880132531008427,
+      "maximum_velocity_m_per_s": 1.1835078850571205e-07
+    },
+    "Vanadis": {
+      "maximum_position_metres": 1.7505167405334627,
+      "maximum_velocity_m_per_s": 1.1028365713932546e-07
+    },
+    "Octavia": {
+      "maximum_position_metres": 1.7119343300163403,
+      "maximum_velocity_m_per_s": 1.0821257828769337e-07
+    },
+    "Virginia": {
+      "maximum_position_metres": 1.7282523659578184,
+      "maximum_velocity_m_per_s": 1.1014873470790682e-07
+    },
+    "Carina": {
+      "maximum_position_metres": 1.5211515216339782,
+      "maximum_velocity_m_per_s": 9.665472485735558e-08
+    },
+    "Eurykleia": {
+      "maximum_position_metres": 1.7054908778480558,
+      "maximum_velocity_m_per_s": 1.0669055812481558e-07
+    },
+    "Felicitas": {
+      "maximum_position_metres": 1.8706313581306893,
+      "maximum_velocity_m_per_s": 1.1738102639777384e-07
+    },
+    "Hekate": {
+      "maximum_position_metres": 1.8438692646737647,
+      "maximum_velocity_m_per_s": 1.2314292858167381e-07
+    },
+    "Edna": {
+      "maximum_position_metres": 1.8941426542881514,
+      "maximum_velocity_m_per_s": 1.2139296021650582e-07
+    },
+    "Corduba": {
+      "maximum_position_metres": 1.7227379942765098,
+      "maximum_velocity_m_per_s": 1.174720960850695e-07
+    },
+    "Aeria": {
+      "maximum_position_metres": 1.7034099164629586,
+      "maximum_velocity_m_per_s": 1.0816583019450968e-07
+    },
+    "Leukothea": {
+      "maximum_position_metres": 1.7527925680936995,
+      "maximum_velocity_m_per_s": 1.0964133223644742e-07
+    },
+    "Evelyn": {
+      "maximum_position_metres": 1.687917522264645,
+      "maximum_velocity_m_per_s": 1.0805558096101485e-07
+    },
+    "Leda": {
+      "maximum_position_metres": 1.7117594025244958,
+      "maximum_velocity_m_per_s": 1.1698495458929358e-07
+    },
+    "Genoveva": {
+      "maximum_position_metres": 1.7328034381784299,
+      "maximum_velocity_m_per_s": 1.0907228827296678e-07
+    },
+    "Nausikaa": {
+      "maximum_position_metres": 1.7351005866085298,
+      "maximum_velocity_m_per_s": 1.0730458495473981e-07
+    },
+    "Nysa": {
+      "maximum_position_metres": 1.7499048130770252,
+      "maximum_velocity_m_per_s": 1.1260534784379227e-07
+    },
+    "Phaeo": {
+      "maximum_position_metres": 1.7597178525353105,
+      "maximum_velocity_m_per_s": 1.127106073526186e-07
+    },
+    "Palatia": {
+      "maximum_position_metres": 1.7003361213243635,
+      "maximum_velocity_m_per_s": 1.0988826150332818e-07
+    },
+    "Flammario": {
+      "maximum_position_metres": 1.801539258920639,
+      "maximum_velocity_m_per_s": 1.1041882839835767e-07
+    },
+    "Olga": {
+      "maximum_position_metres": 1.6714390926335176,
+      "maximum_velocity_m_per_s": 1.1075444246700628e-07
+    },
+    "Industria": {
+      "maximum_position_metres": 1.7149655637354648,
+      "maximum_velocity_m_per_s": 1.1671326806894809e-07
+    },
+    "Vincentina": {
+      "maximum_position_metres": 1.8079595298291322,
+      "maximum_velocity_m_per_s": 1.1380853909020727e-07
+    },
+    "Cheruskia": {
+      "maximum_position_metres": 1.6670758629186335,
+      "maximum_velocity_m_per_s": 1.0372979585068088e-07
+    },
+    "Pomona": {
+      "maximum_position_metres": 1.7101916484906199,
+      "maximum_velocity_m_per_s": 1.0932265699024986e-07
+    },
+    "Kalypso": {
+      "maximum_position_metres": 1.7213586767993507,
+      "maximum_velocity_m_per_s": 1.099899448808187e-07
+    },
+    "Isabella": {
+      "maximum_position_metres": 1.6808964583295918,
+      "maximum_velocity_m_per_s": 1.0597829247923033e-07
+    },
+    "Marghanna": {
+      "maximum_position_metres": 1.5989532676747522,
+      "maximum_velocity_m_per_s": 1.038872907184552e-07
+    },
+    "Isolda": {
+      "maximum_position_metres": 1.606978136565722,
+      "maximum_velocity_m_per_s": 1.0234467440280438e-07
+    },
+    "Tisiphone": {
+      "maximum_position_metres": 1.6845363409652798,
+      "maximum_velocity_m_per_s": 1.0358601638285209e-07
+    },
+    "Klio": {
+      "maximum_position_metres": 1.711787599213706,
+      "maximum_velocity_m_per_s": 1.0918110553610448e-07
+    },
+    "Mnemosyne": {
+      "maximum_position_metres": 1.5231201758814548,
+      "maximum_velocity_m_per_s": 9.977626216524112e-08
+    },
+    "Andromache": {
+      "maximum_position_metres": 1.6633418363856278,
+      "maximum_velocity_m_per_s": 1.0555250960233868e-07
+    },
+    "Devosa": {
+      "maximum_position_metres": 1.7683142777284677,
+      "maximum_velocity_m_per_s": 1.1187704613916349e-07
+    },
+    "Lilaea": {
+      "maximum_position_metres": 1.7625607607277982,
+      "maximum_velocity_m_per_s": 1.1712814670764268e-07
+    },
+    "Miriam": {
+      "maximum_position_metres": 1.7686788042454844,
+      "maximum_velocity_m_per_s": 1.1138446995889905e-07
+    },
+    "Chaldaea": {
+      "maximum_position_metres": 1.6737203251897557,
+      "maximum_velocity_m_per_s": 1.1293307831190514e-07
+    },
+    "Notburga": {
+      "maximum_position_metres": 1.7092350993842185,
+      "maximum_velocity_m_per_s": 1.1011110753009535e-07
+    },
+    "Thyra": {
+      "maximum_position_metres": 1.721809959594924,
+      "maximum_velocity_m_per_s": 1.1215264561986074e-07
+    },
+    "Tamara": {
+      "maximum_position_metres": 1.747937455095897,
+      "maximum_velocity_m_per_s": 1.0804427442581913e-07
+    },
+    "Massinga": {
+      "maximum_position_metres": 1.8520421778581901,
+      "maximum_velocity_m_per_s": 1.224800950378334e-07
+    },
+    "Leonora": {
+      "maximum_position_metres": 1.7514731100530798,
+      "maximum_velocity_m_per_s": 1.078734634562255e-07
+    },
+    "Mathesis": {
+      "maximum_position_metres": 1.688594274816699,
+      "maximum_velocity_m_per_s": 1.0851506661022207e-07
+    },
+    "Una": {
+      "maximum_position_metres": 1.6688216883710134,
+      "maximum_velocity_m_per_s": 1.0659348418030567e-07
+    },
+    "Anacostia": {
+      "maximum_position_metres": 1.711197386995879,
+      "maximum_velocity_m_per_s": 1.089840365499799e-07
+    },
+    "Honoria": {
+      "maximum_position_metres": 1.8409151114836793,
+      "maximum_velocity_m_per_s": 1.178693338891061e-07
+    },
+    "Henrietta": {
+      "maximum_position_metres": 1.813057605664744,
+      "maximum_velocity_m_per_s": 1.2243718554649984e-07
+    },
+    "Montague": {
+      "maximum_position_metres": 1.6618291503102691,
+      "maximum_velocity_m_per_s": 1.057890604539734e-07
+    },
+    "Dione": {
+      "maximum_position_metres": 1.8828447665882166,
+      "maximum_velocity_m_per_s": 1.231695414621405e-07
+    },
+    "Megaira": {
+      "maximum_position_metres": 1.805751360921778,
+      "maximum_velocity_m_per_s": 1.1097690536967375e-07
+    },
+    "Eurydike": {
+      "maximum_position_metres": 1.778421922800107,
+      "maximum_velocity_m_per_s": 1.1232130901799318e-07
+    },
+    "Tauris": {
+      "maximum_position_metres": 1.748439066195234,
+      "maximum_velocity_m_per_s": 1.109471346416452e-07
+    },
+    "Urania": {
+      "maximum_position_metres": 1.7196714298752875,
+      "maximum_velocity_m_per_s": 1.1059958383328757e-07
+    },
+    "Amherstia": {
+      "maximum_position_metres": 1.8268318812526354,
+      "maximum_velocity_m_per_s": 1.2025495422596026e-07
+    },
+    "Sappho": {
+      "maximum_position_metres": 1.7419126379439447,
+      "maximum_velocity_m_per_s": 1.0917775591730657e-07
+    },
+    "Misa": {
+      "maximum_position_metres": 1.7523579785219874,
+      "maximum_velocity_m_per_s": 1.2035859398730942e-07
+    },
+    "Rosa": {
+      "maximum_position_metres": 1.9003187733062947,
+      "maximum_velocity_m_per_s": 1.276583075164398e-07
+    },
+    "Sulamitis": {
+      "maximum_position_metres": 1.8113125649122053,
+      "maximum_velocity_m_per_s": 1.2278809343064142e-07
+    },
+    "Pickeringia": {
+      "maximum_position_metres": 1.7863706975996538,
+      "maximum_velocity_m_per_s": 1.1158279198056611e-07
+    },
+    "Frigga": {
+      "maximum_position_metres": 1.745380389768067,
+      "maximum_velocity_m_per_s": 1.0915859581501124e-07
+    },
+    "Martha": {
+      "maximum_position_metres": 1.5736475925554056,
+      "maximum_velocity_m_per_s": 1.0252181685437923e-07
+    },
+    "Alekto": {
+      "maximum_position_metres": 1.7400782480121755,
+      "maximum_velocity_m_per_s": 1.108886377343076e-07
+    },
+    "Lehigh": {
+      "maximum_position_metres": 1.7774683543257621,
+      "maximum_velocity_m_per_s": 1.153079125682576e-07
+    },
+    "Nephthys": {
+      "maximum_position_metres": 1.8014230673054856,
+      "maximum_velocity_m_per_s": 1.2070452386078914e-07
+    },
+    "Ekard": {
+      "maximum_position_metres": 1.5687933828102194,
+      "maximum_velocity_m_per_s": 1.0211772240962789e-07
+    },
+    "Svea": {
+      "maximum_position_metres": 1.8593860213795559,
+      "maximum_velocity_m_per_s": 1.1385789744273622e-07
+    },
+    "Dike": {
+      "maximum_position_metres": 1.9000394067561828,
+      "maximum_velocity_m_per_s": 1.218720330592341e-07
+    },
+    "Eurynome": {
+      "maximum_position_metres": 1.6786708261114922,
+      "maximum_velocity_m_per_s": 1.0532538373716477e-07
+    },
+    "Baucis": {
+      "maximum_position_metres": 1.6787954878534044,
+      "maximum_velocity_m_per_s": 1.0871506020133671e-07
+    },
+    "Tekmessa": {
+      "maximum_position_metres": 1.6897459249913485,
+      "maximum_velocity_m_per_s": 1.0990518024514532e-07
+    },
+    "Oceana": {
+      "maximum_position_metres": 1.7260859937043644,
+      "maximum_velocity_m_per_s": 1.0721671521209595e-07
+    },
+    "Genua": {
+      "maximum_position_metres": 1.5409250338923575,
+      "maximum_velocity_m_per_s": 1.007314514834317e-07
+    },
+    "Palisana": {
+      "maximum_position_metres": 1.7144642135085966,
+      "maximum_velocity_m_per_s": 1.053236186608163e-07
+    },
+    "Titania": {
+      "maximum_position_metres": 1.7546343306411705,
+      "maximum_velocity_m_per_s": 1.1115821048539172e-07
+    },
+    "Ulla": {
+      "maximum_position_metres": 1.7315692007427064,
+      "maximum_velocity_m_per_s": 1.1298737218053557e-07
+    },
+    "Semiramis": {
+      "maximum_position_metres": 1.7680266030679195,
+      "maximum_velocity_m_per_s": 1.1272580694899446e-07
+    },
+    "Alkmene": {
+      "maximum_position_metres": 1.7665598562728373,
+      "maximum_velocity_m_per_s": 1.1280391895734805e-07
+    },
+    "Eichsfeldia": {
+      "maximum_position_metres": 1.8758441349258272,
+      "maximum_velocity_m_per_s": 1.2441144610477153e-07
+    },
+    "Ampella": {
+      "maximum_position_metres": 1.7659019629736092,
+      "maximum_velocity_m_per_s": 1.110683252680061e-07
+    },
+    "Praxedis": {
+      "maximum_position_metres": 1.8102580401304504,
+      "maximum_velocity_m_per_s": 1.1673554681429486e-07
+    },
+    "Phocaea": {
+      "maximum_position_metres": 1.8841026402138776,
+      "maximum_velocity_m_per_s": 1.1833596985520027e-07
+    },
+    "Irma": {
+      "maximum_position_metres": 1.7635404672921409,
+      "maximum_velocity_m_per_s": 1.12337039955833e-07
+    },
+    "Amalthea": {
+      "maximum_position_metres": 1.8866584887764772,
+      "maximum_velocity_m_per_s": 1.2555511813382482e-07
+    },
+    "Iphigenia": {
+      "maximum_position_metres": 1.7259085169975246,
+      "maximum_velocity_m_per_s": 1.0741510091675155e-07
+    },
+    "Budrosa": {
+      "maximum_position_metres": 1.8349972242998582,
+      "maximum_velocity_m_per_s": 1.2365710612651702e-07
+    },
+    "Pariana": {
+      "maximum_position_metres": 1.8479656533535207,
+      "maximum_velocity_m_per_s": 1.222198686780676e-07
+    },
+    "Ganymed": {
+      "maximum_position_metres": 1.9644783471936116,
+      "maximum_velocity_m_per_s": 1.213240514317219e-07
+    },
+    "Theobalda": {
+      "maximum_position_metres": 1.7682007520604752,
+      "maximum_velocity_m_per_s": 1.118362184419862e-07
+    },
+    "Aethra": {
+      "maximum_position_metres": 1.4729260104603885,
+      "maximum_velocity_m_per_s": 9.896517929384867e-08
+    },
+    "Irmgard": {
+      "maximum_position_metres": 1.8088879829974431,
+      "maximum_velocity_m_per_s": 1.2231454700080867e-07
+    },
+    "Echo": {
+      "maximum_position_metres": 1.6603266900633709,
+      "maximum_velocity_m_per_s": 1.1025549542958689e-07
+    },
+    "Lacadiera": {
+      "maximum_position_metres": 1.677303944638787,
+      "maximum_velocity_m_per_s": 1.0438808300383419e-07
+    },
+    "Pythia": {
+      "maximum_position_metres": 1.7345217480119801,
+      "maximum_velocity_m_per_s": 1.167985363330508e-07
+    },
+    "Peitho": {
+      "maximum_position_metres": 1.8488453427635758,
+      "maximum_velocity_m_per_s": 1.1610747480387725e-07
+    },
+    "Chimaera": {
+      "maximum_position_metres": 1.7433736977623502,
+      "maximum_velocity_m_per_s": 1.0932883739474455e-07
+    },
+    "Bilkis": {
+      "maximum_position_metres": 1.7595687210587383,
+      "maximum_velocity_m_per_s": 1.123722928949475e-07
+    },
+    "Eros": {
+      "maximum_position_metres": 1.6180230365897974,
+      "maximum_velocity_m_per_s": 1.0435162481411977e-07
+    }
+  },
+  "force_screen": {
+    "samples": 13,
+    "mass_count": 30,
+    "gm_m3_s2": 2315402864753.5605,
+    "targets": {
+      "Sun": {
+        "initial_vector_m_per_s2": [
+          1.4310369125587232e-15,
+          -1.2420459942058534e-17,
+          3.0365174625251906e-15
+        ],
+        "maximum_magnitude_m_per_s2": 3.4154047629369924e-15
+      },
+      "Mercury": {
+        "initial_vector_m_per_s2": [
+          1.3705293536937946e-15,
+          -4.464198447446957e-17,
+          3.072650348534253e-15
+        ],
+        "maximum_magnitude_m_per_s2": 3.4248192753909414e-15
+      },
+      "Venus": {
+        "initial_vector_m_per_s2": [
+          1.5941096333560433e-15,
+          1.5780791884711812e-16,
+          2.972546156388861e-15
+        ],
+        "maximum_magnitude_m_per_s2": 3.4244440741211594e-15
+      },
+      "Mars": {
+        "initial_vector_m_per_s2": [
+          1.7828098130566036e-15,
+          2.1934420347188032e-16,
+          2.903300066463241e-15
+        ],
+        "maximum_magnitude_m_per_s2": 3.4705366107851158e-15
+      },
+      "Jupiter": {
+        "initial_vector_m_per_s2": [
+          1.5190854177786381e-15,
+          -2.828098838706814e-16,
+          3.0222585109556764e-15
+        ],
+        "maximum_magnitude_m_per_s2": 3.628053224044093e-15
+      },
+      "Saturn": {
+        "initial_vector_m_per_s2": [
+          3.686014520163914e-15,
+          2.6004201532435915e-15,
+          2.4297592368444724e-15
+        ],
+        "maximum_magnitude_m_per_s2": 5.484562350783105e-15
+      },
+      "Uranus": {
+        "initial_vector_m_per_s2": [
+          9.118581876725897e-15,
+          5.247721810959743e-15,
+          3.101308554359637e-15
+        ],
+        "maximum_magnitude_m_per_s2": 1.0968374282322828e-14
+      },
+      "Neptune": {
+        "initial_vector_m_per_s2": [
+          9.47757015238045e-15,
+          6.5054006636807755e-15,
+          2.9551939147595855e-15
+        ],
+        "maximum_magnitude_m_per_s2": 1.1904235326798868e-14
+      },
+      "Earth": {
+        "initial_vector_m_per_s2": [
+          1.6816743872014396e-15,
+          2.386763723762225e-16,
+          2.920293271676174e-15
+        ],
+        "maximum_magnitude_m_per_s2": 3.4327104018878235e-15
+      },
+      "Moon": {
+        "initial_vector_m_per_s2": [
+          1.6813743327338311e-15,
+          2.3826487649605514e-16,
+          2.9204882979308184e-15
+        ],
+        "maximum_magnitude_m_per_s2": 3.432614132210993e-15
+      },
+      "Moon-minus-Earth": {
+        "initial_vector_m_per_s2": [
+          -3.0005446760650267e-19,
+          -4.1149588016956385e-19,
+          1.9502625464310843e-19
+        ],
+        "maximum_magnitude_m_per_s2": 1.0484354971389948e-18
+      },
+      "Earth-minus-Sun": {
+        "initial_vector_m_per_s2": [
+          2.506374746427151e-16,
+          2.510968323182832e-16,
+          -1.162241908490165e-16
+        ],
+        "maximum_magnitude_m_per_s2": 4.1393665811732866e-16
+      }
+    },
+    "limitation": "Newtonian force diagnostic on 13 JPL snapshots; not a continuous maximum or an orbit error bound. Full propagation includes the existing EIH and quadrupoles."
+  },
+  "checks": {
+    "agreement": true,
+    "tighter_agreement": true,
+    "tolerance_sensitivity": true,
+    "reference_convergence": true,
+    "energy_budget": true
+  },
+  "checks_passed": true,
+  "reference_sha256": {
+    "pair": "07717d8792d4afa297441a0b1751672de4bc492f41802d9224525f905e15bd24",
+    "planets": "aad15839a53f1c709c0e84a8202ffc4f9b6d13837f2bdeed2d28abb4c2ed6995",
+    "pluto": "4d353cc1dc1fe934ccdeed86252f9f1959a1469471edb00d95d841f710ecb1a8"
+  },
+  "code_sha256": {
+    "scripts/assess_kuiper.py": "45ac43de0b86ddaf4a593440930a65e8aec2dffc69cee5ce564b8b6944851cb8",
+    "scripts/independent_anchored_reference.py": "5f7ca98203e18ca6e2a40ff8b2d5660fe6f1a96b85b37abadd8a7cc71b13e581",
+    "scripts/assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+    "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+    "scripts/validation/eih_scalar.rs": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48"
+  },
+  "limitations": [
+    "45 sample epochs, not a continuous/global error bound.",
+    "Source interpolation validation is distinct from numerical integration and physical truth.",
+    "Independent reference has its own convergence uncertainty; no reuse of the 354-body reference.",
+    "All 30 KBO masses, not all bodies in nature; KBO satellites unresolved.",
+    "No 36-point Kuiper ring, autonomous spin/tides, higher multipoles or higher PN.",
+    "Future JPL states do not tune parameters or drive the simulator."
+  ]
+}

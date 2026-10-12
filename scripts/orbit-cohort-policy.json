@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "designations": ["13270", "13271", "32100"],
+  "stations": ["T08", "T05", "F51", "F52"],
+  "start_utc": "2020-01-01",
+  "end_utc_exclusive": "2022-01-01",
+  "catalog": "Gaia2",
+  "mode": "CCD",
+  "season_gap_days": 90,
+  "min_training_measurements": 20,
+  "min_training_nights": 8,
+  "min_holdout_measurements": 10,
+  "min_holdout_nights": 4,
+  "selection": "First consecutive season pair satisfying count/night requirements, using timestamps and format only. All observations in each chosen season; no residual clipping.",
+  "night_systematic_arcsec": 0.15,
+  "error_model": "Independent reported per-exposure ADES covariance plus a zero-mean common two-dimensional station/UTC-night offset with fixed 0.15 arcsec standard deviation. Illustrative sensitivity model, not an externally calibrated survey error model.",
+  "comparison": "Independent-error baseline and fixed correlated-night model; both trained on the same early season. Preserve every declared case, including failures. Holdout never chooses a model or error parameter."
+}

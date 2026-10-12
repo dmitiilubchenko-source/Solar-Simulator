@@ -59,11 +59,22 @@ def compare_tolerances(experiment, steps: int) -> dict:
         raise ValueError("Недостаточно диапазона rtol для трёх запусков: достигнут предел float64")
     runs, states = [], []
     initial_energy = model_invariants(experiment.initial, base.physics, base.figures)[0]
+    if experiment.rotations:
+        from .nbody_rotation import invariants
+        initial_energy = invariants(experiment.initial, experiment.initial_rotations)[0]
     for factor, tolerance in zip((1, 2, 4), tolerances):
         settings = replace(base, rtol=tolerance, position_atol=base.position_atol/factor,
                            velocity_atol=base.velocity_atol/factor)
-        state = advance(replace(experiment, settings=settings), steps)
+        start = replace(experiment, settings=settings)
+        if experiment.rotations:
+            def refine(states):
+                return tuple(replace(s, quaternion_atol=s.quaternion_atol/factor,
+                    momentum_atol=s.momentum_atol/factor) for s in states)
+            start = replace(start, initial_rotations=refine(start.initial_rotations), rotations=refine(start.rotations))
+        state = advance(start, steps)
         residual = model_invariants(state.bodies, base.physics, base.figures, state.time)[0]+state.dissipated_energy+state.model_energy_offset-state.orientation_work-initial_energy
+        if state.rotations:
+            residual = invariants(state.bodies, state.rotations)[0]-initial_energy
         runs.append(dict(rtol=tolerance, position_atol_metres=settings.position_atol,
                          velocity_atol_m_per_s=settings.velocity_atol, final_time_seconds=state.time,
                          energy_budget_residual_joules=residual, orientation_work_joules=state.orientation_work))
@@ -72,7 +83,29 @@ def compare_tolerances(experiment, steps: int) -> dict:
         return sqrt(sum(getattr(x, field).distance_to(getattr(y, field))**2
                         for x, y in zip(a.bodies, b.bodies)))
     from dataclasses import asdict
-    return dict(comparison="adaptive_tolerances", physics=base.physics, figures=[asdict(f) for f in base.figures], runs=runs,
+    rotation_comparison = None
+    if experiment.rotations:
+        import numpy as np
+        from .rotation import rotation_matrix
+        rotation_comparison = dict(body=experiment.rotations[0].body,
+            attitude_frobenius=[float(np.linalg.norm(rotation_matrix(a.rotations[0].quaternion)-rotation_matrix(b.rotations[0].quaternion)))
+                for a, b in zip(states, states[1:])],
+            angular_momentum_differences_kg_m2_s=[float(np.linalg.norm(np.array(a.rotations[0].angular_momentum)-b.rotations[0].angular_momentum))
+                for a, b in zip(states, states[1:])])
+    relative = None
+    if base.relative_pair:
+        def relative_difference(a,b,field):
+            def value(state):
+                bodies = {body.name:body for body in state.bodies}
+                return getattr(bodies[base.relative_pair[1]],field).subtract(getattr(bodies[base.relative_pair[0]],field))
+            return value(a).distance_to(value(b))
+        relative = dict(bodies=list(base.relative_pair),position_differences_metres=[
+            relative_difference(states[0],states[1],"position"),relative_difference(states[1],states[2],"position")],
+            velocity_differences_m_per_s=[relative_difference(states[0],states[1],"velocity"),relative_difference(states[1],states[2],"velocity")])
+    return dict(comparison="adaptive_tolerances", physics=base.physics, figures=[asdict(f) for f in base.figures],
+                error_control=base.error_control,
+                relative_pair_comparison=relative, runs=runs,
+                rotation_comparison=rotation_comparison,
                 position_differences_metres=[difference(states[0], states[1], "position"),
                                             difference(states[1], states[2], "position")],
                 velocity_differences_m_per_s=[difference(states[0], states[1], "velocity"),

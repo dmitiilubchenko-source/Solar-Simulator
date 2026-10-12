@@ -1,0 +1,258 @@
+{
+  "schema": 1,
+  "epoch_jd_tdb": 2461321.5,
+  "duration_seconds": 31557600,
+  "runtime_dataset_sha256": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+  "runtime_bodies": 27,
+  "sources": {
+    "header": {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+      "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c"
+    },
+    "memorandum": {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/SB441_IOM392R-21-005_perturbers.pdf",
+      "sha256": "124fe0fb48f8e71f3f1dba9607cfe5b47a016b95aa5429b61bf7cba301ed4b22",
+      "table": 1,
+      "pages_1based": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    "catalog_sha256": "f922e96ec250222f7cf8915ecb7ff572f97490e868c5371ec40e6a05fd0fd586",
+    "spk_metadata_sha256": "aae65ca7f930a4de06a114088893afa2b5e2985215394cd9981a78b6425209f5",
+    "ring_geometry": {
+      "url": "https://ssd.jpl.nasa.gov/doc/Park.2021.AJ.DE440.pdf",
+      "section": "2.2",
+      "radius_au": 44,
+      "equal_masses": 36
+    }
+  },
+  "spk": {
+    "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n373s.bsp",
+    "full_bytes": 982106112,
+    "downloaded_metadata_bytes": 16384,
+    "segments": 374,
+    "covered_bodies": 373,
+    "center": 10,
+    "frame": 1,
+    "type": 2,
+    "note": "374 segments, 373 identities: Ganymed has two successive time intervals; one covers the selected year."
+  },
+  "mass_groups": {
+    "asteroids_all": {
+      "count": 343,
+      "gm_m3_s2": 170532121338.51764
+    },
+    "asteroids_included": {
+      "count": 16,
+      "gm_m3_s2": 122108453681.21198
+    },
+    "asteroids_missing": {
+      "count": 327,
+      "gm_m3_s2": 48423667657.30569
+    },
+    "kuiper_belt_objects": {
+      "count": 30,
+      "gm_m3_s2": 2315402864753.561
+    },
+    "kuiper_ring": {
+      "count": 36,
+      "gm_m3_s2": 8916783186240.352
+    }
+  },
+  "included_asteroid_mass_fraction": 0.7160437149480979,
+  "next_by_mass": [
+    {
+      "id": 2000209,
+      "name": "Dido",
+      "number": 209,
+      "constant": "MA0209",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.951100813450661e-15,
+      "gm_m3_s2": 875041118.5162935
+    },
+    {
+      "id": 2000094,
+      "name": "Aurora",
+      "number": 94,
+      "constant": "MA0094",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9476499609659456e-15,
+      "gm_m3_s2": 873493459.9856614
+    },
+    {
+      "id": 2000048,
+      "name": "Doris",
+      "number": 48,
+      "constant": "MA0048",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.908516195648564e-15,
+      "gm_m3_s2": 855942519.7477179
+    },
+    {
+      "id": 2000154,
+      "name": "Bertha",
+      "number": 154,
+      "constant": "MA0154",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.9062882233624486e-15,
+      "gm_m3_s2": 854943305.6897739
+    },
+    {
+      "id": 2000029,
+      "name": "Amphitrite",
+      "number": 29,
+      "constant": "MA0029",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.778875957037877e-15,
+      "gm_m3_s2": 797800706.3587997
+    },
+    {
+      "id": 2000375,
+      "name": "Ursula",
+      "number": 375,
+      "constant": "MA0375",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.771687529490865e-15,
+      "gm_m3_s2": 794576798.2768867
+    },
+    {
+      "id": 2000532,
+      "name": "Herculina",
+      "number": 532,
+      "constant": "MA0532",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.765129565112637e-15,
+      "gm_m3_s2": 791635644.0089194
+    },
+    {
+      "id": 2000566,
+      "name": "Stereoskopia",
+      "number": 566,
+      "constant": "MA0566",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.7007818925283807e-15,
+      "gm_m3_s2": 762776622.9865946
+    },
+    {
+      "id": 2000386,
+      "name": "Siegena",
+      "number": 386,
+      "constant": "MA0386",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6744520343182799e-15,
+      "gm_m3_s2": 750968053.9881558
+    },
+    {
+      "id": 2000702,
+      "name": "Alauda",
+      "number": 702,
+      "constant": "MA0702",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6730262398441171e-15,
+      "gm_m3_s2": 750328605.3328917
+    },
+    {
+      "id": 2000039,
+      "name": "Laetitia",
+      "number": 39,
+      "constant": "MA0039",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.6238080168284406e-15,
+      "gm_m3_s2": 728254928.4515556
+    },
+    {
+      "id": 2000009,
+      "name": "Metis",
+      "number": 9,
+      "constant": "MA0009",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4490138025867273e-15,
+      "gm_m3_s2": 649862195.6487136
+    },
+    {
+      "id": 2000006,
+      "name": "Hebe",
+      "number": 6,
+      "constant": "MA0006",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.4423591761343029e-15,
+      "gm_m3_s2": 646877689.807655
+    },
+    {
+      "id": 2000324,
+      "name": "Bamberga",
+      "number": 324,
+      "constant": "MA0324",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3808681586222395e-15,
+      "gm_m3_s2": 619299838.1807576
+    },
+    {
+      "id": 2000130,
+      "name": "Elektra",
+      "number": 130,
+      "constant": "MA0130",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3272835717079433e-15,
+      "gm_m3_s2": 595267908.8486217
+    },
+    {
+      "id": 2000024,
+      "name": "Themis",
+      "number": 24,
+      "constant": "MA0024",
+      "group": "asteroid",
+      "gm_au3_per_day2": 1.3109170444249925e-15,
+      "gm_m3_s2": 587927752.8499308
+    }
+  ],
+  "inner_kuiper_ring_diagnostic": {
+    "radius_metres": 6582306310799.999,
+    "gm_m3_s2": 8916783186240.352,
+    "forces": {
+      "Earth": {
+        "position_over_ring_radius": 0.022712859334232643,
+        "acceleration_m_per_s2": [
+          2.2654642276322486e-15,
+          5.800604758558849e-16,
+          9.513240048174554e-20
+        ],
+        "magnitude_m_per_s2": 2.338546200394961e-15,
+        "quadrature_phase_spread_m_per_s2": 1.0056042873088223e-29
+      },
+      "Moon": {
+        "position_over_ring_radius": 0.022664522195900684,
+        "acceleration_m_per_s2": [
+          2.2598406340274855e-15,
+          5.819272043416754e-16,
+          3.330897759703504e-19
+        ],
+        "magnitude_m_per_s2": 2.333563599584006e-15,
+        "quadrature_phase_spread_m_per_s2": 6.567592758741595e-30
+      },
+      "Mars": {
+        "position_over_ring_radius": 0.035609359031134595,
+        "acceleration_m_per_s2": [
+          7.76617438774622e-17,
+          3.667894534903652e-15,
+          -1.5013699964940998e-16
+        ],
+        "magnitude_m_per_s2": 3.671787410009177e-15,
+        "quadrature_phase_spread_m_per_s2": 9.273712142182133e-30
+      }
+    },
+    "moon_minus_earth_magnitude_m_per_s2": 5.930101515466914e-18,
+    "note": "Instantaneous uniform ring quadrature in a heliocentric frame. No propagated orbit, error bound, moving ring initial states or ring-only annual forecast."
+  },
+  "checks_passed": true,
+  "conclusion": "Obtain and validate the missing 327 individual asteroid initial states before replacing them by a circular main-belt ring. KBOs and the 44-au ring are a separate source group.",
+  "limitation": "Mass fraction is not acceleration or orbit error fraction. Ranking is by GM, not actual dynamical influence. SB441 extraction and mass consistency do not independently validate JPL ephemeris accuracy. No runtime physics change."
+}

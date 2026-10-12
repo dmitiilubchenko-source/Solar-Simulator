@@ -1,0 +1,621 @@
+{
+  "schema": 1,
+  "source_manifest_sha256": "4a4427da7d5ff55fabf8a67b4a3e0aa913fe32f3207bc304bd8d13477891148a",
+  "initial_catalogue_sha256": "50434ff910366e319c9447ede9c7da59fcdac543746cd9840570d3cd05d809b0",
+  "force_screen": {
+    "samples": 13,
+    "epochs_jd_tdb": [
+      2461321.5,
+      2461351.9375,
+      2461382.375,
+      2461412.8125,
+      2461443.25,
+      2461473.6875,
+      2461504.125,
+      2461534.5625,
+      2461565.0,
+      2461595.4375,
+      2461625.875,
+      2461656.3125,
+      2461686.75
+    ],
+    "missing_count": 327,
+    "targets": {
+      "Sun": {
+        "maximum_net_acceleration_m_per_s2": 1.1669297439914181e-14,
+        "maximum_sum_of_individual_magnitudes_m_per_s2": 2.789953280914609e-13,
+        "initial_net_vector_m_per_s2": [
+          -9.947004506340466e-15,
+          -6.094149163027081e-15,
+          -3.0157929439274443e-16
+        ],
+        "top_sixteen": [
+          {
+            "id": 2000324,
+            "name": "Bamberga",
+            "maximum_acceleration_m_per_s2": 8.831337648545777e-15
+          },
+          {
+            "id": 2000009,
+            "name": "Metis",
+            "maximum_acceleration_m_per_s2": 6.62052680675908e-15
+          },
+          {
+            "id": 2000029,
+            "name": "Amphitrite",
+            "maximum_acceleration_m_per_s2": 5.979438545957755e-15
+          },
+          {
+            "id": 2000041,
+            "name": "Daphne",
+            "maximum_acceleration_m_per_s2": 5.913880370163646e-15
+          },
+          {
+            "id": 2000006,
+            "name": "Hebe",
+            "maximum_acceleration_m_per_s2": 4.986978989153386e-15
+          },
+          {
+            "id": 2000532,
+            "name": "Herculina",
+            "maximum_acceleration_m_per_s2": 4.699422382277833e-15
+          },
+          {
+            "id": 2000154,
+            "name": "Bertha",
+            "maximum_acceleration_m_per_s2": 4.2237531766233585e-15
+          },
+          {
+            "id": 2000011,
+            "name": "Parthenope",
+            "maximum_acceleration_m_per_s2": 4.211406383898504e-15
+          },
+          {
+            "id": 2000209,
+            "name": "Dido",
+            "maximum_acceleration_m_per_s2": 4.188829117104233e-15
+          },
+          {
+            "id": 2000094,
+            "name": "Aurora",
+            "maximum_acceleration_m_per_s2": 4.1529066258132025e-15
+          },
+          {
+            "id": 2000019,
+            "name": "Fortuna",
+            "maximum_acceleration_m_per_s2": 4.052788204702538e-15
+          },
+          {
+            "id": 2000375,
+            "name": "Ursula",
+            "maximum_acceleration_m_per_s2": 3.933595538308026e-15
+          },
+          {
+            "id": 2000048,
+            "name": "Doris",
+            "maximum_acceleration_m_per_s2": 3.86345104847497e-15
+          },
+          {
+            "id": 2000386,
+            "name": "Siegena",
+            "maximum_acceleration_m_per_s2": 3.812144651166316e-15
+          },
+          {
+            "id": 2000039,
+            "name": "Laetitia",
+            "maximum_acceleration_m_per_s2": 3.746479429244794e-15
+          },
+          {
+            "id": 2000046,
+            "name": "Hestia",
+            "maximum_acceleration_m_per_s2": 3.682960734978721e-15
+          }
+        ],
+        "screen_selection_remaining_net_acceleration_m_per_s2": 1.1235581494808038e-14
+      },
+      "Earth": {
+        "maximum_net_acceleration_m_per_s2": 7.156808091105327e-14,
+        "maximum_sum_of_individual_magnitudes_m_per_s2": 3.239387769031826e-13,
+        "initial_net_vector_m_per_s2": [
+          2.878844789682002e-14,
+          -9.716031921626642e-15,
+          -5.860374042987869e-15
+        ],
+        "top_sixteen": [
+          {
+            "id": 2000029,
+            "name": "Amphitrite",
+            "maximum_acceleration_m_per_s2": 1.6303806830125172e-14
+          },
+          {
+            "id": 2000324,
+            "name": "Bamberga",
+            "maximum_acceleration_m_per_s2": 1.5856730820045195e-14
+          },
+          {
+            "id": 2000011,
+            "name": "Parthenope",
+            "maximum_acceleration_m_per_s2": 1.3239077468403083e-14
+          },
+          {
+            "id": 2000046,
+            "name": "Hestia",
+            "maximum_acceleration_m_per_s2": 1.2478099915674264e-14
+          },
+          {
+            "id": 2000009,
+            "name": "Metis",
+            "maximum_acceleration_m_per_s2": 1.208851233835779e-14
+          },
+          {
+            "id": 2000187,
+            "name": "Lamberta",
+            "maximum_acceleration_m_per_s2": 1.1536066038852864e-14
+          },
+          {
+            "id": 2000006,
+            "name": "Hebe",
+            "maximum_acceleration_m_per_s2": 1.0099653052191421e-14
+          },
+          {
+            "id": 2000041,
+            "name": "Daphne",
+            "maximum_acceleration_m_per_s2": 9.235940621367601e-15
+          },
+          {
+            "id": 2000019,
+            "name": "Fortuna",
+            "maximum_acceleration_m_per_s2": 9.09871744915727e-15
+          },
+          {
+            "id": 2000209,
+            "name": "Dido",
+            "maximum_acceleration_m_per_s2": 8.202505891765164e-15
+          },
+          {
+            "id": 2000375,
+            "name": "Ursula",
+            "maximum_acceleration_m_per_s2": 8.108014093263502e-15
+          },
+          {
+            "id": 2000048,
+            "name": "Doris",
+            "maximum_acceleration_m_per_s2": 8.022353711665322e-15
+          },
+          {
+            "id": 2000596,
+            "name": "Scheila",
+            "maximum_acceleration_m_per_s2": 7.997415996883509e-15
+          },
+          {
+            "id": 2000094,
+            "name": "Aurora",
+            "maximum_acceleration_m_per_s2": 7.938554488297228e-15
+          },
+          {
+            "id": 2000039,
+            "name": "Laetitia",
+            "maximum_acceleration_m_per_s2": 7.486667265640315e-15
+          },
+          {
+            "id": 2000154,
+            "name": "Bertha",
+            "maximum_acceleration_m_per_s2": 7.220058033626258e-15
+          }
+        ],
+        "screen_selection_remaining_net_acceleration_m_per_s2": 6.395595941165557e-14
+      },
+      "Moon": {
+        "maximum_net_acceleration_m_per_s2": 7.151784195055552e-14,
+        "maximum_sum_of_individual_magnitudes_m_per_s2": 3.2388404719510334e-13,
+        "initial_net_vector_m_per_s2": [
+          2.865212161294368e-14,
+          -9.607363663528508e-15,
+          -5.823744740554076e-15
+        ],
+        "top_sixteen": [
+          {
+            "id": 2000029,
+            "name": "Amphitrite",
+            "maximum_acceleration_m_per_s2": 1.629868573282974e-14
+          },
+          {
+            "id": 2000324,
+            "name": "Bamberga",
+            "maximum_acceleration_m_per_s2": 1.581017111441555e-14
+          },
+          {
+            "id": 2000011,
+            "name": "Parthenope",
+            "maximum_acceleration_m_per_s2": 1.3225772600180502e-14
+          },
+          {
+            "id": 2000046,
+            "name": "Hestia",
+            "maximum_acceleration_m_per_s2": 1.2444214499616123e-14
+          },
+          {
+            "id": 2000009,
+            "name": "Metis",
+            "maximum_acceleration_m_per_s2": 1.2050818560171177e-14
+          },
+          {
+            "id": 2000187,
+            "name": "Lamberta",
+            "maximum_acceleration_m_per_s2": 1.1484198112887503e-14
+          },
+          {
+            "id": 2000006,
+            "name": "Hebe",
+            "maximum_acceleration_m_per_s2": 1.0068465009013257e-14
+          },
+          {
+            "id": 2000041,
+            "name": "Daphne",
+            "maximum_acceleration_m_per_s2": 9.227481732295175e-15
+          },
+          {
+            "id": 2000019,
+            "name": "Fortuna",
+            "maximum_acceleration_m_per_s2": 9.07951358262047e-15
+          },
+          {
+            "id": 2000209,
+            "name": "Dido",
+            "maximum_acceleration_m_per_s2": 8.184601712221077e-15
+          },
+          {
+            "id": 2000375,
+            "name": "Ursula",
+            "maximum_acceleration_m_per_s2": 8.097425570318352e-15
+          },
+          {
+            "id": 2000048,
+            "name": "Doris",
+            "maximum_acceleration_m_per_s2": 8.015874517591229e-15
+          },
+          {
+            "id": 2000596,
+            "name": "Scheila",
+            "maximum_acceleration_m_per_s2": 7.988070559043853e-15
+          },
+          {
+            "id": 2000094,
+            "name": "Aurora",
+            "maximum_acceleration_m_per_s2": 7.920198078269651e-15
+          },
+          {
+            "id": 2000039,
+            "name": "Laetitia",
+            "maximum_acceleration_m_per_s2": 7.469672563122205e-15
+          },
+          {
+            "id": 2000154,
+            "name": "Bertha",
+            "maximum_acceleration_m_per_s2": 7.21156921954172e-15
+          }
+        ],
+        "screen_selection_remaining_net_acceleration_m_per_s2": 6.391090612800312e-14
+      },
+      "Mars": {
+        "maximum_net_acceleration_m_per_s2": 1.8629700068377528e-13,
+        "maximum_sum_of_individual_magnitudes_m_per_s2": 4.737380913862915e-13,
+        "initial_net_vector_m_per_s2": [
+          -4.943191943183695e-14,
+          1.4797775406625748e-13,
+          -4.300495282489493e-15
+        ],
+        "top_sixteen": [
+          {
+            "id": 2000027,
+            "name": "Euterpe",
+            "maximum_acceleration_m_per_s2": 4.293078340108677e-14
+          },
+          {
+            "id": 2000006,
+            "name": "Hebe",
+            "maximum_acceleration_m_per_s2": 2.9067433806501966e-14
+          },
+          {
+            "id": 2000187,
+            "name": "Lamberta",
+            "maximum_acceleration_m_per_s2": 1.9628679102139607e-14
+          },
+          {
+            "id": 2000045,
+            "name": "Eugenia",
+            "maximum_acceleration_m_per_s2": 1.8715095488254335e-14
+          },
+          {
+            "id": 2000209,
+            "name": "Dido",
+            "maximum_acceleration_m_per_s2": 1.7646927041240926e-14
+          },
+          {
+            "id": 2000043,
+            "name": "Ariadne",
+            "maximum_acceleration_m_per_s2": 1.6903153256903847e-14
+          },
+          {
+            "id": 2000094,
+            "name": "Aurora",
+            "maximum_acceleration_m_per_s2": 1.567655358504292e-14
+          },
+          {
+            "id": 2000039,
+            "name": "Laetitia",
+            "maximum_acceleration_m_per_s2": 1.467423001126757e-14
+          },
+          {
+            "id": 2000022,
+            "name": "Kalliope",
+            "maximum_acceleration_m_per_s2": 1.4554972397800706e-14
+          },
+          {
+            "id": 2000386,
+            "name": "Siegena",
+            "maximum_acceleration_m_per_s2": 1.4124490419524238e-14
+          },
+          {
+            "id": 2000047,
+            "name": "Aglaja",
+            "maximum_acceleration_m_per_s2": 1.3779863283534056e-14
+          },
+          {
+            "id": 2000146,
+            "name": "Lucina",
+            "maximum_acceleration_m_per_s2": 1.355441669310686e-14
+          },
+          {
+            "id": 2000566,
+            "name": "Stereoskopia",
+            "maximum_acceleration_m_per_s2": 1.2975290879075229e-14
+          },
+          {
+            "id": 2000019,
+            "name": "Fortuna",
+            "maximum_acceleration_m_per_s2": 1.2735405179302308e-14
+          },
+          {
+            "id": 2000405,
+            "name": "Thia",
+            "maximum_acceleration_m_per_s2": 1.2077085015442675e-14
+          },
+          {
+            "id": 2000596,
+            "name": "Scheila",
+            "maximum_acceleration_m_per_s2": 1.1744537456557877e-14
+          }
+        ],
+        "screen_selection_remaining_net_acceleration_m_per_s2": 1.2252782542393543e-13
+      },
+      "Moon-minus-Earth": {
+        "maximum_net_acceleration_m_per_s2": 2.627884636520208e-16,
+        "maximum_sum_of_individual_magnitudes_m_per_s2": 5.997157263855218e-16,
+        "initial_net_vector_m_per_s2": [
+          -1.3632628387634307e-16,
+          1.086682580981484e-16,
+          3.6629302433794225e-17
+        ],
+        "top_sixteen": [
+          {
+            "id": 2000187,
+            "name": "Lamberta",
+            "maximum_acceleration_m_per_s2": 5.2071786374874376e-17
+          },
+          {
+            "id": 2000046,
+            "name": "Hestia",
+            "maximum_acceleration_m_per_s2": 5.1103797309394856e-17
+          },
+          {
+            "id": 2000324,
+            "name": "Bamberga",
+            "maximum_acceleration_m_per_s2": 5.044249315163042e-17
+          },
+          {
+            "id": 2000011,
+            "name": "Parthenope",
+            "maximum_acceleration_m_per_s2": 3.985316904002645e-17
+          },
+          {
+            "id": 2000029,
+            "name": "Amphitrite",
+            "maximum_acceleration_m_per_s2": 3.8538765204452754e-17
+          },
+          {
+            "id": 2000009,
+            "name": "Metis",
+            "maximum_acceleration_m_per_s2": 3.8123135410513034e-17
+          },
+          {
+            "id": 2000006,
+            "name": "Hebe",
+            "maximum_acceleration_m_per_s2": 3.1406625059726365e-17
+          },
+          {
+            "id": 2000049,
+            "name": "Pales",
+            "maximum_acceleration_m_per_s2": 2.4935283905037807e-17
+          },
+          {
+            "id": 2000596,
+            "name": "Scheila",
+            "maximum_acceleration_m_per_s2": 2.4756688946227812e-17
+          },
+          {
+            "id": 2000027,
+            "name": "Euterpe",
+            "maximum_acceleration_m_per_s2": 2.3303378688981473e-17
+          },
+          {
+            "id": 2000164,
+            "name": "Eva",
+            "maximum_acceleration_m_per_s2": 2.289871459460324e-17
+          },
+          {
+            "id": 2000041,
+            "name": "Daphne",
+            "maximum_acceleration_m_per_s2": 2.2892019882246724e-17
+          },
+          {
+            "id": 2000144,
+            "name": "Vibilia",
+            "maximum_acceleration_m_per_s2": 2.2595560793003163e-17
+          },
+          {
+            "id": 2000019,
+            "name": "Fortuna",
+            "maximum_acceleration_m_per_s2": 2.1348865695008745e-17
+          },
+          {
+            "id": 2000045,
+            "name": "Eugenia",
+            "maximum_acceleration_m_per_s2": 1.9442240810954503e-17
+          },
+          {
+            "id": 2000375,
+            "name": "Ursula",
+            "maximum_acceleration_m_per_s2": 1.928816560134684e-17
+          }
+        ],
+        "screen_selection_remaining_net_acceleration_m_per_s2": 2.0729491459999737e-16
+      }
+    },
+    "selection_rule": "Union of top 8 missing bodies by maximum individual acceleration at Earth, Mars and by Moon-Earth differential acceleration on 13 JPL epochs; exploratory, not an optimal dynamical truncation.",
+    "selected_candidates": [
+      {
+        "id": 2000006,
+        "name": "Hebe"
+      },
+      {
+        "id": 2000009,
+        "name": "Metis"
+      },
+      {
+        "id": 2000011,
+        "name": "Parthenope"
+      },
+      {
+        "id": 2000027,
+        "name": "Euterpe"
+      },
+      {
+        "id": 2000029,
+        "name": "Amphitrite"
+      },
+      {
+        "id": 2000039,
+        "name": "Laetitia"
+      },
+      {
+        "id": 2000041,
+        "name": "Daphne"
+      },
+      {
+        "id": 2000043,
+        "name": "Ariadne"
+      },
+      {
+        "id": 2000045,
+        "name": "Eugenia"
+      },
+      {
+        "id": 2000046,
+        "name": "Hestia"
+      },
+      {
+        "id": 2000049,
+        "name": "Pales"
+      },
+      {
+        "id": 2000094,
+        "name": "Aurora"
+      },
+      {
+        "id": 2000187,
+        "name": "Lamberta"
+      },
+      {
+        "id": 2000209,
+        "name": "Dido"
+      },
+      {
+        "id": 2000324,
+        "name": "Bamberga"
+      }
+    ],
+    "limitation": "Forces evaluated along source/JPL snapshots. Maxima apply only to the 13 sampled epochs, not the entire interval. No annual orbit error estimate or prescribed trajectories in a simulation."
+  },
+  "profiling": {
+    "machine": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "models": {
+      "current_27": {
+        "bodies": 27,
+        "python_eih": {
+          "median_seconds": 0.00020105833148894212,
+          "min_seconds": 0.00019320833477346847,
+          "max_seconds": 0.00023855833569541574,
+          "batches": 5,
+          "calls_per_batch": 12
+        },
+        "developer_rust_scalar_eih": {
+          "median_seconds": 2.541666617617011e-05,
+          "min_seconds": 2.5108335345673066e-05,
+          "max_seconds": 2.8466669997821253e-05,
+          "batches": 5,
+          "calls_per_batch": 12
+        },
+        "maximum_force_oracle_difference_m_per_s2": 3.9747508192403134e-18,
+        "day_integration_seconds": 0.15909269999247044,
+        "day_bodies": 27
+      },
+      "screen_candidates": {
+        "bodies": 42,
+        "python_eih": {
+          "median_seconds": 0.00035700833056277287,
+          "min_seconds": 0.00034798333460154635,
+          "max_seconds": 0.0004107999993721023,
+          "batches": 5,
+          "calls_per_batch": 12
+        },
+        "developer_rust_scalar_eih": {
+          "median_seconds": 4.088333419834574e-05,
+          "min_seconds": 4.015000013168901e-05,
+          "max_seconds": 4.635833223195126e-05,
+          "batches": 5,
+          "calls_per_batch": 12
+        },
+        "maximum_force_oracle_difference_m_per_s2": 3.9747508192403134e-18,
+        "day_integration_seconds": 0.18217629997525364,
+        "day_bodies": 42
+      },
+      "all_354": {
+        "bodies": 354,
+        "python_eih": {
+          "median_seconds": 0.030231524996149044,
+          "min_seconds": 0.030007300001064625,
+          "max_seconds": 0.030814133332266163,
+          "batches": 5,
+          "calls_per_batch": 12
+        },
+        "developer_rust_scalar_eih": {
+          "median_seconds": 0.002418124999773378,
+          "min_seconds": 0.002395933333900757,
+          "max_seconds": 0.002434850001009181,
+          "batches": 5,
+          "calls_per_batch": 12
+        },
+        "maximum_force_oracle_difference_m_per_s2": 3.903127820947816e-18,
+        "day_integration_seconds": 3.711959200038109,
+        "day_bodies": 354
+      }
+    },
+    "independent_force_source_sha256": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+    "limitation": "Measured wall times on this machine. Rust is the independent developer oracle, not the production EIH backend. A one-day timing is not a measured yearly runtime; trial systems are not registered runtime presets."
+  },
+  "checks_passed": true,
+  "next_step": "Use the measured scaling to port production EIH to Rust with a separate oracle before a full 354-body annual benchmark. Screen selection is a diagnostic candidate set, not yet validated as a runtime model."
+}

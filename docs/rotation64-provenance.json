@@ -1,0 +1,75 @@
+{
+  "change": 64,
+  "branch": "main",
+  "previous_inventory_files": 397,
+  "previous_unchanged": 392,
+  "intentionally_changed_previous_docs": [
+    "README.md",
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/project-context.md",
+    "docs/session-handoff.md"
+  ],
+  "previous_json_unchanged": 124,
+  "previous_runtime_rust_unchanged": 74,
+  "previous_git_status_entries_preserved": 288,
+  "scientific_source_SHA_valid": true,
+  "private_paths_ignored": [
+    "AGENTS.md",
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/session-handoff.md",
+    "docs/project-context.md",
+    ".tools/rotation64/before.json"
+  ],
+  "new_tests": {
+    "passed": 16,
+    "seconds": 1.5
+  },
+  "related_tests": {
+    "passed": 160,
+    "seconds": 24.33,
+    "includes_new_tests": true
+  },
+  "current_python_collected": 851,
+  "current_full_suite_run": false,
+  "last_full_check": {
+    "change": 63,
+    "python_passed": 835,
+    "python_seconds": 250.13,
+    "rust_passed": 17,
+    "rust_fmt_both_crates": true
+  },
+  "failed_attempts_preserved": [
+    ".tools/rotation64/control-construction-failure/failure.json",
+    ".tools/rotation64/report-serialization-failure/failure.json"
+  ],
+  "numeric_criteria_unchanged": true,
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_claimed": false,
+  "runtime_changed": false,
+  "commit_push_portable": false,
+  "documentation_function_lines_verified": true,
+  "documentation_links": 960,
+  "diff_check": true,
+  "related_test_files": [
+    "test_canonical_checkpoint.py",
+    "test_canonical_initial.py",
+    "test_canonical_solar.py",
+    "test_lunar_canonical_diagnostic.py",
+    "test_nbody_pn_spin.py",
+    "test_nbody_rotation.py",
+    "test_pn_spin_model.py",
+    "test_relative_canonical.py",
+    "test_relative_canonical_audit.py",
+    "test_relative_canonical_checkpoint.py",
+    "test_relative_canonical_checkpoint_audit.py",
+    "test_rigid_pn_model.py",
+    "test_rotation.py",
+    "test_rotation_runtime_checks.py",
+    "test_rotation_time.py",
+    "test_rotation_time_audit.py",
+    "test_rotation_year_audit.py",
+    "test_spin_initial.py"
+  ]
+}

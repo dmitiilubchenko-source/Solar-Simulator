@@ -1,0 +1,62 @@
+{
+  "oracle": "CSPICE IAU_SUN -> ECLIPJ2000, third matrix column",
+  "spiceypy": "6.0.3",
+  "solar_profile_sha256": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+  "pck_sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+  "maximum_component_error": 4.163336342344337e-17,
+  "samples": [
+    {
+      "time_seconds": 0.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 2629800.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 5259600.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 7889400.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 10519200.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 13149000.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 15778800.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 18408600.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 21038400.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 23668200.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 26298000.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 28927800.0,
+      "maximum_component_error": 4.163336342344337e-17
+    },
+    {
+      "time_seconds": 31557600.0,
+      "maximum_component_error": 4.163336342344337e-17
+    }
+  ],
+  "checks_passed": true
+}

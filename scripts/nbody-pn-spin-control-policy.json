@@ -1,0 +1,17 @@
+{
+  "purpose": "Separate sensitivity check after the original 8-period missing-reaction control failed its detection threshold; preserve original failed audit",
+  "baseline": "docs/nbody-pn-spin-validation.json",
+  "periods": 32,
+  "samples": 2049,
+  "rtol": 1e-11,
+  "atol_over_rtol": 0.01,
+  "max_step_over_period": 0.0078125,
+  "criteria": {
+    "energy_relative": 1e-9,
+    "momentum_scaled": 1e-10,
+    "angular_momentum_relative": 1e-9,
+    "spin_norm_relative": 1e-9,
+    "negative_control_J_drift_minimum": 1e-5
+  },
+  "reason": "Test the accumulated missing-reaction signal for four times the original duration with identical masses, spins, initial canonical frame, physical Hamiltonian and numerical method. No weakened threshold, changed initial spin, parameter fit or future ephemeris. Not a replacement 32-period independent trajectory comparison."
+}

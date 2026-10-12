@@ -1,0 +1,475 @@
+{
+  "change": 53,
+  "date": "2026-10-11",
+  "current_files_sha256": {
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "src/solar_simulator/experiment.py": "de97ad1c37b0af79aecb986a3923634fa4131e248e82eff93ec25edf22d34395",
+    "src/solar_simulator/storage.py": "7cf8047292d34d20fafb864e593809e37f1e242023d2fd00d9cfac167bed562c",
+    "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+    "src/solar_simulator/app.py": "b8b2419f2dbf74a5040b00379ee313193f21892824e9d5c371f7fb52cddefb8e",
+    "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+    "tests/test_nbody_rotation.py": "2cd76002ac6b91a266e51d200ad4b66e271ab0d0227e3d19657f169ff4cd596f",
+    "tests/test_rotation_runtime_checks.py": "db2f6216e136472bb6ea47cc03d81c626b2beeda93345e4534c860d346e74ffc",
+    "tests/test_kuiper_ring.py": "e6108c79bc8300f3d021eb9e8d513b17903c93b0ea579f0f1ae3155a8c9a9fc4",
+    "scripts/assess_nbody_rotation.py": "4fcbf1c9ad95584d8f0935ee2ff292e026de3e96293fbefe155fadf036dbb6b9",
+    "scripts/assess_rotation_solar_system.py": "b9e475688dd86fffdee3cfcab0367254d48e5e5b68690a213fad7b51303333cc",
+    "scripts/rotation-solar-system-policy.json": "8f478c52cc87b37cd11655c7fdc97c5790f67c79ff4816790f5cd9eb4b8a6dd2",
+    "scripts/validation/kuiper-ring-experiment-20261011.py.txt": "3f17bc93f5ef21ee22503d55a31c9f3e83e360f2fb5d5a48a9a7e9726b4ebe81",
+    "docs/nbody-rotation-validation.json": "85de919691a7d2b0065e0181ef3fb3ad5b8ad2459e1fee45f43a7ac49d80d173",
+    "docs/nbody-rotation-refinement-validation.json": "e84b2e4517c7e5a3c6f62d12e4c2d08163eb27a67afa007f3a85d5e63c03c360",
+    "docs/rotation-solar-system-validation.json": "075df13b712f13a2047084f85888ce5d150241c04a14a557fc88869e4acd534b"
+  },
+  "preserved_original_audit_sources": {
+    "src/solar_simulator/nbody_rotation.py": {
+      "sha256": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+      "snapshot": "src/solar_simulator/nbody_rotation.py"
+    },
+    "src/solar_simulator/experiment.py": {
+      "sha256": "de97ad1c37b0af79aecb986a3923634fa4131e248e82eff93ec25edf22d34395",
+      "snapshot": "src/solar_simulator/experiment.py"
+    },
+    "src/solar_simulator/storage.py": {
+      "sha256": "7cf8047292d34d20fafb864e593809e37f1e242023d2fd00d9cfac167bed562c",
+      "snapshot": "src/solar_simulator/storage.py"
+    },
+    "src/solar_simulator/cli.py": {
+      "sha256": "0dedbe9ea2800de6c1b12613e424697f0a0225f4f42270ef6aa8caef51f73a8e",
+      "snapshot": ".tools/rotation53/audit-original/cli.py"
+    },
+    "src/solar_simulator/convergence.py": {
+      "sha256": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+      "snapshot": "src/solar_simulator/convergence.py"
+    },
+    "src/solar_simulator/rotation.py": {
+      "sha256": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+      "snapshot": "src/solar_simulator/rotation.py"
+    },
+    "src/solar_simulator/spin_initial.py": {
+      "sha256": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "snapshot": "src/solar_simulator/spin_initial.py"
+    },
+    "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json": {
+      "sha256": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+      "snapshot": "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json"
+    },
+    "src/solar_simulator/coordinates.py": {
+      "sha256": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "snapshot": "src/solar_simulator/coordinates.py"
+    },
+    "src/solar_simulator/native_forces.py": {
+      "sha256": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "snapshot": "src/solar_simulator/native_forces.py"
+    },
+    "tests/test_nbody_rotation.py": {
+      "sha256": "2cd76002ac6b91a266e51d200ad4b66e271ab0d0227e3d19657f169ff4cd596f",
+      "snapshot": "tests/test_nbody_rotation.py"
+    },
+    "scripts/assess_nbody_rotation.py": {
+      "sha256": "bd4bcda8aa144d009e54793f817e329e4ed536bf4817e1efe5436eec60bd6ddf",
+      "snapshot": ".tools/rotation53/audit-original/assess_nbody_rotation.py"
+    }
+  },
+  "unchanged_prior_data_rust_json_count": 96,
+  "unchanged_prior_data_rust_json": [
+    {
+      "path": "src/solar_simulator/data/asteroids-20261008.json",
+      "sha256": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e"
+    },
+    {
+      "path": "src/solar_simulator/data/asteroids-catalog-20261008.json",
+      "sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad"
+    },
+    {
+      "path": "src/solar_simulator/data/asteroids-full-20261008.json",
+      "sha256": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394"
+    },
+    {
+      "path": "src/solar_simulator/data/earth-j2-20261008.json",
+      "sha256": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-20261010.json",
+      "sha256": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-ring-036-0-20261011.json",
+      "sha256": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-ring-036-1-20261011.json",
+      "sha256": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-ring-072-0-20261011.json",
+      "sha256": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-ring-072-1-20261011.json",
+      "sha256": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-ring-144-0-20261011.json",
+      "sha256": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-ring-144-1-20261011.json",
+      "sha256": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716"
+    },
+    {
+      "path": "src/solar_simulator/data/kuiper-ring-manifest.json",
+      "sha256": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461"
+    },
+    {
+      "path": "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json",
+      "sha256": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba"
+    },
+    {
+      "path": "src/solar_simulator/data/orbit-cohort-13270.json",
+      "sha256": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab"
+    },
+    {
+      "path": "src/solar_simulator/data/orbit-cohort-13271.json",
+      "sha256": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda"
+    },
+    {
+      "path": "src/solar_simulator/data/orbit-observations-13270.json",
+      "sha256": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31"
+    },
+    {
+      "path": "src/solar_simulator/data/orientation-de441-20261008.json",
+      "sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb"
+    },
+    {
+      "path": "src/solar_simulator/data/pluto-system-20261008.json",
+      "sha256": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76"
+    },
+    {
+      "path": "src/solar_simulator/data/solar-j2-20261008.json",
+      "sha256": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e"
+    },
+    {
+      "path": "src/solar_simulator/data/solar-system-20261008.json",
+      "sha256": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc"
+    },
+    {
+      "path": "src/solar_simulator/data/solar-system-moon-20261008.json",
+      "sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702"
+    },
+    {
+      "path": "src/solar_simulator/data/__init__.py",
+      "sha256": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18"
+    },
+    {
+      "path": "scripts/de441-perturber-catalog.json",
+      "sha256": "f922e96ec250222f7cf8915ecb7ff572f97490e868c5371ec40e6a05fd0fd586"
+    },
+    {
+      "path": "scripts/kuiper-ring-policy.json",
+      "sha256": "73773129d24556b317c1a0c2796b060a610f8bd3eda0dff42c1457144062f006"
+    },
+    {
+      "path": "scripts/kuiper-ring-refinement-policy.json",
+      "sha256": "19b1eae2abd37d1ca4bfca94b517a2f580693e73a9c8cdd9bd5175e23ee56a81"
+    },
+    {
+      "path": "scripts/orbit-cohort-policy.json",
+      "sha256": "d301a83753483acd487d248e6d20ecdb8bd8fad786106fa30cabfbcc9c06cfc8"
+    },
+    {
+      "path": "scripts/sb441-343-ranges.json",
+      "sha256": "4a4427da7d5ff55fabf8a67b4a3e0aa913fe32f3207bc304bd8d13477891148a"
+    },
+    {
+      "path": "scripts/sb441-catalog-ranges.json",
+      "sha256": "aae65ca7f930a4de06a114088893afa2b5e2985215394cd9981a78b6425209f5"
+    },
+    {
+      "path": "scripts/sb441-full-ranges.json",
+      "sha256": "ffb845a31c319cbc2e42d4f497095ae0d62e42ab254c7dbd556ad4a9f3de77f6"
+    },
+    {
+      "path": "scripts/sb441-kuiper-ranges.json",
+      "sha256": "e64668e4c375d262d197bda4d7e45ef7074c273288ae4f67d2562cc03d12c3da"
+    },
+    {
+      "path": "scripts/sb441-ranges.json",
+      "sha256": "c2d2820326821927279e23f8388e147b6c7c28cd6c7940f61f6e33250cdc2395"
+    },
+    {
+      "path": "docs/accuracy-validation.json",
+      "sha256": "8ed4314d5ae6ee189d55f32024890e16c299ced1627eeb4089942f2e52b5b233"
+    },
+    {
+      "path": "docs/asteroids-343-assessment.json",
+      "sha256": "e40ffd014ec0d13d4f7a06e62f1a9b72a7fc597d0e9dbf2bb55c6b69d87b6a00"
+    },
+    {
+      "path": "docs/asteroids-343-initial.json",
+      "sha256": "50434ff910366e319c9447ede9c7da59fcdac543746cd9840570d3cd05d809b0"
+    },
+    {
+      "path": "docs/asteroids-343-source-validation.json",
+      "sha256": "068ab24629386f3af01d16ca1126aac538c623ba71066363b3de3e09a0ae17a0"
+    },
+    {
+      "path": "docs/asteroids-catalog-validation.json",
+      "sha256": "98222995ebae229ccb6d66f5a9577c8ac019f94b480e9361b2c15bcbc44dea26"
+    },
+    {
+      "path": "docs/asteroids-checkpoint-validation.json",
+      "sha256": "92132e784fae4ba536efb7727b7f876cbdabcb54bc015c142492f9362751706c"
+    },
+    {
+      "path": "docs/asteroids-full-checkpoint-validation.json",
+      "sha256": "d44757af271264dd2147c251be1bf868f0a656e3d73372becb2c27c7c8db286a"
+    },
+    {
+      "path": "docs/asteroids-full-reference.json",
+      "sha256": "e74e59990cec890803095972c3141fde7c1caa289b8118b7613867f811e6ce2a"
+    },
+    {
+      "path": "docs/asteroids-full-source-validation.json",
+      "sha256": "e4087c8fcab229d5226401b5568feafa5eb47c97409a0ff411d960427a834142"
+    },
+    {
+      "path": "docs/asteroids-full-validation.json",
+      "sha256": "9185b0f8f83a74bae135a5f459909c98e89f3adb6dcbb8046e91e2d4f9ed6c6b"
+    },
+    {
+      "path": "docs/asteroids-reference.json",
+      "sha256": "eb8c0f3db89c5945e5a597ba59f0ccf40513696a97acf2722873af22fe66b6ff"
+    },
+    {
+      "path": "docs/asteroids-source-validation.json",
+      "sha256": "d2d58d527eaaf997d1a345f774d12c174d32514095bb7fbe07b87308a829220a"
+    },
+    {
+      "path": "docs/asteroids-validation.json",
+      "sha256": "03c8fc495e75925ad611b3306b63dc0721503718947659556f84c1d41d726ab9"
+    },
+    {
+      "path": "docs/conservative-rotation-refinement-validation.json",
+      "sha256": "3b45f3907204cc26d6a88f48a1823d0ec71ec22f87ae10baa659145446d51f7c"
+    },
+    {
+      "path": "docs/conservative-rotation-validation.json",
+      "sha256": "50d014253a26a265956dbffc169db861c276e190228f55a8db3c54db5597a46e"
+    },
+    {
+      "path": "docs/core-validation.json",
+      "sha256": "586264b2e641cfc45fdbbc8668a287ee20bfe13ff2024df336b0717b561a7fdf"
+    },
+    {
+      "path": "docs/error-control-validation.json",
+      "sha256": "778ea83d1ae7c31a5d3f2bae062ae0b4c0cffd3fe825767ca3ac251faf4e442d"
+    },
+    {
+      "path": "docs/impact-results.json",
+      "sha256": "69a69b087fc4bd35616b1f11a27670f8e2b4bd46e865ca59b6f174f0aa9fd3eb"
+    },
+    {
+      "path": "docs/kuiper-absolute-reference-validation.json",
+      "sha256": "3fa40b283889967fb38290709a95810b61873a9986e2df56a85f919ad7f60a18"
+    },
+    {
+      "path": "docs/kuiper-initial.json",
+      "sha256": "2d2454c8b5a04382779991151fdb3475b5f63512325b5bde3708b476cbcf3bda"
+    },
+    {
+      "path": "docs/kuiper-ring-field-validation.json",
+      "sha256": "1d9ee1ad57d981770e1e3e97ec435ec19f7a1b116466252a7b70f30b537b4c52"
+    },
+    {
+      "path": "docs/kuiper-ring-kbo-validation.json",
+      "sha256": "086facebe4f0759f8829d7633c0eecb032c072ced7121361d4cff9fa21595354"
+    },
+    {
+      "path": "docs/kuiper-ring-refinement-validation.json",
+      "sha256": "7eed276a9c1f2e4b14649298113aa950da84f44f391fa01ceb82e452ddf6ec62"
+    },
+    {
+      "path": "docs/kuiper-ring-validation.json",
+      "sha256": "ab4116dfe1e4234f85226d48e52765a5755ec18cbe29dc53c0d789a337fef7fd"
+    },
+    {
+      "path": "docs/kuiper-source-validation.json",
+      "sha256": "77d0acd7e2144f541729bc044639fa663217546809fa52fc15da5018ebbd9fc2"
+    },
+    {
+      "path": "docs/kuiper-validation.json",
+      "sha256": "ce601712517e396bc3fe14f264f6ad54e4e33da462cc168a635ce4f837ebf412"
+    },
+    {
+      "path": "docs/lunar-spin-initial-validation.json",
+      "sha256": "183401feab7a3001e2272970f330374540128e6898aeb59baa42962531f19e8b"
+    },
+    {
+      "path": "docs/moon-validation.json",
+      "sha256": "368ea61d97c3646bc1978f44eb6f5ed7e88f3d71024475383b2fa61665d2d100"
+    },
+    {
+      "path": "docs/native-comparison.json",
+      "sha256": "d797724ce7ab9a08dd40405c8ea02e095b0e2da1a525e5353ea87303b74183dc"
+    },
+    {
+      "path": "docs/native-eih-validation.json",
+      "sha256": "1c8ef61a8e9dacf79426e0b51de2d05a69058589f74579c3066f7f0809bce17e"
+    },
+    {
+      "path": "docs/oblateness-validation.json",
+      "sha256": "9eb01756deaaa48d69cc48bd56f41e5dc49a7f396a229275f26320e30066e267"
+    },
+    {
+      "path": "docs/orbit-cohort-manifest.json",
+      "sha256": "457c77f8b6c8122cf8c55810ec1d2c587e4c645371fd86e3bc70cf9ad1c50d56"
+    },
+    {
+      "path": "docs/orbit-cohort-validation.json",
+      "sha256": "6c36ac0239686b1e07efce200bfc12bb2252fa6981f13bee22575a989cc12885"
+    },
+    {
+      "path": "docs/orbit-observations-validation.json",
+      "sha256": "e594afb3ff7008aefa0efa7a14b07abcffc96e839012b62cd02a4056433fb04e"
+    },
+    {
+      "path": "docs/orientation-spice-reference.json",
+      "sha256": "333bb95ba8c33f92e8373fb5846bc53dfc8e09d4a38b548d57507e8a39730641"
+    },
+    {
+      "path": "docs/orientation-validation.json",
+      "sha256": "68c4389bb2bc4a5a9b46c234c327bbaedb58c76255e4bc14041848b4c2a83d2b"
+    },
+    {
+      "path": "docs/perturber-audit.json",
+      "sha256": "5c6cb8016e0e9d5d855f7b8f1cafe49ec258ba34ab82eb38e11b7ff398951303"
+    },
+    {
+      "path": "docs/pluto-checkpoint-validation.json",
+      "sha256": "4b61c6d7900df749ad231c6d159e6ef8a30a9979528d4532ed09ef5056ceec29"
+    },
+    {
+      "path": "docs/pluto-reference.json",
+      "sha256": "4d353cc1dc1fe934ccdeed86252f9f1959a1469471edb00d95d841f710ecb1a8"
+    },
+    {
+      "path": "docs/pluto-source-validation.json",
+      "sha256": "d6aa2a2204a9cdb5db96bba952d7e85c2c2ac9e43f42c34b8530f65943f1b910"
+    },
+    {
+      "path": "docs/pluto-validation.json",
+      "sha256": "8bc26cc91eab0af9c66dca864be3f5f2093b4f5c71eb65bf9346ece195721acd"
+    },
+    {
+      "path": "docs/relative-checkpoint-validation.json",
+      "sha256": "1a54ad771f3f0c117fec13d8a94c8f4058145b8d2820bdf2a9886c4b1e69d34e"
+    },
+    {
+      "path": "docs/relative-coordinates-validation.json",
+      "sha256": "fbb619732a77ea6f4d1a9e225188a46227289eb2a878ce9c6bb0cbd621f57498"
+    },
+    {
+      "path": "docs/relativity-validation.json",
+      "sha256": "2fbd31e57fa8d976b566283df6f8e37ab147d911619f780097125dfcdea318cc"
+    },
+    {
+      "path": "docs/release-validation.json",
+      "sha256": "dbc97723695d9181dc2e9103a0693f209e90c1b483003b14835807d81f187195"
+    },
+    {
+      "path": "docs/rotation-limit-diagnosis.json",
+      "sha256": "f966189daab9db7f67150ce6a27ee1497df5e57abc02b5242f4130569b9f3a56"
+    },
+    {
+      "path": "docs/rotation-reference-diagnosis.json",
+      "sha256": "75e114799ec6112de1511fc6d6d5303b50825c3b6f0edec21e3147410c1d3d23"
+    },
+    {
+      "path": "docs/rotation51-provenance.json",
+      "sha256": "ebf11e77c1ebb6921720402488ce245218c2df133e6040dc8af9470831698895"
+    },
+    {
+      "path": "docs/rust-comparison.json",
+      "sha256": "fe7fccd80ea35fa798f55363a6da265cef3229b262fc7d4b4f91feee5b7f3959"
+    },
+    {
+      "path": "docs/solar-checkpoint-validation.json",
+      "sha256": "2104d08731b6d76ca411b106386006539826f588bb9ca071dc9017acbfd2cdc1"
+    },
+    {
+      "path": "docs/solar-j2-validation.json",
+      "sha256": "d9ce4a84789e15302da50de3ec1700488e7581d3775560cd6e4342d4de7b27f0"
+    },
+    {
+      "path": "docs/solar-pole-validation.json",
+      "sha256": "61842345011b7f9e18c65fd7884acd9e1f8a8fb7c84e475eca535ccd6dc52b22"
+    },
+    {
+      "path": "docs/solar-system-moon-reference.json",
+      "sha256": "07717d8792d4afa297441a0b1751672de4bc492f41802d9224525f905e15bd24"
+    },
+    {
+      "path": "docs/solar-system-reference.json",
+      "sha256": "aad15839a53f1c709c0e84a8202ffc4f9b6d13837f2bdeed2d28abb4c2ed6995"
+    },
+    {
+      "path": "docs/solar-system-validation.json",
+      "sha256": "4fdd3b603e4f437e75bf72917013b48caff76f5709a4db26c7a8e3e47c9f4540"
+    },
+    {
+      "path": "rust/solar_core/Cargo.toml",
+      "sha256": "8fcf354da4bd316818d6a3ad9f2cb67e1eda6eeb04f3b20683964843c708314c"
+    },
+    {
+      "path": "rust/solar_native/Cargo.toml",
+      "sha256": "924dcdd4b6ccd3ebe3254c6004fedd140b0675c1f238a18c4df4fcb49bf0ebca"
+    },
+    {
+      "path": "rust/solar_native/pyproject.toml",
+      "sha256": "6d321b5186b9628a1c20a90926d4d8a7d142460543589fe9d7fce591749008e3"
+    },
+    {
+      "path": "rust/solar_native/src/lib.rs",
+      "sha256": "3a38d0d17585c41fe58a97a4673988cbbdf5bcb7444987a908ec6dcf950c3ad6"
+    },
+    {
+      "path": "rust/solar_core/src/collisions.rs",
+      "sha256": "dba247071f1fa924157cc8b8e125665731adfe8954f913464af2912cd6520abd"
+    },
+    {
+      "path": "rust/solar_core/src/contacts.rs",
+      "sha256": "a3ca67f3ccabe99ec0f098f66395af01706494cc65eaf03d942914e8cefab594"
+    },
+    {
+      "path": "rust/solar_core/src/impacts.rs",
+      "sha256": "3a9230536702f203d8a079e8d9b51b952e11ac59da1a36cb460272630700d374"
+    },
+    {
+      "path": "rust/solar_core/src/lib.rs",
+      "sha256": "6df5a41ccdcd9ea2317d4e25db82a5074c1029cb2099142029a88d93781608ad"
+    },
+    {
+      "path": "rust/solar_core/src/main.rs",
+      "sha256": "1365b6e5edcdb80ee82e1a188e3d8a2d1a17d86732dee1c2c65dd5dce2b5f1d4"
+    },
+    {
+      "path": "rust/solar_core/src/relativity.rs",
+      "sha256": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48"
+    }
+  ],
+  "full_check": {
+    "python_tests_passed": 738,
+    "python_seconds": 299.16,
+    "rust_tests_passed": 17,
+    "fmt_crates": [
+      "solar_core",
+      "solar_native"
+    ],
+    "initial_full_failure": {
+      "passed": 732,
+      "failed": 2,
+      "seconds": 295.24,
+      "cause": "Historical ring source identity vs changed experiment.py; original SHA verified in explicit archived source, reports unchanged"
+    }
+  },
+  "scope": "No new portable, commit or GitHub publication; 32-day model validation, not physical accuracy"
+}

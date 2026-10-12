@@ -126,7 +126,7 @@ def test_eccentric_orbit_conserves_1pn_quantities_not_newtonian_energy():
 
 @pytest.mark.parametrize("values", [{"physics":"unknown"}, {"physics":"eih-1pn"},
     {"physics":"eih-1pn", "integrator":"verlet"},
-    {"physics":"eih-1pn", "integrator":"dop853", "backend":"rust"}])
+    {"physics":"eih-1pn", "integrator":"dop853", "backend":"unknown"}])
 def test_invalid_model_settings(values):
     with pytest.raises(ValueError):
         Settings(1, **values)
@@ -152,12 +152,15 @@ def test_old_checkpoint_stays_newtonian(version):
     del document["orientation_work"]
     del document["settings"]["physics"]
     del document["settings"]["figures"]
+    del document["settings"]["relative_pair"]
+    del document["settings"]["error_control"]
     if version == 3:
         del document["origin"]
     before = deepcopy(document)
     restored = from_document(document)
     assert restored.settings.physics == "newtonian" and document == before
-    assert to_document(restored)["schema_version"] == 7
+    from solar_simulator.storage import SCHEMA_VERSION
+    assert to_document(restored)["schema_version"] == SCHEMA_VERSION
 
 
 def test_relativistic_checkpoint_fixed_frame_resume_and_diagnostics(tmp_path):

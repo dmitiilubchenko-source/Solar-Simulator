@@ -1,0 +1,9 @@
+# Byte hashes identify scientific datasets; Git must not translate their EOLs.
+*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Validation reports also record exact source bytes across Windows/Linux clones.
+*.py -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.rs -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+scripts/validation/*.441 -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab,cr-at-eol
+scripts/validation/*.bin -text
+# Archived experiment source text is byte-bound by regression reports too.
+scripts/validation/*.txt -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

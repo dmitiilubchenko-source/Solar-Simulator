@@ -1,0 +1,92 @@
+{
+  "oracle": "CSPICE spkgeo on subset SPK built from original SB441 type-2 coefficients; independent Sun chbint and pxform",
+  "spiceypy": "6.0.3",
+  "dataset_sha256": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+  "bodies": {
+    "Ceres": {
+      "samples": 56,
+      "maximum_position_metres": 0.00012682075660613471,
+      "maximum_velocity_m_per_s": 8.404372046368835e-12
+    },
+    "Pallas": {
+      "samples": 56,
+      "maximum_position_metres": 0.00012396298835198915,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    },
+    "Vesta": {
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 7.33610513857533e-12
+    },
+    "Juno": {
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 7.71731845292249e-12
+    },
+    "Iris": {
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Hygiea": {
+      "samples": 56,
+      "maximum_position_metres": 0.00012230849870209807,
+      "maximum_velocity_m_per_s": 7.347547867564811e-12
+    },
+    "Eunomia": {
+      "samples": 56,
+      "maximum_position_metres": 0.0001373291015625,
+      "maximum_velocity_m_per_s": 6.558459564010244e-12
+    },
+    "Psyche": {
+      "samples": 56,
+      "maximum_position_metres": 0.00014456897401151427,
+      "maximum_velocity_m_per_s": 4.290077928115626e-12
+    },
+    "Euphrosyne": {
+      "samples": 56,
+      "maximum_position_metres": 0.0001856311807341986,
+      "maximum_velocity_m_per_s": 5.550898829703193e-12
+    },
+    "Europa": {
+      "samples": 56,
+      "maximum_position_metres": 0.00014073079487378476,
+      "maximum_velocity_m_per_s": 7.461876103398908e-12
+    },
+    "Cybele": {
+      "samples": 56,
+      "maximum_position_metres": 0.00018374015165393518,
+      "maximum_velocity_m_per_s": 7.291041013024353e-12
+    },
+    "Sylvia": {
+      "samples": 56,
+      "maximum_position_metres": 0.00014395112811365666,
+      "maximum_velocity_m_per_s": 4.223278579276373e-12
+    },
+    "Thisbe": {
+      "samples": 56,
+      "maximum_position_metres": 0.00013094194941966933,
+      "maximum_velocity_m_per_s": 7.499885442698834e-12
+    },
+    "Camilla": {
+      "samples": 56,
+      "maximum_position_metres": 0.00017531013935968105,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Davida": {
+      "samples": 56,
+      "maximum_position_metres": 0.000139849111784541,
+      "maximum_velocity_m_per_s": 5.764003956880584e-12
+    },
+    "Interamnia": {
+      "samples": 56,
+      "maximum_position_metres": 0.0001881229859304497,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    }
+  },
+  "record_boundaries_included": true,
+  "downloaded_kernel_bytes": 47872,
+  "full_kernel_bytes": 645727232,
+  "checks_passed": true,
+  "limitation": "Interpolation/frame/derivative agreement validates extraction, not independent accuracy of the JPL asteroid ephemeris."
+}

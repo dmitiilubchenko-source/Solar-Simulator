@@ -9,6 +9,9 @@ from .scenarios import binary_star, earth_moon, sun_earth_moon
 from .vector3 import Vector3
 from .ephemerides import EphemerisOrigin
 from .oblateness import FixedJ2, PrescribedQuadrupole, validate_figures, validate_orientation_origin
+from .coordinates import prepare_pair, validate_pair_option
+from .error_control import validate_error_control
+from .kuiper_ring import solar_system_ring
 
 
 @dataclass(frozen=True)
@@ -23,17 +26,23 @@ class Settings:
     velocity_atol: float = 1e-9
     physics: str = "newtonian"
     figures: tuple[FixedJ2 | PrescribedQuadrupole, ...] = ()
+    relative_pair: tuple[str, str] | None = None
+    error_control: str = "per-body"
 
     def __post_init__(self):
+        validate_error_control(self.error_control)
+        validate_pair_option(self.relative_pair)
+        if self.relative_pair is not None and self.integrator != "dop853":
+            raise ValueError("Относительные координаты требуют DOP853")
         if (type(self.figures) is not tuple or any(not isinstance(f, (FixedJ2, PrescribedQuadrupole)) for f in self.figures)
                 or len({f.body for f in self.figures}) != len(self.figures)):
             raise ValueError("Неверные параметры фигур J2")
-        if self.figures and (self.integrator != "dop853" or self.backend != "python"):
-            raise ValueError("J2 требует Python/DOP853")
+        if self.figures and self.integrator != "dop853":
+            raise ValueError("J2 требует DOP853")
         if self.physics not in ("newtonian", "eih-1pn"):
             raise ValueError("Физика: newtonian или eih-1pn")
-        if self.physics == "eih-1pn" and (self.integrator != "dop853" or self.backend != "python"):
-            raise ValueError("1PN требует Python/DOP853")
+        if self.physics == "eih-1pn" and self.integrator != "dop853":
+            raise ValueError("1PN требует DOP853")
         if self.integrator not in ("verlet", "dop853"):
             raise ValueError("Интегратор: verlet или dop853")
         for value in (self.rtol, self.position_atol, self.velocity_atol):
@@ -41,8 +50,6 @@ class Settings:
                 raise ValueError("Допуски должны быть положительными конечными числами")
         if not 3e-14 <= self.rtol <= 1e-2:
             raise ValueError("rtol должен быть от 3e-14 до 1e-2")
-        if self.integrator == "dop853" and self.backend != "python":
-            raise ValueError("DOP853 использует Python/SciPy; выберите ядро python")
         if type(self.dt) not in (int,float) or not isfinite(self.dt) or self.dt <= 0:
             raise ValueError("dt должен быть положительным конечным числом")
         if self.backend not in ("python","rust"):
@@ -74,6 +81,8 @@ class Experiment:
     model_energy_offset: float = 0.0
     origin: EphemerisOrigin | None = None
     orientation_work: float = 0.0
+    initial_rotations: tuple = ()
+    rotations: tuple = ()
 
 
 def copy_bodies(bodies):
@@ -82,7 +91,9 @@ def copy_bodies(bodies):
                  Vector3(b.spin.x,b.spin.y,b.spin.z)) for b in bodies]
 
 
-def create_experiment(bodies: list[Body], settings: Settings, *, origin: EphemerisOrigin | None = None) -> Experiment:
+def create_experiment(bodies: list[Body], settings: Settings, *, origin: EphemerisOrigin | None = None, rotations=()) -> Experiment:
+    if type(rotations) is not tuple:
+        raise ValueError("Вращения должны быть кортежем состояний")
     if not bodies or len({b.name for b in bodies}) != len(bodies):
         raise ValueError("Нужны тела с уникальными именами")
     if settings.integrator == "dop853" and any(b.radius > 0 for b in bodies):
@@ -91,16 +102,25 @@ def create_experiment(bodies: list[Body], settings: Settings, *, origin: Ephemer
         from .relativity import validate_bodies
         validate_bodies(bodies)
     validate_figures(bodies, settings.figures)
+    prepare_pair(bodies,settings.relative_pair)
     validate_orientation_origin(settings.figures, origin)
     if not isfinite(total_energy(bodies)):
         raise ValueError("Энергия исходной системы должна быть конечной")
     if origin is not None and not isinstance(origin, EphemerisOrigin):
         raise ValueError("Неверное происхождение начального состояния")
-    return Experiment(copy_bodies(bodies),copy_bodies(bodies),settings,origin=origin)
+    if rotations:
+        from .nbody_rotation import validate
+        import numpy as np
+        validate(bodies, rotations, settings)
+        if abs(np.linalg.norm(rotations[0].quaternion)-1) > 1e-12:
+            raise ValueError("Начальный q должен быть единичным")
+    return Experiment(copy_bodies(bodies),copy_bodies(bodies),settings,origin=origin,
+                      initial_rotations=rotations, rotations=rotations)
 
 
 def reset(experiment: Experiment) -> Experiment:
-    return create_experiment(experiment.initial,experiment.settings,origin=experiment.origin)
+    return create_experiment(experiment.initial,experiment.settings,origin=experiment.origin,
+                             rotations=experiment.initial_rotations)
 
 
 def advance(experiment: Experiment, steps: int) -> Experiment:
@@ -115,12 +135,23 @@ def advance(experiment: Experiment, steps: int) -> Experiment:
     if experiment.time+duration == experiment.time:
         raise ValueError("Шаг меньше разрешения времени float")
     has_radii = any(b.radius>0 for b in experiment.bodies)
+    if experiment.rotations or experiment.initial_rotations:
+        from .nbody_rotation import integrate, validate_experiment
+        validate_experiment(experiment)
+        snapshots = integrate(experiment.bodies, experiment.rotations, [0., duration],
+            rtol=settings.rtol, position_atol=settings.position_atol,
+            velocity_atol=settings.velocity_atol, backend=settings.backend,
+            relative_pair=settings.relative_pair)
+        bodies, rotations = snapshots[-1]
+        return replace(experiment, bodies=bodies, rotations=rotations, time=experiment.time+duration)
     if settings.integrator == "dop853":
         from .accuracy import evolve_accurate
         bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,
+                                backend=settings.backend,
                                 position_atol=settings.position_atol, velocity_atol=settings.velocity_atol,
                                 physics=settings.physics, figures=settings.figures,
-                                start_time=experiment.time, return_work=True)
+                                start_time=experiment.time, return_work=True, relative_pair=settings.relative_pair,
+                                error_control=settings.error_control)
         work += experiment.orientation_work
         if not isfinite(work):
             raise ValueError("Переполнение работы заданной ориентации")
@@ -196,10 +227,19 @@ def _advance_mergers(experiment,steps):
                    events=tuple(history),model_energy_offset=offset)
 
 
-PRESETS = ("sun-earth","earth-moon","binary-star","sun-earth-moon","spheres","solar-system","solar-system-moon")
+PRESETS = ("sun-earth","earth-moon","binary-star","sun-earth-moon","spheres","solar-system","solar-system-moon","solar-system-pluto","solar-system-asteroids","solar-system-asteroids-full","solar-system-asteroids-catalog","solar-system-kuiper","solar-system-kuiper-ring")
 
 
 def preset(name: str, *, backend: str = "python", eccentricity: float = 0.0) -> Experiment:
+    if name in ("solar-system-pluto","solar-system-asteroids","solar-system-asteroids-full","solar-system-asteroids-catalog","solar-system-kuiper","solar-system-kuiper-ring"):
+        from .perturbers import solar_system_pluto,solar_system_asteroids,solar_system_asteroids_full,solar_system_asteroids_catalog,solar_system_kuiper
+        loader={"solar-system-pluto":solar_system_pluto,"solar-system-asteroids":solar_system_asteroids,
+                "solar-system-asteroids-full":solar_system_asteroids_full,
+                "solar-system-asteroids-catalog":solar_system_asteroids_catalog,
+                "solar-system-kuiper":solar_system_kuiper,
+                "solar-system-kuiper-ring":solar_system_ring}[name]
+        bodies,origin=loader()
+        return create_experiment(bodies,Settings(3600,backend,integrator="dop853" if backend=="python" else "verlet"),origin=origin)
     if name in ("solar-system", "solar-system-moon"):
         from .ephemerides import solar_system
         bodies,origin=solar_system(resolved_moon=name=="solar-system-moon")

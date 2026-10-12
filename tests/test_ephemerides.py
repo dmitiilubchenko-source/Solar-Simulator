@@ -80,6 +80,8 @@ def test_v3_checkpoint_migrates_without_fabricating_origin():
     del doc['orientation_work']
     del doc['settings']['physics']
     del doc['settings']['figures']
+    del doc['settings']['relative_pair']
+    del doc['settings']['error_control']
     restored=from_document(doc)
     assert restored.origin is None and 'origin' not in doc
 

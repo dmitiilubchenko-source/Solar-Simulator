@@ -1,0 +1,31 @@
+{
+  "change": 58,
+  "branch": "main",
+  "previous_inventory_files": 353,
+  "previous_unchanged": 346,
+  "intentionally_changed_previous_docs": [
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/pn-spin-contract.md",
+    "docs/project-context.md",
+    "docs/rigid-pn.md",
+    "docs/session-handoff.md",
+    "README.md"
+  ],
+  "previous_json_unchanged": 106,
+  "previous_runtime_rust_unchanged": 74,
+  "previous_git_status_entries_preserved": 243,
+  "audit_code_and_inputs_sha_valid": true,
+  "new_tests": {
+    "passed": 19,
+    "seconds": 1.71
+  },
+  "targeted_tests": {
+    "passed": 109,
+    "seconds": 16.14
+  },
+  "documentation_links": 846,
+  "diff_check": true,
+  "physical_lunar_mapping_certified": false,
+  "commit_push_portable": false
+}

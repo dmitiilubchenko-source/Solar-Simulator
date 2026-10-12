@@ -1,0 +1,26 @@
+{
+  "scientific_code_and_data_sha256": {
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "scripts/assess_rotation.py": "22b66e67589cb611c599e40a694c89a6c99c29554acc69f6424a44bc5c3c9360",
+    "scripts/assess_lunar_spin.py": "5caeb3571ac6540b987bfea99ccae38857e5bbda76acd2461231b1c4cd4f37d1",
+    "scripts/build_lunar_spin.py": "b80e35fff9b390b3bffaea89ff6fcfa2b576c74ba46caf9b3ad26c818411085a",
+    "tests/test_spin_initial.py": "4d5fd696a2ac5b4d54defd0189ecd978a233f40a40bd90d81cbf3c5147b9cf58",
+    "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+    "docs/orientation-spice-reference.json": "333bb95ba8c33f92e8373fb5846bc53dfc8e09d4a38b548d57507e8a39730641",
+    "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "scripts/diagnose_rotation_limits.py": "47e0d5e8c431aad119a4ca583581ed9045d49f5afda1e7a13ab108e3248f5ab7",
+    "scripts/diagnose_rotation_reference.py": "7899b12903f29782669bfbced5fbfd886d3b014b7b2e7afcfcb706d4399f0cad",
+    "docs/rotation-limit-diagnosis.json": "f966189daab9db7f67150ce6a27ee1497df5e57abc02b5242f4130569b9f3a56",
+    "docs/rotation-reference-diagnosis.json": "75e114799ec6112de1511fc6d6d5303b50825c3b6f0edec21e3147410c1d3d23",
+    "docs/lunar-spin-initial-validation.json": "183401feab7a3001e2272970f330374540128e6898aeb59baa42962531f19e8b"
+  },
+  "checks": [
+    "Initial lunar audit source/data SHA match",
+    "Change 50 successful audit source SHA still match",
+    "Change 50 failed audit SHA match preserved original files"
+  ],
+  "privacy": "No private journal, plan, handoff or AGENTS content included"
+}

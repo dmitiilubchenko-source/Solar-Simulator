@@ -11,6 +11,7 @@ import numpy as np
 from .simulation import G
 
 EARTH_PROFILE_SHA256 = "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1"
+SOLAR_PROFILE_SHA256 = "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e"
 
 
 @dataclass(frozen=True)
@@ -72,6 +73,8 @@ def prescribed(figures):
 
 def validate_orientation_origin(figures, origin):
     if prescribed(figures):
+        from .perturbers import figure_parent_origin
+        origin = figure_parent_origin(origin)
         from .orientation import profile
         data = profile()
         if (origin is None or origin.dataset_sha256 != data["dataset_sha256"]
@@ -129,14 +132,25 @@ def tensors(prepared, time=0.):
     return result
 
 
-def acceleration(positions, masses, prepared, time=0.):
+def _source_vectors(positions, source, pair_displacement):
+    targets = np.arange(len(positions)) != source
+    r = positions[targets]-positions[source]
+    if pair_displacement is not None:
+        first,second,relative = pair_displacement
+        if source in (first,second):
+            target = second if source == first else first
+            r[np.flatnonzero(targets)==target] = relative if source == first else -relative
+    return r
+
+
+def acceleration(positions, masses, prepared, time=0., *, _pair_displacement=None):
     """Quadrupole correction only; includes the source reaction for every pair."""
     positions = np.asarray(positions, dtype=float)
     result = np.zeros_like(positions)
     with np.errstate(over="raise", divide="raise", invalid="raise"):
         for entry, (source, radius, q, _) in zip(prepared, tensors(prepared, time)):
             targets = np.arange(len(masses)) != source
-            r = positions[targets]-positions[source]
+            r = _source_vectors(positions,source,_pair_displacement)
             distance = np.linalg.norm(r, axis=1)
             if np.any(distance <= radius):
                 raise ValueError("J2 определена только вне опорного радиуса источника")
@@ -177,11 +191,11 @@ def potential_energy(bodies, figures, time=0.):
     return result
 
 
-def orientation_power(positions, masses, prepared, time):
+def orientation_power(positions, masses, prepared, time, *, _pair_displacement=None):
     """Explicit partial derivative of potential at fixed positions, in watts."""
     terms = []
     for source, radius, _, dq in tensors(prepared, time):
-        r = positions[np.arange(len(masses)) != source]-positions[source]
+        r = _source_vectors(positions,source,_pair_displacement)
         distance = np.linalg.norm(r, axis=1)
         if np.any(distance <= radius):
             raise ValueError("Квадруполь определён только вне опорного радиуса источника")
@@ -214,13 +228,16 @@ def earth_j2(bodies, origin):
     import json
     import hashlib
     from importlib.resources import files
+    from .perturbers import figure_parent_origin, additional_names
+    extra_names = additional_names(origin)
+    origin = figure_parent_origin(origin)
     data = files("solar_simulator.data").joinpath("earth-j2-20261008.json").read_bytes()
     if hashlib.sha256(data).hexdigest() != EARTH_PROFILE_SHA256:
         raise ValueError("Изменён закреплённый профиль Earth J2; требуется проверка параметров")
     profile = json.loads(data)
     if (origin is None or origin.dataset_sha256 != profile["dataset_sha256"]
             or origin.frame != profile["frame"] or origin.epoch_jd_tdb != profile["epoch_jd_tdb"]
-            or {b.name for b in bodies} != set(profile["bodies"])):
+            or {b.name for b in bodies} != set(profile["bodies"]) | extra_names):
         raise ValueError("earth-j2 требует исходный solar-system-moon с эпохой 2026-10-08 TDB")
     figure = FixedJ2("Earth", profile["coefficient"], profile["reference_radius_metres"],
                      tuple(profile["axis"]), profile["provenance"])
@@ -238,3 +255,32 @@ def earth_moon_quadrupoles(bodies, origin, *, moon=True):
     validate_orientation_origin(figures, origin)
     validate_figures(bodies, figures)
     return figures
+
+
+def solar_j2(bodies, origin):
+    """DE441 J2SUN/ASUN with a fixed NAIF pole, offline and reproducible."""
+    import hashlib
+    import json
+    from importlib.resources import files
+    from .ephemerides import NAMES, RESOLVED_NAMES
+    from .perturbers import figure_parent_origin, additional_names
+    extra_names = additional_names(origin)
+    origin = figure_parent_origin(origin)
+    raw=files("solar_simulator.data").joinpath("solar-j2-20261008.json").read_bytes()
+    if hashlib.sha256(raw).hexdigest()!=SOLAR_PROFILE_SHA256:
+        raise ValueError("Изменён закреплённый профиль солнечной J2")
+    data=json.loads(raw)
+    if (origin is None or origin.dataset_sha256 not in data["dataset_sha256"]
+            or origin.gm_sha256!=data["gm_sha256"] or origin.frame!=data["frame"]
+            or origin.center!=data["center"] or origin.epoch_jd_tdb!=data["epoch_jd_tdb"]
+            or {b.name for b in bodies} not in ((set(RESOLVED_NAMES) | extra_names,) if extra_names
+                                               else (set(NAMES),set(RESOLVED_NAMES)))):
+        raise ValueError("solar-j2 требует исходный solar-system или solar-system-moon эпохи 2026-10-08 TDB")
+    figure=FixedJ2("Sun",data["coefficient"],data["reference_radius_metres"],tuple(data["axis"]),data["provenance"])
+    validate_figures(bodies,(figure,))
+    return (figure,)
+
+
+def sun_earth_moon_quadrupoles(bodies, origin):
+    """Fixed solar J2 plus the existing prescribed Earth/Moon J2/C22."""
+    return solar_j2(bodies,origin)+earth_moon_quadrupoles(bodies,origin)

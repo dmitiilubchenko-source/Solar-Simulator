@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "iteration": 47,
+  "reason": "36-point phase comparison changed Pluto-System by 0.9537802792694771 m, above the unchanged 0.1 m major-system criterion",
+  "selected_points": 144,
+  "selected_phase_index": 0,
+  "selection_rule": "densest originally declared quadrature, chosen by phase/count sensitivity, not by JPL residual",
+  "mass_radius_and_original_states": "unchanged",
+  "numerical_all_bodies_metres": 0.1,
+  "numerical_relative_moon_metres": 0.02,
+  "geometry_major_systems_metres": 0.1,
+  "geometry_relative_moon_metres": 0.02,
+  "geometry_comparisons": ["72_vs_144_phase_0", "72_vs_144_phase_1", "phase_0_vs_1_72", "phase_0_vs_1_144"],
+  "relative_energy_budget": 1e-10,
+  "all_original_KBO_sensitivity": "reported separately; not certified by major-system criterion"
+}

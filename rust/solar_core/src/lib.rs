@@ -4,6 +4,7 @@ use serde::{Deserialize, Serialize};
 pub mod collisions;
 pub mod contacts;
 pub mod impacts;
+pub mod relativity;
 
 pub const G: f64 = 6.67430e-11;
 pub type Vector3 = [f64; 3];

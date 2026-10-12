@@ -1,0 +1,197 @@
+{
+  "scope": "Working Newton/EIH Rust force; SciPy DOP853 and figures in Python",
+  "python": "3.14.2",
+  "machine": "AMD64",
+  "initial_27_sha256": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+  "initial_343_sha256": "50434ff910366e319c9447ede9c7da59fcdac543746cd9840570d3cd05d809b0",
+  "validation_grid_sha256": "07717d8792d4afa297441a0b1751672de4bc492f41802d9224525f905e15bd24",
+  "source_sha256": {
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "rust/solar_native/src/lib.rs": "3a38d0d17585c41fe58a97a4673988cbbdf5bcb7444987a908ec6dcf950c3ad6",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/accuracy.py": "933dd15e975c1846ce0db8090757d50918cb2062b01a959b0d20d4b12f08fa98",
+    "scripts/validation/eih_scalar.rs": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+    "scripts/assess_native_eih.py": "daab4d0a8f1915e6bf46f2d862ca6b78de2cf6dbe478324222dea408d65c7df3",
+    "scripts/assess_relative_coordinates.py": "4c631c40d32b5876a142b323e777b62fa97403d5ef7bc112728aaee66b83afa3",
+    "scripts/assess_orientation.py": "a872ff0bbaeb22e27c860f14922f1653ef0bdad1812c76399b0d352d022a4e5b"
+  },
+  "year_27": {
+    "body_count": 27,
+    "duration_seconds": 31557600.0,
+    "samples": 45,
+    "production": {
+      "python": {
+        "elapsed_seconds": 15.726410300005227,
+        "maximum_relative_energy_budget_residual": 3.911669662229964e-15,
+        "maximum_relative_raw_energy_change": 3.5391296943985386e-15,
+        "final_orientation_work_joules": -2.8637751930510328e+19
+      },
+      "rust": {
+        "elapsed_seconds": 13.129363299987745,
+        "maximum_relative_energy_budget_residual": 4.4704796139771015e-15,
+        "maximum_relative_raw_energy_change": 4.4704796139771015e-15,
+        "final_orientation_work_joules": -2.8637751647727137e+19
+      },
+      "rust_tighter": {
+        "elapsed_seconds": 13.652717899996787,
+        "maximum_relative_energy_budget_residual": 5.588099517471377e-15,
+        "maximum_relative_raw_energy_change": 5.215559549639952e-15,
+        "final_orientation_work_joules": -2.863775177252718e+19
+      }
+    },
+    "options": {
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "rtol": 3e-14,
+      "position_atol": 1e-05,
+      "velocity_atol": 1e-11
+    },
+    "reference_convergence": {
+      "all_bodies": {
+        "maximum_position_metres": 0.055115794940697536,
+        "maximum_velocity_m_per_s": 2.5507887456425735e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.00315090866770592,
+        "maximum_velocity_m_per_s": 8.175628200281566e-09
+      }
+    },
+    "rust_vs_python": {
+      "all_bodies": {
+        "maximum_position_metres": 0.009630426882895232,
+        "maximum_velocity_m_per_s": 1.3488617187405574e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.0048230550939912025,
+        "maximum_velocity_m_per_s": 1.3501555504201665e-08
+      }
+    },
+    "rust_tolerance_sensitivity": {
+      "all_bodies": {
+        "maximum_position_metres": 0.01660212347541418,
+        "maximum_velocity_m_per_s": 1.287689285149791e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.006220388293996528,
+        "maximum_velocity_m_per_s": 1.2932912356642184e-08
+      }
+    },
+    "rust_vs_independent": {
+      "all_bodies": {
+        "maximum_position_metres": 0.05225523161893402,
+        "maximum_velocity_m_per_s": 5.4974206686701336e-08
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 0.023504355327307134,
+        "maximum_velocity_m_per_s": 5.4776297225132555e-08
+      }
+    },
+    "force_profile": {
+      "callback_median_seconds": {
+        "python": 0.0002022250002482906,
+        "rust": 2.8295000083744527e-05
+      },
+      "callback_speedup": 7.147022429749658,
+      "maximum_acceleration_difference_m_per_s2": 1.3877787807814457e-17,
+      "includes_python_adapter_and_owned_copy": true
+    },
+    "integration_speedup": 1.197804489119431,
+    "orientation_work_relative_difference": 9.874489859615205e-09,
+    "checks_passed": true
+  },
+  "day_354": {
+    "body_count": 354,
+    "duration_seconds": 86400.0,
+    "samples": 4,
+    "production": {
+      "python": {
+        "elapsed_seconds": 10.321808399981819,
+        "maximum_relative_energy_budget_residual": 3.7253975493799497e-16,
+        "maximum_relative_raw_energy_change": 3.7253975493799497e-16,
+        "final_orientation_work_joules": -8.413304488522994e+18
+      },
+      "rust": {
+        "elapsed_seconds": 1.7979380999458954,
+        "maximum_relative_energy_budget_residual": 7.450795098759899e-16,
+        "maximum_relative_raw_energy_change": 7.450795098759899e-16,
+        "final_orientation_work_joules": -8.413304488507922e+18
+      },
+      "rust_tighter": {
+        "elapsed_seconds": 1.7563544000149705,
+        "maximum_relative_energy_budget_residual": 3.7253975493799497e-16,
+        "maximum_relative_raw_energy_change": 3.7253975493799497e-16,
+        "final_orientation_work_joules": -8.413304488545743e+18
+      }
+    },
+    "options": {
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "rtol": 3e-14,
+      "position_atol": 1e-05,
+      "velocity_atol": 1e-11
+    },
+    "reference_convergence": {
+      "all_bodies": {
+        "maximum_position_metres": 0.0035547457622440563,
+        "maximum_velocity_m_per_s": 4.3662406515106073e-11
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 3.0517578125e-05,
+        "maximum_velocity_m_per_s": 7.332801033044234e-12
+      }
+    },
+    "rust_vs_python": {
+      "all_bodies": {
+        "maximum_position_metres": 0.003906399008769876,
+        "maximum_velocity_m_per_s": 2.548234105319207e-11
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 5.587935447692871e-09,
+        "maximum_velocity_m_per_s": 9.094947017729282e-13
+      }
+    },
+    "rust_tolerance_sensitivity": {
+      "all_bodies": {
+        "maximum_position_metres": 0.0019550314182186237,
+        "maximum_velocity_m_per_s": 2.213012926802907e-11
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 1.1175870895385742e-08,
+        "maximum_velocity_m_per_s": 9.099386826154683e-13
+      }
+    },
+    "rust_vs_independent": {
+      "all_bodies": {
+        "maximum_position_metres": 0.003907322736308269,
+        "maximum_velocity_m_per_s": 3.2855741963165455e-11
+      },
+      "moon_relative_to_earth": {
+        "maximum_position_metres": 3.1456806184544976e-05,
+        "maximum_velocity_m_per_s": 2.1916478465144535e-11
+      }
+    },
+    "force_profile": {
+      "callback_median_seconds": {
+        "python": 0.02825645999982953,
+        "rust": 0.002736239999649115
+      },
+      "callback_speedup": 10.326747654976549,
+      "maximum_acceleration_difference_m_per_s2": 4.163336342344337e-17,
+      "includes_python_adapter_and_owned_copy": true
+    },
+    "integration_speedup": 5.74091421739849,
+    "orientation_work_relative_difference": 1.7913570132353365e-12,
+    "checks_passed": true
+  },
+  "checks_passed": true,
+  "limitations": [
+    "Same physical model; port does not remove omitted physical effects.",
+    "354-body trial is checked over one day, not a year.",
+    "Timings describe this computer and are not universal speed guarantees.",
+    "No future JPL vectors enter the working or independent orbit integration."
+  ]
+}

@@ -1,0 +1,466 @@
+{
+  "physics": "27 interacting point masses: EIH 1PN + Sun J2 + prescribed Earth/Moon J2/C22",
+  "epoch_jd_tdb": 2461321.5,
+  "duration_seconds": 31557600.0,
+  "samples": 45,
+  "dataset_sha256": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+  "base_dataset_sha256": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+  "gm_sha256": "f93053a476eca58623aa0a2d5b34828543fcee54a8a5a9c86cdd4b091bd8d114",
+  "reference_sha256": "e74e59990cec890803095972c3141fde7c1caa289b8118b7613867f811e6ce2a",
+  "options": {
+    "relative_pair": [
+      "Earth",
+      "Moon"
+    ],
+    "rtol": 3e-14,
+    "position_atol": 1e-05,
+    "velocity_atol": 1e-11
+  },
+  "variants": {
+    "three_asteroids": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 65.30140937267768,
+          "maximum_velocity_m_per_s": 7.0002271149569476e-06
+        },
+        "moon": {
+          "maximum_position_metres": 64.08008899198025,
+          "maximum_velocity_m_per_s": 1.536495537576521e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 65.28425297803695,
+          "maximum_velocity_m_per_s": 6.956488917952029e-06
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.948746014446551,
+          "maximum_velocity_m_per_s": 1.5925535509997007e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13390545566094536,
+          "maximum_velocity_m_per_s": 3.4326785356314797e-07
+        }
+      },
+      "planets": {
+        "Sun": {
+          "maximum_position_metres": 36.00467991332503,
+          "maximum_velocity_m_per_s": 2.191106035020238e-06
+        },
+        "Mercury": {
+          "maximum_position_metres": 45.17356699876747,
+          "maximum_velocity_m_per_s": 1.2209708574228822e-05
+        },
+        "Venus": {
+          "maximum_position_metres": 49.52054198924161,
+          "maximum_velocity_m_per_s": 8.210422222816149e-06
+        },
+        "Earth-Moon": {
+          "maximum_position_metres": 65.28425297803695,
+          "maximum_velocity_m_per_s": 6.956488917952029e-06
+        },
+        "Mars": {
+          "maximum_position_metres": 302.30877058659127,
+          "maximum_velocity_m_per_s": 2.9122464115702816e-05
+        },
+        "Jupiter": {
+          "maximum_position_metres": 115.3159065938419,
+          "maximum_velocity_m_per_s": 7.145035038376652e-06
+        },
+        "Saturn": {
+          "maximum_position_metres": 4.267689775560202,
+          "maximum_velocity_m_per_s": 2.616409719512027e-07
+        },
+        "Uranus": {
+          "maximum_position_metres": 28.991399310028445,
+          "maximum_velocity_m_per_s": 1.8363783368764986e-06
+        },
+        "Neptune": {
+          "maximum_position_metres": 72.40718664066374,
+          "maximum_velocity_m_per_s": 4.5920255983248856e-06
+        }
+      },
+      "pluto_system": {
+        "maximum_position_metres": 128.94679314135362,
+        "maximum_velocity_m_per_s": 8.205841338191119e-06
+      },
+      "maximum_relative_energy_budget_residual": 3.1665907272698927e-15,
+      "maximum_relative_raw_energy_change": 3.5391308128310564e-15,
+      "final_orientation_work_joules": -2.863775153186707e+19
+    },
+    "sixteen_asteroids": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 32.02473220313059,
+          "maximum_velocity_m_per_s": 5.7248998687698665e-06
+        },
+        "moon": {
+          "maximum_position_metres": 31.86281928515296,
+          "maximum_velocity_m_per_s": 1.576589081890143e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 32.013320138421,
+          "maximum_velocity_m_per_s": 5.688857692858235e-06
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.938352489888422,
+          "maximum_velocity_m_per_s": 1.5897078488505944e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13440876149670872,
+          "maximum_velocity_m_per_s": 3.445710627343706e-07
+        }
+      },
+      "planets": {
+        "Sun": {
+          "maximum_position_metres": 3.533210014796734,
+          "maximum_velocity_m_per_s": 1.9112544147856668e-07
+        },
+        "Mercury": {
+          "maximum_position_metres": 14.901321237950226,
+          "maximum_velocity_m_per_s": 1.153410414000829e-05
+        },
+        "Venus": {
+          "maximum_position_metres": 16.05707906798915,
+          "maximum_velocity_m_per_s": 5.25699461586538e-06
+        },
+        "Earth-Moon": {
+          "maximum_position_metres": 32.013320138421,
+          "maximum_velocity_m_per_s": 5.688857692858235e-06
+        },
+        "Mars": {
+          "maximum_position_metres": 130.88735947918946,
+          "maximum_velocity_m_per_s": 1.2774190384430584e-05
+        },
+        "Jupiter": {
+          "maximum_position_metres": 52.64279357918345,
+          "maximum_velocity_m_per_s": 3.428787972115879e-06
+        },
+        "Saturn": {
+          "maximum_position_metres": 3.3371990758059806,
+          "maximum_velocity_m_per_s": 2.0958027424239927e-07
+        },
+        "Uranus": {
+          "maximum_position_metres": 30.462580497112242,
+          "maximum_velocity_m_per_s": 1.9264523242431484e-06
+        },
+        "Neptune": {
+          "maximum_position_metres": 73.0276424514906,
+          "maximum_velocity_m_per_s": 4.63099568449251e-06
+        }
+      },
+      "pluto_system": {
+        "maximum_position_metres": 129.33906247538192,
+        "maximum_velocity_m_per_s": 8.23151066019972e-06
+      },
+      "maximum_relative_energy_budget_residual": 3.911669662229964e-15,
+      "maximum_relative_raw_energy_change": 3.5391296943985386e-15,
+      "final_orientation_work_joules": -2.8637751930510328e+19,
+      "asteroids": {
+        "Ceres": {
+          "maximum_position_metres": 42.28465793106498,
+          "maximum_velocity_m_per_s": 1.89771212959262e-05
+        },
+        "Pallas": {
+          "maximum_position_metres": 73.85181965182144,
+          "maximum_velocity_m_per_s": 1.8995947263486943e-05
+        },
+        "Vesta": {
+          "maximum_position_metres": 52.474158180456435,
+          "maximum_velocity_m_per_s": 1.9071534043195097e-05
+        },
+        "Juno": {
+          "maximum_position_metres": 26.4998712436878,
+          "maximum_velocity_m_per_s": 1.8928866667266323e-05
+        },
+        "Iris": {
+          "maximum_position_metres": 136.0774841946517,
+          "maximum_velocity_m_per_s": 1.8807228912315615e-05
+        },
+        "Hygiea": {
+          "maximum_position_metres": 230.34834896075577,
+          "maximum_velocity_m_per_s": 1.8883618939490303e-05
+        },
+        "Eunomia": {
+          "maximum_position_metres": 240.58355372235894,
+          "maximum_velocity_m_per_s": 2.036102435611353e-05
+        },
+        "Psyche": {
+          "maximum_position_metres": 385.1355401442874,
+          "maximum_velocity_m_per_s": 3.027358439726278e-05
+        },
+        "Euphrosyne": {
+          "maximum_position_metres": 105.31219513708656,
+          "maximum_velocity_m_per_s": 1.900140803681679e-05
+        },
+        "Europa": {
+          "maximum_position_metres": 255.09865021853622,
+          "maximum_velocity_m_per_s": 1.8705010347619027e-05
+        },
+        "Cybele": {
+          "maximum_position_metres": 312.13737685964287,
+          "maximum_velocity_m_per_s": 2.321256355156888e-05
+        },
+        "Sylvia": {
+          "maximum_position_metres": 176.03520259823304,
+          "maximum_velocity_m_per_s": 1.8682000542939003e-05
+        },
+        "Thisbe": {
+          "maximum_position_metres": 167.46561948944313,
+          "maximum_velocity_m_per_s": 1.88138674025812e-05
+        },
+        "Camilla": {
+          "maximum_position_metres": 457.7076389687172,
+          "maximum_velocity_m_per_s": 3.365398005711577e-05
+        },
+        "Davida": {
+          "maximum_position_metres": 109.61698546945298,
+          "maximum_velocity_m_per_s": 1.8975082525322205e-05
+        },
+        "Interamnia": {
+          "maximum_position_metres": 183.66628430837193,
+          "maximum_velocity_m_per_s": 1.9311744558184504e-05
+        }
+      }
+    },
+    "sixteen_asteroids_tighter": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 32.023331088849794,
+          "maximum_velocity_m_per_s": 5.724779768986138e-06
+        },
+        "moon": {
+          "maximum_position_metres": 31.865160080862992,
+          "maximum_velocity_m_per_s": 1.581508913693899e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 32.01187237123627,
+          "maximum_velocity_m_per_s": 5.688615496767867e-06
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.9600406305869935,
+          "maximum_velocity_m_per_s": 1.5950121289745684e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13427117295607935,
+          "maximum_velocity_m_per_s": 3.4436891344136497e-07
+        }
+      },
+      "planets": {
+        "Sun": {
+          "maximum_position_metres": 3.5332073055568474,
+          "maximum_velocity_m_per_s": 1.9112544736127701e-07
+        },
+        "Mercury": {
+          "maximum_position_metres": 14.90223184084617,
+          "maximum_velocity_m_per_s": 1.1535414132146558e-05
+        },
+        "Venus": {
+          "maximum_position_metres": 16.053090286420485,
+          "maximum_velocity_m_per_s": 5.255643249563255e-06
+        },
+        "Earth-Moon": {
+          "maximum_position_metres": 32.01187237123627,
+          "maximum_velocity_m_per_s": 5.688615496767867e-06
+        },
+        "Mars": {
+          "maximum_position_metres": 130.88816529510993,
+          "maximum_velocity_m_per_s": 1.2774260630118287e-05
+        },
+        "Jupiter": {
+          "maximum_position_metres": 52.64178327480734,
+          "maximum_velocity_m_per_s": 3.428819133373663e-06
+        },
+        "Saturn": {
+          "maximum_position_metres": 3.3368808582478215,
+          "maximum_velocity_m_per_s": 2.0958083033099456e-07
+        },
+        "Uranus": {
+          "maximum_position_metres": 30.472551302556884,
+          "maximum_velocity_m_per_s": 1.92646143526732e-06
+        },
+        "Neptune": {
+          "maximum_position_metres": 73.03049322149192,
+          "maximum_velocity_m_per_s": 4.630994434815957e-06
+        }
+      },
+      "pluto_system": {
+        "maximum_position_metres": 129.3356549499269,
+        "maximum_velocity_m_per_s": 8.231509465396038e-06
+      },
+      "maximum_relative_energy_budget_residual": 3.5391296943985386e-15,
+      "maximum_relative_raw_energy_change": 3.352859710482826e-15,
+      "final_orientation_work_joules": -2.863775114970754e+19,
+      "asteroids": {
+        "Ceres": {
+          "maximum_position_metres": 42.282388873680105,
+          "maximum_velocity_m_per_s": 1.897712208828766e-05
+        },
+        "Pallas": {
+          "maximum_position_metres": 73.85240297794257,
+          "maximum_velocity_m_per_s": 1.899594525980378e-05
+        },
+        "Vesta": {
+          "maximum_position_metres": 52.47365244474681,
+          "maximum_velocity_m_per_s": 1.907154140496852e-05
+        },
+        "Juno": {
+          "maximum_position_metres": 26.501242376666134,
+          "maximum_velocity_m_per_s": 1.8928873911063272e-05
+        },
+        "Iris": {
+          "maximum_position_metres": 136.07714230102437,
+          "maximum_velocity_m_per_s": 1.8807221794403174e-05
+        },
+        "Hygiea": {
+          "maximum_position_metres": 230.34949575559105,
+          "maximum_velocity_m_per_s": 1.8883626216350773e-05
+        },
+        "Eunomia": {
+          "maximum_position_metres": 240.5839609780593,
+          "maximum_velocity_m_per_s": 2.0361060790560937e-05
+        },
+        "Psyche": {
+          "maximum_position_metres": 385.1360811991875,
+          "maximum_velocity_m_per_s": 3.027362756628817e-05
+        },
+        "Euphrosyne": {
+          "maximum_position_metres": 105.31147544609016,
+          "maximum_velocity_m_per_s": 1.9001407829012504e-05
+        },
+        "Europa": {
+          "maximum_position_metres": 255.09634183646156,
+          "maximum_velocity_m_per_s": 1.8705013715152936e-05
+        },
+        "Cybele": {
+          "maximum_position_metres": 312.13802640170746,
+          "maximum_velocity_m_per_s": 2.321259721003507e-05
+        },
+        "Sylvia": {
+          "maximum_position_metres": 176.03534213920048,
+          "maximum_velocity_m_per_s": 1.8681999745534686e-05
+        },
+        "Thisbe": {
+          "maximum_position_metres": 167.466035749951,
+          "maximum_velocity_m_per_s": 1.8813856509674923e-05
+        },
+        "Camilla": {
+          "maximum_position_metres": 457.70828762545233,
+          "maximum_velocity_m_per_s": 3.3653986126827614e-05
+        },
+        "Davida": {
+          "maximum_position_metres": 109.61707072138437,
+          "maximum_velocity_m_per_s": 1.897509887546446e-05
+        },
+        "Interamnia": {
+          "maximum_position_metres": 183.66804681588513,
+          "maximum_velocity_m_per_s": 1.9311748194565692e-05
+        }
+      }
+    }
+  },
+  "added_asteroids_increment": {
+    "all_bodies": {
+      "maximum_position_metres": 172.38311984108373,
+      "maximum_velocity_m_per_s": 1.6483918725779197e-05
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.0103989729338695,
+      "maximum_velocity_m_per_s": 2.845742248870847e-08
+    }
+  },
+  "added_asteroids_increment_by_body": {
+    "Sun": {
+      "maximum_position_metres": 34.0220155977349,
+      "maximum_velocity_m_per_s": 2.089192247017014e-06
+    },
+    "Mercury": {
+      "maximum_position_metres": 34.35243284298895,
+      "maximum_velocity_m_per_s": 2.146627446118997e-06
+    },
+    "Venus": {
+      "maximum_position_metres": 35.898560126363975,
+      "maximum_velocity_m_per_s": 3.0043111864709786e-06
+    },
+    "Earth": {
+      "maximum_position_metres": 38.97781225951227,
+      "maximum_velocity_m_per_s": 2.994919441804405e-06
+    },
+    "Moon": {
+      "maximum_position_metres": 38.968248623847714,
+      "maximum_velocity_m_per_s": 2.9840900985185534e-06
+    },
+    "Mars": {
+      "maximum_position_metres": 172.38311984108373,
+      "maximum_velocity_m_per_s": 1.6483918725779197e-05
+    },
+    "Jupiter": {
+      "maximum_position_metres": 63.395785932922145,
+      "maximum_velocity_m_per_s": 3.7767977614828065e-06
+    },
+    "Saturn": {
+      "maximum_position_metres": 4.7497066164919985,
+      "maximum_velocity_m_per_s": 2.909224610590084e-07
+    },
+    "Uranus": {
+      "maximum_position_metres": 1.4739941972702033,
+      "maximum_velocity_m_per_s": 9.025474128833585e-08
+    },
+    "Neptune": {
+      "maximum_position_metres": 0.6260211323553924,
+      "maximum_velocity_m_per_s": 3.93195042457923e-08
+    },
+    "Pluto-System": {
+      "maximum_position_metres": 0.4677260699410139,
+      "maximum_velocity_m_per_s": 3.0840463589708046e-08
+    },
+    "Ceres": {
+      "maximum_position_metres": 67.90877908296268,
+      "maximum_velocity_m_per_s": 4.573344960992394e-06
+    },
+    "Pallas": {
+      "maximum_position_metres": 27.018341489537324,
+      "maximum_velocity_m_per_s": 2.3110066265682e-06
+    },
+    "Vesta": {
+      "maximum_position_metres": 24.48937936752427,
+      "maximum_velocity_m_per_s": 1.8148159833637892e-06
+    }
+  },
+  "tolerance_sensitivity": {
+    "all_bodies": {
+      "maximum_position_metres": 0.021539109821816366,
+      "maximum_velocity_m_per_s": 5.244604939886151e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.021691151885094826,
+      "maximum_velocity_m_per_s": 5.3047882078588215e-08
+    }
+  },
+  "independent_reference_convergence": {
+    "all_bodies": {
+      "maximum_position_metres": 0.055115794940697536,
+      "maximum_velocity_m_per_s": 2.5507887456425735e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.00315090866770592,
+      "maximum_velocity_m_per_s": 8.175628200281566e-09
+    }
+  },
+  "numerical_agreement": {
+    "all_bodies": {
+      "maximum_position_metres": 0.04609863852486397,
+      "maximum_velocity_m_per_s": 6.053415090845409e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.025633610366150663,
+      "maximum_velocity_m_per_s": 6.043612725357552e-08
+    }
+  },
+  "checks_passed": true,
+  "limitation": "All 16 SB441 asteroids; not the entire asteroid belt. All bodies have full mass reaction and EIH. SB441 and DE441 future states serve only validation. Local tolerances and sampled numerical agreement are not a global error bound. Prescribed orientations, no coupled tides/spin or asteroid multipoles.",
+  "independent_scalar_force": {
+    "language": "Rust, developer oracle only",
+    "source_sha256": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+    "compiler": "rustc 1.99.0 (b940084d7 2026-09-28)",
+    "python_scalar_crosscheck": "tests/test_independent_eih_rust.py"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "model": "Research ADM point-mass 1PN + leading SO, N=3 canonical x/p/S, G=1",
+  "units": "M0=a0=G=1; time=sqrt(a0^3/(G*M0)); p=M0*sqrt(G*M0/a0); S=M0*sqrt(G*M0*a0)",
+  "masses": [0.3, 0.7, 0.05],
+  "c": 316.22776601683796,
+  "positions_before_translation": [[0.56, 0, 0], [-0.24, 0, 0], [3.5, 0.4, 0.6]],
+  "momenta_before_boost": [[0, 0.2571964229922337, 0], [0, -0.2571964229922337, 0], [-0.003, 0.025, 0.004]],
+  "spins": [[0.003, -0.004, 0.002], [-0.002, 0.001, 0.003], [0.0002, 0.0003, -0.0001]],
+  "initial_frame": "Translate by Newtonian mass centroid and subtract m_i*sum(p)/sum(m) ONCE at initialization; fixed canonical frame thereafter, no ephemeris input",
+  "nominal_inner_period": 6.283185307179586,
+  "periods": 8,
+  "samples": 513,
+  "production_rtol": 1e-11,
+  "production_atol_over_rtol": 0.01,
+  "reference_rtols": [3e-13, 3e-14],
+  "reference_atol_over_rtol": 0.01,
+  "max_step_over_period": 0.0078125,
+  "scaling": "Each body's initial |x|, |p|, |S| separately, all required nonzero. P drift divided by sum initial |p|, H by |H0|, J by |J0|. No epsilon fallback.",
+  "gradient_seed": 56,
+  "gradient_states": 12,
+  "criteria": {
+    "energy_relative": 1e-9,
+    "momentum_scaled": 1e-10,
+    "angular_momentum_relative": 1e-9,
+    "spin_norm_relative": 1e-9,
+    "reference_difference": 1e-7,
+    "reference_uncertainty": 1e-8,
+    "hamiltonian_gradient_relative": 1e-11,
+    "negative_control_J_drift_minimum": 1e-5,
+    "missing_triple_force_relative_minimum": 1e-7
+  },
+  "interpretation": "Exact numerical flow of a finite selected H, not complete GR at higher orders and not an extended-body lunar model. No tides, spin-spin, 2PN, NLO SO, I/q/Q2, future DE441 or parameter fit."
+}

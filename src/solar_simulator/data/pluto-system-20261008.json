@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "base_origin": {
+    "epoch_jd_tdb": 2461321.5,
+    "frame": "Ecliptic J2000",
+    "center": "Solar System Barycenter",
+    "ephemeris": "DE441",
+    "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+  },
+  "gm_sha256": "b91c73997ba197141157f56134fd37c56d7a3f6b7c7542fbbb3146ef0623603c",
+  "units": "SI",
+  "vector_correction": "NONE",
+  "sources": [
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+      "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/ascp02000.441",
+      "byte_range": [
+        8180405,
+        8529077
+      ],
+      "sha256": "1699167f07cf3ec4ee5d5827b99e2ada335ccb32b5ddec939c24eb50f81a21ab"
+    }
+  ],
+  "bodies": [
+    {
+      "id": 9,
+      "name": "Pluto-System",
+      "gm_m3_s2": 975500000000.0001,
+      "position": [
+        2989231719561.105,
+        -4393343282539.968,
+        -394549094920.7174
+      ],
+      "velocity": [
+        4649.144118585086,
+        1841.792694780032,
+        -1541.8872190918235
+      ]
+    }
+  ]
+}

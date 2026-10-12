@@ -1,0 +1,57 @@
+{
+  "change": 57,
+  "branch": "main",
+  "previous_inventory_files": 318,
+  "previous_unchanged": 311,
+  "intentionally_changed_previous_docs": [
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/nbody-pn-spin.md",
+    "docs/nbody-rotation.md",
+    "docs/pn-spin-contract.md",
+    "docs/project-context.md",
+    "docs/session-handoff.md"
+  ],
+  "previous_json_unchanged": 103,
+  "previous_runtime_rust_unchanged": 68,
+  "previous_git_status_entries_preserved": 241,
+  "audited_source_and_trajectory_hashes_valid": true,
+  "new_tests": {
+    "passed": 15,
+    "seconds": 1.32
+  },
+  "targeted_tests": {
+    "passed": 90,
+    "seconds": 28.11
+  },
+  "initial_failures_preserved": [
+    "spherical test roundoff, same 1e-18 threshold retained with analytical cancellation",
+    "SciPy initial-step Euler trial rejected by q norm guard; separate initial validation and raw-q measurement"
+  ],
+  "scientific_audit_passed": true,
+  "scientific_criteria_weakened": false,
+  "full_check_repeated": false,
+  "last_full_check_historical": {
+    "change": 53,
+    "python": 738,
+    "rust": 17,
+    "fmt": true
+  },
+  "runtime_model_changed": false,
+  "future_ephemerides_called": false,
+  "published": false,
+  "portable_rebuilt": false,
+  "new_git_status_entries": [
+    "?? docs/rigid-pn-validation.json",
+    "?? docs/rigid-pn.md",
+    "?? docs/rotation57-provenance.json",
+    "?? scripts/assess_rigid_pn.py",
+    "?? scripts/independent_rigid_pn.py",
+    "?? scripts/rigid-pn-policy.json",
+    "?? scripts/rigid_pn_model.py",
+    "?? tests/test_rigid_pn_model.py"
+  ],
+  "documentation_file_line_links": 823,
+  "git_diff_check_passed": true,
+  "new_text_whitespace_python_ast_json_valid": true
+}

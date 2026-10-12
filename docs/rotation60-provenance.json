@@ -1,0 +1,32 @@
+{
+  "change": 60,
+  "branch": "main",
+  "previous_inventory_files": 367,
+  "previous_unchanged": 360,
+  "intentionally_changed_previous_docs": [
+    "docs/canonical-checkpoint.md",
+    "docs/canonical-initial.md",
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/project-context.md",
+    "docs/session-handoff.md",
+    "README.md"
+  ],
+  "previous_json_unchanged": 112,
+  "previous_runtime_rust_unchanged": 74,
+  "previous_git_status_entries_preserved": 257,
+  "audit_and_checkpoints_arrays_SHA_valid": true,
+  "new_tests": {
+    "passed": 3,
+    "seconds": 0.97
+  },
+  "targeted_tests": {
+    "passed": 146,
+    "seconds": 19.02
+  },
+  "documentation_links": 878,
+  "diff_check": true,
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_claimed": false,
+  "commit_push_portable": false
+}

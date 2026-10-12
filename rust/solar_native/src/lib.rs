@@ -175,10 +175,32 @@ fn simulate_collisions(
 
 #[pymodule]
 fn solar_native(module: &Bound<'_, PyModule>) -> PyResult<()> {
+    module.add_function(wrap_pyfunction!(point_acceleration, module)?)?;
     module.add_function(wrap_pyfunction!(evolve, module)?)?;
     module.add_function(wrap_pyfunction!(diagnostics, module)?)?;
     module.add_function(wrap_pyfunction!(run_until_contact, module)?)?;
     module.add_function(wrap_pyfunction!(resolve_contact, module)?)?;
     module.add_function(wrap_pyfunction!(simulate_collisions, module)?)?;
     Ok(())
+}
+
+#[pyfunction(signature = (masses, positions, velocities, light_speed=None, relative_pair=None))]
+fn point_acceleration(
+    py: Python<'_>,
+    masses: Vec<f64>,
+    positions: Vec<Vector3>,
+    velocities: Vec<Vector3>,
+    light_speed: Option<f64>,
+    relative_pair: Option<solar_core::relativity::RelativePair>,
+) -> PyResult<Vec<Vector3>> {
+    py.detach(move || {
+        solar_core::relativity::acceleration(
+            &positions,
+            &velocities,
+            &masses,
+            light_speed,
+            relative_pair,
+        )
+    })
+    .map_err(PyValueError::new_err)
 }

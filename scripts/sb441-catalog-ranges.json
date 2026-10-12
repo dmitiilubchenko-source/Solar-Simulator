@@ -1,0 +1,134 @@
+{
+  "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n373s.bsp",
+  "total_bytes": 982106112,
+  "entries": [
+    {
+      "role": "header",
+      "byte_range": [
+        0,
+        1023
+      ],
+      "sha256": "5c3c053eb90d26351d6963813d9372089da08b63d17120448d2302907d1bb300"
+    },
+    {
+      "role": "summary-3",
+      "byte_range": [
+        2048,
+        3071
+      ],
+      "sha256": "8d5b7cbce0f949d64d2c6bc5f0c48af38c5d6daefebd401c200987a4dbc4251d"
+    },
+    {
+      "role": "summary-63772",
+      "byte_range": [
+        65301504,
+        65302527
+      ],
+      "sha256": "c22a71d0f943dc3047181466b0851a49e3ef11de2b1b332f642da586dbd055ba"
+    },
+    {
+      "role": "summary-127541",
+      "byte_range": [
+        130600960,
+        130601983
+      ],
+      "sha256": "16ad0f55caf4d4916dcb92c62a7d566234b242ca1361cd33a2945c59f4fcc471"
+    },
+    {
+      "role": "summary-191310",
+      "byte_range": [
+        195900416,
+        195901439
+      ],
+      "sha256": "eed5f4fc7f2383df289b4f1f50ea6dbdb78efa9b266074c5d6e4be7aad424192"
+    },
+    {
+      "role": "summary-255079",
+      "byte_range": [
+        261199872,
+        261200895
+      ],
+      "sha256": "9751836ae4faaf25df1f2d5c8ef5f7b0ff124e31527a81a6a6f46d0c97a265a8"
+    },
+    {
+      "role": "summary-318848",
+      "byte_range": [
+        326499328,
+        326500351
+      ],
+      "sha256": "a7895322d1f2d4b22bce84f0612c5c8b4e43448f15b87fd737a38048778f5427"
+    },
+    {
+      "role": "summary-382617",
+      "byte_range": [
+        391798784,
+        391799807
+      ],
+      "sha256": "f18205c808ef639cdcf72ff64693d8fe4b4c48e0c63fa81be76113f2d28f3708"
+    },
+    {
+      "role": "summary-446386",
+      "byte_range": [
+        457098240,
+        457099263
+      ],
+      "sha256": "09c572f04460c54aa5b12583e096475b5c86b4bc4d2445285b13f726baa16954"
+    },
+    {
+      "role": "summary-510155",
+      "byte_range": [
+        522397696,
+        522398719
+      ],
+      "sha256": "61141255c0f7a9d937c943b8ffc3e31b86c649398387e7b5665d755775927678"
+    },
+    {
+      "role": "summary-579025",
+      "byte_range": [
+        592920576,
+        592921599
+      ],
+      "sha256": "8b160b3bb8b94df52f83b6a95a9ab0f6e5115288314b92c6d3c472bb82a4dcd9"
+    },
+    {
+      "role": "summary-642794",
+      "byte_range": [
+        658220032,
+        658221055
+      ],
+      "sha256": "68782ec2b91c8cc107a74c5a081d711393acea768ab107f5b3a8d5b3716ae570"
+    },
+    {
+      "role": "summary-706563",
+      "byte_range": [
+        723519488,
+        723520511
+      ],
+      "sha256": "3ba242cf731b4e9b2d7e4f2f68e0a4e579bdc4a1028504a99bbb1812a91a08f8"
+    },
+    {
+      "role": "summary-770332",
+      "byte_range": [
+        788818944,
+        788819967
+      ],
+      "sha256": "d4749d3074876fc96a97ec6c0915e9f4296c6f8db982fcbe17f017030342b47a"
+    },
+    {
+      "role": "summary-834101",
+      "byte_range": [
+        854118400,
+        854119423
+      ],
+      "sha256": "7220ae08af013f15fd8efc8297730adf3321ab172a16f5ac5da798b35c9b940b"
+    },
+    {
+      "role": "summary-897870",
+      "byte_range": [
+        919417856,
+        919418879
+      ],
+      "sha256": "e75db45dcf0172248bf984b76aa84076ec7d8e44a45a0c5e78fa24e6b115c526"
+    }
+  ]
+}

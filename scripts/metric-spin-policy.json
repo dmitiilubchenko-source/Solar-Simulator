@@ -1,0 +1,42 @@
+{
+  "changes": [75, 76, 77, 78],
+  "model": "linear test gyro, external metric, covariant SSC, positive-root gauge",
+  "gm_m3_s2": 1000000000000.0,
+  "isotropic_radius_m": 1000000.0,
+  "light_speeds_m_s": [50000.0, 100000.0, 200000.0],
+  "orbits": 4,
+  "samples": 257,
+  "production_rtol": 2e-12,
+  "tighter_rtol": 2e-13,
+  "reference_rtols": [1e-11, 2e-13],
+  "atol_over_rtol": 0.02,
+  "max_phase_step": 0.09817477042468103,
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_certified": false,
+  "maximum": {
+    "metric_derivative_scaled": 1e-11,
+    "circle_acceleration_relative": 1e-11,
+    "proper_clock_analytic_absolute": 1e-11,
+    "raw_symmetry_defect": 1e-10,
+    "trajectory_agreement_absolute": 1e-8,
+    "endpoint_holonomy_absolute": 1e-8,
+    "reference_sensitivity_absolute": 1e-8,
+    "tighter_difference_absolute": 1e-8,
+    "proper_clock_integral_scaled": 1e-9,
+    "euclidean_gram_error": 1e-9,
+    "reference_gram_error": 1e-9,
+    "reference_ssc_error": 1e-9,
+    "orthogonality_error": 1e-9,
+    "determinant_error": 1e-9,
+    "fourth_order_ratio_deviation": 0.1,
+    "weak_circle_acceleration_relative": 1e-11
+  },
+  "minimum": {
+    "wrong_sign_trajectory": 0.0001,
+    "double_generator_trajectory": 0.0001,
+    "omitted_root_rate_trajectory": 0.0001,
+    "omitted_root_rate_symmetry_defect": 0.0001
+  },
+  "required_true": ["sources_preserved", "arrays_reverified", "raw_initial_preserved",
+                    "grid_preserved", "physical_claims_false"]
+}

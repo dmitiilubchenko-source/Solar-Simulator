@@ -1,0 +1,27 @@
+{
+  "oracle": "CSPICE spkgeo on subset SPK built from original SB441 type-2 coefficients; independent Sun chbint and pxform",
+  "spiceypy": "6.0.3",
+  "dataset_sha256": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+  "bodies": {
+    "Ceres": {
+      "samples": 56,
+      "maximum_position_metres": 0.00012682075660613471,
+      "maximum_velocity_m_per_s": 8.404372046368835e-12
+    },
+    "Pallas": {
+      "samples": 56,
+      "maximum_position_metres": 0.00012396298835198915,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    },
+    "Vesta": {
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 7.33610513857533e-12
+    }
+  },
+  "record_boundaries_included": true,
+  "downloaded_kernel_bytes": 12304,
+  "full_kernel_bytes": 645727232,
+  "checks_passed": true,
+  "limitation": "Interpolation/frame/derivative agreement validates extraction, not independent accuracy of the JPL asteroid ephemeris."
+}

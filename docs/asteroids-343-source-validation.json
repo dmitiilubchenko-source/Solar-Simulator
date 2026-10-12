@@ -1,0 +1,2073 @@
+{
+  "oracle": "CSPICE spkgeo on a subset built from original SB441-N373s coefficients",
+  "spiceypy": "6.0.3",
+  "manifest_sha256": "4a4427da7d5ff55fabf8a67b4a3e0aa913fe32f3207bc304bd8d13477891148a",
+  "packed_source_sha256": "a13a7fc33ac6427f1f6be5be697f85fd372e34c54d88b7cda8908b4a101c9fb9",
+  "bodies": {
+    "Ceres": {
+      "id": 2000001,
+      "samples": 56,
+      "maximum_position_metres": 0.00012631775428618202,
+      "maximum_velocity_m_per_s": 8.404372046368835e-12
+    },
+    "Vesta": {
+      "id": 2000004,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 4.547318074984807e-12
+    },
+    "Pallas": {
+      "id": 2000002,
+      "samples": 56,
+      "maximum_position_metres": 9.680616409644715e-05,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Hygiea": {
+      "id": 2000010,
+      "samples": 56,
+      "maximum_position_metres": 0.00012260558074942167,
+      "maximum_velocity_m_per_s": 7.347547867564811e-12
+    },
+    "Davida": {
+      "id": 2000511,
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 5.64784493161561e-12
+    },
+    "Interamnia": {
+      "id": 2000704,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.550898829703193e-12
+    },
+    "Europa": {
+      "id": 2000052,
+      "samples": 56,
+      "maximum_position_metres": 0.00014073079487378476,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Sylvia": {
+      "id": 2000087,
+      "samples": 56,
+      "maximum_position_metres": 0.0001373291015625,
+      "maximum_velocity_m_per_s": 3.994033970818958e-12
+    },
+    "Eunomia": {
+      "id": 2000015,
+      "samples": 56,
+      "maximum_position_metres": 0.0001332416473127211,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Juno": {
+      "id": 2000003,
+      "samples": 56,
+      "maximum_position_metres": 8.631674575031098e-05,
+      "maximum_velocity_m_per_s": 7.823769253302659e-12
+    },
+    "Psyche": {
+      "id": 2000016,
+      "samples": 56,
+      "maximum_position_metres": 0.00014456897401151427,
+      "maximum_velocity_m_per_s": 5.574134171243378e-12
+    },
+    "Camilla": {
+      "id": 2000107,
+      "samples": 56,
+      "maximum_position_metres": 0.000139849111784541,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Thisbe": {
+      "id": 2000088,
+      "samples": 56,
+      "maximum_position_metres": 0.00012516407726675689,
+      "maximum_velocity_m_per_s": 6.5199178420424085e-12
+    },
+    "Iris": {
+      "id": 2000007,
+      "samples": 56,
+      "maximum_position_metres": 8.640099832844639e-05,
+      "maximum_velocity_m_per_s": 5.532240293449121e-12
+    },
+    "Euphrosyne": {
+      "id": 2000031,
+      "samples": 56,
+      "maximum_position_metres": 0.000139849111784541,
+      "maximum_velocity_m_per_s": 4.099431346754225e-12
+    },
+    "Cybele": {
+      "id": 2000065,
+      "samples": 56,
+      "maximum_position_metres": 0.00012605828584181446,
+      "maximum_velocity_m_per_s": 4.745319111734795e-12
+    },
+    "Dido": {
+      "id": 2000209,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 5.6843418860808015e-12
+    },
+    "Aurora": {
+      "id": 2000094,
+      "samples": 56,
+      "maximum_position_metres": 8.707208412562047e-05,
+      "maximum_velocity_m_per_s": 4.553154302471009e-12
+    },
+    "Doris": {
+      "id": 2000048,
+      "samples": 56,
+      "maximum_position_metres": 0.0001303851025444992,
+      "maximum_velocity_m_per_s": 4.290077928115626e-12
+    },
+    "Bertha": {
+      "id": 2000154,
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Amphitrite": {
+      "id": 2000029,
+      "samples": 56,
+      "maximum_position_metres": 0.0001287990037241679,
+      "maximum_velocity_m_per_s": 7.276179655400323e-12
+    },
+    "Ursula": {
+      "id": 2000375,
+      "samples": 56,
+      "maximum_position_metres": 0.00011003269273266568,
+      "maximum_velocity_m_per_s": 5.770097023036906e-12
+    },
+    "Herculina": {
+      "id": 2000532,
+      "samples": 56,
+      "maximum_position_metres": 8.217109385886389e-05,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Stereoskopia": {
+      "id": 2000566,
+      "samples": 56,
+      "maximum_position_metres": 0.00012973390123652355,
+      "maximum_velocity_m_per_s": 7.33610513857533e-12
+    },
+    "Siegena": {
+      "id": 2000386,
+      "samples": 56,
+      "maximum_position_metres": 0.000139849111784541,
+      "maximum_velocity_m_per_s": 5.532240293449121e-12
+    },
+    "Alauda": {
+      "id": 2000702,
+      "samples": 56,
+      "maximum_position_metres": 0.00012220434936249808,
+      "maximum_velocity_m_per_s": 5.79245315878188e-12
+    },
+    "Laetitia": {
+      "id": 2000039,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.643266215879911e-12
+    },
+    "Metis": {
+      "id": 2000009,
+      "samples": 56,
+      "maximum_position_metres": 0.00012399383643433995,
+      "maximum_velocity_m_per_s": 7.402764181711438e-12
+    },
+    "Hebe": {
+      "id": 2000006,
+      "samples": 56,
+      "maximum_position_metres": 8.435571436880486e-05,
+      "maximum_velocity_m_per_s": 4.637531231849411e-12
+    },
+    "Bamberga": {
+      "id": 2000324,
+      "samples": 56,
+      "maximum_position_metres": 0.0001281193208598836,
+      "maximum_velocity_m_per_s": 7.388769886016199e-12
+    },
+    "Elektra": {
+      "id": 2000130,
+      "samples": 56,
+      "maximum_position_metres": 7.62939453125e-05,
+      "maximum_velocity_m_per_s": 4.637531231849411e-12
+    },
+    "Themis": {
+      "id": 2000024,
+      "samples": 56,
+      "maximum_position_metres": 0.00013696104637475083,
+      "maximum_velocity_m_per_s": 5.538191792206738e-12
+    },
+    "Patientia": {
+      "id": 2000451,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.322681277320783e-12
+    },
+    "Fortuna": {
+      "id": 2000019,
+      "samples": 56,
+      "maximum_position_metres": 0.00019020961920083613,
+      "maximum_velocity_m_per_s": 4.1194814302783556e-12
+    },
+    "Palma": {
+      "id": 2000372,
+      "samples": 56,
+      "maximum_position_metres": 0.0001856311807341986,
+      "maximum_velocity_m_per_s": 3.637978807091713e-12
+    },
+    "Daphne": {
+      "id": 2000041,
+      "samples": 56,
+      "maximum_position_metres": 9.437039853556046e-05,
+      "maximum_velocity_m_per_s": 8.911191772433732e-12
+    },
+    "Irene": {
+      "id": 2000014,
+      "samples": 56,
+      "maximum_position_metres": 0.00012419754483108296,
+      "maximum_velocity_m_per_s": 4.092726157978177e-12
+    },
+    "Diotima": {
+      "id": 2000423,
+      "samples": 56,
+      "maximum_position_metres": 0.0001332416473127211,
+      "maximum_velocity_m_per_s": 5.933827427929444e-12
+    },
+    "Egeria": {
+      "id": 2000013,
+      "samples": 56,
+      "maximum_position_metres": 0.0001332416473127211,
+      "maximum_velocity_m_per_s": 4.553154302471009e-12
+    },
+    "Hesperia": {
+      "id": 2000069,
+      "samples": 56,
+      "maximum_position_metres": 0.0001373291015625,
+      "maximum_velocity_m_per_s": 5.756641667709193e-12
+    },
+    "Parthenope": {
+      "id": 2000011,
+      "samples": 56,
+      "maximum_position_metres": 7.327794155997675e-05,
+      "maximum_velocity_m_per_s": 6.095843819611645e-12
+    },
+    "Papagena": {
+      "id": 2000471,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 5.586004824917563e-12
+    },
+    "Lachesis": {
+      "id": 2000120,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 7.29037622697209e-12
+    },
+    "Aglaja": {
+      "id": 2000047,
+      "samples": 56,
+      "maximum_position_metres": 0.00012495681269957885,
+      "maximum_velocity_m_per_s": 7.30786208804975e-12
+    },
+    "Aegle": {
+      "id": 2000096,
+      "samples": 56,
+      "maximum_position_metres": 0.00014395112811365666,
+      "maximum_velocity_m_per_s": 5.754676799832565e-12
+    },
+    "Hedwig": {
+      "id": 2000476,
+      "samples": 56,
+      "maximum_position_metres": 7.197556405682833e-05,
+      "maximum_velocity_m_per_s": 7.693836012407988e-12
+    },
+    "Aspasia": {
+      "id": 2000409,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 5.770097023036906e-12
+    },
+    "Juewa": {
+      "id": 2000139,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 5.149900813606166e-12
+    },
+    "Winchester": {
+      "id": 2000747,
+      "samples": 56,
+      "maximum_position_metres": 7.29358246040302e-05,
+      "maximum_velocity_m_per_s": 4.897778860262864e-12
+    },
+    "Kalliope": {
+      "id": 2000022,
+      "samples": 56,
+      "maximum_position_metres": 0.00014620794598950806,
+      "maximum_velocity_m_per_s": 5.9117155615240335e-12
+    },
+    "Lomia": {
+      "id": 2000117,
+      "samples": 56,
+      "maximum_position_metres": 8.765506967984052e-05,
+      "maximum_velocity_m_per_s": 7.332580706405269e-12
+    },
+    "Scheila": {
+      "id": 2000596,
+      "samples": 56,
+      "maximum_position_metres": 7.864199877963373e-05,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Nemesis": {
+      "id": 2000128,
+      "samples": 56,
+      "maximum_position_metres": 8.217109385886389e-05,
+      "maximum_velocity_m_per_s": 7.77072613829435e-12
+    },
+    "Io": {
+      "id": 2000085,
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 4.150056221409826e-12
+    },
+    "Hestia": {
+      "id": 2000046,
+      "samples": 56,
+      "maximum_position_metres": 8.674243291358293e-05,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Sibylla": {
+      "id": 2000168,
+      "samples": 56,
+      "maximum_position_metres": 0.00012680641280055741,
+      "maximum_velocity_m_per_s": 4.223278579276373e-12
+    },
+    "Germania": {
+      "id": 2000241,
+      "samples": 56,
+      "maximum_position_metres": 0.0001272646127137167,
+      "maximum_velocity_m_per_s": 5.823607568738997e-12
+    },
+    "Eugenia": {
+      "id": 2000045,
+      "samples": 56,
+      "maximum_position_metres": 7.475249459177179e-05,
+      "maximum_velocity_m_per_s": 6.366462912410498e-12
+    },
+    "Pales": {
+      "id": 2000049,
+      "samples": 56,
+      "maximum_position_metres": 0.0001290811486487475,
+      "maximum_velocity_m_per_s": 4.194104518705152e-12
+    },
+    "Kreusa": {
+      "id": 2000488,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 4.092726157978177e-12
+    },
+    "Dembowska": {
+      "id": 2000349,
+      "samples": 56,
+      "maximum_position_metres": 8.929977348876668e-05,
+      "maximum_velocity_m_per_s": 4.834030647877921e-12
+    },
+    "Lucina": {
+      "id": 2000146,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 7.48630200264025e-12
+    },
+    "Eukrate": {
+      "id": 2000247,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 3.6662903532026344e-12
+    },
+    "Freia": {
+      "id": 2000076,
+      "samples": 56,
+      "maximum_position_metres": 0.0001332416473127211,
+      "maximum_velocity_m_per_s": 7.276179655400323e-12
+    },
+    "Philomela": {
+      "id": 2000196,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 5.189900644160537e-12
+    },
+    "Lamberta": {
+      "id": 2000187,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 7.499885442698834e-12
+    },
+    "Eleonora": {
+      "id": 2000354,
+      "samples": 56,
+      "maximum_position_metres": 8.0108642578125e-05,
+      "maximum_velocity_m_per_s": 6.03290534919397e-12
+    },
+    "Berbericia": {
+      "id": 2000776,
+      "samples": 56,
+      "maximum_position_metres": 0.00013488340155210223,
+      "maximum_velocity_m_per_s": 5.532240293449121e-12
+    },
+    "Elpis": {
+      "id": 2000059,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    },
+    "Minerva": {
+      "id": 2000093,
+      "samples": 56,
+      "maximum_position_metres": 0.00012230849870209807,
+      "maximum_velocity_m_per_s": 7.980783618579264e-12
+    },
+    "Flora": {
+      "id": 2000008,
+      "samples": 56,
+      "maximum_position_metres": 7.197556405682833e-05,
+      "maximum_velocity_m_per_s": 7.558251190218771e-12
+    },
+    "Massalia": {
+      "id": 2000020,
+      "samples": 56,
+      "maximum_position_metres": 0.00012370225688050125,
+      "maximum_velocity_m_per_s": 5.1761855674304616e-12
+    },
+    "Julia": {
+      "id": 2000089,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 4.092726157978177e-12
+    },
+    "Armenia": {
+      "id": 2000780,
+      "samples": 56,
+      "maximum_position_metres": 0.0001317590029843944,
+      "maximum_velocity_m_per_s": 7.499885442698834e-12
+    },
+    "Nemausa": {
+      "id": 2000051,
+      "samples": 56,
+      "maximum_position_metres": 0.00012419754483108296,
+      "maximum_velocity_m_per_s": 4.290077928115626e-12
+    },
+    "Philosophia": {
+      "id": 2000227,
+      "samples": 56,
+      "maximum_position_metres": 0.00012419754483108296,
+      "maximum_velocity_m_per_s": 7.644119011281073e-12
+    },
+    "Pompeja": {
+      "id": 2000203,
+      "samples": 56,
+      "maximum_position_metres": 8.90550043482113e-05,
+      "maximum_velocity_m_per_s": 5.653563111607744e-12
+    },
+    "Eucharis": {
+      "id": 2000181,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.1448789686149945e-12
+    },
+    "Pretoria": {
+      "id": 2000790,
+      "samples": 56,
+      "maximum_position_metres": 0.0001856311807341986,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Atalante": {
+      "id": 2000036,
+      "samples": 56,
+      "maximum_position_metres": 0.0001220703125,
+      "maximum_velocity_m_per_s": 3.646849775656265e-12
+    },
+    "Gudrun": {
+      "id": 2000328,
+      "samples": 56,
+      "maximum_position_metres": 6.823937919616058e-05,
+      "maximum_velocity_m_per_s": 5.770097023036906e-12
+    },
+    "Melpomene": {
+      "id": 2000018,
+      "samples": 56,
+      "maximum_position_metres": 0.00012230849870209807,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    },
+    "Bettina": {
+      "id": 2000250,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 4.6597737154841516e-12
+    },
+    "Arethusa": {
+      "id": 2000095,
+      "samples": 56,
+      "maximum_position_metres": 0.00015377611379042343,
+      "maximum_velocity_m_per_s": 4.570154315443183e-12
+    },
+    "Aletheia": {
+      "id": 2000259,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 5.475883235154604e-12
+    },
+    "Myrrha": {
+      "id": 2000381,
+      "samples": 56,
+      "maximum_position_metres": 7.475249459177179e-05,
+      "maximum_velocity_m_per_s": 5.9117155615240335e-12
+    },
+    "Medea": {
+      "id": 2000212,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 4.61658157843134e-12
+    },
+    "Klymene": {
+      "id": 2000104,
+      "samples": 56,
+      "maximum_position_metres": 9.035277772771462e-05,
+      "maximum_velocity_m_per_s": 5.886519586965559e-12
+    },
+    "Melete": {
+      "id": 2000056,
+      "samples": 56,
+      "maximum_position_metres": 0.0001314826045197608,
+      "maximum_velocity_m_per_s": 4.290666304794429e-12
+    },
+    "Gyptis": {
+      "id": 2000444,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.606501875235132e-12
+    },
+    "Kleopatra": {
+      "id": 2000216,
+      "samples": 56,
+      "maximum_position_metres": 8.631674575031098e-05,
+      "maximum_velocity_m_per_s": 7.332580706405269e-12
+    },
+    "Pulcova": {
+      "id": 2000762,
+      "samples": 56,
+      "maximum_position_metres": 0.00012212990259996125,
+      "maximum_velocity_m_per_s": 5.4617031080235e-12
+    },
+    "Vibilia": {
+      "id": 2000144,
+      "samples": 56,
+      "maximum_position_metres": 0.0001261432574428262,
+      "maximum_velocity_m_per_s": 7.633332533760839e-12
+    },
+    "Erminia": {
+      "id": 2000705,
+      "samples": 56,
+      "maximum_position_metres": 0.0001220703125,
+      "maximum_velocity_m_per_s": 4.897778860262864e-12
+    },
+    "Adorea": {
+      "id": 2000268,
+      "samples": 56,
+      "maximum_position_metres": 0.0001310530348686362,
+      "maximum_velocity_m_per_s": 3.76542065207086e-12
+    },
+    "Emma": {
+      "id": 2000283,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 5.4569682106375694e-12
+    },
+    "Harmonia": {
+      "id": 2000040,
+      "samples": 56,
+      "maximum_position_metres": 6.485686544769021e-05,
+      "maximum_velocity_m_per_s": 7.883619398092507e-12
+    },
+    "Argentina": {
+      "id": 2000469,
+      "samples": 56,
+      "maximum_position_metres": 0.00012396298835198915,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Ino": {
+      "id": 2000173,
+      "samples": 56,
+      "maximum_position_metres": 8.98075665816769e-05,
+      "maximum_velocity_m_per_s": 4.637531231849411e-12
+    },
+    "Aquitania": {
+      "id": 2000387,
+      "samples": 56,
+      "maximum_position_metres": 0.00013126106669681742,
+      "maximum_velocity_m_per_s": 6.62122137262533e-12
+    },
+    "Bellona": {
+      "id": 2000028,
+      "samples": 56,
+      "maximum_position_metres": 0.00019073486328125,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Lampetia": {
+      "id": 2000393,
+      "samples": 56,
+      "maximum_position_metres": 7.780486318348365e-05,
+      "maximum_velocity_m_per_s": 5.532313300783766e-12
+    },
+    "Siwa": {
+      "id": 2000140,
+      "samples": 56,
+      "maximum_position_metres": 7.085485695269283e-05,
+      "maximum_velocity_m_per_s": 4.327572767277679e-12
+    },
+    "Victoria": {
+      "id": 2000012,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 7.347547867564811e-12
+    },
+    "Hippo": {
+      "id": 2000426,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 4.067383956680332e-12
+    },
+    "Astraea": {
+      "id": 2000005,
+      "samples": 56,
+      "maximum_position_metres": 9.187007582696759e-05,
+      "maximum_velocity_m_per_s": 6.33389767116756e-12
+    },
+    "Ianthe": {
+      "id": 2000098,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 9.668061295755842e-12
+    },
+    "Chloris": {
+      "id": 2000410,
+      "samples": 56,
+      "maximum_position_metres": 0.00012947511862546645,
+      "maximum_velocity_m_per_s": 8.09699534932125e-12
+    },
+    "Circe": {
+      "id": 2000034,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 1.1029381162766098e-11
+    },
+    "Adeona": {
+      "id": 2000145,
+      "samples": 56,
+      "maximum_position_metres": 9.7703922079969e-05,
+      "maximum_velocity_m_per_s": 5.164937052359413e-12
+    },
+    "Ophelia": {
+      "id": 2000171,
+      "samples": 56,
+      "maximum_position_metres": 0.000126982012772409,
+      "maximum_velocity_m_per_s": 7.283946833759432e-12
+    },
+    "Hermione": {
+      "id": 2000121,
+      "samples": 56,
+      "maximum_position_metres": 0.00018703690600786228,
+      "maximum_velocity_m_per_s": 4.570154315443183e-12
+    },
+    "Comacina": {
+      "id": 2000489,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 5.79245315878188e-12
+    },
+    "Ninina": {
+      "id": 2000357,
+      "samples": 56,
+      "maximum_position_metres": 0.00018785205463020524,
+      "maximum_velocity_m_per_s": 4.897778860262864e-12
+    },
+    "Ausonia": {
+      "id": 2000063,
+      "samples": 56,
+      "maximum_position_metres": 0.00012307942050858824,
+      "maximum_velocity_m_per_s": 4.092726157978177e-12
+    },
+    "Thia": {
+      "id": 2000405,
+      "samples": 56,
+      "maximum_position_metres": 0.00012230849870209807,
+      "maximum_velocity_m_per_s": 7.693836012407988e-12
+    },
+    "Xanthippe": {
+      "id": 2000156,
+      "samples": 56,
+      "maximum_position_metres": 0.00012680641280055741,
+      "maximum_velocity_m_per_s": 8.248369862129518e-12
+    },
+    "Ornamenta": {
+      "id": 2000350,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 5.550898829703193e-12
+    },
+    "Thalia": {
+      "id": 2000023,
+      "samples": 56,
+      "maximum_position_metres": 6.31953169064274e-05,
+      "maximum_velocity_m_per_s": 5.550898829703193e-12
+    },
+    "Gallia": {
+      "id": 2000148,
+      "samples": 56,
+      "maximum_position_metres": 0.0001373291015625,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Merapi": {
+      "id": 2000536,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 3.7240032166117086e-12
+    },
+    "Nuwa": {
+      "id": 2000150,
+      "samples": 56,
+      "maximum_position_metres": 0.00014335599841395227,
+      "maximum_velocity_m_per_s": 5.46059373481395e-12
+    },
+    "Charybdis": {
+      "id": 2000388,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Eva": {
+      "id": 2000164,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 8.580155856231252e-12
+    },
+    "Athamantis": {
+      "id": 2000230,
+      "samples": 56,
+      "maximum_position_metres": 0.00012419754483108296,
+      "maximum_velocity_m_per_s": 7.513659348596004e-12
+    },
+    "Loreley": {
+      "id": 2000165,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 5.4572642620801115e-12
+    },
+    "Antiope": {
+      "id": 2000090,
+      "samples": 56,
+      "maximum_position_metres": 8.883004014736189e-05,
+      "maximum_velocity_m_per_s": 5.6389702933492024e-12
+    },
+    "Meliboea": {
+      "id": 2000137,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 4.223278579276373e-12
+    },
+    "Princetonia": {
+      "id": 2000508,
+      "samples": 56,
+      "maximum_position_metres": 0.00012244227482379177,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    },
+    "Wratislavia": {
+      "id": 2000690,
+      "samples": 56,
+      "maximum_position_metres": 0.00018359159470875762,
+      "maximum_velocity_m_per_s": 7.626344918775622e-12
+    },
+    "Euterpe": {
+      "id": 2000027,
+      "samples": 56,
+      "maximum_position_metres": 0.0001223431325284957,
+      "maximum_velocity_m_per_s": 5.624914082024125e-12
+    },
+    "Alexandra": {
+      "id": 2000054,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    },
+    "Hispania": {
+      "id": 2000804,
+      "samples": 56,
+      "maximum_position_metres": 8.765506967984052e-05,
+      "maximum_velocity_m_per_s": 7.275957614183426e-12
+    },
+    "Elfriede": {
+      "id": 2000618,
+      "samples": 56,
+      "maximum_position_metres": 0.00013389533061816593,
+      "maximum_velocity_m_per_s": 5.164937052359413e-12
+    },
+    "Liguria": {
+      "id": 2000356,
+      "samples": 56,
+      "maximum_position_metres": 0.00014395112811365666,
+      "maximum_velocity_m_per_s": 4.507507492598736e-12
+    },
+    "Adria": {
+      "id": 2000143,
+      "samples": 56,
+      "maximum_position_metres": 8.217109385886389e-05,
+      "maximum_velocity_m_per_s": 4.637531231849411e-12
+    },
+    "Kassandra": {
+      "id": 2000114,
+      "samples": 56,
+      "maximum_position_metres": 7.197556405682833e-05,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Protogeneia": {
+      "id": 2000147,
+      "samples": 56,
+      "maximum_position_metres": 0.00012248033713506068,
+      "maximum_velocity_m_per_s": 6.375591916735154e-12
+    },
+    "Johanna": {
+      "id": 2000127,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 7.291041013024353e-12
+    },
+    "Prokne": {
+      "id": 2000194,
+      "samples": 56,
+      "maximum_position_metres": 7.197556405682833e-05,
+      "maximum_velocity_m_per_s": 6.1010759350204984e-12
+    },
+    "Fides": {
+      "id": 2000037,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 4.455595886216866e-12
+    },
+    "Chicago": {
+      "id": 2000334,
+      "samples": 56,
+      "maximum_position_metres": 0.0001310530348686362,
+      "maximum_velocity_m_per_s": 6.052155938144171e-12
+    },
+    "Aurelia": {
+      "id": 2000419,
+      "samples": 56,
+      "maximum_position_metres": 0.00012634655122130734,
+      "maximum_velocity_m_per_s": 5.9117155615240335e-12
+    },
+    "Bertholda": {
+      "id": 2000420,
+      "samples": 56,
+      "maximum_position_metres": 0.00012314221519308492,
+      "maximum_velocity_m_per_s": 5.828044603720762e-12
+    },
+    "Marianna": {
+      "id": 2000602,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 4.073734286787139e-12
+    },
+    "Polyxena": {
+      "id": 2000595,
+      "samples": 56,
+      "maximum_position_metres": 8.929977348876668e-05,
+      "maximum_velocity_m_per_s": 5.224649291029008e-12
+    },
+    "Padua": {
+      "id": 2000363,
+      "samples": 56,
+      "maximum_position_metres": 0.00012605828584181446,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Hypatia": {
+      "id": 2000238,
+      "samples": 56,
+      "maximum_position_metres": 0.000139849111784541,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Lumen": {
+      "id": 2000141,
+      "samples": 56,
+      "maximum_position_metres": 0.00013345989749554367,
+      "maximum_velocity_m_per_s": 7.332580706405269e-12
+    },
+    "Polyxo": {
+      "id": 2000308,
+      "samples": 56,
+      "maximum_position_metres": 0.0001290811486487475,
+      "maximum_velocity_m_per_s": 7.290500878974327e-12
+    },
+    "Ani": {
+      "id": 2000791,
+      "samples": 56,
+      "maximum_position_metres": 0.00018935659249863979,
+      "maximum_velocity_m_per_s": 5.550898829703193e-12
+    },
+    "Roberta": {
+      "id": 2000335,
+      "samples": 56,
+      "maximum_position_metres": 8.695188011675396e-05,
+      "maximum_velocity_m_per_s": 4.6597737154841516e-12
+    },
+    "Carlova": {
+      "id": 2000360,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 7.94263472685478e-12
+    },
+    "Diana": {
+      "id": 2000078,
+      "samples": 56,
+      "maximum_position_metres": 6.823937919616058e-05,
+      "maximum_velocity_m_per_s": 5.92918004731714e-12
+    },
+    "Undina": {
+      "id": 2000092,
+      "samples": 56,
+      "maximum_position_metres": 0.00012680641280055741,
+      "maximum_velocity_m_per_s": 4.092726157978177e-12
+    },
+    "Asterope": {
+      "id": 2000233,
+      "samples": 56,
+      "maximum_position_metres": 0.00013389533061816593,
+      "maximum_velocity_m_per_s": 4.351399913731402e-12
+    },
+    "Adelheid": {
+      "id": 2000276,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 5.842441695462911e-12
+    },
+    "Lutetia": {
+      "id": 2000021,
+      "samples": 56,
+      "maximum_position_metres": 7.139193447957192e-05,
+      "maximum_velocity_m_per_s": 7.771193914610131e-12
+    },
+    "Gerlinde": {
+      "id": 2000663,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 5.4569682106375694e-12
+    },
+    "Bredichina": {
+      "id": 2000786,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 7.473126256420435e-12
+    },
+    "Messalina": {
+      "id": 2000545,
+      "samples": 56,
+      "maximum_position_metres": 8.839897328381704e-05,
+      "maximum_velocity_m_per_s": 4.570154315443183e-12
+    },
+    "Aemilia": {
+      "id": 2000159,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 4.067383956680332e-12
+    },
+    "Marion": {
+      "id": 2000506,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 3.990391809289632e-12
+    },
+    "Galatea": {
+      "id": 2000074,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 5.532240293449121e-12
+    },
+    "Helio": {
+      "id": 2000895,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 4.455595886216866e-12
+    },
+    "Armida": {
+      "id": 2000514,
+      "samples": 56,
+      "maximum_position_metres": 8.765506967984052e-05,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    },
+    "Isis": {
+      "id": 2000042,
+      "samples": 56,
+      "maximum_position_metres": 0.00011029687724915284,
+      "maximum_velocity_m_per_s": 5.6843418860808015e-12
+    },
+    "Beatrix": {
+      "id": 2000083,
+      "samples": 56,
+      "maximum_position_metres": 0.0001290811486487475,
+      "maximum_velocity_m_per_s": 7.283059575478076e-12
+    },
+    "Zelinda": {
+      "id": 2000654,
+      "samples": 56,
+      "maximum_position_metres": 0.00012419754483108296,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    },
+    "Concordia": {
+      "id": 2000058,
+      "samples": 56,
+      "maximum_position_metres": 8.765506967984052e-05,
+      "maximum_velocity_m_per_s": 5.653563111607744e-12
+    },
+    "Proserpina": {
+      "id": 2000026,
+      "samples": 56,
+      "maximum_position_metres": 0.0001270357193401086,
+      "maximum_velocity_m_per_s": 7.276845738399633e-12
+    },
+    "Hohensteina": {
+      "id": 2000788,
+      "samples": 56,
+      "maximum_position_metres": 8.631674575031098e-05,
+      "maximum_velocity_m_per_s": 4.547473508864641e-12
+    },
+    "Edith": {
+      "id": 2000517,
+      "samples": 56,
+      "maximum_position_metres": 0.00013094194941966933,
+      "maximum_velocity_m_per_s": 7.517313800108153e-12
+    },
+    "Hersilia": {
+      "id": 2000206,
+      "samples": 56,
+      "maximum_position_metres": 8.665326455383718e-05,
+      "maximum_velocity_m_per_s": 7.378267009511525e-12
+    },
+    "Tanete": {
+      "id": 2000772,
+      "samples": 56,
+      "maximum_position_metres": 0.0001220703125,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Denise": {
+      "id": 2000667,
+      "samples": 56,
+      "maximum_position_metres": 0.00012605828584181446,
+      "maximum_velocity_m_per_s": 4.223278579276373e-12
+    },
+    "Penelope": {
+      "id": 2000201,
+      "samples": 56,
+      "maximum_position_metres": 8.929977348876668e-05,
+      "maximum_velocity_m_per_s": 5.756641667709193e-12
+    },
+    "Aline": {
+      "id": 2000266,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 6.21968054866905e-12
+    },
+    "Vaticana": {
+      "id": 2000416,
+      "samples": 56,
+      "maximum_position_metres": 6.919234141241857e-05,
+      "maximum_velocity_m_per_s": 8.134767913360665e-12
+    },
+    "Tokio": {
+      "id": 2000498,
+      "samples": 56,
+      "maximum_position_metres": 0.00012361031910720558,
+      "maximum_velocity_m_per_s": 4.547473508864641e-12
+    },
+    "Arsinoe": {
+      "id": 2000404,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 4.6597737154841516e-12
+    },
+    "Peraga": {
+      "id": 2000554,
+      "samples": 56,
+      "maximum_position_metres": 8.90550043482113e-05,
+      "maximum_velocity_m_per_s": 5.160242934283071e-12
+    },
+    "Tercidina": {
+      "id": 2000345,
+      "samples": 56,
+      "maximum_position_metres": 0.00011108566115235165,
+      "maximum_velocity_m_per_s": 7.499885442698834e-12
+    },
+    "Iduna": {
+      "id": 2000176,
+      "samples": 56,
+      "maximum_position_metres": 0.00012325664078829582,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Brixia": {
+      "id": 2000521,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 7.332580706405269e-12
+    },
+    "Faina": {
+      "id": 2000751,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 7.65219889145411e-12
+    },
+    "Erato": {
+      "id": 2000062,
+      "samples": 56,
+      "maximum_position_metres": 0.0001230956416893176,
+      "maximum_velocity_m_per_s": 5.5573709112365805e-12
+    },
+    "Feronia": {
+      "id": 2000072,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.4617031080235e-12
+    },
+    "Dynamene": {
+      "id": 2000200,
+      "samples": 56,
+      "maximum_position_metres": 6.823937919616058e-05,
+      "maximum_velocity_m_per_s": 5.823607568738997e-12
+    },
+    "Christa": {
+      "id": 2001015,
+      "samples": 56,
+      "maximum_position_metres": 0.00012947511862546645,
+      "maximum_velocity_m_per_s": 4.092726157978177e-12
+    },
+    "Eunike": {
+      "id": 2000185,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Eos": {
+      "id": 2000221,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 4.155794323749942e-12
+    },
+    "Hertha": {
+      "id": 2000135,
+      "samples": 56,
+      "maximum_position_metres": 7.30043762550531e-05,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    },
+    "Semele": {
+      "id": 2000086,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 5.475883235154604e-12
+    },
+    "Veritas": {
+      "id": 2000490,
+      "samples": 56,
+      "maximum_position_metres": 6.866455078125e-05,
+      "maximum_velocity_m_per_s": 7.554830392944564e-12
+    },
+    "Emita": {
+      "id": 2000481,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 8.0356571957383e-12
+    },
+    "Aegina": {
+      "id": 2000091,
+      "samples": 56,
+      "maximum_position_metres": 9.04533821211195e-05,
+      "maximum_velocity_m_per_s": 7.988270189126754e-12
+    },
+    "Alkeste": {
+      "id": 2000124,
+      "samples": 56,
+      "maximum_position_metres": 0.00012230849870209807,
+      "maximum_velocity_m_per_s": 5.7860346169482195e-12
+    },
+    "Artemis": {
+      "id": 2000105,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.550898829703193e-12
+    },
+    "Nephele": {
+      "id": 2000431,
+      "samples": 56,
+      "maximum_position_metres": 0.00012232336994036838,
+      "maximum_velocity_m_per_s": 4.335871271560263e-12
+    },
+    "Freda": {
+      "id": 2001093,
+      "samples": 56,
+      "maximum_position_metres": 8.765506967984052e-05,
+      "maximum_velocity_m_per_s": 7.513659348596004e-12
+    },
+    "Antigone": {
+      "id": 2000129,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 5.886519586965559e-12
+    },
+    "Erigone": {
+      "id": 2000163,
+      "samples": 56,
+      "maximum_position_metres": 0.00012947511862546645,
+      "maximum_velocity_m_per_s": 7.697195032874677e-12
+    },
+    "Thetis": {
+      "id": 2000017,
+      "samples": 56,
+      "maximum_position_metres": 6.866455078125e-05,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    },
+    "Desiderata": {
+      "id": 2000344,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Niobe": {
+      "id": 2000071,
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 6.1010759350204984e-12
+    },
+    "Rusthawelia": {
+      "id": 2001171,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 7.279509460923746e-12
+    },
+    "Lictoria": {
+      "id": 2001107,
+      "samples": 56,
+      "maximum_position_metres": 0.0001290811486487475,
+      "maximum_velocity_m_per_s": 4.073734286787139e-12
+    },
+    "Melusina": {
+      "id": 2000373,
+      "samples": 56,
+      "maximum_position_metres": 0.00014950498918354357,
+      "maximum_velocity_m_per_s": 4.223278579276373e-12
+    },
+    "Hera": {
+      "id": 2000103,
+      "samples": 56,
+      "maximum_position_metres": 7.475249459177179e-05,
+      "maximum_velocity_m_per_s": 4.480184655958063e-12
+    },
+    "Ate": {
+      "id": 2000111,
+      "samples": 56,
+      "maximum_position_metres": 0.00012315329328428594,
+      "maximum_velocity_m_per_s": 7.402750541632352e-12
+    },
+    "Ariadne": {
+      "id": 2000043,
+      "samples": 56,
+      "maximum_position_metres": 8.631674575031098e-05,
+      "maximum_velocity_m_per_s": 5.536910822177525e-12
+    },
+    "Terpsichore": {
+      "id": 2000081,
+      "samples": 56,
+      "maximum_position_metres": 0.0001373291015625,
+      "maximum_velocity_m_per_s": 4.124184931064759e-12
+    },
+    "Boliviana": {
+      "id": 2000712,
+      "samples": 56,
+      "maximum_position_metres": 0.00012801989894523495,
+      "maximum_velocity_m_per_s": 7.448006433223417e-12
+    },
+    "Elisabetha": {
+      "id": 2000412,
+      "samples": 56,
+      "maximum_position_metres": 0.00013822685952753782,
+      "maximum_velocity_m_per_s": 4.455595886216866e-12
+    },
+    "Sapientia": {
+      "id": 2000275,
+      "samples": 56,
+      "maximum_position_metres": 0.00013481595647485574,
+      "maximum_velocity_m_per_s": 7.603431462123792e-12
+    },
+    "Tatjana": {
+      "id": 2000769,
+      "samples": 56,
+      "maximum_position_metres": 7.197556405682833e-05,
+      "maximum_velocity_m_per_s": 7.30786208804975e-12
+    },
+    "Josephina": {
+      "id": 2000303,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 7.31934897104105e-12
+    },
+    "Panopaea": {
+      "id": 2000070,
+      "samples": 56,
+      "maximum_position_metres": 7.62939453125e-05,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Arachne": {
+      "id": 2000407,
+      "samples": 56,
+      "maximum_position_metres": 0.00012630335335650104,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Sophrosyne": {
+      "id": 2000134,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 5.823607568738997e-12
+    },
+    "Lanzia": {
+      "id": 2000683,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 5.752149554916067e-12
+    },
+    "Fringilla": {
+      "id": 2000709,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 4.067383956680332e-12
+    },
+    "Mandeville": {
+      "id": 2000739,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 7.77072613829435e-12
+    },
+    "Leto": {
+      "id": 2000068,
+      "samples": 56,
+      "maximum_position_metres": 0.00013669184011206754,
+      "maximum_velocity_m_per_s": 5.467615963612411e-12
+    },
+    "Cantabia": {
+      "id": 2000740,
+      "samples": 56,
+      "maximum_position_metres": 0.00012230849870209807,
+      "maximum_velocity_m_per_s": 4.092726157978177e-12
+    },
+    "Irmintraud": {
+      "id": 2000773,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    },
+    "Bruchsalia": {
+      "id": 2000455,
+      "samples": 56,
+      "maximum_position_metres": 0.00012706793238490504,
+      "maximum_velocity_m_per_s": 5.677801129811926e-12
+    },
+    "Cava": {
+      "id": 2000505,
+      "samples": 56,
+      "maximum_position_metres": 0.00012244227482379177,
+      "maximum_velocity_m_per_s": 7.275957614183426e-12
+    },
+    "Hamburga": {
+      "id": 2000449,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 5.756641667709193e-12
+    },
+    "Havnia": {
+      "id": 2000362,
+      "samples": 56,
+      "maximum_position_metres": 0.00012425611476823677,
+      "maximum_velocity_m_per_s": 4.897778860262864e-12
+    },
+    "Lydia": {
+      "id": 2000110,
+      "samples": 56,
+      "maximum_position_metres": 7.207658244205927e-05,
+      "maximum_velocity_m_per_s": 5.561366746694607e-12
+    },
+    "Luscinia": {
+      "id": 2000713,
+      "samples": 56,
+      "maximum_position_metres": 9.187502558995315e-05,
+      "maximum_velocity_m_per_s": 4.834030647877921e-12
+    },
+    "Gratia": {
+      "id": 2000424,
+      "samples": 56,
+      "maximum_position_metres": 8.665326455383718e-05,
+      "maximum_velocity_m_per_s": 5.828044603720762e-12
+    },
+    "Hermentaria": {
+      "id": 2000346,
+      "samples": 56,
+      "maximum_position_metres": 0.0001336267543567077,
+      "maximum_velocity_m_per_s": 7.275957614183426e-12
+    },
+    "Vundtia": {
+      "id": 2000635,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 7.279190420552851e-12
+    },
+    "Ludmilla": {
+      "id": 2000675,
+      "samples": 56,
+      "maximum_position_metres": 0.00018578789767281984,
+      "maximum_velocity_m_per_s": 3.9118846266513295e-12
+    },
+    "Klotho": {
+      "id": 2000097,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 5.770097023036906e-12
+    },
+    "Luisa": {
+      "id": 2000599,
+      "samples": 56,
+      "maximum_position_metres": 0.00012513137410626775,
+      "maximum_velocity_m_per_s": 8.510581788965693e-12
+    },
+    "Ilmatar": {
+      "id": 2000385,
+      "samples": 56,
+      "maximum_position_metres": 0.00010235906879424087,
+      "maximum_velocity_m_per_s": 4.124184931064759e-12
+    },
+    "Rachele": {
+      "id": 2000674,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 3.811477339295427e-12
+    },
+    "Laurentia": {
+      "id": 2000162,
+      "samples": 56,
+      "maximum_position_metres": 9.515739199269426e-05,
+      "maximum_velocity_m_per_s": 6.0713454890077126e-12
+    },
+    "Apollonia": {
+      "id": 2000358,
+      "samples": 56,
+      "maximum_position_metres": 0.00013482944818932283,
+      "maximum_velocity_m_per_s": 5.552062906224264e-12
+    },
+    "Mashona": {
+      "id": 2001467,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Ara": {
+      "id": 2000849,
+      "samples": 56,
+      "maximum_position_metres": 0.00010235906879424087,
+      "maximum_velocity_m_per_s": 5.516155189961014e-12
+    },
+    "Campania": {
+      "id": 2000377,
+      "samples": 56,
+      "maximum_position_metres": 0.00012230849870209807,
+      "maximum_velocity_m_per_s": 5.6843418860808015e-12
+    },
+    "Kolga": {
+      "id": 2000191,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 7.332580706405269e-12
+    },
+    "Vanadis": {
+      "id": 2000240,
+      "samples": 56,
+      "maximum_position_metres": 0.00013563649519013235,
+      "maximum_velocity_m_per_s": 5.4643646848104516e-12
+    },
+    "Octavia": {
+      "id": 2000598,
+      "samples": 56,
+      "maximum_position_metres": 0.00019301011109426145,
+      "maximum_velocity_m_per_s": 5.624914082024125e-12
+    },
+    "Virginia": {
+      "id": 2000050,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 5.756641667709193e-12
+    },
+    "Carina": {
+      "id": 2000491,
+      "samples": 56,
+      "maximum_position_metres": 0.000125885009765625,
+      "maximum_velocity_m_per_s": 5.4617031080235e-12
+    },
+    "Eurykleia": {
+      "id": 2000195,
+      "samples": 56,
+      "maximum_position_metres": 0.00010150249249000603,
+      "maximum_velocity_m_per_s": 5.624914082024125e-12
+    },
+    "Felicitas": {
+      "id": 2000109,
+      "samples": 56,
+      "maximum_position_metres": 0.000139849111784541,
+      "maximum_velocity_m_per_s": 4.6597737154841516e-12
+    },
+    "Hekate": {
+      "id": 2000100,
+      "samples": 56,
+      "maximum_position_metres": 8.929977348876668e-05,
+      "maximum_velocity_m_per_s": 1.1578210484434763e-11
+    },
+    "Edna": {
+      "id": 2000445,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 4.455595886216866e-12
+    },
+    "Corduba": {
+      "id": 2000365,
+      "samples": 56,
+      "maximum_position_metres": 7.817803013580016e-05,
+      "maximum_velocity_m_per_s": 7.784020803512108e-12
+    },
+    "Aeria": {
+      "id": 2000369,
+      "samples": 56,
+      "maximum_position_metres": 0.00012775053934245784,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Leukothea": {
+      "id": 2000035,
+      "samples": 56,
+      "maximum_position_metres": 9.650505554713072e-05,
+      "maximum_velocity_m_per_s": 6.1010759350204984e-12
+    },
+    "Evelyn": {
+      "id": 2000503,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 4.38284508304633e-12
+    },
+    "Leda": {
+      "id": 2000038,
+      "samples": 56,
+      "maximum_position_metres": 7.085485695269283e-05,
+      "maximum_velocity_m_per_s": 7.558251190218771e-12
+    },
+    "Genoveva": {
+      "id": 2000680,
+      "samples": 56,
+      "maximum_position_metres": 6.919234141241857e-05,
+      "maximum_velocity_m_per_s": 5.4569682106375694e-12
+    },
+    "Nausikaa": {
+      "id": 2000192,
+      "samples": 56,
+      "maximum_position_metres": 8.252451954949927e-05,
+      "maximum_velocity_m_per_s": 7.554830392944564e-12
+    },
+    "Nysa": {
+      "id": 2000044,
+      "samples": 56,
+      "maximum_position_metres": 0.00012680641280055741,
+      "maximum_velocity_m_per_s": 7.612987116846073e-12
+    },
+    "Phaeo": {
+      "id": 2000322,
+      "samples": 56,
+      "maximum_position_metres": 0.00013042694852660185,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Palatia": {
+      "id": 2000415,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 5.462886191132367e-12
+    },
+    "Flammario": {
+      "id": 2001021,
+      "samples": 56,
+      "maximum_position_metres": 0.000125885009765625,
+      "maximum_velocity_m_per_s": 1.1066816590426203e-11
+    },
+    "Olga": {
+      "id": 2000304,
+      "samples": 56,
+      "maximum_position_metres": 6.99245558922705e-05,
+      "maximum_velocity_m_per_s": 7.71731845292249e-12
+    },
+    "Industria": {
+      "id": 2000389,
+      "samples": 56,
+      "maximum_position_metres": 8.665326455383718e-05,
+      "maximum_velocity_m_per_s": 7.325747293870124e-12
+    },
+    "Vincentina": {
+      "id": 2000366,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 4.570154315443183e-12
+    },
+    "Cheruskia": {
+      "id": 2000568,
+      "samples": 56,
+      "maximum_position_metres": 0.0001415555978033407,
+      "maximum_velocity_m_per_s": 5.550898829703193e-12
+    },
+    "Pomona": {
+      "id": 2000032,
+      "samples": 56,
+      "maximum_position_metres": 8.929977348876668e-05,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    },
+    "Kalypso": {
+      "id": 2000053,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 7.71731845292249e-12
+    },
+    "Isabella": {
+      "id": 2000210,
+      "samples": 56,
+      "maximum_position_metres": 0.00012513137410626775,
+      "maximum_velocity_m_per_s": 4.687428401686771e-12
+    },
+    "Marghanna": {
+      "id": 2000735,
+      "samples": 56,
+      "maximum_position_metres": 9.1552734375e-05,
+      "maximum_velocity_m_per_s": 5.480896566037312e-12
+    },
+    "Isolda": {
+      "id": 2000211,
+      "samples": 56,
+      "maximum_position_metres": 0.00013669184011206754,
+      "maximum_velocity_m_per_s": 7.71250199971831e-12
+    },
+    "Tisiphone": {
+      "id": 2000466,
+      "samples": 56,
+      "maximum_position_metres": 0.00013037115089901017,
+      "maximum_velocity_m_per_s": 3.990391809289632e-12
+    },
+    "Klio": {
+      "id": 2000084,
+      "samples": 56,
+      "maximum_position_metres": 9.289394883640992e-05,
+      "maximum_velocity_m_per_s": 4.4787419946242626e-12
+    },
+    "Mnemosyne": {
+      "id": 2000057,
+      "samples": 56,
+      "maximum_position_metres": 7.62939453125e-05,
+      "maximum_velocity_m_per_s": 8.607227405603999e-12
+    },
+    "Andromache": {
+      "id": 2000175,
+      "samples": 56,
+      "maximum_position_metres": 0.00012495681269957885,
+      "maximum_velocity_m_per_s": 5.1561712418554486e-12
+    },
+    "Devosa": {
+      "id": 2000337,
+      "samples": 56,
+      "maximum_position_metres": 0.00012419754483108296,
+      "maximum_velocity_m_per_s": 4.834030647877921e-12
+    },
+    "Lilaea": {
+      "id": 2000213,
+      "samples": 56,
+      "maximum_position_metres": 7.475249459177179e-05,
+      "maximum_velocity_m_per_s": 7.38198848727079e-12
+    },
+    "Miriam": {
+      "id": 2000102,
+      "samples": 56,
+      "maximum_position_metres": 8.665326455383718e-05,
+      "maximum_velocity_m_per_s": 5.6843418860808015e-12
+    },
+    "Chaldaea": {
+      "id": 2000313,
+      "samples": 56,
+      "maximum_position_metres": 9.437039853556046e-05,
+      "maximum_velocity_m_per_s": 5.532240293449121e-12
+    },
+    "Notburga": {
+      "id": 2000626,
+      "samples": 56,
+      "maximum_position_metres": 8.929977348876668e-05,
+      "maximum_velocity_m_per_s": 6.8060351382408795e-12
+    },
+    "Thyra": {
+      "id": 2000115,
+      "samples": 56,
+      "maximum_position_metres": 7.62939453125e-05,
+      "maximum_velocity_m_per_s": 7.554830392944564e-12
+    },
+    "Tamara": {
+      "id": 2000326,
+      "samples": 56,
+      "maximum_position_metres": 6.473755931273323e-05,
+      "maximum_velocity_m_per_s": 7.346668290394296e-12
+    },
+    "Massinga": {
+      "id": 2000760,
+      "samples": 56,
+      "maximum_position_metres": 0.0001057159916729051,
+      "maximum_velocity_m_per_s": 5.767926668629208e-12
+    },
+    "Leonora": {
+      "id": 2000696,
+      "samples": 56,
+      "maximum_position_metres": 0.0001286294197089185,
+      "maximum_velocity_m_per_s": 7.275957614183426e-12
+    },
+    "Mathesis": {
+      "id": 2000454,
+      "samples": 56,
+      "maximum_position_metres": 0.00018374015165393518,
+      "maximum_velocity_m_per_s": 4.414798204140334e-12
+    },
+    "Una": {
+      "id": 2000160,
+      "samples": 56,
+      "maximum_position_metres": 0.00013263960762568443,
+      "maximum_velocity_m_per_s": 5.823607568738997e-12
+    },
+    "Anacostia": {
+      "id": 2000980,
+      "samples": 56,
+      "maximum_position_metres": 0.0001332416473127211,
+      "maximum_velocity_m_per_s": 5.624914082024125e-12
+    },
+    "Honoria": {
+      "id": 2000236,
+      "samples": 56,
+      "maximum_position_metres": 0.00012232336994036838,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    },
+    "Henrietta": {
+      "id": 2000225,
+      "samples": 56,
+      "maximum_position_metres": 8.665326455383718e-05,
+      "maximum_velocity_m_per_s": 7.823769253302659e-12
+    },
+    "Montague": {
+      "id": 2000535,
+      "samples": 56,
+      "maximum_position_metres": 0.00012634655122130734,
+      "maximum_velocity_m_per_s": 7.959004829825645e-12
+    },
+    "Dione": {
+      "id": 2000106,
+      "samples": 56,
+      "maximum_position_metres": 8.707208412562047e-05,
+      "maximum_velocity_m_per_s": 7.499885442698834e-12
+    },
+    "Megaira": {
+      "id": 2000464,
+      "samples": 56,
+      "maximum_position_metres": 0.00012605828584181446,
+      "maximum_velocity_m_per_s": 7.499885442698834e-12
+    },
+    "Eurydike": {
+      "id": 2000075,
+      "samples": 56,
+      "maximum_position_metres": 6.866455078125e-05,
+      "maximum_velocity_m_per_s": 4.124184931064759e-12
+    },
+    "Tauris": {
+      "id": 2000814,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 8.335656630071462e-12
+    },
+    "Urania": {
+      "id": 2000030,
+      "samples": 56,
+      "maximum_position_metres": 0.0001281796465415939,
+      "maximum_velocity_m_per_s": 4.8353673078365176e-12
+    },
+    "Amherstia": {
+      "id": 2000516,
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 4.637531231849411e-12
+    },
+    "Sappho": {
+      "id": 2000080,
+      "samples": 56,
+      "maximum_position_metres": 8.665326455383718e-05,
+      "maximum_velocity_m_per_s": 6.1010759350204984e-12
+    },
+    "Misa": {
+      "id": 2000569,
+      "samples": 56,
+      "maximum_position_metres": 7.260462307233536e-05,
+      "maximum_velocity_m_per_s": 5.9117155615240335e-12
+    },
+    "Rosa": {
+      "id": 2000223,
+      "samples": 56,
+      "maximum_position_metres": 8.842477120126792e-05,
+      "maximum_velocity_m_per_s": 5.5906304378206636e-12
+    },
+    "Sulamitis": {
+      "id": 2000752,
+      "samples": 56,
+      "maximum_position_metres": 7.197556405682833e-05,
+      "maximum_velocity_m_per_s": 6.110601430180708e-12
+    },
+    "Pickeringia": {
+      "id": 2000784,
+      "samples": 56,
+      "maximum_position_metres": 0.00014400166388074396,
+      "maximum_velocity_m_per_s": 3.970910528681311e-12
+    },
+    "Frigga": {
+      "id": 2000077,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 4.086800679037581e-12
+    },
+    "Martha": {
+      "id": 2000205,
+      "samples": 56,
+      "maximum_position_metres": 0.0001220703125,
+      "maximum_velocity_m_per_s": 7.458411103860602e-12
+    },
+    "Alekto": {
+      "id": 2000465,
+      "samples": 56,
+      "maximum_position_metres": 8.110157633006783e-05,
+      "maximum_velocity_m_per_s": 7.590671876925443e-12
+    },
+    "Lehigh": {
+      "id": 2000691,
+      "samples": 56,
+      "maximum_position_metres": 0.00012396298835198915,
+      "maximum_velocity_m_per_s": 4.290077928115626e-12
+    },
+    "Nephthys": {
+      "id": 2000287,
+      "samples": 56,
+      "maximum_position_metres": 6.935645231466945e-05,
+      "maximum_velocity_m_per_s": 7.77072613829435e-12
+    },
+    "Ekard": {
+      "id": 2000694,
+      "samples": 56,
+      "maximum_position_metres": 0.00018703690600786228,
+      "maximum_velocity_m_per_s": 1.1368683772161603e-11
+    },
+    "Svea": {
+      "id": 2000329,
+      "samples": 56,
+      "maximum_position_metres": 0.000125885009765625,
+      "maximum_velocity_m_per_s": 7.823769253302659e-12
+    },
+    "Dike": {
+      "id": 2000099,
+      "samples": 56,
+      "maximum_position_metres": 8.707208412562047e-05,
+      "maximum_velocity_m_per_s": 3.885363069147175e-12
+    },
+    "Eurynome": {
+      "id": 2000079,
+      "samples": 56,
+      "maximum_position_metres": 0.00012680641280055741,
+      "maximum_velocity_m_per_s": 5.956365793021967e-12
+    },
+    "Baucis": {
+      "id": 2000172,
+      "samples": 56,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 4.073734286787139e-12
+    },
+    "Tekmessa": {
+      "id": 2000604,
+      "samples": 56,
+      "maximum_position_metres": 0.0001465558831199535,
+      "maximum_velocity_m_per_s": 7.677018864403241e-12
+    },
+    "Oceana": {
+      "id": 2000224,
+      "samples": 56,
+      "maximum_position_metres": 0.00012419754483108296,
+      "maximum_velocity_m_per_s": 5.770097023036906e-12
+    },
+    "Genua": {
+      "id": 2000485,
+      "samples": 56,
+      "maximum_position_metres": 0.00012302029034879378,
+      "maximum_velocity_m_per_s": 7.332580706405269e-12
+    },
+    "Palisana": {
+      "id": 2000914,
+      "samples": 56,
+      "maximum_position_metres": 0.00012495681269957885,
+      "maximum_velocity_m_per_s": 5.224649291029008e-12
+    },
+    "Titania": {
+      "id": 2000593,
+      "samples": 56,
+      "maximum_position_metres": 0.00012947511862546645,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Ulla": {
+      "id": 2000909,
+      "samples": 56,
+      "maximum_position_metres": 0.00012396298835198915,
+      "maximum_velocity_m_per_s": 7.626344918775622e-12
+    },
+    "Semiramis": {
+      "id": 2000584,
+      "samples": 56,
+      "maximum_position_metres": 0.00019301011109426145,
+      "maximum_velocity_m_per_s": 7.513659348596004e-12
+    },
+    "Alkmene": {
+      "id": 2000082,
+      "samples": 56,
+      "maximum_position_metres": 8.110157633006783e-05,
+      "maximum_velocity_m_per_s": 7.473126256420435e-12
+    },
+    "Eichsfeldia": {
+      "id": 2000442,
+      "samples": 56,
+      "maximum_position_metres": 0.00012582719804741396,
+      "maximum_velocity_m_per_s": 7.693836012407988e-12
+    },
+    "Ampella": {
+      "id": 2000198,
+      "samples": 56,
+      "maximum_position_metres": 6.834592005603377e-05,
+      "maximum_velocity_m_per_s": 8.910874494129183e-12
+    },
+    "Praxedis": {
+      "id": 2000547,
+      "samples": 56,
+      "maximum_position_metres": 0.000139849111784541,
+      "maximum_velocity_m_per_s": 4.553154302471009e-12
+    },
+    "Phocaea": {
+      "id": 2000025,
+      "samples": 56,
+      "maximum_position_metres": 0.00013647875839232116,
+      "maximum_velocity_m_per_s": 5.780167984487962e-12
+    },
+    "Irma": {
+      "id": 2000177,
+      "samples": 56,
+      "maximum_position_metres": 6.829932887952377e-05,
+      "maximum_velocity_m_per_s": 6.164563290568318e-12
+    },
+    "Amalthea": {
+      "id": 2000113,
+      "samples": 56,
+      "maximum_position_metres": 0.00012789195720092934,
+      "maximum_velocity_m_per_s": 6.6065650688722765e-12
+    },
+    "Iphigenia": {
+      "id": 2000112,
+      "samples": 56,
+      "maximum_position_metres": 0.000127221726575106,
+      "maximum_velocity_m_per_s": 5.611398510136969e-12
+    },
+    "Budrosa": {
+      "id": 2000338,
+      "samples": 56,
+      "maximum_position_metres": 8.90550043482113e-05,
+      "maximum_velocity_m_per_s": 7.283059575478076e-12
+    },
+    "Pariana": {
+      "id": 2000347,
+      "samples": 56,
+      "maximum_position_metres": 7.475249459177179e-05,
+      "maximum_velocity_m_per_s": 5.898583263421118e-12
+    },
+    "Ganymed": {
+      "id": 2001036,
+      "samples": 87,
+      "maximum_position_metres": 0.00012674902134579582,
+      "maximum_velocity_m_per_s": 4.067383956680332e-12
+    },
+    "Theobalda": {
+      "id": 2000778,
+      "samples": 56,
+      "maximum_position_metres": 7.475249459177179e-05,
+      "maximum_velocity_m_per_s": 7.558251190218771e-12
+    },
+    "Aethra": {
+      "id": 2000132,
+      "samples": 56,
+      "maximum_position_metres": 8.631674575031098e-05,
+      "maximum_velocity_m_per_s": 4.167828315035731e-12
+    },
+    "Irmgard": {
+      "id": 2000591,
+      "samples": 56,
+      "maximum_position_metres": 9.7703922079969e-05,
+      "maximum_velocity_m_per_s": 5.624914082024125e-12
+    },
+    "Echo": {
+      "id": 2000060,
+      "samples": 56,
+      "maximum_position_metres": 0.00012495681269957885,
+      "maximum_velocity_m_per_s": 5.968288291299672e-12
+    },
+    "Lacadiera": {
+      "id": 2000336,
+      "samples": 56,
+      "maximum_position_metres": 7.111750864983428e-05,
+      "maximum_velocity_m_per_s": 7.554830392944564e-12
+    },
+    "Pythia": {
+      "id": 2000432,
+      "samples": 56,
+      "maximum_position_metres": 0.000123201286835359,
+      "maximum_velocity_m_per_s": 7.941821057362622e-12
+    },
+    "Peitho": {
+      "id": 2000118,
+      "samples": 56,
+      "maximum_position_metres": 7.197556405682833e-05,
+      "maximum_velocity_m_per_s": 7.402750541632352e-12
+    },
+    "Chimaera": {
+      "id": 2000623,
+      "samples": 56,
+      "maximum_position_metres": 8.665326455383718e-05,
+      "maximum_velocity_m_per_s": 7.290154618149881e-12
+    },
+    "Bilkis": {
+      "id": 2000585,
+      "samples": 56,
+      "maximum_position_metres": 0.00012583081205795704,
+      "maximum_velocity_m_per_s": 7.332580706405269e-12
+    },
+    "Eros": {
+      "id": 2000433,
+      "samples": 56,
+      "maximum_position_metres": 6.291359902370698e-05,
+      "maximum_velocity_m_per_s": 7.622954678590855e-12
+    }
+  },
+  "body_count": 343,
+  "samples": 19239,
+  "maximum_position_metres": 0.00019301011109426145,
+  "maximum_velocity_m_per_s": 1.1578210484434763e-11,
+  "record_boundaries_included": true,
+  "checks_passed": true,
+  "limitation": "Checks source reading, interpolation, analytic derivative and frame. Does not independently establish the physical accuracy of SB441 or match the internal fitted asteroid trajectories of DE441."
+}

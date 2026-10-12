@@ -97,19 +97,68 @@ def build():
     (runtime/f"{dll_name}._pth").write_text(".\nLib\nDLLs\nLib/site-packages\nimport site\n",encoding="utf-8")
     (output/"Solar Simulator.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui\r\nif errorlevel 1 pause\r\n',encoding="ascii")
     (output/"USER-GUIDE.md").write_text(
-        (ROOT/"docs/user-guide.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)", "(docs/accuracy-validation.md)").replace("(ephemerides.md)", "(docs/ephemerides.md)").replace("(relativity.md)", "(docs/relativity.md)").replace("(moon.md)", "(docs/moon.md)").replace("(oblateness.md)", "(docs/oblateness.md)").replace("(orientation.md)", "(docs/orientation.md)"),
+        (ROOT/"docs/user-guide.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)", "(docs/accuracy-validation.md)").replace("(ephemerides.md)", "(docs/ephemerides.md)").replace("(relativity.md)", "(docs/relativity.md)").replace("(moon.md)", "(docs/moon.md)").replace("(oblateness.md)", "(docs/oblateness.md)").replace("(orientation.md)", "(docs/orientation.md)").replace("(relative-coordinates.md)", "(docs/relative-coordinates.md)").replace("(solar-j2.md)", "(docs/solar-j2.md)"),
         encoding="utf-8")
+    guide=output/"USER-GUIDE.md"
+    guide.write_text(guide.read_text(encoding="utf-8").replace("(pluto.md)","(docs/pluto.md)"),encoding="utf-8")
+    guide.write_text(guide.read_text(encoding="utf-8").replace("(asteroids.md)","(docs/asteroids.md)").replace("(body-data.md)","(docs/body-data.md)").replace("(asteroids-full.md)","(docs/asteroids-full.md)"),encoding="utf-8")
     (output/"PHYSICS.md").write_text(
-        (ROOT/"docs/physics.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)","(docs/accuracy-validation.md)").replace("(relativity.md)","(docs/relativity.md)").replace("(oblateness.md)","(docs/oblateness.md)").replace("(orientation.md)","(docs/orientation.md)").replace("(user-guide.md)","(docs/user-guide.md)"),
+        (ROOT/"docs/physics.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)","(docs/accuracy-validation.md)").replace("(relativity.md)","(docs/relativity.md)").replace("(oblateness.md)","(docs/oblateness.md)").replace("(orientation.md)","(docs/orientation.md)").replace("(user-guide.md)","(docs/user-guide.md)").replace("(relative-coordinates.md)","(docs/relative-coordinates.md)").replace("(solar-j2.md)","(docs/solar-j2.md)"),
         encoding="utf-8")
     documents=output/"docs"
+    physics=output/"PHYSICS.md"
+    physics.write_text(physics.read_text(encoding="utf-8").replace("(pluto.md)","(docs/pluto.md)"),encoding="utf-8")
+    physics.write_text(physics.read_text(encoding="utf-8").replace("(asteroids.md)","(docs/asteroids.md)").replace("(body-data.md)","(docs/body-data.md)").replace("(asteroids-full.md)","(docs/asteroids-full.md)"),encoding="utf-8")
     documents.mkdir()
-    for name in ("physics.md","rust.md","user-guide.md","core-validation.md","core-validation.json","accuracy-validation.md","accuracy-validation.json","ephemerides.md","solar-system-reference.json","solar-system-validation.json","relativity.md","relativity-validation.json","moon.md","solar-system-moon-reference.json","moon-validation.json","oblateness.md","oblateness-validation.json","orientation.md","orientation-validation.json","orientation-spice-reference.json"):
+    for name in ("physics.md","rust.md","user-guide.md","core-validation.md","core-validation.json","accuracy-validation.md","accuracy-validation.json","ephemerides.md","solar-system-reference.json","solar-system-validation.json","relativity.md","relativity-validation.json","moon.md","solar-system-moon-reference.json","moon-validation.json","oblateness.md","oblateness-validation.json","orientation.md","orientation-validation.json","orientation-spice-reference.json","relative-coordinates.md","relative-coordinates-validation.json","relative-checkpoint-validation.json","solar-j2.md","solar-j2-validation.json","solar-pole-validation.json","solar-checkpoint-validation.json"):
         shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("pluto.md","pluto-reference.json","pluto-source-validation.json","pluto-validation.json","pluto-checkpoint-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("asteroids.md","body-data.md","asteroids-reference.json","asteroids-source-validation.json","asteroids-validation.json","asteroids-checkpoint-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("asteroids-full.md","asteroids-full-reference.json","asteroids-full-source-validation.json","asteroids-full-validation.json","asteroids-full-checkpoint-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("native-eih.md", "native-eih-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("error-control.md", "error-control-validation.json", "error-control-comparison.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("orbit-observations.md", "orbit-observations-validation.json", "orbit-observations-residuals.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("orbit-cohort.md", "orbit-cohort-manifest.json", "orbit-cohort-validation.json", "orbit-cohort-residuals.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    observation_data = output/"data"
+    observation_data.mkdir()
+    shutil.copy2(ROOT/"src/solar_simulator/data/orbit-observations-13270.json",observation_data/"orbit-observations-13270.json")
+    for path in (ROOT/"src/solar_simulator/data").glob("orbit-cohort-*.json"):
+        shutil.copy2(path,observation_data/path.name)
+    (output/"scripts").mkdir()
+    shutil.copy2(ROOT/"scripts/orbit-cohort-policy.json",output/"scripts/orbit-cohort-policy.json")
+    for name in ("asteroids-catalog.md", "asteroids-catalog-validation.json", "asteroids-catalog-comparison.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("asteroids-343.md", "asteroids-343-initial.json", "asteroids-343-source-validation.json", "asteroids-343-assessment.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("kuiper.md", "kuiper-ring-design.md", "kuiper-initial.json", "kuiper-source-validation.json", "kuiper-validation.json", "kuiper-absolute-reference-validation.json", "kuiper-comparison.png", "perturber-audit.md", "perturber-audit.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("kuiper-ring.md", "kuiper-ring-validation.json", "kuiper-ring-refinement-validation.json", "kuiper-ring-field-validation.json", "kuiper-ring-kbo-validation.json", "kuiper-ring-comparison.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    shutil.copy2(ROOT/"scripts/kuiper-ring-policy.json",output/"scripts/kuiper-ring-policy.json")
+    shutil.copy2(ROOT/"scripts/kuiper-ring-refinement-policy.json",output/"scripts/kuiper-ring-refinement-policy.json")
+    shutil.copy2(ROOT/"scripts/sb441-kuiper-ranges.json",output/"scripts/sb441-kuiper-ranges.json")
+    shutil.copy2(ROOT/"scripts/de441-perturber-catalog.json",output/"scripts/de441-perturber-catalog.json")
+    (output/"scripts/validation").mkdir()
+    shutil.copy2(ROOT/"scripts/sb441-343-ranges.json",output/"scripts/sb441-343-ranges.json")
+    shutil.copy2(ROOT/"scripts/validation/sb441-343-year.bin",output/"scripts/validation/sb441-343-year.bin")
+    shutil.copy2(ROOT/"scripts/validation/de441-header.441",output/"scripts/validation/de441-header.441")
+    shutil.copy2(ROOT/"scripts/validation/kuiper_absolute_assessment.py",output/"scripts/validation/kuiper_absolute_assessment.py")
     orientation_doc=documents/"orientation.md"
     orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
         "../src/solar_simulator/data/ERFA-LICENSE.txt",
         "../runtime/Lib/site-packages/solar_simulator/data/ERFA-LICENSE.txt"),encoding="utf-8")
+    for guide_name in ("USER-GUIDE.md", "PHYSICS.md"):
+        guide_path=output/guide_name
+        guide_path.write_text(guide_path.read_text(encoding="utf-8").replace("(kuiper-ring.md)","(docs/kuiper-ring.md)").replace("(kuiper.md)","(docs/kuiper.md)").replace("(orbit-cohort.md)","(docs/orbit-cohort.md)").replace("(orbit-observations.md)","(docs/orbit-observations.md)").replace("(error-control.md)","(docs/error-control.md)").replace(
+            "(native-eih.md)", "(docs/native-eih.md)").replace(
+            "(asteroids-catalog.md)", "(docs/asteroids-catalog.md)"),encoding="utf-8")
     from solar_simulator.experiment import preset, PRESETS
     from solar_simulator.storage import save
     scenarios=output/"scenarios"
@@ -121,11 +170,58 @@ def build():
     save(replace(system,settings=replace(system.settings,physics="eih-1pn")),scenarios/"solar-system-1pn.json")
     system=preset("solar-system-moon")
     save(replace(system,settings=replace(system.settings,physics="eih-1pn")),scenarios/"solar-system-moon-1pn.json")
-    from solar_simulator.oblateness import earth_j2, earth_moon_quadrupoles
+    from solar_simulator.oblateness import earth_j2, earth_moon_quadrupoles,solar_j2,sun_earth_moon_quadrupoles
     save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=earth_j2(system.bodies,system.origin))),
          scenarios/"solar-system-moon-1pn-j2.json")
     save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=earth_moon_quadrupoles(system.bodies,system.origin))),
          scenarios/"solar-system-moon-1pn-q2.json")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=earth_moon_quadrupoles(system.bodies,system.origin),
+                                       relative_pair=("Earth","Moon"),position_atol=1e-5,velocity_atol=1e-11)),
+         scenarios/"solar-system-moon-1pn-q2-relative.json")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),
+                                       relative_pair=("Earth","Moon"),position_atol=1e-5,velocity_atol=1e-11)),
+         scenarios/"solar-system-moon-1pn-solar-q2-relative.json")
+    system=preset("solar-system")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=solar_j2(system.bodies,system.origin))),
+         scenarios/"solar-system-1pn-solar-j2.json")
+    system=preset("solar-system-pluto")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),
+        relative_pair=("Earth","Moon"),rtol=3e-14,position_atol=1e-5,velocity_atol=1e-11)),
+        scenarios/"solar-system-pluto-1pn-solar-q2-relative.json")
+    system=preset("solar-system-asteroids")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),
+        relative_pair=("Earth","Moon"),rtol=3e-14,position_atol=1e-5,velocity_atol=1e-11)),
+        scenarios/"solar-system-asteroids-1pn-solar-q2-relative.json")
+    system=preset("solar-system-asteroids-full")
+    save(replace(system,settings=replace(system.settings,physics="eih-1pn",figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),
+        relative_pair=("Earth","Moon"),rtol=3e-14,position_atol=1e-5,velocity_atol=1e-11)),
+        scenarios/"solar-system-asteroids-full-1pn-solar-q2-relative.json")
+    save(replace(system,settings=replace(system.settings,backend="rust",physics="eih-1pn",
+        figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),relative_pair=("Earth","Moon"),
+        rtol=3e-14,position_atol=1e-5,velocity_atol=1e-11)),
+        scenarios/"solar-system-asteroids-full-rust-1pn-solar-q2-relative.json")
+    system=preset("solar-system-asteroids-catalog",backend="rust")
+    save(replace(system,settings=replace(system.settings,integrator="dop853",physics="eih-1pn",
+        figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),relative_pair=("Earth","Moon"),
+        rtol=3e-14,position_atol=1e-7,velocity_atol=1e-13)),
+        scenarios/"solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json")
+    system=preset("solar-system-kuiper",backend="rust")
+    save(replace(system,settings=replace(system.settings,integrator="dop853",physics="eih-1pn",
+        figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),relative_pair=("Earth","Moon"),
+        rtol=3e-14,position_atol=1e-7,velocity_atol=1e-13)),
+        scenarios/"solar-system-kuiper-rust-1pn-solar-q2-relative.json")
+    system=preset("solar-system-kuiper-ring",backend="rust")
+    save(replace(system,settings=replace(system.settings,integrator="dop853",physics="eih-1pn",
+        figures=sun_earth_moon_quadrupoles(system.bodies,system.origin),relative_pair=("Earth","Moon"),
+        rtol=3e-14,position_atol=1e-7,velocity_atol=1e-13)),
+        scenarios/"solar-system-kuiper-ring-rust-1pn-solar-q2-relative.json")
+    from solar_simulator.kuiper_ring import solar_system_ring
+    from solar_simulator.experiment import create_experiment
+    bodies,origin=solar_system_ring(144,0)
+    refined=create_experiment(bodies,replace(system.settings,integrator="dop853",physics="eih-1pn",
+        figures=sun_earth_moon_quadrupoles(bodies,origin),relative_pair=("Earth","Moon"),
+        rtol=3e-14,position_atol=1e-7,velocity_atol=1e-13),origin=origin)
+    save(refined,scenarios/"solar-system-kuiper-ring-144-rust-1pn-solar-q2-relative.json")
     manifest=dict(python=sys.version,python_abi=dll_name,project_version=project_version,
                   native_wheel=native_wheel.name,dependencies={name:d.version for name,d in dependencies.items()})
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")

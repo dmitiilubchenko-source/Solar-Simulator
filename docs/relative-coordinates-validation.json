@@ -1,0 +1,431 @@
+{
+  "physics": "eih-1pn + prescribed Earth/Moon J2/C22",
+  "epoch_jd_tdb": 2461321.5,
+  "duration_seconds": 31557600.0,
+  "samples": 45,
+  "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+  "reference_sha256": "07717d8792d4afa297441a0b1751672de4bc492f41802d9224525f905e15bd24",
+  "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+  "recommended_variant": "relative_pair_strict",
+  "independent_method": "RK45, AU/year, interleaved pair variables; scalar EIH and principal-axis J2/C22; rtol 1e-12/1e-13/3e-14, atol 1e-17, maximum steps 3600/1800/900 seconds",
+  "independent_reference_convergence": {
+    "all_bodies": {
+      "maximum_position_metres": 0.09189788860872845,
+      "maximum_velocity_m_per_s": 1.7080401164005365e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.0024631041791942166,
+      "maximum_velocity_m_per_s": 6.409046286013645e-09
+    }
+  },
+  "numerical_agreement": [
+    {
+      "name": "Sun",
+      "agreement": {
+        "maximum_position_metres": 6.4418973225695995e-06,
+        "maximum_velocity_m_per_s": 7.824044707095462e-14
+      }
+    },
+    {
+      "name": "Mercury",
+      "agreement": {
+        "maximum_position_metres": 0.028981043479257344,
+        "maximum_velocity_m_per_s": 2.3006511717055975e-08
+      }
+    },
+    {
+      "name": "Venus",
+      "agreement": {
+        "maximum_position_metres": 0.024516159615249708,
+        "maximum_velocity_m_per_s": 7.312476893542536e-09
+      }
+    },
+    {
+      "name": "Earth",
+      "agreement": {
+        "maximum_position_metres": 0.0031793022266077163,
+        "maximum_velocity_m_per_s": 4.431718392768639e-10
+      }
+    },
+    {
+      "name": "Moon",
+      "agreement": {
+        "maximum_position_metres": 0.014848431673094426,
+        "maximum_velocity_m_per_s": 3.714677135791135e-08
+      }
+    },
+    {
+      "name": "Mars",
+      "agreement": {
+        "maximum_position_metres": 0.01611184848057308,
+        "maximum_velocity_m_per_s": 1.6232400214343897e-09
+      }
+    },
+    {
+      "name": "Jupiter",
+      "agreement": {
+        "maximum_position_metres": 0.003974103570311969,
+        "maximum_velocity_m_per_s": 8.753814527212174e-11
+      }
+    },
+    {
+      "name": "Saturn",
+      "agreement": {
+        "maximum_position_metres": 0.013354572473734477,
+        "maximum_velocity_m_per_s": 9.055456358874464e-11
+      }
+    },
+    {
+      "name": "Uranus",
+      "agreement": {
+        "maximum_position_metres": 0.025878906882596458,
+        "maximum_velocity_m_per_s": 9.589139382128964e-11
+      }
+    },
+    {
+      "name": "Neptune",
+      "agreement": {
+        "maximum_position_metres": 0.06562392739146006,
+        "maximum_velocity_m_per_s": 3.093875072240271e-11
+      }
+    }
+  ],
+  "moon_relative_numerical_agreement": {
+    "maximum_position_metres": 0.016822850920466717,
+    "maximum_velocity_m_per_s": 3.714159251722435e-08
+  },
+  "variants": {
+    "cartesian": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.1265697574126,
+          "maximum_velocity_m_per_s": 2.033802546987758e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.44485245422223,
+          "maximum_velocity_m_per_s": 2.718699327944566e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.13026733151978,
+          "maximum_velocity_m_per_s": 2.0413282186682478e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 3.0196816946884337,
+          "maximum_velocity_m_per_s": 8.603228504021284e-06
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13480871462878932,
+          "maximum_velocity_m_per_s": 3.4467398873778956e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 8.009627886288486e-15,
+      "maximum_relative_raw_energy_change": 7.823357470328289e-15,
+      "final_orientation_work_joules": -2.863784512083878e+19,
+      "elapsed_seconds": 14.366114899981767,
+      "options": {}
+    },
+    "cartesian_tighter": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.1258879219443,
+          "maximum_velocity_m_per_s": 2.030901950601435e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.52281183440732,
+          "maximum_velocity_m_per_s": 3.0006798305306056e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.13041882429408,
+          "maximum_velocity_m_per_s": 2.0413023240583146e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 4.321261325565667,
+          "maximum_velocity_m_per_s": 1.1879701747923338e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13311063215311106,
+          "maximum_velocity_m_per_s": 3.406178315719121e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 5.588112478805921e-15,
+      "maximum_relative_raw_energy_change": 5.588112478805921e-15,
+      "final_orientation_work_joules": -2.8637800828818797e+19,
+      "elapsed_seconds": 14.940632599988021,
+      "options": {
+        "rtol": 3e-14
+      }
+    },
+    "relative_pair": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.12399576157694,
+          "maximum_velocity_m_per_s": 2.028703970311592e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.57700973445637,
+          "maximum_velocity_m_per_s": 3.2200187144836e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.12910515538928,
+          "maximum_velocity_m_per_s": 2.041283339718701e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.314628629686109,
+          "maximum_velocity_m_per_s": 1.4368474908305544e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13369158781534982,
+          "maximum_velocity_m_per_s": 3.421846841432283e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 9.686061629930263e-15,
+      "maximum_relative_raw_energy_change": 9.87233204589046e-15,
+      "final_orientation_work_joules": -2.863776857640497e+19,
+      "elapsed_seconds": 15.015524899994489,
+      "options": {
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ]
+      }
+    },
+    "relative_pair_rtol_tighter": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.12221625156195,
+          "maximum_velocity_m_per_s": 2.028533063352399e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.57903905963352,
+          "maximum_velocity_m_per_s": 3.237192946809361e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.12736220831536,
+          "maximum_velocity_m_per_s": 2.0412814367797705e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.390973727603178,
+          "maximum_velocity_m_per_s": 1.456161269844574e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.1338288303207629,
+          "maximum_velocity_m_per_s": 3.423884767708718e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 4.656760399004934e-15,
+      "maximum_relative_raw_energy_change": 4.8430308149651315e-15,
+      "final_orientation_work_joules": -2.8637766289781367e+19,
+      "elapsed_seconds": 15.63622139999643,
+      "options": {
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "rtol": 3e-14
+      }
+    },
+    "relative_pair_all_tighter": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.1241284819219,
+          "maximum_velocity_m_per_s": 2.0277662163515235e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.59726726003308,
+          "maximum_velocity_m_per_s": 3.3197979046947105e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.1294317052171,
+          "maximum_velocity_m_per_s": 2.0413281379589123e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.769177643575102,
+          "maximum_velocity_m_per_s": 1.5481666311358732e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13437845353658356,
+          "maximum_velocity_m_per_s": 3.436384971787871e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 3.53913790324375e-15,
+      "maximum_relative_raw_energy_change": 3.166597071323355e-15,
+      "final_orientation_work_joules": -2.8637756087388955e+19,
+      "elapsed_seconds": 14.864791199972387,
+      "options": {
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "rtol": 3e-14,
+        "position_atol": 0.00025,
+        "velocity_atol": 2.5e-10
+      }
+    },
+    "relative_pair_strict": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.12420075197934,
+          "maximum_velocity_m_per_s": 2.0273530203190624e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.60660037442628,
+          "maximum_velocity_m_per_s": 3.3600495387551445e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.12960752368255,
+          "maximum_velocity_m_per_s": 2.0413105680413523e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.9512743191116115,
+          "maximum_velocity_m_per_s": 1.5928097292403738e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13362966977470053,
+          "maximum_velocity_m_per_s": 3.4250562386639127e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 3.166597071323355e-15,
+      "maximum_relative_raw_energy_change": 3.3528674872835528e-15,
+      "final_orientation_work_joules": -2.863775099859005e+19,
+      "elapsed_seconds": 15.269710800028406,
+      "options": {
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "position_atol": 1e-05,
+        "velocity_atol": 1e-11
+      }
+    },
+    "relative_pair_strict_rtol": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.1282620358392,
+          "maximum_velocity_m_per_s": 2.027481368280276e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.6101952156612,
+          "maximum_velocity_m_per_s": 3.360068525899209e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.13365596422605,
+          "maximum_velocity_m_per_s": 2.0414377450781447e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.951938565460638,
+          "maximum_velocity_m_per_s": 1.5927039542264718e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.1335687450585173,
+          "maximum_velocity_m_per_s": 3.4229032633771685e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 5.029301230925329e-15,
+      "maximum_relative_raw_energy_change": 5.215571646885526e-15,
+      "final_orientation_work_joules": -2.863775120570859e+19,
+      "elapsed_seconds": 15.351204300008249,
+      "options": {
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "rtol": 3e-14,
+        "position_atol": 1e-05,
+        "velocity_atol": 1e-11
+      }
+    },
+    "relative_pair_stricter": {
+      "pair": {
+        "earth": {
+          "maximum_position_metres": 162.12824776059367,
+          "maximum_velocity_m_per_s": 2.027486607564292e-05
+        },
+        "moon": {
+          "maximum_position_metres": 162.61048277773708,
+          "maximum_velocity_m_per_s": 3.361717270345101e-05
+        },
+        "barycentre": {
+          "maximum_position_metres": 162.1336522980505,
+          "maximum_velocity_m_per_s": 2.0414591771961516e-05
+        },
+        "moon_relative_to_earth": {
+          "maximum_position_metres": 5.959639762257683,
+          "maximum_velocity_m_per_s": 1.5944990745900727e-05
+        },
+        "first_32_days_relative": {
+          "maximum_position_metres": 0.13355321187346453,
+          "maximum_velocity_m_per_s": 3.423908426196976e-07
+        }
+      },
+      "maximum_relative_energy_budget_residual": 4.28421956708454e-15,
+      "maximum_relative_raw_energy_change": 4.097949151124342e-15,
+      "final_orientation_work_joules": -2.8637751043812192e+19,
+      "elapsed_seconds": 16.68555389996618,
+      "options": {
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "rtol": 3e-14,
+        "position_atol": 1e-06,
+        "velocity_atol": 1e-12
+      }
+    }
+  },
+  "cartesian_tolerance_sensitivity": {
+    "all_bodies": {
+      "maximum_position_metres": 1.2857326743889617,
+      "maximum_velocity_m_per_s": 3.2369157667567258e-06
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 1.3018552937339722,
+      "maximum_velocity_m_per_s": 3.2765354465920577e-06
+    }
+  },
+  "relative_rtol_sensitivity": {
+    "all_bodies": {
+      "maximum_position_metres": 0.07748564391850958,
+      "maximum_velocity_m_per_s": 1.904033825629873e-07
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.07635280804562342,
+      "maximum_velocity_m_per_s": 1.931399262853978e-07
+    }
+  },
+  "relative_all_tolerance_sensitivity": {
+    "all_bodies": {
+      "maximum_position_metres": 0.4499650170182898,
+      "maximum_velocity_m_per_s": 1.0994454283001769e-06
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.45461768232146343,
+      "maximum_velocity_m_per_s": 1.1132692862141168e-06
+    }
+  },
+  "strict_rtol_sensitivity": {
+    "all_bodies": {
+      "maximum_position_metres": 0.012336404362013895,
+      "maximum_velocity_m_per_s": 1.2521279873616868e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.005356738901018522,
+      "maximum_velocity_m_per_s": 1.326281549001605e-08
+    }
+  },
+  "strict_all_tolerance_sensitivity": {
+    "all_bodies": {
+      "maximum_position_metres": 0.01855597366091592,
+      "maximum_velocity_m_per_s": 1.690267433276931e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.008409630812905347,
+      "maximum_velocity_m_per_s": 1.7016175100620534e-08
+    }
+  },
+  "default_pair_numerical_agreement": {
+    "maximum_position_metres": 0.6535570155088365,
+    "maximum_velocity_m_per_s": 1.59685024413997e-06
+  },
+  "checks_passed": true,
+  "limitation": "Only numerical coordinates changed; same physical equations and prescribed DE441 orientation. Local tolerances are applied to the internal pair/centre variables, not separate absolute Earth/Moon states. Results at 45 sampled epochs; no global error bound or complete autonomous spin/tidal model."
+}

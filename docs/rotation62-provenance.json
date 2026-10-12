@@ -1,0 +1,32 @@
+{
+  "change": 62,
+  "branch": "main",
+  "previous_inventory_files": 379,
+  "previous_unchanged": 373,
+  "intentionally_changed_previous_docs": [
+    "docs/canonical-solar.md",
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/project-context.md",
+    "docs/session-handoff.md",
+    "README.md"
+  ],
+  "previous_json_unchanged": 118,
+  "previous_runtime_rust_unchanged": 74,
+  "previous_git_status_entries_preserved": 270,
+  "source_SHA_58_through_62_valid": true,
+  "new_tests": {
+    "passed": 8,
+    "seconds": 1.19
+  },
+  "targeted_tests": {
+    "passed": 157,
+    "seconds": 23.42
+  },
+  "documentation_links": 915,
+  "diff_check": true,
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_claimed": false,
+  "checkpoint_schema_added": false,
+  "commit_push_portable": false
+}

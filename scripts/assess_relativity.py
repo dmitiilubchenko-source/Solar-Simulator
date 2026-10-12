@@ -62,7 +62,7 @@ def measure_precession(physics, *, orbits=5, rtol=3e-14):
                 relative_difference=abs(measured-expected)/expected if physics=="eih-1pn" else None)
 
 
-def independent_acceleration(p, v, mu, light_speed):
+def independent_acceleration(p, v, mu, light_speed, relative_pair=None):
     """Scalar target loops, source->target vectors; no production force call.
 
     Direct EIH equation with Newtonian source acceleration, through 1PN.
@@ -70,6 +70,9 @@ def independent_acceleration(p, v, mu, light_speed):
     """
     count = len(mu)
     inward = p[None, :, :]-p[:, None, :]
+    if relative_pair is not None:
+        first,second,relative = relative_pair
+        inward[first,second],inward[second,first] = relative,-relative
     radii = np.linalg.norm(inward, axis=2)
     np.fill_diagonal(radii, np.inf)
     potential = np.sum(mu[None, :]/radii, axis=1)

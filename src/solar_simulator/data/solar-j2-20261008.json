@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "model": "fixed-axis-j2",
+  "body": "Sun",
+  "units": "SI",
+  "coefficient": 2.1961391516529825e-07,
+  "reference_radius_metres": 696000000.0,
+  "axis": [
+    0.12235349347232782,
+    -0.0310378702450671,
+    0.9920011457885356
+  ],
+  "frame": "Ecliptic J2000",
+  "center": "Solar System Barycenter",
+  "epoch_jd_tdb": 2461321.5,
+  "dataset_sha256": [
+    "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+    "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702"
+  ],
+  "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c",
+  "pole_ra_degrees": 286.13,
+  "pole_dec_degrees": 63.87,
+  "obliquity_arcsec": 84381.448,
+  "sources": [
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+      "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c"
+    },
+    {
+      "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc",
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+    }
+  ],
+  "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2",
+  "limitation": "Solar J2 only, with fixed pole and source reaction. No solar spin evolution, Lense-Thirring acceleration, mass loss, higher harmonics or mixed figure/1PN terms. DE441 ASUN is the reference radius for this J2, not the current nominal photospheric radius."
+}

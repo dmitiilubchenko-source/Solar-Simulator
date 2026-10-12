@@ -13,8 +13,9 @@ from .vector3 import Vector3
 from .ephemerides import EphemerisOrigin
 from .oblateness import (FixedJ2, PrescribedQuadrupole, prescribed, validate_figures,
                          validate_orientation_origin)
+from .coordinates import prepare_pair
 
-SCHEMA_VERSION = 7
+SCHEMA_VERSION = 9
 MAX_BYTES = 10_000_000
 
 
@@ -33,8 +34,16 @@ def to_document(experiment: Experiment) -> dict:
         events=[asdict(e) for e in experiment.events], origin=asdict(experiment.origin) if experiment.origin else None)
     document["settings"]["figures"] = [dict(asdict(f), axis=list(f.axis)) if isinstance(f, FixedJ2)
                                         else dict(asdict(f), kind="prescribed-q2") for f in experiment.settings.figures]
+    document["settings"]["relative_pair"] = list(experiment.settings.relative_pair) if experiment.settings.relative_pair else None
     if experiment.settings.figures:
         document["model"] += "-prescribed-q2" if prescribed(experiment.settings.figures) else "-fixed-j2"
+    if experiment.rotations or experiment.initial_rotations:
+        from .nbody_rotation import validate_experiment
+        validate_experiment(experiment)
+        document["schema_version"] = 10
+        document["model"] += "-dynamic-q2"
+        document["initial_rotations"] = [_rotation_document(r) for r in experiment.initial_rotations]
+        document["rotations"] = [_rotation_document(r) for r in experiment.rotations]
     from_document(document)  # Одинаковые гарантии при записи и чтении.
     return document
 
@@ -73,6 +82,22 @@ def _bodies(values):
 
 
 def from_document(document: dict) -> Experiment:
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 10:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+            "time","dissipated_energy","halted","events","model_energy_offset","origin","orientation_work",
+            "initial_rotations","rotations"))
+        if type(document["model"]) is not str or not document["model"].endswith("-dynamic-q2"):
+            raise ValueError("Схема 10 требует динамическое Q2")
+        initial_rotations, rotations = _rotations(document["initial_rotations"]), _rotations(document["rotations"])
+        legacy = deepcopy(document)
+        del legacy["initial_rotations"], legacy["rotations"]
+        legacy["schema_version"] = 9
+        legacy["model"] = legacy["model"][:-len("-dynamic-q2")]
+        from dataclasses import replace
+        result = replace(from_document(legacy), initial_rotations=initial_rotations, rotations=rotations)
+        from .nbody_rotation import validate_experiment
+        validate_experiment(result)
+        return result
     if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"]==1:
         _keys(document,("schema_version","units","model","settings","initial","bodies",
                         "time","dissipated_energy","halted","events"))
@@ -133,6 +158,22 @@ def from_document(document: dict) -> Experiment:
         document=deepcopy(document)
         document["schema_version"]=7
         document["orientation_work"]=0.0
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 7:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+                        "time","dissipated_energy","halted","events","model_energy_offset","origin","orientation_work"))
+        _keys(document["settings"],("dt","backend","contact_mode","restitution","integrator",
+                                    "rtol","position_atol","velocity_atol","physics","figures"))
+        document=deepcopy(document)
+        document["schema_version"]=8
+        document["settings"]["relative_pair"]=None
+    if type(document) is dict and type(document.get("schema_version")) is int and document["schema_version"] == 8:
+        _keys(document,("schema_version","units","model","settings","initial","bodies",
+                        "time","dissipated_energy","halted","events","model_energy_offset","origin","orientation_work"))
+        _keys(document["settings"],("dt","backend","contact_mode","restitution","integrator",
+                                    "rtol","position_atol","velocity_atol","physics","figures","relative_pair"))
+        document=deepcopy(document)
+        document["schema_version"]=9
+        document["settings"]["error_control"]="global-rms"
     _keys(document,("schema_version","units","model","settings","initial","bodies",
                     "time","dissipated_energy","halted","events","model_energy_offset","origin","orientation_work"))
     origin=None
@@ -142,7 +183,7 @@ def from_document(document: dict) -> Experiment:
     if (type(document["schema_version"]) is not int or document["schema_version"]!=SCHEMA_VERSION
             or document["units"]!="SI"):
         raise ValueError("Неподдерживаемая версия, единицы или физическая модель")
-    _keys(document["settings"],("dt","backend","contact_mode","restitution","integrator","rtol","position_atol","velocity_atol","physics","figures"))
+    _keys(document["settings"],("dt","backend","contact_mode","restitution","integrator","rtol","position_atol","velocity_atol","physics","figures","relative_pair","error_control"))
     values=document["settings"]["figures"]
     if type(values) is not list or len(values)>1000:
         raise ValueError("Неверный список фигур J2")
@@ -156,11 +197,16 @@ def from_document(document: dict) -> Experiment:
             if type(value["axis"]) is not list or len(value["axis"])!=3:
                 raise ValueError("Неверная ось J2")
             figures.append(FixedJ2(**dict(value,axis=tuple(value["axis"]))))
-    settings = Settings(**dict(document["settings"],figures=tuple(figures)))
+    pair = document["settings"]["relative_pair"]
+    if pair is not None and (type(pair) is not list or len(pair) != 2):
+        raise ValueError("Неверная относительная пара в контрольной точке")
+    settings = Settings(**dict(document["settings"],figures=tuple(figures),relative_pair=tuple(pair) if pair is not None else None))
     suffix = ("-prescribed-q2" if prescribed(figures) else "-fixed-j2") if figures else ""
     if document["model"] != settings.physics+"-"+settings.integrator+suffix:
         raise ValueError("Физическая модель не соответствует интегратору")
     initial,bodies = _bodies(document["initial"]),_bodies(document["bodies"])
+    prepare_pair(initial,settings.relative_pair)
+    prepare_pair(bodies,settings.relative_pair)
     validate_figures(initial, settings.figures)
     validate_figures(bodies, settings.figures)
     if settings.integrator == "dop853" and any(b.radius > 0 for b in initial+bodies):
@@ -209,6 +255,39 @@ def from_document(document: dict) -> Experiment:
                                or events[-1].time!=time or events[-1].outcome!="contact"):
         raise ValueError("Остановка должна соответствовать последнему контакту")
     return Experiment(initial,bodies,settings,time,loss,tuple(events),document["halted"],offset,origin,work)
+
+
+def _rotation_document(rotation):
+    return dict(body=rotation.body, figure=dict(mass=rotation.figure.mass,
+        moments=list(rotation.figure.moments), bounding_radius=rotation.figure.bounding_radius),
+        quaternion=list(rotation.quaternion), angular_momentum=list(rotation.angular_momentum),
+        quaternion_atol=rotation.quaternion_atol, momentum_atol=rotation.momentum_atol,
+        provenance=rotation.provenance)
+
+
+def _rotations(values):
+    from .nbody_rotation import RotationState
+    from .rotation import RigidFigure
+    if type(values) is not list or len(values) != 1:
+        raise ValueError("Схема 10 требует одну динамическую фигуру")
+    result = []
+    for value in values:
+        _keys(value,("body","figure","quaternion","angular_momentum","quaternion_atol","momentum_atol","provenance"))
+        figure = value["figure"]
+        _keys(figure,("mass","moments","bounding_radius"))
+        for key, size in (("quaternion",4),("angular_momentum",3)):
+            if type(value[key]) is not list or len(value[key]) != size:
+                raise ValueError("Неверная размерность вращательного состояния")
+            for number in value[key]:
+                _number(number)
+        if type(figure["moments"]) is not list or len(figure["moments"]) != 3:
+            raise ValueError("Нужны три главных момента инерции")
+        inertia = RigidFigure(_number(figure["mass"]), tuple(_number(n) for n in figure["moments"]),
+            _number(figure["bounding_radius"]))
+        result.append(RotationState(value["body"], inertia, tuple(value["quaternion"]),
+            tuple(value["angular_momentum"]), _number(value["quaternion_atol"]),
+            _number(value["momentum_atol"]), value["provenance"]))
+    return tuple(result)
 
 
 def save(experiment: Experiment, path: str | Path):

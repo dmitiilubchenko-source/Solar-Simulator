@@ -10,7 +10,7 @@ from scipy.integrate import solve_ivp
 from solar_simulator.diagnostics import model_invariants
 from solar_simulator.ephemerides import solar_system
 from solar_simulator.experiment import Settings, advance, create_experiment
-from solar_simulator.oblateness import earth_j2, earth_moon_quadrupoles
+from solar_simulator.oblateness import FixedJ2, earth_j2, earth_moon_quadrupoles
 from solar_simulator.orientation import PROFILE_SHA256, earth_pole, lunar_rotation
 from solar_simulator.relativity import C
 from solar_simulator.simulation import AU, G
@@ -25,12 +25,14 @@ else:
     from assess_resolved_moon import errors, states
 
 
-def independent_figure_acceleration(p, mu, figures, names, time):
+def independent_figure_acceleration(p, mu, figures, names, time, relative_pair=None):
     """Analytic J2+C22 field in principal axes; no production tensor/force."""
     result = np.zeros_like(p)
     for figure in figures:
         source = names.index(figure.body)
-        if figure.body == "Moon":
+        if isinstance(figure,FixedJ2):
+            pole=np.array(figure.axis)
+        elif figure.body == "Moon":
             rotation, _ = lunar_rotation(float(time))
         else:
             pole, _ = earth_pole(float(time))
@@ -38,10 +40,21 @@ def independent_figure_acceleration(p, mu, figures, names, time):
             if source == target:
                 continue
             r = p[target]-p[source]
+            if relative_pair is not None:
+                first,second,relative = relative_pair
+                if (source,target) == (first,second):
+                    r = relative
+                elif (source,target) == (second,first):
+                    r = -relative
             distance = np.linalg.norm(r)
             n = r/distance
             scale = mu[source]*(figure.reference_radius/AU)**2/distance**4
-            if figure.body == "Earth":
+            if isinstance(figure,FixedJ2):
+                # Different algebra: gradient of mu*J2*R^2*(3*z^2-r^2)/(2*r^5).
+                z=pole@r
+                field=(mu[source]*figure.coefficient*(figure.reference_radius/AU)**2/(2*distance**5))*(
+                    (15*z*z/distance**2-3)*r-6*z*pole)
+            elif figure.body == "Earth":
                 z = n@pole
                 field = 1.5*scale*figure.coefficient*((5*z*z-1)*n-2*z*pole)
             else:
@@ -81,9 +94,11 @@ def independent_reference(initial, figures, times):
     return results[-1],consistency
 
 
-def sample(initial,origin,times,figures,*,rtol=1e-13):
+def sample(initial,origin,times,figures,*,rtol=1e-13,relative_pair=None,position_atol=1e-3,velocity_atol=1e-9,backend="python",error_control="global-rms"):
     state = create_experiment(initial,Settings(3600,integrator="dop853",physics="eih-1pn",
-                                               figures=figures,rtol=rtol),origin=origin)
+                                               figures=figures,rtol=rtol,relative_pair=relative_pair,
+                                               position_atol=position_atol,velocity_atol=velocity_atol,backend=backend,
+                                               error_control=error_control),origin=origin)
     e0 = model_invariants(initial,"eih-1pn",figures)[0]
     result, max_budget, max_raw = [],0.,0.
     for time in times:

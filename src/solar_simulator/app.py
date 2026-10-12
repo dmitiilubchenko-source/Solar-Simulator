@@ -35,9 +35,11 @@ class Laboratory:
         self.integrator = tk.StringVar(value=self.experiment.settings.integrator)
         self.physics = tk.StringVar(value=self.experiment.settings.physics)
         self.figures = tk.StringVar(value="saved" if self.experiment.settings.figures else "none")
+        self.relative_pair = tk.StringVar(value="saved" if self.experiment.settings.relative_pair else "none")
         self.rtol = tk.StringVar(value=str(self.experiment.settings.rtol))
         self.position_atol = tk.StringVar(value=str(self.experiment.settings.position_atol))
         self.velocity_atol = tk.StringVar(value=str(self.experiment.settings.velocity_atol))
+        self.error_control = tk.StringVar(value=self.experiment.settings.error_control)
         self.dt = tk.StringVar(value=f"{self.experiment.settings.dt:.17g}")
         self.mode = tk.StringVar(value=self.experiment.settings.contact_mode)
         self.restitution = tk.StringVar(value=str(self.experiment.settings.restitution))
@@ -95,11 +97,14 @@ class Laboratory:
         self._entry(precision,"Отн. допуск",self.rtol,10)
         self._entry(precision,"Допуск x, м",self.position_atol,10)
         self._entry(precision,"Допуск v, м/с",self.velocity_atol,10)
-        ttk.Label(precision,text="DOP853: Python, без контактов; допуски локальные").pack(side="left",padx=8)
+        error_controls=ttk.Frame(self.root); error_controls.pack(fill="x",padx=8)
+        self._combo(error_controls,"Контроль ошибки",self.error_control,("per-body","global-rms"),width=12)
+        ttk.Label(error_controls,text="DOP853: допуски локальные; per-body проверяет каждую орбиту").pack(side="left",padx=8)
         physics=ttk.Frame(self.root); physics.pack(fill="x",padx=8)
         self._combo(physics,"Физика",self.physics,("newtonian","eih-1pn"),width=14)
-        self._combo(physics,"Фигура",self.figures,("none","earth-j2","earth-q2","earth-moon-q2","saved"),width=15)
-        ttk.Label(physics,text="q2: заданные оси, до 365.25 суток; Python/DOP853, без контактов").pack(side="left",padx=8)
+        self._combo(physics,"Фигура",self.figures,("none","earth-j2","earth-q2","earth-moon-q2","solar-j2","sun-earth-moon-q2","saved"),width=18)
+        self._combo(physics,"Точность пары",self.relative_pair,("none","earth-moon","saved"),width=12)
+        ttk.Label(physics,text="q2: до 365.25 суток; DOP853").pack(side="left",padx=8)
         playback=ttk.Frame(self.root); playback.pack(fill="x",padx=8)
         self.start_button=self._button(playback,"Запуск",self._start)
         self.pause_button=ttk.Button(playback,text="Пауза",command=self._pause)
@@ -142,7 +147,7 @@ class Laboratory:
     def _settings(self):
         settings=Settings(float(self.dt.get()),self.backend.get(),self.mode.get(),float(self.restitution.get()),
             self.integrator.get(),float(self.rtol.get()),float(self.position_atol.get()),float(self.velocity_atol.get()),
-            self.physics.get(),self._selected_figures(self.experiment))
+            self.physics.get(),self._selected_figures(self.experiment),self._selected_pair(self.experiment),self.error_control.get())
         changed_physics = (settings.physics != self.experiment.settings.physics
                            or settings.figures != self.experiment.settings.figures)
         if changed_physics and self.experiment.time > 0:
@@ -155,6 +160,11 @@ class Laboratory:
         from .oblateness import validate_figures, validate_orientation_origin
         validate_figures(self.experiment.bodies, settings.figures, self.experiment.time)
         validate_orientation_origin(settings.figures, self.experiment.origin)
+        from .coordinates import prepare_pair
+        prepare_pair(self.experiment.bodies,settings.relative_pair)
+        if self.experiment.rotations or self.experiment.initial_rotations:
+            from .nbody_rotation import validate_experiment
+            validate_experiment(replace(self.experiment, settings=settings))
         if self.experiment.halted and settings.contact_mode in ("bounce","merge"):
             # Только явный выбор модели разрешает продолжить остановленный контакт.
             self.experiment=replace(self.experiment,settings=settings,halted=False)
@@ -174,9 +184,25 @@ class Laboratory:
         if self.figures.get() in ("earth-q2", "earth-moon-q2"):
             from .oblateness import earth_moon_quadrupoles
             return earth_moon_quadrupoles(experiment.bodies, experiment.origin, moon=self.figures.get()=="earth-moon-q2")
+        if self.figures.get()=="solar-j2":
+            from .oblateness import solar_j2
+            return solar_j2(experiment.bodies,experiment.origin)
+        if self.figures.get()=="sun-earth-moon-q2":
+            from .oblateness import sun_earth_moon_quadrupoles
+            return sun_earth_moon_quadrupoles(experiment.bodies,experiment.origin)
         if self.figures.get()=="saved" and not new:
             return experiment.settings.figures
         raise ValueError("Для нового сценария выберите none или профиль фигуры; saved сохраняет параметры открытого JSON")
+
+    def _selected_pair(self, experiment, *, new=False):
+        option = self.relative_pair.get()
+        if option == "none":
+            return None
+        if option == "earth-moon":
+            return ("Earth","Moon")
+        if option == "saved" and not new:
+            return experiment.settings.relative_pair
+        raise ValueError("Для нового сценария выберите none или earth-moon; saved сохраняет пару из JSON")
 
     def _new(self):
         experiment = preset(self.scenario.get(),backend=self.backend.get(),
@@ -184,7 +210,8 @@ class Laboratory:
         settings = replace(experiment.settings, integrator=self.integrator.get(),
                            rtol=float(self.rtol.get()), position_atol=float(self.position_atol.get()),
                            velocity_atol=float(self.velocity_atol.get()),physics=self.physics.get(),
-                           figures=self._selected_figures(experiment,new=True))
+                           figures=self._selected_figures(experiment,new=True),relative_pair=self._selected_pair(experiment,new=True),
+                           error_control=self.error_control.get())
         self._set_experiment(create_experiment(experiment.bodies, settings,origin=experiment.origin))
 
     def _reset(self):
@@ -204,10 +231,17 @@ class Laboratory:
     def _set_experiment(self,experiment):
         self.experiment=experiment
         if experiment.origin:
-            self.model_info.set(f"JPL {experiment.origin.ephemeris}; начальная эпоха JD {experiment.origin.epoch_jd_tdb:g} TDB. "
+            self.model_info.set(("Основа JPL + собственная геометрия кольца; " if any(b.name.startswith("Kuiper-Ring-") for b in experiment.initial) else "JPL ")
+                + f"{experiment.origin.ephemeris}; начальная эпоха JD {experiment.origin.epoch_jd_tdb:g} TDB. "
                 + ("Земля и Луна отдельно; остальные планетные системы точечные; SI."
                  if {"Earth", "Moon"}.issubset({b.name for b in experiment.initial})
-                 else "Барицентры планетных систем; SI; размер маркеров условный."))
+                 else "Барицентры планетных систем; SI; размер маркеров условный.")
+                + (" Добавлены Церера, Паллада и Веста." if any(b.name=="Ceres" for b in experiment.initial) else "")
+                + (" Всего 16 крупных астероидов SB441." if len(experiment.initial)==27 and any(b.name=="Interamnia" for b in experiment.initial) else "")
+                + (" Полный набор 343 астероидов DE441; 354 взаимодействующих тела." if len(experiment.initial)==354 else "")
+                + (" 343 астероида и 30 отдельных объектов Койпера; 384 взаимодействующих тела." if len(experiment.initial)==384 else "")
+                + (" Остаточное кольцо Койпера: собственная автономная аппроксимация, все точки взаимодействуют; начальные фазы DE441 не восстановлены." if any(b.name.startswith("Kuiper-Ring-") for b in experiment.initial) else "")
+                + (" Добавлен барицентр системы Плутона." if any(b.name=="Pluto-System" for b in experiment.initial) else ""))
         else:
             self.model_info.set("Все величины в SI. Размер маркеров условный. Учебные начальные условия, без эфемерид.")
         self.running=False
@@ -216,9 +250,11 @@ class Laboratory:
         self.integrator.set(experiment.settings.integrator)
         self.physics.set(experiment.settings.physics)
         self.figures.set("saved" if experiment.settings.figures else "none")
+        self.relative_pair.set("saved" if experiment.settings.relative_pair else "none")
         self.rtol.set(str(experiment.settings.rtol))
         self.position_atol.set(str(experiment.settings.position_atol))
         self.velocity_atol.set(str(experiment.settings.velocity_atol))
+        self.error_control.set(experiment.settings.error_control)
         self.dt.set(f"{experiment.settings.dt:.17g}")
         self.mode.set(experiment.settings.contact_mode)
         self.restitution.set(str(experiment.settings.restitution))
@@ -294,7 +330,8 @@ class Laboratory:
             points=[(f[name][x]-(f[reference_name][x] if reference_name is not None else 0),
                      f[name][y]-(f[reference_name][y] if reference_name is not None else 0)) for f in self.frames
                      if name in f and (reference_name is None or reference_name in f)]
-            line,=self.orbit.plot([p[0] for p in points],[p[1] for p in points],linewidth=1,label=name)
+            label=name if len(names)<=40 or i<12 or name==reference_name else "_nolegend_"
+            line,=self.orbit.plot([p[0] for p in points],[p[1] for p in points],linewidth=1,label=label)
             self.orbit.plot(*points[-1],marker="o",markersize=6,color=line.get_color())
         self.orbit.set_xlabel(f"{'XYZ'[x]}, м"); self.orbit.set_ylabel(f"{'XYZ'[y]}, м")
         self.orbit.set_aspect("equal",adjustable="datalim")
@@ -310,18 +347,21 @@ class Laboratory:
         values=report(self.experiment)
         state="контакт: остановка" if self.experiment.halted else ("работает" if self.running else "пауза")
         self.status.set(f"t = {values['time_seconds']:.9g} с | dt = {self.experiment.settings.dt:.6g} с | "
-                        f"{state} | {values['physics']}{' + Q2' if self.experiment.settings.figures else ''} | {len(names)} тел | событий: {values['events']} | "
+                        f"{state} | {values['physics']}{' + Q2' if self.experiment.settings.figures else ''}{' + вращение' if self.experiment.rotations else ''} | {len(names)} тел | событий: {values['events']} | "
                         f"потери: {values['dissipated_energy_joules']:.6g} Дж")
         fmt=lambda vector:', '.join(f"{v:.4g}" for v in vector)
         self.details.set(f"Импульс {'EIH 1PN ' if pn else ''}(кг·м/с): [{fmt(values['momentum'])}]   "
                          f"Угловой момент (кг·м²/с): [{fmt(values['angular_momentum'])}]   "
                          f"Центр масс (м): [{fmt(values['center_of_mass'])}]. "
                          + (f"Q2: оси заданы извне; их работа {values['orientation_work_joules']:.4g} Дж учтена в балансе. " if self.experiment.settings.figures else "")
+                         + ("Вращение включено; баланс учитывает энергию и угловой момент вращения. " if self.experiment.rotations else "")
                          + "Графики по снимкам; до 1500 кадров.")
         self.canvas.draw_idle()
 
     def _edit(self):
         from .oblateness import prescribed
+        if self.experiment.rotations:
+            raise ValueError("Редактор тел не поддерживает динамическую инерцию/q/S; создай отдельный новый сценарий")
         if prescribed(self.experiment.settings.figures):
             raise ValueError("Редактирование начальных данных требует сброса и выбора фигуры none: профиль DE441 привязан к исходной эпохе")
         dialog=tk.Toplevel(self.root)

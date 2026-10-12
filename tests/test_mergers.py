@@ -73,7 +73,7 @@ def test_v1_checkpoint_migrates_without_mutating_document():
     del document["orientation_work"]
     del document["origin"]
     del document["model_energy_offset"]
-    for key in ("integrator", "rtol", "position_atol", "velocity_atol", "physics", "figures"):
+    for key in ("integrator", "rtol", "position_atol", "velocity_atol", "physics", "figures", "relative_pair", "error_control"):
         del document["settings"][key]
     for field in ("initial","bodies"):
         for body in document[field]:

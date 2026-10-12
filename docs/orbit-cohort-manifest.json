@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "policy": {
+    "schema_version": 1,
+    "designations": [
+      "13270",
+      "13271",
+      "32100"
+    ],
+    "stations": [
+      "T08",
+      "T05",
+      "F51",
+      "F52"
+    ],
+    "start_utc": "2020-01-01",
+    "end_utc_exclusive": "2022-01-01",
+    "catalog": "Gaia2",
+    "mode": "CCD",
+    "season_gap_days": 90,
+    "min_training_measurements": 20,
+    "min_training_nights": 8,
+    "min_holdout_measurements": 10,
+    "min_holdout_nights": 4,
+    "selection": "First consecutive season pair satisfying count/night requirements, using timestamps and format only. All observations in each chosen season; no residual clipping.",
+    "night_systematic_arcsec": 0.15,
+    "error_model": "Independent reported per-exposure ADES covariance plus a zero-mean common two-dimensional station/UTC-night offset with fixed 0.15 arcsec standard deviation. Illustrative sensitivity model, not an externally calibrated survey error model.",
+    "comparison": "Independent-error baseline and fixed correlated-night model; both trained on the same early season. Preserve every declared case, including failures. Holdout never chooses a model or error parameter."
+  },
+  "policy_sha256": "d301a83753483acd487d248e6d20ecdb8bd8fad786106fa30cabfbcc9c06cfc8",
+  "cases": [
+    {
+      "designation": "13270",
+      "status": "prepared",
+      "dataset": "src/solar_simulator/data/orbit-cohort-13270.json",
+      "dataset_sha256": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+      "selection": {
+        "eligible_count": 235,
+        "season_counts": [
+          136,
+          99
+        ],
+        "chosen_season_indices": [
+          0,
+          1
+        ],
+        "training_nights": 31,
+        "holdout_nights": 24,
+        "gap_days": 330.1959679396823
+      },
+      "counts": {
+        "training": 136,
+        "holdout": 99
+      },
+      "stations": {
+        "T08": 154,
+        "T05": 81
+      }
+    },
+    {
+      "designation": "13271",
+      "status": "prepared",
+      "dataset": "src/solar_simulator/data/orbit-cohort-13271.json",
+      "dataset_sha256": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+      "selection": {
+        "eligible_count": 382,
+        "season_counts": [
+          124,
+          258
+        ],
+        "chosen_season_indices": [
+          0,
+          1
+        ],
+        "training_nights": 28,
+        "holdout_nights": 64,
+        "gap_days": 281.30503831012174
+      },
+      "counts": {
+        "training": 124,
+        "holdout": 258
+      },
+      "stations": {
+        "T05": 182,
+        "T08": 200
+      }
+    },
+    {
+      "designation": "32100",
+      "status": "unavailable",
+      "reason": "No consecutive seasons meet the frozen count/night criteria: []"
+    }
+  ]
+}

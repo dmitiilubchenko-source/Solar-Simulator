@@ -1,0 +1,238 @@
+{
+  "change": 64,
+  "policy": {
+    "change": 64,
+    "model": "Uniform compatible quantity scaling and supplied clock/basis kinematics of unchanged finite H57",
+    "synthetic_input_policy": "scripts/rigid-pn-policy.json",
+    "seed": 64,
+    "random_states": 24,
+    "uniform_factors": [
+      0.5,
+      2.0,
+      0.9999999844948023
+    ],
+    "trajectory_factor": 0.5,
+    "wrong_inertia_factor": 2.0,
+    "periods": 1,
+    "samples": 65,
+    "rtol": 1e-11,
+    "atol_over_rtol": 0.01,
+    "max_step_over_period": 0.0078125,
+    "clock_boundary": {
+      "rate_offset": 1.2,
+      "rate_slope": 0.2,
+      "basis_axis": [
+        0.2,
+        -0.4,
+        0.7
+      ],
+      "basis_rate": 0.4,
+      "local_axis": [
+        -0.3,
+        0.7,
+        0.2
+      ],
+      "local_rate": 0.9
+    },
+    "lunar_initial_checkpoint": ".tools/rotation63/initial.json",
+    "lunar_initial_checkpoint_sha256": "02ee4efa985402898568d13e41050bfad6da5717e0148ab08a3f6a4e1af20623",
+    "criteria": {
+      "hamiltonian_scaling_relative": 1e-12,
+      "momentum_scaling_relative": 1e-12,
+      "angular_momentum_scaling_relative": 1e-12,
+      "flow_scaling_relative": 1e-10,
+      "independent_H_scaling_relative": 1e-12,
+      "independent_orbital_flow_relative": 1e-10,
+      "scaled_trajectory_difference": 1e-08,
+      "boundary_first_derivative_relative": 1e-12,
+      "boundary_rate_inverse_relative": 1e-12,
+      "boundary_acceleration_relative": 1e-12,
+      "wrong_unscaled_inertia_rate_minimum": 0.01,
+      "wrong_missing_basis_rate_minimum": 0.01,
+      "wrong_missing_clock_acceleration_minimum": 0.01
+    },
+    "minimum_metrics": [
+      "wrong_unscaled_inertia_rate_minimum",
+      "wrong_missing_basis_rate_minimum",
+      "wrong_missing_clock_acceleration_minimum"
+    ],
+    "required_true": [
+      "source_hashes_preserved",
+      "raw_quaternion_preserved",
+      "physical_migration_not_claimed"
+    ],
+    "physical_lunar_mapping_certified": false,
+    "future_ephemerides": "not read or fitted",
+    "scope": "No inferred local lunar clock, metric/tetrad/SSC or full PN quadrupole. Uniform scaling is not a local/global transformation and is not canonical with unchanged symplectic units. Old profile/runtime unchanged."
+  },
+  "metrics": {
+    "hamiltonian_scaling_relative": 1.0695291258883146e-15,
+    "momentum_scaling_relative": 7.872783451956152e-17,
+    "angular_momentum_scaling_relative": 2.1410107881690065e-16,
+    "flow_scaling_relative": 1.6198757690803242e-15,
+    "independent_H_scaling_relative": 1.336911407360393e-15,
+    "independent_orbital_flow_relative": 5.910020752927862e-16,
+    "wrong_unscaled_inertia_rate_minimum": 6.9999577795385965,
+    "boundary_first_derivative_relative": 4.940710535477551e-16,
+    "boundary_rate_inverse_relative": 2.9392554300759007e-16,
+    "boundary_acceleration_relative": 5.036387965330858e-16,
+    "wrong_missing_basis_rate_minimum": 0.3334058819649554,
+    "wrong_missing_clock_acceleration_minimum": 0.3512136030918493,
+    "scaled_trajectory_difference": 1.2735256842633668e-13
+  },
+  "checks": {
+    "hamiltonian_scaling_relative": true,
+    "momentum_scaling_relative": true,
+    "angular_momentum_scaling_relative": true,
+    "flow_scaling_relative": true,
+    "independent_H_scaling_relative": true,
+    "independent_orbital_flow_relative": true,
+    "scaled_trajectory_difference": true,
+    "boundary_first_derivative_relative": true,
+    "boundary_rate_inverse_relative": true,
+    "boundary_acceleration_relative": true,
+    "wrong_unscaled_inertia_rate_minimum": true,
+    "wrong_missing_basis_rate_minimum": true,
+    "wrong_missing_clock_acceleration_minimum": true
+  },
+  "confirmations": {
+    "source_hashes_preserved": true,
+    "raw_quaternion_preserved": true,
+    "physical_migration_not_claimed": true
+  },
+  "passed": true,
+  "synthetic_initial": [
+    0.3933333333333333,
+    -0.01904761904761905,
+    -0.02857142857142857,
+    -0.40666666666666673,
+    -0.01904761904761905,
+    -0.02857142857142857,
+    3.3333333333333335,
+    0.380952380952381,
+    0.5714285714285714,
+    0.0008571428571428571,
+    0.2500535658493766,
+    -0.0011428571428571427,
+    0.0019999999999999996,
+    -0.2738630896589004,
+    -0.0026666666666666666,
+    -0.002857142857142857,
+    0.02380952380952381,
+    0.0038095238095238095,
+    0.003,
+    -0.004,
+    0.002,
+    -0.002,
+    0.001,
+    0.003,
+    0.0002,
+    0.0003,
+    -0.0001,
+    0.9639684818261637,
+    0.148194058982302,
+    -0.09879603932153468,
+    0.19759207864306935
+  ],
+  "synthetic_nominal_period": 6.283185307179586,
+  "trajectory_comparison": {
+    "maximum": 1.2735256842633668e-13,
+    "per_block_body": [
+      [
+        4.0323101843696926e-14,
+        2.0895713276199006e-14,
+        6.129025566183258e-16
+      ],
+      [
+        3.600033301967152e-14,
+        3.2561607601392033e-14,
+        1.2800159837338717e-15
+      ],
+      [
+        8.698346799831288e-14,
+        1.1989418932088639e-15,
+        7.325173613604996e-16
+      ]
+    ],
+    "raw_quaternion": 1.2735256842633668e-13
+  },
+  "jobs": {
+    "base": {
+      "seconds": 2.4129149000000325,
+      "nfev": 1745,
+      "path": ".tools/rotation64/base.npz"
+    },
+    "scaled": {
+      "seconds": 2.5203045000016573,
+      "nfev": 1745,
+      "path": ".tools/rotation64/scaled.npz"
+    }
+  },
+  "code_and_input_sha256": {
+    ".tools/rotation57/rigid-pn-trajectories.npz": "8ffa1be796f492a2e5f5a47a06ba0269302adcb1a67a8453df435391e9d3e1f0",
+    ".tools/rotation59/conditional-lunar-initial.json": "5c619067a113779491afbd97f811d65bb77af9a5bb45a14f8f3bc49be9edf76d",
+    ".tools/rotation62/production.npz": "485eada4f379c7c74e71b2a58f3bbfa5cf51a8d94c6e16fe46a5cd38b7017b0a",
+    ".tools/rotation62/reference-0.npz": "3a7b98df956440c9c5e2316c36aba28c354cf61258bbbef3b17af30918c07b4a",
+    ".tools/rotation62/reference-1.npz": "674356f5eff4ad6886eda87354095889d33090f384e157b2f08b06357d9731d3",
+    ".tools/rotation62/tighter.npz": "80446412030e98224cbc9835fc83ecedbcab2b49045309c88db9f6dec4f7561e",
+    ".tools/rotation63/initial.json": "02ee4efa985402898568d13e41050bfad6da5717e0148ab08a3f6a4e1af20623",
+    "docs/canonical-initial-validation.json": "90cf9edf66dce41bec810131d4924635458bcd2aee9efddde3810a444bceb0a1",
+    "docs/relative-canonical-validation.json": "1c68264e4eccf557ab9b6cef794abe6861b7dd01d36f52d981ca7a5166513910",
+    "docs/rigid-pn-validation.json": "450de1d58204270778e8ce41c72dcb77493ef90442c7e7c7d360059b63771ea8",
+    "scripts/assess_canonical_checkpoint.py": "156702a2f86db859352161e16972af0d3c03f8e6e66ef0555e37155583eed530",
+    "scripts/assess_canonical_solar.py": "ef09f154ccbcedccff4dc5235c789db3fce6db0a686f0ec23b8b647f023dce6d",
+    "scripts/assess_nbody_pn_spin.py": "643c1ad14f2ab28b7796e8bacf7508152810812a2e3a3119dc901285c4fe9661",
+    "scripts/assess_relative_canonical.py": "36dff1776a02e35085829812e959872d8cabc76247f3925c92c1f0b509d2841e",
+    "scripts/assess_relative_canonical_checkpoint.py": "4a8b804d6fb51ec55a5080795bbca1dd5f836199d2f055a1333b8ddc601b7606",
+    "scripts/assess_rigid_pn.py": "356d225964703ebd1f8b14cd04c7a1b2b27af8156e1d5f2d8e42df4463d5cab7",
+    "scripts/assess_rotation_time.py": "62b602356fd8d84e7dc50af5a6fcd6245ba43565c0ffb316bd78a73c76dacfb7",
+    "scripts/canonical-checkpoint-policy.json": "a75551e9837f28ce0311daea9d367e4064442f57a57967b4234528fbd2a5e278",
+    "scripts/canonical-solar-policy.json": "79a966a972c99ad6cf6507df8cbbca461edfdfa8bd5991c02d271407c9e0e2a0",
+    "scripts/canonical_checkpoint.py": "83a14d42011d9e455ba5f4b76d6d673549e613a453bf7d8f7f5dd0c73a9774d2",
+    "scripts/canonical_initial.py": "45f69e015712f403edd17693723b06cb3b9f6044d42bf8ef64f4183ebeac2de5",
+    "scripts/independent_nbody_pn_spin.py": "8d0b6070bced7acef5fc6c88aad0122f7e4b6a0d555cc86c152837e16251114c",
+    "scripts/independent_relative_canonical.py": "9d53a3eb2ed1f814d83fc70c1a2a33bc3ed428f448bb607e689c918653d865a1",
+    "scripts/independent_rigid_pn.py": "06a64e7b296cdcd22b317bed375303ac4462b530c800fd00a40db68c104dcfec",
+    "scripts/nbody_pn_spin.py": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d",
+    "scripts/relative-canonical-checkpoint-policy.json": "c687901b29d131b9ce97dda2121a5dbd36c012f80d1a5ab31fb8b4d6ef8fc0fb",
+    "scripts/relative-canonical-policy.json": "e65b5ec2e8c870343142195db5e0462a61bbf67cd6aab615ff10a0ff913e5601",
+    "scripts/relative_canonical.py": "3d44dfdbeeffc41e3ce037fe78fb282df010eee27c0b6d88b4afda1370fb80e7",
+    "scripts/relative_canonical_checkpoint.py": "a92bd4a7ae4bd131a76fc840187e64626eaab8445b34ee99acfaa8fc059a7919",
+    "scripts/resume_relative_canonical.py": "72c7947f9bb5a246ba115f0846ea490ba81f116d14e92eec988288c2ffd7b0dd",
+    "scripts/rigid-pn-policy.json": "3936446d065cc51d35fa255dbd40342263f950a1ce55113b799a6a8824e8feed",
+    "scripts/rigid_pn_model.py": "bd1b7126e7d29a4c899e20b5b27b6f42b316a58724f968ce8e054f5d749afbf1",
+    "scripts/rotation-time-policy.json": "605f94176e83341d889524c1d3b04cfec3ff682c9b29c58efedfe8d9f63fa9f8",
+    "scripts/rotation_time.py": "0d88272ade5c6cad2aef50dbe45bef4869e4766d479b8f5bc9b36fa4cc4bfca0",
+    "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+    "src/solar_simulator/data/solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "tests/test_canonical_checkpoint.py": "59d41e5ee641f40bd1ab25a80d07cfc24aa57e8c1791084417629af008766a94",
+    "tests/test_canonical_solar.py": "d098271e7b79199f5110b87876c8c4b6b3dd0cf9119f83f1aa7c2e71c5f3a36c",
+    "tests/test_relative_canonical.py": "f43300fd0e26e32daeee75d1acf4160dcc9d21bdbd86a985f21ead345f291335",
+    "tests/test_relative_canonical_audit.py": "fe6dcb55edd27b8788c1d15362ea02d7d43e58ddc6bdcb3ae148a119add54243",
+    "tests/test_relative_canonical_checkpoint.py": "12a92989baae4a572e39e58869d5a6473a3e082159d2fcf677442747e7ed5153",
+    "tests/test_relative_canonical_checkpoint_audit.py": "7a157cf81973f4ebad58d28d7a8364c30ecc0fc5d054f716f5d9278a2238fde4",
+    "tests/test_rotation_time.py": "ac269bfb7eacdc054ad031634bfd5b194e7c643971f47655d242d33080010457",
+    "tests/test_rotation_time_audit.py": "bcb6e9c52f482c99086b1c5731eda9f48ddee24367af588f5a095f78d9ccbd2e"
+  },
+  "trajectory_archives": {
+    ".tools/rotation64/base.npz": "805108da554cf86c40afb6a266488c81b8500981acff919745e7a238512bdbb3",
+    ".tools/rotation64/scaled.npz": "e78595fec4d82440984233b2f5eed31f566d716df65719c42007f932eac2a715"
+  },
+  "convention_diagnostic": {
+    "defining_L_B": 1.550519768e-08,
+    "TDB_compatible_factor": 0.9999999844948023,
+    "hypothetical_TDB_to_TCB_mass_relative": 1.5505198014409416e-08,
+    "hypothetical_TDB_to_TCB_inertia_relative": 4.651559470936206e-08,
+    "hypothetical_TDB_to_TCB_spin_relative": 3.101039625086344e-08,
+    "hypothetical_TDB_to_TCB_rate_relative": -1.550519768134251e-08,
+    "hypothetical_reference_radius_difference_m": 0.026948034149043565,
+    "hypothetical_32day_coordinate_duration_difference_s": 0.04286877147023915,
+    "interpretation": "Uniform compatible-quantity examples only, NOT transformations of the physical Moon/profile. Local radius/inertia time-scale provenance, lunar clock, basis, tetrad, SSC and complete PN Q2 remain unqualified."
+  },
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_claimed": false,
+  "runtime_changed": false,
+  "future_ephemerides_read": false
+}

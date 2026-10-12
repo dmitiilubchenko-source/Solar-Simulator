@@ -192,9 +192,11 @@ def test_v6_fixed_j2_checkpoint_migrates_without_new_physics():
     state = replace(state,settings=replace(state.settings,figures=earth_j2(state.bodies,state.origin)))
     document = to_document(state)
     document["schema_version"] = 6; del document["orientation_work"]
+    del document["settings"]["relative_pair"]
+    del document["settings"]["error_control"]
     before = deepcopy(document)
     restored = from_document(document)
-    assert restored.settings == state.settings and restored.orientation_work == 0
+    assert restored.settings == replace(state.settings,error_control="global-rms") and restored.orientation_work == 0
     assert document == before
 
 

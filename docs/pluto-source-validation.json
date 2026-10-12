@@ -1,0 +1,50 @@
+{
+  "oracle": "CSPICE chbint plus J2000 -> ECLIPJ2000",
+  "spiceypy": "6.0.3",
+  "dataset_sha256": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+  "header_sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c",
+  "records_sha256": "1699167f07cf3ec4ee5d5827b99e2ada335ccb32b5ddec939c24eb50f81a21ab",
+  "samples": 58,
+  "record_boundaries_included": true,
+  "maximum_position_metres": 0.0011070774625986971,
+  "maximum_velocity_m_per_s": 1.3642420526593924e-12,
+  "horizons_crosscheck": {
+    "Sun": {
+      "maximum_position_metres": 1.7188894741325568e-07,
+      "maximum_velocity_m_per_s": 5.406070820853851e-15
+    },
+    "Mercury": {
+      "maximum_position_metres": 1.3495418260655313e-05,
+      "maximum_velocity_m_per_s": 2.2296536684973512e-11
+    },
+    "Venus": {
+      "maximum_position_metres": 7.631778344628355e-05,
+      "maximum_velocity_m_per_s": 8.289010171919556e-12
+    },
+    "Earth-Moon": {
+      "maximum_position_metres": 8.219481088583047e-05,
+      "maximum_velocity_m_per_s": 1.0920954755460645e-11
+    },
+    "Mars": {
+      "maximum_position_metres": 9.199374000439974e-05,
+      "maximum_velocity_m_per_s": 8.777477954462309e-12
+    },
+    "Jupiter": {
+      "maximum_position_metres": 0.00018578789767281984,
+      "maximum_velocity_m_per_s": 7.382645023905852e-12
+    },
+    "Saturn": {
+      "maximum_position_metres": 0.0009844284364789139,
+      "maximum_velocity_m_per_s": 5.6519599245547975e-12
+    },
+    "Uranus": {
+      "maximum_position_metres": 0.001545037455630667,
+      "maximum_velocity_m_per_s": 1.8758328224066645e-12
+    },
+    "Neptune": {
+      "maximum_position_metres": 0.000978586959522947,
+      "maximum_velocity_m_per_s": 1.1913409659390872e-12
+    }
+  },
+  "checks_passed": true
+}

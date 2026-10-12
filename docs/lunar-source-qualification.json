@@ -1,0 +1,57 @@
+{
+  "change": 69,
+  "kind": "lunar-source-qualification",
+  "profile_sha256": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+  "criteria": {
+    "inertia_relative": 1e-12,
+    "q2_relative": 1e-12,
+    "wrong_radius_relative_minimum": 0.0001
+  },
+  "measurements": {
+    "inertia_relative": 0.0,
+    "q2_relative": 8.484324354185446e-13,
+    "surrogate_J2": 0.0002032350000000238,
+    "surrogate_C22": 2.242750000001903e-05,
+    "wrong_radius_relative": 0.0009767464153338512,
+    "common_mean_relative_sensitivity": 3.05554989712982e-05
+  },
+  "checks": {
+    "inertia_arithmetic": true,
+    "q2_arithmetic": true,
+    "wrong_radius_control": true
+  },
+  "arithmetic_passed": true,
+  "physical_mapping_certified": false,
+  "qualified": [
+    "mean permanent solid moments and gravity-reference radius, Williams2014 section5",
+    "global TDB derivative of the pinned PA attitude, existing DE441 loader",
+    "same effective I in kinetic energy and Q2; translational mass is whole GM/G"
+  ],
+  "unresolved": [
+    "time-compatible dimensional inertia and radius for a local lunar PN frame",
+    "mean-solid axes versus undistorted mantle PA axes, including off-diagonal permanent tide",
+    "harmonic centres to full canonical ADM centres, SSC and local tetrad/spin",
+    "PN inertia and multipoles, fluid-core and tidal deformation model"
+  ],
+  "limitations": [
+    "Arithmetic passage does not certify physical mapping or ephemeris accuracy",
+    "Common mean sensitivity is not a covariance or uncertainty interval",
+    "Surrogate solid-I Q2 is not the published whole-Moon gravity field",
+    "No clock/basis/geodetic correction added to the already-global attitude derivative"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2013JE004559",
+      "location": "sections4-5, Table4, solid/permanent/tide-removed definitions; no TDB match in full-text search"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/doc/Park.2021.AJ.DE440.pdf",
+      "location": "sections2.3-2.4 and4.1-4.2"
+    },
+    {
+      "url": "https://arxiv.org/pdf/1001.0915",
+      "location": "sections2 and7, especially7.5-7.9"
+    }
+  ],
+  "code_sha256": "1cb2828e2ad93676b01cd1e2df31bfb7ad0b1e8d8688eb32391c1164924310e6"
+}

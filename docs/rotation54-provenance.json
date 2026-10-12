@@ -1,0 +1,61 @@
+{
+  "date": "2026-10-11",
+  "change": 54,
+  "branch": "main",
+  "code_and_results_sha256": {
+    "scripts/assess_rotation_year.py": "0ed376210450408c27b2ff811cbb6b8b96b1aeecfdabc18ff1e07b7b8d9afd27",
+    "scripts/refine_rotation_year_reference.py": "b9f8cd549ba094ad2528cf8a577153495002bbbf01d8f9615aec066b61cddfe7",
+    "scripts/rotation-year-policy.json": "dd4801a74e5e448376b05e4a438c6605874b0d1a0b757e60f51a4320ef03d697",
+    "scripts/rotation-year-reference-policy.json": "157712d1ede1e169d8ab64e9c8ed1e3717ea8161e2647c7a2bd7856b1647d2b5",
+    "tests/test_rotation_year_audit.py": "a6b3ce614761be270d85e2ba9a9f1b240e763bf7223b4b0931f7bdbfde2d9688",
+    "docs/rotation-year-validation.json": "ccd001a10b413c345ff4e64119f098f5ac326a99ea11cf45f9aef2431760b72e",
+    "docs/rotation-year-reference-validation.json": "ba5f7410133e3246be0b895343dc98c374147df89f3951a551278a0196d351d0"
+  },
+  "preservation": {
+    "inventory_files": 290,
+    "unchanged_files": 285,
+    "intentional_document_changes": [
+      "docs/changes.md",
+      "docs/development-plan.md",
+      "docs/nbody-rotation.md",
+      "docs/project-context.md",
+      "docs/session-handoff.md"
+    ],
+    "initial_src_and_rust_files_unchanged": 68,
+    "all_initial_json_files_unchanged": 90,
+    "inventory_local_path": ".tools/rotation54/before.json",
+    "inventory_sha256": "8eee9cf03f5f98344b59600e95f2ad449a0f75e5bef02a0a578ac54b32fd07c6"
+  },
+  "tests": {
+    "targeted_passed": 47,
+    "elapsed_seconds": 20.48,
+    "last_full_run": {
+      "change": 53,
+      "python_passed": 738,
+      "rust_passed": 17,
+      "rerun_in_54": false
+    },
+    "initial_scientific_launch_failure": {
+      "stage": "before integration",
+      "reason": "numpy.float64 dt violates strict Settings Python float/int contract",
+      "saved_source": ".tools/rotation54/start-failure/assess_rotation_year.py",
+      "saved_source_sha256": "fa6de6603de158b852affefdd71d1fb14f9a2da04d19d4c160a1c013b61f17b2",
+      "saved_error": ".tools/rotation54/start-failure/result.json"
+    }
+  },
+  "science": {
+    "baseline_passed": true,
+    "additional_reference_passed": true,
+    "criteria_weakened": false,
+    "future_DE441_used_for_fit": false,
+    "new_physics": false
+  },
+  "access": {
+    "Consensus_initial_GRIT_query": "temporary rate limit",
+    "Consensus_sequential_GRIT_search_and_fetch": "success",
+    "Consensus_DE441_search_and_fetch": "success",
+    "primary_GRIT_html_and_JPL_Park_pdf": "success"
+  },
+  "portable_rebuilt": false,
+  "committed_or_published": false
+}

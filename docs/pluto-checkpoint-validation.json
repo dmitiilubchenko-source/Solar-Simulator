@@ -1,0 +1,47 @@
+{
+  "time_seconds": 31557600.0,
+  "relative_pair": [
+    "Earth",
+    "Moon"
+  ],
+  "whole_vs_half_restart_all_bodies": {
+    "maximum_position_metres": 0.006143540338197959,
+    "maximum_velocity_m_per_s": 4.950810015502407e-09
+  },
+  "whole_vs_half_restart_pair": {
+    "maximum_position_metres": 0.00036410784351328593,
+    "maximum_velocity_m_per_s": 1.0390572845518494e-09
+  },
+  "orientation_work_difference_joules": 12080914432.0,
+  "work_difference_over_initial_figure_energy": 1.327583935457028e-13,
+  "whole_vs_45_intervals": {
+    "all_bodies": {
+      "maximum_position_metres": 0.011474464852728414,
+      "maximum_velocity_m_per_s": 2.487780753194596e-09
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.0006778650530366447,
+      "maximum_velocity_m_per_s": 1.1838063351960668e-09
+    }
+  },
+  "work_difference_from_45_intervals_joules": 31565746176.0,
+  "whole_vs_daily_intervals": {
+    "all_bodies": {
+      "maximum_position_metres": 0.09192082984481875,
+      "maximum_velocity_m_per_s": 7.761435956866374e-08
+    },
+    "moon_relative_to_earth": {
+      "maximum_position_metres": 0.029059880036433536,
+      "maximum_velocity_m_per_s": 7.771567396772404e-08
+    }
+  },
+  "work_difference_from_daily_intervals_joules": 1392907669504.0,
+  "dataset_sha256": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+  "gm_sha256": "b91c73997ba197141157f56134fd37c56d7a3f6b7c7542fbbb3146ef0623603c",
+  "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+  "solar_profile_sha256": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+  "rtol": 3e-14,
+  "position_atol_metres": 1e-05,
+  "velocity_atol_m_per_s": 1e-11,
+  "checks_passed": true
+}

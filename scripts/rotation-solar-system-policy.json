@@ -1,0 +1,17 @@
+{
+  "model": "Newtonian 10 initial DE441 bodies; Moon rigid-solid Q2, others point masses",
+  "duration_seconds": 2764800,
+  "samples": 129,
+  "production_rtol": 1e-11,
+  "reference_rtols": [3e-12, 3e-13],
+  "criteria": {
+    "energy_relative": 1e-8,
+    "angular_momentum_relative": 1e-8,
+    "quaternion_norm": 1e-8,
+    "reference_difference": 1e-7,
+    "reference_uncertainty": 1e-8,
+    "restart_difference": 1e-8
+  },
+  "physical_DE441_accuracy_threshold": null,
+  "warning": "Predeclared model audit; not full DE441 physics, a year or a 528-body validation. Future orientation only compared after free runs."
+}

@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "model": "autonomous-fully-interacting-discrete-ring",
+  "radius_au": 44.0,
+  "source_mass_constants": ["MA8201", "MA8236"],
+  "source_mass_count": 36,
+  "point_counts": [36, 72, 144],
+  "phase_indices": [0, 1],
+  "phase_rule": "phase_index * pi / points; measured from positive Ecliptic J2000 x toward y",
+  "velocity_rule": "prograde Newtonian Sun-only circular speed sqrt(GM_Sun/radius), plus unchanged SSB Sun velocity",
+  "interactions": "all pairs Newton/EIH 1PN, including ring-ring; existing prescribed quadrupoles and reaction",
+  "purpose": "own approximation inspired by DE441 mass and radius, not recovered DE441 ring initial states",
+  "fit_future_ephemerides": false,
+  "geometry_source": "https://ssd.jpl.nasa.gov/doc/Park.2021.AJ.DE440.pdf#page=2"
+}

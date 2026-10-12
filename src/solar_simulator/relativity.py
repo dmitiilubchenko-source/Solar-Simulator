@@ -16,7 +16,7 @@ C = 299_792_458.0  # Exact SI speed of light, m/s.
 WEAK_FIELD_LIMIT = 1e-4  # Application domain guard, not an accuracy guarantee.
 
 
-def _geometry(positions, velocities, masses, c):
+def _geometry(positions, velocities, masses, c, pair_displacement=None):
     p, v, m = (np.asarray(value, dtype=float) for value in (positions, velocities, masses))
     if (m.ndim != 1 or not m.size or p.shape != (m.size, 3) or v.shape != p.shape
             or not all(np.all(np.isfinite(value)) for value in (p, v, m)) or np.any(m <= 0)):
@@ -25,6 +25,9 @@ def _geometry(positions, velocities, masses, c):
         raise ValueError("Неверная скорость света")
     # x_ij points from source j to target i; self interactions are excluded.
     x = p[:, None, :]-p[None, :, :]
+    if pair_displacement is not None:
+        first,second,relative = pair_displacement
+        x[first,second],x[second,first] = -relative,relative
     r = np.linalg.norm(x, axis=2)
     np.fill_diagonal(r, np.inf)
     if np.any(r == 0):
@@ -52,9 +55,9 @@ def eih_acceleration(positions, velocities, masses, *, c=C):
         raise ValueError("Переполнение при расчёте 1PN") from error
 
 
-def _eih_acceleration(positions, velocities, masses, c):
+def _eih_acceleration(positions, velocities, masses, c, pair_displacement=None):
     with np.errstate(over="raise", divide="raise", invalid="raise"):
-        x, inv, mu, u, speed2, newton, v, _ = _geometry(positions, velocities, masses, c)
+        x, inv, mu, u, speed2, newton, v, _ = _geometry(positions, velocities, masses, c, pair_displacement)
         x_vj = np.einsum("ijk,jk->ij", x, v)
         x_aj = np.einsum("ijk,jk->ij", x, newton)
         scalar = (4*u[:, None]+u[None, :]-speed2[:, None]-2*speed2[None, :]

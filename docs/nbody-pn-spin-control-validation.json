@@ -1,0 +1,77 @@
+{
+  "policy": {
+    "purpose": "Separate sensitivity check after the original 8-period missing-reaction control failed its detection threshold; preserve original failed audit",
+    "baseline": "docs/nbody-pn-spin-validation.json",
+    "periods": 32,
+    "samples": 2049,
+    "rtol": 1e-11,
+    "atol_over_rtol": 0.01,
+    "max_step_over_period": 0.0078125,
+    "criteria": {
+      "energy_relative": 1e-09,
+      "momentum_scaled": 1e-10,
+      "angular_momentum_relative": 1e-09,
+      "spin_norm_relative": 1e-09,
+      "negative_control_J_drift_minimum": 1e-05
+    },
+    "reason": "Test the accumulated missing-reaction signal for four times the original duration with identical masses, spins, initial canonical frame, physical Hamiltonian and numerical method. No weakened threshold, changed initial spin, parameter fit or future ephemeris. Not a replacement 32-period independent trajectory comparison."
+  },
+  "code_and_baseline_sha256": {
+    "scripts/nbody-pn-spin-policy.json": "8e4cd6af65a9cba0b6de062fce634e7142fccfaab2aab32023b72b9fef5555b0",
+    "scripts/nbody_pn_spin.py": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d",
+    "scripts/independent_nbody_pn_spin.py": "8d0b6070bced7acef5fc6c88aad0122f7e4b6a0d555cc86c152837e16251114c",
+    "scripts/assess_nbody_pn_spin.py": "643c1ad14f2ab28b7796e8bacf7508152810812a2e3a3119dc901285c4fe9661",
+    "tests/test_nbody_pn_spin.py": "f1b3ded9886fa86cbc2fd94c385f2a7cb178d1fc0b1a43676e1b71a75cc64565",
+    "scripts/pn_spin_model.py": "5dc2df3223fb5e8fc21045698e120b6197a0965a6cd6a6289030c2f2f62b9235",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "scripts/nbody-pn-spin-control-policy.json": "2de1dfd5c3038001100365a73ce7637c600608c6dab4dfe9c8d013b405259859",
+    "docs/nbody-pn-spin-validation.json": "3257aae7d3f36a9bb1e27db3e836e3bec3574354498466a3acf98dd007195bf5",
+    "scripts/assess_nbody_pn_spin_control.py": "c1b909e2fb06db6d53430673976178b7f2e07d8df2598e7bbb9761ca0f74ccd6",
+    ".tools\\rotation56\\nbody-pn-spin-trajectories.npz": "dfcd49bb8128e400176427f4a4b155c8bd261f474b97851cefac43056c932a1f"
+  },
+  "metrics": {
+    "energy_relative": 6.474581081938361e-14,
+    "momentum_scaled": 1.5671781496179254e-15,
+    "angular_momentum_relative": 1.651254504972236e-14,
+    "spin_norm_relative": 3.1874174101288692e-15,
+    "negative_control_J_drift_minimum": 3.283535540518005e-05
+  },
+  "passed": true,
+  "failed_criteria": [],
+  "job_elapsed_seconds": {
+    "complete": 57.28660949999903,
+    "missing-reaction": 68.59190540000054
+  },
+  "individual_missing_reaction_spin_change_max": [
+    1.2160438609910512e-05,
+    2.745823199741629e-06,
+    5.164073970094217e-08
+  ],
+  "total_missing_reaction_spin_change_max": 9.715733505910717e-06,
+  "initial_spin_derivatives": [
+    [
+      8.881139246814437e-08,
+      6.664556182047332e-08,
+      7.403493873008769e-11
+    ],
+    [
+      -1.0608745705688578e-08,
+      -2.1211746161933843e-08,
+      -1.9150831477705206e-12
+    ],
+    [
+      -1.1349650115003011e-10,
+      7.890846705718226e-11,
+      9.7323988714865e-12
+    ]
+  ],
+  "baseline_original_passed": false,
+  "baseline_original_failures": [
+    "negative_control_J_drift_minimum"
+  ],
+  "trajectory_archive_local_path": ".tools\\rotation56\\nbody-pn-spin-control-trajectories.npz",
+  "trajectory_archive_sha256": "edc7102c7bed9f06cc85e32d689efe5911b1d3d5fd0ec4f5688a8bb6cc4a1b23",
+  "future_ephemerides_called": false,
+  "runtime_model_changed": false
+}

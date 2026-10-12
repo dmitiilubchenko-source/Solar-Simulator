@@ -1,0 +1,18 @@
+{
+  "original_rtols": [
+    3e-11,
+    3e-12
+  ],
+  "duration_seconds": 583698.0578027279,
+  "samples": 401,
+  "metrics": {
+    "relative_position": 2.821539492836258e-08,
+    "relative_velocity": 2.8052283511782322e-08,
+    "rotation_frobenius": 3.698655910861318e-08,
+    "spin_relative": 5.73025187540329e-09,
+    "matrix_orthogonality_low": 1.7599698450340744e-09,
+    "matrix_orthogonality_high": 1.7262521726095294e-10
+  },
+  "source_sha256": "22b66e67589cb611c599e40a694c89a6c99c29554acc69f6424a44bc5c3c9360",
+  "interpretation": "Local RK45 tolerance does not bound accumulated phase/orientation error over 20 periods. Identify dominant group; no exact global error bound claimed."
+}

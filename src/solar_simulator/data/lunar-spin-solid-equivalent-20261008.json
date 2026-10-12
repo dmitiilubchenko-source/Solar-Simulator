@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "model": "rigid-solid-equivalent",
+  "units": "SI",
+  "epoch_jd_tdb": 2461321.5,
+  "frame": "Ecliptic J2000",
+  "relative_position": "Earth minus Moon",
+  "source_center": "Solar System Barycenter",
+  "ephemeris": "DE441",
+  "parent_dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+  "orientation_profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+  "moon_gm_m3_s2": 4902800118457.55,
+  "earth_gm_m3_s2": 398600435507022.7,
+  "gravitational_constant_m3_kg_s2": 6.6743e-11,
+  "reference_radius_m": 1738000.0,
+  "exclusion_radius_m": 1800000.0,
+  "normalized_mean_solid_inertia": 0.392728,
+  "normalized_mean_uncertainty": 1.2e-05,
+  "normalized_moment_offsets": [
+    -0.0001126,
+    -2.289e-05,
+    0.00013549
+  ],
+  "moments_kg_m2": [
+    8.71174869368716e+34,
+    8.71373927015286e+34,
+    8.71725356622506e+34
+  ],
+  "rotation": [
+    [
+      0.9202991643850716,
+      0.39091394680051583,
+      0.015353638949201342
+    ],
+    [
+      -0.39117670505180996,
+      0.9200509127962309,
+      0.022070416571322454
+    ],
+    [
+      -0.005498495880529289,
+      -0.026317371822922205,
+      0.9996385159063179
+    ]
+  ],
+  "rotation_derivative_per_second": [
+    [
+      1.040461318231507e-06,
+      -2.4495558953236212e-06,
+      1.9461969947945644e-09
+    ],
+    [
+      2.4488348613832353e-06,
+      1.0411281211685315e-06,
+      1.643560865753603e-09
+    ],
+    [
+      -7.11959337535164e-08,
+      1.2361236969004595e-08,
+      -6.617920167834109e-11
+    ]
+  ],
+  "earth_minus_moon_position_m": [
+    359159036.77438354,
+    -119431590.14268494,
+    7601932.763351129
+  ],
+  "earth_minus_moon_velocity_m_s": [
+    356.9906896119446,
+    973.3843073148892,
+    91.50977623166234
+  ],
+  "sources": [
+    {
+      "url": "https://doi.org/10.1002/2013JE004559",
+      "publication": "Williams et al. 2014",
+      "location": "section 5, mean solid moment and A_s-I_s/B_s-I_s/C_s-I_s",
+      "method": "explicit transcription verified against primary full-text; no raw source SHA claimed"
+    },
+    {
+      "file": "solar-system-moon-20261008.json",
+      "sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702"
+    },
+    {
+      "file": "orientation-de441-20261008.json",
+      "sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb"
+    }
+  ],
+  "limitations": [
+    "Whole GM with effective permanent mean solid inertia: rigid surrogate, not the measured total lunar inertia",
+    "No fluid core, time-varying tide/spin distortion, higher harmonics, solar forcing or relativity",
+    "Published offsets are rounded and share correlations; common mean uncertainty is sensitivity only",
+    "Exclusion radius 1800 km is a model domain, not a measured topographic/reference radius"
+  ]
+}

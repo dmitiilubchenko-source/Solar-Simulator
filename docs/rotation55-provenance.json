@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-11",
+  "change": 55,
+  "branch": "main",
+  "code_and_results_sha256": {
+    "scripts/pn-spin-policy.json": "ff6e41a2d2d8c37a269dea94f698904ec89a50a26b994072a943afac3e2538eb",
+    "scripts/pn_spin_model.py": "5dc2df3223fb5e8fc21045698e120b6197a0965a6cd6a6289030c2f2f62b9235",
+    "scripts/independent_pn_spin.py": "b33ed5bf64c54fa1b2e1a18f82d024dd4b275096265a3986294832aa0d7f524a",
+    "scripts/assess_pn_spin.py": "21e068aa493040f499fd87d712207495466393c4ae681dc5d6a088ffb74e64f5",
+    "tests/test_pn_spin_model.py": "10b42726ffc81d0cb21e4b69e957fd9bd8cf9c2f6ebacfb0d5c89a682204ed27",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "docs/pn-spin-validation.json": "91b85fc1c6c73f096e278f909444a9a540fa74030e736bbf850a65bd086b530a"
+  },
+  "preservation": {
+    "initial_inventory_files": 299,
+    "unchanged_files": 294,
+    "intentional_document_changes": [
+      "docs/changes.md",
+      "docs/development-plan.md",
+      "docs/nbody-rotation.md",
+      "docs/project-context.md",
+      "docs/session-handoff.md"
+    ],
+    "all_initial_runtime_and_rust_files_unchanged": 68,
+    "all_initial_json_files_unchanged": 95,
+    "all_existing_git_changes_preserved": true,
+    "new_git_entries": [
+      "?? docs/pn-spin-contract.md",
+      "?? docs/pn-spin-validation.json",
+      "?? docs/rotation55-provenance.json",
+      "?? scripts/assess_pn_spin.py",
+      "?? scripts/independent_pn_spin.py",
+      "?? scripts/pn-spin-policy.json",
+      "?? scripts/pn_spin_model.py",
+      "?? tests/test_pn_spin_model.py"
+    ],
+    "inventory_sha256": "6bcd69cd5f9603e05f0ebc3e94a792d25565a077bec26d7f08730239ef69afaf"
+  },
+  "tests": {
+    "new_model_before_audit_passed": 10,
+    "new_model_before_audit_elapsed_seconds": 1.9,
+    "targeted_passed": 48,
+    "targeted_elapsed_seconds": 24.87,
+    "last_full_run_change": 53,
+    "last_full_python_passed": 738,
+    "last_full_rust_passed": 17,
+    "full_check_rerun_in_55": false
+  },
+  "science": {
+    "passed": true,
+    "failed_criteria": [],
+    "criteria_weakened": false,
+    "independent_reference": "unreduced primary two-body Hamiltonian + complex-step derivatives, RK45 at two tolerances",
+    "exact_limit": "SO-only rotations + radial momentum shear",
+    "negative_control_detected": true,
+    "future_ephemerides_used": false,
+    "runtime_activated": false
+  },
+  "access": {
+    "Consensus_search_and_fetch": "success",
+    "primary_arxiv_HTML_and_IHES_PDF": "success",
+    "PMC_review": "CAPTCHA; not used as scientific evidence"
+  },
+  "published_or_committed": false,
+  "portable_rebuilt": false,
+  "documentation_file_line_links": 748,
+  "git_diff_check": true
+}

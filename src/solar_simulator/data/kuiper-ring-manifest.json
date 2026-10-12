@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "own_policy_sha256": "73773129d24556b317c1a0c2796b060a610f8bd3eda0dff42c1457144062f006",
+  "variants": [
+    {
+      "points": 36,
+      "phase_index": 0,
+      "filename": "kuiper-ring-036-0-20261011.json",
+      "dataset_sha256": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+      "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+      "sources_sha256": "96896629dbee78a5afcd53eecb7b88f2d2c30f6b1ab42bda9aea5703ff9cb9ca"
+    },
+    {
+      "points": 36,
+      "phase_index": 1,
+      "filename": "kuiper-ring-036-1-20261011.json",
+      "dataset_sha256": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+      "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+      "sources_sha256": "0def9d8b7d81f5f8589ef157476c447a83344092f3ac8fc90df2a01878ff9e5a"
+    },
+    {
+      "points": 72,
+      "phase_index": 0,
+      "filename": "kuiper-ring-072-0-20261011.json",
+      "dataset_sha256": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+      "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+      "sources_sha256": "709b849460949ca8d085537b4f353b14f64f31d05b9ae0817f23874403f73a7a"
+    },
+    {
+      "points": 72,
+      "phase_index": 1,
+      "filename": "kuiper-ring-072-1-20261011.json",
+      "dataset_sha256": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+      "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+      "sources_sha256": "5f09e0a6cff36526a9d7c99dcbeb7200bf51364864c71d4de6f83f3c4768b781"
+    },
+    {
+      "points": 144,
+      "phase_index": 0,
+      "filename": "kuiper-ring-144-0-20261011.json",
+      "dataset_sha256": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+      "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+      "sources_sha256": "367cac7337978abbbde359c79039e64c4cdbaea068a8138dde0cbbcabf0bfced"
+    },
+    {
+      "points": 144,
+      "phase_index": 1,
+      "filename": "kuiper-ring-144-1-20261011.json",
+      "dataset_sha256": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+      "gm_sha256": "032bd6322d9a1cef84f46454a5b3368201e20378c46f1083eebf80a206f071ed",
+      "sources_sha256": "02730b06ea19739e834e992540e580f15b4bf2aa9e92ad057177a135df6901a0"
+    }
+  ]
+}

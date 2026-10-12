@@ -1,0 +1,32 @@
+{
+  "change": 61,
+  "branch": "main",
+  "previous_inventory_files": 374,
+  "previous_unchanged": 367,
+  "intentionally_changed_previous_docs": [
+    "docs/canonical-checkpoint.md",
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/lunar-canonical.md",
+    "docs/project-context.md",
+    "docs/session-handoff.md",
+    "README.md"
+  ],
+  "previous_json_unchanged": 115,
+  "previous_runtime_rust_unchanged": 74,
+  "previous_git_status_entries_preserved": 264,
+  "audit_and_checkpoints_arrays_SHA_valid": true,
+  "new_tests": {
+    "passed": 3,
+    "seconds": 0.95
+  },
+  "targeted_tests": {
+    "passed": 149,
+    "seconds": 21.12
+  },
+  "documentation_links": 887,
+  "diff_check": true,
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_claimed": false,
+  "commit_push_portable": false
+}

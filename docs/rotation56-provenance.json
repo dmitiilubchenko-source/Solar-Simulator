@@ -1,0 +1,59 @@
+{
+  "change": 56,
+  "branch": "main",
+  "previous_inventory_files": 307,
+  "previous_unchanged": 301,
+  "intentionally_changed_previous_docs": [
+    "docs/changes.md",
+    "docs/development-plan.md",
+    "docs/nbody-rotation.md",
+    "docs/pn-spin-contract.md",
+    "docs/project-context.md",
+    "docs/session-handoff.md"
+  ],
+  "previous_json_unchanged": 98,
+  "previous_runtime_rust_unchanged": 68,
+  "previous_git_status_entries_preserved": 230,
+  "new_git_status_entries": [
+    "?? docs/nbody-pn-spin-control-validation.json",
+    "?? docs/nbody-pn-spin-validation.json",
+    "?? docs/nbody-pn-spin.md",
+    "?? docs/rotation56-provenance.json",
+    "?? scripts/assess_nbody_pn_spin.py",
+    "?? scripts/assess_nbody_pn_spin_control.py",
+    "?? scripts/independent_nbody_pn_spin.py",
+    "?? scripts/nbody-pn-spin-control-policy.json",
+    "?? scripts/nbody-pn-spin-policy.json",
+    "?? scripts/nbody_pn_spin.py",
+    "?? tests/test_nbody_pn_spin.py"
+  ],
+  "audited_source_and_archive_hashes_valid": true,
+  "targeted_tests": {
+    "passed": 65,
+    "seconds": 14.8
+  },
+  "new_tests": {
+    "passed": 17,
+    "seconds": 0.96
+  },
+  "baseline_audit_passed": false,
+  "baseline_failures": [
+    "negative_control_J_drift_minimum"
+  ],
+  "extended_control_passed": true,
+  "full_check_repeated": false,
+  "last_full_check_historical": {
+    "change": 53,
+    "python": 738,
+    "rust": 17,
+    "fmt": true
+  },
+  "future_ephemerides_called": false,
+  "runtime_model_changed": false,
+  "published": false,
+  "portable_rebuilt": false,
+  "documentation_file_line_links": 781,
+  "git_diff_check_passed": true,
+  "provenance_helper_first_failure": "KeyError git_status; corrected to the snapshot's status key, independent of science code/artifacts",
+  "new_text_files_whitespace_syntax_json_valid": true
+}

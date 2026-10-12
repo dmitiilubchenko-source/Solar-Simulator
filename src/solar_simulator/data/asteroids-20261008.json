@@ -1,0 +1,155 @@
+{
+  "schema": 1,
+  "base_origin": {
+    "epoch_jd_tdb": 2461321.5,
+    "frame": "Ecliptic J2000",
+    "center": "Solar System Barycenter",
+    "ephemeris": "DE441",
+    "dataset_sha256": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+    "gm_sha256": "b91c73997ba197141157f56134fd37c56d7a3f6b7c7542fbbb3146ef0623603c"
+  },
+  "gm_sha256": "96b099179df4afa33220fb0adb58aadff75fd54a12d4e77511e63f2ed0d54468",
+  "units": "SI",
+  "vector_correction": "NONE",
+  "sources": [
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+      "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/ascp02000.441",
+      "byte_range": [
+        8180405,
+        8529077
+      ],
+      "sha256": "1699167f07cf3ec4ee5d5827b99e2ada335ccb32b5ddec939c24eb50f81a21ab"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        0,
+        1023
+      ],
+      "sha256": "01aa6aae6f4285850ca61e61834da51e82cc8e7f4ce8e38221cb463e86590103"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        2048,
+        3071
+      ],
+      "sha256": "dda56c2d220212572f64061e952ff9c71cab442dd6225ee1e96025a933a44233"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        252547072,
+        252548095
+      ],
+      "sha256": "4f1e11c216aff91150fc7bac49a8f3a1cf7bb480b088abb44144890f98fdabe9"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        505092096,
+        505093119
+      ],
+      "sha256": "e1a157270910d310031ff18816e312cfe31c5652040fb1510c96d82e18599d9b"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        71561280,
+        71561311
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        64163136,
+        64165839
+      ],
+      "sha256": "db82f58478e8c6bff4e51c43ca2414521a42fd9f8a5109b8414c74ad98abbe7d"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        475134752,
+        475134783
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        467736608,
+        467739311
+      ],
+      "sha256": "fe234ffc332094d9a2005aef98ceae1f6b1995cc183a12d90d7ba3c8c0944aac"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        636565504,
+        636565535
+      ],
+      "sha256": "7e57454274ac48bdd9e03e6e1ca7d989334abaa6072adeae0fb8e8ff5a86ff42"
+    },
+    {
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/small_bodies/asteroids_de441/sb441-n16.bsp",
+      "byte_range": [
+        629167360,
+        629170063
+      ],
+      "sha256": "8ac7a394203553f40edb21b6f9c2d7860e26d984aa412019b7151e42f706dfef"
+    }
+  ],
+  "bodies": [
+    {
+      "id": 2000001,
+      "name": "Ceres",
+      "gm_m3_s2": 62628888644.40994,
+      "position": [
+        30889877883.254677,
+        397096533712.8002,
+        6885823343.896962
+      ],
+      "velocity": [
+        -18237.157852299897,
+        40.116244942203096,
+        3362.3873801658156
+      ]
+    },
+    {
+      "id": 2000002,
+      "name": "Pallas",
+      "gm_m3_s2": 13665878145.967424,
+      "position": [
+        395854126516.24744,
+        94385043551.77635,
+        -100190238085.58022
+      ],
+      "velocity": [
+        -9368.572308325121,
+        12686.251358331609,
+        -7978.997925627062
+      ]
+    },
+    {
+      "id": 2000004,
+      "name": "Vesta",
+      "gm_m3_s2": 17288232879.171516,
+      "position": [
+        347096599895.2228,
+        113728937832.78061,
+        -45671975718.276024
+      ],
+      "velocity": [
+        -4374.988997009709,
+        18041.388065701918,
+        -1.6110838263549594
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "change": 59,
+  "policy": {
+    "change": 59,
+    "model": "finite H of change 57; separate canonical research checkpoint",
+    "initial_state": "immutable initial state in docs/rigid-pn-validation.json, verified archive and source hashes",
+    "periods": 4,
+    "nominal_period": 6.283185307179586,
+    "samples": 257,
+    "split_sample": 128,
+    "production_rtol": 1e-11,
+    "production_atol_over_rtol": 0.01,
+    "max_step_over_period": 0.0078125,
+    "error_control": "worst independent three-vector x/p/S blocks and four-vector q",
+    "reference": "reuse BOTH immutable independent matrix/body-Euler RK45 levels from change 57 only after all source/initial/parameter/grid/archive SHA checks",
+    "lunar_roundtrip": "conditional one-epoch state from change 58; no trajectory or physical migration",
+    "lunar_zero_point_spin_atol": 1e-30,
+    "criteria": {
+      "energy_relative": 1e-09,
+      "momentum_scaled": 1e-10,
+      "angular_momentum_relative": 1e-09,
+      "point_spin_norm_relative": 1e-09,
+      "quaternion_norm": 1e-09,
+      "reference_difference": 1e-07,
+      "reference_uncertainty": 1e-08,
+      "restart_difference": 1e-08,
+      "lunar_export_velocity_relative": 1e-12,
+      "lunar_export_rate_relative": 1e-12
+    },
+    "required_true": [
+      "synthetic_roundtrip_bitwise",
+      "lunar_roundtrip_bitwise",
+      "metadata_preserved",
+      "loaded_sources_verified",
+      "legacy_rejected",
+      "velocity_export_rejected"
+    ],
+    "future_ephemerides": "not called"
+  },
+  "metrics": {
+    "energy_relative": 3.0562103318887016e-14,
+    "momentum_scaled": 1.0580827900896465e-15,
+    "angular_momentum_relative": 4.716294047012058e-15,
+    "point_spin_norm_relative": 9.272487011283983e-16,
+    "quaternion_norm": 2.7755575615628914e-15,
+    "reference_difference": 1.9092489994654793e-11,
+    "reference_uncertainty": 2.0726558455083894e-10,
+    "restart_difference": 8.80248478837476e-14,
+    "lunar_export_velocity_relative": 6.917574236229014e-15,
+    "lunar_export_rate_relative": 4.972422195794901e-18
+  },
+  "confirmations": {
+    "synthetic_roundtrip_bitwise": true,
+    "metadata_preserved": true,
+    "loaded_sources_verified": true,
+    "legacy_rejected": true,
+    "velocity_export_rejected": true,
+    "lunar_roundtrip_bitwise": true
+  },
+  "reference_components": {
+    "maximum": 1.9092489994654793e-11,
+    "per_block_body": [
+      [
+        1.4559625362086812e-12,
+        5.9583116697418e-13,
+        5.804847652097025e-14
+      ],
+      [
+        7.379736381470097e-13,
+        6.787838252091566e-13,
+        1.158523953563594e-13
+      ],
+      [
+        3.0306732058322355e-12,
+        4.4875268809478814e-15,
+        5.484170401413702e-15
+      ]
+    ],
+    "attitude_matrix": 1.9092489994654793e-11
+  },
+  "reference_uncertainty_components": {
+    "maximum": 2.0726558455083894e-10,
+    "per_block_body": [
+      [
+        2.069457341044226e-11,
+        8.5055870371191e-12,
+        4.664529935996847e-13
+      ],
+      [
+        1.1125045454347077e-11,
+        1.0178080616528579e-11,
+        6.54799129865769e-13
+      ],
+      [
+        3.336586686784342e-11,
+        6.1298871574325445e-15,
+        5.589728049222735e-15
+      ]
+    ],
+    "attitude_matrix": 2.0726558455083894e-10
+  },
+  "restart_components": {
+    "maximum": 8.80248478837476e-14,
+    "per_block_body": [
+      [
+        8.80248478837476e-14,
+        3.1226681775749224e-14,
+        2.2584360353257144e-15
+      ],
+      [
+        5.407104948916342e-14,
+        4.985929557823204e-14,
+        2.503583380822312e-15
+      ],
+      [
+        2.262585937573078e-14,
+        1.7318169280385456e-15,
+        2.216573717351293e-15
+      ]
+    ],
+    "attitude_matrix": 7.000451394973285e-14
+  },
+  "job_seconds": {
+    "production": 12.337010199997167,
+    "restart": 11.529213800000434
+  },
+  "code_sha256": {
+    "scripts/canonical_checkpoint.py": "83a14d42011d9e455ba5f4b76d6d673549e613a453bf7d8f7f5dd0c73a9774d2",
+    "scripts/canonical_initial.py": "45f69e015712f403edd17693723b06cb3b9f6044d42bf8ef64f4183ebeac2de5",
+    "scripts/rigid_pn_model.py": "bd1b7126e7d29a4c899e20b5b27b6f42b316a58724f968ce8e054f5d749afbf1",
+    "scripts/nbody_pn_spin.py": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d",
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "scripts/assess_canonical_checkpoint.py": "156702a2f86db859352161e16972af0d3c03f8e6e66ef0555e37155583eed530",
+    "scripts/canonical-checkpoint-policy.json": "a75551e9837f28ce0311daea9d367e4064442f57a57967b4234528fbd2a5e278",
+    "tests/test_canonical_checkpoint.py": "59d41e5ee641f40bd1ab25a80d07cfc24aa57e8c1791084417629af008766a94",
+    "docs/rigid-pn-validation.json": "450de1d58204270778e8ce41c72dcb77493ef90442c7e7c7d360059b63771ea8",
+    ".tools/rotation57/rigid-pn-trajectories.npz": "8ffa1be796f492a2e5f5a47a06ba0269302adcb1a67a8453df435391e9d3e1f0",
+    "scripts/assess_rigid_pn.py": "356d225964703ebd1f8b14cd04c7a1b2b27af8156e1d5f2d8e42df4463d5cab7",
+    "scripts/independent_rigid_pn.py": "06a64e7b296cdcd22b317bed375303ac4462b530c800fd00a40db68c104dcfec",
+    "scripts/independent_nbody_pn_spin.py": "8d0b6070bced7acef5fc6c88aad0122f7e4b6a0d555cc86c152837e16251114c"
+  },
+  "parent_reference_archive_sha256": "8ffa1be796f492a2e5f5a47a06ba0269302adcb1a67a8453df435391e9d3e1f0",
+  "checkpoint_files": {
+    ".tools/rotation59/conditional-lunar-initial.json": "5c619067a113779491afbd97f811d65bb77af9a5bb45a14f8f3bc49be9edf76d",
+    ".tools/rotation59/initial.json": "223c7ee40a007b8dc601c49076e27f2941c0bc7c1dd3f5fc328e178d4d0b005c",
+    ".tools/rotation59/middle.json": "08b3ba941d586a55aaf8d88e427c4cf07f2cfc4e02ac58a39db95b5b72db0b35"
+  },
+  "trajectory_archive_local_path": ".tools/rotation59/checkpoint-trajectories.npz",
+  "trajectory_archive_sha256": "9f4b202ca7b29f49c79218ba518f956b44f2eb17bb4629c0c2cdac49ede248b8",
+  "physical_lunar_mapping_certified": false,
+  "legacy_migrated": false,
+  "runtime_changed": false,
+  "passed": true
+}

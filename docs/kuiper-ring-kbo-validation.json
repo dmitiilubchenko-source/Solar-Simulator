@@ -1,0 +1,1024 @@
+{
+  "schema": 1,
+  "body_count": 30,
+  "source_samples": 13,
+  "variants": {
+    "no_ring": {
+      "dataset_sha256": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 4.3337963488080575,
+          "maximum_velocity_m_per_s": 1.2192457352269552e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 4.340931979996907,
+          "maximum_velocity_m_per_s": 1.2191530512257804e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 4.3737153475805775,
+          "maximum_velocity_m_per_s": 1.2194342951402175e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 4.334342759499973,
+          "maximum_velocity_m_per_s": 1.2193005135874141e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 4.322661714810644,
+          "maximum_velocity_m_per_s": 1.2192816469882278e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 4.335342950696796,
+          "maximum_velocity_m_per_s": 1.2191157865550585e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 4.342892033763512,
+          "maximum_velocity_m_per_s": 1.2190690208140028e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 4.3437151187072525,
+          "maximum_velocity_m_per_s": 1.219065897958289e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 4.3447495277914205,
+          "maximum_velocity_m_per_s": 1.2192249412353646e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 4.359305263289646,
+          "maximum_velocity_m_per_s": 1.2191819156404841e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 4.3213438548975915,
+          "maximum_velocity_m_per_s": 1.219227610088628e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 4.349559323297372,
+          "maximum_velocity_m_per_s": 1.2191507815326741e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 4.33710460592147,
+          "maximum_velocity_m_per_s": 1.2192167194923167e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 4.333846414939462,
+          "maximum_velocity_m_per_s": 1.2193239454548377e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 4.331434121009717,
+          "maximum_velocity_m_per_s": 1.2192796826807793e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 4.330747337144531,
+          "maximum_velocity_m_per_s": 1.2192431464008247e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 4.323643550505346,
+          "maximum_velocity_m_per_s": 1.2193282394611208e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 4.32595870246806,
+          "maximum_velocity_m_per_s": 1.2194495859108062e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 4.330842442886705,
+          "maximum_velocity_m_per_s": 1.2191933759660802e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 4.339291764190173,
+          "maximum_velocity_m_per_s": 1.2195005582430246e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 4.333494965888938,
+          "maximum_velocity_m_per_s": 1.2192255507075956e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 4.336162561297653,
+          "maximum_velocity_m_per_s": 1.2192902807828344e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 4.320157646728917,
+          "maximum_velocity_m_per_s": 1.2194132839251798e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 4.321010519414826,
+          "maximum_velocity_m_per_s": 1.2192501694813032e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 4.329142894930493,
+          "maximum_velocity_m_per_s": 1.2194437968421016e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 4.333612736381338,
+          "maximum_velocity_m_per_s": 1.2193883355110051e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 4.332372173863125,
+          "maximum_velocity_m_per_s": 1.2193420550303225e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 4.338973046418869,
+          "maximum_velocity_m_per_s": 1.2193237014224704e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 4.3400787921644275,
+          "maximum_velocity_m_per_s": 1.219268985372313e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 4.2977610558824795,
+          "maximum_velocity_m_per_s": 1.219497199750347e-05
+        }
+      }
+    },
+    "ring_36_0": {
+      "dataset_sha256": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 95.07189847294295,
+          "maximum_velocity_m_per_s": 1.1804392772353974e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 113.80703157053586,
+          "maximum_velocity_m_per_s": 1.2534352095269182e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 37.11371771895358,
+          "maximum_velocity_m_per_s": 1.3169205857198769e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 84.79630040075477,
+          "maximum_velocity_m_per_s": 1.3211413639865657e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 167.96903542942368,
+          "maximum_velocity_m_per_s": 1.5138581947582986e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 159.95599286347118,
+          "maximum_velocity_m_per_s": 1.3587813784896954e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 114.41652107241083,
+          "maximum_velocity_m_per_s": 1.247470290779697e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 68.56251103375884,
+          "maximum_velocity_m_per_s": 1.1368758597952062e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 200.424957544323,
+          "maximum_velocity_m_per_s": 1.3778258111161121e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 134.61750547531898,
+          "maximum_velocity_m_per_s": 1.4226390386451002e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 92.27242953367602,
+          "maximum_velocity_m_per_s": 1.2075004985868557e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 292.9978520810042,
+          "maximum_velocity_m_per_s": 2.119184635658563e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 84.08134950545303,
+          "maximum_velocity_m_per_s": 1.2496356693481162e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 250.74429186991148,
+          "maximum_velocity_m_per_s": 1.7186543342053663e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 67.1501113478816,
+          "maximum_velocity_m_per_s": 1.121855946810441e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 129.17202222096617,
+          "maximum_velocity_m_per_s": 1.248399851615558e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 101.31705917634537,
+          "maximum_velocity_m_per_s": 1.4382522667698796e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 150.68421703397917,
+          "maximum_velocity_m_per_s": 1.7568037183630366e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 265.2865657781418,
+          "maximum_velocity_m_per_s": 1.9281906954270878e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 29.105633141661894,
+          "maximum_velocity_m_per_s": 1.2870257737786629e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 82.28901996138822,
+          "maximum_velocity_m_per_s": 1.1952386756282289e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 190.03690907966643,
+          "maximum_velocity_m_per_s": 1.3548534449951273e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 26.905957405369097,
+          "maximum_velocity_m_per_s": 1.311338059451292e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 100.84473944746898,
+          "maximum_velocity_m_per_s": 1.2996517755912482e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 63.43822197150949,
+          "maximum_velocity_m_per_s": 1.4100193452559016e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 151.18867499354994,
+          "maximum_velocity_m_per_s": 1.5947153916647675e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 148.8188507815429,
+          "maximum_velocity_m_per_s": 1.1905915065023067e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 83.97156791169834,
+          "maximum_velocity_m_per_s": 1.4128917634655442e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 233.19324785449774,
+          "maximum_velocity_m_per_s": 1.5037837012709794e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 38.31648288765421,
+          "maximum_velocity_m_per_s": 1.3299659320974462e-05
+        }
+      }
+    },
+    "ring_36_1": {
+      "dataset_sha256": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 95.06407822070716,
+          "maximum_velocity_m_per_s": 1.180432927282551e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 113.78155454596434,
+          "maximum_velocity_m_per_s": 1.2534077873252725e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 37.06303085970244,
+          "maximum_velocity_m_per_s": 1.3169203323439078e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 84.80201573180395,
+          "maximum_velocity_m_per_s": 1.321141165157991e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 168.99920007009203,
+          "maximum_velocity_m_per_s": 1.5169512888079914e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 160.56717554206716,
+          "maximum_velocity_m_per_s": 1.3628744221406348e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 114.38633207481112,
+          "maximum_velocity_m_per_s": 1.2474271660614442e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 68.5497985383349,
+          "maximum_velocity_m_per_s": 1.1368766724359377e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 195.67125345664616,
+          "maximum_velocity_m_per_s": 1.374620883108705e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 134.43413129907157,
+          "maximum_velocity_m_per_s": 1.423885646438272e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 92.27810597409228,
+          "maximum_velocity_m_per_s": 1.2074970240768267e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 243.23617817234302,
+          "maximum_velocity_m_per_s": 1.917614128429102e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 84.08408019862372,
+          "maximum_velocity_m_per_s": 1.2496378291369724e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 328.3955004327849,
+          "maximum_velocity_m_per_s": 2.2116074793412457e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 67.13720732955196,
+          "maximum_velocity_m_per_s": 1.121856032331854e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 129.2898103195874,
+          "maximum_velocity_m_per_s": 1.248776699011716e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 101.29776346398683,
+          "maximum_velocity_m_per_s": 1.4382801596009819e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 150.9619697148852,
+          "maximum_velocity_m_per_s": 1.7581856522953884e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 449.83794954674687,
+          "maximum_velocity_m_per_s": 2.5880711453810835e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 29.10566139210236,
+          "maximum_velocity_m_per_s": 1.287025826322418e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 82.29079852857471,
+          "maximum_velocity_m_per_s": 1.1952401133343513e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 196.7244586977142,
+          "maximum_velocity_m_per_s": 1.3985867311187966e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 26.900845896527688,
+          "maximum_velocity_m_per_s": 1.311338374443799e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 100.84650684533116,
+          "maximum_velocity_m_per_s": 1.2996544568251938e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 63.44251862955247,
+          "maximum_velocity_m_per_s": 1.410019136939838e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 150.8150613083538,
+          "maximum_velocity_m_per_s": 1.5943017725956987e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 149.88444104417175,
+          "maximum_velocity_m_per_s": 1.1898423238260867e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 83.9631394123029,
+          "maximum_velocity_m_per_s": 1.4128887597916689e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 225.21910070035653,
+          "maximum_velocity_m_per_s": 1.4515816330334772e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 38.28302361564146,
+          "maximum_velocity_m_per_s": 1.3299642434049713e-05
+        }
+      }
+    },
+    "ring_72_0": {
+      "dataset_sha256": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 95.0815724875482,
+          "maximum_velocity_m_per_s": 1.1804358744386991e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 113.80073323898762,
+          "maximum_velocity_m_per_s": 1.253421643709148e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 37.10393898973598,
+          "maximum_velocity_m_per_s": 1.316920369923119e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 84.77898983134439,
+          "maximum_velocity_m_per_s": 1.321141384667609e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 168.49043200155802,
+          "maximum_velocity_m_per_s": 1.5154037071360363e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 160.26004189079762,
+          "maximum_velocity_m_per_s": 1.3608277869708316e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 114.40105059691922,
+          "maximum_velocity_m_per_s": 1.2474489624669274e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 68.56048460009048,
+          "maximum_velocity_m_per_s": 1.1368770376404155e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 198.04749389807552,
+          "maximum_velocity_m_per_s": 1.3761881664250934e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 134.51435662318647,
+          "maximum_velocity_m_per_s": 1.4232613530908419e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 92.26483934990154,
+          "maximum_velocity_m_per_s": 1.2074993655710833e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 267.77167256294643,
+          "maximum_velocity_m_per_s": 2.018250118598991e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 84.08023191150546,
+          "maximum_velocity_m_per_s": 1.2496362202857925e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 289.50884236207315,
+          "maximum_velocity_m_per_s": 1.9635827122588808e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 67.14596869128277,
+          "maximum_velocity_m_per_s": 1.121856027766572e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 129.23596874473847,
+          "maximum_velocity_m_per_s": 1.2485877370603949e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 101.29336655693,
+          "maximum_velocity_m_per_s": 1.4382662117109831e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 150.80746196896095,
+          "maximum_velocity_m_per_s": 1.7574946160636667e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 357.52040955145475,
+          "maximum_velocity_m_per_s": 2.2308621614010588e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 29.090466217052356,
+          "maximum_velocity_m_per_s": 1.2870257670942562e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 82.27139054804651,
+          "maximum_velocity_m_per_s": 1.19524004468632e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 193.3737178802677,
+          "maximum_velocity_m_per_s": 1.3767199791871593e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 26.92160480383605,
+          "maximum_velocity_m_per_s": 1.311338205888222e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 100.83979687243563,
+          "maximum_velocity_m_per_s": 1.2996536515501884e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 63.43923824540861,
+          "maximum_velocity_m_per_s": 1.4100189714386364e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 150.98329582112913,
+          "maximum_velocity_m_per_s": 1.5945089462386755e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 149.34837877564087,
+          "maximum_velocity_m_per_s": 1.1899665677190856e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 83.96757639670646,
+          "maximum_velocity_m_per_s": 1.4128906263766222e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 229.1043392146463,
+          "maximum_velocity_m_per_s": 1.475035887718114e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 38.28821362743568,
+          "maximum_velocity_m_per_s": 1.3299657038080338e-05
+        }
+      }
+    },
+    "ring_72_1": {
+      "dataset_sha256": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 95.06851990453552,
+          "maximum_velocity_m_per_s": 1.180436014688753e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 113.79559662454538,
+          "maximum_velocity_m_per_s": 1.253422506263832e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 37.07443537742759,
+          "maximum_velocity_m_per_s": 1.3169209883486219e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 84.7836707023036,
+          "maximum_velocity_m_per_s": 1.3211416639754186e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 168.48543708029257,
+          "maximum_velocity_m_per_s": 1.5154008898827697e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 160.2549480858597,
+          "maximum_velocity_m_per_s": 1.3608260580807143e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 114.40074375471852,
+          "maximum_velocity_m_per_s": 1.2474492284142735e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 68.55863568448844,
+          "maximum_velocity_m_per_s": 1.1368763770215388e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 198.03603411511023,
+          "maximum_velocity_m_per_s": 1.376200701982672e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 134.52367691861915,
+          "maximum_velocity_m_per_s": 1.4232631303870271e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 92.27432471919892,
+          "maximum_velocity_m_per_s": 1.20750048060434e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 267.13253872039496,
+          "maximum_velocity_m_per_s": 2.014852324344035e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 84.08311015217774,
+          "maximum_velocity_m_per_s": 1.2496344000905986e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 287.2472511176432,
+          "maximum_velocity_m_per_s": 1.9491087077891654e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 67.14148903358026,
+          "maximum_velocity_m_per_s": 1.1218560969056819e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 129.23097358073503,
+          "maximum_velocity_m_per_s": 1.2485876157388448e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 101.3021923502047,
+          "maximum_velocity_m_per_s": 1.4382661515229693e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 150.80333002651682,
+          "maximum_velocity_m_per_s": 1.7574940222023198e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 346.45784448364196,
+          "maximum_velocity_m_per_s": 2.193608982123222e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 29.112704560912878,
+          "maximum_velocity_m_per_s": 1.2870259574958012e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 82.27475462389799,
+          "maximum_velocity_m_per_s": 1.1952396435653954e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 193.35523821881105,
+          "maximum_velocity_m_per_s": 1.3765739449145254e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 26.898232004143516,
+          "maximum_velocity_m_per_s": 1.3113381268969278e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 100.84818885285205,
+          "maximum_velocity_m_per_s": 1.2996541488543519e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 63.4365214869006,
+          "maximum_velocity_m_per_s": 1.4100190634527443e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 150.99448793125063,
+          "maximum_velocity_m_per_s": 1.5945082869970073e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 149.34141703263336,
+          "maximum_velocity_m_per_s": 1.1899685924644043e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 83.96743216188523,
+          "maximum_velocity_m_per_s": 1.4128899861778576e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 229.16868826685752,
+          "maximum_velocity_m_per_s": 1.4748764082737707e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 38.3100711743384,
+          "maximum_velocity_m_per_s": 1.3299653355481095e-05
+        }
+      }
+    },
+    "ring_144_0": {
+      "dataset_sha256": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 95.0693994221667,
+          "maximum_velocity_m_per_s": 1.1804363014001314e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 113.79263371927698,
+          "maximum_velocity_m_per_s": 1.2534223244763146e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 37.0551612812983,
+          "maximum_velocity_m_per_s": 1.316920437032724e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 84.79359799328778,
+          "maximum_velocity_m_per_s": 1.3211410642185933e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 168.4810128467749,
+          "maximum_velocity_m_per_s": 1.5154024209361565e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 160.26027734639044,
+          "maximum_velocity_m_per_s": 1.3608261441356178e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 114.39764616289469,
+          "maximum_velocity_m_per_s": 1.2474488521815558e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 68.55534831280127,
+          "maximum_velocity_m_per_s": 1.1368764535517433e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 198.04316958074125,
+          "maximum_velocity_m_per_s": 1.3761936981469854e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 134.51344845926562,
+          "maximum_velocity_m_per_s": 1.4232629142511997e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 92.2866300506894,
+          "maximum_velocity_m_per_s": 1.207498893172603e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 267.43738036666747,
+          "maximum_velocity_m_per_s": 2.0165511371421066e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 84.07766518097574,
+          "maximum_velocity_m_per_s": 1.249636270542045e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 288.3630119997981,
+          "maximum_velocity_m_per_s": 1.9563433421126133e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 67.1482551847405,
+          "maximum_velocity_m_per_s": 1.121855971133848e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 129.2371704983724,
+          "maximum_velocity_m_per_s": 1.2485877371179964e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 101.29532706259062,
+          "maximum_velocity_m_per_s": 1.4382661568914213e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 150.82612404570241,
+          "maximum_velocity_m_per_s": 1.7574941471376863e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 351.98082925444805,
+          "maximum_velocity_m_per_s": 2.2122194614830652e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 29.07257427689865,
+          "maximum_velocity_m_per_s": 1.2870259744640268e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 82.28457379319467,
+          "maximum_velocity_m_per_s": 1.1952402636303696e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 193.36974529755358,
+          "maximum_velocity_m_per_s": 1.3766470841217338e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 26.94341071615827,
+          "maximum_velocity_m_per_s": 1.3113380220555876e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 100.8383351974353,
+          "maximum_velocity_m_per_s": 1.2996525084280627e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 63.451575154396686,
+          "maximum_velocity_m_per_s": 1.4100192741530563e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 150.9988319579952,
+          "maximum_velocity_m_per_s": 1.594508659945669e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 149.34811134140332,
+          "maximum_velocity_m_per_s": 1.1899674132647426e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 83.98263098826592,
+          "maximum_velocity_m_per_s": 1.4128901217589163e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 229.1383744745779,
+          "maximum_velocity_m_per_s": 1.4749577850592267e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 38.29905752362022,
+          "maximum_velocity_m_per_s": 1.3299651045676177e-05
+        }
+      }
+    },
+    "ring_144_1": {
+      "dataset_sha256": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 95.0651240804885,
+          "maximum_velocity_m_per_s": 1.1804359929589108e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 113.79534417808938,
+          "maximum_velocity_m_per_s": 1.2534216998127782e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 37.1088039153979,
+          "maximum_velocity_m_per_s": 1.3169208904832805e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 84.80065494826495,
+          "maximum_velocity_m_per_s": 1.3211412006409107e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 168.47992716347514,
+          "maximum_velocity_m_per_s": 1.515402336962422e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 160.25924736741487,
+          "maximum_velocity_m_per_s": 1.3608271338024365e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 114.40817964667134,
+          "maximum_velocity_m_per_s": 1.247449117127476e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 68.56374988094746,
+          "maximum_velocity_m_per_s": 1.136876900885815e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 198.04398316764414,
+          "maximum_velocity_m_per_s": 1.376193493335869e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 134.51729102010808,
+          "maximum_velocity_m_per_s": 1.423263086860704e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 92.27290413736432,
+          "maximum_velocity_m_per_s": 1.207499015694158e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 267.46182746879117,
+          "maximum_velocity_m_per_s": 2.0165512044766797e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 84.08109388407128,
+          "maximum_velocity_m_per_s": 1.2496355993313133e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 288.36729988475787,
+          "maximum_velocity_m_per_s": 1.956333596093869e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 67.14565108478,
+          "maximum_velocity_m_per_s": 1.1218560248547231e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 129.24082562837586,
+          "maximum_velocity_m_per_s": 1.2485872830666528e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 101.31135560700747,
+          "maximum_velocity_m_per_s": 1.4382664490588627e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 150.82465894228926,
+          "maximum_velocity_m_per_s": 1.757494813460831e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 351.95108201925876,
+          "maximum_velocity_m_per_s": 2.2121159139508636e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 29.110550153101553,
+          "maximum_velocity_m_per_s": 1.2870262151849325e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 82.27671315238987,
+          "maximum_velocity_m_per_s": 1.1952402243963537e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 193.36814405512857,
+          "maximum_velocity_m_per_s": 1.3766468336815103e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 26.916579493410023,
+          "maximum_velocity_m_per_s": 1.311337898447076e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 100.8450371075256,
+          "maximum_velocity_m_per_s": 1.2996540626097279e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 63.45356586136882,
+          "maximum_velocity_m_per_s": 1.4100192302406089e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 150.99005094966563,
+          "maximum_velocity_m_per_s": 1.5945089222792614e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 149.3468814730281,
+          "maximum_velocity_m_per_s": 1.1899683514621781e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 83.97339535680854,
+          "maximum_velocity_m_per_s": 1.4128901199553497e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 229.14063079462002,
+          "maximum_velocity_m_per_s": 1.4749555665145775e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 38.29085747185842,
+          "maximum_velocity_m_per_s": 1.3299650162015564e-05
+        }
+      }
+    },
+    "ring_36_0_tighter": {
+      "dataset_sha256": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+      "bodies": {
+        "Orcus": {
+          "maximum_position_metres": 95.07243906414338,
+          "maximum_velocity_m_per_s": 1.1804393458513608e-05
+        },
+        "2002 MS4": {
+          "maximum_position_metres": 113.81206294949413,
+          "maximum_velocity_m_per_s": 1.2534357738299008e-05
+        },
+        "2006 QH181": {
+          "maximum_position_metres": 37.107590729683494,
+          "maximum_velocity_m_per_s": 1.3169203603503307e-05
+        },
+        "Salacia": {
+          "maximum_position_metres": 84.77931927859886,
+          "maximum_velocity_m_per_s": 1.3211419347997031e-05
+        },
+        "2003 UZ413": {
+          "maximum_position_metres": 167.96581934106595,
+          "maximum_velocity_m_per_s": 1.5138578287330405e-05
+        },
+        "2003 AZ84": {
+          "maximum_position_metres": 159.95133712259747,
+          "maximum_velocity_m_per_s": 1.3587815457693091e-05
+        },
+        "2002 AW197": {
+          "maximum_position_metres": 114.41465675066837,
+          "maximum_velocity_m_per_s": 1.2474696859581446e-05
+        },
+        "Haumea": {
+          "maximum_position_metres": 68.57118331114583,
+          "maximum_velocity_m_per_s": 1.1368766270980394e-05
+        },
+        "Varuna": {
+          "maximum_position_metres": 200.42515338132537,
+          "maximum_velocity_m_per_s": 1.3778260895315369e-05
+        },
+        "Ixion": {
+          "maximum_position_metres": 134.6147251622349,
+          "maximum_velocity_m_per_s": 1.4226400631730548e-05
+        },
+        "Varda": {
+          "maximum_position_metres": 92.27549105810945,
+          "maximum_velocity_m_per_s": 1.2075013512568315e-05
+        },
+        "2004 GV9": {
+          "maximum_position_metres": 293.00911447927143,
+          "maximum_velocity_m_per_s": 2.119184869756847e-05
+        },
+        "2004 XA192": {
+          "maximum_position_metres": 84.08064981386862,
+          "maximum_velocity_m_per_s": 1.249634317965148e-05
+        },
+        "2005 RN43": {
+          "maximum_position_metres": 250.75832605088738,
+          "maximum_velocity_m_per_s": 1.7186541728949345e-05
+        },
+        "Makemake": {
+          "maximum_position_metres": 67.14619667703731,
+          "maximum_velocity_m_per_s": 1.1218554680987917e-05
+        },
+        "2010 KZ39": {
+          "maximum_position_metres": 129.178954051946,
+          "maximum_velocity_m_per_s": 1.2483990932121476e-05
+        },
+        "2004 XR190": {
+          "maximum_position_metres": 101.28716680986724,
+          "maximum_velocity_m_per_s": 1.4382518436011e-05
+        },
+        "2001 UR163": {
+          "maximum_position_metres": 150.65462399081125,
+          "maximum_velocity_m_per_s": 1.7568039486014995e-05
+        },
+        "2007 JJ43": {
+          "maximum_position_metres": 265.27868279063154,
+          "maximum_velocity_m_per_s": 1.9281895884322823e-05
+        },
+        "Gonggong": {
+          "maximum_position_metres": 29.084608536902955,
+          "maximum_velocity_m_per_s": 1.287025922032194e-05
+        },
+        "2010 FX86": {
+          "maximum_position_metres": 82.26818370263379,
+          "maximum_velocity_m_per_s": 1.1952397556364572e-05
+        },
+        "Chaos": {
+          "maximum_position_metres": 190.03695157783105,
+          "maximum_velocity_m_per_s": 1.3548536680804699e-05
+        },
+        "Eris": {
+          "maximum_position_metres": 26.94040818679731,
+          "maximum_velocity_m_per_s": 1.3113380977738565e-05
+        },
+        "2002 TC302": {
+          "maximum_position_metres": 100.84245714151484,
+          "maximum_velocity_m_per_s": 1.2996516521144141e-05
+        },
+        "2008 ST291": {
+          "maximum_position_metres": 63.434348429300286,
+          "maximum_velocity_m_per_s": 1.4100190414252508e-05
+        },
+        "2010 RE64": {
+          "maximum_position_metres": 151.17986562226642,
+          "maximum_velocity_m_per_s": 1.5947142231484425e-05
+        },
+        "2002 UX25": {
+          "maximum_position_metres": 148.81798746105216,
+          "maximum_velocity_m_per_s": 1.1905931828387103e-05
+        },
+        "2010 RF43": {
+          "maximum_position_metres": 83.94023815952215,
+          "maximum_velocity_m_per_s": 1.4128915262226622e-05
+        },
+        "Quaoar": {
+          "maximum_position_metres": 233.1940213005729,
+          "maximum_velocity_m_per_s": 1.5037833940690894e-05
+        },
+        "Sedna": {
+          "maximum_position_metres": 38.28338587505027,
+          "maximum_velocity_m_per_s": 1.3299657542856966e-05
+        }
+      }
+    }
+  },
+  "source_manifest_sha256": "e64668e4c375d262d197bda4d7e45ef7074c273288ae4f67d2562cc03d12c3da",
+  "packed_source_sha256": "c456421c59c9712f0d59ed2af749d1e5dd583000777b4e601e9a39a1260af267",
+  "production_archive_sha256": "095d9944e5020d4d65ca48c98c27555599965e7eb96d2f335fc8a27caf12cc9b",
+  "audit_checks_passed": true,
+  "code_sha256": {
+    "scripts/check_ring_kbo_orbits.py": "b91f70ea0e10cc158858f06bce29f684b1721f4ab30b8d47e33e8f0cab300b47",
+    "scripts/assess_kuiper.py": "45ac43de0b86ddaf4a593440930a65e8aec2dffc69cee5ce564b8b6944851cb8",
+    "scripts/fetch_kuiper_data.py": "c461ba2e7698fead601daf41c7ecc272689a076af5ef8c0454f9d05ba6ef748c",
+    "scripts/assess_kuiper_ring.py": "408901afa599806e1ffb22091fa7027f830d061f16fc7a5eac72de6df5994f51"
+  },
+  "limitations": [
+    "Assessment only after free propagation; SB441 does not drive the integrated target trajectories.",
+    "SSB comparison uses the reference Sun plus original heliocentric SPK state.",
+    "Includes conditional reference Sun error; not independent physical truth.",
+    "Large SB441 residual can reflect a different dynamical model; cause is not identified here.",
+    "audit_checks_passed validates data and provenance, not accuracy of all KBO orbits."
+  ]
+}

@@ -91,7 +91,7 @@ def test_invalid_fixed_figure(values):
 
 def test_guards_no_silent_wrong_backend_or_inside_source():
     f = FixedJ2("A", .005, 1, (0, 0, 1))
-    for values in (dict(), dict(integrator="verlet"), dict(integrator="dop853", backend="rust"), dict(figures=(f, f))):
+    for values in (dict(), dict(integrator="verlet"), dict(integrator="unknown"), dict(figures=(f, f))):
         with pytest.raises(ValueError):
             Settings(1, **dict(dict(figures=(f,)), **values))
     settings = Settings(1, integrator="dop853", figures=(f,))
@@ -188,6 +188,8 @@ def test_v5_migration_does_not_enable_figures_or_mutate_input(physics):
     state = preset("solar-system-moon")
     document = to_document(replace(state, settings=replace(state.settings, physics=physics)))
     document["schema_version"] = 5; del document["settings"]["figures"]
+    del document["settings"]["relative_pair"]
+    del document["settings"]["error_control"]
     del document["orientation_work"]
     before = deepcopy(document)
     restored = from_document(document)
