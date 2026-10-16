@@ -1,0 +1,63 @@
+{
+  "checks_passed": true,
+  "scientific_receipts": {
+    "current_qualification_passed": true,
+    "original_failure_retained": true,
+    "new_jpl_epochs_checked": false,
+    "reports": [
+      "qualification-grid-validation.json",
+      "strict-profile-validation.json",
+      "sandbox-limits-validation.json"
+    ]
+  },
+  "analytic": [
+    {
+      "name": "mass-double",
+      "backend": "python",
+      "duration_seconds": 12108756.587054621,
+      "samples": 33,
+      "eccentricity": 0.42553191489361675,
+      "unbound": false,
+      "position_metres": 0.0016030627004795142,
+      "velocity_m_per_s": 3.785771013325922e-10,
+      "center_of_mass_error_metres": 0.0001308717130315859,
+      "relative_energy_drift": 3.1848108359213154e-15,
+      "scaled_momentum_drift": 2.0333459184698115e-15,
+      "relative_angular_momentum_drift": 1.4363041760485645e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.643301900010556
+    },
+    {
+      "name": "mass-double",
+      "backend": "rust",
+      "duration_seconds": 12108756.587054621,
+      "samples": 33,
+      "eccentricity": 0.42553191489361675,
+      "unbound": false,
+      "position_metres": 0.0013845879762948534,
+      "velocity_m_per_s": 1.089831802323318e-09,
+      "center_of_mass_error_metres": 0.00015154670530819243,
+      "relative_energy_drift": 7.077357413158479e-15,
+      "scaled_momentum_drift": 2.4138378598839043e-15,
+      "relative_angular_momentum_drift": 3.1479635415646253e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.35887430000002496
+    }
+  ],
+  "workflows": {
+    "exact_target_seconds": 10000.25,
+    "checkpoint_continue_exact": true,
+    "branch_parent_preserved": true,
+    "branch_addition_bodies": 11,
+    "csv_rows": 11,
+    "initial_unchanged": true
+  },
+  "wall_seconds": 1.0876049999787938,
+  "limitations": "Short acceptance, not a new year propagation or universal accuracy bound. No rendering benchmark; full tests and isolated portable checked separately."
+}

@@ -1,0 +1,93 @@
+{
+  "changes": [
+    92,
+    93,
+    94,
+    95
+  ],
+  "model": "constant-energy-density static sphere, linear Hartle spin; distinct mass/chart/observer measures",
+  "gravitational_mass_kg": 3.0,
+  "areal_radius_m": 2.0,
+  "gravitational_constant": 0.4,
+  "angular_velocity_s_inv": 0.001,
+  "compactnesses": [
+    0.008,
+    0.002,
+    0.0005,
+    0.02,
+    0.1,
+    0.25,
+    0.3
+  ],
+  "order_cases": [
+    0,
+    1,
+    2
+  ],
+  "samples": 513,
+  "production_rtol": 1e-11,
+  "spin_max_radial_step": 0.001953125,
+  "log_reference_rtols": [
+    1e-08,
+    1e-11
+  ],
+  "log_max_radial_step": 0.0625,
+  "tighter_rtol": 2e-13,
+  "tighter_max_radial_step": 0.0078125,
+  "atol_over_rtol": 0.02,
+  "quadrature_orders": [
+    64,
+    128
+  ],
+  "baryon_tracers": [
+    "constant0.7",
+    "quadratic0.4+0.2s2"
+  ],
+  "maximum": {
+    "proper_mass_quadrature_absolute": 1e-11,
+    "proper_mass_quadrature_levels_absolute": 1e-11,
+    "log_radius_profile_absolute": 1e-08,
+    "log_radius_levels_absolute": 1e-08,
+    "log_radius_tighter_absolute": 1e-08,
+    "isotropic_inverse_absolute": 1e-10,
+    "metric_pullback_absolute": 1e-11,
+    "surface_exterior_matching_absolute": 1e-11,
+    "baryon_coordinate_integrals_absolute": 1e-08,
+    "baryon_quadrature_levels_absolute": 1e-08,
+    "baryon_coordinate_reference_sensitivity_absolute": 1e-08,
+    "spin_reference_inertia_absolute": 1e-08,
+    "tetrad_clock_speed_relative": 1e-11,
+    "local_response_J_relative": 1e-11,
+    "response_first_PN_c4_ratio_deviation": 1.0,
+    "response_first_PN_slope_Richardson_absolute": 0.0002,
+    "proper_mass_c6_ratio_deviation": 1.0,
+    "proper_mass_first_slope_Richardson_absolute": 0.0001,
+    "proper_mass_deficit_Newton_coefficient_absolute": 0.001
+  },
+  "minimum": {
+    "wrong_Euclidean_volume_absolute": 0.01,
+    "wrong_areal_as_isotropic_absolute": 0.01,
+    "wrong_coordinate_density_as_scalar_absolute": 0.01,
+    "wrong_no_lapse_relative": 0.01,
+    "wrong_no_shift_relative": 0.01,
+    "wrong_unchanged_inertia_slope_absolute": 0.1
+  },
+  "required_true": [
+    "sources_preserved",
+    "arrays_reverified",
+    "raw_initial_preserved",
+    "grid_preserved",
+    "physical_claims_false"
+  ],
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_certified": false,
+  "harmonic_ADM_mapping_certified": false,
+  "baryon_EOS_inferred": false,
+  "finite_rotation_energy_implemented": false,
+  "primary_sha256": {
+    ".tools/rotation92-95/isotropic-exterior.html": "ced46bea74d51a4668a5113dc7856a9fb6d8f4852b508f71082ea560e1a6a2f8",
+    ".tools/rotation92-95/linear-spin-metric.html": "c0d428d0dbb694cef30c208e067f1b6e830fe4cabd3912a38e72e3af9abdd816",
+    ".tools/rotation86-89/hartle1967.pdf": "ed263946e9bc13842399b5c9e9c2eae31823e7323bc81b456fb5174697cefc35",
+    ".tools/rotation92-95/source-review.json": "8ad7c931bcec2134fd866c1692da77da1b6f500dd0fc88d5280dbb664c820a1b"
+  }
+}

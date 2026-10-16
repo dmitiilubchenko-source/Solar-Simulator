@@ -1,0 +1,113 @@
+{
+  "changes": [
+    105,
+    106,
+    107
+  ],
+  "model": "supplied-current tracer snapshot on static sphere; coordinate/cotangent/tensor qualification",
+  "compactnesses": [
+    0.02,
+    0.15,
+    0.3
+  ],
+  "gravitational_mass_kg": 3.0,
+  "areal_radius_m": 2.0,
+  "gravitational_constant": 0.4,
+  "angular_velocity_s_inv": [
+    0.001,
+    -0.0004,
+    0.0007
+  ],
+  "radial_rate_s_inv": 0.002,
+  "shape_diagonal": [
+    0.18,
+    -0.05,
+    -0.13
+  ],
+  "shape_rotation_z_rad": 0.4487989505128276,
+  "shape_dipole": [
+    0.1,
+    -0.04,
+    0.06
+  ],
+  "radial_density_coefficients": [
+    0.4,
+    0.2
+  ],
+  "quadrature_levels": [
+    {
+      "radial": 20,
+      "polar": 12,
+      "azimuthal": 24
+    },
+    {
+      "radial": 32,
+      "polar": 20,
+      "azimuthal": 40
+    }
+  ],
+  "analytic_radial_orders": [
+    64,
+    128
+  ],
+  "production_rtol": 1e-11,
+  "reference_rtols": [
+    2e-09,
+    2e-12
+  ],
+  "tighter_rtol": 2e-13,
+  "production_max_radial_step": 0.001953125,
+  "reference_max_radial_step": 0.03125,
+  "tighter_max_radial_step": 0.00390625,
+  "atol_over_rtol": 0.02,
+  "samples": 129,
+  "maximum": {
+    "mass_reference_relative": 1e-10,
+    "areal_first_reference_relative": 1e-09,
+    "harmonic_first_reference_relative": 1e-08,
+    "areal_second_reference_relative": 1e-09,
+    "harmonic_second_reference_relative": 1e-08,
+    "axial_reference_relative": 1e-09,
+    "kinetic_reference_relative": 1e-09,
+    "pointgrid_levels_relative": 1e-08,
+    "analytic_quadrature_levels_relative": 1e-09,
+    "radial_reference_levels_relative": 1e-08,
+    "radial_reference_tighter_relative": 1e-08,
+    "cotangent_pairing_relative": 1e-11,
+    "axial_pullback_relative": 1e-11,
+    "kinetic_pullback_relative": 1e-11,
+    "metric_pullback_relative": 1e-11,
+    "density_measure_relative": 1e-11,
+    "coordinate_C_M_reference_relative": 1e-08
+  },
+  "minimum": {
+    "sampled_current_shape_floor": 0.1,
+    "sampled_differential_floor": 0.05,
+    "wrong_forward_momentum_pairing_relative": 0.01,
+    "wrong_Euclidean_momentum_axial_relative": 0.01,
+    "wrong_differential_as_position_relative": 0.001,
+    "wrong_centre_affine_tensor_relative": 0.001,
+    "wrong_density_as_scalar_mass_relative": 0.01
+  },
+  "required_true": [
+    "sources_preserved",
+    "arrays_reverified",
+    "raw_initial_preserved",
+    "grid_preserved",
+    "physical_claims_false"
+  ],
+  "primary_sha256": {
+    ".tools/rotation99/harmonic-primary.html": "ebf3e7551aadd6f467e95da6db7d8c957278a425c19589543b6d4aac7b8feb57",
+    ".tools/rotation99/junction-comment.html": "fca0b32023b52cef3913b6e3b7807cb57b28e4b2e8d60a29eeb727efddd3f408",
+    ".tools/rotation99/source-review.json": "fb9143aed8b770c5cfee24ff0dc69baae65b04986d1e6093ebcdad5ce24a0889",
+    ".tools/rotation99/polynomial-check.json": "eca3b4b71f5746786ce5b91446c7c2a3d07da145d34578286fc8b8034f16fcec",
+    ".tools/rotation99/check_polynomials.py": "eea61e3b4cff97f5e553e2c7239f5c981bc6ff653866dcefa01ae5c7ae033272",
+    ".tools/rotation86-89/hartle1967.pdf": "ed263946e9bc13842399b5c9e9c2eae31823e7323bc81b456fb5174697cefc35",
+    ".tools/rotation86-89/source-review.json": "b86e631ae250b6d37920138123231eb1dae8ef4edb5a19390b21e74ac89cfbb4"
+  },
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_certified": false,
+  "PN_fluid_inertia_certified": false,
+  "temporal_E_J_conservation_certified": false,
+  "runtime_changed": false
+}

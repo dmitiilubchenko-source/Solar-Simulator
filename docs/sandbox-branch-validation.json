@@ -1,0 +1,146 @@
+{
+  "protocol": "docs/sandbox-validation-protocol.md",
+  "physics": "newtonian-point-masses",
+  "source_sha256": {
+    "scripts/assess_sandbox_branch.py": "b329f8c3867e30b13d8f38e274054047f7f18584672545e23192ad1cf55dc2c1",
+    "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+    "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be"
+  },
+  "versions": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1"
+  },
+  "units": "SI",
+  "masses_before": [
+    2e+30,
+    7e+29
+  ],
+  "masses_after": [
+    4e+30,
+    7e+29
+  ],
+  "G": 6.6743e-11,
+  "radius_apocentre_metres": 150000000000.0,
+  "eccentricity": 0.425531914893617,
+  "semimajor_axis_metres": 105223880597.01492,
+  "analytic_pericentre_metres": 60447761194.02984,
+  "period_seconds": 12108756.58705462,
+  "output_intervals": 64,
+  "rtol": 1e-13,
+  "position_atol_metres": 0.001,
+  "velocity_atol_m_per_s": 1e-09,
+  "results": [
+    {
+      "backend": "python",
+      "before_direct_start": {
+        "position_metres": 0.035216545750085565,
+        "velocity_m_per_s": 9.908154503918176e-09,
+        "relative_energy_drift": 1.0727581683982159e-13,
+        "relative_angular_momentum_drift": 1.5446519492705288e-14,
+        "scaled_momentum_drift": 1.070875210552704e-15,
+        "wall_seconds": 0.2522156999912113
+      },
+      "after_branch_start": {
+        "position_metres": 0.035216545750085565,
+        "velocity_m_per_s": 9.908154503918176e-09,
+        "relative_energy_drift": 1.0727581683982159e-13,
+        "relative_angular_momentum_drift": 1.5446519492705288e-14,
+        "scaled_momentum_drift": 1.070875210552704e-15,
+        "wall_seconds": 0.24785939999856055
+      },
+      "verlet": [
+        {
+          "steps": 1024,
+          "position_metres": 16066994.951194102,
+          "velocity_m_per_s": 7.075151899999019,
+          "relative_energy_drift": 5.534656558976271e-05,
+          "relative_angular_momentum_drift": 1.5842584095082345e-15,
+          "scaled_momentum_drift": 7.001200125447256e-16,
+          "wall_seconds": 0.032945599989034235
+        },
+        {
+          "steps": 2048,
+          "position_metres": 4016994.4684848767,
+          "velocity_m_per_s": 1.7689049899245088,
+          "relative_energy_drift": 1.3838125954101126e-05,
+          "relative_angular_momentum_drift": 3.4325598872678417e-15,
+          "scaled_momentum_drift": 1.639527665551598e-15,
+          "wall_seconds": 0.05984040000475943
+        },
+        {
+          "steps": 4096,
+          "position_metres": 1004263.9778139098,
+          "velocity_m_per_s": 0.4422335603222057,
+          "relative_energy_drift": 3.459624282991962e-06,
+          "relative_angular_momentum_drift": 2.2443660801366656e-15,
+          "scaled_momentum_drift": 5.78327348050974e-15,
+          "wall_seconds": 0.11314070000662468
+        }
+      ],
+      "convergence_ratios": [
+        3.999755308912393,
+        3.99993881810747
+      ],
+      "checks_passed": true
+    },
+    {
+      "backend": "rust",
+      "before_direct_start": {
+        "position_metres": 0.03821021403162766,
+        "velocity_m_per_s": 1.0935833179460888e-08,
+        "relative_energy_drift": 1.1010818164087299e-13,
+        "relative_angular_momentum_drift": 1.5050454890328227e-14,
+        "scaled_momentum_drift": 2.1923898124132448e-15,
+        "wall_seconds": 0.151526500005275
+      },
+      "after_branch_start": {
+        "position_metres": 0.03821021403162766,
+        "velocity_m_per_s": 1.0935833179460888e-08,
+        "relative_energy_drift": 1.1010818164087299e-13,
+        "relative_angular_momentum_drift": 1.5050454890328227e-14,
+        "scaled_momentum_drift": 2.1923898124132448e-15,
+        "wall_seconds": 0.1289379999798257
+      },
+      "verlet": [
+        {
+          "steps": 1024,
+          "position_metres": 16066994.951563977,
+          "velocity_m_per_s": 7.075151900060785,
+          "relative_energy_drift": 5.5346565590116755e-05,
+          "relative_angular_momentum_drift": 1.4522368753825483e-15,
+          "scaled_momentum_drift": 1.1135762037082507e-15,
+          "wall_seconds": 0.006243699986953288
+        },
+        {
+          "steps": 2048,
+          "position_metres": 4016994.4690810773,
+          "velocity_m_per_s": 1.7689049899150981,
+          "relative_energy_drift": 1.3838125951622808e-05,
+          "relative_angular_momentum_drift": 3.036495284890783e-15,
+          "scaled_momentum_drift": 1.8977017275621146e-15,
+          "wall_seconds": 0.005612899985862896
+        },
+        {
+          "steps": 4096,
+          "position_metres": 1004263.9774725165,
+          "velocity_m_per_s": 0.44223356032984157,
+          "relative_energy_drift": 3.4596242815757797e-06,
+          "relative_angular_momentum_drift": 2.2443660801366656e-15,
+          "scaled_momentum_drift": 5.509950440495973e-15,
+          "wall_seconds": 0.005862099991645664
+        }
+      ],
+      "convergence_ratios": [
+        3.9997553084108284,
+        3.9999388200608936
+      ],
+      "checks_passed": true
+    }
+  ],
+  "checks_passed": true,
+  "limitations": "One tilted two-body model. Before/after compares direct versus branched starts with unchanged force code. Timings are single observations, not a speedup benchmark. Kepler bisection also uses float64. No guarantee for close encounters or arbitrary systems."
+}

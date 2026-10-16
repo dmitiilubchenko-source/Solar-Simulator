@@ -102,6 +102,12 @@ def build():
     guide=output/"USER-GUIDE.md"
     guide.write_text(guide.read_text(encoding="utf-8").replace("(pluto.md)","(docs/pluto.md)"),encoding="utf-8")
     guide.write_text(guide.read_text(encoding="utf-8").replace("(asteroids.md)","(docs/asteroids.md)").replace("(body-data.md)","(docs/body-data.md)").replace("(asteroids-full.md)","(docs/asteroids-full.md)"),encoding="utf-8")
+    guide.write_text(guide.read_text(encoding="utf-8").replace("(runtime-walkthrough.md)","(docs/runtime-walkthrough.md)").replace("(desktop-render-benchmark.md)","(docs/desktop-render-benchmark.md)"),encoding="utf-8")
+    for name in ("sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
+                 "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
+                 "qualification-extension-validation.md", "verification-bundle-validation.md",
+                 "continuous-integration-validation.md"):
+        guide.write_text(guide.read_text(encoding="utf-8").replace(f"({name})",f"(docs/{name})"),encoding="utf-8")
     (output/"PHYSICS.md").write_text(
         (ROOT/"docs/physics.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)","(docs/accuracy-validation.md)").replace("(relativity.md)","(docs/relativity.md)").replace("(oblateness.md)","(docs/oblateness.md)").replace("(orientation.md)","(docs/orientation.md)").replace("(user-guide.md)","(docs/user-guide.md)").replace("(relative-coordinates.md)","(docs/relative-coordinates.md)").replace("(solar-j2.md)","(docs/solar-j2.md)"),
         encoding="utf-8")
@@ -150,13 +156,18 @@ def build():
     shutil.copy2(ROOT/"scripts/validation/sb441-343-year.bin",output/"scripts/validation/sb441-343-year.bin")
     shutil.copy2(ROOT/"scripts/validation/de441-header.441",output/"scripts/validation/de441-header.441")
     shutil.copy2(ROOT/"scripts/validation/kuiper_absolute_assessment.py",output/"scripts/validation/kuiper_absolute_assessment.py")
+    rotation_documents=copy_public_rotation_documents(output,extra_seeds=("runtime-walkthrough.md","desktop-render-benchmark.md",
+        "sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
+        "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
+        "qualification-extension-validation.md", "verification-bundle-validation.md",
+        "continuous-integration-validation.md"))
     orientation_doc=documents/"orientation.md"
     orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
         "../src/solar_simulator/data/ERFA-LICENSE.txt",
         "../runtime/Lib/site-packages/solar_simulator/data/ERFA-LICENSE.txt"),encoding="utf-8")
     for guide_name in ("USER-GUIDE.md", "PHYSICS.md"):
         guide_path=output/guide_name
-        guide_path.write_text(guide_path.read_text(encoding="utf-8").replace("(kuiper-ring.md)","(docs/kuiper-ring.md)").replace("(kuiper.md)","(docs/kuiper.md)").replace("(orbit-cohort.md)","(docs/orbit-cohort.md)").replace("(orbit-observations.md)","(docs/orbit-observations.md)").replace("(error-control.md)","(docs/error-control.md)").replace(
+        guide_path.write_text(guide_path.read_text(encoding="utf-8").replace("(nbody-rotation.md)","(docs/nbody-rotation.md)").replace("(kuiper-ring.md)","(docs/kuiper-ring.md)").replace("(kuiper.md)","(docs/kuiper.md)").replace("(orbit-cohort.md)","(docs/orbit-cohort.md)").replace("(orbit-observations.md)","(docs/orbit-observations.md)").replace("(error-control.md)","(docs/error-control.md)").replace(
             "(native-eih.md)", "(docs/native-eih.md)").replace(
             "(asteroids-catalog.md)", "(docs/asteroids-catalog.md)"),encoding="utf-8")
     from solar_simulator.experiment import preset, PRESETS
@@ -222,8 +233,57 @@ def build():
         figures=sun_earth_moon_quadrupoles(bodies,origin),relative_pair=("Earth","Moon"),
         rtol=3e-14,position_atol=1e-7,velocity_atol=1e-13),origin=origin)
     save(refined,scenarios/"solar-system-kuiper-ring-144-rust-1pn-solar-q2-relative.json")
+    from solar_simulator.application_profiles import lunar_rotation
+    rotating=lunar_rotation()
+    save(rotating,scenarios/"solar-system-moon-newton-dynamic-q2.json")
+    (output/"Moon Rotation.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui "scenarios\\solar-system-moon-newton-dynamic-q2.json"\r\nif errorlevel 1 pause\r\n',encoding="ascii")
+    from solar_simulator.application_profiles import solar_sandbox
+    save(solar_sandbox(backend="rust"),scenarios/"solar-sandbox-eih-fixed-j2.json")
+    (output/"Solar Sandbox.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui "scenarios\\solar-sandbox-eih-fixed-j2.json"\r\nif errorlevel 1 pause\r\n',encoding="ascii")
+    shutil.copy2(ROOT/"docs/solar-sandbox-strict-checkpoint.json",scenarios/"solar-sandbox-strict.json")
+    (output/"Solar Sandbox Strict.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui "scenarios\\solar-sandbox-strict.json"\r\nif errorlevel 1 pause\r\n',encoding="ascii")
+    verification_export=subprocess.run([sys.executable,"-X","utf8","-B","-m","scripts.export_jpl_bundle",
+        "--output",str(output/"verification")],cwd=ROOT,capture_output=True,text=True,encoding="utf-8")
+    if verification_export.returncode:raise RuntimeError("Verification bundle export failed:\n"+verification_export.stderr)
+    if not json.loads(verification_export.stdout)["checks_passed"]:raise RuntimeError("Exported JPL comparison failed")
+    (output/"JPL Verification.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -I "verification\\replay_jpl.py" "verification"\r\npause\r\n',encoding="ascii")
+    (output/"Physics Verification.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -I "verification\\recompute_jpl.py" "verification"\r\npause\r\n',encoding="ascii")
+    (output/"Continuous Catalog Experimental.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -X utf8 -B -I -m solar_simulator.continuous_cli --input "scenarios\\solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json" --target 720000 --packet-steps 20\r\npause\r\n',encoding="ascii")
+    (output/"CURRENT-STATUS.md").write_text(
+        "# Solar Simulator: текущая рабочая сборка\n\n"
+        "Запуск приложения: `Solar Simulator.cmd`. Опыт со свободным вращением Луны: `Moon Rotation.cmd`.\n"
+        "В окне доступна кнопка «Луна: свободное вращение» и вид Земля–Луна; остальные тела остаются в расчёте.\n"
+        "Готовые настройки и сохранения находятся в `scenarios`; руководство — [USER-GUIDE](USER-GUIDE.md).\n\n"
+        "Первая песочница: `Solar Sandbox.cmd` открывает10тел с EIH1PN и фиксированными J2 Солнца/Земли. "
+        "`Solar Sandbox Strict.cmd` открывает отдельный профильrtol3e-14; "
+        "[плотная квалификация и сохранённый отказ](docs/qualification-extension-validation.md). "
+        "[Автономное сравнение и новый годовой расчёт](docs/verification-bundle-validation.md) "
+        "запускаются отдельно: `JPL Verification.cmd` и `Physics Verification.cmd`. "
+        "Расчёт до времени, ветки редактирования и добавление точечного тела доступны в окне. "
+        "[Демонстрация](docs/sandbox-demo.md), [годовые измерения](docs/sandbox-demo-validation.md). "
+        "Показатели относятся к исходной системе/годовой сетке, не к любым пользовательским системам.\n\n"
+        "Отдельный экспериментальный расчёт354тел без анимации: `Continuous Catalog Experimental.cmd`; "
+        "[Профильные проверки и непройденный общий критерий](docs/continuous-integration-validation.md).\n\n"
+        "Вращение Луны — ньютоновская жёсткая solid-аппроксимация с обратными силами и моментами, "
+        "с сохранением и продолжением q/S. Приливы, ядро и полная PN-модель вращения пока не включены. "
+        "[Модель и ограничения](docs/nbody-rotation.md).\n\n"
+        "Кольцо Койпера экспериментальное: вариант420тел не прошёл геометрическую проверку; "
+        "528тел прошли заданные численные проверки, но остатки отдельных KBO выросли. "
+        "Численное согласие не означает истинной физической точности.\n\n"
+        "Новые проверки координат и тензорных моментов доступны в [отчёте карты](docs/harmonic-sphere-validation.md) "
+        "и [отчёте тока](docs/chart-current-validation.md); эти исследовательские модели не подставлены "
+        "в физическую инерцию Луны. Личные рабочие документы и исследовательский кеш не входят в сборку.\n",
+        encoding="utf-8")
     manifest=dict(python=sys.version,python_abi=dll_name,project_version=project_version,
-                  native_wheel=native_wheel.name,dependencies={name:d.version for name,d in dependencies.items()})
+                  native_wheel=native_wheel.name,dependencies={name:d.version for name,d in dependencies.items()},
+                  rotation_documents=rotation_documents,rotation_scenario="scenarios/solar-system-moon-newton-dynamic-q2.json",
+                  desktop_features=["ready-lunar-rotation", "earth-moon-view", "worker-error-recovery", "visible-diagnostics",
+                                    "localized-scenarios", "responsive-controls", "batched-orbit-rendering",
+                                    "ready-solar-sandbox", "saved-experiment-branches", "add-point-body", "target-time-packets",
+                                    "restore-immediate-parent", "remove-point-body", "sandbox-cli", "orbital-csv-provenance",
+                                    "persistent-plot-artists", "qualified-strict-sandbox-profile", "offline-jpl-replay", "fresh-year-verification",
+                                    "experimental-continuous-catalog-interval"],
+                  physical_PN_lunar_rotation_certified=False)
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     # Prove the copied runtime imports local packages and initializes real Tk.
     probe="import sys,pathlib,tkinter,solar_simulator,solar_native,numpy,matplotlib,scipy; from solar_simulator.experiment import advance,preset; r=tkinter.Tk(); r.withdraw(); r.destroy(); s=advance(preset('spheres',backend='rust'),2000); assert len(s.events)==2; from dataclasses import replace; a=preset('sun-earth'); a=replace(a,settings=replace(a.settings,integrator='dop853')); assert advance(a,20).time>0; assert len(advance(preset('solar-system'),20).bodies)==9; print(sys.prefix); print(pathlib.Path(solar_simulator.__file__).resolve()); print('portable Tk + native physics OK')"
@@ -240,6 +300,48 @@ def build():
     archive.with_suffix(".zip.sha256").write_text(f"{checksum}  {archive.name}\n",encoding="ascii")
     print(f"PORTABLE_DIR={output}\nPORTABLE_ZIP={archive}\nSHA256={checksum}")
     return output
+
+
+def copy_public_rotation_documents(output,extra_seeds=()):
+    """Copy the public rotation/report link closure, excluding personal files.
+
+    Only documentation/assets and JSON policies are included; local research
+    caches, source-code line links and personal documents stay in the project.
+    """
+    import re
+    private={"AGENTS.md","changes.md","development-plan.md","learning-log.md","project-review.md",
+             "session-handoff.md","session-handoff-archive.md","project-context.md"}
+    seeds=("nbody-rotation.md","rotation-year.md","lunar-spin-initial.md","conservative-rotation.md",
+           "harmonic-sphere-validation.md","chart-current-validation.md")+tuple(extra_seeds)
+    pending=deque((ROOT/"docs"/name).resolve() for name in seeds);copied=set()
+    destination_root=Path(output).resolve()
+    while pending:
+        source=pending.popleft()
+        if source in copied:continue
+        if not source.is_relative_to(ROOT.resolve()) or source.name in private or '.tools' in source.parts:
+            raise ValueError('Nonpublic portable document: '+str(source))
+        relative=source.relative_to(ROOT.resolve())
+        allowed=((relative.parts[0]=='docs' and (source.suffix in {'.md','.json','.png','.txt'}
+                  or source.name=='continuous-integration-reference.npz'))
+                 or (relative.parts[0]=='scripts' and source.suffix=='.json')
+                 or relative.as_posix()=='src/solar_simulator/data/ERFA-LICENSE.txt')
+        if not allowed:raise ValueError('Unsupported portable document: '+str(relative))
+        if not source.is_file():raise FileNotFoundError('Public rotation document unavailable: '+str(relative))
+        target=destination_root/relative;target.parent.mkdir(parents=True,exist_ok=True)
+        if source.suffix=='.md':
+            text=source.read_text(encoding='utf-8')
+            def local_link(match):
+                label,name=match.group(1),match.group(2);raw=name.split('#',1)[0].strip('<>')
+                if not raw or ':' in raw:return match.group(0)
+                candidate=(source.parent/raw).resolve()
+                if candidate.name in private or '.tools' in candidate.parts:return label
+                if candidate.suffix in {'.md','.json','.png','.txt'} or candidate.name=='continuous-integration-reference.npz':pending.append(candidate)
+                return match.group(0)
+            text=re.sub(r'\[([^\]]*)\]\(([^)]+)\)',local_link,text)
+            target.write_text(text,encoding='utf-8')
+        else:shutil.copy2(source,target)
+        copied.add(source)
+    return sorted(path.relative_to(ROOT.resolve()).as_posix() for path in copied)
 
 
 if __name__=="__main__":

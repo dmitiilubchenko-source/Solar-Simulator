@@ -1,0 +1,1161 @@
+{
+  "measurements": {
+    "protocol": "177",
+    "source_sha256": {
+      "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+      "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+      "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+      "src/solar_simulator/branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+      "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+      "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+      "src/solar_simulator/commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+      "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+      "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+      "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+      "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+      "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+      "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+      "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+      "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+      "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+      "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+      "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+      "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+      "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+      "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+      "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+      "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+      "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+      "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+      "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+      "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+      "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+      "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+      "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+      "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+      "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+      "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+      "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+      "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+      "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+      "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+      "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+      "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+      "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+      "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+      "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+      "scripts/ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+      "scripts/assess_ias15_eih.py": "257e5a069820df37e0c0ed7b1f87581228bce0ff9ecd223382e5b04a9b7f7908",
+      "scripts/ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+      "scripts/newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+      "scripts/assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+      "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+      "docs/ias15-eih-protocol.md": "a1054b07662ae935148305c2275b9c8d617953be03fd2e92bdff545656d357db"
+    },
+    "library_sha256": {
+      "rebound/binarydata_field_descriptor.py": "63dc50290df3e582df7b3a3b33065bef6a4c649f8aff1715a5539abcc0f3d51a",
+      "rebound/citations.py": "662d4d3b8a25e68089a20ab457598eec8843e77a058d071d572c4a0e0fa2c538",
+      "rebound/frequency_analysis.py": "b1ebdc95ce7776e572203bdd3b3aa9c49cc0936d6ebb8bb1e4b0ae7ba6ec641c",
+      "rebound/horizons.py": "cd473537e1e70455126848cf82d403b08df7c1030cfa7d3b8379d89591049c7c",
+      "rebound/integrator.py": "855ac5f008a63990780285e52e680addbf8f19ce8cb8b134f63fdefb62d2cd41",
+      "rebound/ode.py": "6866453b231ab3533ecc692f30e9a6a9949d2d7e39609c0b042ebc78a44a935b",
+      "rebound/orbit.py": "7667825199620e580ba39dc8c3581bae98cfec32eba95bfc7a823fca3b1e4e86",
+      "rebound/particle.py": "21fcc696bc5b0e7fa05e26d9f4ae517a57e453e0fbfa95fe60c54a54b34d8862",
+      "rebound/particles.py": "ca1cbad53d8446fb1c84c2950b0a113b54097272ec7278474367c17277491920",
+      "rebound/plotting.py": "69c7fa0001dd977fa79cbd32d3daec0edcec11a6f274957c08a6f915be60e1bb",
+      "rebound/rotation.py": "b12dbeb40ae134cbe057169a08da315102983628413bb97796ac36967099078d",
+      "rebound/simulation.py": "db698afa74332b161757b4e848062e8e5206c8cc64420bb720e5143968bfc710",
+      "rebound/simulationarchive.py": "7516ab99af7cb4da6cd09e8ade8d57faa0b3b6ca5c8e868cdc3945252ae271a2",
+      "rebound/tools.py": "bea74d41279d1dface67590f469e6e272087a0fe79c903b7a0e1d234e9b08ce1",
+      "rebound/units.py": "e090acdbf72cd055ffa20fbd4b0981e942d98c8cda3f5f088b7896b52c3a3a00",
+      "rebound/variation.py": "d28259195943b16b6a391913015a4213ca6cec52efe75fb89a62a1292c71984b",
+      "rebound/vectors.py": "fe3ede7b63eaf4bebecd656a4d4abced6abb624c75ef5fb857d0c4c0184784ff",
+      "rebound/widget.py": "dddf7d8a7366c6f2d6f1ea4cc2016ff3c6e3e6089c08523fda1fb1f89455dde4",
+      "rebound/__init__.py": "2a3231c57e7a252000119712779eae79067bce19792bcf9c149a6981839635b9",
+      "rebound/tests/test_additional_forces.py": "1f7d9de8b39c1ab7dcf14a6031d1fb809929962b48a7fb496a423c34a4428696",
+      "rebound/tests/test_binary_fields.py": "0bf2b4ef6abff410bb2a1f8c0b26a2b9696998f076c52926bc8f712c861ad456",
+      "rebound/tests/test_boundary.py": "b014b93194c9aa81d35d5cb5fa01adbcb4c7d6ae06b18dff73948b630bfa61ff",
+      "rebound/tests/test_bs.py": "d87010b6308e4675240a51ce2900ecd2d605a1cbe97f043b489c6ebf5ba344b5",
+      "rebound/tests/test_collisions.py": "52a406ff7332506f76edf8f237200d6791d3a430589568e4e5354a13a06158e5",
+      "rebound/tests/test_copy.py": "d8fb1e12ad969e49b3b8526d005d089649560244bc5885070775d85de998eee0",
+      "rebound/tests/test_data.py": "c50720e9f8b15df86305fdbd8354746f9fc0b0ac1defb53550bbc88d75d42b02",
+      "rebound/tests/test_eos.py": "d25736ca06a12405ef39535dcfc2487e7f13b2925128ca7498f2b06079a25752",
+      "rebound/tests/test_fpcontract.py": "e9e65f1f2b7530819d42963153a1d1ee2f4f2d78f97badd463f99072e76d8dec",
+      "rebound/tests/test_frequency_analysis.py": "f90efeabd9a2a91f446a2d0d95e92ec84bc426ee631a82b8c5e1c44ee772c86f",
+      "rebound/tests/test_gravity.py": "fa2d69fee574a2d3117ef14b0b5cfd96fc00770c2999aea57fa85698765cbc21",
+      "rebound/tests/test_horizons.py": "592b80131988135926e91f6b642382ca1dcb8aaa3712919685e01d9d90a5b86e",
+      "rebound/tests/test_import.py": "becbedef4edfb49deb11bb1d021b001e6015d41e704f1a6285e86e643ba54193",
+      "rebound/tests/test_integrator.py": "70e0cc0bfc19302663554f0bb05e7656c7b0b67da8ade98bc4d4ceb09e4040f5",
+      "rebound/tests/test_janus.py": "18163ff0240b63d882cd8e526df41e0c0957b2a85031afdead66050676456d12",
+      "rebound/tests/test_leapfrog.py": "6e5772691eabfc9f44a193223eccacc23050f1ab81b32d8478a3bc03dd349c43",
+      "rebound/tests/test_megno.py": "059dd025ab343bfc81c04bd33dd5b3d2f74c33144c62581a119c957797df92b4",
+      "rebound/tests/test_mercurius.py": "cdfb2ae7788fe78b818f12ebcb8f171ca4f228d73e5f41f146fce30e9b187d0e",
+      "rebound/tests/test_modify_orbital_parameters.py": "f610943b0593e59d14de09ea79433df4811fc98813fe210b66aa7db770a9689d",
+      "rebound/tests/test_name.py": "a6aa2727c63ab1e78e279085cb1a16d400b19d1326eba261ea4ffa5664832526",
+      "rebound/tests/test_orbital_elements.py": "437565eba3f91502c2a21c66f09a5b42b3a7e3b72ec037641eb5775b500a71ca",
+      "rebound/tests/test_particle.py": "43d3b83d349c6d2c2a7643de10dd2cb0260de1fd84554d1b52f48a204298fc77",
+      "rebound/tests/test_pickle.py": "6eb2088fe8067192f506b3254cf0e4c8a49520958f8192716135352efca02891",
+      "rebound/tests/test_plotting.py": "04df7c807044c6ad3043c7fadcf54fe2fafbd1c723482cc26dc0ab51ae57ed5a",
+      "rebound/tests/test_post_timestep_modifications.py": "27cd1ff112f2534a7b348bf1edc63fc722807b49c685517de6ad66a510303863",
+      "rebound/tests/test_random.py": "608c3dbc467f404ad1a203e12f9548f43138e4ec736a91b7ae535d1127e25efa",
+      "rebound/tests/test_restart_mercurius.py": "764a7b15dbcbc026f055d5bd9b3c090f5608b5f98a32fe36c4c4818aa3176a23",
+      "rebound/tests/test_rotations.py": "e489d2f2e886e566cb5779189066bdd9bc190ad5c52e866cf62a85847cf5693e",
+      "rebound/tests/test_saba.py": "fc120b6426b9287d7bf29eb7580a43c077e790416885da6c0d8a270c65cb38c6",
+      "rebound/tests/test_serialize.py": "2525ff03dbe951b7349ef93b2cfeb691d4b4f08b7b21a53634bab45bb9306b5a",
+      "rebound/tests/test_server.py": "f37ed99dd0c2a3840bfcbcbd2b8cf62b2970547a2abf0f2238dfb35895015c53",
+      "rebound/tests/test_shearingsheet.py": "c13906c29b2a487d39b97fc9ff5ac3169e822bfa6b4cb1195d6379631a79976e",
+      "rebound/tests/test_simulation.py": "5f3c72dcafaa3e90282b6b8293929fefd07ed4205ff81825cce32c69c3a25419",
+      "rebound/tests/test_simulationarchive.py": "333085a03ee8bbc189f43291f5a346bc9242754928cef2f6372c8bf6e6f1b6ff",
+      "rebound/tests/test_simulationarchive_matrix.py": "50292f498a1fb0d3d63bb109f8a817978ce011cee3149ed610b6a425ec817686",
+      "rebound/tests/test_size_of_simulation.py": "d9bedc1e1d8d37035d668cfb7496e45e76f6678e13319565af6631a4070d26de",
+      "rebound/tests/test_tponly_encounter.py": "c1a3e17a6b1a6b6fd44e76743ce2a0373d01ed0acac199dab3bb27deedcffb2f",
+      "rebound/tests/test_trace.py": "290c979ac8d9a01611ac2b1d77cb12ebb82d3759c2f3e3d3268895cc07306426",
+      "rebound/tests/test_trace_full_bs.py": "2c770b18702acd0fc7d041103c098a6990e66d82a120394c985a58e543040b02",
+      "rebound/tests/test_trace_full_ias15.py": "68097543699be88cd81e41e2a2a599b7ba57f39064d698b3bc35c9dbb734ea33",
+      "rebound/tests/test_transformations.py": "353617248882cc31fa1db377368f57bf229775208ebd0830c86ee25658ab3175",
+      "rebound/tests/test_units.py": "71f8cf9f9ac57de217c9de113864826762f39f6b69d95a3af93f7318f1721385",
+      "rebound/tests/test_variational.py": "c79e32917afe7becb984c1f4a5c49b7a9be515f6b14d1f967ac404c2abd65314",
+      "rebound/tests/test_whfast.py": "3a6c4b8540e739465f8938b8867d2bc72dd181a0338c9d0f0bb6b541f91344b6",
+      "rebound/tests/test_whfast512.py": "ff94f005e83d5c8c5e410f1eda4b6703bd9b675220f9ad6b829c93dc48e133e5",
+      "rebound/tests/test_whfast_advanced.py": "93e1b39ca36b07141d69a0ad32c96e1d7b6597a455169a727abe5403045d1f3d",
+      "rebound/tests/test_whfast_testparticles.py": "52998f2bf242699447f593428b6278f077a4ec6f02e34442226d518eba01929e",
+      "rebound/tests/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "librebound.cp314t-win_amd64.pyd": "ad61ffe5db70b03bc217dfe56f5bdbac1c4513365f6567064e9bba87408a698a"
+    },
+    "native_sha256": {
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7"
+    },
+    "environment": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.1",
+      "rebound": "5.2.2"
+    },
+    "api": {
+      "True": {
+        "error": {
+          "position_metres": 5.206251464550825e-10,
+          "velocity_m_per_s": 1.1740092732181256e-13
+        },
+        "statistics": {
+          "force_evaluations": 3110,
+          "steps_done": 44,
+          "velocity_dependent": true
+        },
+        "matches_analytic": true
+      },
+      "False": {
+        "error": {
+          "position_metres": 30806.257426695207,
+          "velocity_m_per_s": 14.663517466077858
+        },
+        "statistics": {
+          "force_evaluations": 352,
+          "steps_done": 44,
+          "velocity_dependent": false
+        },
+        "matches_analytic": false
+      }
+    },
+    "reference_levels": [
+      {
+        "rtol": 1e-13,
+        "max_step_seconds": 1800.0,
+        "clock_seconds": 31557600.0,
+        "rhs_calls": 8648,
+        "initial_roundtrip": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 9.094947017729282e-13
+        },
+        "seconds": 1.3453005999999732,
+        "noether_drift": {
+          "relative_energy_drift": 2.842027342710465e-15,
+          "scaled_momentum_drift": 8.811963550163547e-16,
+          "relative_angular_drift": 3.2819183455572287e-15
+        }
+      },
+      {
+        "rtol": 3e-14,
+        "max_step_seconds": 900.0,
+        "clock_seconds": 31557600.0,
+        "rhs_calls": 17288,
+        "initial_roundtrip": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 9.094947017729282e-13
+        },
+        "seconds": 2.69244609999987,
+        "noether_drift": {
+          "relative_energy_drift": 5.68405468542093e-15,
+          "scaled_momentum_drift": 1.925646105020399e-15,
+          "relative_angular_drift": 4.095967577930062e-15
+        }
+      },
+      {
+        "rtol": 3e-14,
+        "max_step_seconds": 450.0,
+        "clock_seconds": 31557600.0,
+        "rhs_calls": 34562,
+        "initial_roundtrip": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 9.094947017729282e-13
+        },
+        "seconds": 5.394236699999965,
+        "noether_drift": {
+          "relative_energy_drift": 5.68405468542093e-15,
+          "scaled_momentum_drift": 3.092937397822916e-15,
+          "relative_angular_drift": 5.91698344480721e-15
+        }
+      },
+      {
+        "rtol": 3e-14,
+        "max_step_seconds": 450.0,
+        "clock_seconds": 86400.0,
+        "rhs_calls": 34568,
+        "initial_roundtrip": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 9.094947017729282e-13
+        },
+        "seconds": 5.3793318000007275,
+        "noether_drift": {
+          "relative_energy_drift": 6.459153051614694e-15,
+          "scaled_momentum_drift": 2.119629728497374e-15,
+          "relative_angular_drift": 9.445833917492824e-15
+        }
+      }
+    ],
+    "cases": {
+      "circle": {
+        "samples": 82,
+        "duration_seconds": 4191.695807499147,
+        "initial_noether": {
+          "maximum_scaled_difference": 0.0,
+          "checks_passed": true
+        },
+        "initial_state_sha256": "f5ec00e34bf303c4acdbeb7d9f710d083fb6f7a1bad3470a1ab3d5f7f0c08350",
+        "masses_kg": [
+          6.732954607500545e+28,
+          6.732954607500545e+28
+        ],
+        "candidates": {
+          "dop853": {
+            "error": {
+              "position_metres": 3.134915343989672e-06,
+              "velocity_m_per_s": 9.045311781932752e-09
+            },
+            "per_body": {
+              "0": {
+                "position_metres": 3.134915343989672e-06,
+                "velocity_m_per_s": 9.045311781932752e-09
+              },
+              "1": {
+                "position_metres": 3.134915343989672e-06,
+                "velocity_m_per_s": 9.045311781932752e-09
+              }
+            },
+            "noether_drift": {
+              "relative_energy_drift": 2.397367092277421e-15,
+              "scaled_momentum_drift": 0.0,
+              "relative_angular_drift": 1.5804356944456762e-15
+            },
+            "newtonian_drift_diagnostic_only": {
+              "relative_energy_drift": 2.197576749512928e-15,
+              "scaled_momentum_drift": 0.0,
+              "relative_angular_drift": 1.2643528227324809e-15
+            },
+            "statistics": {
+              "packets": 81,
+              "rhs_calls": 3134,
+              "failed": false,
+              "finished": true,
+              "packet_endpoints": [
+                2.0958479037495734,
+                52.39619759373934,
+                104.79239518747868,
+                157.188592781218,
+                209.58479037495735,
+                261.9809879686967,
+                314.377185562436,
+                366.7733831561754,
+                419.1695807499147,
+                471.565778343654,
+                523.9619759373934,
+                576.3581735311327,
+                628.754371124872,
+                681.1505687186113,
+                733.5467663123508,
+                785.9429639060901,
+                838.3391614998294,
+                890.7353590935687,
+                943.131556687308,
+                995.5277542810475,
+                1047.9239518747868,
+                1100.320149468526,
+                1152.7163470622654,
+                1205.1125446560047,
+                1257.508742249744,
+                1309.9049398434834,
+                1362.3011374372227,
+                1414.6973350309622,
+                1467.0935326247015,
+                1519.4897302184409,
+                1571.8859278121802,
+                1624.2821254059195,
+                1676.6783229996588,
+                1729.0745205933981,
+                1781.4707181871374,
+                1833.8669157808768,
+                1886.263113374616,
+                1938.6593109683554,
+                1991.055508562095,
+                2043.4517061558342,
+                2095.8479037495736,
+                2148.2441013433126,
+                2200.640298937052,
+                2253.0364965307917,
+                2305.432694124531,
+                2357.8288917182704,
+                2410.2250893120095,
+                2462.621286905749,
+                2515.017484499488,
+                2567.4136820932276,
+                2619.8098796869667,
+                2672.2060772807063,
+                2724.6022748744454,
+                2776.998472468185,
+                2829.3946700619244,
+                2881.7908676556635,
+                2934.187065249403,
+                2986.583262843142,
+                3038.9794604368817,
+                3091.375658030621,
+                3143.7718556243603,
+                3196.1680532180994,
+                3248.564250811839,
+                3300.960448405578,
+                3353.3566459993176,
+                3405.752843593057,
+                3458.1490411867962,
+                3510.545238780536,
+                3562.941436374275,
+                3615.3376339680144,
+                3667.7338315617535,
+                3720.130029155493,
+                3772.526226749232,
+                3824.9224243429717,
+                3877.3186219367108,
+                3929.7148195304503,
+                3982.11101712419,
+                4034.507214717929,
+                4086.9034123116685,
+                4139.299609905408,
+                4191.695807499147
+              ]
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-9": {
+            "error": {
+              "position_metres": 6.293866658789776e-07,
+              "velocity_m_per_s": 1.8605407539722186e-09
+            },
+            "per_body": {
+              "0": {
+                "position_metres": 6.293866658789776e-07,
+                "velocity_m_per_s": 1.8605407539722186e-09
+              },
+              "1": {
+                "position_metres": 6.293866658789776e-07,
+                "velocity_m_per_s": 1.8605407539722186e-09
+              }
+            },
+            "noether_drift": {
+              "relative_energy_drift": 1.9978059102311843e-15,
+              "scaled_momentum_drift": 0.0,
+              "relative_angular_drift": 1.0760079443209498e-15
+            },
+            "newtonian_drift_diagnostic_only": {
+              "relative_energy_drift": 9.988985225058764e-16,
+              "scaled_momentum_drift": 0.0,
+              "relative_angular_drift": 9.451606328879678e-16
+            },
+            "statistics": {
+              "packets": 81,
+              "packet_endpoints": [
+                2.0958479037495734,
+                52.39619759373934,
+                104.79239518747868,
+                157.188592781218,
+                209.58479037495735,
+                261.9809879686967,
+                314.377185562436,
+                366.7733831561754,
+                419.1695807499147,
+                471.565778343654,
+                523.9619759373934,
+                576.3581735311327,
+                628.754371124872,
+                681.1505687186113,
+                733.5467663123508,
+                785.9429639060901,
+                838.3391614998294,
+                890.7353590935687,
+                943.131556687308,
+                995.5277542810475,
+                1047.9239518747868,
+                1100.320149468526,
+                1152.7163470622654,
+                1205.1125446560047,
+                1257.508742249744,
+                1309.9049398434834,
+                1362.3011374372227,
+                1414.6973350309622,
+                1467.0935326247015,
+                1519.4897302184409,
+                1571.8859278121802,
+                1624.2821254059195,
+                1676.6783229996588,
+                1729.0745205933981,
+                1781.4707181871374,
+                1833.8669157808768,
+                1886.263113374616,
+                1938.6593109683554,
+                1991.055508562095,
+                2043.4517061558342,
+                2095.8479037495736,
+                2148.2441013433126,
+                2200.640298937052,
+                2253.0364965307917,
+                2305.432694124531,
+                2357.8288917182704,
+                2410.2250893120095,
+                2462.621286905749,
+                2515.017484499488,
+                2567.4136820932276,
+                2619.8098796869667,
+                2672.2060772807063,
+                2724.6022748744454,
+                2776.998472468185,
+                2829.3946700619244,
+                2881.7908676556635,
+                2934.187065249403,
+                2986.583262843142,
+                3038.9794604368817,
+                3091.375658030621,
+                3143.7718556243603,
+                3196.1680532180994,
+                3248.564250811839,
+                3300.960448405578,
+                3353.3566459993176,
+                3405.752843593057,
+                3458.1490411867962,
+                3510.545238780536,
+                3562.941436374275,
+                3615.3376339680144,
+                3667.7338315617535,
+                3720.130029155493,
+                3772.526226749232,
+                3824.9224243429717,
+                3877.3186219367108,
+                3929.7148195304503,
+                3982.11101712419,
+                4034.507214717929,
+                4086.9034123116685,
+                4139.299609905408,
+                4191.695807499147
+              ],
+              "steps_done": 166,
+              "force_evaluations": 5878,
+              "epsilon": 1e-09,
+              "force_is_velocity_dependent": 1,
+              "gravity": "none",
+              "force": "complete native order-reduced EIH",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-11": {
+            "error": {
+              "position_metres": 7.416228734331908e-07,
+              "velocity_m_per_s": 2.168821273028265e-09
+            },
+            "per_body": {
+              "0": {
+                "position_metres": 7.277199892446267e-07,
+                "velocity_m_per_s": 2.168821273028265e-09
+              },
+              "1": {
+                "position_metres": 7.416228734331908e-07,
+                "velocity_m_per_s": 2.168821273028265e-09
+              }
+            },
+            "noether_drift": {
+              "relative_energy_drift": 1.5982447281849475e-15,
+              "scaled_momentum_drift": 0.0,
+              "relative_angular_drift": 9.817576380224936e-16
+            },
+            "newtonian_drift_diagnostic_only": {
+              "relative_energy_drift": 1.1986782270070516e-15,
+              "scaled_momentum_drift": 0.0,
+              "relative_angular_drift": 9.697143485861587e-16
+            },
+            "statistics": {
+              "packets": 81,
+              "packet_endpoints": [
+                2.0958479037495734,
+                52.39619759373934,
+                104.79239518747868,
+                157.188592781218,
+                209.58479037495735,
+                261.9809879686967,
+                314.377185562436,
+                366.7733831561754,
+                419.1695807499147,
+                471.565778343654,
+                523.9619759373934,
+                576.3581735311327,
+                628.754371124872,
+                681.1505687186113,
+                733.5467663123508,
+                785.9429639060901,
+                838.3391614998294,
+                890.7353590935687,
+                943.131556687308,
+                995.5277542810475,
+                1047.9239518747868,
+                1100.320149468526,
+                1152.7163470622654,
+                1205.1125446560047,
+                1257.508742249744,
+                1309.9049398434834,
+                1362.3011374372227,
+                1414.6973350309622,
+                1467.0935326247015,
+                1519.4897302184409,
+                1571.8859278121802,
+                1624.2821254059195,
+                1676.6783229996588,
+                1729.0745205933981,
+                1781.4707181871374,
+                1833.8669157808768,
+                1886.263113374616,
+                1938.6593109683554,
+                1991.055508562095,
+                2043.4517061558342,
+                2095.8479037495736,
+                2148.2441013433126,
+                2200.640298937052,
+                2253.0364965307917,
+                2305.432694124531,
+                2357.8288917182704,
+                2410.2250893120095,
+                2462.621286905749,
+                2515.017484499488,
+                2567.4136820932276,
+                2619.8098796869667,
+                2672.2060772807063,
+                2724.6022748744454,
+                2776.998472468185,
+                2829.3946700619244,
+                2881.7908676556635,
+                2934.187065249403,
+                2986.583262843142,
+                3038.9794604368817,
+                3091.375658030621,
+                3143.7718556243603,
+                3196.1680532180994,
+                3248.564250811839,
+                3300.960448405578,
+                3353.3566459993176,
+                3405.752843593057,
+                3458.1490411867962,
+                3510.545238780536,
+                3562.941436374275,
+                3615.3376339680144,
+                3667.7338315617535,
+                3720.130029155493,
+                3772.526226749232,
+                3824.9224243429717,
+                3877.3186219367108,
+                3929.7148195304503,
+                3982.11101712419,
+                4034.507214717929,
+                4086.9034123116685,
+                4139.299609905408,
+                4191.695807499147
+              ],
+              "steps_done": 166,
+              "force_evaluations": 5444,
+              "epsilon": 1e-11,
+              "force_is_velocity_dependent": 1,
+              "gravity": "none",
+              "force": "complete native order-reduced EIH",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          }
+        },
+        "analytic": {
+          "radius_metres": 100000000.0,
+          "omega_per_second": 0.002997920457843655,
+          "period_seconds": 2095.8479037495736,
+          "compactness": 1e-06
+        },
+        "packet_endpoints_equal": true,
+        "packets": 81,
+        "cost": {
+          "dop853": {
+            "seconds": [
+              0.06541109999943728,
+              0.05800789999921108,
+              0.06024470000011206
+            ],
+            "median_seconds": 0.06024470000011206
+          },
+          "ias15_1e-9": {
+            "seconds": [
+              0.09734070000013162,
+              0.10080900000048132,
+              0.09930880000047182
+            ],
+            "median_seconds": 0.09930880000047182
+          },
+          "ias15_1e-11": {
+            "seconds": [
+              0.09071849999963888,
+              0.10328959999969811,
+              0.09340909999991709
+            ],
+            "median_seconds": 0.09340909999991709
+          }
+        }
+      },
+      "triple": {
+        "samples": 63,
+        "duration_seconds": 2592000.0,
+        "initial_noether": {
+          "maximum_scaled_difference": 7.750983661937626e-16,
+          "checks_passed": true
+        },
+        "initial_state_sha256": "6b4e361d242e15928250ce52b5573c0652fed6d7ef1e574d4d3cde1d379b4424",
+        "masses_kg": [
+          1e+30,
+          3e+29,
+          2e+28
+        ],
+        "candidates": {
+          "dop853": {
+            "error": {
+              "position_metres": 0.000715212502762327,
+              "velocity_m_per_s": 1.3587741266370794e-10
+            },
+            "per_body": {
+              "0": {
+                "position_metres": 0.00023223536162438762,
+                "velocity_m_per_s": 1.3587741266370794e-10
+              },
+              "1": {
+                "position_metres": 0.0005873921586498964,
+                "velocity_m_per_s": 1.0656332504328637e-10
+              },
+              "2": {
+                "position_metres": 0.000715212502762327,
+                "velocity_m_per_s": 1.0935137372281415e-10
+              }
+            },
+            "noether_drift": {
+              "relative_energy_drift": 1.5501967323875264e-15,
+              "scaled_momentum_drift": 3.297577508509263e-16,
+              "relative_angular_drift": 7.858635972646508e-16
+            },
+            "newtonian_drift_diagnostic_only": {
+              "relative_energy_drift": 1.234302182640232e-09,
+              "scaled_momentum_drift": 5.455596555035672e-10,
+              "relative_angular_drift": 3.9437729636007626e-09
+            },
+            "statistics": {
+              "packets": 62,
+              "rhs_calls": 842,
+              "failed": false,
+              "finished": true,
+              "packet_endpoints": [
+                1.0,
+                43200.0,
+                72000.125,
+                86400.0,
+                129600.0,
+                172800.0,
+                216000.0,
+                259200.0,
+                302400.0,
+                345600.0,
+                388800.0,
+                432000.0,
+                475200.0,
+                518400.0,
+                561600.0,
+                604800.0,
+                648000.0,
+                691200.0,
+                734400.0,
+                777600.0,
+                820800.0,
+                864000.0,
+                907200.0,
+                950400.0,
+                993600.0,
+                1036800.0,
+                1080000.0,
+                1123200.0,
+                1166400.0,
+                1209600.0,
+                1252800.0,
+                1296000.0,
+                1339200.0,
+                1382400.0,
+                1425600.0,
+                1468800.0,
+                1512000.0,
+                1555200.0,
+                1598400.0,
+                1641600.0,
+                1684800.0,
+                1728000.0,
+                1771200.0,
+                1814400.0,
+                1857600.0,
+                1900800.0,
+                1944000.0,
+                1987200.0,
+                2030400.0,
+                2073600.0,
+                2116800.0,
+                2160000.0,
+                2203200.0,
+                2246400.0,
+                2289600.0,
+                2332800.0,
+                2376000.0,
+                2419200.0,
+                2462400.0,
+                2505600.0,
+                2548800.0,
+                2592000.0
+              ]
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-9": {
+            "error": {
+              "position_metres": 0.0007487697843252745,
+              "velocity_m_per_s": 1.3932200204622866e-10
+            },
+            "per_body": {
+              "0": {
+                "position_metres": 0.0002705180032229441,
+                "velocity_m_per_s": 1.3932200204622866e-10
+              },
+              "1": {
+                "position_metres": 0.00058746337890625,
+                "velocity_m_per_s": 9.584279160375793e-11
+              },
+              "2": {
+                "position_metres": 0.0007487697843252745,
+                "velocity_m_per_s": 1.0531304597774672e-10
+              }
+            },
+            "noether_drift": {
+              "relative_energy_drift": 1.5501967323875264e-15,
+              "scaled_momentum_drift": 2.2368929489224857e-16,
+              "relative_angular_drift": 3.702361473859474e-16
+            },
+            "newtonian_drift_diagnostic_only": {
+              "relative_energy_drift": 1.234302441006358e-09,
+              "scaled_momentum_drift": 5.455598097270662e-10,
+              "relative_angular_drift": 3.94377282431977e-09
+            },
+            "statistics": {
+              "packets": 62,
+              "packet_endpoints": [
+                1.0,
+                43200.0,
+                72000.125,
+                86400.0,
+                129600.0,
+                172800.0,
+                216000.0,
+                259200.0,
+                302400.0,
+                345600.0,
+                388800.0,
+                432000.0,
+                475200.0,
+                518400.0,
+                561600.0,
+                604800.0,
+                648000.0,
+                691200.0,
+                734400.0,
+                777600.0,
+                820800.0,
+                864000.0,
+                907200.0,
+                950400.0,
+                993600.0,
+                1036800.0,
+                1080000.0,
+                1123200.0,
+                1166400.0,
+                1209600.0,
+                1252800.0,
+                1296000.0,
+                1339200.0,
+                1382400.0,
+                1425600.0,
+                1468800.0,
+                1512000.0,
+                1555200.0,
+                1598400.0,
+                1641600.0,
+                1684800.0,
+                1728000.0,
+                1771200.0,
+                1814400.0,
+                1857600.0,
+                1900800.0,
+                1944000.0,
+                1987200.0,
+                2030400.0,
+                2073600.0,
+                2116800.0,
+                2160000.0,
+                2203200.0,
+                2246400.0,
+                2289600.0,
+                2332800.0,
+                2376000.0,
+                2419200.0,
+                2462400.0,
+                2505600.0,
+                2548800.0,
+                2592000.0
+              ],
+              "steps_done": 127,
+              "force_evaluations": 2857,
+              "epsilon": 1e-09,
+              "force_is_velocity_dependent": 1,
+              "gravity": "none",
+              "force": "complete native order-reduced EIH",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-11": {
+            "error": {
+              "position_metres": 0.0007487697843252745,
+              "velocity_m_per_s": 1.3932200204622866e-10
+            },
+            "per_body": {
+              "0": {
+                "position_metres": 0.0002705180032229441,
+                "velocity_m_per_s": 1.3932200204622866e-10
+              },
+              "1": {
+                "position_metres": 0.00058746337890625,
+                "velocity_m_per_s": 9.584279160375793e-11
+              },
+              "2": {
+                "position_metres": 0.0007487697843252745,
+                "velocity_m_per_s": 1.0531304597774672e-10
+              }
+            },
+            "noether_drift": {
+              "relative_energy_drift": 1.5501967323875264e-15,
+              "scaled_momentum_drift": 2.2368929489224857e-16,
+              "relative_angular_drift": 3.702361473859474e-16
+            },
+            "newtonian_drift_diagnostic_only": {
+              "relative_energy_drift": 1.234302441006358e-09,
+              "scaled_momentum_drift": 5.455598097270662e-10,
+              "relative_angular_drift": 3.94377282431977e-09
+            },
+            "statistics": {
+              "packets": 62,
+              "packet_endpoints": [
+                1.0,
+                43200.0,
+                72000.125,
+                86400.0,
+                129600.0,
+                172800.0,
+                216000.0,
+                259200.0,
+                302400.0,
+                345600.0,
+                388800.0,
+                432000.0,
+                475200.0,
+                518400.0,
+                561600.0,
+                604800.0,
+                648000.0,
+                691200.0,
+                734400.0,
+                777600.0,
+                820800.0,
+                864000.0,
+                907200.0,
+                950400.0,
+                993600.0,
+                1036800.0,
+                1080000.0,
+                1123200.0,
+                1166400.0,
+                1209600.0,
+                1252800.0,
+                1296000.0,
+                1339200.0,
+                1382400.0,
+                1425600.0,
+                1468800.0,
+                1512000.0,
+                1555200.0,
+                1598400.0,
+                1641600.0,
+                1684800.0,
+                1728000.0,
+                1771200.0,
+                1814400.0,
+                1857600.0,
+                1900800.0,
+                1944000.0,
+                1987200.0,
+                2030400.0,
+                2073600.0,
+                2116800.0,
+                2160000.0,
+                2203200.0,
+                2246400.0,
+                2289600.0,
+                2332800.0,
+                2376000.0,
+                2419200.0,
+                2462400.0,
+                2505600.0,
+                2548800.0,
+                2592000.0
+              ],
+              "steps_done": 127,
+              "force_evaluations": 2857,
+              "epsilon": 1e-11,
+              "force_is_velocity_dependent": 1,
+              "gravity": "none",
+              "force": "complete native order-reduced EIH",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          }
+        },
+        "packet_endpoints_equal": true,
+        "packets": 62,
+        "cost": {
+          "dop853": {
+            "seconds": [
+              0.020274200000130804,
+              0.022121099999822036,
+              0.022100299999692652
+            ],
+            "median_seconds": 0.022100299999692652
+          },
+          "ias15_1e-9": {
+            "seconds": [
+              0.060137300000860705,
+              0.05633459999990009,
+              0.05888959999992949
+            ],
+            "median_seconds": 0.05888959999992949
+          },
+          "ias15_1e-11": {
+            "seconds": [
+              0.0602563000002192,
+              0.05688590000045224,
+              0.05942190000041592
+            ],
+            "median_seconds": 0.05942190000041592
+          }
+        }
+      }
+    },
+    "complete": true,
+    "api_passed": true,
+    "npz_sha256": "34bae88667ebe022ddf78030a62e6401b9ea7dff4e12e415e2ab259c1688d26d",
+    "reference_comparisons": {
+      "0_to_1": {
+        "position_metres": 0.0014484802855496283,
+        "velocity_m_per_s": 1.187926818038664e-10
+      },
+      "1_to_2": {
+        "position_metres": 0.0007150497139807117,
+        "velocity_m_per_s": 1.880279940889892e-10
+      },
+      "2_to_3": {
+        "position_metres": 0.0012389018567373375,
+        "velocity_m_per_s": 1.784464761793893e-10
+      }
+    },
+    "reference_passed": true,
+    "newton_negative_control": {
+      "error": {
+        "position_metres": 3455.746086050228,
+        "velocity_m_per_s": 10.360080378792576
+      },
+      "statistics": {
+        "packets": 81,
+        "packet_endpoints": [
+          2.0958479037495734,
+          52.39619759373934,
+          104.79239518747868,
+          157.188592781218,
+          209.58479037495735,
+          261.9809879686967,
+          314.377185562436,
+          366.7733831561754,
+          419.1695807499147,
+          471.565778343654,
+          523.9619759373934,
+          576.3581735311327,
+          628.754371124872,
+          681.1505687186113,
+          733.5467663123508,
+          785.9429639060901,
+          838.3391614998294,
+          890.7353590935687,
+          943.131556687308,
+          995.5277542810475,
+          1047.9239518747868,
+          1100.320149468526,
+          1152.7163470622654,
+          1205.1125446560047,
+          1257.508742249744,
+          1309.9049398434834,
+          1362.3011374372227,
+          1414.6973350309622,
+          1467.0935326247015,
+          1519.4897302184409,
+          1571.8859278121802,
+          1624.2821254059195,
+          1676.6783229996588,
+          1729.0745205933981,
+          1781.4707181871374,
+          1833.8669157808768,
+          1886.263113374616,
+          1938.6593109683554,
+          1991.055508562095,
+          2043.4517061558342,
+          2095.8479037495736,
+          2148.2441013433126,
+          2200.640298937052,
+          2253.0364965307917,
+          2305.432694124531,
+          2357.8288917182704,
+          2410.2250893120095,
+          2462.621286905749,
+          2515.017484499488,
+          2567.4136820932276,
+          2619.8098796869667,
+          2672.2060772807063,
+          2724.6022748744454,
+          2776.998472468185,
+          2829.3946700619244,
+          2881.7908676556635,
+          2934.187065249403,
+          2986.583262843142,
+          3038.9794604368817,
+          3091.375658030621,
+          3143.7718556243603,
+          3196.1680532180994,
+          3248.564250811839,
+          3300.960448405578,
+          3353.3566459993176,
+          3405.752843593057,
+          3458.1490411867962,
+          3510.545238780536,
+          3562.941436374275,
+          3615.3376339680144,
+          3667.7338315617535,
+          3720.130029155493,
+          3772.526226749232,
+          3824.9224243429717,
+          3877.3186219367108,
+          3929.7148195304503,
+          3982.11101712419,
+          4034.507214717929,
+          4086.9034123116685,
+          4139.299609905408,
+          4191.695807499147
+        ],
+        "steps_done": 166,
+        "force_evaluations": 5878,
+        "epsilon": 1e-09,
+        "force_is_velocity_dependent": 1,
+        "gravity": "none",
+        "force": "complete native order-reduced EIH",
+        "callback_failed": false
+      },
+      "failed_eih_targets": true
+    },
+    "warnings": [],
+    "source_library_native_unchanged": true,
+    "general_release": false,
+    "checks_passed": true
+  },
+  "receipts": {
+    "json_sha256": "e0bd1af7d1142dcf16a6943a8d0412227f9a5efcee6e97595ce94f068d33c290",
+    "npz_sha256": "34bae88667ebe022ddf78030a62e6401b9ea7dff4e12e415e2ab259c1688d26d"
+  },
+  "distributions": [
+    {
+      "filename": "rebound-5.2.2-cp314-cp314t-win_amd64.whl",
+      "sha256": "d23f076c40dc2a6a73f4718f6fab8de6ede89207435ca3f7b79fc43d73953596",
+      "url": "https://files.pythonhosted.org/packages/7a/4b/0f85794f98915789156d494116b0135bc81248deba4a1d170b1646a1e35e/rebound-5.2.2-cp314-cp314t-win_amd64.whl",
+      "bytes": 449636
+    },
+    {
+      "filename": "rebound-5.2.2.tar.gz",
+      "sha256": "cefb2bce433a134e0f6fa0cb68df01079b0a5c160fadd2a2c85b06f286735a5f",
+      "url": "https://files.pythonhosted.org/packages/c4/5c/b0346f6e40cc459b4a0a47f8af222adca9a54c29298bccefcfa55a581d4e/rebound-5.2.2.tar.gz",
+      "bytes": 386244
+    }
+  ],
+  "upstream_source_sha256": {
+    "src/integrator_ias15.c": "7d3038a1f1f6ad079f86dd652d75fe16bea76df8c0ae1df630b6001e4871ef6b",
+    "src/simulation.c": "b0ab5e705ab04c54bbc5ecdde9f8fecd3b93f802e5287dc1f8484c4787c87bbd"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "tests": {
+    "new": 13,
+    "related_passed": 174,
+    "seconds": 13.21
+  },
+  "model": "full order-reduced harmonic EIH 1PN, SI, fixed original inertial velocities, no figures",
+  "decision": "compatible in these model tasks; retain runtime DOP853; IAS15 optional research only",
+  "limitations": [
+    "Not ten-body/year qualification, not JPL agreement, not mixed EIH/J2",
+    "Sampled errors and empirical RK45 sensitivity, no rigorous global bound",
+    "1PN Noether residual includes O(c^-4); circular analytic solution belongs to truncated equations",
+    "Physical Python/Rust callback makes IAS15 slower here; previous bare-Newton speedup is inapplicable"
+  ],
+  "general_release": false,
+  "eih_model_feasibility_passed": true
+}

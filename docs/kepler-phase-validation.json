@@ -1,0 +1,1479 @@
+{
+  "date": "2026-10-15",
+  "stages": [
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164
+  ],
+  "runtime_modified": false,
+  "general_release_passed": false,
+  "thresholds": {
+    "relative_position_metres": 0.1,
+    "relative_velocity_m_per_s": 1e-06,
+    "energy_angular_momentum_drift": 1e-10,
+    "oracle_precision_position_metres": 1e-06,
+    "oracle_precision_velocity_m_per_s": 1e-12
+  },
+  "source_sha256": {
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+    "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+    "src/solar_simulator/branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+    "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+    "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+    "src/solar_simulator/commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+    "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+    "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+    "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+    "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+    "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+    "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+    "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+    "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+    "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+    "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+    "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+    "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+    "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+    "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+    "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+    "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+    "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+    "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+    "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+    "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+    "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+    "src/solar_simulator/data/asteroids-20261008.json": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+    "src/solar_simulator/data/asteroids-catalog-20261008.json": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+    "src/solar_simulator/data/asteroids-full-20261008.json": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+    "src/solar_simulator/data/earth-j2-20261008.json": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+    "src/solar_simulator/data/kuiper-20261010.json": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+    "src/solar_simulator/data/kuiper-ring-036-0-20261011.json": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+    "src/solar_simulator/data/kuiper-ring-036-1-20261011.json": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+    "src/solar_simulator/data/kuiper-ring-072-0-20261011.json": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+    "src/solar_simulator/data/kuiper-ring-072-1-20261011.json": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+    "src/solar_simulator/data/kuiper-ring-144-0-20261011.json": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+    "src/solar_simulator/data/kuiper-ring-144-1-20261011.json": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+    "src/solar_simulator/data/kuiper-ring-manifest.json": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461",
+    "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+    "src/solar_simulator/data/orbit-cohort-13270.json": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+    "src/solar_simulator/data/orbit-cohort-13271.json": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+    "src/solar_simulator/data/orbit-observations-13270.json": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+    "src/solar_simulator/data/orientation-de441-20261008.json": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+    "src/solar_simulator/data/pluto-system-20261008.json": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+    "src/solar_simulator/data/solar-j2-20261008.json": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+    "src/solar_simulator/data/solar-system-20261008.json": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+    "src/solar_simulator/data/solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "src/solar_simulator/data/__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+    "rust/solar_core/src/collisions.rs": "dba247071f1fa924157cc8b8e125665731adfe8954f913464af2912cd6520abd",
+    "rust/solar_core/src/contacts.rs": "a3ca67f3ccabe99ec0f098f66395af01706494cc65eaf03d942914e8cefab594",
+    "rust/solar_core/src/impacts.rs": "3a9230536702f203d8a079e8d9b51b952e11ac59da1a36cb460272630700d374",
+    "rust/solar_core/src/lib.rs": "6df5a41ccdcd9ea2317d4e25db82a5074c1029cb2099142029a88d93781608ad",
+    "rust/solar_core/src/main.rs": "1365b6e5edcdb80ee82e1a188e3d8a2d1a17d86732dee1c2c65dd5dce2b5f1d4",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "rust/solar_native/src/lib.rs": "3a38d0d17585c41fe58a97a4673988cbbdf5bcb7444987a908ec6dcf950c3ad6",
+    "scripts/kepler_reference.py": "abc7f6f010049d489c71d5331e7942c786600432097b72d94204ff26cc9c14a2",
+    "scripts/assess_kepler_phase.py": "f0b2f6bece3a7653efd883f7041e1ee2d5fb2fcf13d91331fb70b406d24d3677",
+    "scripts/kepler_cache.py": "1c8810430fd5e289c22070af112f5cd590057bda39563ec0ea118d916d33d195",
+    "scripts/assess_continuous.py": "9cb3f746825ff4327d99b04f83c2a47dbe99ca3869111a56a4cbf94fca2d9823",
+    "docs/kepler-phase-protocol.md": "f05aeb22553c53c16528789e971e23d0d8f0356e1714f0dfae11a36952701327",
+    ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7",
+    ".venv/Lib/site-packages/scipy/integrate/_ivp/rk.py": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+    ".venv/Lib/site-packages/scipy/integrate/_ivp/base.py": "5bd1a3ddb9fb986333d3d3cc2d2e00bc19efbda00169dcc5b82324aad9f198af",
+    "scripts/assess_kepler_dynamic_step.py": "43e01637b382d0d6ac5dd1b48f821c08b4aaf2a14e25eccdf6f7985e687096da",
+    "scripts/assess_kepler_force_rounding.py": "538ab11757e24a9f250b28cedc1766a149570f3a3ea6cdce169c1efda04b3600",
+    "scripts/assess_kepler_holdout.py": "d3082ee6eec7164b505530f06dd28412d9d74985d49256bea9542e8a22b5ad50",
+    "scripts/assess_kepler_roundoff.py": "73923167ecee4e643adada6cfc2ce7e8e92921009843a1714a8a288206af8f13",
+    "scripts/assess_kepler_steps.py": "255087375d0d9447d708648761de84fab23068b25fdc610fa43a7a565ef8eae2",
+    "scripts/kepler_roundoff.py": "c72737322df2a1f0ba73ce5b2f37e1e1b52495eae593f26e0da158fc199d652f",
+    "tests/test_kepler_cache.py": "ffd7db3c6fb8f5f1bf60942bcf7efe9736b1f312f328edf2e70b5fecf21d642e",
+    "tests/test_kepler_force_rounding.py": "500b9062ed26363898bda09cdece4666e7cbfcdb426e6441affa93c8adb94e07",
+    "tests/test_kepler_holdout.py": "2e258d7662e2f3b8fa6784b5402a946aee358b0b547eab58ad6c30e7549ae062",
+    "tests/test_kepler_reference.py": "1616dc2073e86631b83b0cb24fca9402e46492f35fe082b04fbd8eee08f37c1b",
+    "tests/test_kepler_roundoff.py": "6e7adea8c6ef2432e81b1763b6f156dbc0ea96a09c1d0b13a69906f1b420cd8e",
+    "docs/kepler-dynamic-step-protocol.md": "f63ad9f6207130b3412f6c35d467969d36919df567fd7ab8c28afee54d40f67f",
+    "docs/kepler-force-rounding-protocol.md": "6d9d2dc4853f5973b4645fc8907da01c44f3980988c689385f2ad5dc47fbfd4b",
+    "docs/kepler-holdout-protocol.md": "a28953f80fd9e12b6fffd35ebc410bf6443181520e0ec81508945af734df221f",
+    "docs/kepler-roundoff-protocol.md": "57ac106a6a867e357167775d39e5d702448b679b327a66cf8fa32abe30c7c363",
+    "docs/kepler-step-protocol.md": "4aca6981e55aed2a34f86b55d21168a4739e2632cff8478852898062893031dc"
+  },
+  "results": {
+    "matched": {
+      "0.0": {
+        "oracle": {
+          "precision_convergence": {
+            "position_metres": 5.144571512675673e-60,
+            "velocity_m_per_s": 1.0243005424387471e-66
+          },
+          "float_output_rounding": {
+            "position_metres": 1.4293739388464292e-05,
+            "velocity_m_per_s": 2.0620468002322793e-12
+          },
+          "rounded_initial_relative_effect": {
+            "position_metres": 0.00019641651788329184,
+            "velocity_m_per_s": 3.836326157877224e-11
+          },
+          "rounded_native_gm_effect": {
+            "position_metres": 4.133151976042115e-06,
+            "velocity_m_per_s": 8.229236964060294e-13
+          },
+          "mu_exact": "132718854102544585809.897794284125837893650867727046716026961803436279296875000000000000000000000000000000",
+          "mu_native_rounded_sum": "132718854102544585664",
+          "wall_seconds": 6.756189299999733,
+          "exact_t0_passed": true
+        },
+        "results": {
+          "continuous": {
+            "position_metres": 0.003428534218737446,
+            "velocity_m_per_s": 6.419449585181301e-10,
+            "relative_energy_drift": 7.621939916197069e-16,
+            "relative_angular_drift": 8.480233900014473e-15,
+            "scaled_momentum_drift": 2.7391773536669665e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.09514560000025085,
+            "worst_position_time_seconds": 61852569.52495614,
+            "packets": 112,
+            "rhs_calls": 3182,
+            "failed": false,
+            "finished": true
+          },
+          "legacy": {
+            "position_metres": 0.009259090425696398,
+            "velocity_m_per_s": 1.7732408945800376e-09,
+            "relative_energy_drift": 7.621939916197069e-16,
+            "relative_angular_drift": 1.0059112964354183e-14,
+            "scaled_momentum_drift": 2.7391773536669665e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.7984661000000415,
+            "worst_position_time_seconds": 63114866.86220014,
+            "legacy_from_same_initial_per_epoch": true,
+            "cost_comparable_to_continuation": false
+          }
+        }
+      },
+      "0.5": {
+        "oracle": {
+          "precision_convergence": {
+            "position_metres": 3.8790768544882443e-60,
+            "velocity_m_per_s": 1.5154766259414557e-66
+          },
+          "float_output_rounding": {
+            "position_metres": 1.6023480318657856e-05,
+            "velocity_m_per_s": 3.5713216300816588e-12
+          },
+          "rounded_initial_relative_effect": {
+            "position_metres": 8.736643446210696e-05,
+            "velocity_m_per_s": 3.9471549614351807e-11
+          },
+          "rounded_native_gm_effect": {
+            "position_metres": 1.789707304477163e-05,
+            "velocity_m_per_s": 8.2292369640603e-12
+          },
+          "mu_exact": "132718854102544585809.897794284125837893650867727046716026961803436279296875000000000000000000000000000000",
+          "mu_native_rounded_sum": "132718854102544585664",
+          "wall_seconds": 6.904219999999896,
+          "exact_t0_passed": true
+        },
+        "results": {
+          "continuous": {
+            "position_metres": 0.027401670418371896,
+            "velocity_m_per_s": 1.2206398586145651e-08,
+            "relative_energy_drift": 2.4390207731830605e-14,
+            "relative_angular_drift": 1.6312508964629653e-14,
+            "scaled_momentum_drift": 2.1654596645793466e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.13128510000024107,
+            "worst_position_time_seconds": 31560589.17444318,
+            "packets": 112,
+            "rhs_calls": 4262,
+            "failed": false,
+            "finished": true
+          },
+          "legacy": {
+            "position_metres": 0.038865071786358056,
+            "velocity_m_per_s": 1.7842546092484322e-08,
+            "relative_energy_drift": 2.4390207731830605e-14,
+            "relative_angular_drift": 2.647007310124311e-14,
+            "scaled_momentum_drift": 2.1654596645793466e-16,
+            "checks_passed": true,
+            "wall_seconds": 2.5433994999998504,
+            "worst_position_time_seconds": 63114866.86220014,
+            "legacy_from_same_initial_per_epoch": true,
+            "cost_comparable_to_continuation": false
+          }
+        }
+      },
+      "0.95": {
+        "oracle": {
+          "precision_convergence": {
+            "position_metres": 4.9289051024756555e-60,
+            "velocity_m_per_s": 1.6529519620146072e-65
+          },
+          "float_output_rounding": {
+            "position_metres": 1.5700568084960504e-05,
+            "velocity_m_per_s": 1.2632688912285255e-11
+          },
+          "rounded_initial_relative_effect": {
+            "position_metres": 0.03927359666991584,
+            "velocity_m_per_s": 5.00847332096504e-07
+          },
+          "rounded_native_gm_effect": {
+            "position_metres": 0.0007614400116150949,
+            "velocity_m_per_s": 9.710499617591674e-09
+          },
+          "mu_exact": "132718854102544585809.897794284125837893650867727046716026961803436279296875000000000000000000000000000000",
+          "mu_native_rounded_sum": "132718854102544585664",
+          "wall_seconds": 6.963916700000027,
+          "exact_t0_passed": true
+        },
+        "results": {
+          "continuous": {
+            "position_metres": 3.9809567361741123,
+            "velocity_m_per_s": 5.0766202672033874e-05,
+            "relative_energy_drift": 1.0823154680999712e-13,
+            "relative_angular_drift": 2.7372423121777168e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": false,
+            "wall_seconds": 0.21571029999995517,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 112,
+            "rhs_calls": 7838,
+            "failed": false,
+            "finished": true
+          },
+          "legacy": {
+            "position_metres": 3.9720525174026005,
+            "velocity_m_per_s": 5.0652504455832686e-05,
+            "relative_energy_drift": 1.166156807178138e-13,
+            "relative_angular_drift": 2.7338345771365597e-14,
+            "scaled_momentum_drift": 2.1651488700038473e-16,
+            "checks_passed": false,
+            "wall_seconds": 5.466184599999906,
+            "worst_position_time_seconds": 63114866.86220014,
+            "legacy_from_same_initial_per_epoch": true,
+            "cost_comparable_to_continuation": false
+          }
+        }
+      }
+    },
+    "uniform_steps": {
+      "uncapped": {
+        "max_step_seconds": null,
+        "position_metres": 3.9809567361741123,
+        "velocity_m_per_s": 5.0766202672033874e-05,
+        "relative_energy_drift": 1.0823154680999712e-13,
+        "relative_angular_drift": 2.7372423121777168e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.22453029999996943,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 7838,
+        "failed": false,
+        "finished": true
+      },
+      "500": {
+        "max_step_seconds": 63114.86686220014,
+        "position_metres": 4.732242524644002,
+        "velocity_m_per_s": 6.0347247788779956e-05,
+        "relative_energy_drift": 1.3490833651668655e-13,
+        "relative_angular_drift": 3.1579530469035514e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.4284443999999894,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 15806,
+        "failed": false,
+        "finished": true
+      },
+      "1000": {
+        "max_step_seconds": 31557.43343110007,
+        "position_metres": 4.400535506434844,
+        "velocity_m_per_s": 5.6117496343521064e-05,
+        "relative_energy_drift": 1.143290987429547e-13,
+        "relative_angular_drift": 2.4059915861739886e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.8107162000001154,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 30794,
+        "failed": false,
+        "finished": true
+      },
+      "2000": {
+        "max_step_seconds": 15778.716715550036,
+        "position_metres": 4.281375701397619,
+        "velocity_m_per_s": 5.459818405993267e-05,
+        "relative_energy_drift": 1.0670715882675772e-13,
+        "relative_angular_drift": 2.3290134275121945e-14,
+        "scaled_momentum_drift": 2.1651488700038473e-16,
+        "checks_passed": false,
+        "wall_seconds": 1.3611675000001924,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 52142,
+        "failed": false,
+        "finished": true
+      },
+      "4000": {
+        "max_step_seconds": 7889.358357775018,
+        "position_metres": 3.4624753229989595,
+        "velocity_m_per_s": 4.415576279169272e-05,
+        "relative_energy_drift": 9.01294395090293e-14,
+        "relative_angular_drift": 3.894656368806891e-14,
+        "scaled_momentum_drift": 2.1651488700038473e-16,
+        "checks_passed": false,
+        "wall_seconds": 2.652476800000386,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 101702,
+        "failed": false,
+        "finished": true
+      },
+      "8000": {
+        "max_step_seconds": 3944.679178887509,
+        "position_metres": 2.9089054016026,
+        "velocity_m_per_s": 3.7095024170492705e-05,
+        "relative_energy_drift": 8.536572706140618e-14,
+        "relative_angular_drift": 3.3813546224863774e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 5.142875700000332,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 198194,
+        "failed": false,
+        "finished": true
+      }
+    },
+    "dynamic_steps": {
+      "32": {
+        "position_metres": 0.2937179786264682,
+        "velocity_m_per_s": 3.744901695817097e-06,
+        "relative_energy_drift": 3.353653563126671e-14,
+        "relative_angular_drift": 2.9713184614677995e-14,
+        "scaled_momentum_drift": 2.1651488700038473e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.25047600000016246,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 8786,
+        "failed": false,
+        "finished": true
+      },
+      "64": {
+        "position_metres": 0.5762873809669004,
+        "velocity_m_per_s": 7.3492548323493856e-06,
+        "relative_energy_drift": 3.353653563126671e-14,
+        "relative_angular_drift": 3.660252438624435e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.4314441000001352,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 15686,
+        "failed": false,
+        "finished": true
+      },
+      "128": {
+        "position_metres": 0.47505478323577693,
+        "velocity_m_per_s": 6.0585083223329915e-06,
+        "relative_energy_drift": 3.96340875642243e-14,
+        "relative_angular_drift": 2.318432376162184e-14,
+        "scaled_momentum_drift": 2.1651488700038473e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.8105740999999398,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 29798,
+        "failed": false,
+        "finished": true
+      },
+      "256": {
+        "position_metres": 0.3746407187048007,
+        "velocity_m_per_s": 4.7774882073857105e-06,
+        "relative_energy_drift": 4.573163949718188e-14,
+        "relative_angular_drift": 2.6889522808523494e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 1.6059805999998389,
+        "worst_position_time_seconds": 31557433.43110007,
+        "packets": 112,
+        "rhs_calls": 58178,
+        "failed": false,
+        "finished": true
+      },
+      "512": {
+        "position_metres": 0.6050833365922861,
+        "velocity_m_per_s": 7.716815033547958e-06,
+        "relative_energy_drift": 3.65853115977455e-14,
+        "relative_angular_drift": 3.9732058336239226e-14,
+        "scaled_momentum_drift": 2.738720761020791e-16,
+        "checks_passed": false,
+        "wall_seconds": 3.160703900000044,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 115022,
+        "failed": false,
+        "finished": true
+      },
+      "loose_uncapped": {
+        "position_metres": 110.2382788976476,
+        "velocity_m_per_s": 0.0014057743290540306,
+        "relative_energy_drift": 3.0924115724990197e-12,
+        "relative_angular_drift": 3.222575838048356e-13,
+        "scaled_momentum_drift": 1.936568021894183e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.1758498000003783,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 5414,
+        "failed": false,
+        "finished": true
+      }
+    },
+    "roundoff": {
+      "None_sum0_carry0": {
+        "position_metres": 3.9809567361741123,
+        "velocity_m_per_s": 5.0766202672033874e-05,
+        "relative_energy_drift": 1.0823154680999712e-13,
+        "relative_angular_drift": 2.7372423121777168e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.3248155000001134,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 7838,
+        "failed": false,
+        "finished": true
+      },
+      "None_sum1_carry0": {
+        "position_metres": 4.153779368747231,
+        "velocity_m_per_s": 5.297028862100431e-05,
+        "relative_energy_drift": 1.206171991738172e-13,
+        "relative_angular_drift": 3.106705952280807e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.5994579000002886,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 7886,
+        "failed": false,
+        "finished": true
+      },
+      "None_sum0_carry1": {
+        "position_metres": 4.034742059410565,
+        "velocity_m_per_s": 5.145210808713719e-05,
+        "relative_energy_drift": 1.1699677771362364e-13,
+        "relative_angular_drift": 3.2325961961370404e-14,
+        "scaled_momentum_drift": 2.1651488700038473e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.7322422000002007,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 7874,
+        "failed": false,
+        "finished": true
+      },
+      "None_sum1_carry1": {
+        "position_metres": 4.28570093374704,
+        "velocity_m_per_s": 5.465257816166713e-05,
+        "relative_energy_drift": 1.198550051821975e-13,
+        "relative_angular_drift": 2.7539481371018147e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.7050951999999597,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 7850,
+        "failed": false,
+        "finished": true
+      },
+      "32_sum0_carry0": {
+        "position_metres": 0.2937179786264682,
+        "velocity_m_per_s": 3.744901695817097e-06,
+        "relative_energy_drift": 3.353653563126671e-14,
+        "relative_angular_drift": 2.9713184614677995e-14,
+        "scaled_momentum_drift": 2.1651488700038473e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.5733646000003318,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 8786,
+        "failed": false,
+        "finished": true
+      },
+      "32_sum1_carry0": {
+        "position_metres": 0.39871511579888447,
+        "velocity_m_per_s": 5.085622947354846e-06,
+        "relative_energy_drift": 1.905484979049245e-14,
+        "relative_angular_drift": 3.224918059540232e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.8159319999999752,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 8714,
+        "failed": false,
+        "finished": true
+      },
+      "32_sum0_carry1": {
+        "position_metres": 0.08894205987723477,
+        "velocity_m_per_s": 1.133385902414143e-06,
+        "relative_energy_drift": 1.524387983239396e-14,
+        "relative_angular_drift": 2.482664535800663e-14,
+        "scaled_momentum_drift": 1.9961686263657929e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.6728881000003639,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 8738,
+        "failed": false,
+        "finished": true
+      },
+      "32_sum1_carry1": {
+        "position_metres": 0.15354707683027038,
+        "velocity_m_per_s": 1.9573082752395896e-06,
+        "relative_energy_drift": 1.143290987429547e-14,
+        "relative_angular_drift": 2.2611640251125803e-14,
+        "scaled_momentum_drift": 1.936568021894183e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.6782819000000018,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 8678,
+        "failed": false,
+        "finished": true
+      },
+      "64_sum0_carry0": {
+        "position_metres": 0.5762873809669004,
+        "velocity_m_per_s": 7.3492548323493856e-06,
+        "relative_energy_drift": 3.353653563126671e-14,
+        "relative_angular_drift": 3.660252438624435e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": false,
+        "wall_seconds": 0.8642710999997689,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 15686,
+        "failed": false,
+        "finished": true
+      },
+      "64_sum1_carry0": {
+        "position_metres": 0.0499095885494776,
+        "velocity_m_per_s": 6.365112842688538e-07,
+        "relative_energy_drift": 1.524387983239396e-14,
+        "relative_angular_drift": 3.2725109510697695e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": true,
+        "wall_seconds": 1.037545399999999,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 15626,
+        "failed": false,
+        "finished": true
+      },
+      "64_sum0_carry1": {
+        "position_metres": 0.04505657120329367,
+        "velocity_m_per_s": 5.746642944370724e-07,
+        "relative_energy_drift": 9.146327899436375e-15,
+        "relative_angular_drift": 2.930839679205841e-14,
+        "scaled_momentum_drift": 2.2186173871902479e-16,
+        "checks_passed": true,
+        "wall_seconds": 1.0362935999996807,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 15674,
+        "failed": false,
+        "finished": true
+      },
+      "64_sum1_carry1": {
+        "position_metres": 0.1899761145228773,
+        "velocity_m_per_s": 2.4226817088541906e-06,
+        "relative_energy_drift": 1.2195103865915168e-14,
+        "relative_angular_drift": 2.1693978536765762e-14,
+        "scaled_momentum_drift": 2.1651488700038473e-16,
+        "checks_passed": false,
+        "wall_seconds": 1.2467099000000417,
+        "worst_position_time_seconds": 63114866.86220014,
+        "packets": 112,
+        "rhs_calls": 15674,
+        "failed": false,
+        "finished": true
+      }
+    },
+    "holdout": {
+      "circular": {
+        "eccentricity_nominal": 0.0,
+        "initial_anomaly_nominal": 0.0,
+        "exact_signed_permutation": false,
+        "samples": 82,
+        "oracle_uncertainty": {
+          "position_metres": 5.352529930311914e-60,
+          "velocity_m_per_s": 1.0657057291780112e-66,
+          "wall_seconds": 8.203807999999754
+        },
+        "initial_state": [
+          [
+            2999816575.5479555,
+            -2000366848.9040887,
+            1000183424.4520444,
+            74.91908371017477,
+            -49.97302790339159,
+            24.973027903391593
+          ],
+          [
+            64072891545.85698,
+            120145783091.71396,
+            -60072891545.85698,
+            27016.837566970098,
+            -9030.612522323367,
+            9005.612522323367
+          ]
+        ],
+        "results": {
+          "original": {
+            "position_metres": 0.0052526087276455295,
+            "velocity_m_per_s": 1.0030580314373588e-09,
+            "relative_energy_drift": 9.527424895246335e-16,
+            "relative_angular_drift": 9.463732298751471e-15,
+            "scaled_momentum_drift": 2.2189872695083312e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.1793963000000076,
+            "worst_position_time_seconds": 63083309.428769045,
+            "packets": 131,
+            "rhs_calls": 3278,
+            "failed": false,
+            "finished": true
+          },
+          "sum": {
+            "position_metres": 0.007043397190045194,
+            "velocity_m_per_s": 1.4193507587323142e-09,
+            "relative_energy_drift": 2.096033476954194e-15,
+            "relative_angular_drift": 7.183746954971911e-15,
+            "scaled_momentum_drift": 2.2189872695083312e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.7463471000000936,
+            "worst_position_time_seconds": 63111711.11885703,
+            "packets": 131,
+            "rhs_calls": 11606,
+            "failed": false,
+            "finished": true
+          },
+          "carry": {
+            "position_metres": 0.0011215691714886464,
+            "velocity_m_per_s": 2.265971662317915e-10,
+            "relative_energy_drift": 7.621939916197069e-16,
+            "relative_angular_drift": 9.340395776759709e-15,
+            "scaled_momentum_drift": 2.2189872695083312e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.7489186999996491,
+            "worst_position_time_seconds": 63111711.11885703,
+            "packets": 131,
+            "rhs_calls": 11642,
+            "failed": false,
+            "finished": true
+          }
+        }
+      },
+      "moderate": {
+        "eccentricity_nominal": 0.5,
+        "initial_anomaly_nominal": 0.0,
+        "exact_signed_permutation": false,
+        "samples": 82,
+        "oracle_uncertainty": {
+          "position_metres": 3.8790768544882443e-60,
+          "velocity_m_per_s": 1.5154766259414557e-66,
+          "wall_seconds": 8.683781600000202
+        },
+        "initial_state": [
+          [
+            2999908287.7739778,
+            -2000183424.4520442,
+            1000091712.2260221,
+            74.85984887486275,
+            -49.95328295828758,
+            24.95328295828758
+          ],
+          [
+            33536445772.92849,
+            59072891545.85698,
+            -29536445772.92849,
+            46739.63151526007,
+            -15604.877171753358,
+            15579.877171753358
+          ]
+        ],
+        "results": {
+          "original": {
+            "position_metres": 0.029298241680527082,
+            "velocity_m_per_s": 1.3106443205595611e-08,
+            "relative_energy_drift": 2.5152401723450312e-14,
+            "relative_angular_drift": 1.3005871374854353e-14,
+            "scaled_momentum_drift": 2.1654596645793466e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.21501209999996718,
+            "worst_position_time_seconds": 31560589.17444318,
+            "packets": 131,
+            "rhs_calls": 4202,
+            "failed": false,
+            "finished": true
+          },
+          "sum": {
+            "position_metres": 0.025629085065754235,
+            "velocity_m_per_s": 1.172955412000207e-08,
+            "relative_energy_drift": 3.2393244643837524e-15,
+            "relative_angular_drift": 1.0090523442824999e-14,
+            "scaled_momentum_drift": 2.1654596645793466e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.7296670000000631,
+            "worst_position_time_seconds": 63111711.11885703,
+            "packets": 131,
+            "rhs_calls": 11678,
+            "failed": false,
+            "finished": true
+          },
+          "carry": {
+            "position_metres": 0.002413879590234452,
+            "velocity_m_per_s": 1.1151580313666447e-09,
+            "relative_energy_drift": 1.5243879832394128e-15,
+            "relative_angular_drift": 1.1317681755392615e-14,
+            "scaled_momentum_drift": 2.1654596645793466e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.7263358000000153,
+            "worst_position_time_seconds": 63083309.428769045,
+            "packets": 131,
+            "rhs_calls": 11678,
+            "failed": false,
+            "finished": true
+          }
+        }
+      },
+      "original": {
+        "eccentricity_nominal": 0.95,
+        "initial_anomaly_nominal": 0.0,
+        "exact_signed_permutation": false,
+        "samples": 82,
+        "oracle_uncertainty": {
+          "position_metres": 4.9289051024756555e-60,
+          "velocity_m_per_s": 1.6529519620146072e-65,
+          "wall_seconds": 8.377547099999902
+        },
+        "initial_state": [
+          [
+            2999990828.7773976,
+            -2000018342.4452045,
+            1000009171.2226022,
+            74.49467793200365,
+            -49.831559310667885,
+            24.831559310667885
+          ],
+          [
+            6053644577.292852,
+            4107289154.585704,
+            -2053644577.292852,
+            168326.72167890298,
+            -56133.90722630099,
+            56108.90722630099
+          ]
+        ],
+        "results": {
+          "original": {
+            "position_metres": 4.3436050311489245,
+            "velocity_m_per_s": 5.539090824986314e-05,
+            "relative_energy_drift": 1.2385652363820093e-13,
+            "relative_angular_drift": 3.2172663179459536e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": false,
+            "wall_seconds": 0.3811753999998473,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 7874,
+            "failed": false,
+            "finished": true
+          },
+          "sum": {
+            "position_metres": 0.354126302115813,
+            "velocity_m_per_s": 4.51620800794304e-06,
+            "relative_energy_drift": 1.829265579887275e-14,
+            "relative_angular_drift": 3.321286253135414e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": false,
+            "wall_seconds": 1.0495370999997249,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15626,
+            "failed": false,
+            "finished": true
+          },
+          "carry": {
+            "position_metres": 0.012633295971365227,
+            "velocity_m_per_s": 1.6119268599804135e-07,
+            "relative_energy_drift": 6.097551932957584e-15,
+            "relative_angular_drift": 2.6553905844985726e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.538547699999981,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15614,
+            "failed": false,
+            "finished": true
+          }
+        }
+      },
+      "permuted": {
+        "eccentricity_nominal": 0.95,
+        "initial_anomaly_nominal": 0.0,
+        "exact_signed_permutation": true,
+        "samples": 82,
+        "oracle_uncertainty": {
+          "position_metres": 4.9289051024756555e-60,
+          "velocity_m_per_s": 1.6529519620146072e-65,
+          "wall_seconds": 9.704123499999696
+        },
+        "initial_state": [
+          [
+            -2000018342.4452045,
+            -1000009171.2226022,
+            -2999990828.7773976,
+            -49.831559310667885,
+            -24.831559310667885,
+            -74.49467793200365
+          ],
+          [
+            4107289154.585704,
+            2053644577.292852,
+            -6053644577.292852,
+            -56133.90722630099,
+            -56108.90722630099,
+            -168326.72167890298
+          ]
+        ],
+        "results": {
+          "original": {
+            "position_metres": 4.407332605437756,
+            "velocity_m_per_s": 5.620386088961997e-05,
+            "relative_energy_drift": 1.3185956055020775e-13,
+            "relative_angular_drift": 3.0992447241384196e-14,
+            "scaled_momentum_drift": 2.1651488700038473e-16,
+            "checks_passed": false,
+            "wall_seconds": 0.3868062999999893,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 7922,
+            "failed": false,
+            "finished": true
+          },
+          "sum": {
+            "position_metres": 0.4614518030704317,
+            "velocity_m_per_s": 5.88500497042736e-06,
+            "relative_energy_drift": 2.7438983698309128e-14,
+            "relative_angular_drift": 2.8206074997682548e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": false,
+            "wall_seconds": 0.948249599999599,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15590,
+            "failed": false,
+            "finished": true
+          },
+          "carry": {
+            "position_metres": 0.003461959107155437,
+            "velocity_m_per_s": 4.421986400151849e-08,
+            "relative_energy_drift": 1.2195103865915168e-14,
+            "relative_angular_drift": 2.5266946298230298e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.970275700000002,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15602,
+            "failed": false,
+            "finished": true
+          }
+        }
+      },
+      "apocentre": {
+        "eccentricity_nominal": 0.95,
+        "initial_anomaly_nominal": 3.141592653589793,
+        "exact_signed_permutation": false,
+        "samples": 82,
+        "oracle_uncertainty": {
+          "position_metres": 4.7127429163389174e-60,
+          "velocity_m_per_s": 1.9600785300675213e-65,
+          "wall_seconds": 8.333939799999825
+        },
+        "initial_state": [
+          [
+            3000357677.6814866,
+            -1999284644.637027,
+            999642322.3185135,
+            75.01295697610247,
+            -50.00431899203416,
+            25.004318992034158
+          ],
+          [
+            -116092138514.42111,
+            -240184277028.84222,
+            120092138514.42111,
+            -4239.146709715464,
+            1388.0489032384876,
+            -1413.0489032384876
+          ]
+        ],
+        "results": {
+          "original": {
+            "position_metres": 0.1983698121829256,
+            "velocity_m_per_s": 2.5313733940065262e-06,
+            "relative_energy_drift": 9.527424895246334e-14,
+            "relative_angular_drift": 3.503144622090921e-14,
+            "scaled_momentum_drift": 1.4522850495706264e-16,
+            "checks_passed": false,
+            "wall_seconds": 0.40464190000011513,
+            "worst_position_time_seconds": 47336150.146650106,
+            "packets": 131,
+            "rhs_calls": 7826,
+            "failed": false,
+            "finished": true
+          },
+          "sum": {
+            "position_metres": 0.4225625425250686,
+            "velocity_m_per_s": 5.388882053731632e-06,
+            "relative_energy_drift": 3.887189357260504e-14,
+            "relative_angular_drift": 2.5944616067031022e-14,
+            "scaled_momentum_drift": 1.4522850495706264e-16,
+            "checks_passed": false,
+            "wall_seconds": 1.0252912000000833,
+            "worst_position_time_seconds": 47336150.146650106,
+            "packets": 131,
+            "rhs_calls": 15662,
+            "failed": false,
+            "finished": true
+          },
+          "carry": {
+            "position_metres": 0.08823283110752682,
+            "velocity_m_per_s": 1.1252365373827462e-06,
+            "relative_energy_drift": 9.908521891056187e-15,
+            "relative_angular_drift": 3.3228393815369257e-14,
+            "scaled_momentum_drift": 1.4522850495706264e-16,
+            "checks_passed": false,
+            "wall_seconds": 1.0897649999997157,
+            "worst_position_time_seconds": 47336150.146650106,
+            "packets": 131,
+            "rhs_calls": 15650,
+            "failed": false,
+            "finished": true
+          }
+        }
+      },
+      "eccentric_phase": {
+        "eccentricity_nominal": 0.97,
+        "initial_anomaly_nominal": 1.0,
+        "exact_signed_permutation": false,
+        "samples": 82,
+        "oracle_uncertainty": {
+          "position_metres": 4.231657617322696e-60,
+          "velocity_m_per_s": 1.6508792219719483e-66,
+          "wall_seconds": 8.137717600000087
+        },
+        "initial_state": [
+          [
+            2999995680.7714915,
+            -1999814653.774285,
+            999893470.838376,
+            75.04224038149455,
+            -49.863409194047584,
+            24.92798245109784
+          ],
+          [
+            4438127639.606041,
+            -63712764112.71518,
+            36469883441.49525,
+            -13989.331168065475,
+            -45529.189852379866,
+            24003.91832020771
+          ]
+        ],
+        "results": {
+          "original": {
+            "position_metres": 0.04169764177940862,
+            "velocity_m_per_s": 5.3957703696307736e-08,
+            "relative_energy_drift": 5.068590044271044e-14,
+            "relative_angular_drift": 3.600548614381823e-14,
+            "scaled_momentum_drift": 1.994397323146481e-16,
+            "checks_passed": true,
+            "wall_seconds": 0.42421809999996185,
+            "worst_position_time_seconds": 30295136.093856066,
+            "packets": 131,
+            "rhs_calls": 8450,
+            "failed": false,
+            "finished": true
+          },
+          "sum": {
+            "position_metres": 0.37673970737097723,
+            "velocity_m_per_s": 4.818178234913461e-07,
+            "relative_energy_drift": 4.477889700765772e-14,
+            "relative_angular_drift": 2.735838165886363e-14,
+            "scaled_momentum_drift": 1.4511372040203633e-16,
+            "checks_passed": false,
+            "wall_seconds": 1.022446299999956,
+            "worst_position_time_seconds": 61852569.52495614,
+            "packets": 131,
+            "rhs_calls": 16574,
+            "failed": false,
+            "finished": true
+          },
+          "carry": {
+            "position_metres": 0.07460964576565464,
+            "velocity_m_per_s": 9.540103665655548e-08,
+            "relative_energy_drift": 9.908521891056176e-15,
+            "relative_angular_drift": 2.754974543775878e-14,
+            "scaled_momentum_drift": 2.2166486937299636e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.0181373000000349,
+            "worst_position_time_seconds": 61852569.52495614,
+            "packets": 131,
+            "rhs_calls": 16574,
+            "failed": false,
+            "finished": true
+          }
+        }
+      }
+    },
+    "force_rounding": {
+      "circular": {
+        "initial_relative_encoding_effect": {
+          "position_metres": 0.00019641651788329184,
+          "velocity_m_per_s": 3.836326157877224e-11
+        },
+        "results": {
+          "native": {
+            "position_metres": 0.0011215691714886464,
+            "velocity_m_per_s": 2.265971662317915e-10,
+            "relative_energy_drift": 7.621939916197069e-16,
+            "relative_angular_drift": 9.340395776759709e-15,
+            "scaled_momentum_drift": 2.2189872695083312e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.4842971999996735,
+            "worst_position_time_seconds": 63111711.11885703,
+            "packets": 131,
+            "rhs_calls": 11642,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.0009268188654630575,
+              "velocity_m_per_s": 1.8848626042753057e-10
+            }
+          },
+          "decimal_force": {
+            "position_metres": 0.0010061985956008942,
+            "velocity_m_per_s": 1.9220713955583266e-10,
+            "relative_energy_drift": 7.621939916197069e-16,
+            "relative_angular_drift": 9.454377561825324e-15,
+            "scaled_momentum_drift": 2.2189872695083312e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.4150467000004028,
+            "worst_position_time_seconds": 63111711.11885703,
+            "packets": 131,
+            "rhs_calls": 11630,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.0008100698457060011,
+              "velocity_m_per_s": 1.539536858461943e-10
+            }
+          }
+        }
+      },
+      "moderate": {
+        "initial_relative_encoding_effect": {
+          "position_metres": 8.736643446210696e-05,
+          "velocity_m_per_s": 3.9471549614351807e-11
+        },
+        "results": {
+          "native": {
+            "position_metres": 0.002413879590234452,
+            "velocity_m_per_s": 1.1151580313666447e-09,
+            "relative_energy_drift": 1.5243879832394128e-15,
+            "relative_angular_drift": 1.1317681755392615e-14,
+            "scaled_momentum_drift": 2.1654596645793466e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.207963800000016,
+            "worst_position_time_seconds": 63083309.428769045,
+            "packets": 131,
+            "rhs_calls": 11678,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.0025009381815912597,
+              "velocity_m_per_s": 1.1544775162080114e-09
+            }
+          },
+          "decimal_force": {
+            "position_metres": 0.0008999623690380025,
+            "velocity_m_per_s": 4.007865389978612e-10,
+            "relative_energy_drift": 7.621939916197064e-16,
+            "relative_angular_drift": 1.0595393418124521e-14,
+            "scaled_momentum_drift": 2.1654596645793466e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.0798469999999725,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 11690,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.0008126268102600626,
+              "velocity_m_per_s": 3.6133521182769385e-10
+            }
+          }
+        }
+      },
+      "original": {
+        "initial_relative_encoding_effect": {
+          "position_metres": 0.03927359666991584,
+          "velocity_m_per_s": 5.00847332096504e-07
+        },
+        "results": {
+          "native": {
+            "position_metres": 0.012633295971365227,
+            "velocity_m_per_s": 1.6119268599804135e-07,
+            "relative_energy_drift": 6.097551932957584e-15,
+            "relative_angular_drift": 2.6553905844985726e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.156398299999637,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15614,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.026640301327117647,
+              "velocity_m_per_s": 3.396546854813067e-07
+            }
+          },
+          "decimal_force": {
+            "position_metres": 0.07098610569504336,
+            "velocity_m_per_s": 9.052794118314384e-07,
+            "relative_energy_drift": 9.146327899436375e-15,
+            "relative_angular_drift": 2.7157856777493715e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.1858589000003121,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15530,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.03171251006350981,
+              "velocity_m_per_s": 4.044320932436665e-07
+            }
+          }
+        }
+      },
+      "permuted": {
+        "initial_relative_encoding_effect": {
+          "position_metres": 0.03927359666991584,
+          "velocity_m_per_s": 5.00847332096504e-07
+        },
+        "results": {
+          "native": {
+            "position_metres": 0.003461959107155437,
+            "velocity_m_per_s": 4.421986400151849e-08,
+            "relative_energy_drift": 1.2195103865915168e-14,
+            "relative_angular_drift": 2.5266946298230298e-14,
+            "scaled_momentum_drift": 2.2186173871902479e-16,
+            "checks_passed": true,
+            "wall_seconds": 2.1312451999997393,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15602,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.0427355555999289,
+              "velocity_m_per_s": 5.450671751479157e-07
+            }
+          },
+          "decimal_force": {
+            "position_metres": 0.14248037696866714,
+            "velocity_m_per_s": 1.816998058184466e-06,
+            "relative_energy_drift": 1.2195103865915168e-14,
+            "relative_angular_drift": 2.6607802273995113e-14,
+            "scaled_momentum_drift": 2.1651488700038473e-16,
+            "checks_passed": false,
+            "wall_seconds": 1.7014675999998872,
+            "worst_position_time_seconds": 63114866.86220014,
+            "packets": 131,
+            "rhs_calls": 15518,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.10320678035327531,
+              "velocity_m_per_s": 1.3161507271999964e-06
+            }
+          }
+        }
+      },
+      "apocentre": {
+        "initial_relative_encoding_effect": {
+          "position_metres": 9.950562164989592e-05,
+          "velocity_m_per_s": 1.268821793917447e-09
+        },
+        "results": {
+          "native": {
+            "position_metres": 0.08823283110752682,
+            "velocity_m_per_s": 1.1252365373827462e-06,
+            "relative_energy_drift": 9.908521891056187e-15,
+            "relative_angular_drift": 3.3228393815369257e-14,
+            "scaled_momentum_drift": 1.4522850495706264e-16,
+            "checks_passed": false,
+            "wall_seconds": 1.8353535999999622,
+            "worst_position_time_seconds": 47336150.146650106,
+            "packets": 131,
+            "rhs_calls": 15650,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.08833230693437634,
+              "velocity_m_per_s": 1.1265052619825305e-06
+            }
+          },
+          "decimal_force": {
+            "position_metres": 0.047476833660560165,
+            "velocity_m_per_s": 6.054528081588377e-07,
+            "relative_energy_drift": 8.384133907816774e-15,
+            "relative_angular_drift": 2.3907124839939238e-14,
+            "scaled_momentum_drift": 1.4522850495706264e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.9820561999999882,
+            "worst_position_time_seconds": 47336150.146650106,
+            "packets": 131,
+            "rhs_calls": 15590,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.04737735771135564,
+              "velocity_m_per_s": 6.041840821399905e-07
+            }
+          }
+        }
+      },
+      "eccentric_phase": {
+        "initial_relative_encoding_effect": {
+          "position_metres": 0.0012502886216070248,
+          "velocity_m_per_s": 1.5996770042262292e-09
+        },
+        "results": {
+          "native": {
+            "position_metres": 0.07460964576565464,
+            "velocity_m_per_s": 9.540103665655548e-08,
+            "relative_energy_drift": 9.908521891056176e-15,
+            "relative_angular_drift": 2.754974543775878e-14,
+            "scaled_momentum_drift": 2.2166486937299636e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.9575285999999323,
+            "worst_position_time_seconds": 61852569.52495614,
+            "packets": 131,
+            "rhs_calls": 16574,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.0758599298655931,
+              "velocity_m_per_s": 9.700070659829704e-08
+            }
+          },
+          "decimal_force": {
+            "position_metres": 0.04206207178557997,
+            "velocity_m_per_s": 5.3803878260267527e-08,
+            "relative_energy_drift": 1.2195103865915293e-14,
+            "relative_angular_drift": 4.108230296881351e-14,
+            "scaled_momentum_drift": 2.2166486937299636e-16,
+            "checks_passed": true,
+            "wall_seconds": 1.664528600000267,
+            "worst_position_time_seconds": 61852569.52495614,
+            "packets": 131,
+            "rhs_calls": 16550,
+            "failed": false,
+            "finished": true,
+            "errors_against_encoded_initial_model": {
+              "position_metres": 0.0408117853892802,
+              "velocity_m_per_s": 5.220420488897403e-08
+            }
+          }
+        }
+      }
+    }
+  },
+  "source_unchanged_during_each_run": true,
+  "holdout_passed_cases": {
+    "original": 3,
+    "sum": 2,
+    "carry": 5
+  },
+  "decimal_force_passed_cases": 5,
+  "controls_bitexact": true,
+  "failed_initial_fixture": {
+    "reason": "reconstructed velocity before signed permutation changed three float64 components",
+    "preserved_json_filename": "holdout160.json",
+    "preserved_json_sha256": "061f83304bc2b52626b113e323c7e5ccbf46c795f98ae79967ce058e724a34f9",
+    "preserved_source_sha256": "37e9754d655308c88eb266d376228a6e1452209eacbffee2bfc5222b87159188",
+    "remaining_five_cases_bitexact_after_fix": true
+  },
+  "limitations": [
+    "Two-body Newtonian model and fixed sample grids only",
+    "No universal sandbox or additional Solar/JPL accuracy qualification",
+    "Single observations of elapsed time are not paired benchmarks",
+    "Decimal70/100 agreement alone does not prove oracle correctness; exact circle/elliptic phases, reversal and invariants are also tested",
+    "Initial float64 representation, stage rounding, force arithmetic and adaptive step path interact; no exact additive decomposition claimed",
+    "Offline global rk_step patch is single-threaded research code and must not be used as an application backend",
+    "No new portable archive was built; previous verified delivery remains unchanged"
+  ],
+  "next_step": "Independent existing IAS15 implementation comparison on these fixed conditions before any runtime integration change",
+  "research_sources": [
+    {
+      "title": "Rein & Spiegel, IAS15",
+      "primary_url": "https://arxiv.org/html/1409.4779",
+      "doi": "10.1093/mnras/stu2164",
+      "consensus_access_verified": true,
+      "implemented": false
+    }
+  ],
+  "original_receipts_before_metadata_fix": {
+    "matched": {
+      "json_filename": "matched-initial.json",
+      "json_sha256": "dc8bf5a3e1f346b5bb43ee693e940d9a1eac32d71b4f3ef898fe6c7c533dccaa",
+      "npz_filename": "matched-initial.npz",
+      "npz_sha256": "d2a26c431c7169de2ed8fbc736083fe33de95c3ed50c4276bf5f9688e322df37"
+    },
+    "uniform_steps": {
+      "json_filename": "steps157.json",
+      "json_sha256": "be88f8e347974582ad0407c9c71b7ef087cedabb520437c10ff1660b48347e6a",
+      "npz_filename": "steps157.npz",
+      "npz_sha256": "4407b9bc1611187b8b34984637338d8f55532ac55ff56af318137dbdd4540fca"
+    },
+    "dynamic_steps": {
+      "json_filename": "dynamic158.json",
+      "json_sha256": "c305531c2bbd6472057766fd3bd18447743ef2dbcdc7e1c97fa177dda67926db",
+      "npz_filename": "dynamic158.npz",
+      "npz_sha256": "eae139dae323a73c2c68e9d8aae7f12e232243b5c8508819fc1708c8e0d8228e"
+    },
+    "roundoff": {
+      "json_filename": "roundoff159.json",
+      "json_sha256": "5ee178c33211b93075a0af716b8c8ce638d9ee65bcb2cff754b0a680146d9d00",
+      "npz_filename": "roundoff159.npz",
+      "npz_sha256": "840cd58ee87fa7198dd484b4407e22b159fc8ef46708c05d43ac17ced7904c01"
+    },
+    "holdout": {
+      "json_filename": "holdout160-corrected.json",
+      "json_sha256": "7afa421787351fdf49826854d1cb8e7ec0a21b68e43b7d67f3ab1448d3ddbd01",
+      "npz_filename": "holdout160-corrected.npz",
+      "npz_sha256": "efe87582ead3daae5e12b475700013e72bd78e43d8e8e4881f795e822de9b76a"
+    },
+    "force_rounding": {
+      "json_filename": "force161.json",
+      "json_sha256": "0400edcafc8feecbc21564d40195e672a71865b1d528f0d37718781097081fc7",
+      "npz_filename": "force161.npz",
+      "npz_sha256": "9697c788ba8b299730a4f72d33da25a4320160000956d0ec387747e5a22132a8"
+    }
+  },
+  "receipts": {
+    "matched": {
+      "json_filename": "matched.json",
+      "json_sha256": "0b6ab941382399095e919c3bb55ca567e612845c71f1f10d3da76de1c5657abd",
+      "npz_filename": "matched.npz",
+      "npz_sha256": "d2a26c431c7169de2ed8fbc736083fe33de95c3ed50c4276bf5f9688e322df37"
+    },
+    "uniform_steps": {
+      "json_filename": "steps.json",
+      "json_sha256": "94821938d9de8e0ba4266e35bd14a3bdb538a2c7d92fe1057c6d6d66365fd946",
+      "npz_filename": "steps.npz",
+      "npz_sha256": "4407b9bc1611187b8b34984637338d8f55532ac55ff56af318137dbdd4540fca"
+    },
+    "dynamic_steps": {
+      "json_filename": "dynamic.json",
+      "json_sha256": "3eef284410846d9db2b6e8219550181fe427a6c7c0d0cc375de22ab7dfe4603b",
+      "npz_filename": "dynamic.npz",
+      "npz_sha256": "eae139dae323a73c2c68e9d8aae7f12e232243b5c8508819fc1708c8e0d8228e"
+    },
+    "roundoff": {
+      "json_filename": "roundoff-final.json",
+      "json_sha256": "a4cd1af8620a66a5e01e6070ddb620bfafb227b93d73927e821f7b695f17d848",
+      "npz_filename": "roundoff-final.npz",
+      "npz_sha256": "840cd58ee87fa7198dd484b4407e22b159fc8ef46708c05d43ac17ced7904c01"
+    },
+    "holdout": {
+      "json_filename": "holdout-final.json",
+      "json_sha256": "f32c9930b3b66ff115a5415446f15dc349c3e6db5d23d57c9a80d6ea5d976b63",
+      "npz_filename": "holdout-final.npz",
+      "npz_sha256": "efe87582ead3daae5e12b475700013e72bd78e43d8e8e4881f795e822de9b76a"
+    },
+    "force_rounding": {
+      "json_filename": "force-final.json",
+      "json_sha256": "9ec958397b226fbace1896554ff093b5cf8a66f4128909977e98981d259ebb9f",
+      "npz_filename": "force-final.npz",
+      "npz_sha256": "9697c788ba8b299730a4f72d33da25a4320160000956d0ec387747e5a22132a8"
+    }
+  },
+  "complete_pipeline_reproduced": true,
+  "all_numerical_arrays_bitexact_to_first_runs": true,
+  "generated_cache_sources_and_npz_bound": true,
+  "tests": {
+    "new_cases": 23,
+    "related_cases_passed": 147,
+    "related_seconds": 23.4,
+    "full_previous_suite_not_repeated": true,
+    "reason": "No runtime, force, integrator coefficients, data or packaging source changes"
+  },
+  "initial_tight_result_still_failed": true,
+  "integrity": {
+    "baseline_files": 644,
+    "baseline_unchanged": 639,
+    "changed_local_documents": [
+      "docs/changes.md",
+      "docs/development-plan.md",
+      "docs/project-context.md",
+      "docs/session-handoff-archive.md",
+      "docs/session-handoff.md"
+    ],
+    "missing": [],
+    "old_scientific_sources_and_cache_exact": true,
+    "verified_portable155_and_native_binary_exact": true,
+    "final_scientific_receipts_verified": 6,
+    "archive_prefix_and_previous_handoff_exact": true,
+    "handoff_lines": 76,
+    "runtime_modified": false,
+    "new_tests": 23,
+    "related_tests_passed": 147,
+    "general_release_passed": false
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "changes": [
+    96,
+    97,
+    98
+  ],
+  "model": "constant-energy-density static Komar sphere and linear Hartle current bookkeeping",
+  "compactnesses": [
+    0.008,
+    0.002,
+    0.0005,
+    0.02,
+    0.1,
+    0.25,
+    0.3
+  ],
+  "order_cases": [
+    0,
+    1,
+    2
+  ],
+  "samples": 513,
+  "quadrature_orders": [
+    64,
+    128
+  ],
+  "production_rtol": 1e-11,
+  "reference_rtols": [
+    2e-09,
+    2e-12
+  ],
+  "tighter_rtol": 2e-13,
+  "production_max_radial_step": 0.001953125,
+  "reference_max_radial_step": 0.03125,
+  "tighter_max_radial_step": 0.00390625,
+  "atol_over_rtol": 0.02,
+  "maximum": {
+    "komar_metric_charge_absolute": 1e-11,
+    "komar_integral_relative": 1e-11,
+    "komar_integral_levels_relative": 1e-11,
+    "spin_reference_inertia_absolute": 1e-08,
+    "spin_reference_profile_absolute": 1e-08,
+    "spin_reference_levels_absolute": 1e-08,
+    "spin_reference_tighter_absolute": 1e-08,
+    "matter_integral_inertia_absolute": 1e-09,
+    "matter_integral_levels_absolute": 1e-09,
+    "independent_matter_integral_absolute": 1e-09,
+    "telescoping_integrand_absolute": 1e-11,
+    "term_first_PN_slope_Richardson_absolute": 0.0004,
+    "term_first_PN_c4_ratio_deviation": 1.5,
+    "paired_omission_first_PN_slope_Richardson_absolute": 0.0001,
+    "paired_omission_second_coefficient_absolute": 0.002,
+    "paired_omission_difference_coefficient_absolute": 0.002,
+    "correct_second_coefficient_absolute": 0.001,
+    "no_pressure_komar_first_slope_absolute": 0.001
+  },
+  "minimum": {
+    "wrong_no_pressure_komar_relative": 0.01,
+    "wrong_no_lapse_komar_relative": 0.01,
+    "wrong_no_volume_komar_relative": 0.001,
+    "wrong_no_pressure_spin_absolute": 0.001,
+    "wrong_no_lapse_spin_absolute": 0.01,
+    "wrong_no_profile_spin_absolute": 0.01,
+    "wrong_paired_omission_spin_absolute": 0.0001,
+    "wrong_paired_second_coefficient_gap": 0.01
+  },
+  "required_true": [
+    "sources_preserved",
+    "arrays_reverified",
+    "raw_initial_preserved",
+    "grid_preserved",
+    "physical_claims_false"
+  ],
+  "primary_sha256": {
+    ".tools/rotation92-95/isotropic-exterior.html": "ced46bea74d51a4668a5113dc7856a9fb6d8f4852b508f71082ea560e1a6a2f8",
+    ".tools/rotation92-95/linear-spin-metric.html": "c0d428d0dbb694cef30c208e067f1b6e830fe4cabd3912a38e72e3af9abdd816",
+    ".tools/rotation86-89/hartle1967.pdf": "ed263946e9bc13842399b5c9e9c2eae31823e7323bc81b456fb5174697cefc35",
+    ".tools/rotation92-95/source-review.json": "8ad7c931bcec2134fd866c1692da77da1b6f500dd0fc88d5280dbb664c820a1b",
+    ".tools/rotation96-98/source-review.json": "194c0773d463c4885e170bd33419ded8e0ef22e359e4e88dd6bebd80fe6af43e",
+    ".tools/rotation96-98/komar-primary.html": "42280b73db161eaa46f2930ca45471b2fb8aac3b26ddf93f34fa08d98a79147b"
+  },
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_certified": false,
+  "invariant_field_spin_split_certified": false,
+  "PN_tensor_certified": false,
+  "finite_rotation_energy_implemented": false,
+  "gravitational_mass_kg": 3.0,
+  "areal_radius_m": 2.0,
+  "gravitational_constant": 0.4
+}

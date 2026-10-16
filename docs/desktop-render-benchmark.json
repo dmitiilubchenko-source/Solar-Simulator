@@ -1,0 +1,50 @@
+{
+  "kind": "synthetic-render-benchmark-not-orbital-accuracy",
+  "samples": 3,
+  "figure_pixels": [
+    1000,
+    600
+  ],
+  "results": [
+    {
+      "bodies": 2,
+      "frames": 100,
+      "before_build_s": 0.009001399999760906,
+      "after_build_s": 0.009896100000332808,
+      "before_paint_s": 0.06822660000034375,
+      "after_paint_s": 0.0709287999998196,
+      "same_fixture": true,
+      "build_speedup": 0.9095906467657144
+    },
+    {
+      "bodies": 2,
+      "frames": 1500,
+      "before_build_s": 0.009827399999267072,
+      "after_build_s": 0.011413599999286816,
+      "before_paint_s": 0.06582329999946523,
+      "after_paint_s": 0.06918129999939993,
+      "same_fixture": true,
+      "build_speedup": 0.8610254433203496
+    },
+    {
+      "bodies": 354,
+      "frames": 100,
+      "before_build_s": 0.25582570000005944,
+      "after_build_s": 0.12552859999959765,
+      "before_paint_s": 0.14533060000030673,
+      "after_paint_s": 0.10799910000059754,
+      "same_fixture": true,
+      "build_speedup": 2.0379873590630297
+    },
+    {
+      "bodies": 354,
+      "frames": 1500,
+      "before_build_s": 0.4633594000006269,
+      "after_build_s": 0.23042200000054436,
+      "before_paint_s": 0.1545657000006031,
+      "after_paint_s": 0.13873590000002878,
+      "same_fixture": true,
+      "build_speedup": 2.010916492346791
+    }
+  ]
+}

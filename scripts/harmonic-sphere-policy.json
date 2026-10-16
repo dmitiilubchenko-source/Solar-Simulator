@@ -1,0 +1,84 @@
+{
+  "changes": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "model": "globally regular static energy sphere, explicitly selected smooth harmonic chart",
+  "compactnesses": [
+    0.008,
+    0.002,
+    0.0005,
+    0.02,
+    0.1,
+    0.25,
+    0.3,
+    0.0001
+  ],
+  "order_cases": [
+    0,
+    1,
+    2
+  ],
+  "samples": 513,
+  "production_rtol": 1e-11,
+  "reference_rtols": [
+    2e-09,
+    2e-12
+  ],
+  "tighter_rtol": 2e-13,
+  "production_max_radial_step": 0.001953125,
+  "reference_max_radial_step": 0.03125,
+  "tighter_max_radial_step": 0.00390625,
+  "atol_over_rtol": 0.02,
+  "maximum": {
+    "basis_independent_scaled": 1e-11,
+    "basis_levels_scaled": 1e-11,
+    "basis_vacuum_operator_scaled": 1e-11,
+    "reference_radius_profile": 1e-08,
+    "reference_derivative_profile": 1e-08,
+    "reference_levels_profile": 1e-08,
+    "reference_tighter_profile": 1e-08,
+    "reference_matching_scale": 1e-08,
+    "reference_residual_gauge": 1e-08,
+    "current_volume_reference_relative": 1e-08,
+    "current_volume_pullback_absolute": 1e-11,
+    "independent_self_adjoint_residual_scaled": 1e-08,
+    "surface_value_derivative_matching": 1e-11,
+    "surface_metric_matching": 1e-11,
+    "surface_metric_first_derivative_matching": 1e-10,
+    "matching_condition": 100000000.0,
+    "regular_origin_isotropy": 1e-11,
+    "first_order_c4_ratio_deviation": 1.0,
+    "second_order_c6_ratio_deviation": 2.0,
+    "residual_gauge_second_coefficient": 0.002
+  },
+  "minimum": {
+    "sampled_minimum_Jacobian": 0.05,
+    "wrong_zero_gauge_derivative_jump": 0.0001,
+    "wrong_isotropic_harmonic_operator": 0.0001,
+    "wrong_areal_harmonic_operator": 0.001,
+    "wrong_growing_mode_origin": 0.01
+  },
+  "required_true": [
+    "sources_preserved",
+    "arrays_reverified",
+    "raw_initial_preserved",
+    "grid_preserved",
+    "physical_claims_false"
+  ],
+  "primary_sha256": {
+    ".tools/rotation99/harmonic-primary.html": "ebf3e7551aadd6f467e95da6db7d8c957278a425c19589543b6d4aac7b8feb57",
+    ".tools/rotation99/junction-comment.html": "fca0b32023b52cef3913b6e3b7807cb57b28e4b2e8d60a29eeb727efddd3f408",
+    ".tools/rotation99/source-review.json": "fb9143aed8b770c5cfee24ff0dc69baae65b04986d1e6093ebcdad5ce24a0889",
+    ".tools/rotation99/polynomial-check.json": "eca3b4b71f5746786ce5b91446c7c2a3d07da145d34578286fc8b8034f16fcec",
+    ".tools/rotation99/check_polynomials.py": "eea61e3b4cff97f5e553e2c7239f5c981bc6ff653866dcefa01ae5c7ae033272"
+  },
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_certified": false,
+  "ADM_SSC_mapping_certified": false,
+  "PN_tensor_certified": false,
+  "runtime_changed": false
+}

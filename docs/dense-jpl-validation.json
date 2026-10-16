@@ -1,0 +1,455 @@
+{
+  "protocol": "docs/qualification-extension-protocol.md",
+  "units": "SI",
+  "origin": {
+    "epoch_jd_tdb": 2461321.5,
+    "frame": "Ecliptic J2000",
+    "center": "Solar System Barycenter",
+    "ephemeris": "DE441",
+    "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+  },
+  "duration_seconds": 31557600.0,
+  "samples": 125,
+  "epochs_jd_tdb": [
+    2461321.5,
+    2461322.0,
+    2461322.5,
+    2461323.0,
+    2461323.5,
+    2461324.0,
+    2461324.5,
+    2461325.0,
+    2461325.5,
+    2461326.0,
+    2461326.5,
+    2461327.0,
+    2461327.5,
+    2461328.0,
+    2461328.5,
+    2461329.0,
+    2461329.5,
+    2461330.0,
+    2461330.5,
+    2461331.0,
+    2461331.5,
+    2461332.0,
+    2461332.5,
+    2461333.0,
+    2461333.5,
+    2461334.0,
+    2461334.5,
+    2461335.0,
+    2461335.5,
+    2461336.0,
+    2461336.5,
+    2461337.0,
+    2461337.5,
+    2461338.0,
+    2461338.5,
+    2461339.0,
+    2461339.5,
+    2461340.0,
+    2461340.5,
+    2461341.0,
+    2461341.5,
+    2461342.0,
+    2461342.5,
+    2461343.0,
+    2461343.5,
+    2461344.0,
+    2461344.5,
+    2461345.0,
+    2461345.5,
+    2461346.0,
+    2461346.5,
+    2461347.0,
+    2461347.5,
+    2461348.0,
+    2461348.5,
+    2461349.0,
+    2461349.5,
+    2461350.0,
+    2461350.5,
+    2461351.0,
+    2461351.5,
+    2461351.9375,
+    2461352.0,
+    2461352.5,
+    2461353.0,
+    2461353.5,
+    2461356.5,
+    2461363.5,
+    2461370.5,
+    2461377.5,
+    2461382.375,
+    2461384.5,
+    2461391.5,
+    2461398.5,
+    2461405.5,
+    2461412.5,
+    2461412.8125,
+    2461419.5,
+    2461426.5,
+    2461433.5,
+    2461440.5,
+    2461443.25,
+    2461447.5,
+    2461454.5,
+    2461461.5,
+    2461468.5,
+    2461473.6875,
+    2461475.5,
+    2461482.5,
+    2461489.5,
+    2461496.5,
+    2461503.5,
+    2461504.125,
+    2461510.5,
+    2461517.5,
+    2461524.5,
+    2461531.5,
+    2461534.5625,
+    2461538.5,
+    2461545.5,
+    2461552.5,
+    2461559.5,
+    2461565.0,
+    2461566.5,
+    2461573.5,
+    2461580.5,
+    2461587.5,
+    2461594.5,
+    2461595.4375,
+    2461601.5,
+    2461608.5,
+    2461615.5,
+    2461622.5,
+    2461625.875,
+    2461629.5,
+    2461636.5,
+    2461643.5,
+    2461650.5,
+    2461656.3125,
+    2461657.5,
+    2461664.5,
+    2461671.5,
+    2461678.5,
+    2461685.5,
+    2461686.75
+  ],
+  "source_sha256": {
+    "scripts/assess_dense_jpl.py": "601558a9bc71c22c7b51f533002d91eaa41ff85c2454c011f08f0f0bdb60ebb7",
+    "scripts/fetch_dense_jpl.py": "e019283878b98001cbcbab0473e786d5f711344494f3120ec9bdea48e818f2ac"
+  },
+  "input_sha256": {
+    "docs/qualification-grid-reference.json": "f565c3d12394c6def8cc594ff614415ba8f05495bd89a1ac4b9dbc81c4609cbe",
+    "docs/qualification-grid-validation.json": "ad95ca2e1012fc7778232430b993133ead4d2e62548a38275559af239660d0b0",
+    "docs/strict-profile-validation.json": "bcd4fb6ae800ee88962d3a988a9e8944e2a692dc7a5a0a80cfffae865e9db172",
+    ".tools/qualification138/production139.npz": "cf81c9b1a6d85b5fe35711f4b2ed8a4b185346443dab74f4db9d44514dd96c99"
+  },
+  "standard_settings": {
+    "dt": 3600,
+    "backend": "rust",
+    "contact_mode": "stop",
+    "restitution": 1.0,
+    "integrator": "dop853",
+    "rtol": 1e-13,
+    "position_atol": 0.001,
+    "velocity_atol": 1e-09,
+    "physics": "eih-1pn",
+    "figures": [
+      {
+        "body": "Sun",
+        "coefficient": 2.1961391516529825e-07,
+        "reference_radius": 696000000.0,
+        "axis": [
+          0.12235349347232782,
+          -0.0310378702450671,
+          0.9920011457885356
+        ],
+        "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+      },
+      {
+        "body": "Earth",
+        "coefficient": 0.00108262539,
+        "reference_radius": 6378136.6,
+        "axis": [
+          0.0026020959422886785,
+          0.39776866017225926,
+          0.9174820554547499
+        ],
+        "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+      }
+    ],
+    "relative_pair": [
+      "Earth",
+      "Moon"
+    ],
+    "error_control": "per-body"
+  },
+  "strict_settings": {
+    "dt": 3600,
+    "backend": "rust",
+    "contact_mode": "stop",
+    "restitution": 1.0,
+    "integrator": "dop853",
+    "rtol": 3e-14,
+    "position_atol": 0.001,
+    "velocity_atol": 1e-09,
+    "physics": "eih-1pn",
+    "figures": [
+      {
+        "body": "Sun",
+        "coefficient": 2.1961391516529825e-07,
+        "reference_radius": 696000000.0,
+        "axis": [
+          0.12235349347232782,
+          -0.0310378702450671,
+          0.9920011457885356
+        ],
+        "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+      },
+      {
+        "body": "Earth",
+        "coefficient": 0.00108262539,
+        "reference_radius": 6378136.6,
+        "axis": [
+          0.0026020959422886785,
+          0.39776866017225926,
+          0.9174820554547499
+        ],
+        "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+      }
+    ],
+    "relative_pair": [
+      "Earth",
+      "Moon"
+    ],
+    "error_control": "per-body"
+  },
+  "results": {
+    "python": {
+      "jpl_residuals": {
+        "Sun": {
+          "position_metres": 218.8048217714798,
+          "velocity_m_per_s": 1.3782271755596885e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Mercury": {
+          "position_metres": 207.70130707366334,
+          "velocity_m_per_s": 2.675377497004513e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Venus": {
+          "position_metres": 257.4604365364406,
+          "velocity_m_per_s": 2.329878307318318e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Earth": {
+          "position_metres": 174.5483034470357,
+          "velocity_m_per_s": 4.1423990143708316e-05,
+          "worst_epoch_jd_tdb": 2461573.5,
+          "position_goal_passed": true
+        },
+        "Moon": {
+          "position_metres": 747.8048185804354,
+          "velocity_m_per_s": 0.001966460855060257,
+          "worst_epoch_jd_tdb": 2461671.5,
+          "position_goal_passed": true
+        },
+        "Mars": {
+          "position_metres": 571.3407838464044,
+          "velocity_m_per_s": 4.3724191910728794e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Jupiter": {
+          "position_metres": 273.2673979640275,
+          "velocity_m_per_s": 1.8870242164141496e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Saturn": {
+          "position_metres": 31.07762373154914,
+          "velocity_m_per_s": 1.911260602576519e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Uranus": {
+          "position_metres": 17.172861230361445,
+          "velocity_m_per_s": 1.0823612392981678e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Neptune": {
+          "position_metres": 64.72591066824349,
+          "velocity_m_per_s": 4.11352126908119e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        }
+      },
+      "moon_relative_jpl": {
+        "position_metres": 718.8720071528617,
+        "velocity_m_per_s": 0.001977737025046704,
+        "position_goal_passed": true
+      },
+      "physical_goals_passed": true
+    },
+    "rust": {
+      "jpl_residuals": {
+        "Sun": {
+          "position_metres": 218.80481627448157,
+          "velocity_m_per_s": 1.3782271779070338e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Mercury": {
+          "position_metres": 207.7120234106587,
+          "velocity_m_per_s": 2.6742814683240474e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Venus": {
+          "position_metres": 257.4609686772718,
+          "velocity_m_per_s": 2.3298941181801853e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Earth": {
+          "position_metres": 174.5501856309439,
+          "velocity_m_per_s": 4.142101771031377e-05,
+          "worst_epoch_jd_tdb": 2461573.5,
+          "position_goal_passed": true
+        },
+        "Moon": {
+          "position_metres": 747.6991104581004,
+          "velocity_m_per_s": 0.0019661552602323,
+          "worst_epoch_jd_tdb": 2461671.5,
+          "position_goal_passed": true
+        },
+        "Mars": {
+          "position_metres": 571.3407362084731,
+          "velocity_m_per_s": 4.372392553162853e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Jupiter": {
+          "position_metres": 273.2672796675662,
+          "velocity_m_per_s": 1.8870237389954923e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Saturn": {
+          "position_metres": 31.075154507318086,
+          "velocity_m_per_s": 1.911268079567917e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Uranus": {
+          "position_metres": 17.181503906345526,
+          "velocity_m_per_s": 1.0823852172255901e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Neptune": {
+          "position_metres": 64.72581016400996,
+          "velocity_m_per_s": 4.113517003481197e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        }
+      },
+      "moon_relative_jpl": {
+        "position_metres": 718.7588270317757,
+        "velocity_m_per_s": 0.001977426004895103,
+        "position_goal_passed": true
+      },
+      "physical_goals_passed": true
+    },
+    "rust_tighter": {
+      "jpl_residuals": {
+        "Sun": {
+          "position_metres": 218.80481648173037,
+          "velocity_m_per_s": 1.3782271765462503e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Mercury": {
+          "position_metres": 207.69144051820356,
+          "velocity_m_per_s": 2.6764437360386104e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Venus": {
+          "position_metres": 257.4676708106836,
+          "velocity_m_per_s": 2.3301007064953958e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Earth": {
+          "position_metres": 174.54953987985328,
+          "velocity_m_per_s": 4.14231002297057e-05,
+          "worst_epoch_jd_tdb": 2461573.5,
+          "position_goal_passed": true
+        },
+        "Moon": {
+          "position_metres": 747.7552833229641,
+          "velocity_m_per_s": 0.0019663389696992005,
+          "worst_epoch_jd_tdb": 2461671.5,
+          "position_goal_passed": true
+        },
+        "Mars": {
+          "position_metres": 571.3407868132052,
+          "velocity_m_per_s": 4.3723911297535495e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Jupiter": {
+          "position_metres": 273.266259585045,
+          "velocity_m_per_s": 1.8870241624998703e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Saturn": {
+          "position_metres": 31.079502796184933,
+          "velocity_m_per_s": 1.9113130591174613e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Uranus": {
+          "position_metres": 17.16537133926731,
+          "velocity_m_per_s": 1.0823689129771043e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        },
+        "Neptune": {
+          "position_metres": 64.70129994663056,
+          "velocity_m_per_s": 4.113520765396303e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true
+        }
+      },
+      "moon_relative_jpl": {
+        "position_metres": 718.8247845205743,
+        "velocity_m_per_s": 0.0019776112363984583,
+        "position_goal_passed": true
+      },
+      "physical_goals_passed": true
+    }
+  },
+  "raw_responses_checked": 40,
+  "prior_numerical_failure_retained": true,
+  "jpl_new_epochs_checked": true,
+  "initial_states_fitted": false,
+  "checks_passed": true,
+  "versions": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1"
+  },
+  "comparison_wall_seconds": 0.062107899982947856,
+  "limitations": "Reused free trajectories after exact SHA/source/time/state validation. New JPL coverage125 epochs for all10 bodies, no continuous error guarantee. Strict numerical qualification141 unchanged; failed standard numerical criterion139 retained. No force/integrator/initial parameter changes."
+}

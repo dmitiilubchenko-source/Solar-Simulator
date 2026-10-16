@@ -1,0 +1,320 @@
+{
+  "protocol": "docs/time-control-protocol.md",
+  "units": "SI",
+  "physics": "newtonian-point-masses",
+  "target_seconds": 8854334.514178298,
+  "target_period_fraction": 0.731234,
+  "versions": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1"
+  },
+  "source_sha256": {
+    "scripts/assess_time_control.py": "d1d018d932b6fa6c1811672ce6b97188b4cc975c115ba4cbbfb95a6b510e8323",
+    "scripts/assess_sandbox_branch.py": "b329f8c3867e30b13d8f38e274054047f7f18584672545e23192ad1cf55dc2c1",
+    "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+    "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b"
+  },
+  "results": [
+    {
+      "backend": "python",
+      "dop853": [
+        {
+          "batch": 1,
+          "before": {
+            "position_metres": 0.016021139951522028,
+            "velocity_m_per_s": 7.891087367987247e-09,
+            "relative_energy_drift": 1.0727581683982159e-13,
+            "relative_angular_momentum_drift": 1.5446519492705288e-14,
+            "wall_seconds": 0.17262969998409972,
+            "packets": 47,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 0.016021139951522028,
+            "velocity_m_per_s": 7.891087367987247e-09,
+            "relative_energy_drift": 1.0727581683982159e-13,
+            "relative_angular_momentum_drift": 1.5446519492705288e-14,
+            "wall_seconds": 0.18221649999031797,
+            "packets": 47,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true,
+          "checks_passed": true
+        },
+        {
+          "batch": 7,
+          "before": {
+            "position_metres": 0.05190465672207651,
+            "velocity_m_per_s": 2.5868346059682807e-08,
+            "relative_energy_drift": 1.4763701525480397e-13,
+            "relative_angular_momentum_drift": 4.11907186472141e-14,
+            "wall_seconds": 0.04649249999783933,
+            "packets": 7,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 0.05190465672207651,
+            "velocity_m_per_s": 2.5868346059682807e-08,
+            "relative_energy_drift": 1.4763701525480397e-13,
+            "relative_angular_momentum_drift": 4.11907186472141e-14,
+            "wall_seconds": 0.049681900010909885,
+            "packets": 7,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true,
+          "checks_passed": true
+        },
+        {
+          "batch": 64,
+          "before": {
+            "position_metres": 0.06194530708020932,
+            "velocity_m_per_s": 3.011502249781454e-08,
+            "relative_energy_drift": 1.2798748444750993e-13,
+            "relative_angular_momentum_drift": 4.449125700035626e-14,
+            "wall_seconds": 0.029817800008459017,
+            "packets": 1,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 0.06194530708020932,
+            "velocity_m_per_s": 3.011502249781454e-08,
+            "relative_energy_drift": 1.2798748444750993e-13,
+            "relative_angular_momentum_drift": 4.449125700035626e-14,
+            "wall_seconds": 0.029803199984598905,
+            "packets": 1,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true,
+          "checks_passed": true
+        }
+      ],
+      "partition_position_difference_metres": 0.04880144343945603,
+      "verlet": [
+        {
+          "steps_per_period": 1024,
+          "before": {
+            "position_metres": 12415282.51421144,
+            "velocity_m_per_s": 5.016331421811928,
+            "relative_energy_drift": 5.507088390355292e-05,
+            "relative_angular_momentum_drift": 1.0561722730054898e-15,
+            "wall_seconds": 0.019219799985876307,
+            "packets": 6,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 12415282.51421144,
+            "velocity_m_per_s": 5.016331421811928,
+            "relative_energy_drift": 5.507088390355292e-05,
+            "relative_angular_momentum_drift": 1.0561722730054898e-15,
+            "wall_seconds": 0.019263199996203184,
+            "packets": 6,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true
+        },
+        {
+          "steps_per_period": 2048,
+          "before": {
+            "position_metres": 3103929.4365682034,
+            "velocity_m_per_s": 1.2541353613196529,
+            "relative_energy_drift": 1.3769171302623457e-05,
+            "relative_angular_momentum_drift": 2.2443660801366656e-15,
+            "wall_seconds": 0.04104179999558255,
+            "packets": 12,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 3103929.4365682034,
+            "velocity_m_per_s": 1.2541353613196529,
+            "relative_energy_drift": 1.3769171302623457e-05,
+            "relative_angular_momentum_drift": 2.2443660801366656e-15,
+            "wall_seconds": 0.03801610000664368,
+            "packets": 12,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true
+        },
+        {
+          "steps_per_period": 4096,
+          "before": {
+            "position_metres": 775969.0586776402,
+            "velocity_m_per_s": 0.31352957139270987,
+            "relative_energy_drift": 3.4423834815986083e-06,
+            "relative_angular_momentum_drift": 2.1123445460109796e-15,
+            "wall_seconds": 0.07833389998995699,
+            "packets": 24,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 775969.0586776402,
+            "velocity_m_per_s": 0.31352957139270987,
+            "relative_energy_drift": 3.4423834815986083e-06,
+            "relative_angular_momentum_drift": 2.1123445460109796e-15,
+            "wall_seconds": 0.07730830000946298,
+            "packets": 24,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true
+        }
+      ],
+      "convergence_ratios": [
+        3.9998597802977587,
+        4.000068561828655
+      ],
+      "checks_passed": true
+    },
+    {
+      "backend": "rust",
+      "dop853": [
+        {
+          "batch": 1,
+          "before": {
+            "position_metres": 0.01663345891154219,
+            "velocity_m_per_s": 8.362185511265052e-09,
+            "relative_energy_drift": 1.1010818164087299e-13,
+            "relative_angular_momentum_drift": 1.5050454890328227e-14,
+            "wall_seconds": 0.09502609999617562,
+            "packets": 47,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 0.01663345891154219,
+            "velocity_m_per_s": 8.362185511265052e-09,
+            "relative_energy_drift": 1.1010818164087299e-13,
+            "relative_angular_momentum_drift": 1.5050454890328227e-14,
+            "wall_seconds": 0.10216549999313429,
+            "packets": 47,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true,
+          "checks_passed": true
+        },
+        {
+          "batch": 7,
+          "before": {
+            "position_metres": 0.04965606654849294,
+            "velocity_m_per_s": 2.4783788296890865e-08,
+            "relative_energy_drift": 1.5117747125611822e-13,
+            "relative_angular_momentum_drift": 3.960646023770587e-14,
+            "wall_seconds": 0.02580659999512136,
+            "packets": 7,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 0.04965606654849294,
+            "velocity_m_per_s": 2.4783788296890865e-08,
+            "relative_energy_drift": 1.5117747125611822e-13,
+            "relative_angular_momentum_drift": 3.960646023770587e-14,
+            "wall_seconds": 0.027937600010773167,
+            "packets": 7,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true,
+          "checks_passed": true
+        },
+        {
+          "batch": 64,
+          "before": {
+            "position_metres": 0.06163856353926723,
+            "velocity_m_per_s": 2.991890497689714e-08,
+            "relative_energy_drift": 1.2710237044718137e-13,
+            "relative_angular_momentum_drift": 4.475530006860763e-14,
+            "wall_seconds": 0.016820999997435138,
+            "packets": 1,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 0.06163856353926723,
+            "velocity_m_per_s": 2.991890497689714e-08,
+            "relative_energy_drift": 1.2710237044718137e-13,
+            "relative_angular_momentum_drift": 4.475530006860763e-14,
+            "wall_seconds": 0.016884800017578527,
+            "packets": 1,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true,
+          "checks_passed": true
+        }
+      ],
+      "partition_position_difference_metres": 0.0485530879631105,
+      "verlet": [
+        {
+          "steps_per_period": 1024,
+          "before": {
+            "position_metres": 12415282.51440467,
+            "velocity_m_per_s": 5.016331421912058,
+            "relative_energy_drift": 5.507088390355292e-05,
+            "relative_angular_momentum_drift": 1.188193807131176e-15,
+            "wall_seconds": 0.001066600001649931,
+            "packets": 6,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 12415282.51440467,
+            "velocity_m_per_s": 5.016331421912058,
+            "relative_energy_drift": 5.507088390355292e-05,
+            "relative_angular_momentum_drift": 1.188193807131176e-15,
+            "wall_seconds": 0.00046369998017326,
+            "packets": 6,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true
+        },
+        {
+          "steps_per_period": 2048,
+          "before": {
+            "position_metres": 3103929.436749984,
+            "velocity_m_per_s": 1.254135361453237,
+            "relative_energy_drift": 1.376917130156132e-05,
+            "relative_angular_momentum_drift": 1.5842584095082345e-15,
+            "wall_seconds": 0.0011796000180765986,
+            "packets": 12,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 3103929.436749984,
+            "velocity_m_per_s": 1.254135361453237,
+            "relative_energy_drift": 1.376917130156132e-05,
+            "relative_angular_momentum_drift": 1.5842584095082345e-15,
+            "wall_seconds": 0.0008590000215917826,
+            "packets": 12,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true
+        },
+        {
+          "steps_per_period": 4096,
+          "before": {
+            "position_metres": 775969.0586683464,
+            "velocity_m_per_s": 0.313529571313321,
+            "relative_energy_drift": 3.442383480182426e-06,
+            "relative_angular_momentum_drift": 2.376387614262352e-15,
+            "wall_seconds": 0.0016197999939322472,
+            "packets": 24,
+            "final_time_seconds": 8854334.514178298
+          },
+          "after": {
+            "position_metres": 775969.0586683464,
+            "velocity_m_per_s": 0.313529571313321,
+            "relative_energy_drift": 3.442383480182426e-06,
+            "relative_angular_momentum_drift": 2.376387614262352e-15,
+            "wall_seconds": 0.001610899984370917,
+            "packets": 24,
+            "final_time_seconds": 8854334.514178298
+          },
+          "same_partition_exact": true
+        }
+      ],
+      "convergence_ratios": [
+        3.999859780125761,
+        4.000068562110827
+      ],
+      "checks_passed": true
+    }
+  ],
+  "checks_passed": true,
+  "limitations": "One analytic tilted binary. No new JPL accuracy qualification. Before/after share packet partitions; different DOP853 partitions need not agree bitwise. Single wall-time observations include balances, not GUI or a speedup benchmark."
+}

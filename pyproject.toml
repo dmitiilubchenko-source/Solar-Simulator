@@ -21,7 +21,7 @@ dev = [
 ]
 
 [project.scripts]
-solar-simulator = "solar_simulator.cli:main"
+solar-simulator = "solar_simulator.commands:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

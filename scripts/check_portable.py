@@ -16,9 +16,14 @@ def main():
     target=root/".tools"/f"portable relocated {datetime.now():%Y%m%d-%H%M%S}"
     target.mkdir(parents=True,exist_ok=False)
     with zipfile.ZipFile(args.archive) as archive:
+        private={"AGENTS.md","changes.md","development-plan.md","learning-log.md","project-review.md",
+                 "session-handoff.md","session-handoff-archive.md","project-context.md"}
         for member in archive.infolist():
             if not (target/member.filename).resolve().is_relative_to(target.resolve()):
                 raise ValueError("Unsafe ZIP path")
+            parts=Path(member.filename).parts
+            if Path(member.filename).name in private or ".tools" in parts:
+                raise ValueError("Private file in portable ZIP: "+member.filename)
         archive.extractall(target)
     folder=next(p for p in target.iterdir() if p.is_dir())
     runtime=folder/"runtime"
@@ -53,6 +58,22 @@ assert len(moon.bodies)==10 and moon.settings.physics=='eih-1pn' and moon.origin
 assert moon.bodies[3].name=='Earth' and moon.bodies[4].name=='Moon'
 save(moon,'checkpoint-moon-test.json')
 assert len(load('checkpoint-moon-test.json').bodies)==10
+dynamic=load('scenarios/solar-system-moon-newton-dynamic-q2.json')
+assert len(dynamic.rotations)==1 and dynamic.rotations[0].body=='Moon'
+assert dynamic.settings.physics=='newtonian' and dynamic.settings.relative_pair==('Earth','Moon')
+assert dynamic.settings.integrator=='dop853' and dynamic.settings.error_control=='per-body'
+dynamic=advance(dynamic,2)
+save(dynamic,'checkpoint-dynamic-rotation-test.json')
+dynamic_restored=load('checkpoint-dynamic-rotation-test.json')
+assert dynamic_restored.rotations==dynamic.rotations and dynamic_restored.initial_rotations==dynamic.initial_rotations
+assert dynamic_restored.settings==dynamic.settings and dynamic_restored.origin==dynamic.origin
+assert advance(dynamic_restored,2).time==4*dynamic.settings.dt
+assert len(report(dynamic)['rotations'])==1 and 'orbital+rigid-spin' in report(dynamic)['conservation_scope']
+assert 'no tides/EIH' in report(dynamic)['conservation_scope']
+assert dynamic.rotations[0].quaternion!=dynamic.initial_rotations[0].quaternion
+assert pathlib.Path('docs/nbody-rotation.md').is_file() and pathlib.Path('Moon Rotation.cmd').is_file()
+assert '(docs/nbody-rotation.md)' in pathlib.Path('USER-GUIDE.md').read_text(encoding='utf-8')
+assert pathlib.Path('CURRENT-STATUS.md').is_file()
 j2=advance(load('scenarios/solar-system-moon-1pn-j2.json'),24)
 assert len(j2.settings.figures)==1 and j2.settings.figures[0].body=='Earth'
 assert report(j2)['orbital_angular_momentum_conserved'] is False
@@ -177,9 +198,224 @@ print(json.dumps(dict(prefix=str(root),tcl=str(library),events=len(experiment.ev
         environment.pop(name,None)
     output=subprocess.check_output([str(runtime/"python.exe"),"-B","-I","-c",probe],cwd=folder,text=True,env=environment)
     result=json.loads(output)
+    result["gui"]=check_gui(folder,environment)
+    replay_output=subprocess.check_output([str(runtime/"python.exe"),"-X","utf8","-B","-I",
+        str(folder/"verification/replay_jpl.py"),str(folder/"verification")],cwd=folder,env=environment,text=True,encoding="utf-8")
+    result["jpl_replay"]=json.loads(replay_output)
+    if not result["jpl_replay"]["checks_passed"] or result["jpl_replay"]["solver_executed"]:
+        raise ValueError("Replay scope or results failed")
+    fresh_output=subprocess.check_output([str(runtime/"python.exe"),"-X","utf8","-B","-I",
+        str(folder/"verification/recompute_jpl.py"),str(folder/"verification"),
+        "--output",str(folder/"fresh-year-verification.json")],cwd=folder,env=environment,text=True,encoding="utf-8")
+    result["fresh_year"]=json.loads(fresh_output)
+    if not result["fresh_year"]["checks_passed"] or not result["fresh_year"]["solver_executed"]:
+        raise ValueError("Fresh production propagation failed")
+    result["continuous"]=check_continuous(folder,environment)
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print(f"RELOCATED_DIR={folder}")
 
 
-if __name__=="__main__":
-    main()
+def check_gui(folder,environment):
+    """A separate Tcl process checks the actual desktop path after relocation."""
+    probe=r'''
+import json,pathlib,sys,time,tkinter
+import solar_simulator.app as application
+from solar_simulator.storage import load,to_document
+from solar_simulator.experiment import advance
+from solar_simulator.time_control import advance_towards
+window=tkinter.Tk(); app=application.Laboratory(window); errors=[]
+application.messagebox.showerror=lambda *args,**kwargs:errors.append(args)
+def wait_for_worker():
+    deadline=time.monotonic()+20
+    while app.future is not None and time.monotonic()<deadline:
+        window.update(); time.sleep(.01)
+    assert app.future is None and not errors,(app.future,errors)
+try:
+    app._open_lunar_rotation()
+    window.update()
+    bottom=window.winfo_rooty()+window.winfo_height()
+    for label in (app.status_widget,app.details_widget):
+        assert label.winfo_ismapped() and label.winfo_rooty()+label.winfo_height()<=bottom
+    window.withdraw()
+    original=to_document(app.experiment)
+    assert original==to_document(load('scenarios/solar-system-moon-newton-dynamic-q2.json'))
+    assert app.view.get()=='Земля и Луна' and app.reference.get()=='Тело: Earth'
+    assert len(app.experiment.bodies)==10 and len(app.orbit.get_legend().get_texts())==2
+    app._submit(2); app._pause()
+    assert 'завершает пакет' in app.status.get()
+    wait_for_worker()
+    assert app.experiment.time==7200 and 'Полный L' in app.details.get()
+    checkpoint=to_document(app.experiment)
+    path=pathlib.Path('Контрольная точка Луны.json').resolve()
+    application.filedialog.asksaveasfilename=lambda **kwargs:str(path)
+    app._save(); assert to_document(load(path))==checkpoint
+    app._reset(); assert to_document(app.experiment)==original
+    application.filedialog.askopenfilename=lambda **kwargs:str(path)
+    app._load(); assert to_document(app.experiment)==checkpoint
+    expected=to_document(advance(load(path),1))
+    app._submit(1); wait_for_worker(); assert to_document(app.experiment)==expected
+    app.scenario.set('spheres'); app.scenario_widget.event_generate('<<ComboboxSelected>>')
+    window.update(); app._new()
+    assert app.integrator.get()=='verlet' and app.mode.get()=='bounce'
+    app._submit(2); wait_for_worker(); assert app.experiment.time==.1
+    contacts_time=app.experiment.time
+    app.backend.set('rust'); app._open_solar_sandbox()
+    sandbox_start=to_document(app.experiment)
+    assert sandbox_start==to_document(load('scenarios/solar-sandbox-eih-fixed-j2.json'))
+    assert pathlib.Path('Solar Sandbox.cmd').is_file()
+    assert pathlib.Path('docs/sandbox-demo-validation.json').is_file()
+    app.batch.set('2'); app.target.set('10000.25'); app._start_target()
+    app._poll(); app._pause(); wait_for_worker()
+    assert app.experiment.time==7200 and not app.running
+    application.filedialog.asksaveasfilename=lambda **kwargs:str(path)
+    app._save(); checkpoint_solar=to_document(app.experiment)
+    app._reset(); app._load()
+    assert to_document(app.experiment)==checkpoint_solar and app.target_time is None
+    app._start_target()
+    deadline=time.monotonic()+20
+    while (app.running or app.future is not None) and time.monotonic()<deadline:
+        window.update(); time.sleep(.01)
+    assert not app.running and app.future is None and not errors
+    assert app.experiment.time==10000.25
+    expected_solar=advance_towards(load(path),10000.25,2)
+    assert to_document(app.experiment)==to_document(expected_solar)
+    # Drive the actual add dialog and compare its saved child with the core API.
+    from solar_simulator.sandbox import branch_experiment,load_branch
+    from solar_simulator.simulation import Body,EARTH_MASS
+    from solar_simulator.vector3 import Vector3
+    parent=app.experiment
+    addition=Body('Demo planet',EARTH_MASS,Vector3(0.,0.,3e11),Vector3(17000.,0.,0.))
+    expected_branch=branch_experiment(parent,additions=(addition,))
+    branch_path=pathlib.Path('Ветка новой планеты.json').resolve()
+    application.filedialog.asksaveasfilename=lambda **kwargs:str(branch_path)
+    app._add_body(); window.update()
+    dialog=next(widget for widget in window.winfo_children() if isinstance(widget,tkinter.Toplevel))
+    entries=[]; buttons=[]
+    def collect(widget):
+        for child in widget.winfo_children():
+            if type(child) is application.ttk.Entry:entries.append(child)
+            if isinstance(child,application.ttk.Button):buttons.append(child)
+            collect(child)
+    collect(dialog)
+    assert len(entries)==8
+    for entry,value in zip(entries,('Demo planet',str(EARTH_MASS),'0','0','3e11','17000','0','0')):
+        entry.delete(0,'end');entry.insert(0,value)
+    next(button for button in buttons if 'Сохранить и добавить' in button.cget('text')).invoke()
+    assert not errors and app.experiment.time==0 and len(app.experiment.bodies)==11
+    saved=load_branch(branch_path)
+    assert to_document(saved.parent)==to_document(parent)
+    assert to_document(saved.child)==to_document(expected_branch.child)==to_document(app.experiment)
+    assert app.parent_snapshot==saved.parent_snapshot
+    child_path=pathlib.Path('Дочерний опыт перед возвратом.json').resolve()
+    application.filedialog.asksaveasfilename=lambda **kwargs:str(child_path)
+    child_before=to_document(app.experiment)
+    app._restore_parent()
+    assert to_document(load(child_path))==child_before and to_document(app.experiment)==to_document(parent)
+    app.scenario.set('sun-earth');app._select_scenario();app._new()
+    removal_parent=app.experiment
+    removal_path=pathlib.Path('Удалённое Солнце.json').resolve()
+    application.filedialog.asksaveasfilename=lambda **kwargs:str(removal_path)
+    app._remove_body();window.update()
+    dialog=next(w for w in window.winfo_children() if isinstance(w,tkinter.Toplevel))
+    choice=next(w for w in dialog.winfo_children() if isinstance(w,application.ttk.Combobox));choice.set('Sun')
+    next(w for w in dialog.winfo_children() if isinstance(w,application.ttk.Button)).invoke()
+    assert not errors and len(app.experiment.bodies)==1 and app.experiment.bodies[0].name=='Earth'
+    assert to_document(load_branch(removal_path).parent)==to_document(removal_parent)
+    expected_free=advance(app.experiment,1);app._submit(1);wait_for_worker()
+    assert to_document(app.experiment)==to_document(expected_free)
+    csv_input=pathlib.Path('CSV source.json');csv_output=pathlib.Path('Orbit slice.csv')
+    application.save(app.experiment,csv_input)
+    import subprocess,csv
+    exported=subprocess.run([sys.executable,'-B','-I','-m','solar_simulator','export-state',str(csv_input),str(csv_output)],
+                            capture_output=True,text=True,encoding='utf-8',timeout=20)
+    assert exported.returncode==0,exported.stderr
+    with csv_output.open(encoding='utf-8',newline='') as stream:row=next(csv.DictReader(stream))
+    assert row['name']=='Earth' and float(row['time_seconds'])==app.experiment.time
+    import hashlib
+    strict_path=pathlib.Path('scenarios/solar-sandbox-strict.json').resolve()
+    strict_receipt=json.loads(pathlib.Path('docs/strict-profile-validation.json').read_bytes())
+    assert pathlib.Path('Solar Sandbox Strict.cmd').is_file()
+    assert hashlib.sha256(strict_path.read_bytes()).hexdigest()==strict_receipt['checkpoint_sha256']
+    strict=load(strict_path)
+    assert strict.settings.rtol==3e-14 and strict.settings.backend=='rust' and len(strict.bodies)==10
+    application.filedialog.askopenfilename=lambda **kwargs:str(strict_path)
+    app._load()
+    assert to_document(app.experiment)==to_document(strict) and float(app.rtol.get())==3e-14
+    from solar_simulator.time_control import advance_towards
+    expected_strict=advance_towards(strict,10000.25)
+    app.batch.set('20');app.target.set('10000.25');app._start_target()
+    deadline=time.monotonic()+20
+    while (app.running or app.future is not None) and time.monotonic()<deadline:
+        window.update();time.sleep(.01)
+    assert not errors and app.experiment.time==10000.25
+    assert to_document(app.experiment)==to_document(expected_strict)
+    result=dict(isolated=sys.flags.isolated,moon_checkpoint_time_s=checkpoint['time'],
+                moon_continuation_time_s=expected['time'],contacts_scenario_time_s=contacts_time,
+                footer_visible=True,GUI_save_load_reset_continue=True,
+                solar_target_time_s=expected_solar.time,solar_target_pause_save_resume=True,
+                GUI_add_body_saved_parent=True,GUI_parent_restore_saved_child=True,
+                GUI_remove_sun_free_motion=True,isolated_CLI_CSV=True,
+                strict_checkpoint_sha256=True,GUI_strict_load_and_exact_target=True)
+finally:
+    app.close()
+print(json.dumps(result))
+'''
+    result=subprocess.run([str(folder/"runtime/python.exe"),"-B","-I","-c",probe],
+                          cwd=folder,env=environment,capture_output=True,text=True,timeout=60)
+    if result.returncode:
+        raise RuntimeError("Relocated GUI failed:\n"+result.stdout+result.stderr)
+    report=json.loads(result.stdout)
+    if report["isolated"] != 1:
+        raise ValueError("Relocated GUI must use an isolated runtime")
+    return report
+
+
+def check_continuous(folder,environment):
+    """Recompute explicit profiles from the actual relocated package."""
+    probe=r'''
+import csv,hashlib,json,pathlib,numpy as np,sys
+from solar_simulator.continuous_cli import run
+from solar_simulator.continuous import ContinuousRun
+from solar_simulator.storage import load
+root=pathlib.Path.cwd()
+receipt=json.loads((root/'docs/continuous-integration-validation.json').read_bytes())
+path=root/'docs/continuous-integration-reference.npz'
+assert hashlib.sha256(path.read_bytes()).hexdigest()==receipt['public_reference_sha256']
+with np.load(path,allow_pickle=False) as data:
+    sample={k:data[k].copy() for k in data.files}
+def matrix(state):
+    return np.array([[b.position.x,b.position.y,b.position.z,b.velocity.x,b.velocity.y,b.velocity.z] for b in state.bodies])
+def difference(actual,expected):
+    return dict(position_metres=float(np.max(np.linalg.norm(actual[...,:3]-expected[...,:3],axis=-1))),
+                velocity_m_per_s=float(np.max(np.linalg.norm(actual[...,3:]-expected[...,3:],axis=-1))))
+result=run(root/'scenarios/solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json',720000.,
+           root/'continuous-catalog-check',packet_steps=20)
+assert result['sample_times_seconds']==sample['catalog_times'].tolist()
+assert result['experimental'] and not result['automatically_scientifically_qualified']
+rows=list(csv.DictReader((root/'continuous-catalog-check/snapshots.csv').open(encoding='utf-8')))
+assert len(rows)==3894
+actual=np.array([[float(row[k]) for k in ('x_m','y_m','z_m','vx_m_s','vy_m_s','vz_m_s')] for row in rows]).reshape(11,354,6)
+catalog=difference(actual,sample['catalog_continuous'])
+assert catalog['position_metres']<.1 and catalog['velocity_m_per_s']<1e-6
+seed=load(root/'scenarios/solar-sandbox-strict.json')
+session=ContinuousRun(seed,float(sample['year_times'][-1]));values=[]
+for time in sample['year_times']:
+    while session.current.time<time:session.next(20,until=float(time))
+    values.append(matrix(session.current))
+actual=np.array(values)
+year=difference(actual,sample['year_continuous'])
+relative=difference(actual[:,4]-actual[:,3],sample['year_independent'][:,4]-sample['year_independent'][:,3])
+assert year['position_metres']<.1 and year['velocity_m_per_s']<1e-6
+assert relative['position_metres']<.1 and relative['velocity_m_per_s']<1e-5
+assert receipt['general_release_passed'] is False
+print(json.dumps(dict(catalog_reproduction=catalog,year_reproduction=year,relative_independent=relative,
+    catalog_rhs_calls=result['rhs_calls'],catalog_packets=result['packets'],year_statistics=session.statistics,
+    experimental=True,isolated=sys.flags.isolated,general_release_passed=False)))
+'''
+    process=subprocess.run([str(folder/'runtime/python.exe'),'-X','utf8','-B','-I','-c',probe],cwd=folder,
+        env=environment,capture_output=True,text=True,encoding='utf-8',timeout=120)
+    if process.returncode:raise RuntimeError('Relocated continuous mode failed:\n'+process.stdout+process.stderr)
+    return json.loads(process.stdout)
+
+
+if __name__=="__main__":main()

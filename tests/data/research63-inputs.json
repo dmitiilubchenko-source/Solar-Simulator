@@ -1,0 +1,172 @@
+{
+  "kind": "solar-research63-test-inputs",
+  "version": 1,
+  "bundle_sha256": "a32673a4a14810eff514c67fefc3641a164de0604d6e57f39dde3efa9fa8cafd",
+  "files": {
+    ".tools/rotation63/initial.json": "02ee4efa985402898568d13e41050bfad6da5717e0148ab08a3f6a4e1af20623",
+    ".tools/rotation57/rigid-pn-trajectories.npz": "8ffa1be796f492a2e5f5a47a06ba0269302adcb1a67a8453df435391e9d3e1f0",
+    ".tools/rotation59/conditional-lunar-initial.json": "5c619067a113779491afbd97f811d65bb77af9a5bb45a14f8f3bc49be9edf76d",
+    ".tools/rotation62/production.npz": "485eada4f379c7c74e71b2a58f3bbfa5cf51a8d94c6e16fe46a5cd38b7017b0a",
+    ".tools/rotation62/tighter.npz": "80446412030e98224cbc9835fc83ecedbcab2b49045309c88db9f6dec4f7561e",
+    ".tools/rotation62/reference-0.npz": "3a7b98df956440c9c5e2316c36aba28c354cf61258bbbef3b17af30918c07b4a",
+    ".tools/rotation62/reference-1.npz": "674356f5eff4ad6886eda87354095889d33090f384e157b2f08b06357d9731d3"
+  },
+  "origin": {
+    "checkpoint_sha256": "02ee4efa985402898568d13e41050bfad6da5717e0148ab08a3f6a4e1af20623",
+    "interpretation": "Historical conditional finite-H input; physical PN lunar migration is not certified. Only required computed provenance arrays, no personal documents or external SPICE kernels.",
+    "provenance_source_sha256": [
+      {
+        "path": "scripts/canonical_checkpoint.py",
+        "sha256": "83a14d42011d9e455ba5f4b76d6d673549e613a453bf7d8f7f5dd0c73a9774d2"
+      },
+      {
+        "path": "scripts/canonical_initial.py",
+        "sha256": "45f69e015712f403edd17693723b06cb3b9f6044d42bf8ef64f4183ebeac2de5"
+      },
+      {
+        "path": "scripts/rigid_pn_model.py",
+        "sha256": "bd1b7126e7d29a4c899e20b5b27b6f42b316a58724f968ce8e054f5d749afbf1"
+      },
+      {
+        "path": "scripts/nbody_pn_spin.py",
+        "sha256": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d"
+      },
+      {
+        "path": "src/solar_simulator/rotation.py",
+        "sha256": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa"
+      },
+      {
+        "path": "src/solar_simulator/nbody_rotation.py",
+        "sha256": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67"
+      },
+      {
+        "path": "scripts/assess_canonical_checkpoint.py",
+        "sha256": "156702a2f86db859352161e16972af0d3c03f8e6e66ef0555e37155583eed530"
+      },
+      {
+        "path": "scripts/canonical-checkpoint-policy.json",
+        "sha256": "a75551e9837f28ce0311daea9d367e4064442f57a57967b4234528fbd2a5e278"
+      },
+      {
+        "path": "tests/test_canonical_checkpoint.py",
+        "sha256": "59d41e5ee641f40bd1ab25a80d07cfc24aa57e8c1791084417629af008766a94"
+      },
+      {
+        "path": "docs/rigid-pn-validation.json",
+        "sha256": "450de1d58204270778e8ce41c72dcb77493ef90442c7e7c7d360059b63771ea8"
+      },
+      {
+        "path": ".tools/rotation57/rigid-pn-trajectories.npz",
+        "sha256": "8ffa1be796f492a2e5f5a47a06ba0269302adcb1a67a8453df435391e9d3e1f0"
+      },
+      {
+        "path": "scripts/assess_rigid_pn.py",
+        "sha256": "356d225964703ebd1f8b14cd04c7a1b2b27af8156e1d5f2d8e42df4463d5cab7"
+      },
+      {
+        "path": "scripts/independent_rigid_pn.py",
+        "sha256": "06a64e7b296cdcd22b317bed375303ac4462b530c800fd00a40db68c104dcfec"
+      },
+      {
+        "path": "scripts/independent_nbody_pn_spin.py",
+        "sha256": "8d0b6070bced7acef5fc6c88aad0122f7e4b6a0d555cc86c152837e16251114c"
+      },
+      {
+        "path": "src/solar_simulator/data/solar-system-moon-20261008.json",
+        "sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702"
+      },
+      {
+        "path": "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json",
+        "sha256": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba"
+      },
+      {
+        "path": "docs/canonical-initial-validation.json",
+        "sha256": "90cf9edf66dce41bec810131d4924635458bcd2aee9efddde3810a444bceb0a1"
+      },
+      {
+        "path": ".tools/rotation59/conditional-lunar-initial.json",
+        "sha256": "5c619067a113779491afbd97f811d65bb77af9a5bb45a14f8f3bc49be9edf76d"
+      },
+      {
+        "path": "scripts/assess_canonical_solar.py",
+        "sha256": "ef09f154ccbcedccff4dc5235c789db3fce6db0a686f0ec23b8b647f023dce6d"
+      },
+      {
+        "path": "scripts/canonical-solar-policy.json",
+        "sha256": "79a966a972c99ad6cf6507df8cbbca461edfdfa8bd5991c02d271407c9e0e2a0"
+      },
+      {
+        "path": "tests/test_canonical_solar.py",
+        "sha256": "d098271e7b79199f5110b87876c8c4b6b3dd0cf9119f83f1aa7c2e71c5f3a36c"
+      },
+      {
+        "path": "scripts/relative_canonical.py",
+        "sha256": "3d44dfdbeeffc41e3ce037fe78fb282df010eee27c0b6d88b4afda1370fb80e7"
+      },
+      {
+        "path": "scripts/relative_canonical_checkpoint.py",
+        "sha256": "a92bd4a7ae4bd131a76fc840187e64626eaab8445b34ee99acfaa8fc059a7919"
+      },
+      {
+        "path": "scripts/independent_relative_canonical.py",
+        "sha256": "9d53a3eb2ed1f814d83fc70c1a2a33bc3ed428f448bb607e689c918653d865a1"
+      },
+      {
+        "path": "scripts/assess_relative_canonical.py",
+        "sha256": "36dff1776a02e35085829812e959872d8cabc76247f3925c92c1f0b509d2841e"
+      },
+      {
+        "path": "scripts/relative-canonical-policy.json",
+        "sha256": "e65b5ec2e8c870343142195db5e0462a61bbf67cd6aab615ff10a0ff913e5601"
+      },
+      {
+        "path": "tests/test_relative_canonical.py",
+        "sha256": "f43300fd0e26e32daeee75d1acf4160dcc9d21bdbd86a985f21ead345f291335"
+      },
+      {
+        "path": "tests/test_relative_canonical_audit.py",
+        "sha256": "fe6dcb55edd27b8788c1d15362ea02d7d43e58ddc6bdcb3ae148a119add54243"
+      },
+      {
+        "path": ".tools/rotation62/production.npz",
+        "sha256": "485eada4f379c7c74e71b2a58f3bbfa5cf51a8d94c6e16fe46a5cd38b7017b0a"
+      },
+      {
+        "path": ".tools/rotation62/tighter.npz",
+        "sha256": "80446412030e98224cbc9835fc83ecedbcab2b49045309c88db9f6dec4f7561e"
+      },
+      {
+        "path": ".tools/rotation62/reference-0.npz",
+        "sha256": "3a7b98df956440c9c5e2316c36aba28c354cf61258bbbef3b17af30918c07b4a"
+      },
+      {
+        "path": ".tools/rotation62/reference-1.npz",
+        "sha256": "674356f5eff4ad6886eda87354095889d33090f384e157b2f08b06357d9731d3"
+      },
+      {
+        "path": "docs/relative-canonical-validation.json",
+        "sha256": "1c68264e4eccf557ab9b6cef794abe6861b7dd01d36f52d981ca7a5166513910"
+      },
+      {
+        "path": "scripts/relative-canonical-checkpoint-policy.json",
+        "sha256": "c687901b29d131b9ce97dda2121a5dbd36c012f80d1a5ab31fb8b4d6ef8fc0fb"
+      },
+      {
+        "path": "scripts/assess_relative_canonical_checkpoint.py",
+        "sha256": "4a8b804d6fb51ec55a5080795bbca1dd5f836199d2f055a1333b8ddc601b7606"
+      },
+      {
+        "path": "scripts/resume_relative_canonical.py",
+        "sha256": "72c7947f9bb5a246ba115f0846ea490ba81f116d14e92eec988288c2ffd7b0dd"
+      },
+      {
+        "path": "tests/test_relative_canonical_checkpoint.py",
+        "sha256": "12a92989baae4a572e39e58869d5a6473a3e082159d2fcf677442747e7ed5153"
+      },
+      {
+        "path": "tests/test_relative_canonical_checkpoint_audit.py",
+        "sha256": "7a157cf81973f4ebad58d28d7a8364c30ecc0fc5d054f716f5d9278a2238fde4"
+      }
+    ]
+  }
+}

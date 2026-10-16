@@ -1,0 +1,1905 @@
+{
+  "protocol": "fixed-j2-ias-protocol.md",
+  "measurements": {
+    "protocol": "184",
+    "source_sha256": {
+      "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+      "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+      "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+      "src/solar_simulator/branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+      "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+      "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+      "src/solar_simulator/commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+      "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+      "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+      "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+      "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+      "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+      "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+      "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+      "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+      "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+      "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+      "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+      "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+      "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+      "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+      "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+      "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+      "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+      "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+      "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+      "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+      "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+      "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+      "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+      "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+      "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+      "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+      "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+      "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+      "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+      "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+      "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+      "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+      "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+      "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+      "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+      "scripts/fixed_j2_ias.py": "fd77c72ce6742fedc479064947de863b4632e3aee9f48a793005f861c0d96df5",
+      "scripts/assess_fixed_j2_ias.py": "514c3c11f4586e02ba8cff8ff45a5c79c5d44b438f82319b0159c8eb4f2772bc",
+      "scripts/eih_year.py": "a9bcbac8897b42601627ff81ef03cba7ee0fc29b2a431cd4a35b37b89cf16bb1",
+      "scripts/ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+      "scripts/ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+      "scripts/newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+      "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+      "docs/fixed-j2-ias-protocol.md": "dc079df8323b6625780a00bc37f971712157b5a19ebdf7061f8035322f16c45e"
+    },
+    "library_sha256": {
+      "rebound/binarydata_field_descriptor.py": "63dc50290df3e582df7b3a3b33065bef6a4c649f8aff1715a5539abcc0f3d51a",
+      "rebound/citations.py": "662d4d3b8a25e68089a20ab457598eec8843e77a058d071d572c4a0e0fa2c538",
+      "rebound/frequency_analysis.py": "b1ebdc95ce7776e572203bdd3b3aa9c49cc0936d6ebb8bb1e4b0ae7ba6ec641c",
+      "rebound/horizons.py": "cd473537e1e70455126848cf82d403b08df7c1030cfa7d3b8379d89591049c7c",
+      "rebound/integrator.py": "855ac5f008a63990780285e52e680addbf8f19ce8cb8b134f63fdefb62d2cd41",
+      "rebound/ode.py": "6866453b231ab3533ecc692f30e9a6a9949d2d7e39609c0b042ebc78a44a935b",
+      "rebound/orbit.py": "7667825199620e580ba39dc8c3581bae98cfec32eba95bfc7a823fca3b1e4e86",
+      "rebound/particle.py": "21fcc696bc5b0e7fa05e26d9f4ae517a57e453e0fbfa95fe60c54a54b34d8862",
+      "rebound/particles.py": "ca1cbad53d8446fb1c84c2950b0a113b54097272ec7278474367c17277491920",
+      "rebound/plotting.py": "69c7fa0001dd977fa79cbd32d3daec0edcec11a6f274957c08a6f915be60e1bb",
+      "rebound/rotation.py": "b12dbeb40ae134cbe057169a08da315102983628413bb97796ac36967099078d",
+      "rebound/simulation.py": "db698afa74332b161757b4e848062e8e5206c8cc64420bb720e5143968bfc710",
+      "rebound/simulationarchive.py": "7516ab99af7cb4da6cd09e8ade8d57faa0b3b6ca5c8e868cdc3945252ae271a2",
+      "rebound/tools.py": "bea74d41279d1dface67590f469e6e272087a0fe79c903b7a0e1d234e9b08ce1",
+      "rebound/units.py": "e090acdbf72cd055ffa20fbd4b0981e942d98c8cda3f5f088b7896b52c3a3a00",
+      "rebound/variation.py": "d28259195943b16b6a391913015a4213ca6cec52efe75fb89a62a1292c71984b",
+      "rebound/vectors.py": "fe3ede7b63eaf4bebecd656a4d4abced6abb624c75ef5fb857d0c4c0184784ff",
+      "rebound/widget.py": "dddf7d8a7366c6f2d6f1ea4cc2016ff3c6e3e6089c08523fda1fb1f89455dde4",
+      "rebound/__init__.py": "2a3231c57e7a252000119712779eae79067bce19792bcf9c149a6981839635b9",
+      "rebound/tests/test_additional_forces.py": "1f7d9de8b39c1ab7dcf14a6031d1fb809929962b48a7fb496a423c34a4428696",
+      "rebound/tests/test_binary_fields.py": "0bf2b4ef6abff410bb2a1f8c0b26a2b9696998f076c52926bc8f712c861ad456",
+      "rebound/tests/test_boundary.py": "b014b93194c9aa81d35d5cb5fa01adbcb4c7d6ae06b18dff73948b630bfa61ff",
+      "rebound/tests/test_bs.py": "d87010b6308e4675240a51ce2900ecd2d605a1cbe97f043b489c6ebf5ba344b5",
+      "rebound/tests/test_collisions.py": "52a406ff7332506f76edf8f237200d6791d3a430589568e4e5354a13a06158e5",
+      "rebound/tests/test_copy.py": "d8fb1e12ad969e49b3b8526d005d089649560244bc5885070775d85de998eee0",
+      "rebound/tests/test_data.py": "c50720e9f8b15df86305fdbd8354746f9fc0b0ac1defb53550bbc88d75d42b02",
+      "rebound/tests/test_eos.py": "d25736ca06a12405ef39535dcfc2487e7f13b2925128ca7498f2b06079a25752",
+      "rebound/tests/test_fpcontract.py": "e9e65f1f2b7530819d42963153a1d1ee2f4f2d78f97badd463f99072e76d8dec",
+      "rebound/tests/test_frequency_analysis.py": "f90efeabd9a2a91f446a2d0d95e92ec84bc426ee631a82b8c5e1c44ee772c86f",
+      "rebound/tests/test_gravity.py": "fa2d69fee574a2d3117ef14b0b5cfd96fc00770c2999aea57fa85698765cbc21",
+      "rebound/tests/test_horizons.py": "592b80131988135926e91f6b642382ca1dcb8aaa3712919685e01d9d90a5b86e",
+      "rebound/tests/test_import.py": "becbedef4edfb49deb11bb1d021b001e6015d41e704f1a6285e86e643ba54193",
+      "rebound/tests/test_integrator.py": "70e0cc0bfc19302663554f0bb05e7656c7b0b67da8ade98bc4d4ceb09e4040f5",
+      "rebound/tests/test_janus.py": "18163ff0240b63d882cd8e526df41e0c0957b2a85031afdead66050676456d12",
+      "rebound/tests/test_leapfrog.py": "6e5772691eabfc9f44a193223eccacc23050f1ab81b32d8478a3bc03dd349c43",
+      "rebound/tests/test_megno.py": "059dd025ab343bfc81c04bd33dd5b3d2f74c33144c62581a119c957797df92b4",
+      "rebound/tests/test_mercurius.py": "cdfb2ae7788fe78b818f12ebcb8f171ca4f228d73e5f41f146fce30e9b187d0e",
+      "rebound/tests/test_modify_orbital_parameters.py": "f610943b0593e59d14de09ea79433df4811fc98813fe210b66aa7db770a9689d",
+      "rebound/tests/test_name.py": "a6aa2727c63ab1e78e279085cb1a16d400b19d1326eba261ea4ffa5664832526",
+      "rebound/tests/test_orbital_elements.py": "437565eba3f91502c2a21c66f09a5b42b3a7e3b72ec037641eb5775b500a71ca",
+      "rebound/tests/test_particle.py": "43d3b83d349c6d2c2a7643de10dd2cb0260de1fd84554d1b52f48a204298fc77",
+      "rebound/tests/test_pickle.py": "6eb2088fe8067192f506b3254cf0e4c8a49520958f8192716135352efca02891",
+      "rebound/tests/test_plotting.py": "04df7c807044c6ad3043c7fadcf54fe2fafbd1c723482cc26dc0ab51ae57ed5a",
+      "rebound/tests/test_post_timestep_modifications.py": "27cd1ff112f2534a7b348bf1edc63fc722807b49c685517de6ad66a510303863",
+      "rebound/tests/test_random.py": "608c3dbc467f404ad1a203e12f9548f43138e4ec736a91b7ae535d1127e25efa",
+      "rebound/tests/test_restart_mercurius.py": "764a7b15dbcbc026f055d5bd9b3c090f5608b5f98a32fe36c4c4818aa3176a23",
+      "rebound/tests/test_rotations.py": "e489d2f2e886e566cb5779189066bdd9bc190ad5c52e866cf62a85847cf5693e",
+      "rebound/tests/test_saba.py": "fc120b6426b9287d7bf29eb7580a43c077e790416885da6c0d8a270c65cb38c6",
+      "rebound/tests/test_serialize.py": "2525ff03dbe951b7349ef93b2cfeb691d4b4f08b7b21a53634bab45bb9306b5a",
+      "rebound/tests/test_server.py": "f37ed99dd0c2a3840bfcbcbd2b8cf62b2970547a2abf0f2238dfb35895015c53",
+      "rebound/tests/test_shearingsheet.py": "c13906c29b2a487d39b97fc9ff5ac3169e822bfa6b4cb1195d6379631a79976e",
+      "rebound/tests/test_simulation.py": "5f3c72dcafaa3e90282b6b8293929fefd07ed4205ff81825cce32c69c3a25419",
+      "rebound/tests/test_simulationarchive.py": "333085a03ee8bbc189f43291f5a346bc9242754928cef2f6372c8bf6e6f1b6ff",
+      "rebound/tests/test_simulationarchive_matrix.py": "50292f498a1fb0d3d63bb109f8a817978ce011cee3149ed610b6a425ec817686",
+      "rebound/tests/test_size_of_simulation.py": "d9bedc1e1d8d37035d668cfb7496e45e76f6678e13319565af6631a4070d26de",
+      "rebound/tests/test_tponly_encounter.py": "c1a3e17a6b1a6b6fd44e76743ce2a0373d01ed0acac199dab3bb27deedcffb2f",
+      "rebound/tests/test_trace.py": "290c979ac8d9a01611ac2b1d77cb12ebb82d3759c2f3e3d3268895cc07306426",
+      "rebound/tests/test_trace_full_bs.py": "2c770b18702acd0fc7d041103c098a6990e66d82a120394c985a58e543040b02",
+      "rebound/tests/test_trace_full_ias15.py": "68097543699be88cd81e41e2a2a599b7ba57f39064d698b3bc35c9dbb734ea33",
+      "rebound/tests/test_transformations.py": "353617248882cc31fa1db377368f57bf229775208ebd0830c86ee25658ab3175",
+      "rebound/tests/test_units.py": "71f8cf9f9ac57de217c9de113864826762f39f6b69d95a3af93f7318f1721385",
+      "rebound/tests/test_variational.py": "c79e32917afe7becb984c1f4a5c49b7a9be515f6b14d1f967ac404c2abd65314",
+      "rebound/tests/test_whfast.py": "3a6c4b8540e739465f8938b8867d2bc72dd181a0338c9d0f0bb6b541f91344b6",
+      "rebound/tests/test_whfast512.py": "ff94f005e83d5c8c5e410f1eda4b6703bd9b675220f9ad6b829c93dc48e133e5",
+      "rebound/tests/test_whfast_advanced.py": "93e1b39ca36b07141d69a0ad32c96e1d7b6597a455169a727abe5403045d1f3d",
+      "rebound/tests/test_whfast_testparticles.py": "52998f2bf242699447f593428b6278f077a4ec6f02e34442226d518eba01929e",
+      "rebound/tests/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "librebound.cp314t-win_amd64.pyd": "ad61ffe5db70b03bc217dfe56f5bdbac1c4513365f6567064e9bba87408a698a"
+    },
+    "native_sha256": {
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7"
+    },
+    "environment": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.1",
+      "rebound": "5.2.2"
+    },
+    "cases": {
+      "newton_one": {
+        "settings": {
+          "dt": 20.958450219516816,
+          "backend": "rust",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 1e-07,
+          "velocity_atol": 1e-13,
+          "physics": "newtonian",
+          "figures": [
+            {
+              "body": "Alpha",
+              "coefficient": 0.005,
+              "reference_radius": 20000000.0,
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "provenance": "user-specified"
+            }
+          ],
+          "relative_pair": null,
+          "error_control": "per-body"
+        },
+        "masses_kg": [
+          1.0772727372000872e+29,
+          2.693181843000218e+28
+        ],
+        "names": [
+          "Alpha",
+          "Beta"
+        ],
+        "samples": 61,
+        "duration_seconds": 4191.690043903363,
+        "nominal_period_seconds": 2095.8450219516817,
+        "reference_levels": [
+          {
+            "rtol": 1e-13,
+            "max_step_seconds": 10.479225109758408,
+            "rhs_calls": 7694,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 1.5409483000003092,
+            "balance": {
+              "corrected": {
+                "energy": 1.6412903466890938e-12,
+                "momentum": 9.072191469591754e-16,
+                "angular": 6.157139767029606e-13
+              },
+              "raw": {
+                "energy": 1.6412903466890938e-12,
+                "momentum": 9.072191469591754e-16,
+                "angular": 0.0017431283419166188
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0017431283419190367
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": 4.891675459821296e-13
+            }
+          },
+          {
+            "rtol": 3e-14,
+            "max_step_seconds": 5.239612554879204,
+            "rhs_calls": 9572,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 2.6384004000010464,
+            "balance": {
+              "corrected": {
+                "energy": 5.337108309675664e-13,
+                "momentum": 1.0316371741921812e-15,
+                "angular": 2.0311166856255646e-13
+              },
+              "raw": {
+                "energy": 5.337108309675664e-13,
+                "momentum": 1.0316371741921812e-15,
+                "angular": 0.0017431283419174182
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0017431283419202177
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": 1.6124733214938877e-13
+            }
+          },
+          {
+            "rtol": 3e-14,
+            "max_step_seconds": 2.619806277439602,
+            "rhs_calls": 10526,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 2.709809799998766,
+            "balance": {
+              "corrected": {
+                "energy": 4.05464781778758e-13,
+                "momentum": 5.939234250499957e-16,
+                "angular": 1.1322173619464481e-13
+              },
+              "raw": {
+                "energy": 4.05464781778758e-13,
+                "momentum": 5.939234250499957e-16,
+                "angular": 0.0017431283419218127
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0017431283419204243
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": 8.897901235699785e-14
+            }
+          }
+        ],
+        "candidates": {
+          "dop853": {
+            "error": {
+              "position_metres": 0.0003493461984011216,
+              "velocity_m_per_s": 1.323033638353061e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 8.720670438091394e-05,
+                "velocity_m_per_s": 3.3078905287198624e-07
+              },
+              "Beta": {
+                "position_metres": 0.0003493461984011216,
+                "velocity_m_per_s": 1.323033638353061e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 2.1536268361251915e-14,
+                "momentum": 1.0991046088407878e-16,
+                "angular": 6.0292270393684175e-15
+              },
+              "raw": {
+                "energy": 2.1536268361251915e-14,
+                "momentum": 1.0991046088407878e-16,
+                "angular": 0.0017431283419210677
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0017431283419204252
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": 4.5574616085291596e-15
+            },
+            "point_energy_without_V2_scaled_change": 0.00042167625075319333,
+            "statistics": {
+              "packets": 60,
+              "rhs_calls": 2810,
+              "failed": false,
+              "finished": true,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ]
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-9": {
+            "error": {
+              "position_metres": 0.00037929425654878717,
+              "velocity_m_per_s": 1.4210057271715038e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 9.465991236762886e-05,
+                "velocity_m_per_s": 3.5528443938405003e-07
+              },
+              "Beta": {
+                "position_metres": 0.00037929425654878717,
+                "velocity_m_per_s": 1.4210057271715038e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 1.1334878084869429e-15,
+                "momentum": 1.1127586057651667e-16,
+                "angular": 2.3672416937410986e-15
+              },
+              "raw": {
+                "energy": 1.1334878084869429e-15,
+                "momentum": 1.1127586057651667e-16,
+                "angular": 0.0017431283419206286
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0017431283419204252
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": 8.680879254341257e-16
+            },
+            "point_energy_without_V2_scaled_change": 0.00042167625076048004,
+            "statistics": {
+              "packets": 60,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ],
+              "steps_done": 125,
+              "force_evaluations": 4430,
+              "epsilon": 1e-09,
+              "gravity": "none",
+              "velocity_dependent": true,
+              "physics": "newtonian",
+              "figures": "fixed J2 only",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-11": {
+            "error": {
+              "position_metres": 0.00037932108312756934,
+              "velocity_m_per_s": 1.4212544181074748e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 9.468379336392195e-05,
+                "velocity_m_per_s": 3.553411549344305e-07
+              },
+              "Beta": {
+                "position_metres": 0.00037932108312756934,
+                "velocity_m_per_s": 1.4212544181074748e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 9.71560978703094e-16,
+                "momentum": 1.1127586057651667e-16,
+                "angular": 2.148744952222562e-15
+              },
+              "raw": {
+                "energy": 9.71560978703094e-16,
+                "momentum": 1.1127586057651667e-16,
+                "angular": 0.001743128341921495
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0017431283419204252
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": 8.680879254341257e-16
+            },
+            "point_energy_without_V2_scaled_change": 0.00042167625075999426,
+            "statistics": {
+              "packets": 60,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ],
+              "steps_done": 180,
+              "force_evaluations": 5731,
+              "epsilon": 1e-11,
+              "gravity": "none",
+              "velocity_dependent": true,
+              "physics": "newtonian",
+              "figures": "fixed J2 only",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          }
+        },
+        "reference_comparisons": {
+          "0_to_1": {
+            "state": {
+              "position_metres": 0.0009272223873824693,
+              "velocity_m_per_s": 3.4428751119731423e-06
+            },
+            "maximum_scaled_budget_component": 3.4630265384750033e-15
+          },
+          "1_to_2": {
+            "state": {
+              "position_metres": 0.00010941762653046077,
+              "velocity_m_per_s": 3.97199902053609e-07
+            },
+            "maximum_scaled_budget_component": 4.088236348052804e-16
+          }
+        },
+        "reference_passed": true,
+        "reaction_negative_control": {
+          "correct_scaled_net_force": 0.0,
+          "missing_reaction_scaled_net_force": 0.5
+        },
+        "packet_endpoints_equal": true,
+        "packets": 60,
+        "cost": {
+          "dop853": {
+            "seconds": [
+              0.5978281000006973,
+              0.4102299000005587,
+              0.38212430000021413
+            ],
+            "median_seconds": 0.4102299000005587
+          },
+          "ias15_1e-9": {
+            "seconds": [
+              0.8765547000002698,
+              0.6446524999992107,
+              0.6446944999988773
+            ],
+            "median_seconds": 0.6446944999988773
+          },
+          "ias15_1e-11": {
+            "seconds": [
+              0.9113571999987471,
+              0.8775144999999611,
+              0.9091128000000026
+            ],
+            "median_seconds": 0.9091128000000026
+          }
+        }
+      },
+      "newton_two": {
+        "settings": {
+          "dt": 20.958450219516816,
+          "backend": "rust",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 1e-07,
+          "velocity_atol": 1e-13,
+          "physics": "newtonian",
+          "figures": [
+            {
+              "body": "Alpha",
+              "coefficient": 0.005,
+              "reference_radius": 20000000.0,
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "provenance": "user-specified"
+            },
+            {
+              "body": "Beta",
+              "coefficient": -0.003,
+              "reference_radius": 14285714.285714285,
+              "axis": [
+                0.6,
+                0.0,
+                0.8
+              ],
+              "provenance": "user-specified"
+            }
+          ],
+          "relative_pair": null,
+          "error_control": "per-body"
+        },
+        "masses_kg": [
+          1.0772727372000872e+29,
+          2.693181843000218e+28
+        ],
+        "names": [
+          "Alpha",
+          "Beta"
+        ],
+        "samples": 61,
+        "duration_seconds": 4191.690043903363,
+        "nominal_period_seconds": 2095.8450219516817,
+        "reference_levels": [
+          {
+            "rtol": 1e-13,
+            "max_step_seconds": 10.479225109758408,
+            "rhs_calls": 7688,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 2.7565216000002692,
+            "balance": {
+              "corrected": {
+                "energy": 1.6388451790444698e-12,
+                "momentum": 1.0503495880077855e-15,
+                "angular": 5.81696563636856e-13
+              },
+              "raw": {
+                "energy": 1.6388451790444698e-12,
+                "momentum": 1.0503495880077855e-15,
+                "angular": 0.0014654990003914506
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0014654990003927114
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": null
+            }
+          },
+          {
+            "rtol": 3e-14,
+            "max_step_seconds": 5.239612554879204,
+            "rhs_calls": 9578,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 3.6271686000000045,
+            "balance": {
+              "corrected": {
+                "energy": 5.414779447411034e-13,
+                "momentum": 1.0555124516076068e-15,
+                "angular": 2.092594965546595e-13
+              },
+              "raw": {
+                "energy": 5.414779447411034e-13,
+                "momentum": 1.0555124516076068e-15,
+                "angular": 0.0014654990003910124
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465499000394068
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": null
+            }
+          },
+          {
+            "rtol": 3e-14,
+            "max_step_seconds": 2.619806277439602,
+            "rhs_calls": 10532,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 3.6472535000011703,
+            "balance": {
+              "corrected": {
+                "energy": 4.2051980337698726e-13,
+                "momentum": 1.0357275103826557e-15,
+                "angular": 1.232694190818392e-13
+              },
+              "raw": {
+                "energy": 4.2051980337698726e-13,
+                "momentum": 1.0357275103826557e-15,
+                "angular": 0.0014654990003908361
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0014654990003943225
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": null
+            }
+          }
+        ],
+        "candidates": {
+          "dop853": {
+            "error": {
+              "position_metres": 0.00034805824569695843,
+              "velocity_m_per_s": 1.3205993571365387e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 8.681327630999737e-05,
+                "velocity_m_per_s": 3.30141284554432e-07
+              },
+              "Beta": {
+                "position_metres": 0.00034805824569695843,
+                "velocity_m_per_s": 1.3205993571365387e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 2.4288783406449005e-14,
+                "momentum": 1.0991046088407878e-16,
+                "angular": 7.089870495295665e-15
+              },
+              "raw": {
+                "energy": 2.4288783406449005e-14,
+                "momentum": 1.0991046088407878e-16,
+                "angular": 0.001465499000394893
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465499000394323
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": null
+            },
+            "point_energy_without_V2_scaled_change": 0.00047294897602450845,
+            "statistics": {
+              "packets": 60,
+              "rhs_calls": 2822,
+              "failed": false,
+              "finished": true,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ]
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-9": {
+            "error": {
+              "position_metres": 0.00038542835198249474,
+              "velocity_m_per_s": 1.4466157019308485e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 9.620141657930481e-05,
+                "velocity_m_per_s": 3.6164308655174405e-07
+              },
+              "Beta": {
+                "position_metres": 0.00038542835198249474,
+                "velocity_m_per_s": 1.4466157019308485e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 1.7811774498062604e-15,
+                "momentum": 1.1527506388168117e-16,
+                "angular": 1.98468423190964e-15
+              },
+              "raw": {
+                "energy": 1.7811774498062604e-15,
+                "momentum": 1.1527506388168117e-16,
+                "angular": 0.0014654990003949678
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465499000394323
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": null
+            },
+            "point_energy_without_V2_scaled_change": 0.00047294897603697666,
+            "statistics": {
+              "packets": 60,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ],
+              "steps_done": 125,
+              "force_evaluations": 4437,
+              "epsilon": 1e-09,
+              "gravity": "none",
+              "velocity_dependent": true,
+              "physics": "newtonian",
+              "figures": "fixed J2 only",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-11": {
+            "error": {
+              "position_metres": 0.0003830172780026992,
+              "velocity_m_per_s": 1.4371755899593227e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 9.553325033019655e-05,
+                "velocity_m_per_s": 3.592859681106837e-07
+              },
+              "Beta": {
+                "position_metres": 0.0003830172780026992,
+                "velocity_m_per_s": 1.4371755899593227e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 1.6192522270966004e-15,
+                "momentum": 1.4330570819048363e-16,
+                "angular": 2.1286615416678076e-15
+              },
+              "raw": {
+                "energy": 1.6192522270966004e-15,
+                "momentum": 1.4330570819048363e-16,
+                "angular": 0.0014654990003956218
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465499000394323
+                },
+                "pn2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                },
+                "pn_q2": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0
+                }
+              },
+              "single_axis_angular_projection": null
+            },
+            "point_energy_without_V2_scaled_change": 0.00047294897603746244,
+            "statistics": {
+              "packets": 60,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ],
+              "steps_done": 180,
+              "force_evaluations": 5766,
+              "epsilon": 1e-11,
+              "gravity": "none",
+              "velocity_dependent": true,
+              "physics": "newtonian",
+              "figures": "fixed J2 only",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          }
+        },
+        "reference_comparisons": {
+          "0_to_1": {
+            "state": {
+              "position_metres": 0.0008971947651236333,
+              "velocity_m_per_s": 3.3427748934258897e-06
+            },
+            "maximum_scaled_budget_component": 3.0582296787144613e-15
+          },
+          "1_to_2": {
+            "state": {
+              "position_metres": 0.0001251423266779491,
+              "velocity_m_per_s": 4.5310757349558336e-07
+            },
+            "maximum_scaled_budget_component": 4.815705050214092e-16
+          }
+        },
+        "reference_passed": true,
+        "reaction_negative_control": null,
+        "packet_endpoints_equal": true,
+        "packets": 60,
+        "cost": {
+          "dop853": {
+            "seconds": [
+              0.8889574000004359,
+              0.7446682999998302,
+              0.7064707999998063
+            ],
+            "median_seconds": 0.7446682999998302
+          },
+          "ias15_1e-9": {
+            "seconds": [
+              1.1932059000009758,
+              1.22490309999921,
+              1.1988994000003004
+            ],
+            "median_seconds": 1.1988994000003004
+          },
+          "ias15_1e-11": {
+            "seconds": [
+              1.7513070000004518,
+              1.8321092999995017,
+              1.328887499999837
+            ],
+            "median_seconds": 1.7513070000004518
+          }
+        }
+      },
+      "eih_two": {
+        "settings": {
+          "dt": 20.958450219516816,
+          "backend": "rust",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 1e-07,
+          "velocity_atol": 1e-13,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Alpha",
+              "coefficient": 0.005,
+              "reference_radius": 20000000.0,
+              "axis": [
+                0.0,
+                0.0,
+                1.0
+              ],
+              "provenance": "user-specified"
+            },
+            {
+              "body": "Beta",
+              "coefficient": -0.003,
+              "reference_radius": 14285714.285714285,
+              "axis": [
+                0.6,
+                0.0,
+                0.8
+              ],
+              "provenance": "user-specified"
+            }
+          ],
+          "relative_pair": null,
+          "error_control": "per-body"
+        },
+        "masses_kg": [
+          1.0772727372000872e+29,
+          2.693181843000218e+28
+        ],
+        "names": [
+          "Alpha",
+          "Beta"
+        ],
+        "samples": 61,
+        "duration_seconds": 4191.690043903363,
+        "nominal_period_seconds": 2095.8450219516817,
+        "reference_levels": [
+          {
+            "rtol": 1e-13,
+            "max_step_seconds": 10.479225109758408,
+            "rhs_calls": 7688,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 4.804234500001257,
+            "balance": {
+              "corrected": {
+                "energy": 1.6769261597939687e-12,
+                "momentum": 8.90321048671153e-16,
+                "angular": 5.951489300115232e-13
+              },
+              "raw": {
+                "energy": 2.269566442467611e-09,
+                "momentum": 1.9421171462305504e-10,
+                "angular": 0.0014654850332231062
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0014654795769447671
+                },
+                "pn2": {
+                  "energy": 2.5018477164389006e-11,
+                  "momentum": 2.4404008540343283e-12,
+                  "angular": 1.337262728980097e-11
+                },
+                "pn_q2": {
+                  "energy": 2.2829133773924406e-09,
+                  "momentum": 1.9650393233886523e-10,
+                  "angular": 5.533953435968142e-09
+                }
+              },
+              "single_axis_angular_projection": null
+            }
+          },
+          {
+            "rtol": 3e-14,
+            "max_step_seconds": 5.239612554879204,
+            "rhs_calls": 9578,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 6.148615599999175,
+            "balance": {
+              "corrected": {
+                "energy": 5.524378349318829e-13,
+                "momentum": 1.4726847971534375e-15,
+                "angular": 2.1525480033076606e-13
+              },
+              "raw": {
+                "energy": 2.270151969131173e-09,
+                "momentum": 1.9421248603923645e-10,
+                "angular": 0.0014654850332382076
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465479576946084
+                },
+                "pn2": {
+                  "energy": 2.5018477164399534e-11,
+                  "momentum": 2.4404008540420747e-12,
+                  "angular": 1.3372627289826867e-11
+                },
+                "pn_q2": {
+                  "energy": 2.2829133773924274e-09,
+                  "momentum": 1.9650393233982967e-10,
+                  "angular": 5.533953435978007e-09
+                }
+              },
+              "single_axis_angular_projection": null
+            }
+          },
+          {
+            "rtol": 3e-14,
+            "max_step_seconds": 2.619806277439602,
+            "rhs_calls": 10526,
+            "length_metres": 100000000.0,
+            "clock_seconds": 333.564095198152,
+            "mass_kg": 1.346590921500109e+29,
+            "interpolation": "RK45 quartic",
+            "seconds": 7.303033100000903,
+            "balance": {
+              "corrected": {
+                "energy": 3.963461997533366e-13,
+                "momentum": 1.3868402296200538e-15,
+                "angular": 9.751039096332748e-14
+              },
+              "raw": {
+                "energy": 2.2701833828957557e-09,
+                "momentum": 1.9421195787946565e-10,
+                "angular": 0.0014654850332269035
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.0014654795769463848
+                },
+                "pn2": {
+                  "energy": 2.5018477164401295e-11,
+                  "momentum": 2.4404008540445566e-12,
+                  "angular": 1.3372627289839637e-11
+                },
+                "pn_q2": {
+                  "energy": 2.2829133773923604e-09,
+                  "momentum": 1.9650393234006467e-10,
+                  "angular": 5.533953435980566e-09
+                }
+              },
+              "single_axis_angular_projection": null
+            }
+          }
+        ],
+        "candidates": {
+          "dop853": {
+            "error": {
+              "position_metres": 0.00032126258409468614,
+              "velocity_m_per_s": 1.2173063948103036e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 8.006173009796328e-05,
+                "velocity_m_per_s": 3.043435397020386e-07
+              },
+              "Beta": {
+                "position_metres": 0.00032126258409468614,
+                "velocity_m_per_s": 1.2173063948103036e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 2.360801711021788e-14,
+                "momentum": 5.047298684070805e-16,
+                "angular": 1.0192736659929275e-14
+              },
+              "raw": {
+                "energy": 2.270212367761015e-09,
+                "momentum": 1.9421207496335381e-10,
+                "angular": 0.0014654850332274324
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465479576946385
+                },
+                "pn2": {
+                  "energy": 2.5018477164401295e-11,
+                  "momentum": 2.4404008540445566e-12,
+                  "angular": 1.337262728983964e-11
+                },
+                "pn_q2": {
+                  "energy": 2.2829133773923604e-09,
+                  "momentum": 1.9650393234006467e-10,
+                  "angular": 5.533953435980566e-09
+                }
+              },
+              "single_axis_angular_projection": null
+            },
+            "point_energy_without_V2_scaled_change": 0.00047294172735044734,
+            "statistics": {
+              "packets": 60,
+              "rhs_calls": 2822,
+              "failed": false,
+              "finished": true,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ]
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-9": {
+            "error": {
+              "position_metres": 0.0003518274567364913,
+              "velocity_m_per_s": 1.3193096124784808e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 8.771636220145882e-05,
+                "velocity_m_per_s": 3.2988715311442144e-07
+              },
+              "Beta": {
+                "position_metres": 0.0003518274567364913,
+                "velocity_m_per_s": 1.3193096124784808e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 1.8477282297830448e-15,
+                "momentum": 1.7536619180697881e-16,
+                "angular": 2.8574822430012454e-15
+              },
+              "raw": {
+                "energy": 2.2702324466620883e-09,
+                "momentum": 1.9421233084844715e-10,
+                "angular": 0.001465485033227818
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465479576946385
+                },
+                "pn2": {
+                  "energy": 2.5018477164401295e-11,
+                  "momentum": 2.4404008540445566e-12,
+                  "angular": 1.337262728983964e-11
+                },
+                "pn_q2": {
+                  "energy": 2.2829133773923604e-09,
+                  "momentum": 1.9650393234006467e-10,
+                  "angular": 5.533953435980566e-09
+                }
+              },
+              "single_axis_angular_projection": null
+            },
+            "point_energy_without_V2_scaled_change": 0.00047294172735789597,
+            "statistics": {
+              "packets": 60,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ],
+              "steps_done": 125,
+              "force_evaluations": 4465,
+              "epsilon": 1e-09,
+              "gravity": "none",
+              "velocity_dependent": true,
+              "physics": "eih-1pn",
+              "figures": "fixed J2 only",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          },
+          "ias15_1e-11": {
+            "error": {
+              "position_metres": 0.0003503761719075535,
+              "velocity_m_per_s": 1.3137245317320037e-06
+            },
+            "per_body": {
+              "Alpha": {
+                "position_metres": 8.7295723305876e-05,
+                "velocity_m_per_s": 3.285056403945593e-07
+              },
+              "Beta": {
+                "position_metres": 0.0003503761719075535,
+                "velocity_m_per_s": 1.3137245317320037e-06
+              }
+            },
+            "balance": {
+              "corrected": {
+                "energy": 1.7895701134529286e-15,
+                "momentum": 1.5901329195535036e-16,
+                "angular": 2.714194542455608e-15
+              },
+              "raw": {
+                "energy": 2.270232122808845e-09,
+                "momentum": 1.9421243017946003e-10,
+                "angular": 0.001465485033227818
+              },
+              "source_integrals": {
+                "figure_torque": {
+                  "energy": 0.0,
+                  "momentum": 0.0,
+                  "angular": 0.001465479576946385
+                },
+                "pn2": {
+                  "energy": 2.5018477164401295e-11,
+                  "momentum": 2.4404008540445566e-12,
+                  "angular": 1.337262728983964e-11
+                },
+                "pn_q2": {
+                  "energy": 2.2829133773923604e-09,
+                  "momentum": 1.9650393234006467e-10,
+                  "angular": 5.533953435980566e-09
+                }
+              },
+              "single_axis_angular_projection": null
+            },
+            "point_energy_without_V2_scaled_change": 0.0004729417273575721,
+            "statistics": {
+              "packets": 60,
+              "packet_endpoints": [
+                69.86150073172273,
+                139.72300146344546,
+                209.58450219516817,
+                279.4460029268909,
+                349.30750365861365,
+                419.16900439033634,
+                489.0305051220591,
+                558.8920058537818,
+                628.7535065855045,
+                698.6150073172273,
+                768.47650804895,
+                838.3380087806727,
+                908.1995095123955,
+                978.0610102441182,
+                1047.9225109758409,
+                1117.7840117075636,
+                1187.6455124392864,
+                1257.507013171009,
+                1327.3685139027318,
+                1397.2300146344546,
+                1467.0915153661772,
+                1536.9530160979,
+                1606.8145168296228,
+                1676.6760175613454,
+                1746.5375182930682,
+                1816.399019024791,
+                1886.2605197565138,
+                1956.1220204882363,
+                2025.9835212199591,
+                2095.8450219516817,
+                2165.7065226834047,
+                2235.5680234151273,
+                2305.42952414685,
+                2375.291024878573,
+                2445.1525256102955,
+                2515.014026342018,
+                2584.875527073741,
+                2654.7370278054636,
+                2724.598528537186,
+                2794.4600292689092,
+                2864.321530000632,
+                2934.1830307323544,
+                3004.0445314640774,
+                3073.9060321958,
+                3143.7675329275226,
+                3213.6290336592456,
+                3283.490534390968,
+                3353.3520351226907,
+                3423.2135358544137,
+                3493.0750365861363,
+                3562.9365373178593,
+                3632.798038049582,
+                3702.6595387813045,
+                3772.5210395130275,
+                3842.38254024475,
+                3912.2440409764727,
+                3982.1055417081957,
+                4051.9670424399183,
+                4121.828543171641,
+                4191.690043903363
+              ],
+              "steps_done": 180,
+              "force_evaluations": 5731,
+              "epsilon": 1e-11,
+              "gravity": "none",
+              "velocity_dependent": true,
+              "physics": "eih-1pn",
+              "figures": "fixed J2 only",
+              "callback_failed": false
+            },
+            "repeat_bitexact": true,
+            "checks_passed": true
+          }
+        },
+        "reference_comparisons": {
+          "0_to_1": {
+            "state": {
+              "position_metres": 0.0008762034565973703,
+              "velocity_m_per_s": 3.2636898107345206e-06
+            },
+            "maximum_scaled_budget_component": 2.9790603206701877e-15
+          },
+          "1_to_2": {
+            "state": {
+              "position_metres": 0.0001515021833882088,
+              "velocity_m_per_s": 5.538273894981198e-07
+            },
+            "maximum_scaled_budget_component": 5.71455467018609e-16
+          }
+        },
+        "reference_passed": true,
+        "reaction_negative_control": null,
+        "packet_endpoints_equal": true,
+        "packets": 60,
+        "cost": {
+          "dop853": {
+            "seconds": [
+              0.6299470000012661,
+              0.700084699999934,
+              0.7877607999998872
+            ],
+            "median_seconds": 0.700084699999934
+          },
+          "ias15_1e-9": {
+            "seconds": [
+              1.2375929999998334,
+              1.1198022999997193,
+              1.0167607000003045
+            ],
+            "median_seconds": 1.1198022999997193
+          },
+          "ias15_1e-11": {
+            "seconds": [
+              1.4625023000007786,
+              1.3776259000005666,
+              1.402758399999584
+            ],
+            "median_seconds": 1.402758399999584
+          }
+        }
+      }
+    },
+    "complete": true,
+    "general_release": false,
+    "npz_sha256": "6ce6fc54dc37f6c9558aed44dd2f34b012aae1769453acd48fb213dfbb8b6e59",
+    "warnings": [],
+    "source_library_native_unchanged": true,
+    "checks_passed": true
+  },
+  "tests": {
+    "new": 11,
+    "related_passed": 222,
+    "seconds": 45.21
+  },
+  "receipts": {
+    "json_sha256": "7adf2a25c497abc682d4d380a3a9ac027394e43b333ee5387b4b4764bd902926",
+    "npz_sha256": "6ce6fc54dc37f6c9558aed44dd2f34b012aae1769453acd48fb213dfbb8b6e59"
+  },
+  "retained_failure": {
+    "description": "First unit test divided by zero initial equatorial torque; normalization corrected before trajectory audit",
+    "source_sha256": "6f49f36d23c0bc746a519eaca3bf2f77371c441bfca5e87355d1c34793f90982",
+    "output_sha256": "622cb7978ca8e00b21006c76dafd7684c710b07e8207d648f58618c9fc7efb91"
+  },
+  "limitations": [
+    "Existing additive Newton/EIH point + Newton fixedJ2 only; not mixed GR forces",
+    "Canonical balance bookkeeping accounts for truncation sources, does not improve physical model",
+    "Reference source integrals are evaluated on the independent converged reference trajectory",
+    "Model tasks only: not ten-body/year/JPL or dynamic spin qualification",
+    "Timing variability and Python/Rust callback included; no default/performance migration"
+  ],
+  "general_release": false
+}

@@ -1,0 +1,4226 @@
+{
+  "protocol": "docs/catalog-performance-protocol.md",
+  "date": "2026-10-15",
+  "machine": {
+    "Name": "13th Gen Intel(R) Core(TM) i5-13400F",
+    "NumberOfCores": 10,
+    "NumberOfLogicalProcessors": 16
+  },
+  "versions": {
+    "numpy": "2.5.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.0"
+  },
+  "python": "3.14.2",
+  "source_sha256": {
+    "src\\solar_simulator\\accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src\\solar_simulator\\app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+    "src\\solar_simulator\\application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+    "src\\solar_simulator\\branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+    "src\\solar_simulator\\cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+    "src\\solar_simulator\\collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+    "src\\solar_simulator\\commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+    "src\\solar_simulator\\contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+    "src\\solar_simulator\\control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+    "src\\solar_simulator\\convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+    "src\\solar_simulator\\coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src\\solar_simulator\\diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+    "src\\solar_simulator\\ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src\\solar_simulator\\error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src\\solar_simulator\\experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+    "src\\solar_simulator\\impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+    "src\\solar_simulator\\kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src\\solar_simulator\\mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+    "src\\solar_simulator\\motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+    "src\\solar_simulator\\native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src\\solar_simulator\\nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "src\\solar_simulator\\oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src\\solar_simulator\\orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+    "src\\solar_simulator\\orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+    "src\\solar_simulator\\orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "src\\solar_simulator\\perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src\\solar_simulator\\planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+    "src\\solar_simulator\\plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+    "src\\solar_simulator\\relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src\\solar_simulator\\rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src\\solar_simulator\\runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+    "src\\solar_simulator\\rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+    "src\\solar_simulator\\sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+    "src\\solar_simulator\\scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+    "src\\solar_simulator\\scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+    "src\\solar_simulator\\simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src\\solar_simulator\\spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src\\solar_simulator\\state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+    "src\\solar_simulator\\storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+    "src\\solar_simulator\\time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+    "src\\solar_simulator\\vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+    "src\\solar_simulator\\__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+    "src\\solar_simulator\\__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+    "src\\solar_simulator\\data\\asteroids-20261008.json": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+    "src\\solar_simulator\\data\\asteroids-catalog-20261008.json": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+    "src\\solar_simulator\\data\\asteroids-full-20261008.json": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+    "src\\solar_simulator\\data\\earth-j2-20261008.json": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+    "src\\solar_simulator\\data\\kuiper-20261010.json": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+    "src\\solar_simulator\\data\\kuiper-ring-036-0-20261011.json": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+    "src\\solar_simulator\\data\\kuiper-ring-036-1-20261011.json": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+    "src\\solar_simulator\\data\\kuiper-ring-072-0-20261011.json": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+    "src\\solar_simulator\\data\\kuiper-ring-072-1-20261011.json": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+    "src\\solar_simulator\\data\\kuiper-ring-144-0-20261011.json": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+    "src\\solar_simulator\\data\\kuiper-ring-144-1-20261011.json": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+    "src\\solar_simulator\\data\\kuiper-ring-manifest.json": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461",
+    "src\\solar_simulator\\data\\lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+    "src\\solar_simulator\\data\\orbit-cohort-13270.json": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+    "src\\solar_simulator\\data\\orbit-cohort-13271.json": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+    "src\\solar_simulator\\data\\orbit-observations-13270.json": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+    "src\\solar_simulator\\data\\orientation-de441-20261008.json": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+    "src\\solar_simulator\\data\\pluto-system-20261008.json": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+    "src\\solar_simulator\\data\\solar-j2-20261008.json": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+    "src\\solar_simulator\\data\\solar-system-20261008.json": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+    "src\\solar_simulator\\data\\solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "src\\solar_simulator\\data\\__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+    "rust\\solar_core\\src\\collisions.rs": "dba247071f1fa924157cc8b8e125665731adfe8954f913464af2912cd6520abd",
+    "rust\\solar_core\\src\\contacts.rs": "a3ca67f3ccabe99ec0f098f66395af01706494cc65eaf03d942914e8cefab594",
+    "rust\\solar_core\\src\\impacts.rs": "3a9230536702f203d8a079e8d9b51b952e11ac59da1a36cb460272630700d374",
+    "rust\\solar_core\\src\\lib.rs": "6df5a41ccdcd9ea2317d4e25db82a5074c1029cb2099142029a88d93781608ad",
+    "rust\\solar_core\\src\\main.rs": "1365b6e5edcdb80ee82e1a188e3d8a2d1a17d86732dee1c2c65dd5dce2b5f1d4",
+    "rust\\solar_core\\src\\relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "rust\\solar_native\\src\\lib.rs": "3a38d0d17585c41fe58a97a4673988cbbdf5bcb7444987a908ec6dcf950c3ad6"
+  },
+  "installed_native_binary": {
+    "filename": "solar_native.cp314t-win_amd64.pyd",
+    "sha256": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7",
+    "sampled_after_benchmarks": true
+  },
+  "current_measurement_script_sha256": "a3894200d350d9d2c1323e7b28474e4903b3c0700e55f707ff8e16fc991e3fcc",
+  "physics": {
+    "10-scientific-rust": {
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 1e-07,
+        "velocity_atol": 1e-13,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "c22": 0.0,
+            "orientation": "earth-de441",
+            "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+            "provenance": "DE441 nominal coefficients and prescribed orientation"
+          },
+          {
+            "body": "Moon",
+            "coefficient": 0.000203214360135,
+            "reference_radius": 1738000.0,
+            "c22": 2.2380850528171017e-05,
+            "orientation": "moon-de441",
+            "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+            "provenance": "DE441 nominal coefficients and prescribed orientation"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "origin": {
+        "epoch_jd_tdb": 2461321.5,
+        "frame": "Ecliptic J2000",
+        "center": "Solar System Barycenter",
+        "ephemeris": "DE441",
+        "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+        "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+      },
+      "initial_sha256": "f177a8d3ccaff44beb9b8e7e819a635819968643667137246a52c184b0536d49",
+      "bodies": 10,
+      "packet": {
+        "raw_seconds": [
+          0.17893980001099408,
+          0.1804944999748841,
+          0.190668099996401
+        ],
+        "median_seconds": 0.1804944999748841
+      },
+      "final_sha256": "6ad56cc0aec489b41b29a36a78b24195759a7ce2226be253f8b554edeab67fff",
+      "report": {
+        "raw_seconds": [
+          0.0027183666631268957,
+          0.002635233337059617,
+          0.0023324999977679304
+        ],
+        "median_seconds": 0.002635233337059617
+      },
+      "packet_with_report": {
+        "raw_seconds": [
+          0.17767119998461567,
+          0.17786600001272745,
+          0.18043030000990257
+        ],
+        "median_seconds": 0.17786600001272745
+      },
+      "adapter": {
+        "raw_seconds": [
+          8.690002141520381e-06,
+          8.530000923201441e-06,
+          8.58000130392611e-06
+        ],
+        "median_seconds": 8.58000130392611e-06
+      },
+      "native_with_owned_lists": {
+        "raw_seconds": [
+          7.490001735277474e-06,
+          7.249999907799065e-06,
+          7.209999603219331e-06
+        ],
+        "median_seconds": 7.249999907799065e-06
+      },
+      "python_conversions_only": {
+        "raw_seconds": [
+          5.070000770501792e-06,
+          4.44000179413706e-06,
+          4.539999645203352e-06
+        ],
+        "median_seconds": 4.539999645203352e-06
+      },
+      "instrumented_solver": [
+        {
+          "rhs_calls": 209,
+          "rhs_seconds": 0.16890030019567348
+        }
+      ]
+    },
+    "27-scientific-rust": {
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 1e-07,
+        "velocity_atol": 1e-13,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "c22": 0.0,
+            "orientation": "earth-de441",
+            "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+            "provenance": "DE441 nominal coefficients and prescribed orientation"
+          },
+          {
+            "body": "Moon",
+            "coefficient": 0.000203214360135,
+            "reference_radius": 1738000.0,
+            "c22": 2.2380850528171017e-05,
+            "orientation": "moon-de441",
+            "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+            "provenance": "DE441 nominal coefficients and prescribed orientation"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "origin": {
+        "epoch_jd_tdb": 2461321.5,
+        "frame": "Ecliptic J2000",
+        "center": "Solar System Barycenter",
+        "ephemeris": "DE441",
+        "dataset_sha256": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+        "gm_sha256": "f93053a476eca58623aa0a2d5b34828543fcee54a8a5a9c86cdd4b091bd8d114"
+      },
+      "initial_sha256": "4d0f7b3aa60ccfbf26375d7c3dda0d53006395b1c60e0bf922df79f5c11f1728",
+      "bodies": 27,
+      "packet": {
+        "raw_seconds": [
+          0.19788410002365708,
+          0.21001099998829886,
+          0.20362039998872206
+        ],
+        "median_seconds": 0.20362039998872206
+      },
+      "final_sha256": "212344d553c79cec81fadd590f2e6235962e90eb36cff309090008b6f3412802",
+      "report": {
+        "raw_seconds": [
+          0.0035790000013851873,
+          0.0035083333301978805,
+          0.0036474000080488622
+        ],
+        "median_seconds": 0.0035790000013851873
+      },
+      "packet_with_report": {
+        "raw_seconds": [
+          0.20584219999727793,
+          0.2175901000155136,
+          0.21253359998809174
+        ],
+        "median_seconds": 0.21253359998809174
+      },
+      "adapter": {
+        "raw_seconds": [
+          2.719000040087849e-05,
+          2.6359999901615082e-05,
+          2.7089999639429153e-05
+        ],
+        "median_seconds": 2.7089999639429153e-05
+      },
+      "native_with_owned_lists": {
+        "raw_seconds": [
+          2.367999986745417e-05,
+          2.3629999486729502e-05,
+          2.412000030744821e-05
+        ],
+        "median_seconds": 2.367999986745417e-05
+      },
+      "python_conversions_only": {
+        "raw_seconds": [
+          1.1739999172277748e-05,
+          1.0639999527484178e-05,
+          1.1160000576637686e-05
+        ],
+        "median_seconds": 1.1160000576637686e-05
+      },
+      "instrumented_solver": [
+        {
+          "rhs_calls": 233,
+          "rhs_seconds": 0.20752940015518107
+        }
+      ]
+    },
+    "354-scientific-rust": {
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 1e-07,
+        "velocity_atol": 1e-13,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "c22": 0.0,
+            "orientation": "earth-de441",
+            "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+            "provenance": "DE441 nominal coefficients and prescribed orientation"
+          },
+          {
+            "body": "Moon",
+            "coefficient": 0.000203214360135,
+            "reference_radius": 1738000.0,
+            "c22": 2.2380850528171017e-05,
+            "orientation": "moon-de441",
+            "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+            "provenance": "DE441 nominal coefficients and prescribed orientation"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "origin": {
+        "epoch_jd_tdb": 2461321.5,
+        "frame": "Ecliptic J2000",
+        "center": "Solar System Barycenter",
+        "ephemeris": "DE441",
+        "dataset_sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+        "gm_sha256": "dfe52a636c1d74311dc3fc7b9e5abda68814afabee21324772072c2d0c4f531b"
+      },
+      "initial_sha256": "a6dfbe1e56bf7ede7d328b842212e07125cc14b0cd9d2b0a70fcd159f85880c0",
+      "bodies": 354,
+      "packet": {
+        "raw_seconds": [
+          0.810287900007097,
+          0.8243411000003107,
+          0.8366972000221722
+        ],
+        "median_seconds": 0.8243411000003107
+      },
+      "final_sha256": "0ce25d19bc43f671a6f1f9f8da77bd34c61796f4d6b2c62c3b1ed922f875a8bf",
+      "report": {
+        "raw_seconds": [
+          0.12256686666902776,
+          0.12144913333274114,
+          0.12160616666854669
+        ],
+        "median_seconds": 0.12160616666854669
+      },
+      "packet_with_report": {
+        "raw_seconds": [
+          0.9468814000138082,
+          0.9227053999784403,
+          0.9550382000161335
+        ],
+        "median_seconds": 0.9468814000138082
+      },
+      "adapter": {
+        "raw_seconds": [
+          0.00230747000023257,
+          0.0024848800007021055,
+          0.0024529799993615597
+        ],
+        "median_seconds": 0.0024529799993615597
+      },
+      "native_with_owned_lists": {
+        "raw_seconds": [
+          0.0022986500000115482,
+          0.0022702199988998474,
+          0.0023996799980523066
+        ],
+        "median_seconds": 0.0022986500000115482
+      },
+      "python_conversions_only": {
+        "raw_seconds": [
+          0.00013322000158950688,
+          0.0001336699991952628,
+          0.00013349000073503703
+        ],
+        "median_seconds": 0.00013349000073503703
+      },
+      "instrumented_solver": [
+        {
+          "rhs_calls": 209,
+          "rhs_seconds": 0.8019963000260759
+        }
+      ]
+    },
+    "354-newtonian-python": {
+      "settings": {
+        "dt": 3600,
+        "backend": "python",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 1e-13,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "newtonian",
+        "figures": [],
+        "relative_pair": null,
+        "error_control": "per-body"
+      },
+      "origin": {
+        "epoch_jd_tdb": 2461321.5,
+        "frame": "Ecliptic J2000",
+        "center": "Solar System Barycenter",
+        "ephemeris": "DE441",
+        "dataset_sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+        "gm_sha256": "dfe52a636c1d74311dc3fc7b9e5abda68814afabee21324772072c2d0c4f531b"
+      },
+      "initial_sha256": "9c133ad4489eed76b3758ccf6a8edeccb95e508d344a1266399f6ee6728466ea",
+      "bodies": 354,
+      "packet": {
+        "raw_seconds": [
+          1.3286564000009093,
+          1.3071626000164542,
+          1.2954967000114266
+        ],
+        "median_seconds": 1.3071626000164542
+      },
+      "final_sha256": "47ae6752d81fbf067dae5af617dd2bf0f45be927c5cab5c2a0da0a2f7e7f6f48",
+      "report": {
+        "raw_seconds": [
+          0.08309919999252695,
+          0.09457369999533209,
+          0.09016223333310336
+        ],
+        "median_seconds": 0.09016223333310336
+      },
+      "packet_with_report": {
+        "raw_seconds": [
+          1.4003540000121575,
+          1.3895840999903157,
+          1.391822100005811
+        ],
+        "median_seconds": 1.391822100005811
+      },
+      "instrumented_solver": [
+        {
+          "rhs_calls": 125,
+          "rhs_seconds": 1.3077737001003698
+        }
+      ]
+    },
+    "354-newtonian-rust": {
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 1e-13,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "newtonian",
+        "figures": [],
+        "relative_pair": null,
+        "error_control": "per-body"
+      },
+      "origin": {
+        "epoch_jd_tdb": 2461321.5,
+        "frame": "Ecliptic J2000",
+        "center": "Solar System Barycenter",
+        "ephemeris": "DE441",
+        "dataset_sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+        "gm_sha256": "dfe52a636c1d74311dc3fc7b9e5abda68814afabee21324772072c2d0c4f531b"
+      },
+      "initial_sha256": "9b8a53ca242900e39d82f633fc67cf62c5d239b723483aef1e1ed07545a072dd",
+      "bodies": 354,
+      "packet": {
+        "raw_seconds": [
+          0.1650929999887012,
+          0.1619658999843523,
+          0.1674920000077691
+        ],
+        "median_seconds": 0.1650929999887012
+      },
+      "final_sha256": "7e2a3e7b0323eb6a51bcc985727abc435d754f5b24fcc3ed2bc3a9e1d86e8b34",
+      "report": {
+        "raw_seconds": [
+          0.081773666664958,
+          0.08228236666764133,
+          0.08102356666737857
+        ],
+        "median_seconds": 0.081773666664958
+      },
+      "packet_with_report": {
+        "raw_seconds": [
+          0.24534250001306646,
+          0.24600980000104755,
+          0.2399145999806933
+        ],
+        "median_seconds": 0.24534250001306646
+      },
+      "adapter": {
+        "raw_seconds": [
+          0.0012619400018593296,
+          0.0012072599987732247,
+          0.0012027100019622594
+        ],
+        "median_seconds": 0.0012072599987732247
+      },
+      "native_with_owned_lists": {
+        "raw_seconds": [
+          0.001207969998358749,
+          0.0012893200007965788,
+          0.0012002100003883243
+        ],
+        "median_seconds": 0.001207969998358749
+      },
+      "python_conversions_only": {
+        "raw_seconds": [
+          0.0001399100001435727,
+          0.0001305399986449629,
+          0.00012947999930474908
+        ],
+        "median_seconds": 0.0001305399986449629
+      },
+      "instrumented_solver": [
+        {
+          "rhs_calls": 125,
+          "rhs_seconds": 0.15395680023357272
+        }
+      ]
+    }
+  },
+  "renderer": {
+    "input_sha256": "b491d4718239ba51cafe85cf094cf4c5233cd960cb7073e62ff5a9c86aa96275",
+    "results": [
+      {
+        "history": 60,
+        "view": "Все тела",
+        "build_raw_seconds": [
+          0.010389800008852035,
+          0.009149299992714077,
+          0.010851900005945936
+        ],
+        "paint_raw_seconds": [
+          0.09389399999054149,
+          0.09244269999908283,
+          0.1051368999760598
+        ],
+        "full_raw_seconds": [
+          0.10428379999939352,
+          0.10159199999179691,
+          0.11598879998200573
+        ],
+        "full_median_seconds": 0.10428379999939352,
+        "pixel_sha256": "d75e42e7e690011357687dc2166f101e685d432c8193479bd510aa1f4dccc3f2",
+        "path_sha256": "a46a30a8ee59d662ecec3bc693acc41f75b0ee851d855341a90ea35d922f2af0",
+        "markers_sha256": "524b25e9dd76f30350160cddd5d36f9b5a5228d85dae50614724a0c59bbe0d4e",
+        "limits": [
+          [
+            -18787868282304.203,
+            22684566277134.47
+          ],
+          [
+            -4742233819984.549,
+            2933358003796.2305
+          ]
+        ],
+        "figure_pixels": [
+          1180,
+          518
+        ]
+      },
+      {
+        "history": 60,
+        "view": "Земля и Луна",
+        "build_raw_seconds": [
+          0.0029884999967180192,
+          0.003013999987160787,
+          0.0031484999926760793
+        ],
+        "paint_raw_seconds": [
+          0.07481259998166934,
+          0.07222269999329001,
+          0.06889910000609234
+        ],
+        "full_raw_seconds": [
+          0.07780109997838736,
+          0.0752366999804508,
+          0.07204759999876842
+        ],
+        "full_median_seconds": 0.0752366999804508,
+        "pixel_sha256": "1d8ea2c5bc3daa0e086e66fe99bb73ce9b3dc73f22751ac0af67326002cfa871",
+        "path_sha256": "8f7b37071507ee01b6dd2d88d184e9a81d6e62d459a8928faa21f33081062875",
+        "markers_sha256": "5b269a4a783af72e6ead6dd1503c3fef2690f3739e7edebce726e2b1c192cd50",
+        "limits": [
+          [
+            -543871104.9920595,
+            165967408.08440566
+          ],
+          [
+            -5971579.507134248,
+            125403169.64981918
+          ]
+        ],
+        "figure_pixels": [
+          1180,
+          518
+        ]
+      },
+      {
+        "history": 1500,
+        "view": "Все тела",
+        "build_raw_seconds": [
+          0.12222749998909421,
+          0.1239099999947939,
+          0.12429020000854507
+        ],
+        "paint_raw_seconds": [
+          0.2644553999998607,
+          0.2665520000155084,
+          0.2619796000071801
+        ],
+        "full_raw_seconds": [
+          0.3866828999889549,
+          0.3904620000103023,
+          0.3862698000157252
+        ],
+        "full_median_seconds": 0.3866828999889549,
+        "pixel_sha256": "641879431ef5fff1eda71da17d260a1310c37f0f2e0f35d0362174b98f0588b2",
+        "path_sha256": "15ac0a41a2553c52c5bcc73f5bfb8b369ddf067a0c8e20ab660b8e7258808181",
+        "markers_sha256": "524b25e9dd76f30350160cddd5d36f9b5a5228d85dae50614724a0c59bbe0d4e",
+        "limits": [
+          [
+            -18787868282304.203,
+            22684566277134.47
+          ],
+          [
+            -4742233819984.549,
+            2933358003796.2305
+          ]
+        ],
+        "figure_pixels": [
+          1180,
+          518
+        ]
+      },
+      {
+        "history": 1500,
+        "view": "Земля и Луна",
+        "build_raw_seconds": [
+          0.003875099995639175,
+          0.003826400003163144,
+          0.0037566999963019043
+        ],
+        "paint_raw_seconds": [
+          0.06577290000859648,
+          0.0659616999910213,
+          0.07329800000297837
+        ],
+        "full_raw_seconds": [
+          0.06964800000423566,
+          0.06978809999418445,
+          0.07705469999928027
+        ],
+        "full_median_seconds": 0.06978809999418445,
+        "pixel_sha256": "b70c3c76cef969bd5be46c0ea62a55ea8453331cb5a84c4332fb096623ffb0b9",
+        "path_sha256": "1f2ee051b7c12e535872008b3e0fd37db542059b394e350cf019580911db28a0",
+        "markers_sha256": "5b269a4a783af72e6ead6dd1503c3fef2690f3739e7edebce726e2b1c192cd50",
+        "limits": [
+          [
+            -543871104.9920595,
+            165967408.08440566
+          ],
+          [
+            -5971579.507134248,
+            125403169.64981918
+          ]
+        ],
+        "figure_pixels": [
+          1180,
+          518
+        ]
+      }
+    ]
+  },
+  "partition": {
+    "initial_sha256": "a6dfbe1e56bf7ede7d328b842212e07125cc14b0cd9d2b0a70fcd159f85880c0",
+    "settings": {
+      "dt": 3600,
+      "backend": "rust",
+      "contact_mode": "stop",
+      "restitution": 1.0,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "position_atol": 1e-07,
+      "velocity_atol": 1e-13,
+      "physics": "eih-1pn",
+      "figures": [
+        {
+          "body": "Sun",
+          "coefficient": 2.1961391516529825e-07,
+          "reference_radius": 696000000.0,
+          "axis": [
+            0.12235349347232782,
+            -0.0310378702450671,
+            0.9920011457885356
+          ],
+          "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+        },
+        {
+          "body": "Earth",
+          "coefficient": 0.00108262539,
+          "reference_radius": 6378136.6,
+          "c22": 0.0,
+          "orientation": "earth-de441",
+          "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+          "provenance": "DE441 nominal coefficients and prescribed orientation"
+        },
+        {
+          "body": "Moon",
+          "coefficient": 0.000203214360135,
+          "reference_radius": 1738000.0,
+          "c22": 2.2380850528171017e-05,
+          "orientation": "moon-de441",
+          "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+          "provenance": "DE441 nominal coefficients and prescribed orientation"
+        }
+      ],
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "error_control": "per-body"
+    },
+    "origin": {
+      "epoch_jd_tdb": 2461321.5,
+      "frame": "Ecliptic J2000",
+      "center": "Solar System Barycenter",
+      "ephemeris": "DE441",
+      "dataset_sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+      "gm_sha256": "dfe52a636c1d74311dc3fc7b9e5abda68814afabee21324772072c2d0c4f531b"
+    },
+    "duration_seconds": 720000.0,
+    "results": {
+      "ten_packets_20": {
+        "raw_seconds": [
+          7.8510345999966376,
+          7.966310799994972,
+          7.623277100006817
+        ],
+        "median_seconds": 7.8510345999966376,
+        "rhs_calls": 1982,
+        "solves": 10,
+        "nfev_per_solve": [
+          209,
+          209,
+          209,
+          197,
+          185,
+          197,
+          197,
+          197,
+          197,
+          185
+        ],
+        "final_sha256": "712a8cdf3785095f26c5e28aa769e90ac06348f3c531d7078f4bc17bd027dbee",
+        "report": {
+          "origin": {
+            "epoch_jd_tdb": 2461321.5,
+            "frame": "Ecliptic J2000",
+            "center": "Solar System Barycenter",
+            "ephemeris": "DE441",
+            "dataset_sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+            "gm_sha256": "dfe52a636c1d74311dc3fc7b9e5abda68814afabee21324772072c2d0c4f531b"
+          },
+          "epoch_jd_tdb": 2461329.8333333335,
+          "physics": "eih-1pn",
+          "integrator": "dop853",
+          "backend": "rust",
+          "error_control": "per-body",
+          "time_seconds": 720000.0,
+          "bodies": 354,
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "conservation_scope": "EIH Noether quantities through 1PN; residual includes omitted O(c^-4) terms; COM is Newtonian descriptive; prescribed time-dependent J2/C22 potential included; orbital angular momentum exchanges torque with prescribed axes; no spin evolution; mixed J2/c^2 terms omitted, so energy/momentum residual includes this model truncation; energy budget subtracts integral of explicit orientation power; orientation is not integrated self-consistently",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "c22": 0.0,
+              "orientation": "earth-de441",
+              "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+              "provenance": "DE441 nominal coefficients and prescribed orientation"
+            },
+            {
+              "body": "Moon",
+              "coefficient": 0.000203214360135,
+              "reference_radius": 1738000.0,
+              "c22": 2.2380850528171017e-05,
+              "orientation": "moon-de441",
+              "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+              "provenance": "DE441 nominal coefficients and prescribed orientation"
+            }
+          ],
+          "rotations": [],
+          "orbital_angular_momentum_conserved": false,
+          "figure_orbital_torque": [
+            -2.1389726451752084e+22,
+            3.12583480667045e+22,
+            -2.0152832910101662e+21
+          ],
+          "dynamic_spin_torque": null,
+          "events": 0,
+          "halted": false,
+          "energy_joules": -1.9806470401291628e+35,
+          "dissipated_energy_joules": 0.0,
+          "model_energy_offset_joules": 0.0,
+          "orientation_work_joules": -4.8858564340868555e+19,
+          "orientation_power_watts": -4986011636798.312,
+          "energy_budget_residual_joules": -3.320413933267719e+20,
+          "momentum": [
+            6.870123131978016e+24,
+            -1.1423300078226714e+25,
+            -2.991653506542013e+25
+          ],
+          "angular_momentum": [
+            8.227103529066656e+41,
+            2.607062223918061e+41,
+            3.1313900076988606e+43
+          ],
+          "center_of_mass": [
+            -105644.4763324053,
+            -45995.22898373828,
+            10583.20183246902
+          ]
+        }
+      },
+      "one_packet_200": {
+        "raw_seconds": [
+          1.9785694000020158,
+          1.798706100002164,
+          1.771130599983735
+        ],
+        "median_seconds": 1.798706100002164,
+        "rhs_calls": 473,
+        "solves": 1,
+        "nfev_per_solve": [
+          473
+        ],
+        "final_sha256": "4a7290b493494144f2e65bf2aa9da7cdb983489d79fc767cd7155c28d5ea08a4",
+        "report": {
+          "origin": {
+            "epoch_jd_tdb": 2461321.5,
+            "frame": "Ecliptic J2000",
+            "center": "Solar System Barycenter",
+            "ephemeris": "DE441",
+            "dataset_sha256": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+            "gm_sha256": "dfe52a636c1d74311dc3fc7b9e5abda68814afabee21324772072c2d0c4f531b"
+          },
+          "epoch_jd_tdb": 2461329.8333333335,
+          "physics": "eih-1pn",
+          "integrator": "dop853",
+          "backend": "rust",
+          "error_control": "per-body",
+          "time_seconds": 720000.0,
+          "bodies": 354,
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "conservation_scope": "EIH Noether quantities through 1PN; residual includes omitted O(c^-4) terms; COM is Newtonian descriptive; prescribed time-dependent J2/C22 potential included; orbital angular momentum exchanges torque with prescribed axes; no spin evolution; mixed J2/c^2 terms omitted, so energy/momentum residual includes this model truncation; energy budget subtracts integral of explicit orientation power; orientation is not integrated self-consistently",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "c22": 0.0,
+              "orientation": "earth-de441",
+              "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+              "provenance": "DE441 nominal coefficients and prescribed orientation"
+            },
+            {
+              "body": "Moon",
+              "coefficient": 0.000203214360135,
+              "reference_radius": 1738000.0,
+              "c22": 2.2380850528171017e-05,
+              "orientation": "moon-de441",
+              "profile_sha256": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+              "provenance": "DE441 nominal coefficients and prescribed orientation"
+            }
+          ],
+          "rotations": [],
+          "orbital_angular_momentum_conserved": false,
+          "figure_orbital_torque": [
+            -2.138972645176389e+22,
+            3.1258348066700205e+22,
+            -2.0152832910080108e+21
+          ],
+          "dynamic_spin_torque": null,
+          "events": 0,
+          "halted": false,
+          "energy_joules": -1.9806470401291606e+35,
+          "dissipated_energy_joules": 0.0,
+          "model_energy_offset_joules": 0.0,
+          "orientation_work_joules": -4.885856434185627e+19,
+          "orientation_power_watts": -4986011637009.753,
+          "energy_budget_residual_joules": -1.1068046444225731e+20,
+          "momentum": [
+            6.870123126220448e+24,
+            -1.1423300069717602e+25,
+            -2.991653506601154e+25
+          ],
+          "angular_momentum": [
+            8.227103529066651e+41,
+            2.607062223918061e+41,
+            3.1313900076988616e+43
+          ],
+          "center_of_mass": [
+            -105644.47633186885,
+            -45995.22898339555,
+            10583.2018324476
+          ]
+        }
+      }
+    },
+    "final_state_differences": {
+      "Sun": {
+        "position_metres": 3.589448174967141e-07,
+        "velocity_metres_per_second": 1.9891280697202825e-15
+      },
+      "Mercury": {
+        "position_metres": 2.4592966000037436e-05,
+        "velocity_metres_per_second": 2.459658808052535e-11
+      },
+      "Venus": {
+        "position_metres": 8.237008240390466e-05,
+        "velocity_metres_per_second": 3.05130050669664e-11
+      },
+      "Earth": {
+        "position_metres": 3.051788939797422e-05,
+        "velocity_metres_per_second": 4.086456305219989e-12
+      },
+      "Moon": {
+        "position_metres": 0.00013684235454615074,
+        "velocity_metres_per_second": 3.3594290732906427e-10
+      },
+      "Mars": {
+        "position_metres": 3.053247564999031e-05,
+        "velocity_metres_per_second": 1.8215810382944933e-11
+      },
+      "Jupiter": {
+        "position_metres": 0.00012355144302903477,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Saturn": {
+        "position_metres": 0.0014662934123703705,
+        "velocity_metres_per_second": 3.751261905625434e-12
+      },
+      "Uranus": {
+        "position_metres": 0.002548903134686032,
+        "velocity_metres_per_second": 4.747722995338054e-12
+      },
+      "Neptune": {
+        "position_metres": 0.00195407844159938,
+        "velocity_metres_per_second": 5.460001976936803e-12
+      },
+      "Pluto-System": {
+        "position_metres": 0.0007012405574387242,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Ceres": {
+        "position_metres": 6.397441799640053e-05,
+        "velocity_metres_per_second": 2.554313279236264e-11
+      },
+      "Pallas": {
+        "position_metres": 0.00016220315266013565,
+        "velocity_metres_per_second": 4.897778860262864e-12
+      },
+      "Vesta": {
+        "position_metres": 0.0004909561322996878,
+        "velocity_metres_per_second": 1.5001951802793734e-11
+      },
+      "Juno": {
+        "position_metres": 0.00042969140137721933,
+        "velocity_metres_per_second": 1.1259015448686066e-11
+      },
+      "Iris": {
+        "position_metres": 0.00024710288605806955,
+        "velocity_metres_per_second": 6.583047112055022e-12
+      },
+      "Hygiea": {
+        "position_metres": 0.0006042653861592447,
+        "velocity_metres_per_second": 3.653931044024875e-12
+      },
+      "Eunomia": {
+        "position_metres": 0.0006960751176731594,
+        "velocity_metres_per_second": 1.8551518364013877e-11
+      },
+      "Psyche": {
+        "position_metres": 0.0005527174159020333,
+        "velocity_metres_per_second": 6.559444835489401e-12
+      },
+      "Euphrosyne": {
+        "position_metres": 0.0002283726432357142,
+        "velocity_metres_per_second": 5.82471714435519e-12
+      },
+      "Europa": {
+        "position_metres": 0.00045776764550073846,
+        "velocity_metres_per_second": 6.574206188270619e-12
+      },
+      "Cybele": {
+        "position_metres": 0.0005459283614103425,
+        "velocity_metres_per_second": 1.3854876430361512e-11
+      },
+      "Sylvia": {
+        "position_metres": 0.0008201510406724053,
+        "velocity_metres_per_second": 7.622954678590855e-12
+      },
+      "Thisbe": {
+        "position_metres": 0.00032948032961561865,
+        "velocity_metres_per_second": 9.292464750123801e-12
+      },
+      "Camilla": {
+        "position_metres": 0.0004930265631531833,
+        "velocity_metres_per_second": 1.472847974646506e-11
+      },
+      "Davida": {
+        "position_metres": 0.0002221713223047033,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Interamnia": {
+        "position_metres": 0.00026779066123633187,
+        "velocity_metres_per_second": 5.823607568738997e-12
+      },
+      "Dido": {
+        "position_metres": 0.0007374905989742781,
+        "velocity_metres_per_second": 1.107382164435505e-11
+      },
+      "Aurora": {
+        "position_metres": 0.0003127121205432006,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Doris": {
+        "position_metres": 6.563053334840871e-05,
+        "velocity_metres_per_second": 7.279564944778313e-12
+      },
+      "Bertha": {
+        "position_metres": 0.0002729575167846423,
+        "velocity_metres_per_second": 6.558459564010244e-12
+      },
+      "Amphitrite": {
+        "position_metres": 0.00043063860448211926,
+        "velocity_metres_per_second": 2.5535858078542738e-11
+      },
+      "Ursula": {
+        "position_metres": 0.0003860202221885229,
+        "velocity_metres_per_second": 7.346668290394296e-12
+      },
+      "Herculina": {
+        "position_metres": 0.00022006538546533137,
+        "velocity_metres_per_second": 4.0689724683427995e-12
+      },
+      "Stereoskopia": {
+        "position_metres": 0.00013647875839232116,
+        "velocity_metres_per_second": 1.107382164435505e-11
+      },
+      "Siegena": {
+        "position_metres": 0.0006013202055431528,
+        "velocity_metres_per_second": 7.554830392944564e-12
+      },
+      "Alauda": {
+        "position_metres": 0.000371751985769814,
+        "velocity_metres_per_second": 8.248369862129518e-12
+      },
+      "Laetitia": {
+        "position_metres": 6.563053334840871e-05,
+        "velocity_metres_per_second": 3.756829674298002e-12
+      },
+      "Metis": {
+        "position_metres": 0.0007349705063417211,
+        "velocity_metres_per_second": 2.911093501694126e-11
+      },
+      "Hebe": {
+        "position_metres": 0.00034128218454505983,
+        "velocity_metres_per_second": 2.220359531881277e-11
+      },
+      "Bamberga": {
+        "position_metres": 0.00012956289480643343,
+        "velocity_metres_per_second": 1.4999770885397668e-11
+      },
+      "Elektra": {
+        "position_metres": 0.00028505770404463815,
+        "velocity_metres_per_second": 7.554830392944564e-12
+      },
+      "Themis": {
+        "position_metres": 0.00012213362601584297,
+        "velocity_metres_per_second": 1.8769090935505865e-12
+      },
+      "Patientia": {
+        "position_metres": 0.0003482883365024819,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Fortuna": {
+        "position_metres": 0.0002879026511070244,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Palma": {
+        "position_metres": 0.00031861286953462374,
+        "velocity_metres_per_second": 8.397448851892199e-12
+      },
+      "Daphne": {
+        "position_metres": 0.00011029687724915284,
+        "velocity_metres_per_second": 7.77072613829435e-12
+      },
+      "Irene": {
+        "position_metres": 0.0004250606774043005,
+        "velocity_metres_per_second": 5.4569682106375694e-12
+      },
+      "Diotima": {
+        "position_metres": 0.00019600269437660415,
+        "velocity_metres_per_second": 5.98126754901655e-12
+      },
+      "Egeria": {
+        "position_metres": 0.0002647300960219951,
+        "velocity_metres_per_second": 1.1101797659406386e-11
+      },
+      "Hesperia": {
+        "position_metres": 0.0002883063297682371,
+        "velocity_metres_per_second": 1.0606439709309235e-11
+      },
+      "Parthenope": {
+        "position_metres": 0.00030669786441408966,
+        "velocity_metres_per_second": 1.3116967240504876e-11
+      },
+      "Papagena": {
+        "position_metres": 0.00043587819998430484,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Lachesis": {
+        "position_metres": 0.00013037115089901017,
+        "velocity_metres_per_second": 1.2202151870040997e-11
+      },
+      "Aglaja": {
+        "position_metres": 6.153971025429412e-05,
+        "velocity_metres_per_second": 6.824998772482847e-12
+      },
+      "Aegle": {
+        "position_metres": 0.0003955530211430579,
+        "velocity_metres_per_second": 1.2202284271144185e-11
+      },
+      "Hedwig": {
+        "position_metres": 5.554283057617583e-05,
+        "velocity_metres_per_second": 3.858659226461245e-12
+      },
+      "Aspasia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 2.145038964057813e-12
+      },
+      "Juewa": {
+        "position_metres": 0.00012419754483108296,
+        "velocity_metres_per_second": 4.092726157978177e-12
+      },
+      "Winchester": {
+        "position_metres": 0.00032870651129940197,
+        "velocity_metres_per_second": 2.2755550168216003e-11
+      },
+      "Kalliope": {
+        "position_metres": 6.618252400549878e-05,
+        "velocity_metres_per_second": 7.980783618579264e-12
+      },
+      "Lomia": {
+        "position_metres": 7.62939453125e-05,
+        "velocity_metres_per_second": 2.924912902178403e-11
+      },
+      "Scheila": {
+        "position_metres": 0.000139849111784541,
+        "velocity_metres_per_second": 3.990391809289632e-12
+      },
+      "Nemesis": {
+        "position_metres": 0.0002739154521334265,
+        "velocity_metres_per_second": 5.499435529803952e-12
+      },
+      "Io": {
+        "position_metres": 0.0001983642578125,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Hestia": {
+        "position_metres": 0.0001856409794188228,
+        "velocity_metres_per_second": 8.141914472523185e-12
+      },
+      "Sibylla": {
+        "position_metres": 0.000195407844159938,
+        "velocity_metres_per_second": 1.3021982397982677e-11
+      },
+      "Germania": {
+        "position_metres": 0.0002203627489324368,
+        "velocity_metres_per_second": 7.73070496506989e-12
+      },
+      "Eugenia": {
+        "position_metres": 0.00019541715261982943,
+        "velocity_metres_per_second": 5.224649291029008e-12
+      },
+      "Pales": {
+        "position_metres": 0.0002208904066742466,
+        "velocity_metres_per_second": 1.3124799524722959e-11
+      },
+      "Kreusa": {
+        "position_metres": 0.0004911931946661338,
+        "velocity_metres_per_second": 1.183217303265127e-11
+      },
+      "Dembowska": {
+        "position_metres": 0.00023291530643423076,
+        "velocity_metres_per_second": 1.1064480586898243e-11
+      },
+      "Lucina": {
+        "position_metres": 0.0001983642578125,
+        "velocity_metres_per_second": 2.1903532940618417e-11
+      },
+      "Eukrate": {
+        "position_metres": 0.0004105720229209506,
+        "velocity_metres_per_second": 9.668061295755842e-12
+      },
+      "Freia": {
+        "position_metres": 0.0007325013435484898,
+        "velocity_metres_per_second": 1.0914084450007878e-11
+      },
+      "Philomela": {
+        "position_metres": 0.0003908901506790008,
+        "velocity_metres_per_second": 6.1053113231980895e-12
+      },
+      "Lamberta": {
+        "position_metres": 0.00025544233768895274,
+        "velocity_metres_per_second": 1.821829357505533e-11
+      },
+      "Eleonora": {
+        "position_metres": 0.0004443426446094066,
+        "velocity_metres_per_second": 9.795557720525728e-12
+      },
+      "Berbericia": {
+        "position_metres": 0.00024414074141529407,
+        "velocity_metres_per_second": 3.76542065207086e-12
+      },
+      "Elpis": {
+        "position_metres": 7.667446610352241e-05,
+        "velocity_metres_per_second": 7.298128296362863e-12
+      },
+      "Minerva": {
+        "position_metres": 0.0003055570128555418,
+        "velocity_metres_per_second": 7.630580600812134e-12
+      },
+      "Flora": {
+        "position_metres": 0.0001560299784562497,
+        "velocity_metres_per_second": 2.1945977117891115e-11
+      },
+      "Massalia": {
+        "position_metres": 0.0005079193218517816,
+        "velocity_metres_per_second": 1.5434872417916984e-11
+      },
+      "Julia": {
+        "position_metres": 0.0004892934797614735,
+        "velocity_metres_per_second": 4.7477017273697814e-12
+      },
+      "Armenia": {
+        "position_metres": 0.000492317682034353,
+        "velocity_metres_per_second": 9.275062463698822e-12
+      },
+      "Nemausa": {
+        "position_metres": 0.00016451918527868518,
+        "velocity_metres_per_second": 1.3134643371846486e-11
+      },
+      "Philosophia": {
+        "position_metres": 0.0005703195675973742,
+        "velocity_metres_per_second": 9.097788744721836e-12
+      },
+      "Pompeja": {
+        "position_metres": 0.00018565322704733322,
+        "velocity_metres_per_second": 7.354580697954528e-12
+      },
+      "Eucharis": {
+        "position_metres": 0.0001057159916729051,
+        "velocity_metres_per_second": 7.346668290394296e-12
+      },
+      "Pretoria": {
+        "position_metres": 0.0004949707514437437,
+        "velocity_metres_per_second": 1.289431282089738e-11
+      },
+      "Atalante": {
+        "position_metres": 0.0003145679951185349,
+        "velocity_metres_per_second": 6.8060351382408795e-12
+      },
+      "Gudrun": {
+        "position_metres": 0.00036670730647934746,
+        "velocity_metres_per_second": 7.666910869414717e-12
+      },
+      "Melpomene": {
+        "position_metres": 0.00012208521275181014,
+        "velocity_metres_per_second": 1.129568986323122e-11
+      },
+      "Bettina": {
+        "position_metres": 0.0003059377694055698,
+        "velocity_metres_per_second": 1.0944683296255553e-11
+      },
+      "Arethusa": {
+        "position_metres": 0.0002516543960948279,
+        "velocity_metres_per_second": 5.770097023036906e-12
+      },
+      "Aletheia": {
+        "position_metres": 0.0004315837287515549,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Myrrha": {
+        "position_metres": 0.0005081428773604344,
+        "velocity_metres_per_second": 3.9118846266513295e-12
+      },
+      "Medea": {
+        "position_metres": 0.00028138402718978924,
+        "velocity_metres_per_second": 1.8286272518601527e-11
+      },
+      "Klymene": {
+        "position_metres": 0.00011167359289783056,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Melete": {
+        "position_metres": 0.000325838569703104,
+        "velocity_metres_per_second": 4.0709572362615926e-12
+      },
+      "Gyptis": {
+        "position_metres": 0.00012325664078829582,
+        "velocity_metres_per_second": 1.4553691476799266e-11
+      },
+      "Kleopatra": {
+        "position_metres": 0.0002516543960948279,
+        "velocity_metres_per_second": 1.5434663074030444e-11
+      },
+      "Pulcova": {
+        "position_metres": 0.0006201904734161858,
+        "velocity_metres_per_second": 2.6613406386603914e-12
+      },
+      "Vibilia": {
+        "position_metres": 7.629431784062036e-05,
+        "velocity_metres_per_second": 1.0928729369620903e-11
+      },
+      "Erminia": {
+        "position_metres": 0.0004901848878237613,
+        "velocity_metres_per_second": 5.841335486668472e-12
+      },
+      "Adorea": {
+        "position_metres": 0.0003431584706906587,
+        "velocity_metres_per_second": 3.296918293926865e-12
+      },
+      "Emma": {
+        "position_metres": 8.665326455383718e-05,
+        "velocity_metres_per_second": 5.532240293449121e-12
+      },
+      "Harmonia": {
+        "position_metres": 0.00018511663552224535,
+        "velocity_metres_per_second": 1.459409807499139e-11
+      },
+      "Argentina": {
+        "position_metres": 0.0003890243159174183,
+        "velocity_metres_per_second": 3.646849775656265e-12
+      },
+      "Ino": {
+        "position_metres": 0.0003713407447399279,
+        "velocity_metres_per_second": 3.6878194767515635e-12
+      },
+      "Aquitania": {
+        "position_metres": 0.00018935659249863979,
+        "velocity_metres_per_second": 1.1788398657532271e-11
+      },
+      "Bellona": {
+        "position_metres": 5.4618152859788335e-05,
+        "velocity_metres_per_second": 1.8225386545374702e-12
+      },
+      "Lampetia": {
+        "position_metres": 0.000300950361989075,
+        "velocity_metres_per_second": 7.513659348596004e-12
+      },
+      "Siwa": {
+        "position_metres": 0.0001866085023290254,
+        "velocity_metres_per_second": 1.4665271577371318e-11
+      },
+      "Victoria": {
+        "position_metres": 0.000409507351694325,
+        "velocity_metres_per_second": 9.322320693172514e-12
+      },
+      "Hippo": {
+        "position_metres": 0.00028052942368851066,
+        "velocity_metres_per_second": 7.458411103860602e-12
+      },
+      "Astraea": {
+        "position_metres": 0.0006720826486878784,
+        "velocity_metres_per_second": 7.666910869414717e-12
+      },
+      "Ianthe": {
+        "position_metres": 0.00012303507555290328,
+        "velocity_metres_per_second": 5.224649291029008e-12
+      },
+      "Chloris": {
+        "position_metres": 6.518557544950508e-05,
+        "velocity_metres_per_second": 1.1682670973336944e-11
+      },
+      "Circe": {
+        "position_metres": 0.0002453298216371693,
+        "velocity_metres_per_second": 3.977414890990963e-12
+      },
+      "Adeona": {
+        "position_metres": 0.00031317712023580616,
+        "velocity_metres_per_second": 1.55414522765887e-11
+      },
+      "Ophelia": {
+        "position_metres": 6.10356819356738e-05,
+        "velocity_metres_per_second": 4.61658157843134e-12
+      },
+      "Hermione": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 1.3642420526593924e-12
+      },
+      "Comacina": {
+        "position_metres": 0.00017531013935968105,
+        "velocity_metres_per_second": 7.73070496506989e-12
+      },
+      "Ninina": {
+        "position_metres": 0.0001834627480531471,
+        "velocity_metres_per_second": 1.000444171950221e-11
+      },
+      "Ausonia": {
+        "position_metres": 0.00012789195720092934,
+        "velocity_metres_per_second": 6.107692438358441e-12
+      },
+      "Thia": {
+        "position_metres": 0.00042969140137721933,
+        "velocity_metres_per_second": 5.532240293449121e-12
+      },
+      "Xanthippe": {
+        "position_metres": 0.000409880301199625,
+        "velocity_metres_per_second": 1.1513283335418385e-11
+      },
+      "Ornamenta": {
+        "position_metres": 0.0004688199309001836,
+        "velocity_metres_per_second": 2.0839141575178655e-12
+      },
+      "Thalia": {
+        "position_metres": 0.0002221713223047033,
+        "velocity_metres_per_second": 5.629507724343033e-12
+      },
+      "Gallia": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 2.9118037843694986e-12
+      },
+      "Merapi": {
+        "position_metres": 0.00028790225622731333,
+        "velocity_metres_per_second": 7.507636374202346e-12
+      },
+      "Nuwa": {
+        "position_metres": 0.0002208904066742466,
+        "velocity_metres_per_second": 1.106813037574742e-11
+      },
+      "Charybdis": {
+        "position_metres": 0.0005529074381101513,
+        "velocity_metres_per_second": 9.120490685805444e-12
+      },
+      "Eva": {
+        "position_metres": 9.299180407141804e-05,
+        "velocity_metres_per_second": 1.4631142947513267e-11
+      },
+      "Athamantis": {
+        "position_metres": 0.0005627164501478121,
+        "velocity_metres_per_second": 1.846632631372536e-11
+      },
+      "Loreley": {
+        "position_metres": 0.0005614736783744537,
+        "velocity_metres_per_second": 1.0989466294262977e-11
+      },
+      "Antiope": {
+        "position_metres": 0.00032877290994896304,
+        "velocity_metres_per_second": 1.2864206982899883e-11
+      },
+      "Meliboea": {
+        "position_metres": 0.00030517578125,
+        "velocity_metres_per_second": 2.729076160030173e-12
+      },
+      "Princetonia": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 1.2708541009926303e-11
+      },
+      "Wratislavia": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 1.9057386696477137e-12
+      },
+      "Euterpe": {
+        "position_metres": 0.0003665286922963347,
+        "velocity_metres_per_second": 9.713407672867936e-13
+      },
+      "Alexandra": {
+        "position_metres": 0.0006126836094028885,
+        "velocity_metres_per_second": 1.54296117919544e-11
+      },
+      "Hispania": {
+        "position_metres": 0.0003712623614683972,
+        "velocity_metres_per_second": 1.4868221773460224e-11
+      },
+      "Elfriede": {
+        "position_metres": 0.00022006538546533137,
+        "velocity_metres_per_second": 4.167828315035731e-12
+      },
+      "Liguria": {
+        "position_metres": 0.0002427058978361033,
+        "velocity_metres_per_second": 7.71731845292249e-12
+      },
+      "Adria": {
+        "position_metres": 0.0004297591279756977,
+        "velocity_metres_per_second": 1.821829357505533e-11
+      },
+      "Kassandra": {
+        "position_metres": 0.00012355144302903477,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Protogeneia": {
+        "position_metres": 0.00011108566115235165,
+        "velocity_metres_per_second": 4.560245342902722e-12
+      },
+      "Johanna": {
+        "position_metres": 0.0002608538970532037,
+        "velocity_metres_per_second": 7.283946833759432e-12
+      },
+      "Prokne": {
+        "position_metres": 0.0003078581229760769,
+        "velocity_metres_per_second": 7.388769886016199e-12
+      },
+      "Fides": {
+        "position_metres": 0.00013695772606671326,
+        "velocity_metres_per_second": 5.146134889290022e-12
+      },
+      "Chicago": {
+        "position_metres": 0.0004921735657978816,
+        "velocity_metres_per_second": 5.79245315878188e-12
+      },
+      "Aurelia": {
+        "position_metres": 0.00023838042907666006,
+        "velocity_metres_per_second": 1.1122733493389214e-11
+      },
+      "Bertholda": {
+        "position_metres": 0.00017059844799040144,
+        "velocity_metres_per_second": 1.423765952900182e-11
+      },
+      "Marianna": {
+        "position_metres": 0.00036748030330787035,
+        "velocity_metres_per_second": 1.1270489022894007e-11
+      },
+      "Polyxena": {
+        "position_metres": 0.0003187042018769138,
+        "velocity_metres_per_second": 1.4322736886264122e-11
+      },
+      "Padua": {
+        "position_metres": 0.0003057712467552452,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Hypatia": {
+        "position_metres": 0.00022059375449830568,
+        "velocity_metres_per_second": 6.03290534919397e-12
+      },
+      "Lumen": {
+        "position_metres": 0.0003672426314257428,
+        "velocity_metres_per_second": 1.153347225497091e-11
+      },
+      "Polyxo": {
+        "position_metres": 0.00030612797008878903,
+        "velocity_metres_per_second": 2.5482103301095334e-11
+      },
+      "Ani": {
+        "position_metres": 0.00013037115089901017,
+        "velocity_metres_per_second": 7.823769253302659e-12
+      },
+      "Roberta": {
+        "position_metres": 0.00034526830008774776,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Carlova": {
+        "position_metres": 0.0001406790841261732,
+        "velocity_metres_per_second": 3.1768097930203163e-11
+      },
+      "Diana": {
+        "position_metres": 0.00045371249795358797,
+        "velocity_metres_per_second": 9.385879566502942e-12
+      },
+      "Undina": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 1.4582082026048705e-11
+      },
+      "Asterope": {
+        "position_metres": 0.00024607015110580656,
+        "velocity_metres_per_second": 7.622954678590855e-12
+      },
+      "Adelheid": {
+        "position_metres": 0.0001726345204733491,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Lutetia": {
+        "position_metres": 0.00030558082403912406,
+        "velocity_metres_per_second": 1.819131506542327e-11
+      },
+      "Gerlinde": {
+        "position_metres": 0.00023883782718656202,
+        "velocity_metres_per_second": 8.147468573574277e-12
+      },
+      "Bredichina": {
+        "position_metres": 0.000333256983457055,
+        "velocity_metres_per_second": 1.473242810658419e-11
+      },
+      "Messalina": {
+        "position_metres": 0.0006959104660650362,
+        "velocity_metres_per_second": 7.836973936543512e-12
+      },
+      "Aemilia": {
+        "position_metres": 1.7059844799040144e-05,
+        "velocity_metres_per_second": 5.629507724343033e-12
+      },
+      "Marion": {
+        "position_metres": 0.0006107329130917206,
+        "velocity_metres_per_second": 7.332580706405269e-12
+      },
+      "Galatea": {
+        "position_metres": 0.00047767565437312404,
+        "velocity_metres_per_second": 8.963974659228123e-12
+      },
+      "Helio": {
+        "position_metres": 0.00020977366767681153,
+        "velocity_metres_per_second": 1.0289757937229989e-11
+      },
+      "Armida": {
+        "position_metres": 0.0006284417071597623,
+        "velocity_metres_per_second": 1.8198773652309366e-11
+      },
+      "Isis": {
+        "position_metres": 0.00020243071230196532,
+        "velocity_metres_per_second": 7.771557721167756e-12
+      },
+      "Beatrix": {
+        "position_metres": 0.0005459450207541204,
+        "velocity_metres_per_second": 3.701375270816176e-12
+      },
+      "Zelinda": {
+        "position_metres": 0.00013838468282483714,
+        "velocity_metres_per_second": 1.685021499147197e-11
+      },
+      "Concordia": {
+        "position_metres": 0.0001452092461446707,
+        "velocity_metres_per_second": 1.1825617206291866e-11
+      },
+      "Proserpina": {
+        "position_metres": 0.00016441135006864095,
+        "velocity_metres_per_second": 3.756829674298002e-12
+      },
+      "Hohensteina": {
+        "position_metres": 0.00012231430799474215,
+        "velocity_metres_per_second": 7.836973936543512e-12
+      },
+      "Edith": {
+        "position_metres": 0.00023834990466023724,
+        "velocity_metres_per_second": 1.1647353846817066e-11
+      },
+      "Hersilia": {
+        "position_metres": 0.0002518350343856665,
+        "velocity_metres_per_second": 1.1368683772161603e-12
+      },
+      "Tanete": {
+        "position_metres": 0.00013037115089901017,
+        "velocity_metres_per_second": 1.4380373887290168e-12
+      },
+      "Denise": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 2.2765771512355045e-12
+      },
+      "Penelope": {
+        "position_metres": 0.0004277609379785535,
+        "velocity_metres_per_second": 9.377613708830395e-12
+      },
+      "Aline": {
+        "position_metres": 0.0001856311807341986,
+        "velocity_metres_per_second": 5.754676799832565e-12
+      },
+      "Vaticana": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 9.963015281849332e-12
+      },
+      "Tokio": {
+        "position_metres": 0.0001848947994137229,
+        "velocity_metres_per_second": 4.50176909753812e-12
+      },
+      "Arsinoe": {
+        "position_metres": 0.00034560399331378554,
+        "velocity_metres_per_second": 1.6377219349459762e-11
+      },
+      "Peraga": {
+        "position_metres": 0.00024607015110580656,
+        "velocity_metres_per_second": 3.749984794337646e-12
+      },
+      "Tercidina": {
+        "position_metres": 0.00037446262182031333,
+        "velocity_metres_per_second": 6.62122137262533e-12
+      },
+      "Iduna": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 5.9117155615240335e-12
+      },
+      "Brixia": {
+        "position_metres": 0.00013037115089901017,
+        "velocity_metres_per_second": 1.472847974646506e-11
+      },
+      "Faina": {
+        "position_metres": 0.00030896693010431804,
+        "velocity_metres_per_second": 3.801715731061896e-12
+      },
+      "Erato": {
+        "position_metres": 0.00015301644226174606,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Feronia": {
+        "position_metres": 0.0005179224255202724,
+        "velocity_metres_per_second": 1.9357500290236897e-11
+      },
+      "Dynamene": {
+        "position_metres": 0.00013524702378262205,
+        "velocity_metres_per_second": 1.0916304640120692e-11
+      },
+      "Christa": {
+        "position_metres": 3.814697265625e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Eunike": {
+        "position_metres": 0.0001932455755115662,
+        "velocity_metres_per_second": 1.4840378637091563e-11
+      },
+      "Eos": {
+        "position_metres": 0.0005053862048852294,
+        "velocity_metres_per_second": 3.811477339295427e-12
+      },
+      "Hertha": {
+        "position_metres": 0.00024462443336235157,
+        "velocity_metres_per_second": 2.1847477978281774e-11
+      },
+      "Semele": {
+        "position_metres": 0.00025095953679502144,
+        "velocity_metres_per_second": 3.638422869199817e-12
+      },
+      "Veritas": {
+        "position_metres": 0.00018625725732015537,
+        "velocity_metres_per_second": 5.4569682106375694e-12
+      },
+      "Emita": {
+        "position_metres": 0.00012513137410626775,
+        "velocity_metres_per_second": 1.46439944620439e-11
+      },
+      "Aegina": {
+        "position_metres": 0.000494205861975302,
+        "velocity_metres_per_second": 3.821636781588406e-12
+      },
+      "Alkeste": {
+        "position_metres": 0.00026082774619912814,
+        "velocity_metres_per_second": 5.146134889290022e-12
+      },
+      "Artemis": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 1.0299801627212332e-11
+      },
+      "Nephele": {
+        "position_metres": 0.00022106326993795913,
+        "velocity_metres_per_second": 2.075960257664215e-11
+      },
+      "Freda": {
+        "position_metres": 0.0004894718912458936,
+        "velocity_metres_per_second": 4.7477017273697814e-12
+      },
+      "Antigone": {
+        "position_metres": 0.0005250442667872697,
+        "velocity_metres_per_second": 2.0620924655323795e-12
+      },
+      "Erigone": {
+        "position_metres": 0.00030603288452349213,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Thetis": {
+        "position_metres": 3.814697265625e-06,
+        "velocity_metres_per_second": 2.548208745087668e-11
+      },
+      "Desiderata": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 1.577914333474607e-11
+      },
+      "Niobe": {
+        "position_metres": 0.0007382794435670742,
+        "velocity_metres_per_second": 1.2254998162654252e-11
+      },
+      "Rusthawelia": {
+        "position_metres": 0.00045790670067770136,
+        "velocity_metres_per_second": 6.570518959098963e-12
+      },
+      "Lictoria": {
+        "position_metres": 0.00031159329004916593,
+        "velocity_metres_per_second": 8.163316611451701e-12
+      },
+      "Melusina": {
+        "position_metres": 0.0003070772063827226,
+        "velocity_metres_per_second": 3.693335252706187e-11
+      },
+      "Hera": {
+        "position_metres": 0.0001373291015625,
+        "velocity_metres_per_second": 5.4617031080235e-12
+      },
+      "Ate": {
+        "position_metres": 7.260462307233536e-05,
+        "velocity_metres_per_second": 1.1085486897399192e-11
+      },
+      "Ariadne": {
+        "position_metres": 0.00040959617999664186,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Terpsichore": {
+        "position_metres": 0.0002739154521334265,
+        "velocity_metres_per_second": 8.5921981861662e-12
+      },
+      "Boliviana": {
+        "position_metres": 0.00042785873085967875,
+        "velocity_metres_per_second": 7.603431462123792e-12
+      },
+      "Elisabetha": {
+        "position_metres": 0.0002607462258787439,
+        "velocity_metres_per_second": 7.388769886016199e-12
+      },
+      "Sapientia": {
+        "position_metres": 0.00018326434554236318,
+        "velocity_metres_per_second": 6.382683226374047e-12
+      },
+      "Tatjana": {
+        "position_metres": 0.0001936123281928943,
+        "velocity_metres_per_second": 6.559444835489401e-12
+      },
+      "Josephina": {
+        "position_metres": 0.00013037311293937195,
+        "velocity_metres_per_second": 1.0961203582331973e-11
+      },
+      "Panopaea": {
+        "position_metres": 0.00013389533061816593,
+        "velocity_metres_per_second": 1.82636409845356e-11
+      },
+      "Arachne": {
+        "position_metres": 0.00025929420806077014,
+        "velocity_metres_per_second": 1.6326633222903402e-11
+      },
+      "Sophrosyne": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 1.72564486647482e-11
+      },
+      "Lanzia": {
+        "position_metres": 0.000562923179495139,
+        "velocity_metres_per_second": 7.554830392944564e-12
+      },
+      "Fringilla": {
+        "position_metres": 0.000392302250127638,
+        "velocity_metres_per_second": 1.4681016598258727e-11
+      },
+      "Mandeville": {
+        "position_metres": 0.0004286063203487591,
+        "velocity_metres_per_second": 7.332580706405269e-12
+      },
+      "Leto": {
+        "position_metres": 0.00048155926019468687,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Cantabia": {
+        "position_metres": 5.501634636633284e-05,
+        "velocity_metres_per_second": 1.0999017945259844e-11
+      },
+      "Irmintraud": {
+        "position_metres": 0.0004453893896278816,
+        "velocity_metres_per_second": 7.77072613829435e-12
+      },
+      "Bruchsalia": {
+        "position_metres": 7.62939453125e-05,
+        "velocity_metres_per_second": 3.701375270816176e-12
+      },
+      "Cava": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 1.0379801288321075e-11
+      },
+      "Hamburga": {
+        "position_metres": 0.0001983642578125,
+        "velocity_metres_per_second": 6.510991198991339e-12
+      },
+      "Havnia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 1.4560794303711523e-11
+      },
+      "Lydia": {
+        "position_metres": 0.00028138402718978924,
+        "velocity_metres_per_second": 2.7661201467245607e-12
+      },
+      "Luscinia": {
+        "position_metres": 0.00020880023473211683,
+        "velocity_metres_per_second": 7.32199723102195e-12
+      },
+      "Gratia": {
+        "position_metres": 6.518557544950508e-05,
+        "velocity_metres_per_second": 5.770097023036906e-12
+      },
+      "Hermentaria": {
+        "position_metres": 1.4557206652139423e-05,
+        "velocity_metres_per_second": 7.33610513857533e-12
+      },
+      "Vundtia": {
+        "position_metres": 0.00025349804269159164,
+        "velocity_metres_per_second": 6.5623997623614794e-12
+      },
+      "Ludmilla": {
+        "position_metres": 0.0003926730112444388,
+        "velocity_metres_per_second": 7.622954678590855e-12
+      },
+      "Klotho": {
+        "position_metres": 0.0001911920789511363,
+        "velocity_metres_per_second": 1.8269655220124374e-12
+      },
+      "Luisa": {
+        "position_metres": 0.00031131295414891304,
+        "velocity_metres_per_second": 3.668052569287665e-12
+      },
+      "Ilmatar": {
+        "position_metres": 0.00037755868626887886,
+        "velocity_metres_per_second": 9.668061295755842e-12
+      },
+      "Rachele": {
+        "position_metres": 0.0003069113019639691,
+        "velocity_metres_per_second": 3.990391809289632e-12
+      },
+      "Laurentia": {
+        "position_metres": 0.00011004922284509015,
+        "velocity_metres_per_second": 1.4681016598258727e-11
+      },
+      "Apollonia": {
+        "position_metres": 0.0001841048831758064,
+        "velocity_metres_per_second": 6.844854043943255e-13
+      },
+      "Mashona": {
+        "position_metres": 0.00026252213339363485,
+        "velocity_metres_per_second": 1.590965956396385e-11
+      },
+      "Ara": {
+        "position_metres": 0.00023834990466023724,
+        "velocity_metres_per_second": 8.134767913360665e-12
+      },
+      "Campania": {
+        "position_metres": 0.00013583750774204145,
+        "velocity_metres_per_second": 1.1524503768190868e-11
+      },
+      "Kolga": {
+        "position_metres": 0.00018578789767281984,
+        "velocity_metres_per_second": 9.106308604942018e-12
+      },
+      "Vanadis": {
+        "position_metres": 0.00018311540258799728,
+        "velocity_metres_per_second": 1.6398612088723502e-11
+      },
+      "Octavia": {
+        "position_metres": 0.00042724609375,
+        "velocity_metres_per_second": 5.606501875235132e-12
+      },
+      "Virginia": {
+        "position_metres": 0.0007940436908726616,
+        "velocity_metres_per_second": 1.8241003513870126e-11
+      },
+      "Carina": {
+        "position_metres": 0.00030981354529185413,
+        "velocity_metres_per_second": 9.097858111722544e-12
+      },
+      "Eurykleia": {
+        "position_metres": 0.0001305941983690162,
+        "velocity_metres_per_second": 3.638672630320273e-12
+      },
+      "Felicitas": {
+        "position_metres": 0.0003112194527339346,
+        "velocity_metres_per_second": 9.563218939007625e-12
+      },
+      "Hekate": {
+        "position_metres": 0.00018377974655831762,
+        "velocity_metres_per_second": 1.2422595663927254e-11
+      },
+      "Edna": {
+        "position_metres": 0.0008370109955995165,
+        "velocity_metres_per_second": 6.1010759350204984e-12
+      },
+      "Corduba": {
+        "position_metres": 0.0005493693856016447,
+        "velocity_metres_per_second": 8.248369862129518e-12
+      },
+      "Aeria": {
+        "position_metres": 0.00013838468282483714,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Leukothea": {
+        "position_metres": 0.00013669184011206754,
+        "velocity_metres_per_second": 9.806107597272705e-12
+      },
+      "Evelyn": {
+        "position_metres": 0.00041087317820013983,
+        "velocity_metres_per_second": 1.0928729369620903e-11
+      },
+      "Leda": {
+        "position_metres": 0.00018598360814283608,
+        "velocity_metres_per_second": 6.5623997623614794e-12
+      },
+      "Genoveva": {
+        "position_metres": 0.0007934851137106798,
+        "velocity_metres_per_second": 1.9077721811666407e-11
+      },
+      "Nausikaa": {
+        "position_metres": 3.833723305176121e-05,
+        "velocity_metres_per_second": 3.858659226461245e-12
+      },
+      "Nysa": {
+        "position_metres": 6.394597860046467e-05,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Phaeo": {
+        "position_metres": 0.00036652869108472636,
+        "velocity_metres_per_second": 7.290154618149881e-12
+      },
+      "Palatia": {
+        "position_metres": 0.00042567645979502323,
+        "velocity_metres_per_second": 9.286203683887897e-12
+      },
+      "Flammario": {
+        "position_metres": 0.00018516023406237178,
+        "velocity_metres_per_second": 1.8195577489443672e-11
+      },
+      "Olga": {
+        "position_metres": 0.0004292170159617677,
+        "velocity_metres_per_second": 7.554830392944564e-12
+      },
+      "Industria": {
+        "position_metres": 0.00032948032961561865,
+        "velocity_metres_per_second": 1.0628351349187363e-11
+      },
+      "Vincentina": {
+        "position_metres": 0.00018468808650070503,
+        "velocity_metres_per_second": 7.29037622697209e-12
+      },
+      "Cheruskia": {
+        "position_metres": 0.00037138482806015126,
+        "velocity_metres_per_second": 7.622954678590855e-12
+      },
+      "Pomona": {
+        "position_metres": 0.00022246587084691366,
+        "velocity_metres_per_second": 8.135562285503895e-12
+      },
+      "Kalypso": {
+        "position_metres": 9.226521776159533e-05,
+        "velocity_metres_per_second": 1.8550473296364452e-11
+      },
+      "Isabella": {
+        "position_metres": 0.00023737105081335518,
+        "velocity_metres_per_second": 4.068277570810904e-12
+      },
+      "Marghanna": {
+        "position_metres": 0.000274658203125,
+        "velocity_metres_per_second": 1.3242930739013665e-11
+      },
+      "Isolda": {
+        "position_metres": 0.0001866085023290254,
+        "velocity_metres_per_second": 4.0816583057258505e-12
+      },
+      "Tisiphone": {
+        "position_metres": 0.00036693045345359,
+        "velocity_metres_per_second": 4.167828315035731e-12
+      },
+      "Klio": {
+        "position_metres": 0.0003247649635893671,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Mnemosyne": {
+        "position_metres": 0.0003415379224487212,
+        "velocity_metres_per_second": 7.800607271932878e-12
+      },
+      "Andromache": {
+        "position_metres": 0.0004280797454573432,
+        "velocity_metres_per_second": 4.547562325839267e-12
+      },
+      "Devosa": {
+        "position_metres": 0.00019012353201869372,
+        "velocity_metres_per_second": 1.820125916873576e-11
+      },
+      "Lilaea": {
+        "position_metres": 6.337451067289791e-05,
+        "velocity_metres_per_second": 8.586931744858563e-12
+      },
+      "Miriam": {
+        "position_metres": 0.00018625725732015537,
+        "velocity_metres_per_second": 3.777415196472282e-12
+      },
+      "Chaldaea": {
+        "position_metres": 0.00017280199665689277,
+        "velocity_metres_per_second": 5.322681277320783e-12
+      },
+      "Notburga": {
+        "position_metres": 0.0001983642578125,
+        "velocity_metres_per_second": 6.8060351382408795e-12
+      },
+      "Thyra": {
+        "position_metres": 0.00018313588942709712,
+        "velocity_metres_per_second": 7.402750541632352e-12
+      },
+      "Tamara": {
+        "position_metres": 9.7703922079969e-05,
+        "velocity_metres_per_second": 4.897778860262864e-12
+      },
+      "Massinga": {
+        "position_metres": 0.0005495282930105318,
+        "velocity_metres_per_second": 2.4170153239389606e-12
+      },
+      "Leonora": {
+        "position_metres": 0.00012674902134579582,
+        "velocity_metres_per_second": 1.88271032603543e-12
+      },
+      "Mathesis": {
+        "position_metres": 0.0004885345040633719,
+        "velocity_metres_per_second": 7.458411103860602e-12
+      },
+      "Una": {
+        "position_metres": 0.00030710089969755147,
+        "velocity_metres_per_second": 2.573067444645011e-12
+      },
+      "Anacostia": {
+        "position_metres": 0.00042724609375,
+        "velocity_metres_per_second": 5.823607568738997e-12
+      },
+      "Honoria": {
+        "position_metres": 0.00036625719026698976,
+        "velocity_metres_per_second": 7.565995712505439e-12
+      },
+      "Henrietta": {
+        "position_metres": 0.00037902045740888127,
+        "velocity_metres_per_second": 6.62122137262533e-12
+      },
+      "Montague": {
+        "position_metres": 0.00026074230179802034,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Dione": {
+        "position_metres": 0.00018315513255214196,
+        "velocity_metres_per_second": 1.4563013226676462e-11
+      },
+      "Megaira": {
+        "position_metres": 0.000492317682034353,
+        "velocity_metres_per_second": 9.837689346015367e-12
+      },
+      "Eurydike": {
+        "position_metres": 0.0003053403946845123,
+        "velocity_metres_per_second": 5.084229945850415e-13
+      },
+      "Tauris": {
+        "position_metres": 0.00026691979499108735,
+        "velocity_metres_per_second": 1.3882834102763579e-11
+      },
+      "Urania": {
+        "position_metres": 0.00012231221668117579,
+        "velocity_metres_per_second": 2.911017191488904e-11
+      },
+      "Amherstia": {
+        "position_metres": 0.0005790303332827843,
+        "velocity_metres_per_second": 8.580155856231252e-12
+      },
+      "Sappho": {
+        "position_metres": 0.0002611883967380324,
+        "velocity_metres_per_second": 3.756829674298002e-12
+      },
+      "Misa": {
+        "position_metres": 0.0001831452008691071,
+        "velocity_metres_per_second": 7.500747052839271e-12
+      },
+      "Rosa": {
+        "position_metres": 0.0006717313889622056,
+        "velocity_metres_per_second": 9.141899279485958e-12
+      },
+      "Sulamitis": {
+        "position_metres": 0.0003085899111352033,
+        "velocity_metres_per_second": 9.674075226714561e-12
+      },
+      "Pickeringia": {
+        "position_metres": 0.00031714797501871533,
+        "velocity_metres_per_second": 2.9118037843694986e-12
+      },
+      "Frigga": {
+        "position_metres": 0.0001936123281928943,
+        "velocity_metres_per_second": 7.5104333558542e-12
+      },
+      "Martha": {
+        "position_metres": 0.0002479259767039783,
+        "velocity_metres_per_second": 2.5865707548491937e-12
+      },
+      "Alekto": {
+        "position_metres": 0.0006721773693940926,
+        "velocity_metres_per_second": 3.838509432201621e-12
+      },
+      "Lehigh": {
+        "position_metres": 0.0006151014517439689,
+        "velocity_metres_per_second": 1.066719424283283e-11
+      },
+      "Nephthys": {
+        "position_metres": 0.0002516616241159141,
+        "velocity_metres_per_second": 5.532240293449121e-12
+      },
+      "Ekard": {
+        "position_metres": 0.00012220434936249808,
+        "velocity_metres_per_second": 2.190825302103968e-11
+      },
+      "Svea": {
+        "position_metres": 0.0002461588410171765,
+        "velocity_metres_per_second": 7.388769886016199e-12
+      },
+      "Dike": {
+        "position_metres": 0.00017267563320550957,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Eurynome": {
+        "position_metres": 0.00035607701046930896,
+        "velocity_metres_per_second": 8.188609674729881e-12
+      },
+      "Baucis": {
+        "position_metres": 0.0001936123281928943,
+        "velocity_metres_per_second": 1.1828349242185148e-11
+      },
+      "Tekmessa": {
+        "position_metres": 0.00031124283072102743,
+        "velocity_metres_per_second": 1.2254998162654252e-11
+      },
+      "Oceana": {
+        "position_metres": 0.00018326434554236318,
+        "velocity_metres_per_second": 1.1647215137477994e-11
+      },
+      "Genua": {
+        "position_metres": 0.0001856311807341986,
+        "velocity_metres_per_second": 1.4580309236299762e-11
+      },
+      "Palisana": {
+        "position_metres": 0.00017059844799040144,
+        "velocity_metres_per_second": 5.4569682106375694e-12
+      },
+      "Titania": {
+        "position_metres": 0.0003413887652867184,
+        "velocity_metres_per_second": 7.71731845292249e-12
+      },
+      "Ulla": {
+        "position_metres": 0.0007338906501872836,
+        "velocity_metres_per_second": 3.3494233918318593e-12
+      },
+      "Semiramis": {
+        "position_metres": 0.0002463065865685719,
+        "velocity_metres_per_second": 8.335656630071462e-12
+      },
+      "Alkmene": {
+        "position_metres": 0.0004283352177792751,
+        "velocity_metres_per_second": 1.4749963586345474e-11
+      },
+      "Eichsfeldia": {
+        "position_metres": 0.00013329624335980337,
+        "velocity_metres_per_second": 4.092726157978177e-12
+      },
+      "Ampella": {
+        "position_metres": 0.00043011451765573755,
+        "velocity_metres_per_second": 7.701391748214495e-12
+      },
+      "Praxedis": {
+        "position_metres": 0.00037408475281450806,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Phocaea": {
+        "position_metres": 0.00026779066123633187,
+        "velocity_metres_per_second": 5.535816520554343e-12
+      },
+      "Irma": {
+        "position_metres": 0.0003967285335350491,
+        "velocity_metres_per_second": 1.4582082026048705e-11
+      },
+      "Amalthea": {
+        "position_metres": 6.162832039414791e-05,
+        "velocity_metres_per_second": 1.0925772382264734e-11
+      },
+      "Iphigenia": {
+        "position_metres": 0.0001954916043427401,
+        "velocity_metres_per_second": 6.559013797428693e-12
+      },
+      "Budrosa": {
+        "position_metres": 0.00018359159470875762,
+        "velocity_metres_per_second": 1.4555134519039693e-11
+      },
+      "Pariana": {
+        "position_metres": 0.00028505770404463815,
+        "velocity_metres_per_second": 6.206093559720185e-12
+      },
+      "Ganymed": {
+        "position_metres": 0.0006357625322265521,
+        "velocity_metres_per_second": 2.0839141575178655e-12
+      },
+      "Theobalda": {
+        "position_metres": 7.62939453125e-05,
+        "velocity_metres_per_second": 4.290077928115626e-12
+      },
+      "Aethra": {
+        "position_metres": 0.0005151960148966716,
+        "velocity_metres_per_second": 1.0923406216047e-11
+      },
+      "Irmgard": {
+        "position_metres": 0.0003055629658253906,
+        "velocity_metres_per_second": 4.0689724683427995e-12
+      },
+      "Echo": {
+        "position_metres": 0.0001954450753395004,
+        "velocity_metres_per_second": 4.092726157978177e-12
+      },
+      "Lacadiera": {
+        "position_metres": 0.00025895034700832765,
+        "velocity_metres_per_second": 4.167828315035731e-12
+      },
+      "Pythia": {
+        "position_metres": 0.00012237168898356868,
+        "velocity_metres_per_second": 3.9118846266513295e-12
+      },
+      "Peitho": {
+        "position_metres": 0.0002462540777966524,
+        "velocity_metres_per_second": 2.1912972084749997e-11
+      },
+      "Chimaera": {
+        "position_metres": 0.0003120599569124994,
+        "velocity_metres_per_second": 5.752149554916067e-12
+      },
+      "Bilkis": {
+        "position_metres": 6.694766530908297e-05,
+        "velocity_metres_per_second": 3.670254149564682e-12
+      },
+      "Eros": {
+        "position_metres": 3.0755072587198445e-05,
+        "velocity_metres_per_second": 3.729205551930301e-12
+      }
+    },
+    "relative_earth_moon_difference": {
+      "position_metres": 0.00011049621904809625,
+      "velocity_metres_per_second": 3.3865327417670023e-10
+    },
+    "independent_reference": false,
+    "output_cadence_changed": true,
+    "default_settings_changed": false
+  },
+  "newtonian_backend_check": {
+    "duration_seconds": 72000.0,
+    "independent_scalar_invariants": {
+      "python": {
+        "relative_energy_drift": 1.8626987571255211e-16,
+        "relative_angular_momentum_drift": 1.5815011675603538e-16,
+        "scaled_linear_momentum_drift": 7.349904018508199e-17
+      },
+      "rust": {
+        "relative_energy_drift": 1.8626987571255211e-16,
+        "relative_angular_momentum_drift": 1.581163616044216e-16,
+        "scaled_linear_momentum_drift": 3.350781366666019e-17
+      }
+    },
+    "per_body_backend_differences": {
+      "Sun": {
+        "position_metres": 2.986047331594191e-08,
+        "velocity_metres_per_second": 3.66205343881779e-15
+      },
+      "Mercury": {
+        "position_metres": 8.58306884765625e-06,
+        "velocity_metres_per_second": 8.185452315956354e-12
+      },
+      "Venus": {
+        "position_metres": 2.132480599880018e-06,
+        "velocity_metres_per_second": 7.290154618149881e-12
+      },
+      "Earth": {
+        "position_metres": 3.051757863659076e-05,
+        "velocity_metres_per_second": 5.144880046711815e-12
+      },
+      "Moon": {
+        "position_metres": 3.0521900082394144e-05,
+        "velocity_metres_per_second": 6.272275421784041e-11
+      },
+      "Mars": {
+        "position_metres": 3.053247564999031e-05,
+        "velocity_metres_per_second": 1.4555911482528855e-11
+      },
+      "Jupiter": {
+        "position_metres": 0.00012208521275181014,
+        "velocity_metres_per_second": 2.842170943040401e-14
+      },
+      "Saturn": {
+        "position_metres": 0.00024461699740419614,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Uranus": {
+        "position_metres": 9.5367431640625e-07,
+        "velocity_metres_per_second": 1.286298244381058e-12
+      },
+      "Neptune": {
+        "position_metres": 0.0009789437824917872,
+        "velocity_metres_per_second": 1.8198773652309366e-12
+      },
+      "Pluto-System": {
+        "position_metres": 0.0013824159732551422,
+        "velocity_metres_per_second": 1.016845989170083e-12
+      },
+      "Ceres": {
+        "position_metres": 3.814697265625e-06,
+        "velocity_metres_per_second": 7.277415503205833e-12
+      },
+      "Pallas": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Vesta": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 2.3092638912203256e-14
+      },
+      "Juno": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 5.475883235154604e-12
+      },
+      "Iris": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 5.532240293449121e-12
+      },
+      "Hygiea": {
+        "position_metres": 0.00012230849870209807,
+        "velocity_metres_per_second": 1.8225386545374702e-12
+      },
+      "Eunomia": {
+        "position_metres": 0.00019301011109426145,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Psyche": {
+        "position_metres": 9.5367431640625e-07,
+        "velocity_metres_per_second": 5.7532729119338884e-12
+      },
+      "Euphrosyne": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 3.751665644813329e-12
+      },
+      "Europa": {
+        "position_metres": 0.00012582810155978107,
+        "velocity_metres_per_second": 2.612324645514504e-12
+      },
+      "Cybele": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Sylvia": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Thisbe": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 2.574950406803083e-12
+      },
+      "Camilla": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Davida": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 3.652162014124999e-12
+      },
+      "Interamnia": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 2.612324645514504e-12
+      },
+      "Dido": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Aurora": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 2.612324645514504e-12
+      },
+      "Doris": {
+        "position_metres": 3.814697265625e-06,
+        "velocity_metres_per_second": 2.2771342740819555e-13
+      },
+      "Bertha": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 2.227797943108433e-12
+      },
+      "Amphitrite": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 5.684341886080802e-14
+      },
+      "Ursula": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Herculina": {
+        "position_metres": 3.411968959808029e-05,
+        "velocity_metres_per_second": 1.8225386545374702e-12
+      },
+      "Stereoskopia": {
+        "position_metres": 0.0001220703125,
+        "velocity_metres_per_second": 7.33610513857533e-12
+      },
+      "Siegena": {
+        "position_metres": 0.00013647875839232116,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Alauda": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 2.5824685261797065e-12
+      },
+      "Laetitia": {
+        "position_metres": 8.529922399520072e-06,
+        "velocity_metres_per_second": 1.9293296132306226e-12
+      },
+      "Metis": {
+        "position_metres": 1.7059844799040144e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Hebe": {
+        "position_metres": 3.0755072587198445e-05,
+        "velocity_metres_per_second": 3.858659226461245e-12
+      },
+      "Bamberga": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Elektra": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 5.550898829703193e-12
+      },
+      "Themis": {
+        "position_metres": 1.3486991523486091e-06,
+        "velocity_metres_per_second": 3.638422869199817e-12
+      },
+      "Patientia": {
+        "position_metres": 1.52587890625e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Fortuna": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 2.574950406803083e-12
+      },
+      "Palma": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Daphne": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 4.455595886216866e-12
+      },
+      "Irene": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Diotima": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 3.777415196472282e-12
+      },
+      "Egeria": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Hesperia": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Parthenope": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 1.8192114345999083e-12
+      },
+      "Papagena": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 2.2737367544323206e-12
+      },
+      "Lachesis": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 4.092726157978177e-12
+      },
+      "Aglaja": {
+        "position_metres": 7.64428116888113e-06,
+        "velocity_metres_per_second": 3.729205551930301e-12
+      },
+      "Aegle": {
+        "position_metres": 0.00013647875839232116,
+        "velocity_metres_per_second": 5.752203314302338e-12
+      },
+      "Hedwig": {
+        "position_metres": 0.00012605828584181446,
+        "velocity_metres_per_second": 3.858659226461245e-12
+      },
+      "Aspasia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Juewa": {
+        "position_metres": 0.00012302029034879378,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Winchester": {
+        "position_metres": 6.824604287267626e-05,
+        "velocity_metres_per_second": 4.167828315035731e-12
+      },
+      "Kalliope": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Lomia": {
+        "position_metres": 6.292082673342394e-05,
+        "velocity_metres_per_second": 1.016845989170083e-12
+      },
+      "Scheila": {
+        "position_metres": 3.814697265625e-06,
+        "velocity_metres_per_second": 3.6943849430080994e-12
+      },
+      "Nemesis": {
+        "position_metres": 3.259278772475254e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Io": {
+        "position_metres": 0.00013037115089901017,
+        "velocity_metres_per_second": 1.836667072598574e-12
+      },
+      "Hestia": {
+        "position_metres": 1.528856233776226e-05,
+        "velocity_metres_per_second": 3.751665644813329e-12
+      },
+      "Sibylla": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Germania": {
+        "position_metres": 0.00012212990259996125,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Eugenia": {
+        "position_metres": 3.053247564999031e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Pales": {
+        "position_metres": 6.826602999944031e-05,
+        "velocity_metres_per_second": 3.639754730461873e-12
+      },
+      "Kreusa": {
+        "position_metres": 0.0001220703125,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Dembowska": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 7.275957614183426e-12
+      },
+      "Lucina": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 3.639754730461873e-12
+      },
+      "Eukrate": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 3.150582065370831e-12
+      },
+      "Freia": {
+        "position_metres": 7.864199877963372e-06,
+        "velocity_metres_per_second": 2.3437142008433856e-13
+      },
+      "Philomela": {
+        "position_metres": 8.665326455383718e-05,
+        "velocity_metres_per_second": 5.149900813606166e-12
+      },
+      "Lamberta": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 1.0913936421275139e-11
+      },
+      "Eleonora": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Berbericia": {
+        "position_metres": 6.104260637590507e-05,
+        "velocity_metres_per_second": 3.751665644813329e-12
+      },
+      "Elpis": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 3.639754730461873e-12
+      },
+      "Minerva": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 7.291041013024353e-12
+      },
+      "Flora": {
+        "position_metres": 3.057712467552452e-05,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Massalia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Julia": {
+        "position_metres": 6.162832039414791e-05,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Armenia": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 2.227797943108433e-12
+      },
+      "Nemausa": {
+        "position_metres": 9.1552734375e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Philosophia": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Pompeja": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Eucharis": {
+        "position_metres": 1.52587890625e-05,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Pretoria": {
+        "position_metres": 0.0001373291015625,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Atalante": {
+        "position_metres": 0.00019301011109426145,
+        "velocity_metres_per_second": 2.0839141575178655e-12
+      },
+      "Gudrun": {
+        "position_metres": 6.106495129998063e-05,
+        "velocity_metres_per_second": 3.756829674298002e-12
+      },
+      "Melpomene": {
+        "position_metres": 4.332663227691859e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Bettina": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 5.084229945850415e-13
+      },
+      "Arethusa": {
+        "position_metres": 4.76837158203125e-07,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Aletheia": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 2.0368671433935693e-12
+      },
+      "Myrrha": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Medea": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Klymene": {
+        "position_metres": 3.0755072587198445e-05,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Melete": {
+        "position_metres": 3.145679951185349e-05,
+        "velocity_metres_per_second": 9.099386826154683e-13
+      },
+      "Gyptis": {
+        "position_metres": 1.7059844799040144e-05,
+        "velocity_metres_per_second": 3.653931044024875e-12
+      },
+      "Kleopatra": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 2.573067444645011e-12
+      },
+      "Pulcova": {
+        "position_metres": 0.00012302029034879378,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Vibilia": {
+        "position_metres": 3.0518509433364194e-05,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Erminia": {
+        "position_metres": 0.00018310546875,
+        "velocity_metres_per_second": 3.756829674298002e-12
+      },
+      "Adorea": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Emma": {
+        "position_metres": 8.633781660275479e-05,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Harmonia": {
+        "position_metres": 6.11839864057367e-05,
+        "velocity_metres_per_second": 1.1368683772161603e-13
+      },
+      "Argentina": {
+        "position_metres": 6.473755931273323e-05,
+        "velocity_metres_per_second": 3.64510501049349e-12
+      },
+      "Ino": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 5.04513488103749e-13
+      },
+      "Aquitania": {
+        "position_metres": 0.0001373291015625,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Bellona": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 5.084229945850415e-13
+      },
+      "Lampetia": {
+        "position_metres": 1.52587890625e-05,
+        "velocity_metres_per_second": 2.0463630789890885e-12
+      },
+      "Siwa": {
+        "position_metres": 3.0755072587198445e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Victoria": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Hippo": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 1.016845989170083e-12
+      },
+      "Astraea": {
+        "position_metres": 0.00013647875839232116,
+        "velocity_metres_per_second": 1.888707598236141e-12
+      },
+      "Ianthe": {
+        "position_metres": 2.384185791015625e-07,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Chloris": {
+        "position_metres": 3.0755072587198445e-05,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Circe": {
+        "position_metres": 6.116168497018419e-05,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Adeona": {
+        "position_metres": 1.7059844799040144e-05,
+        "velocity_metres_per_second": 1.0913936421275139e-11
+      },
+      "Ophelia": {
+        "position_metres": 6.518557544950508e-05,
+        "velocity_metres_per_second": 1.1368683772161603e-13
+      },
+      "Hermione": {
+        "position_metres": 6.209877241554148e-05,
+        "velocity_metres_per_second": 1.9293296132306226e-12
+      },
+      "Comacina": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Ninina": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Ausonia": {
+        "position_metres": 0.0001373291015625,
+        "velocity_metres_per_second": 4.0677811427519475e-12
+      },
+      "Thia": {
+        "position_metres": 4.640779518354965e-05,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Xanthippe": {
+        "position_metres": 4.315837287515549e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Ornamenta": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Thalia": {
+        "position_metres": 0.00012230849870209807,
+        "velocity_metres_per_second": 1.836667072598574e-12
+      },
+      "Gallia": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Merapi": {
+        "position_metres": 0.0001220703125,
+        "velocity_metres_per_second": 1.8225386545374702e-12
+      },
+      "Nuwa": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Charybdis": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Eva": {
+        "position_metres": 3.0651395187355416e-05,
+        "velocity_metres_per_second": 3.701375270816176e-12
+      },
+      "Athamantis": {
+        "position_metres": 3.0521303187952535e-05,
+        "velocity_metres_per_second": 2.612324645514504e-12
+      },
+      "Loreley": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 3.2155493553843715e-13
+      },
+      "Antiope": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 4.0689724683427995e-12
+      },
+      "Meliboea": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 9.165725883006586e-13
+      },
+      "Princetonia": {
+        "position_metres": 0.00012325664078829582,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Wratislavia": {
+        "position_metres": 1.52587890625e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Euterpe": {
+        "position_metres": 6.115425661283686e-05,
+        "velocity_metres_per_second": 7.276845738399633e-12
+      },
+      "Alexandra": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 7.290154618149881e-12
+      },
+      "Hispania": {
+        "position_metres": 6.473755931273323e-05,
+        "velocity_metres_per_second": 1.0961203582331973e-11
+      },
+      "Elfriede": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Liguria": {
+        "position_metres": 1.52587890625e-05,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Adria": {
+        "position_metres": 0.0001220703125,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Kassandra": {
+        "position_metres": 6.394597860046467e-05,
+        "velocity_metres_per_second": 7.332580706405269e-12
+      },
+      "Protogeneia": {
+        "position_metres": 0.00012584165346684787,
+        "velocity_metres_per_second": 4.0689724683427995e-12
+      },
+      "Johanna": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Prokne": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Fides": {
+        "position_metres": 0.00012230849870209807,
+        "velocity_metres_per_second": 1.8269655220124374e-12
+      },
+      "Chicago": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 5.1448789686149945e-12
+      },
+      "Aurelia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 2.0839141575178655e-12
+      },
+      "Bertholda": {
+        "position_metres": 0.00012605828584181446,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Marianna": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 2.0463630789890885e-12
+      },
+      "Polyxena": {
+        "position_metres": 8.633781660275479e-05,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Padua": {
+        "position_metres": 0.0001220703125,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Hypatia": {
+        "position_metres": 8.665326455383718e-05,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Lumen": {
+        "position_metres": 6.162832039414791e-05,
+        "velocity_metres_per_second": 1.0951766470309208e-11
+      },
+      "Polyxo": {
+        "position_metres": 0.0001223679728114734,
+        "velocity_metres_per_second": 3.6821816374954094e-12
+      },
+      "Ani": {
+        "position_metres": 2.1579186437577746e-05,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Roberta": {
+        "position_metres": 0.00013648209035258563,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Carlova": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 4.0689724683427995e-12
+      },
+      "Diana": {
+        "position_metres": 3.057712467552452e-05,
+        "velocity_metres_per_second": 1.9293296132306226e-12
+      },
+      "Undina": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 2.2737367544323206e-13
+      },
+      "Asterope": {
+        "position_metres": 3.057712467552452e-05,
+        "velocity_metres_per_second": 3.777415196472282e-12
+      },
+      "Adelheid": {
+        "position_metres": 0.00012584165346684787,
+        "velocity_metres_per_second": 1.845661255976463e-12
+      },
+      "Lutetia": {
+        "position_metres": 1.52587890625e-05,
+        "velocity_metres_per_second": 7.276845738399633e-12
+      },
+      "Gerlinde": {
+        "position_metres": 8.765506967984052e-05,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Bredichina": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Messalina": {
+        "position_metres": 6.106495129998063e-05,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Aemilia": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 1.836667072598574e-12
+      },
+      "Marion": {
+        "position_metres": 6.473755931273323e-05,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Galatea": {
+        "position_metres": 0.000125885009765625,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Helio": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Armida": {
+        "position_metres": 0.00013653205999888062,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Isis": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 2.5824685261797065e-12
+      },
+      "Beatrix": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 2.5824685261797065e-12
+      },
+      "Zelinda": {
+        "position_metres": 4.382753483992026e-05,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Concordia": {
+        "position_metres": 3.814697265625e-06,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Proserpina": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 5.149900813606166e-12
+      },
+      "Hohensteina": {
+        "position_metres": 7.762346551942685e-06,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Edith": {
+        "position_metres": 3.0755072587198445e-05,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Hersilia": {
+        "position_metres": 1.52587890625e-05,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Tanete": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Denise": {
+        "position_metres": 9.1552734375e-05,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Penelope": {
+        "position_metres": 6.29425048828125e-05,
+        "velocity_metres_per_second": 2.2737367544323206e-13
+      },
+      "Aline": {
+        "position_metres": 0.00012674902134579582,
+        "velocity_metres_per_second": 1.8190449138500806e-12
+      },
+      "Vaticana": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Tokio": {
+        "position_metres": 6.153971025429412e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Arsinoe": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Peraga": {
+        "position_metres": 6.834592005603377e-05,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Tercidina": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Iduna": {
+        "position_metres": 0.0001856311807341986,
+        "velocity_metres_per_second": 2.612324645514504e-12
+      },
+      "Brixia": {
+        "position_metres": 1.7059844799040144e-05,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Faina": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Erato": {
+        "position_metres": 0.00013647875839232116,
+        "velocity_metres_per_second": 4.0677811427519475e-12
+      },
+      "Feronia": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 7.30786208804975e-12
+      },
+      "Dynamene": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 5.4617031080235e-12
+      },
+      "Christa": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 7.275957614183426e-12
+      },
+      "Eunike": {
+        "position_metres": 0.00013649208574535252,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Eos": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 6.821210263296962e-13
+      },
+      "Hertha": {
+        "position_metres": 0.0001221447955824689,
+        "velocity_metres_per_second": 3.750373526419636e-12
+      },
+      "Semele": {
+        "position_metres": 6.337451067289791e-05,
+        "velocity_metres_per_second": 4.62671908852022e-13
+      },
+      "Veritas": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Emita": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Aegina": {
+        "position_metres": 0.00012230849870209807,
+        "velocity_metres_per_second": 1.1368683772161603e-13
+      },
+      "Alkeste": {
+        "position_metres": 0.0001220703125,
+        "velocity_metres_per_second": 7.333461973244147e-12
+      },
+      "Artemis": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 5.475883235154604e-12
+      },
+      "Nephele": {
+        "position_metres": 0.00013649208574535252,
+        "velocity_metres_per_second": 1.8198773652309366e-12
+      },
+      "Freda": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Antigone": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 2.2737367544323206e-13
+      },
+      "Erigone": {
+        "position_metres": 8.640099832844639e-05,
+        "velocity_metres_per_second": 5.4617031080235e-12
+      },
+      "Thetis": {
+        "position_metres": 6.337451067289791e-05,
+        "velocity_metres_per_second": 5.084229945850415e-13
+      },
+      "Desiderata": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 3.279229782005122e-12
+      },
+      "Niobe": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Rusthawelia": {
+        "position_metres": 6.834592005603377e-05,
+        "velocity_metres_per_second": 2.573067444645011e-12
+      },
+      "Lictoria": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Melusina": {
+        "position_metres": 2.1579186437577746e-05,
+        "velocity_metres_per_second": 3.811477339295427e-12
+      },
+      "Hera": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 9.374856803373542e-13
+      },
+      "Ate": {
+        "position_metres": 8.529922399520072e-06,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Ariadne": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Terpsichore": {
+        "position_metres": 8.665326455383718e-05,
+        "velocity_metres_per_second": 2.2737367544323206e-13
+      },
+      "Boliviana": {
+        "position_metres": 6.153278221321998e-05,
+        "velocity_metres_per_second": 3.6943849430080994e-12
+      },
+      "Elisabetha": {
+        "position_metres": 6.292082673342394e-05,
+        "velocity_metres_per_second": 7.290154618149881e-12
+      },
+      "Sapientia": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 9.374856803373542e-13
+      },
+      "Tatjana": {
+        "position_metres": 3.145679951185349e-05,
+        "velocity_metres_per_second": 1.8198773652309366e-12
+      },
+      "Josephina": {
+        "position_metres": 0.0001220703134094947,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Panopaea": {
+        "position_metres": 1.7059844799040144e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Arachne": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Sophrosyne": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Lanzia": {
+        "position_metres": 8.765506967984052e-05,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Fringilla": {
+        "position_metres": 4.315837287515549e-05,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Mandeville": {
+        "position_metres": 6.473755931273323e-05,
+        "velocity_metres_per_second": 1.2862197421537486e-12
+      },
+      "Leto": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 1.1368683772161603e-13
+      },
+      "Cantabia": {
+        "position_metres": 0.00012307942050858824,
+        "velocity_metres_per_second": 4.552466771099645e-13
+      },
+      "Irmintraud": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 7.304324028249998e-12
+      },
+      "Bruchsalia": {
+        "position_metres": 4.382753483992026e-05,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Cava": {
+        "position_metres": 1.7059844799040144e-05,
+        "velocity_metres_per_second": 5.4617031080235e-12
+      },
+      "Hamburga": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Havnia": {
+        "position_metres": 1.0789593218788873e-05,
+        "velocity_metres_per_second": 7.279509460923746e-12
+      },
+      "Lydia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Luscinia": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Gratia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 5.756641667709193e-12
+      },
+      "Hermentaria": {
+        "position_metres": 1.9073486328125e-06,
+        "velocity_metres_per_second": 3.76542065207086e-12
+      },
+      "Vundtia": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 2.2737367544323206e-13
+      },
+      "Ludmilla": {
+        "position_metres": 0.00017280199665689277,
+        "velocity_metres_per_second": 3.6662903532026344e-12
+      },
+      "Klotho": {
+        "position_metres": 6.337451067289791e-05,
+        "velocity_metres_per_second": 1.820986708439858e-12
+      },
+      "Luisa": {
+        "position_metres": 2.1579186437577746e-05,
+        "velocity_metres_per_second": 6.060117574116165e-13
+      },
+      "Ilmatar": {
+        "position_metres": 0.00012325664078829582,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Rachele": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 1.9293296132306226e-12
+      },
+      "Laurentia": {
+        "position_metres": 0.0001220703125,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Apollonia": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 2.842170943040401e-14
+      },
+      "Mashona": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 4.092726157978177e-12
+      },
+      "Ara": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Campania": {
+        "position_metres": 3.0755072587198445e-05,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Kolga": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Vanadis": {
+        "position_metres": 6.826602999944031e-05,
+        "velocity_metres_per_second": 2.0344862341713998e-12
+      },
+      "Octavia": {
+        "position_metres": 0.00012605828584181446,
+        "velocity_metres_per_second": 5.475883235154604e-12
+      },
+      "Virginia": {
+        "position_metres": 6.302914292090723e-05,
+        "velocity_metres_per_second": 3.648995077473336e-12
+      },
+      "Carina": {
+        "position_metres": 0.00012674902134579582,
+        "velocity_metres_per_second": 1.8749848240581314e-12
+      },
+      "Eurykleia": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 3.6540415799571385e-12
+      },
+      "Felicitas": {
+        "position_metres": 0.00013647875839232116,
+        "velocity_metres_per_second": 2.0463630789890885e-12
+      },
+      "Hekate": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 3.756829674298002e-12
+      },
+      "Edna": {
+        "position_metres": 0.000139849111784541,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Corduba": {
+        "position_metres": 3.411968959808029e-05,
+        "velocity_metres_per_second": 2.612324645514504e-12
+      },
+      "Aeria": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Leukothea": {
+        "position_metres": 3.145679951185349e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Evelyn": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 4.0689724683427995e-12
+      },
+      "Leda": {
+        "position_metres": 8.665326455383718e-05,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Genoveva": {
+        "position_metres": 3.051781095475548e-05,
+        "velocity_metres_per_second": 3.150582065370831e-12
+      },
+      "Nausikaa": {
+        "position_metres": 3.145679951185349e-05,
+        "velocity_metres_per_second": 1.1101797659406386e-11
+      },
+      "Nysa": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 3.751665644813329e-12
+      },
+      "Phaeo": {
+        "position_metres": 1.9073486328125e-06,
+        "velocity_metres_per_second": 7.346668290394296e-12
+      },
+      "Palatia": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 2.5724394843074972e-12
+      },
+      "Flammario": {
+        "position_metres": 0.00012605828584181446,
+        "velocity_metres_per_second": 7.276845738399633e-12
+      },
+      "Olga": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 7.823769253302659e-12
+      },
+      "Industria": {
+        "position_metres": 0.00012230849870209807,
+        "velocity_metres_per_second": 4.073734286787139e-12
+      },
+      "Vincentina": {
+        "position_metres": 6.153971025429412e-05,
+        "velocity_metres_per_second": 4.856703836433968e-13
+      },
+      "Cheruskia": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 1.2862197421537486e-12
+      },
+      "Pomona": {
+        "position_metres": 6.834592005603377e-05,
+        "velocity_metres_per_second": 4.0689724683427995e-12
+      },
+      "Kalypso": {
+        "position_metres": 6.151014517439689e-05,
+        "velocity_metres_per_second": 7.500747052839271e-12
+      },
+      "Isabella": {
+        "position_metres": 0.00012325664078829582,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Marghanna": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 1.8198773652309366e-12
+      },
+      "Isolda": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 1.1368683772161603e-13
+      },
+      "Tisiphone": {
+        "position_metres": 0.00012254622195594032,
+        "velocity_metres_per_second": 1.016845989170083e-12
+      },
+      "Klio": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Mnemosyne": {
+        "position_metres": 3.411968959808029e-05,
+        "velocity_metres_per_second": 0.0
+      },
+      "Andromache": {
+        "position_metres": 0.00012212990259996125,
+        "velocity_metres_per_second": 1.819003281280725e-12
+      },
+      "Devosa": {
+        "position_metres": 6.302914292090723e-05,
+        "velocity_metres_per_second": 7.290154618149881e-12
+      },
+      "Lilaea": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Miriam": {
+        "position_metres": 0.00012605828584181446,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Chaldaea": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Notburga": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Thyra": {
+        "position_metres": 8.529922399520072e-06,
+        "velocity_metres_per_second": 3.749942721349417e-12
+      },
+      "Tamara": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Massinga": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 2.5824685261797065e-12
+      },
+      "Leonora": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 1.8192114345999083e-12
+      },
+      "Mathesis": {
+        "position_metres": 0.00012582719804741396,
+        "velocity_metres_per_second": 2.2737367544323206e-13
+      },
+      "Una": {
+        "position_metres": 0.000125885009765625,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Anacostia": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Honoria": {
+        "position_metres": 0.00018310546875,
+        "velocity_metres_per_second": 5.684341886080801e-13
+      },
+      "Henrietta": {
+        "position_metres": 2.1579186437577746e-05,
+        "velocity_metres_per_second": 7.823769253302659e-12
+      },
+      "Montague": {
+        "position_metres": 0.00013653205999888062,
+        "velocity_metres_per_second": 2.612324645514504e-12
+      },
+      "Dione": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 3.6450773090749405e-12
+      },
+      "Megaira": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_metres_per_second": 3.639754730461873e-12
+      },
+      "Eurydike": {
+        "position_metres": 1.9082797281243946e-06,
+        "velocity_metres_per_second": 1.8471924715040497e-12
+      },
+      "Tauris": {
+        "position_metres": 6.337451067289791e-05,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Urania": {
+        "position_metres": 1.9073486328125e-06,
+        "velocity_metres_per_second": 2.5421149729252077e-13
+      },
+      "Amherstia": {
+        "position_metres": 6.99245558922705e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Sappho": {
+        "position_metres": 8.765506967984052e-05,
+        "velocity_metres_per_second": 9.094947017729282e-13
+      },
+      "Misa": {
+        "position_metres": 0.00012207124381902193,
+        "velocity_metres_per_second": 5.684341886080802e-14
+      },
+      "Rosa": {
+        "position_metres": 2.132480599880018e-06,
+        "velocity_metres_per_second": 3.646849775656265e-12
+      },
+      "Sulamitis": {
+        "position_metres": 0.00018374015165393518,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Pickeringia": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Frigga": {
+        "position_metres": 6.826602999944031e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Martha": {
+        "position_metres": 8.765506967984052e-05,
+        "velocity_metres_per_second": 1.8198773652309366e-12
+      },
+      "Alekto": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 3.703120790965461e-12
+      },
+      "Lehigh": {
+        "position_metres": 6.291359902370698e-05,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Nephthys": {
+        "position_metres": 6.106495129998063e-05,
+        "velocity_metres_per_second": 2.033691978340166e-12
+      },
+      "Ekard": {
+        "position_metres": 6.151026069063679e-05,
+        "velocity_metres_per_second": 2.8760747774580336e-12
+      },
+      "Svea": {
+        "position_metres": 6.337451067289791e-05,
+        "velocity_metres_per_second": 4.167828315035731e-12
+      },
+      "Dike": {
+        "position_metres": 6.834592005603377e-05,
+        "velocity_metres_per_second": 1.8749713606747085e-12
+      },
+      "Eurynome": {
+        "position_metres": 3.814697265625e-06,
+        "velocity_metres_per_second": 1.8225386545374702e-12
+      },
+      "Baucis": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Tekmessa": {
+        "position_metres": 3.814697265625e-06,
+        "velocity_metres_per_second": 3.637978807091713e-12
+      },
+      "Oceana": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 1.1368683772161603e-13
+      },
+      "Genua": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 4.092726157978177e-12
+      },
+      "Palisana": {
+        "position_metres": 4.315837287515549e-05,
+        "velocity_metres_per_second": 3.150582065370831e-12
+      },
+      "Titania": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Ulla": {
+        "position_metres": 0.00012307942050858824,
+        "velocity_metres_per_second": 2.0463630789890885e-12
+      },
+      "Semiramis": {
+        "position_metres": 0.00013653205999888062,
+        "velocity_metres_per_second": 4.067383956680332e-12
+      },
+      "Alkmene": {
+        "position_metres": 0.00012207124381902193,
+        "velocity_metres_per_second": 7.276845738399633e-12
+      },
+      "Eichsfeldia": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 7.33610513857533e-12
+      },
+      "Ampella": {
+        "position_metres": 6.103701886672839e-05,
+        "velocity_metres_per_second": 9.454491360850846e-13
+      },
+      "Praxedis": {
+        "position_metres": 0.00012302398681640625,
+        "velocity_metres_per_second": 1.850687635408088e-12
+      },
+      "Phocaea": {
+        "position_metres": 8.631674575031098e-05,
+        "velocity_metres_per_second": 1.8198773652309366e-12
+      },
+      "Irma": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 5.684341886080802e-14
+      },
+      "Amalthea": {
+        "position_metres": 0.0,
+        "velocity_metres_per_second": 5.084229945850415e-13
+      },
+      "Iphigenia": {
+        "position_metres": 3.057712467552452e-05,
+        "velocity_metres_per_second": 4.067483256834317e-12
+      },
+      "Budrosa": {
+        "position_metres": 6.103515625e-05,
+        "velocity_metres_per_second": 3.655699217873354e-12
+      },
+      "Pariana": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 1.8189894035458565e-12
+      },
+      "Ganymed": {
+        "position_metres": 0.00012302029034879378,
+        "velocity_metres_per_second": 2.227797943108433e-12
+      },
+      "Theobalda": {
+        "position_metres": 3.411968959808029e-05,
+        "velocity_metres_per_second": 1.8331451766013172e-12
+      },
+      "Aethra": {
+        "position_metres": 9.1552734375e-05,
+        "velocity_metres_per_second": 3.673334145197148e-12
+      },
+      "Irmgard": {
+        "position_metres": 7.62939453125e-06,
+        "velocity_metres_per_second": 4.547473508864641e-13
+      },
+      "Echo": {
+        "position_metres": 0.00012212990259996125,
+        "velocity_metres_per_second": 5.146134889290022e-12
+      },
+      "Lacadiera": {
+        "position_metres": 6.823937919616058e-05,
+        "velocity_metres_per_second": 7.513659348596004e-12
+      },
+      "Pythia": {
+        "position_metres": 6.866455078125e-05,
+        "velocity_metres_per_second": 4.582862941503293e-13
+      },
+      "Peitho": {
+        "position_metres": 6.115424935104904e-05,
+        "velocity_metres_per_second": 3.6943849430080994e-12
+      },
+      "Chimaera": {
+        "position_metres": 4.315837287515549e-05,
+        "velocity_metres_per_second": 2.7284841053187847e-12
+      },
+      "Bilkis": {
+        "position_metres": 1.0789593218788873e-05,
+        "velocity_metres_per_second": 3.06111178766429e-13
+      },
+      "Eros": {
+        "position_metres": 3.0521303187952535e-05,
+        "velocity_metres_per_second": 1.4380373887290168e-12
+      }
+    },
+    "relative_earth_moon_difference": {
+      "position_metres": 6.103736858418866e-05,
+      "velocity_metres_per_second": 5.7780461504047496e-11
+    },
+    "checks_passed": true,
+    "independent_trajectory_reference": false,
+    "source_state_preserved": true
+  },
+  "optimization_candidates": {
+    "fromiter": {
+      "baseline_full_median_seconds": 0.3866828999889549,
+      "candidate_full_median_seconds": 0.43892389998654835,
+      "fractional_gain": -0.13510036259448155,
+      "required_fractional_gain": 0.15,
+      "checks_passed": false,
+      "outputs_preserved": true,
+      "applied_to_runtime": false,
+      "raw_results": {
+        "input_sha256": "b491d4718239ba51cafe85cf094cf4c5233cd960cb7073e62ff5a9c86aa96275",
+        "results": [
+          {
+            "history": 60,
+            "view": "Все тела",
+            "build_raw_seconds": [
+              0.011392600019462407,
+              0.011098299990408123,
+              0.010879899986321107
+            ],
+            "paint_raw_seconds": [
+              0.0919753999914974,
+              0.08948429999873042,
+              0.09211830000276677
+            ],
+            "full_raw_seconds": [
+              0.1033680000109598,
+              0.10058259998913854,
+              0.10299819998908788
+            ],
+            "full_median_seconds": 0.10299819998908788,
+            "pixel_sha256": "d75e42e7e690011357687dc2166f101e685d432c8193479bd510aa1f4dccc3f2",
+            "path_sha256": "a46a30a8ee59d662ecec3bc693acc41f75b0ee851d855341a90ea35d922f2af0",
+            "markers_sha256": "524b25e9dd76f30350160cddd5d36f9b5a5228d85dae50614724a0c59bbe0d4e",
+            "limits": [
+              [
+                -18787868282304.203,
+                22684566277134.47
+              ],
+              [
+                -4742233819984.549,
+                2933358003796.2305
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          },
+          {
+            "history": 60,
+            "view": "Земля и Луна",
+            "build_raw_seconds": [
+              0.002966000000014901,
+              0.0030390000029001385,
+              0.002627899986691773
+            ],
+            "paint_raw_seconds": [
+              0.06439990000217222,
+              0.06353369998396374,
+              0.06142440001713112
+            ],
+            "full_raw_seconds": [
+              0.06736590000218712,
+              0.06657269998686388,
+              0.06405230000382289
+            ],
+            "full_median_seconds": 0.06657269998686388,
+            "pixel_sha256": "1d8ea2c5bc3daa0e086e66fe99bb73ce9b3dc73f22751ac0af67326002cfa871",
+            "path_sha256": "8f7b37071507ee01b6dd2d88d184e9a81d6e62d459a8928faa21f33081062875",
+            "markers_sha256": "5b269a4a783af72e6ead6dd1503c3fef2690f3739e7edebce726e2b1c192cd50",
+            "limits": [
+              [
+                -543871104.9920595,
+                165967408.08440566
+              ],
+              [
+                -5971579.507134248,
+                125403169.64981918
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          },
+          {
+            "history": 1500,
+            "view": "Все тела",
+            "build_raw_seconds": [
+              0.1728411999938544,
+              0.17353699999512173,
+              0.17384929998661391
+            ],
+            "paint_raw_seconds": [
+              0.26628089998848736,
+              0.26015620000544004,
+              0.26507459999993443
+            ],
+            "full_raw_seconds": [
+              0.43912209998234175,
+              0.4336932000005618,
+              0.43892389998654835
+            ],
+            "full_median_seconds": 0.43892389998654835,
+            "pixel_sha256": "641879431ef5fff1eda71da17d260a1310c37f0f2e0f35d0362174b98f0588b2",
+            "path_sha256": "15ac0a41a2553c52c5bcc73f5bfb8b369ddf067a0c8e20ab660b8e7258808181",
+            "markers_sha256": "524b25e9dd76f30350160cddd5d36f9b5a5228d85dae50614724a0c59bbe0d4e",
+            "limits": [
+              [
+                -18787868282304.203,
+                22684566277134.47
+              ],
+              [
+                -4742233819984.549,
+                2933358003796.2305
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          },
+          {
+            "history": 1500,
+            "view": "Земля и Луна",
+            "build_raw_seconds": [
+              0.005410000012489036,
+              0.004268400021828711,
+              0.004047299997182563
+            ],
+            "paint_raw_seconds": [
+              0.07277460000477731,
+              0.06736659997841343,
+              0.06745590001810342
+            ],
+            "full_raw_seconds": [
+              0.07818460001726635,
+              0.07163500000024214,
+              0.07150320001528598
+            ],
+            "full_median_seconds": 0.07163500000024214,
+            "pixel_sha256": "b70c3c76cef969bd5be46c0ea62a55ea8453331cb5a84c4332fb096623ffb0b9",
+            "path_sha256": "1f2ee051b7c12e535872008b3e0fd37db542059b394e350cf019580911db28a0",
+            "markers_sha256": "5b269a4a783af72e6ead6dd1503c3fef2690f3739e7edebce726e2b1c192cd50",
+            "limits": [
+              [
+                -543871104.9920595,
+                165967408.08440566
+              ],
+              [
+                -5971579.507134248,
+                125403169.64981918
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          }
+        ]
+      }
+    },
+    "contiguous": {
+      "baseline_full_median_seconds": 0.3866828999889549,
+      "candidate_full_median_seconds": 0.3979572999814991,
+      "fractional_gain": -0.029156706937043975,
+      "required_fractional_gain": 0.15,
+      "checks_passed": false,
+      "outputs_preserved": true,
+      "applied_to_runtime": false,
+      "raw_results": {
+        "input_sha256": "b491d4718239ba51cafe85cf094cf4c5233cd960cb7073e62ff5a9c86aa96275",
+        "results": [
+          {
+            "history": 60,
+            "view": "Все тела",
+            "build_raw_seconds": [
+              0.009416299988515675,
+              0.009381200012285262,
+              0.009542399988276884
+            ],
+            "paint_raw_seconds": [
+              0.09373289998620749,
+              0.09593449998646975,
+              0.0923348999931477
+            ],
+            "full_raw_seconds": [
+              0.10314919997472316,
+              0.10531569999875501,
+              0.10187729998142458
+            ],
+            "full_median_seconds": 0.10314919997472316,
+            "pixel_sha256": "d75e42e7e690011357687dc2166f101e685d432c8193479bd510aa1f4dccc3f2",
+            "path_sha256": "a46a30a8ee59d662ecec3bc693acc41f75b0ee851d855341a90ea35d922f2af0",
+            "markers_sha256": "524b25e9dd76f30350160cddd5d36f9b5a5228d85dae50614724a0c59bbe0d4e",
+            "limits": [
+              [
+                -18787868282304.203,
+                22684566277134.47
+              ],
+              [
+                -4742233819984.549,
+                2933358003796.2305
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          },
+          {
+            "history": 60,
+            "view": "Земля и Луна",
+            "build_raw_seconds": [
+              0.0030162000039126724,
+              0.0029282000032253563,
+              0.0029119999962858856
+            ],
+            "paint_raw_seconds": [
+              0.06334570000763051,
+              0.07619970000814646,
+              0.06187499998486601
+            ],
+            "full_raw_seconds": [
+              0.06636190001154318,
+              0.07912790001137182,
+              0.0647869999811519
+            ],
+            "full_median_seconds": 0.06636190001154318,
+            "pixel_sha256": "1d8ea2c5bc3daa0e086e66fe99bb73ce9b3dc73f22751ac0af67326002cfa871",
+            "path_sha256": "8f7b37071507ee01b6dd2d88d184e9a81d6e62d459a8928faa21f33081062875",
+            "markers_sha256": "5b269a4a783af72e6ead6dd1503c3fef2690f3739e7edebce726e2b1c192cd50",
+            "limits": [
+              [
+                -543871104.9920595,
+                165967408.08440566
+              ],
+              [
+                -5971579.507134248,
+                125403169.64981918
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          },
+          {
+            "history": 1500,
+            "view": "Все тела",
+            "build_raw_seconds": [
+              0.13206820000777952,
+              0.13313299999572337,
+              0.12726710000424646
+            ],
+            "paint_raw_seconds": [
+              0.2646476000081748,
+              0.2648242999857757,
+              0.27176289999624714
+            ],
+            "full_raw_seconds": [
+              0.3967158000159543,
+              0.3979572999814991,
+              0.3990300000004936
+            ],
+            "full_median_seconds": 0.3979572999814991,
+            "pixel_sha256": "641879431ef5fff1eda71da17d260a1310c37f0f2e0f35d0362174b98f0588b2",
+            "path_sha256": "15ac0a41a2553c52c5bcc73f5bfb8b369ddf067a0c8e20ab660b8e7258808181",
+            "markers_sha256": "524b25e9dd76f30350160cddd5d36f9b5a5228d85dae50614724a0c59bbe0d4e",
+            "limits": [
+              [
+                -18787868282304.203,
+                22684566277134.47
+              ],
+              [
+                -4742233819984.549,
+                2933358003796.2305
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          },
+          {
+            "history": 1500,
+            "view": "Земля и Луна",
+            "build_raw_seconds": [
+              0.004279999993741512,
+              0.0039059999980963767,
+              0.003989700024249032
+            ],
+            "paint_raw_seconds": [
+              0.07021910001640208,
+              0.07026560002123006,
+              0.06526639999356121
+            ],
+            "full_raw_seconds": [
+              0.07449910001014359,
+              0.07417160001932643,
+              0.06925610001781024
+            ],
+            "full_median_seconds": 0.07417160001932643,
+            "pixel_sha256": "b70c3c76cef969bd5be46c0ea62a55ea8453331cb5a84c4332fb096623ffb0b9",
+            "path_sha256": "1f2ee051b7c12e535872008b3e0fd37db542059b394e350cf019580911db28a0",
+            "markers_sha256": "5b269a4a783af72e6ead6dd1503c3fef2690f3739e7edebce726e2b1c192cd50",
+            "limits": [
+              [
+                -543871104.9920595,
+                165967408.08440566
+              ],
+              [
+                -5971579.507134248,
+                125403169.64981918
+              ]
+            ],
+            "figure_pixels": [
+              1180,
+              518
+            ]
+          }
+        ],
+        "variant": "contiguous",
+        "candidate_source_sha256": "d7119b1fab313ab51ced82aefce5ba2c5efcd00ba22366db5a6dc016e00c8ec8"
+      }
+    }
+  },
+  "raw_sha256": {
+    "physics-before.json": "d23f3924be1ddef47d4c1ee9cca7fa2dcb869701a2a817ac1a7c57bbbd37923c",
+    "physics-isolated.json": "3152935aef6e1150cb7ee7f25a450d20883e3dc0406e6156c9caa130c37e2cc2",
+    "physics-corrected.json": "53d756f9f548458299a56615f38888c4d330f5ec38b68b91b7de3979ad86149b",
+    "render-before.json": "9c62a81166808794203ebf353d040f02705784dd20257c6ec7e5e95006178f6b",
+    "render-isolated.json": "634ae5c65f8d34d3c41b5f06d7746f77aa9553db6d9dc93f3c6fc08b7ab0b510",
+    "render-candidate.json": "4226042aa8353c4be9138d86f138adad51b7bdbd3f2a5dcbe7d77cc963183656",
+    "render-contiguous.json": "0221693bd734d1451ce212702613425a7ea559cd586d1c6850ec30dcd711bc30",
+    "partition.json": "a452c1cc0c3cbc660c9ebb1d09ec6ffc2c6a9eac77dddd6d166ab3bda1155566",
+    "backend-check.json": "ed363b637b34c05ae78bff99d40f1432e96a83a8cf3e05aa1d78f343e0fd0ecb",
+    "machine.json": "3fa3060cb1c83d633e7ca3d4bac9e00cbb1d966456f3699d31b0e90f6755d5fb",
+    "try_projection.py": "f304b8e1b310bf6818c0972b94bb057fc807b4120d34ad41e7b80cc91761be8a",
+    "backend_check.py": "5ab961a6a54d1b952fc0205a7491a4bf84e6e51f2a14133c4341edbca2efc123"
+  },
+  "superseded_measurements": {
+    "physics-before.json": "packet included serialization; partial overlap with render job",
+    "physics-isolated.json": "packet included serialization while packet_with_report did not",
+    "render-before.json": "partial overlap with earlier physics job"
+  },
+  "raw_measurement_script_sha256": {
+    "physics-corrected.json": "5d1307698d0371b1808557c6d6e3b2a7768d6410145f783ba68708df913b60ca",
+    "render-isolated.json": "def3529d7055749d80915c37fd2dc8142c1101e88875df35a63a9475821628d5",
+    "partition.json": "a3894200d350d9d2c1323e7b28474e4903b3c0700e55f707ff8e16fc991e3fcc"
+  },
+  "scientific_runtime_changed": false,
+  "settings_changed": false,
+  "portable_rebuilt": false,
+  "limits": [
+    "3 warm measurements; no statistical confidence interval",
+    "Synthetic renderer stress repeats two real snapshots; not measured FPS of a running trajectory",
+    "Physics/RHS profiling and microbenchmarks are separate; their times cannot be added as exact attribution",
+    "Prepared catalog profile from build_portable; user's exact JSON/settings/history unknown",
+    "Per-body backend agreement and invariants do not certify true physical precision or a whole year",
+    "Larger packet changes output cadence and pause latency; not an accepted optimization of unchanged behavior",
+    "Memory, worker/UI overlap, GPU cost and a different PC were not separately profiled",
+    "Profiling script was extended after initial receipts; raw source hashes preserved; physics source hashes unchanged"
+  ]
+}

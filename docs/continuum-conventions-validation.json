@@ -1,0 +1,2404 @@
+{
+  "changes": [
+    92,
+    93,
+    94,
+    95
+  ],
+  "policy": {
+    "changes": [
+      92,
+      93,
+      94,
+      95
+    ],
+    "model": "constant-energy-density static sphere, linear Hartle spin; distinct mass/chart/observer measures",
+    "gravitational_mass_kg": 3.0,
+    "areal_radius_m": 2.0,
+    "gravitational_constant": 0.4,
+    "angular_velocity_s_inv": 0.001,
+    "compactnesses": [
+      0.008,
+      0.002,
+      0.0005,
+      0.02,
+      0.1,
+      0.25,
+      0.3
+    ],
+    "order_cases": [
+      0,
+      1,
+      2
+    ],
+    "samples": 513,
+    "production_rtol": 1e-11,
+    "spin_max_radial_step": 0.001953125,
+    "log_reference_rtols": [
+      1e-08,
+      1e-11
+    ],
+    "log_max_radial_step": 0.0625,
+    "tighter_rtol": 2e-13,
+    "tighter_max_radial_step": 0.0078125,
+    "atol_over_rtol": 0.02,
+    "quadrature_orders": [
+      64,
+      128
+    ],
+    "baryon_tracers": [
+      "constant0.7",
+      "quadratic0.4+0.2s2"
+    ],
+    "maximum": {
+      "proper_mass_quadrature_absolute": 1e-11,
+      "proper_mass_quadrature_levels_absolute": 1e-11,
+      "log_radius_profile_absolute": 1e-08,
+      "log_radius_levels_absolute": 1e-08,
+      "log_radius_tighter_absolute": 1e-08,
+      "isotropic_inverse_absolute": 1e-10,
+      "metric_pullback_absolute": 1e-11,
+      "surface_exterior_matching_absolute": 1e-11,
+      "baryon_coordinate_integrals_absolute": 1e-08,
+      "baryon_quadrature_levels_absolute": 1e-08,
+      "baryon_coordinate_reference_sensitivity_absolute": 1e-08,
+      "spin_reference_inertia_absolute": 1e-08,
+      "tetrad_clock_speed_relative": 1e-11,
+      "local_response_J_relative": 1e-11,
+      "response_first_PN_c4_ratio_deviation": 1.0,
+      "response_first_PN_slope_Richardson_absolute": 0.0002,
+      "proper_mass_c6_ratio_deviation": 1.0,
+      "proper_mass_first_slope_Richardson_absolute": 0.0001,
+      "proper_mass_deficit_Newton_coefficient_absolute": 0.001
+    },
+    "minimum": {
+      "wrong_Euclidean_volume_absolute": 0.01,
+      "wrong_areal_as_isotropic_absolute": 0.01,
+      "wrong_coordinate_density_as_scalar_absolute": 0.01,
+      "wrong_no_lapse_relative": 0.01,
+      "wrong_no_shift_relative": 0.01,
+      "wrong_unchanged_inertia_slope_absolute": 0.1
+    },
+    "required_true": [
+      "sources_preserved",
+      "arrays_reverified",
+      "raw_initial_preserved",
+      "grid_preserved",
+      "physical_claims_false"
+    ],
+    "physical_lunar_mapping_certified": false,
+    "physical_accuracy_certified": false,
+    "harmonic_ADM_mapping_certified": false,
+    "baryon_EOS_inferred": false,
+    "finite_rotation_energy_implemented": false,
+    "primary_sha256": {
+      ".tools/rotation92-95/isotropic-exterior.html": "ced46bea74d51a4668a5113dc7856a9fb6d8f4852b508f71082ea560e1a6a2f8",
+      ".tools/rotation92-95/linear-spin-metric.html": "c0d428d0dbb694cef30c208e067f1b6e830fe4cabd3912a38e72e3af9abdd816",
+      ".tools/rotation86-89/hartle1967.pdf": "ed263946e9bc13842399b5c9e9c2eae31823e7323bc81b456fb5174697cefc35",
+      ".tools/rotation92-95/source-review.json": "8ad7c931bcec2134fd866c1692da77da1b6f500dd0fc88d5280dbb664c820a1b"
+    }
+  },
+  "sources": {
+    "scripts/assess_accuracy.py": "e2a546699dc603f4af10dfbe806959508a04a72cc2504ffd93a276d53e56f0e4",
+    "scripts/assess_asteroid_catalog.py": "b91075e5d8761792334750cb1c13bc7acd2b6a9c5e3e8a33542107e1837ec755",
+    "scripts/assess_asteroids.py": "6ce94c9d3682d27f09be336aa69628eb8445b1d9dda3d747c7efa9b799b2c1e0",
+    "scripts/assess_asteroids_catalog.py": "8c3a9ff747b1b1ed3da1bc007d2605aa2bea0f0e6f01ecd7bf42b3f24a357a09",
+    "scripts/assess_bound_body.py": "89506852cb4db4e27189b0fb72ef5c2a365f7052c997fcf40cc2334dbbcb84f6",
+    "scripts/assess_boundary_cloud.py": "870585b4894669527843f72dde9994fd329658b6488200832997cf60c62a0e86",
+    "scripts/assess_canonical_checkpoint.py": "156702a2f86db859352161e16972af0d3c03f8e6e66ef0555e37155583eed530",
+    "scripts/assess_canonical_initial.py": "e6075fc148ffe903e77ffd44d8f2704accbbf344b00a0d8fd0e13bdc728c7510",
+    "scripts/assess_canonical_solar.py": "ef09f154ccbcedccff4dc5235c789db3fce6db0a686f0ec23b8b647f023dce6d",
+    "scripts/assess_continuum_conventions.py": "27c58fa7f248b17cb9d2479127eba80d47ad953063a9409385276d7c786866a1",
+    "scripts/assess_core.py": "573e66dc0e611b4c85b9d5634ee8c675395f2daef3e44fed4c7c1e239601a27c",
+    "scripts/assess_error_control.py": "53da2d769b865366424ca60e544c16fc972f9910746924cd752754f3ae1f8a93",
+    "scripts/assess_fluid_spin.py": "c2184e0a976d198fa1ec195258980e736885aa2d2c8f1e9eeac3705fb3b6fefd",
+    "scripts/assess_kuiper.py": "45ac43de0b86ddaf4a593440930a65e8aec2dffc69cee5ce564b8b6944851cb8",
+    "scripts/assess_kuiper_ring.py": "408901afa599806e1ffb22091fa7027f830d061f16fc7a5eac72de6df5994f51",
+    "scripts/assess_local_rotation.py": "1a7906b39cf1e3a19bfc826513bb9d43ea590e699dcd1716cb6b1593a6dcf6ca",
+    "scripts/assess_lunar_canonical.py": "c4f7233927b0131c7d743ba6fa9a18ddcae98e488cb1d462844c199be7260b70",
+    "scripts/assess_lunar_research.py": "f6f477352c5e3e5c0c1599e450a3091af1c2010ae33dc63c8a26cc13525259b3",
+    "scripts/assess_lunar_source.py": "1cb2828e2ad93676b01cd1e2df31bfb7ad0b1e8d8688eb32391c1164924310e6",
+    "scripts/assess_lunar_spin.py": "5caeb3571ac6540b987bfea99ccae38857e5bbda76acd2461231b1c4cd4f37d1",
+    "scripts/assess_metric_spin.py": "1d60a48fac14b5ace9afca007ca7ec104fa21bc1b9000c47fd384f9fd2db44b6",
+    "scripts/assess_native_eih.py": "daab4d0a8f1915e6bf46f2d862ca6b78de2cf6dbe478324222dea408d65c7df3",
+    "scripts/assess_nbody_pn_spin.py": "643c1ad14f2ab28b7796e8bacf7508152810812a2e3a3119dc901285c4fe9661",
+    "scripts/assess_nbody_pn_spin_control.py": "c1b909e2fb06db6d53430673976178b7f2e07d8df2598e7bbb9761ca0f74ccd6",
+    "scripts/assess_nbody_rotation.py": "4fcbf1c9ad95584d8f0935ee2ff292e026de3e96293fbefe155fadf036dbb6b9",
+    "scripts/assess_oblateness.py": "304ff7b1ff651c24ebe67d2b3bc9ad029c9dff12777a076b0a474abdcc9912cc",
+    "scripts/assess_orbit_cohort.py": "5874ecdc21a9cf529863c3c95421e32d9b4f24211e5f831b87f5ef7df1934807",
+    "scripts/assess_orbit_observations.py": "d9792cc92e1a02039c5ce02450c2aacec7ac9e6d3bccfdc2c9d43371b3b5c4dd",
+    "scripts/assess_orientation.py": "f01b698a08c3cd15c5236113a9d89d02d8514671f24a96e21b181c9988722460",
+    "scripts/assess_pluto.py": "07338d7c6ca4ba991d6e13692de8f3225a6098f90c5a3d02549e5dc72fc95d40",
+    "scripts/assess_pn_spin.py": "21e068aa493040f499fd87d712207495466393c4ae681dc5d6a088ffb74e64f5",
+    "scripts/assess_relative_canonical.py": "36dff1776a02e35085829812e959872d8cabc76247f3925c92c1f0b509d2841e",
+    "scripts/assess_relative_canonical_checkpoint.py": "4a8b804d6fb51ec55a5080795bbca1dd5f836199d2f055a1333b8ddc601b7606",
+    "scripts/assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+    "scripts/assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+    "scripts/assess_resolved_moon.py": "7b633b17c41fa5509c4ea074235e088fdba76cff3680ea73d28c996bb1d41df5",
+    "scripts/assess_rigid_pn.py": "356d225964703ebd1f8b14cd04c7a1b2b27af8156e1d5f2d8e42df4463d5cab7",
+    "scripts/assess_ring_resolution.py": "3bc2ec35886d971feaf5119c26405bfcb3dddb3630b86f7299214dec8c0a1471",
+    "scripts/assess_rotation.py": "22b66e67589cb611c599e40a694c89a6c99c29554acc69f6424a44bc5c3c9360",
+    "scripts/assess_rotation_solar_system.py": "b9e475688dd86fffdee3cfcab0367254d48e5e5b68690a213fad7b51303333cc",
+    "scripts/assess_rotation_time.py": "62b602356fd8d84e7dc50af5a6fcd6245ba43565c0ffb316bd78a73c76dacfb7",
+    "scripts/assess_rotation_year.py": "0ed376210450408c27b2ff811cbb6b8b96b1aeecfdabc18ff1e07b7b8d9afd27",
+    "scripts/assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+    "scripts/assess_solar_system.py": "e61195be6e072013687ff18a1672fb6e12603d43a70afebcf70b9c3993e7c052",
+    "scripts/audit_perturbers.py": "bb52f9ffd2e6d68e41aa53e45f4dab2dedca6861736dbf8268a4e4135ca29b96",
+    "scripts/bound_body.py": "50395f7b1bee554e4d0ee30bd6dde0386f27a70675a734ed34cb4f119d370d6d",
+    "scripts/build_asteroid_catalog_dataset.py": "34d770d9672ab3dfe406d612393645a396103f1cda036279c483012504c8fd88",
+    "scripts/build_kuiper_dataset.py": "2f4a3831dd52fabf237120546c56934993a11544856b2db3056775dcf878f303",
+    "scripts/build_kuiper_ring.py": "2cc64746a85971c1d023fa0dc62a316a5effcac30cd6bbfbc8bf028e0fae49fb",
+    "scripts/build_lunar_spin.py": "b80e35fff9b390b3bffaea89ff6fcfa2b576c74ba46caf9b3ad26c818411085a",
+    "scripts/build_native.py": "1b012d73d91c7c1d656496ce17aeccbe4c99ac419b00e062db0776b39aeb9f0c",
+    "scripts/build_portable.py": "dd85d0217d8ac3c006ac6f3c918de6dcdaa5615129c1c84f901260b65a908cd4",
+    "scripts/canonical_checkpoint.py": "83a14d42011d9e455ba5f4b76d6d673549e613a453bf7d8f7f5dd0c73a9774d2",
+    "scripts/canonical_initial.py": "45f69e015712f403edd17693723b06cb3b9f6044d42bf8ef64f4183ebeac2de5",
+    "scripts/check_app.py": "ad274b2edb92b91dc5d56afd85b945c24f6e672a90aa80360e3dc01a30397303",
+    "scripts/check_asteroid_catalog.py": "4aafe778bbb57b9eec8f918d376bf69b0fa829cb73994d57a54ee82eadd29b44",
+    "scripts/check_asteroid_source.py": "f89c672f7313e1b414bc870d35f24263d7b44d83fc42cf4eae0d0f40bbdb1957",
+    "scripts/check_kuiper_data.py": "744cd57ac29d33de47a2f80fdb4a3d637bf18962191cc3ee7e82ce7d4ecdbb01",
+    "scripts/check_orientation_spice.py": "0b3a70854c2ae9aedd9440d1849e8e422f790ee93b5707f85af5a0e1b593264d",
+    "scripts/check_pluto_source.py": "94de3d6250e85ddae474e9a7e3183aa29b94b47fbf38f16a7ad0d6ff4c23e09d",
+    "scripts/check_portable.py": "b0971c327e4779b53dcde3dc0b67f951fcc74aba9bbca1952a23ad279dd12a92",
+    "scripts/check_project.py": "fb1ba5f4e1458adb3edab5e83f2d558121d5d11b3fd9c17522666d897b317704",
+    "scripts/check_relative_checkpoint.py": "83e85be3988c4e0d2698514f15eb7eb53fdaf96e6308b58b7a36e39b25654033",
+    "scripts/check_ring_field.py": "258e210280e061cf1c856add694a885c67bc6330e10749dacf11ded0da501bfc",
+    "scripts/check_ring_kbo_orbits.py": "b91f70ea0e10cc158858f06bce29f684b1721f4ab30b8d47e33e8f0cab300b47",
+    "scripts/check_solar_pole.py": "a7e0b597632a2779c9ad7607a366bed4fba88deaec03bddc976f474519d2eaee",
+    "scripts/continuum-conventions-policy.json": "7ad46ee9a91fba139a9278d9a6760fadfabc89a82b54bf602ff4fa217502f7a5",
+    "scripts/continuum_conventions.py": "2a6d08e7905648678115622e9f5bd63564306342e2493cb35034a9f3771be250",
+    "scripts/continuum_sphere.py": "b1546b2c756107e64b0409bb81b2e8578c2209b5750a6ca93991ecb957ed2144",
+    "scripts/density_moments.py": "61ef05d60187e1620ef33d40b60d5d3df1cfaa76153cbf0db56d50ef59313141",
+    "scripts/diagnose_rotation_limits.py": "47e0d5e8c431aad119a4ca583581ed9045d49f5afda1e7a13ab108e3248f5ab7",
+    "scripts/diagnose_rotation_reference.py": "7899b12903f29782669bfbced5fbfd886d3b014b7b2e7afcfcb706d4399f0cad",
+    "scripts/external_metric.py": "3ab81738bdf2f9bec0e19643384c2b0e15ac9260524806c706eaa3f08926a25a",
+    "scripts/fetch_asteroid_catalog.py": "8792c91727b561f47a5a12846b69ad6527bb181b1fc5ef6a9ce44cf4b08bffad",
+    "scripts/fetch_asteroid_data.py": "8fd64f88a3751f40bf1f799e4f66c254b851ffeb8a6729ba9bee2aced53ae454",
+    "scripts/fetch_ephemerides.py": "719d31998368f4c200a60f1460abd4530a04c4063a9c8e60f6b2d2988a8dc232",
+    "scripts/fetch_figure_profile.py": "e7c293dcbf51dc80c2731eec20b03d874bbd1b2e08be85f9ca5ec748b0bba6cd",
+    "scripts/fetch_kuiper_data.py": "c461ba2e7698fead601daf41c7ecc272689a076af5ef8c0454f9d05ba6ef748c",
+    "scripts/fetch_orbit_cohort.py": "7a2b5c6c42c547a5c45998e79e0d75f9eedef56114e068b7649acd14714c7a06",
+    "scripts/fetch_orbit_observations.py": "d4938989612b5ac18ad7ec21e960ca68312b3801c3cf7779217143f9ad37a37d",
+    "scripts/fetch_orientation_data.py": "b28f1a43e5a180a65ecc8aeadf8b90898ef50f697c87035efca019321820b313",
+    "scripts/fetch_pluto_data.py": "5ec397bdabde3f4a727ae807b1d133d2d3a5ea87169ac4e7380c4cacdd2a552b",
+    "scripts/fetch_resolved_moon.py": "789f960632345307f8a7b2f3c53128ec19b7aa4314aaf25f33410a12522f08f3",
+    "scripts/fetch_solar_profile.py": "b40e14630517640c7544d4b1c8a56ec4ae7dabe77d98d2ad1b6d4c08ad8c6320",
+    "scripts/fluid_spin.py": "3a9ef4940de96b049d8f41528946e6b24134f343378951955eb55eae9eb02326",
+    "scripts/independent_anchored_reference.py": "5f7ca98203e18ca6e2a40ff8b2d5660fe6f1a96b85b37abadd8a7cc71b13e581",
+    "scripts/independent_bound_reference.py": "a418a2c95cf16da583d89292be1ecbcd8ec75386c5b8790a6f67a3c915e4bd88",
+    "scripts/independent_conventions_reference.py": "c2cac2d7bf0ae6ddac32984c83ab49fbb1a37283f9fdc6f6d12859cfd40c46c8",
+    "scripts/independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+    "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+    "scripts/independent_fluid_reference.py": "f9d4b4c2e714719149129e0de7ef500d99f5ed66feb4b70cd1ef97bc18b908da",
+    "scripts/independent_local_multipole.py": "5c341ccc95cdc46b02f4ab8302d5b686f9fc6d76b4df9e9612ccb95a3edda8c7",
+    "scripts/independent_nbody_pn_spin.py": "8d0b6070bced7acef5fc6c88aad0122f7e4b6a0d555cc86c152837e16251114c",
+    "scripts/independent_pn_spin.py": "b33ed5bf64c54fa1b2e1a18f82d024dd4b275096265a3986294832aa0d7f524a",
+    "scripts/independent_relative_canonical.py": "9d53a3eb2ed1f814d83fc70c1a2a33bc3ed428f448bb607e689c918653d865a1",
+    "scripts/independent_rigid_pn.py": "06a64e7b296cdcd22b317bed375303ac4462b530c800fd00a40db68c104dcfec",
+    "scripts/independent_schwarzschild_spin.py": "63ca372b4c4b24d5a4fcf6302088436d0bc9d5c765e6437fa2f9ae3368532167",
+    "scripts/independent_sr_reference.py": "6a9491555412ed4d14a799c2e4fd94434fde55ce49ae154fa47f7f520a0ff16e",
+    "scripts/local_event_map.py": "f89a3aeb5dbb0c5f48a66c6f73a8b69d0ede14e0c085a6819ed6ee2fa2466272",
+    "scripts/local_multipole.py": "760e947532a4ac64dcc9adfab1b1e31491b0614b6bcfb5ef06dbacac48eee98b",
+    "scripts/local_rotation_transfer.py": "414d49f8a9c191f2dfc14557fe3f2d687fd5d4fe1c3f9763c5c3135210988786",
+    "scripts/lunar_canonical_diagnostic.py": "4552ffbcc1db6989724ad76ce888a30aa77d30cb5ebd50639b1ad63f8204240b",
+    "scripts/lunar_initial_boundary.py": "2591ae7718a1b9a927ce1a34fd1643fa699e9a3cb4bc14f9297514c1c42fecc7",
+    "scripts/lunar_initial_receipt.py": "919741524e03fb2bcc76367e395105d7a5af0abcc1cde7bb22f6a2f820227342",
+    "scripts/lunar_research.py": "eed1b0087c8b2888887aff4db9941dd16d50d63757ff5a726a3d15e66254ccdb",
+    "scripts/metric-spin-policy.json": "6c16d925211245a1e72954479f46da7a40fe717bae14a745894a8fe6ca63253d",
+    "scripts/metric_spin_transport.py": "5437c9c567fad6f6ab5d4e85fd8bf305d8c7184e201ae7c9a7f0bf5734c9a666",
+    "scripts/nbody_pn_spin.py": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d",
+    "scripts/pinned_lunar_initial.py": "fc4f71a605ae1f1aa97c61b0937304242ef404929f3cf6bc9a568ab6c68536b2",
+    "scripts/plot_asteroids_catalog.py": "bef3cf8e2e2f5b6d3bfb6c8c1c2db704c1f19ee77c1a62830ed05105e07106d9",
+    "scripts/plot_error_control.py": "84594357a354f815195d743a7484aef01b0fb9a2f5a5470274f60bcc39c284d3",
+    "scripts/plot_kuiper.py": "8b7361dac77ff6baff28ad737005ef583edc7206b733cf7e43b454cd9384b76c",
+    "scripts/plot_kuiper_ring.py": "7b29bd4fcc8fe9de4db4c417a91362053e9a08846bcfad149080c574941fe68e",
+    "scripts/plot_orbit_cohort.py": "af9b96358089a18eb67a296af7e7316bc182f1195f3d34c5c3a2fed40f62e583",
+    "scripts/plot_orbit_observations.py": "d6f74b3d1474abd900604a232d5194843bff0c51a1e51190fa543e260cfe5d24",
+    "scripts/pn_spin_model.py": "5dc2df3223fb5e8fc21045698e120b6197a0965a6cd6a6289030c2f2f62b9235",
+    "scripts/refine_rotation_year_reference.py": "b9f8cd549ba094ad2528cf8a577153495002bbbf01d8f9615aec066b61cddfe7",
+    "scripts/relative_canonical.py": "3d44dfdbeeffc41e3ce037fe78fb282df010eee27c0b6d88b4afda1370fb80e7",
+    "scripts/relative_canonical_checkpoint.py": "a92bd4a7ae4bd131a76fc840187e64626eaab8445b34ee99acfaa8fc059a7919",
+    "scripts/resume_relative_canonical.py": "72c7947f9bb5a246ba115f0846ea490ba81f116d14e92eec988288c2ffd7b0dd",
+    "scripts/rigid_pn_model.py": "bd1b7126e7d29a4c899e20b5b27b6f42b316a58724f968ce8e054f5d749afbf1",
+    "scripts/rotation_time.py": "0d88272ade5c6cad2aef50dbe45bef4869e4766d479b8f5bc9b36fa4cc4bfca0",
+    "scripts/run_lunar_research.py": "3f4f3ae7ed318b789cdf8da9659a305fafce656a24eea0e5ca4b76ad6cd88ebb",
+    "scripts/schwarzschild_metric.py": "561960a22313995c0a2098138d5e7b73bcd31f006de853d00b4291f850e24fe6",
+    "scripts/setup_gnu_tools.py": "e85c285e029f4e5cc4b8f887cf0e715baf7d9ca5730ab27f59703f936c435101",
+    "scripts/sr_cloud.py": "bdc3d8220a30a7af9040dcab936cb76c189f107ebebf8da30254e0e0c30171f3",
+    "scripts/validation/kuiper_absolute_assessment.py": "d09ba117e5c1f9113d97d8847c59efdfb1e98d6d0d4c741b8c79e9747710215b",
+    "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+    "src/solar_simulator/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/app.py": "b8b2419f2dbf74a5040b00379ee313193f21892824e9d5c371f7fb52cddefb8e",
+    "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+    "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+    "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+    "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/data/__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+    "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+    "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/experiment.py": "de97ad1c37b0af79aecb986a3923634fa4131e248e82eff93ec25edf22d34395",
+    "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+    "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+    "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+    "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+    "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+    "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src/solar_simulator/storage.py": "7cf8047292d34d20fafb864e593809e37f1e242023d2fd00d9cfac167bed562c",
+    "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+    "tests/test_accuracy.py": "4c5b08e3af5eeb03ef7fa509bcc981b30066dfd7454442835bc91cd5621ad001",
+    "tests/test_anchored_reference.py": "d48de0afba91552a17028c2e04ed44f1bc341366fae694536d1b04af8786e995",
+    "tests/test_app.py": "3824192b27e687fc09ca6f78df2b1e127428b4ec9392b71ad86774b451447c58",
+    "tests/test_asteroid_catalog.py": "74e5c113fddbf76d1d9d39efb290aac1f474fc30c57caeab11ee6b74c759b266",
+    "tests/test_asteroids.py": "5117ace9d7062c17ed7cfcaa4b0bf6af56b8575e48fc898be2cfa599d97cd2e0",
+    "tests/test_asteroids_catalog.py": "af944829871e3599dbad28b22c55498323a98186d6f015fb22386811c76fb625",
+    "tests/test_asteroids_full.py": "e5930a58c2a0767d579a48370df3a5a4e7247127d585c3da503f1b237b6c36f5",
+    "tests/test_bound_body.py": "ee1bac943dcb1b520b590e2c4c2f74f829e97df0c5319e5b00bb293e6b186b74",
+    "tests/test_bound_body_audit.py": "9190bdb57e9b382fc22b51d13e6ee5559fb6bcda3d82d0213565f5ff878c9e19",
+    "tests/test_boundary_cloud_audit.py": "2396d2baad67b4af451012078ae1c20319e90042a76d551a10a638e757bd15ac",
+    "tests/test_canonical_checkpoint.py": "59d41e5ee641f40bd1ab25a80d07cfc24aa57e8c1791084417629af008766a94",
+    "tests/test_canonical_initial.py": "5f9c38d3f5d636ee2e5a7cbdbd85d200d04d4c56854b6adae20662d3125a4d4e",
+    "tests/test_canonical_solar.py": "d098271e7b79199f5110b87876c8c4b6b3dd0cf9119f83f1aa7c2e71c5f3a36c",
+    "tests/test_catalog_figures.py": "a7c122d7679b374f8ba83ffa545adb110a0be8f2e961f00753246a22299f54e7",
+    "tests/test_cli.py": "d6e4c91b18ecb59327eee9c3e9dcb160268eedbe8377bb9e4baa5578adf8120e",
+    "tests/test_collisions.py": "0ff4a2795be97838521f6acdcb2bc7e0e240f934fecd1bd047c4e4d26303ec20",
+    "tests/test_contacts.py": "e67a8ca66906ad3c2ffe6ff56630c0d42b135cf4b46955fe4824429bb2a66999",
+    "tests/test_continuum_conventions.py": "7364cca772291abe0eeffc490e8cc87aa085b5863f634124a45135a2b93e58ab",
+    "tests/test_continuum_sphere.py": "64bab34907c7eafc1e65e2530f5a272b3bfb40ade00cca5a80e9c8c35e15cb21",
+    "tests/test_conventions_audit.py": "92eb3e0e03f2843bb2b1a81c666aca2935f4aa93adfdad878d8c8500e7720674",
+    "tests/test_conventions_reference.py": "0083bb53bce068b8a9dd49303c60317396c5abd1c1d4ec6c01b126e4d5a672d4",
+    "tests/test_convergence.py": "d417449edaf3087cf41ec6d2250dd9701ecec92a2bdf770241b8ddcd42c9cd1b",
+    "tests/test_density_moments.py": "0e15e8b5bb5d85e530e6785c68e2d5cd7b3a841e2c8e2dc97237e97fb45b5639",
+    "tests/test_diagnostics.py": "0908fac7757fe8ca6232363c92b22941b96ced11974d8b063ea88055e860f07f",
+    "tests/test_ephemerides.py": "e679e08381d472b234a871174c56b336bbb1f2d6e4fe75d1b726f6e81e83cc06",
+    "tests/test_error_control.py": "d3fe6d899f6adb9b835ba716667edc2968b5e9fd620f248135f947c89a9f840f",
+    "tests/test_experiment.py": "66c52799a212a3e0fc65feee48b091e3fd62174869230922c0d131d51f29ffba",
+    "tests/test_external_metric.py": "b32e638f0a66b721586eb1de6169a00ced68faff0518b206cd3a83135b452380",
+    "tests/test_fluid_spin.py": "8f76897090aefc46d2b1cd3d2faa1ee37adde4008f43a3f640812a47098264e2",
+    "tests/test_fluid_spin_audit.py": "3849ab99c4ea1637b1aabe24ca0e4690ecfe3cce38f31544c4ee2e919ee5d4ad",
+    "tests/test_impacts.py": "3972505cdb4bffb58cdf21956dc9985a15c52dd0dae0271714fa9b7e5d333362",
+    "tests/test_independent_eih_rust.py": "c2220cd35e8faf6f608a89be9a4b90633d1a4b03c344cf26b459ed4d0039c335",
+    "tests/test_kuiper.py": "ea88b092905bb2395070648f705b2689a12886da0e988447fd21777efb3bca93",
+    "tests/test_kuiper_ring.py": "e6108c79bc8300f3d021eb9e8d513b17903c93b0ea579f0f1ae3155a8c9a9fc4",
+    "tests/test_local_event_map.py": "9e29d2b3b0a5f1985a79e35dd8d6fc7d74efafa829eabfd5fa6f52bdbea82c3c",
+    "tests/test_local_multipole.py": "ec85166fd2db1385f54336a08c7c47fbc0c005d142be63ce4844274cb925cdbd",
+    "tests/test_local_rotation_audit.py": "c647c887e4e2761e121440aa0e34c2ce8b3e658dd7d8dbd6c3a9ef88268a133c",
+    "tests/test_local_rotation_transfer.py": "ebe59d03e3fb412ae8ede8a4f523ebd2e80329e187865df26cc6738e2d19e343",
+    "tests/test_lunar_canonical_diagnostic.py": "d0fc8076504fa2ac811d777a62c77188961a40a3f6647d36ebc604ec542c084b",
+    "tests/test_lunar_initial_boundary.py": "7445d564959cb49c46a82716df0d1da4cbb72239b35b25d9a2ac0bce83057543",
+    "tests/test_lunar_initial_receipt.py": "a761409c689c0a3bb3073c8f3d40dc355b41839dbc000c648d277edc1a1602d9",
+    "tests/test_lunar_research.py": "07cd39d8544930c4522c2c8bdf7af0995ee0560b672008e327a3d872648684b7",
+    "tests/test_lunar_research_audit.py": "3e25f48d54c7557541fefd542652b966b0b66ddf08752ad7df72b755d7cc3555",
+    "tests/test_mergers.py": "729297ce9bf4e16f97b0d47d03206b2c5edbc64d21693b72b6fb9dba720a825e",
+    "tests/test_metric_spin_audit.py": "13bd521daaffe5beaab954ea73b197824df519a2e638087fa084245264a8abab",
+    "tests/test_metric_spin_transport.py": "f4b51a33b8295d1c3c77d475f5d5bb8674d654b18d609471f28441e5b53d859d",
+    "tests/test_motion.py": "a6c764d0f4c5a158fe9029ecb022d81fc2c83d2a709ff0d4391caa698f9e74c8",
+    "tests/test_native.py": "0ad0c6b793f0aacebfa0a34a34b89bb4474a7921386c83730a51234b55a4779d",
+    "tests/test_native_collisions.py": "90846f052c6361918a0f1a054a68550d257dc5243bd86ccc32329e1b999a5e5c",
+    "tests/test_native_forces.py": "230ff8e9b9a987ebc843a4310e06f6d6fef6147c181dda1040c174623f63c59e",
+    "tests/test_nbody_pn_spin.py": "f1b3ded9886fa86cbc2fd94c385f2a7cb178d1fc0b1a43676e1b71a75cc64565",
+    "tests/test_nbody_rotation.py": "2cd76002ac6b91a266e51d200ad4b66e271ab0d0227e3d19657f169ff4cd596f",
+    "tests/test_oblateness.py": "5d47221540da059b4f9ae44bb3a3a4117fb689a1163ed334130ffd23b9c28957",
+    "tests/test_orbit_determination.py": "7db993ec1e3121efab1d8102bf645d24d7018e445660d255fbcf0f5d84c52469",
+    "tests/test_orbit_noise.py": "a8cc6f417a880ac87ee639e8f0821b695562f11c811af475444ba5d62e1ca0b3",
+    "tests/test_orientation.py": "c053a6635f42e46d22c054f10591f1e728d1cbd25d015ddb13466384296a007d",
+    "tests/test_perturber_audit.py": "33740870b47a7cb47640856230273e261dfc2610c84137c672667a3bc250d7e9",
+    "tests/test_perturbers.py": "64b4bec6ae6590848770f467313f492ccbafcdfb1812a952daecd33ed53feae7",
+    "tests/test_physics_symmetries.py": "50e32b8de961a83a34d8bab1639014b6e888530ccb87c6a3d14531ccdbf3caf0",
+    "tests/test_pinned_lunar_initial.py": "52f510aadcc25cce21a03fa724ee8aac5317cbc930f0ca5fd885a706a5bb6fe2",
+    "tests/test_planets.py": "9a04ef6edab70cb3184fd1046ce27cb14145f34f96c547c41ec8bef826a1daa0",
+    "tests/test_pn_spin_model.py": "10b42726ffc81d0cb21e4b69e957fd9bd8cf9c2f6ebacfb0d5c89a682204ed27",
+    "tests/test_relative_canonical.py": "f43300fd0e26e32daeee75d1acf4160dcc9d21bdbd86a985f21ead345f291335",
+    "tests/test_relative_canonical_audit.py": "fe6dcb55edd27b8788c1d15362ea02d7d43e58ddc6bdcb3ae148a119add54243",
+    "tests/test_relative_canonical_checkpoint.py": "12a92989baae4a572e39e58869d5a6473a3e082159d2fcf677442747e7ed5153",
+    "tests/test_relative_canonical_checkpoint_audit.py": "7a157cf81973f4ebad58d28d7a8364c30ecc0fc5d054f716f5d9278a2238fde4",
+    "tests/test_relative_coordinates.py": "26ad7a3d129494bd0ab7cc3b0dec6a841767474c34fa8a1cf5e805cf9afb3ed0",
+    "tests/test_relativity.py": "80a8181d47c81a6cdb6db45bba12f69ca1ecceffad42a25c77c41a85ccbadab5",
+    "tests/test_resolved_moon.py": "a583968d665db2161a316c7e29d7fbd72fb14a188bf7987192d965319eb82a18",
+    "tests/test_rigid_pn_model.py": "190400bbab11118b895be42985129ebae2b7d0d895cde082dd1ca07aa3f091f2",
+    "tests/test_rotation.py": "6e2144971517263c10351a7d44b55f596804251b423f32e57d9058500620947b",
+    "tests/test_rotation_runtime_checks.py": "db2f6216e136472bb6ea47cc03d81c626b2beeda93345e4534c860d346e74ffc",
+    "tests/test_rotation_time.py": "ac269bfb7eacdc054ad031634bfd5b194e7c643971f47655d242d33080010457",
+    "tests/test_rotation_time_audit.py": "bcb6e9c52f482c99086b1c5731eda9f48ddee24367af588f5a095f78d9ccbd2e",
+    "tests/test_rotation_year_audit.py": "a6b3ce614761be270d85e2ba9a9f1b240e763bf7223b4b0931f7bdbfde2d9688",
+    "tests/test_runner.py": "f17379673316ce7675b02643ecbd8310b47742e2246e418ac35b4f04e68d13a3",
+    "tests/test_rust_backend.py": "87579c57069c1bf41c8393cb6071071949248864c445c3e5af63ad1d597083a8",
+    "tests/test_rust_contacts.py": "ccb5f3b008d2dfe82a3051c56bc6a046859d1b0af2885e4b7ac952ce857162d6",
+    "tests/test_scenarios.py": "2c3467304ca471a9db00c11bb9618f167a806fedee592cbe971d93c53b48d7c8",
+    "tests/test_simulation.py": "bb6e20176fa4ca727181b1eca0e384d67edecca36acc9af77e8f02a78e330786",
+    "tests/test_solar_j2.py": "b849ace46ed78d3ef8e4ff36d7b10aa614fb0764d0f249f798e6f446032dd051",
+    "tests/test_spin_initial.py": "4d5fd696a2ac5b4d54defd0189ecd978a233f40a40bd90d81cbf3c5147b9cf58",
+    "tests/test_sr_cloud.py": "b192e19fd1e4a2d5080a03e65605ddc1ff82f72c8e393ff72ba1bb2d924cc64d",
+    "tests/test_storage.py": "d93ae7d464f1d9b61c4ddbb93cc6726f53da041387d274873398735d88ae51a5",
+    "tests/test_vector3.py": "8aa3a5b1293f8e179b9097a3a592d22ad8a2777fb5ca56e2aa41d37d3dd07ef0",
+    ".tools/rotation92-95/isotropic-exterior.html": "ced46bea74d51a4668a5113dc7856a9fb6d8f4852b508f71082ea560e1a6a2f8",
+    ".tools/rotation92-95/linear-spin-metric.html": "c0d428d0dbb694cef30c208e067f1b6e830fe4cabd3912a38e72e3af9abdd816",
+    ".tools/rotation86-89/hartle1967.pdf": "ed263946e9bc13842399b5c9e9c2eae31823e7323bc81b456fb5174697cefc35",
+    ".tools/rotation92-95/source-review.json": "8ad7c931bcec2134fd866c1692da77da1b6f500dd0fc88d5280dbb664c820a1b"
+  },
+  "arrays": {
+    "case-0-log-0": {
+      "path": ".tools/rotation95/case-0-log-0.npz",
+      "sha256": "c9b3b8ae8b2255b74b3e4d2fcc3cfb6d6b051d39fd59cb07fd64e8231bb71404",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-0-log-1": {
+      "path": ".tools/rotation95/case-0-log-1.npz",
+      "sha256": "75af73335182928558b05e14ae21e4c06646628be4de3760a7b9e1e69e850d63",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-0-log-tighter": {
+      "path": ".tools/rotation95/case-0-log-tighter.npz",
+      "sha256": "2f38da805e1dbc1e97b5c032a8e56b2adc264ca439949c68afc6944fae503a76",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-0-baryon-constant0.7": {
+      "path": ".tools/rotation95/case-0-baryon-constant0.7.npz",
+      "sha256": "4ab35d737f01cfe22dcac47971258756d3a78edcc88a752c0407f311e8fc09fb",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-0-baryon-quadratic0.4-0.2s2": {
+      "path": ".tools/rotation95/case-0-baryon-quadratic0.4-0.2s2.npz",
+      "sha256": "589fc8416ab5dc134dc8f7ff736a2d47c55f984fe3f8e31232e5e5b90f282072",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-0-spin": {
+      "path": ".tools/rotation95/case-0-spin.npz",
+      "sha256": "22e51395f9edf7d65e9e8e3fa88272328512d08e0b5f9eed5e9ba16c91941157",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-0-spin-reference": {
+      "path": ".tools/rotation95/case-0-spin-reference.npz",
+      "sha256": "62f6796e09cb2bc8606a37b111028acfba0491fc5ec2f8104574ea0759e88d36",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-0-geometry-observers": {
+      "path": ".tools/rotation95/case-0-geometry-observers.npz",
+      "sha256": "4ec56098f885ebc78b21da8a4c35614e487201476df6bdb20312121e80f5c07b",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "isotropic_fraction": [
+          513
+        ],
+        "geometry": [
+          513,
+          4
+        ],
+        "normalized_baromega": [
+          513
+        ],
+        "observer_rates": [
+          513,
+          4
+        ],
+        "reference_tetrad": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-1-log-0": {
+      "path": ".tools/rotation95/case-1-log-0.npz",
+      "sha256": "bf52d175b8c627f6b28cfc2c01c29687b77ae014edcc4a6ce8952886b33f3309",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-1-log-1": {
+      "path": ".tools/rotation95/case-1-log-1.npz",
+      "sha256": "23d6db237ebfdb5e636f3840df3a93e92b816cfcc899782e93d019fc3b3f0fd6",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-1-log-tighter": {
+      "path": ".tools/rotation95/case-1-log-tighter.npz",
+      "sha256": "ad936535545755b4d6ecd606756656ad932ad89adfa5ebd63c3550f46bff492b",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-1-baryon-constant0.7": {
+      "path": ".tools/rotation95/case-1-baryon-constant0.7.npz",
+      "sha256": "3564df696fb2f2f83c864f1c38ffa870780fb8d4949c0bb1d62fd23f42800434",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-1-baryon-quadratic0.4-0.2s2": {
+      "path": ".tools/rotation95/case-1-baryon-quadratic0.4-0.2s2.npz",
+      "sha256": "3f58fb1d6dbb1ba6098610550f762edd0f1ed3c76acc409448c23fb479485034",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-1-spin": {
+      "path": ".tools/rotation95/case-1-spin.npz",
+      "sha256": "b7e6113ee1661fe8d6bbff4575f773fd269bddc1888f23a8a888cc8de04943f9",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-1-spin-reference": {
+      "path": ".tools/rotation95/case-1-spin-reference.npz",
+      "sha256": "a8944e0d35abe19a2398c456b9d573fe1e718ca9af30ca214fc24e0b66b2eebd",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-1-geometry-observers": {
+      "path": ".tools/rotation95/case-1-geometry-observers.npz",
+      "sha256": "53557942b5f13742e18e61ac791c612031dc8723b7511cfe16ddabec783d09ee",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "isotropic_fraction": [
+          513
+        ],
+        "geometry": [
+          513,
+          4
+        ],
+        "normalized_baromega": [
+          513
+        ],
+        "observer_rates": [
+          513,
+          4
+        ],
+        "reference_tetrad": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-2-log-0": {
+      "path": ".tools/rotation95/case-2-log-0.npz",
+      "sha256": "244b1d15c69b23adae8146af92d52d5b9da0f5d7eed04042545b361fcec2cf96",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-2-log-1": {
+      "path": ".tools/rotation95/case-2-log-1.npz",
+      "sha256": "d0b412bd279434acc5eb821e195c79a162b135cfd69e65bdd632408c46cc4a7b",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-2-log-tighter": {
+      "path": ".tools/rotation95/case-2-log-tighter.npz",
+      "sha256": "29b5fd755b1a7fd7dd0fd33a51f7814d9cf6714e6727e6931d727fda5ff23311",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-2-baryon-constant0.7": {
+      "path": ".tools/rotation95/case-2-baryon-constant0.7.npz",
+      "sha256": "08ef00ff1e963018740642aca03e2242f471c09bffed92d47d196939063a0db9",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-2-baryon-quadratic0.4-0.2s2": {
+      "path": ".tools/rotation95/case-2-baryon-quadratic0.4-0.2s2.npz",
+      "sha256": "944e63699fa6f9977a8f89d81542fc1bd8384776e16b3b22907d699582df87e4",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-2-spin": {
+      "path": ".tools/rotation95/case-2-spin.npz",
+      "sha256": "a0015eb691a1e75212adf60e914220b1d54e90d3536c5b013957d9f15ee0c7bb",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-2-spin-reference": {
+      "path": ".tools/rotation95/case-2-spin-reference.npz",
+      "sha256": "47a9ca0ad2adbd0f64819165347a8adb19073d280debab53a9dbeca930c35d4c",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-2-geometry-observers": {
+      "path": ".tools/rotation95/case-2-geometry-observers.npz",
+      "sha256": "9b02ef646ba0c391869013e8e91f536465aceaf20f57e17e69b760a26335abba",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "isotropic_fraction": [
+          513
+        ],
+        "geometry": [
+          513,
+          4
+        ],
+        "normalized_baromega": [
+          513
+        ],
+        "observer_rates": [
+          513,
+          4
+        ],
+        "reference_tetrad": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-3-log-0": {
+      "path": ".tools/rotation95/case-3-log-0.npz",
+      "sha256": "a05d2980489d3c5944ef61c7cee865459619f48dc0014848cdebd97e8669d2d8",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-3-log-1": {
+      "path": ".tools/rotation95/case-3-log-1.npz",
+      "sha256": "73b432c55ca3ae735730f545ce3cdf58625e45eef48d049a483a261d457e33b3",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-3-log-tighter": {
+      "path": ".tools/rotation95/case-3-log-tighter.npz",
+      "sha256": "a810cf6f605becc8b981658683f6eb44e63f87aab8073076f60fa1222d8b556a",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-3-baryon-constant0.7": {
+      "path": ".tools/rotation95/case-3-baryon-constant0.7.npz",
+      "sha256": "d93569c31d3273cd0fd2946a35a814b17e2005671f8178700d9e47e4dc6b5476",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-3-baryon-quadratic0.4-0.2s2": {
+      "path": ".tools/rotation95/case-3-baryon-quadratic0.4-0.2s2.npz",
+      "sha256": "80e3b90e186242367ee019f899de7f4b97009027b34f84570a0b51085f5d0113",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-3-spin": {
+      "path": ".tools/rotation95/case-3-spin.npz",
+      "sha256": "859ccf8578c87820ec7d61482425c786d48b7f1e93c6be41fa535f0c8c0f281b",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-3-spin-reference": {
+      "path": ".tools/rotation95/case-3-spin-reference.npz",
+      "sha256": "fe6cf18d9de154144d9b9475ac06bacdb546fb612af1e28b4551752a2a1deb3d",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-3-geometry-observers": {
+      "path": ".tools/rotation95/case-3-geometry-observers.npz",
+      "sha256": "b22fbc50dd3b86a665371efec6396c6336a96c94c6bbd9d3f058a8cb5a934381",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "isotropic_fraction": [
+          513
+        ],
+        "geometry": [
+          513,
+          4
+        ],
+        "normalized_baromega": [
+          513
+        ],
+        "observer_rates": [
+          513,
+          4
+        ],
+        "reference_tetrad": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-4-log-0": {
+      "path": ".tools/rotation95/case-4-log-0.npz",
+      "sha256": "80bfa29e74fc51c63e2d1e5ab54651e624ec89c541c40c05f8d602e7afdccd36",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-4-log-1": {
+      "path": ".tools/rotation95/case-4-log-1.npz",
+      "sha256": "4b3d7dde13ac818020da5e7e291f9090440a30158959f251d8c69dac88f51f77",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-4-log-tighter": {
+      "path": ".tools/rotation95/case-4-log-tighter.npz",
+      "sha256": "7bcccd1b5f628928efa3743b07d9788ef60483c68fd9125ed283ee5d251c0120",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-4-baryon-constant0.7": {
+      "path": ".tools/rotation95/case-4-baryon-constant0.7.npz",
+      "sha256": "c90edfe0234bfcad9a399472751029a76840d9c5e2ad00f6b9f5147376ddfabb",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-4-baryon-quadratic0.4-0.2s2": {
+      "path": ".tools/rotation95/case-4-baryon-quadratic0.4-0.2s2.npz",
+      "sha256": "fc10cf78c2a8f3fd411a65f2e5153e4d42ecf670277c615b469a25f526b7332a",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-4-spin": {
+      "path": ".tools/rotation95/case-4-spin.npz",
+      "sha256": "93cb1a98627c3a4827277735ceb1094ff3963c505c63af8ece2a3e765f330f0d",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-4-spin-reference": {
+      "path": ".tools/rotation95/case-4-spin-reference.npz",
+      "sha256": "bd64092dce46cd3a00006abd4033321a82cf74886e5487c23e9a1254904b1e0d",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-4-geometry-observers": {
+      "path": ".tools/rotation95/case-4-geometry-observers.npz",
+      "sha256": "0ffb472386017e1fac488299daf3b56772c326a00cbbd216b7a3b56e33dfcb01",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "isotropic_fraction": [
+          513
+        ],
+        "geometry": [
+          513,
+          4
+        ],
+        "normalized_baromega": [
+          513
+        ],
+        "observer_rates": [
+          513,
+          4
+        ],
+        "reference_tetrad": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-5-log-0": {
+      "path": ".tools/rotation95/case-5-log-0.npz",
+      "sha256": "e449302f1281f92593b05935339a8f6c199ceac8458a0483a3fcbe69faa8104c",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-5-log-1": {
+      "path": ".tools/rotation95/case-5-log-1.npz",
+      "sha256": "9f6d5134eb8567252511b42e03616ecc5f34e5801d59303768ee304e3a3304b2",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-5-log-tighter": {
+      "path": ".tools/rotation95/case-5-log-tighter.npz",
+      "sha256": "4b71314587ba56ab514c60f2bbf1a7ddf15a869ff939acfce2ff2350d2c66613",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-5-baryon-constant0.7": {
+      "path": ".tools/rotation95/case-5-baryon-constant0.7.npz",
+      "sha256": "c0237872c45cb76538f7a483ae642d67422aea9feddce6fbeb9b7e4f724e2fef",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-5-baryon-quadratic0.4-0.2s2": {
+      "path": ".tools/rotation95/case-5-baryon-quadratic0.4-0.2s2.npz",
+      "sha256": "9c86fc5768d10425eca6946eb41dd0dee2083b9e887ea28e380c623722caf901",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-5-spin": {
+      "path": ".tools/rotation95/case-5-spin.npz",
+      "sha256": "5d1295943f4da6bd22e5df9355da2d0362878aa97509f828325e3102589daf86",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-5-spin-reference": {
+      "path": ".tools/rotation95/case-5-spin-reference.npz",
+      "sha256": "1ddee71e7996feacf9dadfbb248e5319e69f3156e3e7fb11252d514bc95477b9",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-5-geometry-observers": {
+      "path": ".tools/rotation95/case-5-geometry-observers.npz",
+      "sha256": "fbd73e7d9637f0dfedd84e69c843aec18c9ec14dbdf43b4598b65e991e2fe220",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "isotropic_fraction": [
+          513
+        ],
+        "geometry": [
+          513,
+          4
+        ],
+        "normalized_baromega": [
+          513
+        ],
+        "observer_rates": [
+          513,
+          4
+        ],
+        "reference_tetrad": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-6-log-0": {
+      "path": ".tools/rotation95/case-6-log-0.npz",
+      "sha256": "06bf8607d7f40a622022bc6642ba85a8b2883f20cbaf29eaad322e8c9e1fc4a6",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-6-log-1": {
+      "path": ".tools/rotation95/case-6-log-1.npz",
+      "sha256": "17356c74e45ca19523d0d1fc2d0eead66fa2aa981cf9487f6d47f64fb3e772d9",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-6-log-tighter": {
+      "path": ".tools/rotation95/case-6-log-tighter.npz",
+      "sha256": "cd2263afa5cf3b2d779ff8be7b8a607999b5dbe7afb70d80e33807b51070e1bf",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-6-baryon-constant0.7": {
+      "path": ".tools/rotation95/case-6-baryon-constant0.7.npz",
+      "sha256": "d948d207a0043a86f7310568f9be4bacbd31790fc402f157f82c24e526ba9de7",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-6-baryon-quadratic0.4-0.2s2": {
+      "path": ".tools/rotation95/case-6-baryon-quadratic0.4-0.2s2.npz",
+      "sha256": "1174fedc8c1adddbb7697c78eb8f373fad9859c3f358b81b41dcfce68263d6bf",
+      "shapes": {
+        "areal_nodes_64": [
+          64
+        ],
+        "isotropic_nodes_64": [
+          64
+        ],
+        "inverted_areal_nodes_64": [
+          64
+        ],
+        "areal_weights_64": [
+          64
+        ],
+        "mass_measures_64": [
+          64,
+          5
+        ],
+        "areal_nodes_128": [
+          128
+        ],
+        "isotropic_nodes_128": [
+          128
+        ],
+        "inverted_areal_nodes_128": [
+          128
+        ],
+        "areal_weights_128": [
+          128
+        ],
+        "mass_measures_128": [
+          128,
+          5
+        ]
+      }
+    },
+    "case-6-spin": {
+      "path": ".tools/rotation95/case-6-spin.npz",
+      "sha256": "8b98d8f945d0aa43d8ec13ba12e93bdb9aa98952bbba42cb2af8271bcbf7556f",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          513,
+          2
+        ]
+      }
+    },
+    "case-6-spin-reference": {
+      "path": ".tools/rotation95/case-6-spin-reference.npz",
+      "sha256": "febe8738d56aceae98b04df7faade560e391e42b1647357c544a7fecd99e8041",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "initial": [
+          1
+        ],
+        "states": [
+          513,
+          1
+        ]
+      }
+    },
+    "case-6-geometry-observers": {
+      "path": ".tools/rotation95/case-6-geometry-observers.npz",
+      "sha256": "dd1430aeff14f31a8c8d4fa71e51576200849b92d11c483eb1e0e53fe27202d5",
+      "shapes": {
+        "radius_fraction": [
+          513
+        ],
+        "isotropic_fraction": [
+          513
+        ],
+        "geometry": [
+          513,
+          4
+        ],
+        "normalized_baromega": [
+          513
+        ],
+        "observer_rates": [
+          513,
+          4
+        ],
+        "reference_tetrad": [
+          513,
+          2
+        ]
+      }
+    }
+  },
+  "jobs": {
+    "case-0-log-0": {
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 2e-10,
+      "max_step": 0.0625,
+      "nfev": 104,
+      "seconds": 0.0635549000003266
+    },
+    "case-0-log-1": {
+      "method": "RK45",
+      "rtol": 1e-11,
+      "atol": 1.9999999999999998e-13,
+      "max_step": 0.0625,
+      "nfev": 110,
+      "seconds": 0.0632607000002281
+    },
+    "case-0-log-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 4e-15,
+      "max_step": 0.0078125,
+      "nfev": 1922,
+      "seconds": 0.07841700000017227
+    },
+    "case-0-spin": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7742,
+      "seconds": 0.5601980000001276
+    },
+    "case-0-spin-reference": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 8030,
+      "seconds": 0.13675049999983457
+    },
+    "case-1-log-0": {
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 2e-10,
+      "max_step": 0.0625,
+      "nfev": 104,
+      "seconds": 0.060487900000225636
+    },
+    "case-1-log-1": {
+      "method": "RK45",
+      "rtol": 1e-11,
+      "atol": 1.9999999999999998e-13,
+      "max_step": 0.0625,
+      "nfev": 110,
+      "seconds": 0.06194120000009207
+    },
+    "case-1-log-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 4e-15,
+      "max_step": 0.0078125,
+      "nfev": 1922,
+      "seconds": 0.07414760000028764
+    },
+    "case-1-spin": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7682,
+      "seconds": 0.5091192999998384
+    },
+    "case-1-spin-reference": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7970,
+      "seconds": 0.14507830000002286
+    },
+    "case-2-log-0": {
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 2e-10,
+      "max_step": 0.0625,
+      "nfev": 104,
+      "seconds": 0.06316820000029111
+    },
+    "case-2-log-1": {
+      "method": "RK45",
+      "rtol": 1e-11,
+      "atol": 1.9999999999999998e-13,
+      "max_step": 0.0625,
+      "nfev": 110,
+      "seconds": 0.06188609999981054
+    },
+    "case-2-log-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 4e-15,
+      "max_step": 0.0078125,
+      "nfev": 1922,
+      "seconds": 0.07286840000006123
+    },
+    "case-2-spin": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7682,
+      "seconds": 0.5323911999998927
+    },
+    "case-2-spin-reference": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7922,
+      "seconds": 0.13765120000016395
+    },
+    "case-3-log-0": {
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 2e-10,
+      "max_step": 0.0625,
+      "nfev": 104,
+      "seconds": 0.05992369999967195
+    },
+    "case-3-log-1": {
+      "method": "RK45",
+      "rtol": 1e-11,
+      "atol": 1.9999999999999998e-13,
+      "max_step": 0.0625,
+      "nfev": 110,
+      "seconds": 0.06371579999995447
+    },
+    "case-3-log-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 4e-15,
+      "max_step": 0.0078125,
+      "nfev": 1922,
+      "seconds": 0.08465440000009039
+    },
+    "case-3-spin": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7766,
+      "seconds": 0.5103308000002471
+    },
+    "case-3-spin-reference": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 8078,
+      "seconds": 0.140856999999869
+    },
+    "case-4-log-0": {
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 2e-10,
+      "max_step": 0.0625,
+      "nfev": 104,
+      "seconds": 0.06252690000019356
+    },
+    "case-4-log-1": {
+      "method": "RK45",
+      "rtol": 1e-11,
+      "atol": 1.9999999999999998e-13,
+      "max_step": 0.0625,
+      "nfev": 134,
+      "seconds": 0.06288820000008855
+    },
+    "case-4-log-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 4e-15,
+      "max_step": 0.0078125,
+      "nfev": 1922,
+      "seconds": 0.07697400000006382
+    },
+    "case-4-spin": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7814,
+      "seconds": 0.5047442999998566
+    },
+    "case-4-spin-reference": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 8198,
+      "seconds": 0.1405227999998715
+    },
+    "case-5-log-0": {
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 2e-10,
+      "max_step": 0.0625,
+      "nfev": 104,
+      "seconds": 0.06136789999982284
+    },
+    "case-5-log-1": {
+      "method": "RK45",
+      "rtol": 1e-11,
+      "atol": 1.9999999999999998e-13,
+      "max_step": 0.0625,
+      "nfev": 212,
+      "seconds": 0.06886209999993298
+    },
+    "case-5-log-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 4e-15,
+      "max_step": 0.0078125,
+      "nfev": 1922,
+      "seconds": 0.08004669999991165
+    },
+    "case-5-spin": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7874,
+      "seconds": 0.5087539000001016
+    },
+    "case-5-spin-reference": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 8294,
+      "seconds": 0.1402621000002
+    },
+    "case-6-log-0": {
+      "method": "RK45",
+      "rtol": 1e-08,
+      "atol": 2e-10,
+      "max_step": 0.0625,
+      "nfev": 110,
+      "seconds": 0.08035170000039216
+    },
+    "case-6-log-1": {
+      "method": "RK45",
+      "rtol": 1e-11,
+      "atol": 1.9999999999999998e-13,
+      "max_step": 0.0625,
+      "nfev": 242,
+      "seconds": 0.06483489999982339
+    },
+    "case-6-log-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "atol": 4e-15,
+      "max_step": 0.0078125,
+      "nfev": 1922,
+      "seconds": 0.07447760000013659
+    },
+    "case-6-spin": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 7886,
+      "seconds": 0.5039944000000105
+    },
+    "case-6-spin-reference": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "nfev": 8318,
+      "seconds": 0.13707109999995737
+    }
+  },
+  "metrics": {
+    "proper_mass_quadrature_absolute": 7.327471962526033e-15,
+    "proper_mass_quadrature_levels_absolute": 8.659739592076221e-15,
+    "log_radius_profile_absolute": 1.455180420606439e-11,
+    "log_radius_levels_absolute": 9.444702020466877e-09,
+    "log_radius_tighter_absolute": 1.4551915228366852e-11,
+    "isotropic_inverse_absolute": 1.3553491662321449e-11,
+    "metric_pullback_absolute": 8.881784197001252e-16,
+    "surface_exterior_matching_absolute": 4.440892098500626e-16,
+    "baryon_coordinate_integrals_absolute": 8.372191828698305e-12,
+    "baryon_quadrature_levels_absolute": 5.845990358466224e-12,
+    "baryon_coordinate_reference_sensitivity_absolute": 3.612477650349888e-09,
+    "spin_reference_inertia_absolute": 5.551115123125783e-16,
+    "tetrad_clock_speed_relative": 4.3368086899420177e-16,
+    "local_response_J_relative": 3.612458132941867e-16,
+    "response_first_PN_c4_ratio_deviation": 0.1940095051920423,
+    "response_first_PN_slope_Richardson_absolute": 8.082020601674067e-05,
+    "proper_mass_c6_ratio_deviation": 0.5567045482435447,
+    "proper_mass_first_slope_Richardson_absolute": 1.3526716544420836e-05,
+    "proper_mass_deficit_Newton_coefficient_absolute": 0.0003216370538133839,
+    "wrong_Euclidean_volume_absolute": 0.27866278983594395,
+    "wrong_areal_as_isotropic_absolute": 0.3337722339831619,
+    "wrong_coordinate_density_as_scalar_absolute": 5.218673009771186,
+    "wrong_no_lapse_relative": 1.228743535462329,
+    "wrong_no_shift_relative": 1.4251271800365304,
+    "wrong_unchanged_inertia_slope_absolute": 0.7999191797939832
+  },
+  "confirmations": {
+    "sources_preserved": true,
+    "arrays_reverified": true,
+    "raw_initial_preserved": true,
+    "grid_preserved": true,
+    "physical_claims_false": true
+  },
+  "cases": [
+    {
+      "compactness": 0.008,
+      "proper_energy_mass_ratio": 1.004841574471399,
+      "proper_mass_quadratures": [
+        1.0048415744713983,
+        1.004841574471402
+      ],
+      "surface_isotropic_fraction": 0.9919838707054898,
+      "baryon_tracers": {
+        "constant0.7": {
+          "areal": [
+            0.7033891021299786,
+            0.7033891021299814
+          ],
+          "isotropic": [
+            0.7033891021299816,
+            0.7033891021299838
+          ],
+          "log_coarse": 0.7033891021299841,
+          "log_tighter": 0.7033891021299812
+        },
+        "quadratic0.4+0.2s2": {
+          "areal": [
+            0.5226288147299893,
+            0.5226288147299923
+          ],
+          "isotropic": [
+            0.522628814729992,
+            0.5226288147299946
+          ],
+          "log_coarse": 0.5226288147299949,
+          "log_tighter": 0.5226288147299922
+        }
+      },
+      "inertia_factor": 0.40276898444398757,
+      "responses": {
+        "distant_gravitational_areal": 0.40276898444398757,
+        "distant_proper_energy_areal": 0.4008283441654629,
+        "distant_gravitational_isotropic": 0.40930476300615215,
+        "surface_static_gravitational_areal": 0.3995338398092963,
+        "surface_zamo_gravitational_areal": 0.40212525711211744
+      },
+      "SI": {
+        "mass_kg": 3.0,
+        "areal_radius_m": 2.0,
+        "G": 0.4,
+        "c": 8.660254037844387,
+        "omega": 0.001,
+        "angular_momentum": 0.00483322781332785
+      }
+    },
+    {
+      "compactness": 0.002,
+      "proper_energy_mass_ratio": 1.0012025781143876,
+      "proper_mass_quadratures": [
+        1.0012025781143867,
+        1.0012025781143905
+      ],
+      "surface_isotropic_fraction": 0.9979989979949861,
+      "baryon_tracers": {
+        "constant0.7": {
+          "areal": [
+            0.7008418046800706,
+            0.7008418046800733
+          ],
+          "isotropic": [
+            0.7008418046800704,
+            0.7008418046800733
+          ],
+          "log_coarse": 0.7008418046800733,
+          "log_tighter": 0.7008418046800731
+        },
+        "quadratic0.4+0.2s2": {
+          "areal": [
+            0.520652860911333,
+            0.5206528609113359
+          ],
+          "isotropic": [
+            0.5206528609113328,
+            0.5206528609113359
+          ],
+          "log_coarse": 0.5206528609113359,
+          "log_tighter": 0.5206528609113358
+        }
+      },
+      "inertia_factor": 0.40068733391419437,
+      "responses": {
+        "distant_gravitational_areal": 0.40068733391419437,
+        "distant_proper_energy_areal": 0.4002060548713607,
+        "distant_gravitational_isotropic": 0.4022957121718612,
+        "surface_static_gravitational_areal": 0.3998851562649307,
+        "surface_zamo_gravitational_areal": 0.4005271008096659
+      },
+      "SI": {
+        "mass_kg": 3.0,
+        "areal_radius_m": 2.0,
+        "G": 0.4,
+        "c": 17.320508075688775,
+        "omega": 0.001,
+        "angular_momentum": 0.0048082480069703325
+      }
+    },
+    {
+      "compactness": 0.0005,
+      "proper_energy_mass_ratio": 1.000300160818527,
+      "proper_mass_quadratures": [
+        1.0003001608185262,
+        1.0003001608185302
+      ],
+      "surface_isotropic_fraction": 0.9994999374687303,
+      "baryon_tracers": {
+        "constant0.7": {
+          "areal": [
+            0.7002101125729684,
+            0.7002101125729712
+          ],
+          "isotropic": [
+            0.7002101125729683,
+            0.7002101125729709
+          ],
+          "log_coarse": 0.7002101125729709,
+          "log_tighter": 0.7002101125729709
+        },
+        "quadratic0.4+0.2s2": {
+          "areal": [
+            0.5201629464873256,
+            0.5201629464873285
+          ],
+          "isotropic": [
+            0.5201629464873254,
+            0.5201629464873284
+          ],
+          "log_coarse": 0.5201629464873284,
+          "log_tighter": 0.5201629464873284
+        }
+      },
+      "inertia_factor": 0.40017152959225794,
+      "responses": {
+        "distant_gravitational_areal": 0.40017152959225794,
+        "distant_proper_energy_areal": 0.4000514498216266,
+        "distant_gravitational_isotropic": 0.40057205157232545,
+        "surface_static_gravitational_areal": 0.3999713937809943,
+        "surface_zamo_gravitational_areal": 0.4001315150213985
+      },
+      "SI": {
+        "mass_kg": 3.0,
+        "areal_radius_m": 2.0,
+        "G": 0.4,
+        "c": 34.64101615137755,
+        "omega": 0.001,
+        "angular_momentum": 0.004802058355107095
+      }
+    },
+    {
+      "compactness": 0.02,
+      "proper_energy_mass_ratio": 1.012264006439352,
+      "proper_mass_quadratures": [
+        1.0122640064393513,
+        1.0122640064393553
+      ],
+      "surface_isotropic_fraction": 0.9798979485566356,
+      "baryon_tracers": {
+        "constant0.7": {
+          "areal": [
+            0.7085848045075458,
+            0.7085848045075487
+          ],
+          "isotropic": [
+            0.7085848045075962,
+            0.7085848045075944
+          ],
+          "log_coarse": 0.7085848045075986,
+          "log_tighter": 0.7085848045075485
+        },
+        "quadratic0.4+0.2s2": {
+          "areal": [
+            0.5266610125485429,
+            0.5266610125485459
+          ],
+          "isotropic": [
+            0.5266610125485882,
+            0.5266610125485871
+          ],
+          "log_coarse": 0.5266610125485915,
+          "log_tighter": 0.5266610125485458
+        }
+      },
+      "inertia_factor": 0.4070231768219248,
+      "responses": {
+        "distant_gravitational_areal": 0.4070231768219248,
+        "distant_proper_energy_areal": 0.4020919189388474,
+        "distant_gravitational_isotropic": 0.4238941691695161,
+        "surface_static_gravitational_areal": 0.3987996386801314,
+        "surface_zamo_gravitational_areal": 0.4053999252992787
+      },
+      "SI": {
+        "mass_kg": 3.0,
+        "areal_radius_m": 2.0,
+        "G": 0.4,
+        "c": 5.477225575051661,
+        "omega": 0.001,
+        "angular_momentum": 0.004884278121863096
+      }
+    },
+    {
+      "compactness": 0.1,
+      "proper_energy_mass_ratio": 1.0674028524834744,
+      "proper_mass_quadratures": [
+        1.067402852483474,
+        1.0674028524834784
+      ],
+      "surface_isotropic_fraction": 0.8972135954999578,
+      "baryon_tracers": {
+        "constant0.7": {
+          "areal": [
+            0.7471819967384317,
+            0.747181996738435
+          ],
+          "isotropic": [
+            0.7471819967404418,
+            0.7471819967402602
+          ],
+          "log_coarse": 0.747181996752571,
+          "log_tighter": 0.7471819967384341
+        },
+        "quadratic0.4+0.2s2": {
+          "areal": [
+            0.5566928871060584,
+            0.5566928871060617
+          ],
+          "isotropic": [
+            0.5566928871077731,
+            0.5566928871076036
+          ],
+          "log_coarse": 0.55669288711922,
+          "log_tighter": 0.556692887106061
+        }
+      },
+      "inertia_factor": 0.43896616573020947,
+      "responses": {
+        "distant_gravitational_areal": 0.43896616573020947,
+        "distant_proper_energy_areal": 0.4112469483371608,
+        "distant_gravitational_isotropic": 0.5453048441047268,
+        "surface_static_gravitational_areal": 0.3926232745580748,
+        "surface_zamo_gravitational_areal": 0.4304103946873404
+      },
+      "SI": {
+        "mass_kg": 3.0,
+        "areal_radius_m": 2.0,
+        "G": 0.4,
+        "c": 2.4494897427831783,
+        "omega": 0.001,
+        "angular_momentum": 0.005267593988762514
+      }
+    },
+    {
+      "compactness": 0.25,
+      "proper_energy_mass_ratio": 1.2108418600591315,
+      "proper_mass_quadratures": [
+        1.210841860059131,
+        1.210841860059138
+      ],
+      "surface_isotropic_fraction": 0.7285533905932737,
+      "baryon_tracers": {
+        "constant0.7": {
+          "areal": [
+            0.8475893020413916,
+            0.8475893020413965
+          ],
+          "isotropic": [
+            0.8475893020468523,
+            0.8475893020471548
+          ],
+          "log_coarse": 0.8475893038353122,
+          "log_tighter": 0.8475893020413933
+        },
+        "quadratic0.4+0.2s2": {
+          "areal": [
+            0.6354572676854275,
+            0.6354572676854324
+          ],
+          "isotropic": [
+            0.635457267690013,
+            0.6354572676902541
+          ],
+          "log_coarse": 0.6354572693723235,
+          "log_tighter": 0.6354572676854295
+        }
+      },
+      "inertia_factor": 0.5246917252742197,
+      "responses": {
+        "distant_gravitational_areal": 0.5246917252742197,
+        "distant_proper_energy_areal": 0.43332803612240195,
+        "distant_gravitational_isotropic": 0.9885108664870567,
+        "surface_static_gravitational_areal": 0.3710130769738698,
+        "surface_zamo_gravitational_areal": 0.5029634596780541
+      },
+      "SI": {
+        "mass_kg": 3.0,
+        "areal_radius_m": 2.0,
+        "G": 0.4,
+        "c": 1.5491933384829668,
+        "omega": 0.001,
+        "angular_momentum": 0.006296300703290637
+      }
+    },
+    {
+      "compactness": 0.3,
+      "proper_energy_mass_ratio": 1.278662789835944,
+      "proper_mass_quadratures": [
+        1.2786627898359426,
+        1.2786627898359513
+      ],
+      "surface_isotropic_fraction": 0.6662277660168381,
+      "baryon_tracers": {
+        "constant0.7": {
+          "areal": [
+            0.8950639528851598,
+            0.8950639528851657
+          ],
+          "isotropic": [
+            0.895063952887692,
+            0.895063952893538
+          ],
+          "log_coarse": 0.8950639565060157,
+          "log_tighter": 0.8950639528851603
+        },
+        "quadratic0.4+0.2s2": {
+          "areal": [
+            0.6730169303849438,
+            0.6730169303849496
+          ],
+          "isotropic": [
+            0.6730169303864908,
+            0.6730169303919632
+          ],
+          "log_coarse": 0.6730169336832197,
+          "log_tighter": 0.6730169303849451
+        }
+      },
+      "inertia_factor": 0.5664357528382328,
+      "responses": {
+        "distant_gravitational_areal": 0.5664357528382328,
+        "distant_proper_energy_areal": 0.44299072229270714,
+        "distant_gravitational_isotropic": 1.2761602134058472,
+        "surface_static_gravitational_areal": 0.35824542542420024,
+        "surface_zamo_gravitational_areal": 0.5426821783826369
+      },
+      "SI": {
+        "mass_kg": 3.0,
+        "areal_radius_m": 2.0,
+        "G": 0.4,
+        "c": 1.4142135623730951,
+        "omega": 0.001,
+        "angular_momentum": 0.006797229034058793
+      }
+    }
+  ],
+  "order": {
+    "distant_gravitational_areal": {
+      "remainders": [
+        2.6127301130385305e-05,
+        1.6196284800540361e-06,
+        1.0102082936835899e-07
+      ],
+      "c4_ratios": [
+        16.13166318828477,
+        16.032619116086217
+      ],
+      "slopes": [
+        0.3461230554984429,
+        0.34366695709717177,
+        0.34305918451582595
+      ],
+      "Richardson_slope": 0.34284825763008137,
+      "analytic_slope": 0.34285714285714286
+    },
+    "distant_proper_energy_areal": {
+      "remainders": [
+        5.487022605776826e-06,
+        3.4058564635230937e-07,
+        2.1250197990152486e-08
+      ],
+      "c4_ratios": [
+        16.110551529529015,
+        16.027410498016984
+      ],
+      "slopes": [
+        0.10354302068286275,
+        0.10302743568033068,
+        0.10289964325316259
+      ],
+      "Richardson_slope": 0.10285557401281999,
+      "analytic_slope": 0.10285714285714287
+    },
+    "distant_gravitational_isotropic": {
+      "remainders": [
+        0.00016190586329500878,
+        9.997886146917434e-06,
+        6.230008968710621e-07
+      ],
+      "c4_ratios": [
+        16.194009505192042,
+        16.04794824073363
+      ],
+      "slopes": [
+        1.163095375769016,
+        1.1478560859305986,
+        1.1441031446508543
+      ],
+      "Richardson_slope": 1.142776322651126,
+      "analytic_slope": 1.1428571428571428
+    },
+    "surface_static_gravitational_areal": {
+      "remainders": [
+        -9.017333560845664e-06,
+        -5.580207835809148e-07,
+        -3.4790434311204876e-08
+      ],
+      "c4_ratios": [
+        16.159494101599392,
+        16.03948886033867
+      ],
+      "slopes": [
+        -0.05827002383796548,
+        -0.05742186753465717,
+        -0.05721243801148912
+      ],
+      "Richardson_slope": -0.05713914876688773,
+      "analytic_slope": -0.05714285714285716
+    },
+    "surface_zamo_gravitational_areal": {
+      "remainders": [
+        2.239996926028942e-05,
+        1.3865239515964412e-06,
+        8.64499699049226e-08
+      ],
+      "c4_ratios": [
+        16.155486700751283,
+        16.03845499450533
+      ],
+      "slopes": [
+        0.26565713901467725,
+        0.26355040483294623,
+        0.2630300427969301
+      ],
+      "Richardson_slope": 0.26284816010570256,
+      "analytic_slope": 0.2628571428571428
+    },
+    "proper_energy_mass": {
+      "remainders": [
+        4.3161425611337734e-07,
+        6.68581612295327e-09,
+        1.0424128227271012e-10
+      ],
+      "c6_ratios": [
+        64.55670454824354,
+        64.13789217847702
+      ],
+      "Richardson_slope": 0.5999864732834556,
+      "Newton_deficit_coefficient": 0.6003216370538134
+    }
+  },
+  "passed": true,
+  "failed": [],
+  "seconds": 8.647573600000214,
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1"
+  },
+  "runtime_changed": false,
+  "old_trajectories_reused": false,
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_certified": false,
+  "harmonic_ADM_mapping_certified": false,
+  "baryon_EOS_inferred": false,
+  "finite_rotation_energy_implemented": false,
+  "limitations": "Static incompressible acausal constant-energy-density sphere, linear-Omega only. Isotropic chart is not a qualified harmonic/ADM map. Baryon profiles are supplied static tracers, not an inferred EOS. Local apparent J/rate responses are not a physical inertia tensor. No finite-rotation energy, full PN orbit-spin dynamics, lunar mapping or tides. Numerical reference sensitivities and sampled checks are not rigorous accuracy bounds."
+}

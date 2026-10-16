@@ -1,0 +1,67 @@
+{
+  "generated_at": "2026-10-16T15:54:08+03:00",
+  "input_and_report_sha256": {
+    "docs/solar-sandbox-strict-checkpoint.json": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d",
+    "docs/strict-profile-validation.json": "bcd4fb6ae800ee88962d3a988a9e8944e2a692dc7a5a0a80cfffae865e9db172",
+    "docs/fixed-j2-year-validation.json": "718070317b98157eeeb2c4876e8952fe3376f56fe8fd850c60ed092064ac1316",
+    "docs/dense-jpl-validation.json": "fb6a38baa0fff419e1c67c48447b3b385602a84274a93d560f5f1c92f3ebb3cc",
+    "docs/edited-solar-year-validation.json": "4fd07edf184255971334edc937b866c2d47cc8cdba20f536bb07cfb3dad5e104",
+    "docs/edited-solar-packet20-validation.json": "7c438847b74c3e21f4eecae40240279ef97a1e784fa2286c94c0ea99d7d5843e"
+  },
+  "settings": {
+    "dt": 3600,
+    "backend": "rust",
+    "contact_mode": "stop",
+    "restitution": 1.0,
+    "integrator": "dop853",
+    "rtol": 3e-14,
+    "position_atol": 0.001,
+    "velocity_atol": 1e-09,
+    "physics": "eih-1pn",
+    "figures": [
+      {
+        "body": "Sun",
+        "coefficient": 2.1961391516529825e-07,
+        "reference_radius": 696000000.0,
+        "axis": [
+          0.12235349347232782,
+          -0.0310378702450671,
+          0.9920011457885356
+        ],
+        "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+      },
+      {
+        "body": "Earth",
+        "coefficient": 0.00108262539,
+        "reference_radius": 6378136.6,
+        "axis": [
+          0.0026020959422886785,
+          0.39776866017225926,
+          0.9174820554547499
+        ],
+        "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+      }
+    ],
+    "relative_pair": [
+      "Earth",
+      "Moon"
+    ],
+    "error_control": "per-body"
+  },
+  "units": "SI",
+  "frame": "Ecliptic J2000",
+  "initial_center": "SSB",
+  "parent_epoch_jd_tdb": 2461321.5,
+  "child_epoch": null,
+  "edited_packet20_samples": 440,
+  "edited_packet20_cases": 3,
+  "candidate_passed": 9,
+  "candidate_total": 9,
+  "edited_gui_target_qualified": true,
+  "edited_cli_qualified": true,
+  "nominal_packet20_qualified": false,
+  "standard_profile_qualified": false,
+  "arbitrary_parameters_qualified": false,
+  "full_year_noether_balances_verified": false,
+  "no_new_physical_precision_claim": true
+}

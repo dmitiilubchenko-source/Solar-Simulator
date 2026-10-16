@@ -1,0 +1,579 @@
+{
+  "protocol": "docs/runtime-performance-protocol.md",
+  "physics_profile": {
+    "profile": {
+      "dt": 3600,
+      "backend": "python",
+      "contact_mode": "stop",
+      "restitution": 1.0,
+      "integrator": "dop853",
+      "rtol": 1e-13,
+      "position_atol": 0.001,
+      "velocity_atol": 1e-09,
+      "physics": "eih-1pn",
+      "figures": [
+        {
+          "body": "Sun",
+          "coefficient": 2.1961391516529825e-07,
+          "reference_radius": 696000000.0,
+          "axis": [
+            0.12235349347232782,
+            -0.0310378702450671,
+            0.9920011457885356
+          ],
+          "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+        },
+        {
+          "body": "Earth",
+          "coefficient": 0.00108262539,
+          "reference_radius": 6378136.6,
+          "axis": [
+            0.0026020959422886785,
+            0.39776866017225926,
+            0.9174820554547499
+          ],
+          "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+        }
+      ],
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "error_control": "per-body"
+    },
+    "origin": {
+      "epoch_jd_tdb": 2461321.5,
+      "frame": "Ecliptic J2000",
+      "center": "Solar System Barycenter",
+      "ephemeris": "DE441",
+      "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+      "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+    },
+    "duration_seconds": 4320000,
+    "packets": 60,
+    "results": {
+      "python": {
+        "physics_only": {
+          "raw_seconds": [
+            1.55102749998332,
+            1.5296785999962594,
+            1.5214502000017092
+          ],
+          "median_seconds": 1.5296785999962594
+        },
+        "with_report": {
+          "raw_seconds": [
+            1.6185523999738507,
+            1.5949105999898165,
+            1.5971064000041224
+          ],
+          "median_seconds": 1.5971064000041224
+        },
+        "checkpoint_sha256": "335277b4ccf04d91aa9e3aa164983b8d25f7d1adbec900717a413f6528e8552f",
+        "single_interval_seconds": [
+          0.24428179999813437,
+          0.23701620000065304,
+          0.24302590001025237
+        ],
+        "single_interval_median_seconds": 0.24302590001025237,
+        "partition_max_position_difference_metres": 0.010163412785310398,
+        "solve_ivp_calls": 60,
+        "rhs_calls": 6624,
+        "report_per_call_seconds": [
+          0.0009947849995417832,
+          0.000946375000057742,
+          0.0009670866667875089
+        ],
+        "report_median_seconds": 0.0009670866667875089,
+        "note": "nfev counts RHS evaluations; accepted/rejected internal steps not recorded; profiler timings separate"
+      },
+      "rust": {
+        "physics_only": {
+          "raw_seconds": [
+            0.9119704000186175,
+            0.9108966999920085,
+            0.911292400007369
+          ],
+          "median_seconds": 0.911292400007369
+        },
+        "with_report": {
+          "raw_seconds": [
+            0.9941838000086136,
+            0.9703596000035759,
+            0.950359499984188
+          ],
+          "median_seconds": 0.9703596000035759
+        },
+        "checkpoint_sha256": "8442a1b3f9a58b2d53f7c2e548643ac1a5e403f3e39c747f66f95ec3ae985df9",
+        "single_interval_seconds": [
+          0.1395720000145957,
+          0.1386767000076361,
+          0.139081500004977
+        ],
+        "single_interval_median_seconds": 0.139081500004977,
+        "partition_max_position_difference_metres": 0.018561092325340846,
+        "solve_ivp_calls": 60,
+        "rhs_calls": 6600,
+        "report_per_call_seconds": [
+          0.000940598333060431,
+          0.0009527366666588933,
+          0.000963686666606615
+        ],
+        "report_median_seconds": 0.0009527366666588933,
+        "note": "nfev counts RHS evaluations; accepted/rejected internal steps not recorded; profiler timings separate"
+      }
+    },
+    "render_input_sha256": "dec2a8b5ddbd5fd5cd7e840d8577704b56ba784f2e8cbf24f553d0f328ef73b8",
+    "protocol": "docs/runtime-performance-protocol.md",
+    "python": "3.14.2",
+    "versions": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.0"
+    }
+  },
+  "before_render": {
+    "app_source_sha256": "9111e9664b6884a8cc72951e912c23620dd566cde54bdf1a767c402e919fffdf",
+    "input_sha256": "dec2a8b5ddbd5fd5cd7e840d8577704b56ba784f2e8cbf24f553d0f328ef73b8",
+    "results": [
+      {
+        "history": 60,
+        "view": "Все тела",
+        "build_raw_seconds": [
+          0.013381999975536019,
+          0.012607700016815215,
+          0.013157300010789186,
+          0.014453699986916035,
+          0.014098299987381324
+        ],
+        "draw_raw_seconds": [
+          0.0973709000099916,
+          0.09677909998572432,
+          0.0934930999937933,
+          0.10710020002443343,
+          0.0945728000078816
+        ],
+        "build_median_seconds": 0.013381999975536019,
+        "draw_median_seconds": 0.09677909998572432,
+        "full_raw_seconds": [
+          0.11075289998552762,
+          0.10938680000253953,
+          0.10665040000458248,
+          0.12155390001134947,
+          0.10867109999526292
+        ],
+        "full_median_seconds": 0.10938680000253953,
+        "python_peak_bytes": 1681852,
+        "limits": {
+          "x": [
+            -5657356531515.678,
+            9550782450395.074
+          ],
+          "y": [
+            -196548165189.8302,
+            2729233491665.1997
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      },
+      {
+        "history": 60,
+        "view": "Земля и Луна",
+        "build_raw_seconds": [
+          0.011704799981089309,
+          0.010354199999710545,
+          0.010784100013552234,
+          0.010333099984563887,
+          0.010813400003826246
+        ],
+        "draw_raw_seconds": [
+          0.07989700001780875,
+          0.08000909999827854,
+          0.07763590000104159,
+          0.07814749999670312,
+          0.08035139998537488
+        ],
+        "build_median_seconds": 0.010784100013552234,
+        "draw_median_seconds": 0.07989700001780875,
+        "full_raw_seconds": [
+          0.09160179999889806,
+          0.09036329999798909,
+          0.08842000001459382,
+          0.088480599981267,
+          0.09116479998920113
+        ],
+        "full_median_seconds": 0.09036329999798909,
+        "python_peak_bytes": 1501706,
+        "limits": {
+          "x": [
+            -2196253022.948853,
+            2193352468.2908483
+          ],
+          "y": [
+            -442510710.07525027,
+            401973104.9645325
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      },
+      {
+        "history": 1500,
+        "view": "Все тела",
+        "build_raw_seconds": [
+          0.01641310000559315,
+          0.01636720000533387,
+          0.016341799986548722,
+          0.016130600008182228,
+          0.01566810000804253
+        ],
+        "draw_raw_seconds": [
+          0.0982652000093367,
+          0.09917329999734648,
+          0.09471020000637509,
+          0.09274669998558238,
+          0.09597229998325929
+        ],
+        "build_median_seconds": 0.016341799986548722,
+        "draw_median_seconds": 0.09597229998325929,
+        "full_raw_seconds": [
+          0.11467830001492985,
+          0.11554050000268035,
+          0.11105199999292381,
+          0.10887729999376461,
+          0.11164039999130182
+        ],
+        "full_median_seconds": 0.11164039999130182,
+        "python_peak_bytes": 1954439,
+        "limits": {
+          "x": [
+            -5657356531515.678,
+            9550782450395.074
+          ],
+          "y": [
+            -196548165189.8302,
+            2729233491665.1997
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      },
+      {
+        "history": 1500,
+        "view": "Земля и Луна",
+        "build_raw_seconds": [
+          0.01240840001264587,
+          0.012114500015741214,
+          0.012254700006451458,
+          0.01236849999986589,
+          0.012002700008451939
+        ],
+        "draw_raw_seconds": [
+          0.08925940000335686,
+          0.08843499998329207,
+          0.08938240000861697,
+          0.08305440002004616,
+          0.0860988000058569
+        ],
+        "build_median_seconds": 0.012254700006451458,
+        "draw_median_seconds": 0.08843499998329207,
+        "full_raw_seconds": [
+          0.10166780001600273,
+          0.10054949999903329,
+          0.10163710001506843,
+          0.09542290001991205,
+          0.09810150001430884
+        ],
+        "full_median_seconds": 0.10054949999903329,
+        "python_peak_bytes": 1598604,
+        "limits": {
+          "x": [
+            -2196253022.948853,
+            2193352468.2908483
+          ],
+          "y": [
+            -442510710.07525027,
+            401973104.9645325
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      }
+    ],
+    "notes": "Synchronous hidden Tk canvas after real1180x820 layout; repeated data for1500 stress, not1500 integration packets. tracemalloc run excluded from timing; native allocations not fully measured. No polling latency/worker overlap.",
+    "protocol": "docs/runtime-performance-protocol.md",
+    "python": "3.14.2",
+    "versions": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.0"
+    }
+  },
+  "after_render": {
+    "app_source_sha256": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+    "input_sha256": "dec2a8b5ddbd5fd5cd7e840d8577704b56ba784f2e8cbf24f553d0f328ef73b8",
+    "results": [
+      {
+        "history": 60,
+        "view": "Все тела",
+        "build_raw_seconds": [
+          0.0032296999997925013,
+          0.0031101999920792878,
+          0.002945000014733523,
+          0.0036047000030521303,
+          0.002926599991042167
+        ],
+        "draw_raw_seconds": [
+          0.08075779999489896,
+          0.08150739999837242,
+          0.0819105000118725,
+          0.08157959999516606,
+          0.07652480000979267
+        ],
+        "build_median_seconds": 0.0031101999920792878,
+        "draw_median_seconds": 0.08150739999837242,
+        "full_raw_seconds": [
+          0.08398749999469146,
+          0.08461759999045171,
+          0.08485550002660602,
+          0.0851842999982182,
+          0.07945140000083484
+        ],
+        "full_median_seconds": 0.08461759999045171,
+        "python_peak_bytes": 260662,
+        "limits": {
+          "x": [
+            -5657356531515.678,
+            9550782450395.074
+          ],
+          "y": [
+            -196548165189.8302,
+            2729233491665.1997
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      },
+      {
+        "history": 60,
+        "view": "Земля и Луна",
+        "build_raw_seconds": [
+          0.002554900012910366,
+          0.0025815000117290765,
+          0.002628700021887198,
+          0.0027455000090412796,
+          0.0027794000052381307
+        ],
+        "draw_raw_seconds": [
+          0.06059350000577979,
+          0.06154840000090189,
+          0.062110900005791336,
+          0.06040769998799078,
+          0.06282120000105351
+        ],
+        "build_median_seconds": 0.002628700021887198,
+        "draw_median_seconds": 0.06154840000090189,
+        "full_raw_seconds": [
+          0.06314840001869015,
+          0.06412990001263097,
+          0.06473960002767853,
+          0.06315319999703206,
+          0.06560060000629164
+        ],
+        "full_median_seconds": 0.06412990001263097,
+        "python_peak_bytes": 237288,
+        "limits": {
+          "x": [
+            -2196253022.948853,
+            2193352468.2908483
+          ],
+          "y": [
+            -442510710.07525027,
+            401973104.9645325
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      },
+      {
+        "history": 1500,
+        "view": "Все тела",
+        "build_raw_seconds": [
+          0.006478700001025572,
+          0.0073352000035811216,
+          0.007054499990772456,
+          0.007007600012002513,
+          0.006902199995238334
+        ],
+        "draw_raw_seconds": [
+          0.07791600000928156,
+          0.08383610000601038,
+          0.07922680000774562,
+          0.07636609999462962,
+          0.08067329999175854
+        ],
+        "build_median_seconds": 0.007007600012002513,
+        "draw_median_seconds": 0.07922680000774562,
+        "full_raw_seconds": [
+          0.08439470001030713,
+          0.0911713000095915,
+          0.08628129999851808,
+          0.08337370000663213,
+          0.08757549998699687
+        ],
+        "full_median_seconds": 0.08628129999851808,
+        "python_peak_bytes": 1186152,
+        "limits": {
+          "x": [
+            -5657356531515.678,
+            9550782450395.074
+          ],
+          "y": [
+            -196548165189.8302,
+            2729233491665.1997
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      },
+      {
+        "history": 1500,
+        "view": "Земля и Луна",
+        "build_raw_seconds": [
+          0.0037653000035788864,
+          0.003813799994532019,
+          0.004277100000763312,
+          0.003694600018206984,
+          0.004255599982570857
+        ],
+        "draw_raw_seconds": [
+          0.06491399998776615,
+          0.06986940000206232,
+          0.06675829997402616,
+          0.06698999999207444,
+          0.06809750001411885
+        ],
+        "build_median_seconds": 0.003813799994532019,
+        "draw_median_seconds": 0.06698999999207444,
+        "full_raw_seconds": [
+          0.06867929999134503,
+          0.07368319999659434,
+          0.07103539997478947,
+          0.07068460001028143,
+          0.07235309999668971
+        ],
+        "full_median_seconds": 0.07103539997478947,
+        "python_peak_bytes": 369992,
+        "limits": {
+          "x": [
+            -2196253022.948853,
+            2193352468.2908483
+          ],
+          "y": [
+            -442510710.07525027,
+            401973104.9645325
+          ]
+        },
+        "figure_pixels": [
+          1180,
+          533
+        ]
+      }
+    ],
+    "notes": "Synchronous hidden Tk canvas after real1180x820 layout; repeated data for1500 stress, not1500 integration packets. tracemalloc run excluded from timing; native allocations not fully measured. No polling latency/worker overlap.",
+    "protocol": "docs/runtime-performance-protocol.md",
+    "python": "3.14.2",
+    "versions": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.1",
+      "matplotlib": "3.11.0"
+    }
+  },
+  "comparisons": [
+    {
+      "history": 60,
+      "view": "Все тела",
+      "speedup": 1.2927192453447367,
+      "reduction_fraction": 0.22643682794919295,
+      "pixel_changed_count": 0,
+      "maximum_channel_difference": 0,
+      "limits_identical": true
+    },
+    {
+      "history": 60,
+      "view": "Земля и Луна",
+      "speedup": 1.4090665973312169,
+      "reduction_fraction": 0.29031033600966216,
+      "pixel_changed_count": 0,
+      "maximum_channel_difference": 0,
+      "limits_identical": true
+    },
+    {
+      "history": 1500,
+      "view": "Все тела",
+      "speedup": 1.2939118904469369,
+      "reduction_fraction": 0.22714984893246115,
+      "pixel_changed_count": 0,
+      "maximum_channel_difference": 0,
+      "limits_identical": true
+    },
+    {
+      "history": 1500,
+      "view": "Земля и Луна",
+      "speedup": 1.415484392777663,
+      "reduction_fraction": 0.2935280635361446,
+      "pixel_changed_count": 0,
+      "maximum_channel_difference": 0,
+      "limits_identical": true
+    }
+  ],
+  "criterion": {
+    "minimum_reduction_fraction": 0.15,
+    "target": "10body/all/1500/fullmedian",
+    "passed": true
+  },
+  "source_sha256": {
+    "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+    "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+    "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+    "scripts/profile_runtime.py": "f0f2f0fd927e0d14e68fada67d7c0a2923313ff4dc6895e310198ec52094e2f1",
+    "tests/test_plot_artists.py": "fa5234f988734ddd5aea04be55130728ab51366176562710ffb853fc89cf8d48"
+  },
+  "unchanged_scientific_source_sha256": {
+    "scripts/assess_sandbox_models.py": "39f3414626175c94c6205e472dc8d81b63284a22113d20c68993c998c614c54d",
+    "scripts/assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+    "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+    "scripts/assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+    "scripts/assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+    "scripts/validation/eih_scalar.rs": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+    "scripts/independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+    "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+    "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "scripts/assess_sandbox_demo.py": "d3c9dd5714df34f2cf57d6e9053bb7ccb0c40400e45f94fbe4ded899395c6523",
+    "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+    "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436"
+  },
+  "limitations": "No force/integrator/data/tolerance/history change. Same input and pixel output on4fixedviewcases; timings not universalFPS, native allocations only partially covered."
+}

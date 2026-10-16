@@ -7,7 +7,7 @@ import os
 from pathlib import Path
 import tempfile
 
-from .experiment import Event, Experiment, Settings
+from .experiment import Event, Experiment, Settings, validate_start
 from .simulation import Body, total_energy
 from .vector3 import Vector3
 from .ephemerides import EphemerisOrigin
@@ -217,6 +217,11 @@ def from_document(document: dict) -> Experiment:
         validate_bodies(bodies)
     time = _number(document["time"],nonnegative=True)
     validate_figures(bodies, settings.figures, time)
+    if prescribed(settings.figures) and origin is not None:
+        from .perturbers import SUPPLEMENTS, BASE_DATASET_SHA256
+        if origin.dataset_sha256 not in SUPPLEMENTS and origin.dataset_sha256 != BASE_DATASET_SHA256:
+            # Register verified ring provenance only for a checkpoint that needs it.
+            from .kuiper_ring import RING_SPECS
     validate_orientation_origin(settings.figures, origin)
     work = _number(document["orientation_work"])
     if work != 0 and (not prescribed(settings.figures) or time == 0):
@@ -254,7 +259,9 @@ def from_document(document: dict) -> Experiment:
     if document["halted"] and (not events or settings.contact_mode!="stop"
                                or events[-1].time!=time or events[-1].outcome!="contact"):
         raise ValueError("Остановка должна соответствовать последнему контакту")
-    return Experiment(initial,bodies,settings,time,loss,tuple(events),document["halted"],offset,origin,work)
+    result = Experiment(initial,bodies,settings,time,loss,tuple(events),document["halted"],offset,origin,work)
+    validate_start(result)
+    return result
 
 
 def _rotation_document(rotation):
@@ -291,8 +298,13 @@ def _rotations(values):
 
 
 def save(experiment: Experiment, path: str | Path):
+    _write_document(to_document(experiment), path)
+
+
+def _write_document(document: dict, path: str | Path):
+    """Bounded atomic JSON write shared by checkpoints and experiment bundles."""
     path = Path(path)
-    data = json.dumps(to_document(experiment),ensure_ascii=False,allow_nan=False,indent=2).encode("utf-8")
+    data = json.dumps(document,ensure_ascii=False,allow_nan=False,indent=2).encode("utf-8")
     if len(data)>MAX_BYTES:
         raise ValueError("Контрольная точка слишком велика")
     temporary = None
@@ -318,6 +330,14 @@ def _unique_pairs(pairs):
 
 
 def load(path: str | Path) -> Experiment:
+    try:
+        return from_document(_read_document(path))
+    except (TypeError,OverflowError,UnicodeDecodeError) as error:
+        raise ValueError("Неверный формат контрольной точки") from error
+
+
+def _read_document(path: str | Path) -> dict:
+    """Bounded JSON with duplicate keys and nonfinite constants rejected."""
     with Path(path).open("rb") as file:
         data = file.read(MAX_BYTES+1)
     if len(data)>MAX_BYTES:
@@ -326,6 +346,6 @@ def load(path: str | Path) -> Experiment:
         raise ValueError("NaN/Infinity в JSON запрещены")
     try:
         document = json.loads(data,object_pairs_hook=_unique_pairs,parse_constant=reject_constant)
-        return from_document(document)
+        return document
     except (TypeError,OverflowError,UnicodeDecodeError) as error:
         raise ValueError("Неверный формат контрольной точки") from error

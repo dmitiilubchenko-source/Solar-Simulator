@@ -1,0 +1,4971 @@
+{
+  "protocol": "docs/edited-solar-month-protocol.md",
+  "measurements": {
+    "regular": {
+      "protocol": "docs/edited-solar-month-protocol.md",
+      "grid": "regular",
+      "reference_levels": [
+        [
+          1e-13,
+          1800.0
+        ],
+        [
+          3e-14,
+          900.0
+        ],
+        [
+          3e-14,
+          450.0
+        ]
+      ],
+      "source_sha256": {
+        "scripts/assess_sandbox_models.py": "39f3414626175c94c6205e472dc8d81b63284a22113d20c68993c998c614c54d",
+        "scripts/assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+        "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+        "scripts/assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+        "scripts/assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+        "scripts/validation/eih_scalar.rs": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+        "scripts/independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+        "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+        "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+        "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+        "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+        "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+        "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+        "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+        "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+        "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+        "scripts/assess_qualification_grid.py": "239675256d692f2683209c7a82573a0542c55bf46a67eb2a95a6387ad4fc1a42",
+        "scripts/fetch_qualification_grid.py": "e8c79ddfca723e8572ba9b89f6dd73a192ee00cbbc1178d7007a5b87d039807f",
+        "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+        "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+        "scripts/qualify_strict_profile.py": "684d6678fbdc1d7a2745e01c187a83c3e3b70cf8d16d1f17f463899acc45c8ea",
+        "scripts/assess_edited_solar.py": "13cad662ee8b1d16e981571d604073b5dfb3a3a19a324a93727e0c8d32d4bd9f",
+        "scripts/edited_j2.py": "31418782c1585c87fb3cb9b8dd6dc141055372679f3efdffddaffbb2d2d7244e",
+        "scripts/fixed_j2_ias.py": "fd77c72ce6742fedc479064947de863b4632e3aee9f48a793005f861c0d96df5",
+        "scripts/eih_year.py": "a9bcbac8897b42601627ff81ef03cba7ee0fc29b2a431cd4a35b37b89cf16bb1",
+        "scripts/ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+        "scripts/newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+        "tests/test_edited_solar.py": "dcf3058c86af42a5b1a1b219dbc4938dcb752e63d7aba21668e2ab37f48502cc",
+        "docs/edited-solar-protocol.md": "1f01b6db4272a8b3d339071658fe7eca092bb82213e97679a5db5f18401bbe53",
+        "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+        "src/solar_simulator/branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+        "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+        "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+        "src/solar_simulator/commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+        "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+        "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+        "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+        "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+        "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+        "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+        "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+        "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+        "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+        "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+        "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+        "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+        "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+        "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+        "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+        "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+        "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+        "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+        "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+        "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+        "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+        "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+        "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+        "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+        "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+        "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+        "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+        "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+        "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+        "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+        "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+        "docs/edited-solar-month-protocol.md": "b60749531df4462f61fa87f3a06a397a47819e4227e0f3b2e982ab38b2034671",
+        "scripts/assess_edited_solar_month.py": "55d017f6d09c8f9ac4dfe073b68035ad0cb57e925fb12e50ec03d697fd3e8917",
+        "tests/test_edited_solar_month.py": "da69e2ca3723bc5527d2dbb9c0726ca2f9fc95451d38807b4f1586b7d944c4dc"
+      },
+      "input_sha256": {
+        "docs/solar-sandbox-strict-checkpoint.json": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d",
+        "docs/strict-profile-validation.json": "bcd4fb6ae800ee88962d3a988a9e8944e2a692dc7a5a0a80cfffae865e9db172",
+        "docs/edited-solar-validation.json": "03e9b8e225dcfd23ce3bb54ccf20cde38c8ba8b2f9d463a6cc15c16c92c05502"
+      },
+      "dependency_sha256": {
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\independent-eih-47ffd86634e23c9b.dll": "0257cec446be76e55622d943af9d1a266aa4c19c7f8eaaab1eae2cbb2490e715",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\scipy\\integrate\\_ivp\\rk.py": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\scipy\\integrate\\_ivp\\base.py": "5bd1a3ddb9fb986333d3d3cc2d2e00bc19efbda00169dcc5b82324aad9f198af"
+      },
+      "regular_receipt_sha256": {},
+      "scalar_oracle_source_sha256": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+      "compiler": "rustc 1.99.0 (b940084d7 2026-09-28)",
+      "cases": {
+        "sun_mass": {
+          "provenance": {
+            "parent_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "parent_checkpoint_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "child_checkpoint_sha256": "b2e167c5fb87d0f9d743ec63d79904d6ef5ec7b187266b9eea248541af90a335",
+            "parent_time_seconds": 0.0,
+            "changes": [
+              {
+                "name": "Sun",
+                "before": {
+                  "name": "Sun",
+                  "mass": 1.988409871316534e+30,
+                  "radius": 0.0,
+                  "position": [
+                    -179975380.99863088,
+                    -766335220.5591803,
+                    14025803.55911574
+                  ],
+                  "velocity": [
+                    10.452225179469629,
+                    4.432621459961725,
+                    -0.2236386786017347
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "after": {
+                  "name": "Sun",
+                  "mass": 2.4855123391456673e+30,
+                  "radius": 0.0,
+                  "position": [
+                    -179975380.99863088,
+                    -766335220.5591803,
+                    14025803.55911574
+                  ],
+                  "velocity": [
+                    10.452225179469629,
+                    4.432621459961725,
+                    -0.2236386786017347
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ],
+            "origin": null
+          },
+          "settings": {
+            "dt": 3600,
+            "backend": "rust",
+            "contact_mode": "stop",
+            "restitution": 1.0,
+            "integrator": "dop853",
+            "rtol": 3e-14,
+            "position_atol": 0.001,
+            "velocity_atol": 1e-09,
+            "physics": "eih-1pn",
+            "figures": [
+              {
+                "body": "Sun",
+                "coefficient": 2.1961391516529825e-07,
+                "reference_radius": 696000000.0,
+                "axis": [
+                  0.12235349347232782,
+                  -0.0310378702450671,
+                  0.9920011457885356
+                ],
+                "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+              },
+              {
+                "body": "Earth",
+                "coefficient": 0.00108262539,
+                "reference_radius": 6378136.6,
+                "axis": [
+                  0.0026020959422886785,
+                  0.39776866017225926,
+                  0.9174820554547499
+                ],
+                "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+              }
+            ],
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "error_control": "per-body"
+          },
+          "masses_kg": [
+            2.4855123391456673e+30,
+            3.301000636980658e+23,
+            4.867305814842006e+24,
+            5.972168399787584e+24,
+            7.345789248996225e+22,
+            6.416909011545196e+23,
+            1.898517658780696e+27,
+            5.684578883448452e+26,
+            8.68189383156286e+25,
+            1.0243062344486162e+26
+          ],
+          "names": [
+            "Sun",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Moon",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
+          ],
+          "oracle_snapshot": {
+            "physical_c_full_relative_error": 1.65457830271085e-16,
+            "amplified_pn_relative_error": 6.437315677982254e-12,
+            "checks_passed": true
+          },
+          "candidates": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.049806968786314056,
+                "velocity_m_per_s": 7.180401630858138e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0002757155297284853,
+                "velocity_m_per_s": 5.35902641840428e-10
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 3.822256771286743e-06,
+                  "velocity_m_per_s": 3.123818210533869e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.00025040988841045105,
+                  "velocity_m_per_s": 7.180401630858138e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0011410026712965402,
+                  "velocity_m_per_s": 4.94648282384452e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0003979005374312792,
+                  "velocity_m_per_s": 8.859194085525211e-11
+                },
+                "Moon": {
+                  "position_metres": 0.00041313544911665697,
+                  "velocity_m_per_s": 5.834717870822149e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0011791892728771126,
+                  "velocity_m_per_s": 2.345335008102298e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.006732861785858778,
+                  "velocity_m_per_s": 6.114635364090698e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.017158033365246825,
+                  "velocity_m_per_s": 1.9646578597329768e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.03076560452932529,
+                  "velocity_m_per_s": 4.965286669368939e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.049806968786314056,
+                  "velocity_m_per_s": 9.55046620676541e-12
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ],
+                "packets": 120,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.0517644000809477,
+                "velocity_m_per_s": 1.359817157693706e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0002794266005329547,
+                "velocity_m_per_s": 6.415231496556595e-10
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.6227161529019203e-06,
+                  "velocity_m_per_s": 5.5388697346983296e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.0005332668444528921,
+                  "velocity_m_per_s": 1.359817157693706e-09
+                },
+                "Venus": {
+                  "position_metres": 0.0007027544439667501,
+                  "velocity_m_per_s": 3.547740537112054e-10
+                },
+                "Earth": {
+                  "position_metres": 0.00026340753981406406,
+                  "velocity_m_per_s": 7.166150453209594e-11
+                },
+                "Moon": {
+                  "position_metres": 0.0005257930722044427,
+                  "velocity_m_per_s": 6.742625830115326e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0011094556951430938,
+                  "velocity_m_per_s": 2.2984388818962728e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.004543210356128073,
+                  "velocity_m_per_s": 6.678637277170857e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.013786389805100193,
+                  "velocity_m_per_s": 5.0854969230691596e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.03159240477722272,
+                  "velocity_m_per_s": 5.851176153859002e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.0517644000809477,
+                  "velocity_m_per_s": 6.448158688948403e-12
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ],
+                "packets": 120,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.011201240636827356,
+                "velocity_m_per_s": 1.2549827348625226e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.4125109071191e-05,
+                "velocity_m_per_s": 1.6275889873371198e-11
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.504129498083746e-06,
+                  "velocity_m_per_s": 4.553190301658847e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.0005371754186432733,
+                  "velocity_m_per_s": 1.2549827348625226e-09
+                },
+                "Venus": {
+                  "position_metres": 0.0005910196047016697,
+                  "velocity_m_per_s": 2.4424801525895133e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0003562200212107755,
+                  "velocity_m_per_s": 6.638688354515503e-11
+                },
+                "Moon": {
+                  "position_metres": 0.00037779027739653616,
+                  "velocity_m_per_s": 6.997801777291449e-11
+                },
+                "Mars": {
+                  "position_metres": 0.000638471956526712,
+                  "velocity_m_per_s": 2.2992297262814188e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.0015449394413911488,
+                  "velocity_m_per_s": 7.00030338193801e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.005618301880590114,
+                  "velocity_m_per_s": 3.375011352773323e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.011201240636827356,
+                  "velocity_m_per_s": 3.409952554138118e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.004942057721161392,
+                  "velocity_m_per_s": 1.2187388410856473e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packets": 120,
+                "rhs_calls": 1526,
+                "failed": false,
+                "finished": true,
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ]
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": null
+            }
+          },
+          "reference_wall_seconds": 7.862283899998147,
+          "reference_rhs_calls": [
+            8648,
+            17288,
+            34562
+          ],
+          "reference_cache_sha256": "fc8816dfa4c20accf2bed2f2e641f2872ee9147bbd3d5227a4c31fd3430762d8",
+          "reference_comparisons": {
+            "0_to_1": {
+              "all_bodies": {
+                "position_metres": 0.021031551120810007,
+                "velocity_m_per_s": 5.675742475439678e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 5.5056415826150723e-05,
+                "velocity_m_per_s": 9.110964533624878e-11
+              }
+            },
+            "1_to_2": {
+              "all_bodies": {
+                "position_metres": 0.010255722611633647,
+                "velocity_m_per_s": 2.7547650175380364e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.413649519455443e-05,
+                "velocity_m_per_s": 2.912181051578117e-11
+              }
+            }
+          },
+          "reference_passed": true,
+          "reference_initial_roundtrip": {
+            "all_bodies": {
+              "position_metres": 3.0517578125e-05,
+              "velocity_m_per_s": 2.0338905713759738e-12
+            },
+            "moon_relative_to_earth": {
+              "position_metres": 1.862645149230957e-09,
+              "velocity_m_per_s": 0.0
+            }
+          },
+          "cost": {
+            "legacy_python": {
+              "seconds": [
+                2.911788699999306,
+                2.9240334999994957,
+                2.967410799999925
+              ],
+              "median_seconds": 2.9240334999994957
+            },
+            "legacy_rust": {
+              "seconds": [
+                1.7153719999987516,
+                1.7670152000027883,
+                1.8047775000013644
+              ],
+              "median_seconds": 1.7670152000027883
+            },
+            "continuous_rust": {
+              "seconds": [
+                0.2261316000003717,
+                0.21937140000227373,
+                0.22580550000202493
+              ],
+              "median_seconds": 0.22580550000202493
+            }
+          },
+          "parent_child_preserved": true,
+          "packet_endpoints_equal": true,
+          "samples": 121,
+          "duration_seconds": 2592000.0
+        },
+        "earth_position": {
+          "provenance": {
+            "parent_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "parent_checkpoint_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "child_checkpoint_sha256": "8bb5d2b29a7205f64b32525215dc8684cab58ea2f8dd9a09ebe98f6d4daf4c5f",
+            "parent_time_seconds": 0.0,
+            "changes": [
+              {
+                "name": "Earth",
+                "before": {
+                  "name": "Earth",
+                  "mass": 5.972168399787584e+24,
+                  "radius": 0.0,
+                  "position": [
+                    144650899686.84598,
+                    36316866220.35821,
+                    10986666.35056399
+                  ],
+                  "velocity": [
+                    -7857.880626198839,
+                    28762.01732400517,
+                    -0.8206446406369139
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "after": {
+                  "name": "Earth",
+                  "mass": 5.972168399787584e+24,
+                  "radius": 0.0,
+                  "position": [
+                    144651899686.84598,
+                    36314866220.35821,
+                    13986666.35056399
+                  ],
+                  "velocity": [
+                    -7857.880626198839,
+                    28762.01732400517,
+                    -0.8206446406369139
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ],
+            "origin": null
+          },
+          "settings": {
+            "dt": 3600,
+            "backend": "rust",
+            "contact_mode": "stop",
+            "restitution": 1.0,
+            "integrator": "dop853",
+            "rtol": 3e-14,
+            "position_atol": 0.001,
+            "velocity_atol": 1e-09,
+            "physics": "eih-1pn",
+            "figures": [
+              {
+                "body": "Sun",
+                "coefficient": 2.1961391516529825e-07,
+                "reference_radius": 696000000.0,
+                "axis": [
+                  0.12235349347232782,
+                  -0.0310378702450671,
+                  0.9920011457885356
+                ],
+                "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+              },
+              {
+                "body": "Earth",
+                "coefficient": 0.00108262539,
+                "reference_radius": 6378136.6,
+                "axis": [
+                  0.0026020959422886785,
+                  0.39776866017225926,
+                  0.9174820554547499
+                ],
+                "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+              }
+            ],
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "error_control": "per-body"
+          },
+          "masses_kg": [
+            1.988409871316534e+30,
+            3.301000636980658e+23,
+            4.867305814842006e+24,
+            5.972168399787584e+24,
+            7.345789248996225e+22,
+            6.416909011545196e+23,
+            1.898517658780696e+27,
+            5.684578883448452e+26,
+            8.68189383156286e+25,
+            1.0243062344486162e+26
+          ],
+          "names": [
+            "Sun",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Moon",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
+          ],
+          "oracle_snapshot": {
+            "physical_c_full_relative_error": 2.0952979614224834e-16,
+            "amplified_pn_relative_error": 2.2795292780578305e-11,
+            "checks_passed": true
+          },
+          "candidates": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.07035646785810115,
+                "velocity_m_per_s": 6.556478450932908e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.00024798070669842154,
+                "velocity_m_per_s": 4.947770304773811e-10
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.623546106821329e-06,
+                  "velocity_m_per_s": 5.2274412246199237e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.00037944045337013493,
+                  "velocity_m_per_s": 4.0926149960049994e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0006862468688178432,
+                  "velocity_m_per_s": 3.2905236762763714e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0013443331020851583,
+                  "velocity_m_per_s": 2.4341947256302253e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0014605825886670294,
+                  "velocity_m_per_s": 6.556478450932908e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0020807750891033553,
+                  "velocity_m_per_s": 8.200913729038508e-11
+                },
+                "Jupiter": {
+                  "position_metres": 0.008071496481113986,
+                  "velocity_m_per_s": 6.195630178876568e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.010808288873392103,
+                  "velocity_m_per_s": 3.43718745282921e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.007816544676469694,
+                  "velocity_m_per_s": 3.8212142750185477e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.07035646785810115,
+                  "velocity_m_per_s": 1.6374117795450102e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ],
+                "packets": 120,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.05570863311306971,
+                "velocity_m_per_s": 6.557358509662145e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.00024798090904019535,
+                "velocity_m_per_s": 4.850738171451644e-10
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.2682834991392314e-06,
+                  "velocity_m_per_s": 3.6416171981781925e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.00032561643750369796,
+                  "velocity_m_per_s": 3.616828416889562e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0007183491253653177,
+                  "velocity_m_per_s": 2.506067431392797e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0015784551762403926,
+                  "velocity_m_per_s": 2.9122091109404006e-10
+                },
+                "Moon": {
+                  "position_metres": 0.001664989351465204,
+                  "velocity_m_per_s": 6.557358509662145e-10
+                },
+                "Mars": {
+                  "position_metres": 0.002536587959317298,
+                  "velocity_m_per_s": 1.2565373707492427e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.006610028619992183,
+                  "velocity_m_per_s": 5.460001976936803e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.008989434269007725,
+                  "velocity_m_per_s": 5.279968486302063e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.011296802643563015,
+                  "velocity_m_per_s": 3.0234621212985224e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.05570863311306971,
+                  "velocity_m_per_s": 1.8213288044424164e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ],
+                "packets": 120,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.010918392675873929,
+                "velocity_m_per_s": 4.8558500459952e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 4.3162592112779615e-05,
+                "velocity_m_per_s": 3.1149263203558407e-11
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.39098638840774e-06,
+                  "velocity_m_per_s": 3.834691684006085e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.00046717413344290055,
+                  "velocity_m_per_s": 4.8558500459952e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0005615078963456253,
+                  "velocity_m_per_s": 2.4990353009958783e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0006900280194745298,
+                  "velocity_m_per_s": 1.466516141402505e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0006900280950205509,
+                  "velocity_m_per_s": 1.4414990485945543e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0007966805963366095,
+                  "velocity_m_per_s": 1.4366212357203224e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.002514232790955879,
+                  "velocity_m_per_s": 3.533160303599818e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.006114568239699217,
+                  "velocity_m_per_s": 4.522850545099556e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.010918392675873929,
+                  "velocity_m_per_s": 1.9638234081866163e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.007817803013580015,
+                  "velocity_m_per_s": 9.097788744721836e-12
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packets": 120,
+                "rhs_calls": 1526,
+                "failed": false,
+                "finished": true,
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ]
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": null
+            }
+          },
+          "reference_wall_seconds": 7.965356900000188,
+          "reference_rhs_calls": [
+            8648,
+            17288,
+            34562
+          ],
+          "reference_cache_sha256": "002f76530d4a7e6c94f5ab0157a9f16b38945412455329574b20499eba3efa7b",
+          "reference_comparisons": {
+            "0_to_1": {
+              "all_bodies": {
+                "position_metres": 0.009805218333857758,
+                "velocity_m_per_s": 2.5410938544703065e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 5.505963988551285e-05,
+                "velocity_m_per_s": 8.742184372157855e-11
+              }
+            },
+            "1_to_2": {
+              "all_bodies": {
+                "position_metres": 0.021451131056824776,
+                "velocity_m_per_s": 2.6647040408131445e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 4.832394896967626e-05,
+                "velocity_m_per_s": 8.019378720091403e-11
+              }
+            }
+          },
+          "reference_passed": true,
+          "reference_initial_roundtrip": {
+            "all_bodies": {
+              "position_metres": 3.0517578125e-05,
+              "velocity_m_per_s": 2.0338905713759738e-12
+            },
+            "moon_relative_to_earth": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            }
+          },
+          "cost": {
+            "legacy_python": {
+              "seconds": [
+                2.983928500001639,
+                2.944040500002302,
+                3.0094462999986717
+              ],
+              "median_seconds": 2.983928500001639
+            },
+            "legacy_rust": {
+              "seconds": [
+                1.7379005000002508,
+                1.774656599998707,
+                1.7072145999991335
+              ],
+              "median_seconds": 1.7379005000002508
+            },
+            "continuous_rust": {
+              "seconds": [
+                0.22624269999869284,
+                0.22872799999822746,
+                0.2262741000013193
+              ],
+              "median_seconds": 0.2262741000013193
+            }
+          },
+          "parent_child_preserved": true,
+          "packet_endpoints_equal": true,
+          "samples": 121,
+          "duration_seconds": 2592000.0
+        },
+        "moon_velocity": {
+          "provenance": {
+            "parent_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "parent_checkpoint_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "child_checkpoint_sha256": "491b65996c7b0fcabee85716ed6cb81d8b4afe2e29a5fc2c87958273869aa06a",
+            "parent_time_seconds": 0.0,
+            "changes": [
+              {
+                "name": "Moon",
+                "before": {
+                  "name": "Moon",
+                  "mass": 7.345789248996225e+22,
+                  "radius": 0.0,
+                  "position": [
+                    144291740650.0716,
+                    36436297810.50089,
+                    3384733.587212861
+                  ],
+                  "velocity": [
+                    -8214.871315810784,
+                    27788.63301669028,
+                    -92.33042087229926
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "after": {
+                  "name": "Moon",
+                  "mass": 7.345789248996225e+22,
+                  "radius": 0.0,
+                  "position": [
+                    144291740650.0716,
+                    36436297810.50089,
+                    3384733.587212861
+                  ],
+                  "velocity": [
+                    -8114.871315810784,
+                    27738.63301669028,
+                    -67.33042087229926
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ],
+            "origin": null
+          },
+          "settings": {
+            "dt": 3600,
+            "backend": "rust",
+            "contact_mode": "stop",
+            "restitution": 1.0,
+            "integrator": "dop853",
+            "rtol": 3e-14,
+            "position_atol": 0.001,
+            "velocity_atol": 1e-09,
+            "physics": "eih-1pn",
+            "figures": [
+              {
+                "body": "Sun",
+                "coefficient": 2.1961391516529825e-07,
+                "reference_radius": 696000000.0,
+                "axis": [
+                  0.12235349347232782,
+                  -0.0310378702450671,
+                  0.9920011457885356
+                ],
+                "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+              },
+              {
+                "body": "Earth",
+                "coefficient": 0.00108262539,
+                "reference_radius": 6378136.6,
+                "axis": [
+                  0.0026020959422886785,
+                  0.39776866017225926,
+                  0.9174820554547499
+                ],
+                "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+              }
+            ],
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "error_control": "per-body"
+          },
+          "masses_kg": [
+            1.988409871316534e+30,
+            3.301000636980658e+23,
+            4.867305814842006e+24,
+            5.972168399787584e+24,
+            7.345789248996225e+22,
+            6.416909011545196e+23,
+            1.898517658780696e+27,
+            5.684578883448452e+26,
+            8.68189383156286e+25,
+            1.0243062344486162e+26
+          ],
+          "names": [
+            "Sun",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Moon",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
+          ],
+          "oracle_snapshot": {
+            "physical_c_full_relative_error": 2.082516519793352e-16,
+            "amplified_pn_relative_error": 2.3133285987139117e-11,
+            "checks_passed": true
+          },
+          "candidates": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.035647943465347255,
+                "velocity_m_per_s": 8.843256996338759e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0034618483110063518,
+                "velocity_m_per_s": 9.060803462251973e-09
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 3.225469521329996e-06,
+                  "velocity_m_per_s": 1.569641090353264e-13
+                },
+                "Mercury": {
+                  "position_metres": 0.00038749415529859,
+                  "velocity_m_per_s": 3.585255339139603e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0004308085843124445,
+                  "velocity_m_per_s": 1.379063985183473e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0005223806346645058,
+                  "velocity_m_per_s": 2.220673412406904e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0032907270756442303,
+                  "velocity_m_per_s": 8.843256996338759e-09
+                },
+                "Mars": {
+                  "position_metres": 0.0005911703934596737,
+                  "velocity_m_per_s": 5.094400942782375e-11
+                },
+                "Jupiter": {
+                  "position_metres": 0.0031732280099655602,
+                  "velocity_m_per_s": 7.823918446170853e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.0048866257083125236,
+                  "velocity_m_per_s": 2.3759023407789284e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.035647943465347255,
+                  "velocity_m_per_s": 3.327152911406783e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.009779014944466133,
+                  "velocity_m_per_s": 2.0164601950112713e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ],
+                "packets": 120,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.04728081626337272,
+                "velocity_m_per_s": 8.840424914885347e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.003461856719193431,
+                "velocity_m_per_s": 9.061222522260344e-09
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 3.4787116060204184e-06,
+                  "velocity_m_per_s": 1.1385676783331122e-13
+                },
+                "Mercury": {
+                  "position_metres": 0.00024931336880875657,
+                  "velocity_m_per_s": 2.2847875454319386e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0007187845284005052,
+                  "velocity_m_per_s": 1.3765030296476935e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0005307813950475726,
+                  "velocity_m_per_s": 2.327753300325223e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0033485286827547563,
+                  "velocity_m_per_s": 8.840424914885347e-09
+                },
+                "Mars": {
+                  "position_metres": 0.000534768993161227,
+                  "velocity_m_per_s": 7.642132059871221e-11
+                },
+                "Jupiter": {
+                  "position_metres": 0.0027113193949724556,
+                  "velocity_m_per_s": 5.871746326187214e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.0065961046624740055,
+                  "velocity_m_per_s": 4.40546174344635e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.04728081626337272,
+                  "velocity_m_per_s": 3.183559113737521e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.008954972377805851,
+                  "velocity_m_per_s": 1.3739184863885308e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ],
+                "packets": 120,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.012316466612383717,
+                "velocity_m_per_s": 2.7354014713879013e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 6.830265066175178e-05,
+                "velocity_m_per_s": 1.463167311454474e-10
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 3.6041119940842764e-06,
+                  "velocity_m_per_s": 9.848787450234044e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.0003243746103269739,
+                  "velocity_m_per_s": 2.1445617000473892e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0005016907052842819,
+                  "velocity_m_per_s": 1.311092685871768e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0003787900265825822,
+                  "velocity_m_per_s": 1.6370904634081113e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0003753165855788832,
+                  "velocity_m_per_s": 2.7354014713879013e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0003985993583062025,
+                  "velocity_m_per_s": 5.83491810881202e-11
+                },
+                "Jupiter": {
+                  "position_metres": 0.00319509134894998,
+                  "velocity_m_per_s": 6.251190071349068e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.0034482922119600068,
+                  "velocity_m_per_s": 1.8512060226903047e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.012316466612383717,
+                  "velocity_m_per_s": 3.125540438748354e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.005872968957991171,
+                  "velocity_m_per_s": 1.5555168075878568e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packets": 120,
+                "rhs_calls": 1526,
+                "failed": false,
+                "finished": true,
+                "packet_endpoints": [
+                  21600.0,
+                  43200.0,
+                  64800.0,
+                  86400.0,
+                  108000.0,
+                  129600.0,
+                  151200.0,
+                  172800.0,
+                  194400.0,
+                  216000.0,
+                  237600.0,
+                  259200.0,
+                  280800.0,
+                  302400.0,
+                  324000.0,
+                  345600.0,
+                  367200.0,
+                  388800.0,
+                  410400.0,
+                  432000.0,
+                  453600.0,
+                  475200.0,
+                  496800.0,
+                  518400.0,
+                  540000.0,
+                  561600.0,
+                  583200.0,
+                  604800.0,
+                  626400.0,
+                  648000.0,
+                  669600.0,
+                  691200.0,
+                  712800.0,
+                  734400.0,
+                  756000.0,
+                  777600.0,
+                  799200.0,
+                  820800.0,
+                  842400.0,
+                  864000.0,
+                  885600.0,
+                  907200.0,
+                  928800.0,
+                  950400.0,
+                  972000.0,
+                  993600.0,
+                  1015200.0,
+                  1036800.0,
+                  1058400.0,
+                  1080000.0,
+                  1101600.0,
+                  1123200.0,
+                  1144800.0,
+                  1166400.0,
+                  1188000.0,
+                  1209600.0,
+                  1231200.0,
+                  1252800.0,
+                  1274400.0,
+                  1296000.0,
+                  1317600.0,
+                  1339200.0,
+                  1360800.0,
+                  1382400.0,
+                  1404000.0,
+                  1425600.0,
+                  1447200.0,
+                  1468800.0,
+                  1490400.0,
+                  1512000.0,
+                  1533600.0,
+                  1555200.0,
+                  1576800.0,
+                  1598400.0,
+                  1620000.0,
+                  1641600.0,
+                  1663200.0,
+                  1684800.0,
+                  1706400.0,
+                  1728000.0,
+                  1749600.0,
+                  1771200.0,
+                  1792800.0,
+                  1814400.0,
+                  1836000.0,
+                  1857600.0,
+                  1879200.0,
+                  1900800.0,
+                  1922400.0,
+                  1944000.0,
+                  1965600.0,
+                  1987200.0,
+                  2008800.0,
+                  2030400.0,
+                  2052000.0,
+                  2073600.0,
+                  2095200.0,
+                  2116800.0,
+                  2138400.0,
+                  2160000.0,
+                  2181600.0,
+                  2203200.0,
+                  2224800.0,
+                  2246400.0,
+                  2268000.0,
+                  2289600.0,
+                  2311200.0,
+                  2332800.0,
+                  2354400.0,
+                  2376000.0,
+                  2397600.0,
+                  2419200.0,
+                  2440800.0,
+                  2462400.0,
+                  2484000.0,
+                  2505600.0,
+                  2527200.0,
+                  2548800.0,
+                  2570400.0,
+                  2592000.0
+                ]
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": null
+            }
+          },
+          "reference_wall_seconds": 8.278553300002386,
+          "reference_rhs_calls": [
+            8648,
+            17288,
+            34562
+          ],
+          "reference_cache_sha256": "05f32dd8ae08f9d9aa5bbf9cebea453c6a4eadd00b3595cbc0f7f7873e3eb9b3",
+          "reference_comparisons": {
+            "0_to_1": {
+              "all_bodies": {
+                "position_metres": 0.009805218333857758,
+                "velocity_m_per_s": 2.0844896353016005e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 6.47813788780463e-05,
+                "velocity_m_per_s": 1.2424921126837743e-10
+              }
+            },
+            "1_to_2": {
+              "all_bodies": {
+                "position_metres": 0.02072759348589219,
+                "velocity_m_per_s": 5.199391178327929e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.41233820871969e-05,
+                "velocity_m_per_s": 4.068670698850938e-11
+              }
+            }
+          },
+          "reference_passed": true,
+          "reference_initial_roundtrip": {
+            "all_bodies": {
+              "position_metres": 3.0517578125e-05,
+              "velocity_m_per_s": 3.637978807091713e-12
+            },
+            "moon_relative_to_earth": {
+              "position_metres": 1.862645149230957e-09,
+              "velocity_m_per_s": 0.0
+            }
+          },
+          "cost": {
+            "legacy_python": {
+              "seconds": [
+                3.4434432000016386,
+                3.0244075000009616,
+                3.0337471999991976
+              ],
+              "median_seconds": 3.0337471999991976
+            },
+            "legacy_rust": {
+              "seconds": [
+                1.884710600003018,
+                1.7262740999976813,
+                2.1676860000006855
+              ],
+              "median_seconds": 1.884710600003018
+            },
+            "continuous_rust": {
+              "seconds": [
+                0.24520379999739816,
+                0.30197060000136844,
+                0.259975700002542
+              ],
+              "median_seconds": 0.259975700002542
+            }
+          },
+          "parent_child_preserved": true,
+          "packet_endpoints_equal": true,
+          "samples": 121,
+          "duration_seconds": 2592000.0
+        }
+      },
+      "complete": true,
+      "checks_passed": true,
+      "general_release": false,
+      "runtime_modified": false,
+      "jpl_comparison": false,
+      "source_integrals_verified": false,
+      "npz_sha256": "db100805ef98f8133e9d0d08ab48f02920bcb24b6ed7e4fd3ac7fc9de8e19e1a",
+      "warnings": [],
+      "source_input_dependencies_unchanged": true
+    },
+    "shifted": {
+      "protocol": "docs/edited-solar-month-protocol.md",
+      "grid": "shifted",
+      "reference_levels": [
+        [
+          1e-13,
+          1800.0
+        ],
+        [
+          3e-14,
+          900.0
+        ],
+        [
+          3e-14,
+          450.0
+        ]
+      ],
+      "source_sha256": {
+        "scripts/assess_sandbox_models.py": "39f3414626175c94c6205e472dc8d81b63284a22113d20c68993c998c614c54d",
+        "scripts/assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+        "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+        "scripts/assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+        "scripts/assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+        "scripts/validation/eih_scalar.rs": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+        "scripts/independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+        "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+        "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+        "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+        "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+        "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+        "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+        "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+        "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+        "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+        "scripts/assess_qualification_grid.py": "239675256d692f2683209c7a82573a0542c55bf46a67eb2a95a6387ad4fc1a42",
+        "scripts/fetch_qualification_grid.py": "e8c79ddfca723e8572ba9b89f6dd73a192ee00cbbc1178d7007a5b87d039807f",
+        "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+        "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+        "scripts/qualify_strict_profile.py": "684d6678fbdc1d7a2745e01c187a83c3e3b70cf8d16d1f17f463899acc45c8ea",
+        "scripts/assess_edited_solar.py": "13cad662ee8b1d16e981571d604073b5dfb3a3a19a324a93727e0c8d32d4bd9f",
+        "scripts/edited_j2.py": "31418782c1585c87fb3cb9b8dd6dc141055372679f3efdffddaffbb2d2d7244e",
+        "scripts/fixed_j2_ias.py": "fd77c72ce6742fedc479064947de863b4632e3aee9f48a793005f861c0d96df5",
+        "scripts/eih_year.py": "a9bcbac8897b42601627ff81ef03cba7ee0fc29b2a431cd4a35b37b89cf16bb1",
+        "scripts/ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+        "scripts/newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+        "tests/test_edited_solar.py": "dcf3058c86af42a5b1a1b219dbc4938dcb752e63d7aba21668e2ab37f48502cc",
+        "docs/edited-solar-protocol.md": "1f01b6db4272a8b3d339071658fe7eca092bb82213e97679a5db5f18401bbe53",
+        "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+        "src/solar_simulator/branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+        "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+        "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+        "src/solar_simulator/commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+        "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+        "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+        "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+        "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+        "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+        "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+        "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+        "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+        "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+        "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+        "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+        "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+        "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+        "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+        "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+        "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+        "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+        "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+        "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+        "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+        "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+        "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+        "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+        "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+        "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+        "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+        "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+        "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+        "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+        "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+        "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+        "docs/edited-solar-month-protocol.md": "b60749531df4462f61fa87f3a06a397a47819e4227e0f3b2e982ab38b2034671",
+        "scripts/assess_edited_solar_month.py": "55d017f6d09c8f9ac4dfe073b68035ad0cb57e925fb12e50ec03d697fd3e8917",
+        "tests/test_edited_solar_month.py": "da69e2ca3723bc5527d2dbb9c0726ca2f9fc95451d38807b4f1586b7d944c4dc"
+      },
+      "input_sha256": {
+        "docs/solar-sandbox-strict-checkpoint.json": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d",
+        "docs/strict-profile-validation.json": "bcd4fb6ae800ee88962d3a988a9e8944e2a692dc7a5a0a80cfffae865e9db172",
+        "docs/edited-solar-validation.json": "03e9b8e225dcfd23ce3bb54ccf20cde38c8ba8b2f9d463a6cc15c16c92c05502"
+      },
+      "dependency_sha256": {
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\independent-eih-47ffd86634e23c9b.dll": "0257cec446be76e55622d943af9d1a266aa4c19c7f8eaaab1eae2cbb2490e715",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\scipy\\integrate\\_ivp\\rk.py": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\scipy\\integrate\\_ivp\\base.py": "5bd1a3ddb9fb986333d3d3cc2d2e00bc19efbda00169dcc5b82324aad9f198af"
+      },
+      "regular_receipt_sha256": {
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\edited_solar200\\month200b.json": "33d0b8d5f34d766300c049d836c799ef1489f3f49d5ab60e4daf98c8148a6f24",
+        "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\edited_solar200\\month200b.npz": "db100805ef98f8133e9d0d08ab48f02920bcb24b6ed7e4fd3ac7fc9de8e19e1a"
+      },
+      "scalar_oracle_source_sha256": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+      "compiler": "rustc 1.99.0 (b940084d7 2026-09-28)",
+      "cases": {
+        "sun_mass": {
+          "provenance": {
+            "parent_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "parent_checkpoint_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "child_checkpoint_sha256": "b2e167c5fb87d0f9d743ec63d79904d6ef5ec7b187266b9eea248541af90a335",
+            "parent_time_seconds": 0.0,
+            "changes": [
+              {
+                "name": "Sun",
+                "before": {
+                  "name": "Sun",
+                  "mass": 1.988409871316534e+30,
+                  "radius": 0.0,
+                  "position": [
+                    -179975380.99863088,
+                    -766335220.5591803,
+                    14025803.55911574
+                  ],
+                  "velocity": [
+                    10.452225179469629,
+                    4.432621459961725,
+                    -0.2236386786017347
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "after": {
+                  "name": "Sun",
+                  "mass": 2.4855123391456673e+30,
+                  "radius": 0.0,
+                  "position": [
+                    -179975380.99863088,
+                    -766335220.5591803,
+                    14025803.55911574
+                  ],
+                  "velocity": [
+                    10.452225179469629,
+                    4.432621459961725,
+                    -0.2236386786017347
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ],
+            "origin": null
+          },
+          "settings": {
+            "dt": 3600,
+            "backend": "rust",
+            "contact_mode": "stop",
+            "restitution": 1.0,
+            "integrator": "dop853",
+            "rtol": 3e-14,
+            "position_atol": 0.001,
+            "velocity_atol": 1e-09,
+            "physics": "eih-1pn",
+            "figures": [
+              {
+                "body": "Sun",
+                "coefficient": 2.1961391516529825e-07,
+                "reference_radius": 696000000.0,
+                "axis": [
+                  0.12235349347232782,
+                  -0.0310378702450671,
+                  0.9920011457885356
+                ],
+                "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+              },
+              {
+                "body": "Earth",
+                "coefficient": 0.00108262539,
+                "reference_radius": 6378136.6,
+                "axis": [
+                  0.0026020959422886785,
+                  0.39776866017225926,
+                  0.9174820554547499
+                ],
+                "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+              }
+            ],
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "error_control": "per-body"
+          },
+          "masses_kg": [
+            2.4855123391456673e+30,
+            3.301000636980658e+23,
+            4.867305814842006e+24,
+            5.972168399787584e+24,
+            7.345789248996225e+22,
+            6.416909011545196e+23,
+            1.898517658780696e+27,
+            5.684578883448452e+26,
+            8.68189383156286e+25,
+            1.0243062344486162e+26
+          ],
+          "names": [
+            "Sun",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Moon",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
+          ],
+          "oracle_snapshot": {
+            "physical_c_full_relative_error": 1.65457830271085e-16,
+            "amplified_pn_relative_error": 6.437315677982254e-12,
+            "checks_passed": true
+          },
+          "candidates": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.03906526555761922,
+                "velocity_m_per_s": 2.55576314045981e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.001140471682668607,
+                "velocity_m_per_s": 2.6311842692336314e-09
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.626876507804506e-06,
+                  "velocity_m_per_s": 4.891691656325163e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.000327069972364526,
+                  "velocity_m_per_s": 3.9933446431661196e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0007660824884689913,
+                  "velocity_m_per_s": 2.638726117698911e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0003817748253561444,
+                  "velocity_m_per_s": 8.861505038809762e-11
+                },
+                "Moon": {
+                  "position_metres": 0.0012299195808259972,
+                  "velocity_m_per_s": 2.55576314045981e-09
+                },
+                "Mars": {
+                  "position_metres": 0.0006300980409066036,
+                  "velocity_m_per_s": 2.447310931467094e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.00555561415758767,
+                  "velocity_m_per_s": 8.79173888213996e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.009809407792518104,
+                  "velocity_m_per_s": 4.5751506876767726e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.03464475798314933,
+                  "velocity_m_per_s": 3.93787092008362e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.03906526555761922,
+                  "velocity_m_per_s": 1.1115841017918263e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ],
+                "packets": 121,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.0625061762261487,
+                "velocity_m_per_s": 3.4845646750656794e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0014700911349461577,
+                "velocity_m_per_s": 3.4908264536004212e-09
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.2657614029976053e-06,
+                  "velocity_m_per_s": 7.052652440692119e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.000192249697567162,
+                  "velocity_m_per_s": 5.516795746091415e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0006721692509994347,
+                  "velocity_m_per_s": 2.734601179280882e-10
+                },
+                "Earth": {
+                  "position_metres": 0.00038147197395821516,
+                  "velocity_m_per_s": 9.60723564144135e-11
+                },
+                "Moon": {
+                  "position_metres": 0.0014967714721758386,
+                  "velocity_m_per_s": 3.4845646750656794e-09
+                },
+                "Mars": {
+                  "position_metres": 0.000723572381685826,
+                  "velocity_m_per_s": 2.2555847509160252e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.004200583214781559,
+                  "velocity_m_per_s": 8.831360102105695e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.01370270692596431,
+                  "velocity_m_per_s": 2.4082770337826745e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.031422146720143526,
+                  "velocity_m_per_s": 4.5990866432678556e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.0625061762261487,
+                  "velocity_m_per_s": 1.3092887014604662e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ],
+                "packets": 121,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.008873436015181948,
+                "velocity_m_per_s": 1.6078184728779236e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.412539489813314e-05,
+                "velocity_m_per_s": 3.256867124714551e-11
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.3843902366589033e-06,
+                  "velocity_m_per_s": 4.832252091603981e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.0007335722415204095,
+                  "velocity_m_per_s": 1.6078184728779236e-09
+                },
+                "Venus": {
+                  "position_metres": 0.0005963759465230099,
+                  "velocity_m_per_s": 2.2409034032476547e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0003639788975240236,
+                  "velocity_m_per_s": 6.638688364170263e-11
+                },
+                "Moon": {
+                  "position_metres": 0.0003639790158101703,
+                  "velocity_m_per_s": 8.012945636420479e-11
+                },
+                "Mars": {
+                  "position_metres": 0.0006493170565382314,
+                  "velocity_m_per_s": 2.517535148303373e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.0018317261100637607,
+                  "velocity_m_per_s": 7.59644239543912e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.004883575379857791,
+                  "velocity_m_per_s": 1.3245804962402161e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.008873436015181948,
+                  "velocity_m_per_s": 4.124034355217285e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.006903805344282239,
+                  "velocity_m_per_s": 9.433449658394627e-12
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packets": 121,
+                "rhs_calls": 1562,
+                "failed": false,
+                "finished": true,
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ]
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": null
+            }
+          },
+          "reference_wall_seconds": 9.032766899999842,
+          "reference_rhs_calls": [
+            8648,
+            17288,
+            34562
+          ],
+          "reference_cache_sha256": "b3670dd8a27d66a7cef0d60ceef91cec2abe55d217f2276611657970c2c27978",
+          "reference_comparisons": {
+            "0_to_1": {
+              "all_bodies": {
+                "position_metres": 0.020560063204054874,
+                "velocity_m_per_s": 5.676208823099312e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 6.294826988504393e-05,
+                "velocity_m_per_s": 9.110964533624878e-11
+              }
+            },
+            "1_to_2": {
+              "all_bodies": {
+                "position_metres": 0.010742948786896125,
+                "velocity_m_per_s": 2.7547650175380364e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.41316468827483e-05,
+                "velocity_m_per_s": 3.2962422902183635e-11
+              }
+            }
+          },
+          "reference_passed": true,
+          "reference_initial_roundtrip": {
+            "all_bodies": {
+              "position_metres": 3.0517578125e-05,
+              "velocity_m_per_s": 2.0338905713759738e-12
+            },
+            "moon_relative_to_earth": {
+              "position_metres": 1.862645149230957e-09,
+              "velocity_m_per_s": 0.0
+            }
+          },
+          "cost": {
+            "legacy_python": {
+              "seconds": [
+                5.250747800000681,
+                3.9607145999980276,
+                3.825086299999384
+              ],
+              "median_seconds": 3.9607145999980276
+            },
+            "legacy_rust": {
+              "seconds": [
+                2.2767533999976877,
+                2.6458272999989276,
+                2.409861299998738
+              ],
+              "median_seconds": 2.409861299998738
+            },
+            "continuous_rust": {
+              "seconds": [
+                0.32915480000156094,
+                0.3216924000007566,
+                0.3377650000002177
+              ],
+              "median_seconds": 0.32915480000156094
+            }
+          },
+          "cross_grid_endpoints": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.008790598841010213,
+                "velocity_m_per_s": 3.119956079558875e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0013923766003429497,
+                "velocity_m_per_s": 3.1461751009943824e-09
+              }
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.010742577632408703,
+                "velocity_m_per_s": 4.1587872874353145e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.001736872911946452,
+                "velocity_m_per_s": 4.1323334726130754e-09
+              }
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.00781655206501395,
+                "velocity_m_per_s": 3.8049746475878044e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 1.527101504926076e-05,
+                "velocity_m_per_s": 1.82178557153128e-11
+              }
+            },
+            "reference": {
+              "all_bodies": {
+                "position_metres": 0.0,
+                "velocity_m_per_s": 0.0
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0,
+                "velocity_m_per_s": 0.0
+              }
+            }
+          },
+          "cross_grid_passed": true,
+          "parent_child_preserved": true,
+          "packet_endpoints_equal": true,
+          "samples": 122,
+          "duration_seconds": 2592000.0
+        },
+        "earth_position": {
+          "provenance": {
+            "parent_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "parent_checkpoint_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "child_checkpoint_sha256": "8bb5d2b29a7205f64b32525215dc8684cab58ea2f8dd9a09ebe98f6d4daf4c5f",
+            "parent_time_seconds": 0.0,
+            "changes": [
+              {
+                "name": "Earth",
+                "before": {
+                  "name": "Earth",
+                  "mass": 5.972168399787584e+24,
+                  "radius": 0.0,
+                  "position": [
+                    144650899686.84598,
+                    36316866220.35821,
+                    10986666.35056399
+                  ],
+                  "velocity": [
+                    -7857.880626198839,
+                    28762.01732400517,
+                    -0.8206446406369139
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "after": {
+                  "name": "Earth",
+                  "mass": 5.972168399787584e+24,
+                  "radius": 0.0,
+                  "position": [
+                    144651899686.84598,
+                    36314866220.35821,
+                    13986666.35056399
+                  ],
+                  "velocity": [
+                    -7857.880626198839,
+                    28762.01732400517,
+                    -0.8206446406369139
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ],
+            "origin": null
+          },
+          "settings": {
+            "dt": 3600,
+            "backend": "rust",
+            "contact_mode": "stop",
+            "restitution": 1.0,
+            "integrator": "dop853",
+            "rtol": 3e-14,
+            "position_atol": 0.001,
+            "velocity_atol": 1e-09,
+            "physics": "eih-1pn",
+            "figures": [
+              {
+                "body": "Sun",
+                "coefficient": 2.1961391516529825e-07,
+                "reference_radius": 696000000.0,
+                "axis": [
+                  0.12235349347232782,
+                  -0.0310378702450671,
+                  0.9920011457885356
+                ],
+                "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+              },
+              {
+                "body": "Earth",
+                "coefficient": 0.00108262539,
+                "reference_radius": 6378136.6,
+                "axis": [
+                  0.0026020959422886785,
+                  0.39776866017225926,
+                  0.9174820554547499
+                ],
+                "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+              }
+            ],
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "error_control": "per-body"
+          },
+          "masses_kg": [
+            1.988409871316534e+30,
+            3.301000636980658e+23,
+            4.867305814842006e+24,
+            5.972168399787584e+24,
+            7.345789248996225e+22,
+            6.416909011545196e+23,
+            1.898517658780696e+27,
+            5.684578883448452e+26,
+            8.68189383156286e+25,
+            1.0243062344486162e+26
+          ],
+          "names": [
+            "Sun",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Moon",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
+          ],
+          "oracle_snapshot": {
+            "physical_c_full_relative_error": 2.0952979614224834e-16,
+            "amplified_pn_relative_error": 2.2795292780578305e-11,
+            "checks_passed": true
+          },
+          "candidates": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.04694993268489075,
+                "velocity_m_per_s": 2.398076839261724e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0009804102185033573,
+                "velocity_m_per_s": 2.3531424565943227e-09
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 1.911223691340654e-06,
+                  "velocity_m_per_s": 3.208526533606039e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.0003205087127513449,
+                  "velocity_m_per_s": 2.454372182640079e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0007933562987373497,
+                  "velocity_m_per_s": 2.6916779578442836e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0011022298935747118,
+                  "velocity_m_per_s": 1.855098395211131e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0018506572762985107,
+                  "velocity_m_per_s": 2.398076839261724e-09
+                },
+                "Mars": {
+                  "position_metres": 0.002323473984588434,
+                  "velocity_m_per_s": 1.2673927015957808e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.008810512417092398,
+                  "velocity_m_per_s": 5.372133902094023e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.01166802594413826,
+                  "velocity_m_per_s": 3.457329591221408e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.009959114952294762,
+                  "velocity_m_per_s": 2.028252920300907e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.04694993268489075,
+                  "velocity_m_per_s": 1.6370910799817238e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ],
+                "packets": 121,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.05864109669512677,
+                "velocity_m_per_s": 2.6332612720903083e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0010972124153567013,
+                "velocity_m_per_s": 2.6597890898393775e-09
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.7521828542618564e-06,
+                  "velocity_m_per_s": 4.448900168017892e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.0002143307441592289,
+                  "velocity_m_per_s": 2.097701767315445e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0005724080042084562,
+                  "velocity_m_per_s": 2.5105719489882927e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0013147376833515026,
+                  "velocity_m_per_s": 2.40886269541277e-10
+                },
+                "Moon": {
+                  "position_metres": 0.002063350396009226,
+                  "velocity_m_per_s": 2.6332612720903083e-09
+                },
+                "Mars": {
+                  "position_metres": 0.001993941430587406,
+                  "velocity_m_per_s": 1.0904720639839964e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.008667181073400533,
+                  "velocity_m_per_s": 6.791837132946386e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.01239611335888559,
+                  "velocity_m_per_s": 3.2745016417710495e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.008333146803826214,
+                  "velocity_m_per_s": 2.1316362600827618e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.05864109669512677,
+                  "velocity_m_per_s": 1.2743397266266067e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ],
+                "packets": 121,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.01097285998193012,
+                "velocity_m_per_s": 4.4554844949273025e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.4126762503266065e-05,
+                "velocity_m_per_s": 2.21506749090056e-11
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.03224743857769e-06,
+                  "velocity_m_per_s": 4.720733054568282e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.00045399757295914447,
+                  "velocity_m_per_s": 4.4554844949273025e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0004731245949677866,
+                  "velocity_m_per_s": 2.405372776115736e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0007703799789235076,
+                  "velocity_m_per_s": 1.5318440009028683e-10
+                },
+                "Moon": {
+                  "position_metres": 0.000768413157382766,
+                  "velocity_m_per_s": 1.5284475787822015e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0007047620935843701,
+                  "velocity_m_per_s": 1.0314504239479668e-10
+                },
+                "Jupiter": {
+                  "position_metres": 0.0026130042799350694,
+                  "velocity_m_per_s": 4.104898798207294e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.0053946725276454634,
+                  "velocity_m_per_s": 3.9182241190263556e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.01097285998193012,
+                  "velocity_m_per_s": 2.239861978245254e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.006848273046583008,
+                  "velocity_m_per_s": 1.2734955785108874e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packets": 121,
+                "rhs_calls": 1526,
+                "failed": false,
+                "finished": true,
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ]
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": null
+            }
+          },
+          "reference_wall_seconds": 11.013392299999396,
+          "reference_rhs_calls": [
+            8648,
+            17288,
+            34562
+          ],
+          "reference_cache_sha256": "dea18db467967a98ebd260792036e23d1510fb5baba9c5381c391e5ead5e7b74",
+          "reference_comparisons": {
+            "0_to_1": {
+              "all_bodies": {
+                "position_metres": 0.009805218009211084,
+                "velocity_m_per_s": 2.558956117650904e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 5.506725936846518e-05,
+                "velocity_m_per_s": 8.869635953716995e-11
+              }
+            },
+            "1_to_2": {
+              "all_bodies": {
+                "position_metres": 0.021451131056824776,
+                "velocity_m_per_s": 2.6257160869955026e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 4.832481202586158e-05,
+                "velocity_m_per_s": 8.386983998252816e-11
+              }
+            }
+          },
+          "reference_passed": true,
+          "reference_initial_roundtrip": {
+            "all_bodies": {
+              "position_metres": 3.0517578125e-05,
+              "velocity_m_per_s": 2.0338905713759738e-12
+            },
+            "moon_relative_to_earth": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            }
+          },
+          "cost": {
+            "legacy_python": {
+              "seconds": [
+                4.758816600002319,
+                4.897336500001984,
+                4.66563429999951
+              ],
+              "median_seconds": 4.758816600002319
+            },
+            "legacy_rust": {
+              "seconds": [
+                2.834870700000465,
+                2.788725800000975,
+                2.765114000001631
+              ],
+              "median_seconds": 2.788725800000975
+            },
+            "continuous_rust": {
+              "seconds": [
+                0.3464257000014186,
+                0.3613454999976966,
+                0.3499764000007417
+              ],
+              "median_seconds": 0.3499764000007417
+            }
+          },
+          "cross_grid_endpoints": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.023437658945180444,
+                "velocity_m_per_s": 1.6625645639961643e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0007984200917475013,
+                "velocity_m_per_s": 1.6448845323394443e-09
+              }
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.007389038324170953,
+                "velocity_m_per_s": 2.2814224675916734e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0009821255569746764,
+                "velocity_m_per_s": 2.309169990279736e-09
+              }
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.0020132372016677218,
+                "velocity_m_per_s": 6.251080877496709e-11
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 5.029141902923584e-07,
+                "velocity_m_per_s": 2.3104524872988315e-11
+              }
+            },
+            "reference": {
+              "all_bodies": {
+                "position_metres": 0.0,
+                "velocity_m_per_s": 0.0
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0,
+                "velocity_m_per_s": 0.0
+              }
+            }
+          },
+          "cross_grid_passed": true,
+          "parent_child_preserved": true,
+          "packet_endpoints_equal": true,
+          "samples": 122,
+          "duration_seconds": 2592000.0
+        },
+        "moon_velocity": {
+          "provenance": {
+            "parent_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "parent_checkpoint_sha256": "e0a8d82b03868e52d65917b2ef8546d861fa84651f4cbc76ca62bc5a45ab5178",
+            "child_checkpoint_sha256": "491b65996c7b0fcabee85716ed6cb81d8b4afe2e29a5fc2c87958273869aa06a",
+            "parent_time_seconds": 0.0,
+            "changes": [
+              {
+                "name": "Moon",
+                "before": {
+                  "name": "Moon",
+                  "mass": 7.345789248996225e+22,
+                  "radius": 0.0,
+                  "position": [
+                    144291740650.0716,
+                    36436297810.50089,
+                    3384733.587212861
+                  ],
+                  "velocity": [
+                    -8214.871315810784,
+                    27788.63301669028,
+                    -92.33042087229926
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                },
+                "after": {
+                  "name": "Moon",
+                  "mass": 7.345789248996225e+22,
+                  "radius": 0.0,
+                  "position": [
+                    144291740650.0716,
+                    36436297810.50089,
+                    3384733.587212861
+                  ],
+                  "velocity": [
+                    -8114.871315810784,
+                    27738.63301669028,
+                    -67.33042087229926
+                  ],
+                  "spin": [
+                    0,
+                    0,
+                    0
+                  ]
+                }
+              }
+            ],
+            "origin": null
+          },
+          "settings": {
+            "dt": 3600,
+            "backend": "rust",
+            "contact_mode": "stop",
+            "restitution": 1.0,
+            "integrator": "dop853",
+            "rtol": 3e-14,
+            "position_atol": 0.001,
+            "velocity_atol": 1e-09,
+            "physics": "eih-1pn",
+            "figures": [
+              {
+                "body": "Sun",
+                "coefficient": 2.1961391516529825e-07,
+                "reference_radius": 696000000.0,
+                "axis": [
+                  0.12235349347232782,
+                  -0.0310378702450671,
+                  0.9920011457885356
+                ],
+                "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+              },
+              {
+                "body": "Earth",
+                "coefficient": 0.00108262539,
+                "reference_radius": 6378136.6,
+                "axis": [
+                  0.0026020959422886785,
+                  0.39776866017225926,
+                  0.9174820554547499
+                ],
+                "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+              }
+            ],
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "error_control": "per-body"
+          },
+          "masses_kg": [
+            1.988409871316534e+30,
+            3.301000636980658e+23,
+            4.867305814842006e+24,
+            5.972168399787584e+24,
+            7.345789248996225e+22,
+            6.416909011545196e+23,
+            1.898517658780696e+27,
+            5.684578883448452e+26,
+            8.68189383156286e+25,
+            1.0243062344486162e+26
+          ],
+          "names": [
+            "Sun",
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Moon",
+            "Mars",
+            "Jupiter",
+            "Saturn",
+            "Uranus",
+            "Neptune"
+          ],
+          "oracle_snapshot": {
+            "physical_c_full_relative_error": 2.082516519793352e-16,
+            "amplified_pn_relative_error": 2.3133285987139117e-11,
+            "checks_passed": true
+          },
+          "candidates": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.034963346828606204,
+                "velocity_m_per_s": 2.421840260823382e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.00013127193823301282,
+                "velocity_m_per_s": 3.396401629110198e-10
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 2.048375353990862e-06,
+                  "velocity_m_per_s": 8.534012661518247e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.0003005589434589287,
+                  "velocity_m_per_s": 2.421840260823382e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0006562166375807854,
+                  "velocity_m_per_s": 1.7456153958995869e-10
+                },
+                "Earth": {
+                  "position_metres": 0.000675535389369821,
+                  "velocity_m_per_s": 2.0739674087480529e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0006179352654167765,
+                  "velocity_m_per_s": 2.2245197919192754e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0003068461006862245,
+                  "velocity_m_per_s": 6.549940646300757e-11
+                },
+                "Jupiter": {
+                  "position_metres": 0.003184212148465004,
+                  "velocity_m_per_s": 5.832179789835849e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.005179280097109109,
+                  "velocity_m_per_s": 2.375626929326307e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.034963346828606204,
+                  "velocity_m_per_s": 2.5531302419974502e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.017618609538064763,
+                  "velocity_m_per_s": 1.6427674291846432e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ],
+                "packets": 121,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.03585466927221474,
+                "velocity_m_per_s": 2.8674479954897787e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.00011622252187060458,
+                "velocity_m_per_s": 2.796881379801099e-10
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 3.4821880808409867e-06,
+                  "velocity_m_per_s": 8.011582356136261e-14
+                },
+                "Mercury": {
+                  "position_metres": 0.00021943629483443688,
+                  "velocity_m_per_s": 2.8674479954897787e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0005649367347617285,
+                  "velocity_m_per_s": 1.0498682470223289e-10
+                },
+                "Earth": {
+                  "position_metres": 0.0005768145210528093,
+                  "velocity_m_per_s": 2.0405141893478858e-10
+                },
+                "Moon": {
+                  "position_metres": 0.0005197055037714642,
+                  "velocity_m_per_s": 2.0392881378957612e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0004593751279497658,
+                  "velocity_m_per_s": 4.751402621132365e-11
+                },
+                "Jupiter": {
+                  "position_metres": 0.0033463745512384764,
+                  "velocity_m_per_s": 6.136705166334525e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.005116042380296845,
+                  "velocity_m_per_s": 3.1571389550135396e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.03585466927221474,
+                  "velocity_m_per_s": 3.693318848928052e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.016619196109945854,
+                  "velocity_m_per_s": 2.097462461822223e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ],
+                "packets": 121,
+                "finished": true,
+                "failed": false,
+                "rhs_calls": null,
+                "controller_restarted_per_packet": true
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": true
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.013147410435945453,
+                "velocity_m_per_s": 2.0580972868685297e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 4.317262425862506e-05,
+                "velocity_m_per_s": 4.019440713665149e-11
+              },
+              "per_body": {
+                "Sun": {
+                  "position_metres": 3.1200195858499306e-06,
+                  "velocity_m_per_s": 1.0377679072454766e-13
+                },
+                "Mercury": {
+                  "position_metres": 0.00023072984938579918,
+                  "velocity_m_per_s": 2.0580972868685297e-10
+                },
+                "Venus": {
+                  "position_metres": 0.0004491563049353372,
+                  "velocity_m_per_s": 9.006322659933561e-11
+                },
+                "Earth": {
+                  "position_metres": 0.00028382988351210515,
+                  "velocity_m_per_s": 1.4955589064582474e-10
+                },
+                "Moon": {
+                  "position_metres": 0.000271675060538678,
+                  "velocity_m_per_s": 1.739081231629957e-10
+                },
+                "Mars": {
+                  "position_metres": 0.0003374498105508102,
+                  "velocity_m_per_s": 5.1046402927294274e-11
+                },
+                "Jupiter": {
+                  "position_metres": 0.0025402590105700297,
+                  "velocity_m_per_s": 7.566318139940657e-11
+                },
+                "Saturn": {
+                  "position_metres": 0.003717136225240506,
+                  "velocity_m_per_s": 2.026053273665347e-11
+                },
+                "Uranus": {
+                  "position_metres": 0.013147410435945453,
+                  "velocity_m_per_s": 3.603713888814953e-11
+                },
+                "Neptune": {
+                  "position_metres": 0.00879038694786934,
+                  "velocity_m_per_s": 1.5543219384285755e-11
+                }
+              },
+              "checks_passed": true,
+              "statistics": {
+                "packets": 121,
+                "rhs_calls": 1526,
+                "failed": false,
+                "finished": true,
+                "packet_endpoints": [
+                  10800.0,
+                  32400.0,
+                  54000.0,
+                  75600.0,
+                  97200.0,
+                  118800.0,
+                  140400.0,
+                  162000.0,
+                  183600.0,
+                  205200.0,
+                  226800.0,
+                  248400.0,
+                  270000.0,
+                  291600.0,
+                  313200.0,
+                  334800.0,
+                  356400.0,
+                  378000.0,
+                  399600.0,
+                  421200.0,
+                  442800.0,
+                  464400.0,
+                  486000.0,
+                  507600.0,
+                  529200.0,
+                  550800.0,
+                  572400.0,
+                  594000.0,
+                  615600.0,
+                  637200.0,
+                  658800.0,
+                  680400.0,
+                  702000.0,
+                  723600.0,
+                  745200.0,
+                  766800.0,
+                  788400.0,
+                  810000.0,
+                  831600.0,
+                  853200.0,
+                  874800.0,
+                  896400.0,
+                  918000.0,
+                  939600.0,
+                  961200.0,
+                  982800.0,
+                  1004400.0,
+                  1026000.0,
+                  1047600.0,
+                  1069200.0,
+                  1090800.0,
+                  1112400.0,
+                  1134000.0,
+                  1155600.0,
+                  1177200.0,
+                  1198800.0,
+                  1220400.0,
+                  1242000.0,
+                  1263600.0,
+                  1285200.0,
+                  1306800.0,
+                  1328400.0,
+                  1350000.0,
+                  1371600.0,
+                  1393200.0,
+                  1414800.0,
+                  1436400.0,
+                  1458000.0,
+                  1479600.0,
+                  1501200.0,
+                  1522800.0,
+                  1544400.0,
+                  1566000.0,
+                  1587600.0,
+                  1609200.0,
+                  1630800.0,
+                  1652400.0,
+                  1674000.0,
+                  1695600.0,
+                  1717200.0,
+                  1738800.0,
+                  1760400.0,
+                  1782000.0,
+                  1803600.0,
+                  1825200.0,
+                  1846800.0,
+                  1868400.0,
+                  1890000.0,
+                  1911600.0,
+                  1933200.0,
+                  1954800.0,
+                  1976400.0,
+                  1998000.0,
+                  2019600.0,
+                  2041200.0,
+                  2062800.0,
+                  2084400.0,
+                  2106000.0,
+                  2127600.0,
+                  2149200.0,
+                  2170800.0,
+                  2192400.0,
+                  2214000.0,
+                  2235600.0,
+                  2257200.0,
+                  2278800.0,
+                  2300400.0,
+                  2322000.0,
+                  2343600.0,
+                  2365200.0,
+                  2386800.0,
+                  2408400.0,
+                  2430000.0,
+                  2451600.0,
+                  2473200.0,
+                  2494800.0,
+                  2516400.0,
+                  2538000.0,
+                  2559600.0,
+                  2581200.0,
+                  2592000.0
+                ]
+              },
+              "repeat_bitexact": true,
+              "legacy_checkpoint_continue_exact": null
+            }
+          },
+          "reference_wall_seconds": 13.19297110000116,
+          "reference_rhs_calls": [
+            8648,
+            17288,
+            34562
+          ],
+          "reference_cache_sha256": "fcb7dcfe04fa87be685b26fdccc83e82e4dab37f9c9a542d11df73b55167108e",
+          "reference_comparisons": {
+            "0_to_1": {
+              "all_bodies": {
+                "position_metres": 0.009805218751260607,
+                "velocity_m_per_s": 2.0704742269721846e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 6.829579337159372e-05,
+                "velocity_m_per_s": 1.2508999179216e-10
+              }
+            },
+            "1_to_2": {
+              "all_bodies": {
+                "position_metres": 0.020895135200957343,
+                "velocity_m_per_s": 5.199391178327929e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.4124718052091325e-05,
+                "velocity_m_per_s": 5.297782432051128e-11
+              }
+            }
+          },
+          "reference_passed": true,
+          "reference_initial_roundtrip": {
+            "all_bodies": {
+              "position_metres": 3.0517578125e-05,
+              "velocity_m_per_s": 3.637978807091713e-12
+            },
+            "moon_relative_to_earth": {
+              "position_metres": 1.862645149230957e-09,
+              "velocity_m_per_s": 0.0
+            }
+          },
+          "cost": {
+            "legacy_python": {
+              "seconds": [
+                4.52276350000102,
+                5.030700600000273,
+                5.089406099999906
+              ],
+              "median_seconds": 5.030700600000273
+            },
+            "legacy_rust": {
+              "seconds": [
+                2.5768669999997655,
+                2.26403080000091,
+                2.9994606000000203
+              ],
+              "median_seconds": 2.5768669999997655
+            },
+            "continuous_rust": {
+              "seconds": [
+                0.3377684999977646,
+                0.36249490000045625,
+                0.37923589999991236
+              ],
+              "median_seconds": 0.36249490000045625
+            }
+          },
+          "cross_grid_endpoints": {
+            "legacy_python": {
+              "all_bodies": {
+                "position_metres": 0.021485767536116647,
+                "velocity_m_per_s": 8.623814195398097e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.003364072668185015,
+                "velocity_m_per_s": 8.793762178721018e-09
+              }
+            },
+            "legacy_rust": {
+              "all_bodies": {
+                "position_metres": 0.010918301712635935,
+                "velocity_m_per_s": 8.744107569309061e-09
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.003367391427148336,
+                "velocity_m_per_s": 8.875194154256008e-09
+              }
+            },
+            "continuous_rust": {
+              "all_bodies": {
+                "position_metres": 0.002950791009326781,
+                "velocity_m_per_s": 1.9219626587106358e-10
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 3.4171105096042995e-05,
+                "velocity_m_per_s": 1.1015606731301722e-10
+              }
+            },
+            "reference": {
+              "all_bodies": {
+                "position_metres": 0.0,
+                "velocity_m_per_s": 0.0
+              },
+              "moon_relative_to_earth": {
+                "position_metres": 0.0,
+                "velocity_m_per_s": 0.0
+              }
+            }
+          },
+          "cross_grid_passed": true,
+          "parent_child_preserved": true,
+          "packet_endpoints_equal": true,
+          "samples": 122,
+          "duration_seconds": 2592000.0
+        }
+      },
+      "complete": true,
+      "checks_passed": true,
+      "general_release": false,
+      "runtime_modified": false,
+      "jpl_comparison": false,
+      "source_integrals_verified": false,
+      "npz_sha256": "49b62911c0b198873d9527a8278b0ec631d85dbcb10e324685671dcb1d3d12cb",
+      "warnings": [],
+      "source_input_dependencies_unchanged": true
+    }
+  },
+  "receipts": {
+    "regular": {
+      "json_sha256": "33d0b8d5f34d766300c049d836c799ef1489f3f49d5ab60e4daf98c8148a6f24",
+      "npz_sha256": "db100805ef98f8133e9d0d08ab48f02920bcb24b6ed7e4fd3ac7fc9de8e19e1a",
+      "log_sha256": "0addfb9c035184e94becf7cee32ec84ca209d7a8a8483746a591b3c699c0337b",
+      "path": ".tools/edited_solar200/month200b"
+    },
+    "shifted": {
+      "json_sha256": "b8d84de09a4863f02311e18b94d9c023ba52780014e7238cf370a7d028aeb60d",
+      "npz_sha256": "49b62911c0b198873d9527a8278b0ec631d85dbcb10e324685671dcb1d3d12cb",
+      "log_sha256": "bc9b56a57757de1e2c78959432205117889d97447de41120b994bfde86b74220",
+      "path": ".tools/edited_solar200/month201"
+    }
+  },
+  "tests": {
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "pytest",
+      "-p",
+      "no:cacheprovider",
+      "-q",
+      "tests/test_edited_solar_month.py",
+      "tests/test_edited_solar.py",
+      "tests/test_edited_j2.py",
+      "tests/test_edited_j2_three.py",
+      "tests/test_edited_scope.py",
+      "tests/test_fixed_j2_ias.py",
+      "tests/test_fixed_j2_year.py",
+      "tests/test_eih_year.py",
+      "tests/test_ias15_eih.py",
+      "tests/test_relativity.py",
+      "tests/test_oblateness.py",
+      "tests/test_native_forces.py",
+      "tests/test_accuracy.py",
+      "tests/test_sandbox_branch.py",
+      "tests/test_sandbox_state.py",
+      "tests/test_sandbox_physics.py",
+      "tests/test_sandbox_limits.py",
+      "tests/test_sandbox_gui.py",
+      "tests/test_sandbox_add_gui.py",
+      "tests/test_parent_gui.py",
+      "tests/test_remove_body_gui.py",
+      "tests/test_sandbox_commands.py",
+      "tests/test_branch_commands.py",
+      "tests/test_state_export.py",
+      "tests/test_time_control.py",
+      "tests/test_continuous.py",
+      "tests/test_continuous_cli.py",
+      "tests/test_kepler_cache.py",
+      "tests/test_error_control.py",
+      "tests/test_relative_coordinates.py",
+      "tests/test_storage.py",
+      "tests/test_experiment.py"
+    ],
+    "passed": 410,
+    "seconds": 77.61,
+    "wall_seconds": 78.23456559999977,
+    "returncode": 0,
+    "new_cases": 13,
+    "source_sha256": {
+      "tests/test_edited_solar_month.py": "da69e2ca3723bc5527d2dbb9c0726ca2f9fc95451d38807b4f1586b7d944c4dc",
+      "tests/test_edited_solar.py": "dcf3058c86af42a5b1a1b219dbc4938dcb752e63d7aba21668e2ab37f48502cc",
+      "tests/test_edited_j2.py": "ecc6369e78f23188dfd94798676fad8435a9e425d855e65e7660df6f5db1e20e",
+      "tests/test_edited_j2_three.py": "9db41b8ab025c5a1e84472f161dbc133d9de94f106e571ec10b42f20c5498456",
+      "tests/test_edited_scope.py": "9810542027f597c5b47637b99c8bc57e72d7a5b7ffe4af75dbed7b6f26f3859f",
+      "tests/test_fixed_j2_ias.py": "60dd5e86f4d28b0fb9eb14208549369ebdc9ae7e01cfce74ed188bf1d592da14",
+      "tests/test_fixed_j2_year.py": "3d8395249ad07485e97dd1226cead20d114c1bacb4321792825b312f37b36e67",
+      "tests/test_eih_year.py": "4daeed281f4f25f17d226eab769d74c2f81b1e654395e34b2dd1ccbfc8d98b79",
+      "tests/test_ias15_eih.py": "fe72a4da8ecfb2e0c16dcf686648e9d001117b53cae1650622f7956b595b3ced",
+      "tests/test_relativity.py": "80a8181d47c81a6cdb6db45bba12f69ca1ecceffad42a25c77c41a85ccbadab5",
+      "tests/test_oblateness.py": "5d47221540da059b4f9ae44bb3a3a4117fb689a1163ed334130ffd23b9c28957",
+      "tests/test_native_forces.py": "230ff8e9b9a987ebc843a4310e06f6d6fef6147c181dda1040c174623f63c59e",
+      "tests/test_accuracy.py": "4c5b08e3af5eeb03ef7fa509bcc981b30066dfd7454442835bc91cd5621ad001",
+      "tests/test_sandbox_branch.py": "6350c60eed95ed4a5db0d4c2fd9208a013be23af778e967911ff5373d67f1df7",
+      "tests/test_sandbox_state.py": "9c9108c5d72ab5c59ae5b714d1358960d76a605d832297b382b143a9cd556126",
+      "tests/test_sandbox_physics.py": "c5ed93e1bcd37f34fa1ee96e9559a8533bcff3c4b3a31f39e3cb5aee9b9f0142",
+      "tests/test_sandbox_limits.py": "d67a7f87df1e7323d51ad03ac10943b6235151b6e660aa925b3db285df8ebfe8",
+      "tests/test_sandbox_gui.py": "72cfdff9df615a02db6c3bd44859d01017be73868b0bbf9914cb96fc3d98574d",
+      "tests/test_sandbox_add_gui.py": "66897e3f34de0a8096d0c2369e209587eaba0bf69cdecefb351646d768eebfdf",
+      "tests/test_parent_gui.py": "f71facfa4e45e93e474653e11aa15839f4a5b71a2a64e514e4449ec122ec078b",
+      "tests/test_remove_body_gui.py": "ecaf7b2c3c73f9c609be30911b38274866b7b030c7dcffd9f6c0c1a3e9a897ec",
+      "tests/test_sandbox_commands.py": "855fa52dc8bd19954ad5ef5ed679feb225966d32ef3bb0927a3941e2f8789437",
+      "tests/test_branch_commands.py": "7b324648c9a513b50d54404f4f03bafd3672b5260ce9342cd3a7d892fa4e8adf",
+      "tests/test_state_export.py": "9fb60df6e7a74e61a1d1e319f75c23e6d4e29117c6e12a498b231a54dd0b1a1c",
+      "tests/test_time_control.py": "d8101f72e910d736c8931f53a3c355d12fb3363387075ab5ed45d262b15c8e8e",
+      "tests/test_continuous.py": "305f90f33a17d5bb6c750315fbbdeaf3586a1ae56e26cc053c09fad93d5ed7ee",
+      "tests/test_continuous_cli.py": "6838ce7eeaed06a39344316e3f19cf0b32c82585bf5e6622ac8a6484db0898b5",
+      "tests/test_kepler_cache.py": "ffd7db3c6fb8f5f1bf60942bcf7efe9736b1f312f328edf2e70b5fecf21d642e",
+      "tests/test_error_control.py": "d3fe6d899f6adb9b835ba716667edc2968b5e9fd620f248135f947c89a9f840f",
+      "tests/test_relative_coordinates.py": "26ad7a3d129494bd0ab7cc3b0dec6a841767474c34fa8a1cf5e805cf9afb3ed0",
+      "tests/test_storage.py": "d93ae7d464f1d9b61c4ddbb93cc6726f53da041387d274873398735d88ae51a5",
+      "tests/test_experiment.py": "66c52799a212a3e0fc65feee48b091e3fd62174869230922c0d131d51f29ffba"
+    },
+    "output_sha256": "a7e35cbe36b74471dcc4d291c80f1d364d3843a91fc6b490cb7f8ee603a03a7f"
+  },
+  "replay_after_serialization_fix": {
+    "first_complete": true,
+    "repeated_complete": true,
+    "all_arrays_bitexact": true,
+    "array_count": 24,
+    "first_driver_sha256": "4dc2d0ac8d26acfd1669c57b56ec4c936ccfc61a39dab9f5eafc97ba00dc3d30",
+    "fixed_driver_sha256": "55d017f6d09c8f9ac4dfe073b68035ad0cb57e925fb12e50ec03d697fd3e8917"
+  },
+  "first_failure_evidence": {
+    "first-driver200.py": "4dc2d0ac8d26acfd1669c57b56ec4c936ccfc61a39dab9f5eafc97ba00dc3d30",
+    "first-tests200.py": "ce0dc8c60b131c377d6705ea0061e45444569cc26a3b56848eeee7dedfb81cc9",
+    "reproduce_grid_settings200.py": "e1a87b908959ed9685370fe47e055b8d36bdec358543fefe1ce5d8d6fd0c4fc9",
+    "first-grid-settings-failure200.txt": "013bff4c0a8be96867c14a87e130d4f4f3edf0600341fbf74e83eb03ccd9ec96",
+    "month200.json": "7cd5208911e1a4b33c8abb3054a8e5471c2b3bf63bae80f1bd0b5f8be34f2c57",
+    "month200.npz": "db100805ef98f8133e9d0d08ab48f02920bcb24b6ed7e4fd3ac7fc9de8e19e1a",
+    "month200.log": "0addfb9c035184e94becf7cee32ec84ca209d7a8a8483746a591b3c699c0337b",
+    "replay200.json": "87bd0555d5573d49f37cfe53ffd156f7915213c85cd23dae3468daba550a6383"
+  },
+  "runtime_modified": false,
+  "general_release": false,
+  "jpl_comparison": false,
+  "source_integrals_verified": false
+}

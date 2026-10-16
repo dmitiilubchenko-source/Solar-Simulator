@@ -1,0 +1,1028 @@
+{
+  "date": "2026-10-15",
+  "stages": [
+    190,
+    191,
+    192
+  ],
+  "measurements": {
+    "protocol": "docs/edited-system-scope-protocol.md",
+    "source_sha256": {
+      "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+      "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+      "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+      "src/solar_simulator/branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+      "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+      "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+      "src/solar_simulator/commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+      "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+      "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+      "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+      "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+      "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+      "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+      "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+      "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+      "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+      "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+      "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+      "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+      "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+      "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+      "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+      "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+      "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+      "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+      "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+      "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+      "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+      "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+      "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+      "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+      "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+      "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+      "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+      "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+      "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+      "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+      "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+      "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+      "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+      "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+      "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+      "scripts/assess_edited_scope.py": "1801d88bcffec9485137d537d2a1e9135bbdb2428f4c0b2d5fd2e13392e94dbf",
+      "scripts/assess_sandbox_limits.py": "1711a95f9e461e6a10d2ab503d78a79a6205bdf57ddde41100c6160d614fabee",
+      "scripts/assess_kepler_phase.py": "f0b2f6bece3a7653efd883f7041e1ee2d5fb2fcf13d91331fb70b406d24d3677",
+      "scripts/kepler_reference.py": "abc7f6f010049d489c71d5331e7942c786600432097b72d94204ff26cc9c14a2",
+      "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+      "scripts/newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+      "docs/edited-system-scope-protocol.md": "5b5d9b512bf090145880ebdf6475dd5fc2bf20d04961b125359d10c357b6b9c6",
+      "tests/test_edited_scope.py": "9810542027f597c5b47637b99c8bc57e72d7a5b7ffe4af75dbed7b6f26f3859f"
+    },
+    "input_sha256": {
+      "docs/sandbox-limits-validation.json": "0ef4d8c2a455f104a99f3f6a58f31f58aa720d549c7532071ebd4e660df0ddec",
+      "docs/solar-sandbox-strict-checkpoint.json": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d"
+    },
+    "native_sha256": {
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7"
+    },
+    "units": "SI",
+    "physics": "Newtonian point pairs",
+    "samples": 33,
+    "results": {
+      "mass-double_python": {
+        "position_metres": 0.0011521527378041709,
+        "velocity_m_per_s": 5.967699382764528e-10,
+        "relative_energy_drift": 3.1848108359213154e-15,
+        "scaled_momentum_drift": 2.0333459184698115e-15,
+        "relative_angular_momentum_drift": 1.4363041760485645e-15,
+        "center_of_mass_error_metres": 0.0001308717130315859,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 2.426575430223811e-60,
+            "velocity_m_per_s": 1.5228460485351546e-66
+          },
+          "float64_export": {
+            "position_metres": 1.0621911526716631e-05,
+            "velocity_m_per_s": 4.889209468368058e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 2.6607532000016363
+        },
+        "production": {
+          "packets": 192,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 1.4756883000009111
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.0005196418388032228,
+          "velocity_m_per_s": 3.993752130084396e-10
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            25699.698118123804
+          ]
+        ],
+        "masses_kg": [
+          4e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          378398.6433454569,
+          756797.2866909138,
+          1135195.9300363706,
+          1513594.5733818277,
+          1891993.2167272847,
+          2270391.8600727413,
+          2648790.5034181983,
+          3027189.1467636554,
+          3405587.7901091124,
+          3783986.4334545694,
+          4162385.076800026,
+          4540783.720145483,
+          4919182.36349094,
+          5297581.006836397,
+          5675979.650181854,
+          6054378.293527311,
+          6432776.936872767,
+          6811175.580218225,
+          7189574.223563681,
+          7567972.866909139,
+          7946371.510254595,
+          8324770.153600052,
+          8703168.796945509,
+          9081567.440290965,
+          9459966.083636424,
+          9838364.72698188,
+          10216763.370327337,
+          10595162.013672793,
+          10973560.65701825,
+          11351959.300363708,
+          11730357.943709165,
+          12108756.587054621
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "mass-double_rust": {
+        "position_metres": 0.0017699531967195433,
+        "velocity_m_per_s": 1.4896802367963642e-09,
+        "relative_energy_drift": 7.077357413158479e-15,
+        "scaled_momentum_drift": 2.4138378598839043e-15,
+        "relative_angular_momentum_drift": 3.1479635415646253e-15,
+        "center_of_mass_error_metres": 0.00015154670530819243,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 2.426575430223811e-60,
+            "velocity_m_per_s": 1.5228460485351546e-66
+          },
+          "float64_export": {
+            "position_metres": 1.0621911526716631e-05,
+            "velocity_m_per_s": 4.889209468368058e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.3369568999987678
+        },
+        "production": {
+          "packets": 192,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 0.7975473000005877
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.0005196418388032228,
+          "velocity_m_per_s": 3.993752130084396e-10
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            25699.698118123804
+          ]
+        ],
+        "masses_kg": [
+          4e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          378398.6433454569,
+          756797.2866909138,
+          1135195.9300363706,
+          1513594.5733818277,
+          1891993.2167272847,
+          2270391.8600727413,
+          2648790.5034181983,
+          3027189.1467636554,
+          3405587.7901091124,
+          3783986.4334545694,
+          4162385.076800026,
+          4540783.720145483,
+          4919182.36349094,
+          5297581.006836397,
+          5675979.650181854,
+          6054378.293527311,
+          6432776.936872767,
+          6811175.580218225,
+          7189574.223563681,
+          7567972.866909139,
+          7946371.510254595,
+          8324770.153600052,
+          8703168.796945509,
+          9081567.440290965,
+          9459966.083636424,
+          9838364.72698188,
+          10216763.370327337,
+          10595162.013672793,
+          10973560.65701825,
+          11351959.300363708,
+          11730357.943709165,
+          12108756.587054621
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "slow-velocity_python": {
+        "position_metres": 0.0010562331293420776,
+        "velocity_m_per_s": 1.0295541220281929e-09,
+        "relative_energy_drift": 6.5606275846547494e-15,
+        "scaled_momentum_drift": 1.5739515984924939e-15,
+        "relative_angular_momentum_drift": 2.344022033171922e-15,
+        "center_of_mass_error_metres": 0.00010059173421018466,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 2.534111691439507e-60,
+            "velocity_m_per_s": 1.4844213392924583e-66
+          },
+          "float64_export": {
+            "position_metres": 1.1011741091916233e-05,
+            "velocity_m_per_s": 5.158976228623223e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.429200300000957
+        },
+        "production": {
+          "packets": 224,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 2.0569511000030616
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.00027841156802283103,
+          "velocity_m_per_s": 2.1134526305632907e-10
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            15301.445380283663
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          457948.4714648248,
+          915896.9429296496,
+          1373845.4143944744,
+          1831793.8858592992,
+          2289742.357324124,
+          2747690.8287889487,
+          3205639.3002537736,
+          3663587.7717185984,
+          4121536.2431834233,
+          4579484.714648248,
+          5037433.186113073,
+          5495381.657577897,
+          5953330.129042722,
+          6411278.600507547,
+          6869227.071972372,
+          7327175.543437197,
+          7785124.014902022,
+          8243072.486366847,
+          8701020.957831671,
+          9158969.429296495,
+          9616917.900761321,
+          10074866.372226145,
+          10532814.84369097,
+          10990763.315155795,
+          11448711.78662062,
+          11906660.258085445,
+          12364608.72955027,
+          12822557.201015094,
+          13280505.67247992,
+          13738454.143944744,
+          14196402.61540957,
+          14654351.086874394
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "slow-velocity_rust": {
+        "position_metres": 0.0016610157018341941,
+        "velocity_m_per_s": 3.466386903736394e-10,
+        "relative_energy_drift": 3.9363765507928495e-15,
+        "scaled_momentum_drift": 1.56413610720781e-15,
+        "relative_angular_momentum_drift": 2.593896931455373e-15,
+        "center_of_mass_error_metres": 0.00012345616995172194,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 2.534111691439507e-60,
+            "velocity_m_per_s": 1.4844213392924583e-66
+          },
+          "float64_export": {
+            "position_metres": 1.1011741091916233e-05,
+            "velocity_m_per_s": 5.158976228623223e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.103901799997402
+        },
+        "production": {
+          "packets": 224,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 0.9530271000003268
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.00027841156802283103,
+          "velocity_m_per_s": 2.1134526305632907e-10
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            15301.445380283663
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          457948.4714648248,
+          915896.9429296496,
+          1373845.4143944744,
+          1831793.8858592992,
+          2289742.357324124,
+          2747690.8287889487,
+          3205639.3002537736,
+          3663587.7717185984,
+          4121536.2431834233,
+          4579484.714648248,
+          5037433.186113073,
+          5495381.657577897,
+          5953330.129042722,
+          6411278.600507547,
+          6869227.071972372,
+          7327175.543437197,
+          7785124.014902022,
+          8243072.486366847,
+          8701020.957831671,
+          9158969.429296495,
+          9616917.900761321,
+          10074866.372226145,
+          10532814.84369097,
+          10990763.315155795,
+          11448711.78662062,
+          11906660.258085445,
+          12364608.72955027,
+          12822557.201015094,
+          13280505.67247992,
+          13738454.143944744,
+          14196402.61540957,
+          14654351.086874394
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "eccentric-095_python": {
+        "position_metres": 0.06040264672060946,
+        "velocity_m_per_s": 2.404782739193492e-08,
+        "relative_energy_drift": 1.3537760382002648e-12,
+        "scaled_momentum_drift": 4.065609385050326e-15,
+        "relative_angular_momentum_drift": 1.6830733013841028e-14,
+        "center_of_mass_error_metres": 8.080994100800273e-05,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 2.607965340168872e-60,
+            "velocity_m_per_s": 3.076841076234285e-65
+          },
+          "float64_export": {
+            "position_metres": 1.0703235708368004e-05,
+            "velocity_m_per_s": 5.138627665417922e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.2082054000020435
+        },
+        "production": {
+          "packets": 160,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 1.6470485999998346
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.0005408780470672977,
+          "velocity_m_per_s": 2.1800175921660665e-08
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -1210.7443516653802
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          312054.261403465,
+          624108.52280693,
+          936162.7842103951,
+          1248217.04561386,
+          1560271.307017325,
+          1872325.5684207901,
+          2184379.829824255,
+          2496434.09122772,
+          2808488.352631185,
+          3120542.61403465,
+          3432596.875438115,
+          3744651.1368415803,
+          4056705.398245045,
+          4368759.65964851,
+          4680813.921051975,
+          4992868.18245544,
+          5304922.443858905,
+          5616976.70526237,
+          5929030.966665835,
+          6241085.2280693,
+          6553139.4894727655,
+          6865193.75087623,
+          7177248.012279695,
+          7489302.273683161,
+          7801356.535086625,
+          8113410.79649009,
+          8425465.057893556,
+          8737519.31929702,
+          9049573.580700485,
+          9361627.84210395,
+          9673682.103507414,
+          9985736.36491088
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "eccentric-095_rust": {
+        "position_metres": 0.0672452851963238,
+        "velocity_m_per_s": 7.243335279021648e-08,
+        "relative_energy_drift": 1.3359356868268854e-12,
+        "scaled_momentum_drift": 3.859297528654432e-15,
+        "relative_angular_momentum_drift": 2.4282743659174394e-14,
+        "center_of_mass_error_metres": 8.424827155273387e-05,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 2.607965340168872e-60,
+            "velocity_m_per_s": 3.076841076234285e-65
+          },
+          "float64_export": {
+            "position_metres": 1.0703235708368004e-05,
+            "velocity_m_per_s": 5.138627665417922e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.2974797999995644
+        },
+        "production": {
+          "packets": 160,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 0.9659766000004311
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.0005408780470672977,
+          "velocity_m_per_s": 2.1800175921660665e-08
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -1210.7443516653802
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          312054.261403465,
+          624108.52280693,
+          936162.7842103951,
+          1248217.04561386,
+          1560271.307017325,
+          1872325.5684207901,
+          2184379.829824255,
+          2496434.09122772,
+          2808488.352631185,
+          3120542.61403465,
+          3432596.875438115,
+          3744651.1368415803,
+          4056705.398245045,
+          4368759.65964851,
+          4680813.921051975,
+          4992868.18245544,
+          5304922.443858905,
+          5616976.70526237,
+          5929030.966665835,
+          6241085.2280693,
+          6553139.4894727655,
+          6865193.75087623,
+          7177248.012279695,
+          7489302.273683161,
+          7801356.535086625,
+          8113410.79649009,
+          8425465.057893556,
+          8737519.31929702,
+          9049573.580700485,
+          9361627.84210395,
+          9673682.103507414,
+          9985736.36491088
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "add-companion_python": {
+        "position_metres": 0.0008191273393614498,
+        "velocity_m_per_s": 1.891690729385732e-10,
+        "relative_energy_drift": 3.3963440087127486e-15,
+        "scaled_momentum_drift": 2.0680352635298035e-15,
+        "relative_angular_momentum_drift": 1.7177782565141045e-15,
+        "center_of_mass_error_metres": 0.00021471115378166297,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 5.249505721478314e-60,
+            "velocity_m_per_s": 1.2130152658923536e-66
+          },
+          "float64_export": {
+            "position_metres": 1.1564109213178092e-05,
+            "velocity_m_per_s": 3.5346019293329274e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.3100034999988566
+        },
+        "production": {
+          "packets": 384,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 3.211200600002485
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.0005048596847456245,
+          "velocity_m_per_s": 1.083531639106843e-10
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            25699.698118123804
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          849732.1195192063,
+          1699464.2390384127,
+          2549196.358557619,
+          3398928.4780768254,
+          4248660.597596032,
+          5098392.717115238,
+          5948124.836634444,
+          6797856.956153651,
+          7647589.075672857,
+          8497321.195192063,
+          9347053.314711269,
+          10196785.434230477,
+          11046517.553749682,
+          11896249.673268888,
+          12745981.792788096,
+          13595713.912307302,
+          14445446.031826507,
+          15295178.151345715,
+          16144910.27086492,
+          16994642.390384126,
+          17844374.509903334,
+          18694106.629422538,
+          19543838.748941746,
+          20393570.868460953,
+          21243302.987980157,
+          22093035.107499365,
+          22942767.227018572,
+          23792499.346537776,
+          24642231.466056984,
+          25491963.58557619,
+          26341695.705095395,
+          27191427.824614603
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "add-companion_rust": {
+        "position_metres": 0.00692003454378671,
+        "velocity_m_per_s": 1.5192652109715613e-09,
+        "relative_energy_drift": 8.85475402271538e-15,
+        "scaled_momentum_drift": 1.802925734607416e-15,
+        "relative_angular_momentum_drift": 4.493347824382544e-15,
+        "center_of_mass_error_metres": 0.00025288999794249227,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 5.249505721478314e-60,
+            "velocity_m_per_s": 1.2130152658923536e-66
+          },
+          "float64_export": {
+            "position_metres": 1.1564109213178092e-05,
+            "velocity_m_per_s": 3.5346019293329274e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.450338999999076
+        },
+        "production": {
+          "packets": 384,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 1.8421849999976985
+        },
+        "old_nominal_reference_difference": {
+          "position_metres": 0.0005048596847456245,
+          "velocity_m_per_s": 1.083531639106843e-10
+        },
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            81567420131.83861,
+            76567420131.83861,
+            1000000000.0,
+            75.0,
+            -50.0,
+            25699.698118123804
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          849732.1195192063,
+          1699464.2390384127,
+          2549196.358557619,
+          3398928.4780768254,
+          4248660.597596032,
+          5098392.717115238,
+          5948124.836634444,
+          6797856.956153651,
+          7647589.075672857,
+          8497321.195192063,
+          9347053.314711269,
+          10196785.434230477,
+          11046517.553749682,
+          11896249.673268888,
+          12745981.792788096,
+          13595713.912307302,
+          14445446.031826507,
+          15295178.151345715,
+          16144910.27086492,
+          16994642.390384126,
+          17844374.509903334,
+          18694106.629422538,
+          19543838.748941746,
+          20393570.868460953,
+          21243302.987980157,
+          22093035.107499365,
+          22942767.227018572,
+          23792499.346537776,
+          24642231.466056984,
+          25491963.58557619,
+          26341695.705095395,
+          27191427.824614603
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "position-edit_python": {
+        "position_metres": 0.0038480909913296583,
+        "velocity_m_per_s": 8.331069326328707e-10,
+        "relative_energy_drift": 6.538829412484183e-15,
+        "scaled_momentum_drift": 1.982350211262294e-15,
+        "relative_angular_momentum_drift": 3.5756162886326266e-15,
+        "center_of_mass_error_metres": 0.00018264267627157805,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 5.844227094636576e-60,
+            "velocity_m_per_s": 1.3481708581545266e-66
+          },
+          "float64_export": {
+            "position_metres": 1.5290891028383174e-05,
+            "velocity_m_per_s": 3.5845601144758973e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.2024662000003445
+        },
+        "production": {
+          "packets": 416,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 3.496410799998557
+        },
+        "old_nominal_reference_difference": null,
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            86067420131.83861,
+            73567420131.83861,
+            7000000000.0,
+            75.0,
+            -50.0,
+            25699.698118123804
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          871640.4109126619,
+          1743280.8218253239,
+          2614921.232737986,
+          3486561.6436506477,
+          4358202.05456331,
+          5229842.465475972,
+          6101482.876388634,
+          6973123.287301295,
+          7844763.698213957,
+          8716404.10912662,
+          9588044.52003928,
+          10459684.930951944,
+          11331325.341864605,
+          12202965.752777267,
+          13074606.163689928,
+          13946246.57460259,
+          14817886.985515254,
+          15689527.396427915,
+          16561167.807340577,
+          17432808.21825324,
+          18304448.6291659,
+          19176089.04007856,
+          20047729.450991224,
+          20919369.861903887,
+          21791010.27281655,
+          22662650.68372921,
+          23534291.09464187,
+          24405931.505554534,
+          25277571.916467197,
+          26149212.327379856,
+          27020852.73829252,
+          27892493.14920518
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      },
+      "position-edit_rust": {
+        "position_metres": 0.0015725920157386565,
+        "velocity_m_per_s": 3.8067720651252496e-10,
+        "relative_energy_drift": 4.071346615320341e-15,
+        "scaled_momentum_drift": 1.828212788869976e-15,
+        "relative_angular_momentum_drift": 3.0962139792088715e-15,
+        "center_of_mass_error_metres": 0.0002316263184464837,
+        "reference": {
+          "precision70_vs100": {
+            "position_metres": 5.844227094636576e-60,
+            "velocity_m_per_s": 1.3481708581545266e-66
+          },
+          "float64_export": {
+            "position_metres": 1.5290891028383174e-05,
+            "velocity_m_per_s": 3.5845601144758973e-12
+          },
+          "exact_initial": true,
+          "checks_passed": true,
+          "wall_seconds": 3.0819049999990966
+        },
+        "production": {
+          "packets": 416,
+          "checkpoint_continue_exact": true,
+          "exact_epochs": true,
+          "wall_seconds": 1.799362800000381
+        },
+        "old_nominal_reference_difference": null,
+        "initial": [
+          [
+            -24498597046.14351,
+            -29498597046.14351,
+            1000000000.0,
+            75.0,
+            -50.0,
+            -8961.144341343332
+          ],
+          [
+            86067420131.83861,
+            73567420131.83861,
+            7000000000.0,
+            75.0,
+            -50.0,
+            25699.698118123804
+          ]
+        ],
+        "masses_kg": [
+          2e+30,
+          7e+29
+        ],
+        "times_seconds": [
+          0.0,
+          871640.4109126619,
+          1743280.8218253239,
+          2614921.232737986,
+          3486561.6436506477,
+          4358202.05456331,
+          5229842.465475972,
+          6101482.876388634,
+          6973123.287301295,
+          7844763.698213957,
+          8716404.10912662,
+          9588044.52003928,
+          10459684.930951944,
+          11331325.341864605,
+          12202965.752777267,
+          13074606.163689928,
+          13946246.57460259,
+          14817886.985515254,
+          15689527.396427915,
+          16561167.807340577,
+          17432808.21825324,
+          18304448.6291659,
+          19176089.04007856,
+          20047729.450991224,
+          20919369.861903887,
+          21791010.27281655,
+          22662650.68372921,
+          23534291.09464187,
+          24405931.505554534,
+          25277571.916467197,
+          26149212.327379856,
+          27020852.73829252,
+          27892493.14920518
+        ],
+        "parent_preserved": true,
+        "origin": null,
+        "checks_passed": true
+      }
+    },
+    "complete": true,
+    "general_release": false,
+    "environment": {
+      "numpy": "2.5.1",
+      "scipy": "1.18.1"
+    },
+    "npz_sha256": "e90dbc8693d2ee6c9ca314ecc2e81085fb8db759e958b3f830762c169a98ba77",
+    "source_input_native_unchanged": true,
+    "checks_passed": true
+  },
+  "receipts": {
+    "json_sha256": "42192ba7e0c8f0edaa240565a1d8740a755d7b0e5d397b2cf9645a10e3450821",
+    "npz_sha256": "e90dbc8693d2ee6c9ca314ecc2e81085fb8db759e958b3f830762c169a98ba77"
+  },
+  "tests": {
+    "new_passed": 24,
+    "new_seconds": 5.05,
+    "related_passed": 188,
+    "related_seconds": 71.3,
+    "source_sha256": {
+      "tests/test_edited_scope.py": "9810542027f597c5b47637b99c8bc57e72d7a5b7ffe4af75dbed7b6f26f3859f"
+    }
+  },
+  "python": "3.14.2",
+  "runtime_modified": false,
+  "general_release": false,
+  "architectural_blocker_found": false,
+  "confirmed": [
+    "Branch preserves its immediate parent and creates a fresh child with origin=None.",
+    "Source provenance is not an accuracy certificate.",
+    "Mass, position, velocity, add and remove preserve this boundary at0/86400s through IO/reset/CLI/CSV.",
+    "Existing weak-field/J2/pair/prescribed-orientation/spin guards remain explicit.",
+    "The historical nominal elliptic helper is limited to its declared apocentre fixtures.",
+    "Five actual-IC Newtonian elliptic pairs passed for Python and Rust."
+  ],
+  "deferred": [
+    "Quantitative accuracy of edited EIH+fixedJ2 systems.",
+    "Arbitrary encounters, hyperbolae, other horizons and composed edits.",
+    "Absolute parent epoch/frame recovery from an extracted child CSV alone.",
+    "Universal protection against direct in-memory mutation after t0."
+  ],
+  "previous_failures_preserved": [
+    "The different e=.95 two-period0.1m/1e-6m/s general Kepler case remains failed.",
+    "The former standard annual Solar profile numerical failure139 remains retained.",
+    "Kuiper420 geometry failure and larger KBO residuals after528 remain retained."
+  ]
+}

@@ -205,7 +205,7 @@ GUI загружает/продолжает/сбрасывает состоян�
   [поле/реакция](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:66),
   [интегратор](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:139),
   [общие инварианты](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:220).
-- [Продвижение Experiment](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:126),
+- [Продвижение Experiment](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:139),
   [checkpoint](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/storage.py:84),
   [CLI](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/cli.py:78).
 - [Независимый эталон](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_nbody_rotation.py:22),

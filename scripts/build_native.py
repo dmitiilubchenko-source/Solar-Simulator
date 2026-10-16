@@ -10,10 +10,14 @@ import sys
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--wheel", action="store_true", help="Build wheel into .tools/wheels instead of installing")
+    parser.add_argument("--gnu-bin", type=Path, help="Explicit Windows GNU bin directory (as/dlltool)")
     args = parser.parse_args()
     if sys.prefix == sys.base_prefix:
         raise SystemExit("Run this script with the project's .venv Python")
     root = Path(__file__).resolve().parents[1]
+    local_tools = args.gnu_bin if args.gnu_bin is not None else root / ".tools/msys2/mingw64/bin"
+    if args.gnu_bin is not None and any(not (local_tools/name).is_file() for name in ("as.exe","dlltool.exe")):
+        raise SystemExit("--gnu-bin must contain as.exe and dlltool.exe")
     cargo = shutil.which("cargo") or str(Path.home() / ".cargo/bin/cargo.exe")
     if not Path(cargo).is_file():
         raise SystemExit("Rust/Cargo is required; install rustup first")
@@ -27,7 +31,6 @@ def main():
     tools = sysroot / "lib/rustlib" / host / "bin/self-contained"
     if tools.is_dir():
         env["PATH"] = str(tools) + os.pathsep + env["PATH"]
-    local_tools = root / ".tools/msys2/mingw64/bin"
     if local_tools.is_dir():
         env["PATH"] = str(local_tools) + os.pathsep + env["PATH"]
     env["VIRTUAL_ENV"] = sys.prefix

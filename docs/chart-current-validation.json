@@ -1,0 +1,1959 @@
+{
+  "changes": [
+    105,
+    106,
+    107
+  ],
+  "policy": {
+    "changes": [
+      105,
+      106,
+      107
+    ],
+    "model": "supplied-current tracer snapshot on static sphere; coordinate/cotangent/tensor qualification",
+    "compactnesses": [
+      0.02,
+      0.15,
+      0.3
+    ],
+    "gravitational_mass_kg": 3.0,
+    "areal_radius_m": 2.0,
+    "gravitational_constant": 0.4,
+    "angular_velocity_s_inv": [
+      0.001,
+      -0.0004,
+      0.0007
+    ],
+    "radial_rate_s_inv": 0.002,
+    "shape_diagonal": [
+      0.18,
+      -0.05,
+      -0.13
+    ],
+    "shape_rotation_z_rad": 0.4487989505128276,
+    "shape_dipole": [
+      0.1,
+      -0.04,
+      0.06
+    ],
+    "radial_density_coefficients": [
+      0.4,
+      0.2
+    ],
+    "quadrature_levels": [
+      {
+        "radial": 20,
+        "polar": 12,
+        "azimuthal": 24
+      },
+      {
+        "radial": 32,
+        "polar": 20,
+        "azimuthal": 40
+      }
+    ],
+    "analytic_radial_orders": [
+      64,
+      128
+    ],
+    "production_rtol": 1e-11,
+    "reference_rtols": [
+      2e-09,
+      2e-12
+    ],
+    "tighter_rtol": 2e-13,
+    "production_max_radial_step": 0.001953125,
+    "reference_max_radial_step": 0.03125,
+    "tighter_max_radial_step": 0.00390625,
+    "atol_over_rtol": 0.02,
+    "samples": 129,
+    "maximum": {
+      "mass_reference_relative": 1e-10,
+      "areal_first_reference_relative": 1e-09,
+      "harmonic_first_reference_relative": 1e-08,
+      "areal_second_reference_relative": 1e-09,
+      "harmonic_second_reference_relative": 1e-08,
+      "axial_reference_relative": 1e-09,
+      "kinetic_reference_relative": 1e-09,
+      "pointgrid_levels_relative": 1e-08,
+      "analytic_quadrature_levels_relative": 1e-09,
+      "radial_reference_levels_relative": 1e-08,
+      "radial_reference_tighter_relative": 1e-08,
+      "cotangent_pairing_relative": 1e-11,
+      "axial_pullback_relative": 1e-11,
+      "kinetic_pullback_relative": 1e-11,
+      "metric_pullback_relative": 1e-11,
+      "density_measure_relative": 1e-11,
+      "coordinate_C_M_reference_relative": 1e-08
+    },
+    "minimum": {
+      "sampled_current_shape_floor": 0.1,
+      "sampled_differential_floor": 0.05,
+      "wrong_forward_momentum_pairing_relative": 0.01,
+      "wrong_Euclidean_momentum_axial_relative": 0.01,
+      "wrong_differential_as_position_relative": 0.001,
+      "wrong_centre_affine_tensor_relative": 0.001,
+      "wrong_density_as_scalar_mass_relative": 0.01
+    },
+    "required_true": [
+      "sources_preserved",
+      "arrays_reverified",
+      "raw_initial_preserved",
+      "grid_preserved",
+      "physical_claims_false"
+    ],
+    "primary_sha256": {
+      ".tools/rotation99/harmonic-primary.html": "ebf3e7551aadd6f467e95da6db7d8c957278a425c19589543b6d4aac7b8feb57",
+      ".tools/rotation99/junction-comment.html": "fca0b32023b52cef3913b6e3b7807cb57b28e4b2e8d60a29eeb727efddd3f408",
+      ".tools/rotation99/source-review.json": "fb9143aed8b770c5cfee24ff0dc69baae65b04986d1e6093ebcdad5ce24a0889",
+      ".tools/rotation99/polynomial-check.json": "eca3b4b71f5746786ce5b91446c7c2a3d07da145d34578286fc8b8034f16fcec",
+      ".tools/rotation99/check_polynomials.py": "eea61e3b4cff97f5e553e2c7239f5c981bc6ff653866dcefa01ae5c7ae033272",
+      ".tools/rotation86-89/hartle1967.pdf": "ed263946e9bc13842399b5c9e9c2eae31823e7323bc81b456fb5174697cefc35",
+      ".tools/rotation86-89/source-review.json": "b86e631ae250b6d37920138123231eb1dae8ef4edb5a19390b21e74ac89cfbb4"
+    },
+    "physical_lunar_mapping_certified": false,
+    "physical_accuracy_certified": false,
+    "PN_fluid_inertia_certified": false,
+    "temporal_E_J_conservation_certified": false,
+    "runtime_changed": false
+  },
+  "sources": {
+    "scripts/assess_accuracy.py": "e2a546699dc603f4af10dfbe806959508a04a72cc2504ffd93a276d53e56f0e4",
+    "scripts/assess_asteroid_catalog.py": "b91075e5d8761792334750cb1c13bc7acd2b6a9c5e3e8a33542107e1837ec755",
+    "scripts/assess_asteroids.py": "6ce94c9d3682d27f09be336aa69628eb8445b1d9dda3d747c7efa9b799b2c1e0",
+    "scripts/assess_asteroids_catalog.py": "8c3a9ff747b1b1ed3da1bc007d2605aa2bea0f0e6f01ecd7bf42b3f24a357a09",
+    "scripts/assess_bound_body.py": "89506852cb4db4e27189b0fb72ef5c2a365f7052c997fcf40cc2334dbbcb84f6",
+    "scripts/assess_boundary_cloud.py": "870585b4894669527843f72dde9994fd329658b6488200832997cf60c62a0e86",
+    "scripts/assess_canonical_checkpoint.py": "156702a2f86db859352161e16972af0d3c03f8e6e66ef0555e37155583eed530",
+    "scripts/assess_canonical_initial.py": "e6075fc148ffe903e77ffd44d8f2704accbbf344b00a0d8fd0e13bdc728c7510",
+    "scripts/assess_canonical_solar.py": "ef09f154ccbcedccff4dc5235c789db3fce6db0a686f0ec23b8b647f023dce6d",
+    "scripts/assess_chart_current.py": "11275a89bc2a6d7ece6dc72a9bc98b70eab5edc60486bdd2b5b20fd54ee0b076",
+    "scripts/assess_continuum_conventions.py": "27c58fa7f248b17cb9d2479127eba80d47ad953063a9409385276d7c786866a1",
+    "scripts/assess_continuum_stress.py": "df45442ae01ad7ef48c06249d1aef5e3c9bafb5ad005ced7c92cad5b6b7239d5",
+    "scripts/assess_core.py": "573e66dc0e611b4c85b9d5634ee8c675395f2daef3e44fed4c7c1e239601a27c",
+    "scripts/assess_error_control.py": "53da2d769b865366424ca60e544c16fc972f9910746924cd752754f3ae1f8a93",
+    "scripts/assess_fluid_spin.py": "c2184e0a976d198fa1ec195258980e736885aa2d2c8f1e9eeac3705fb3b6fefd",
+    "scripts/assess_harmonic_sphere.py": "423b2765061265ec9136c8b4f9ed2c97282b000ace2354d7cd663f3907ffc19c",
+    "scripts/assess_kuiper.py": "45ac43de0b86ddaf4a593440930a65e8aec2dffc69cee5ce564b8b6944851cb8",
+    "scripts/assess_kuiper_ring.py": "408901afa599806e1ffb22091fa7027f830d061f16fc7a5eac72de6df5994f51",
+    "scripts/assess_local_rotation.py": "1a7906b39cf1e3a19bfc826513bb9d43ea590e699dcd1716cb6b1593a6dcf6ca",
+    "scripts/assess_lunar_canonical.py": "c4f7233927b0131c7d743ba6fa9a18ddcae98e488cb1d462844c199be7260b70",
+    "scripts/assess_lunar_research.py": "f6f477352c5e3e5c0c1599e450a3091af1c2010ae33dc63c8a26cc13525259b3",
+    "scripts/assess_lunar_source.py": "1cb2828e2ad93676b01cd1e2df31bfb7ad0b1e8d8688eb32391c1164924310e6",
+    "scripts/assess_lunar_spin.py": "5caeb3571ac6540b987bfea99ccae38857e5bbda76acd2461231b1c4cd4f37d1",
+    "scripts/assess_metric_spin.py": "1d60a48fac14b5ace9afca007ca7ec104fa21bc1b9000c47fd384f9fd2db44b6",
+    "scripts/assess_native_eih.py": "daab4d0a8f1915e6bf46f2d862ca6b78de2cf6dbe478324222dea408d65c7df3",
+    "scripts/assess_nbody_pn_spin.py": "643c1ad14f2ab28b7796e8bacf7508152810812a2e3a3119dc901285c4fe9661",
+    "scripts/assess_nbody_pn_spin_control.py": "c1b909e2fb06db6d53430673976178b7f2e07d8df2598e7bbb9761ca0f74ccd6",
+    "scripts/assess_nbody_rotation.py": "4fcbf1c9ad95584d8f0935ee2ff292e026de3e96293fbefe155fadf036dbb6b9",
+    "scripts/assess_oblateness.py": "304ff7b1ff651c24ebe67d2b3bc9ad029c9dff12777a076b0a474abdcc9912cc",
+    "scripts/assess_orbit_cohort.py": "5874ecdc21a9cf529863c3c95421e32d9b4f24211e5f831b87f5ef7df1934807",
+    "scripts/assess_orbit_observations.py": "d9792cc92e1a02039c5ce02450c2aacec7ac9e6d3bccfdc2c9d43371b3b5c4dd",
+    "scripts/assess_orientation.py": "f01b698a08c3cd15c5236113a9d89d02d8514671f24a96e21b181c9988722460",
+    "scripts/assess_pluto.py": "07338d7c6ca4ba991d6e13692de8f3225a6098f90c5a3d02549e5dc72fc95d40",
+    "scripts/assess_pn_spin.py": "21e068aa493040f499fd87d712207495466393c4ae681dc5d6a088ffb74e64f5",
+    "scripts/assess_relative_canonical.py": "36dff1776a02e35085829812e959872d8cabc76247f3925c92c1f0b509d2841e",
+    "scripts/assess_relative_canonical_checkpoint.py": "4a8b804d6fb51ec55a5080795bbca1dd5f836199d2f055a1333b8ddc601b7606",
+    "scripts/assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+    "scripts/assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+    "scripts/assess_resolved_moon.py": "7b633b17c41fa5509c4ea074235e088fdba76cff3680ea73d28c996bb1d41df5",
+    "scripts/assess_rigid_pn.py": "356d225964703ebd1f8b14cd04c7a1b2b27af8156e1d5f2d8e42df4463d5cab7",
+    "scripts/assess_ring_resolution.py": "3bc2ec35886d971feaf5119c26405bfcb3dddb3630b86f7299214dec8c0a1471",
+    "scripts/assess_rotation.py": "22b66e67589cb611c599e40a694c89a6c99c29554acc69f6424a44bc5c3c9360",
+    "scripts/assess_rotation_solar_system.py": "b9e475688dd86fffdee3cfcab0367254d48e5e5b68690a213fad7b51303333cc",
+    "scripts/assess_rotation_time.py": "62b602356fd8d84e7dc50af5a6fcd6245ba43565c0ffb316bd78a73c76dacfb7",
+    "scripts/assess_rotation_year.py": "0ed376210450408c27b2ff811cbb6b8b96b1aeecfdabc18ff1e07b7b8d9afd27",
+    "scripts/assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+    "scripts/assess_solar_system.py": "e61195be6e072013687ff18a1672fb6e12603d43a70afebcf70b9c3993e7c052",
+    "scripts/audit_perturbers.py": "bb52f9ffd2e6d68e41aa53e45f4dab2dedca6861736dbf8268a4e4135ca29b96",
+    "scripts/bound_body.py": "50395f7b1bee554e4d0ee30bd6dde0386f27a70675a734ed34cb4f119d370d6d",
+    "scripts/build_asteroid_catalog_dataset.py": "34d770d9672ab3dfe406d612393645a396103f1cda036279c483012504c8fd88",
+    "scripts/build_kuiper_dataset.py": "2f4a3831dd52fabf237120546c56934993a11544856b2db3056775dcf878f303",
+    "scripts/build_kuiper_ring.py": "2cc64746a85971c1d023fa0dc62a316a5effcac30cd6bbfbc8bf028e0fae49fb",
+    "scripts/build_lunar_spin.py": "b80e35fff9b390b3bffaea89ff6fcfa2b576c74ba46caf9b3ad26c818411085a",
+    "scripts/build_native.py": "1b012d73d91c7c1d656496ce17aeccbe4c99ac419b00e062db0776b39aeb9f0c",
+    "scripts/build_portable.py": "dd85d0217d8ac3c006ac6f3c918de6dcdaa5615129c1c84f901260b65a908cd4",
+    "scripts/canonical_checkpoint.py": "83a14d42011d9e455ba5f4b76d6d673549e613a453bf7d8f7f5dd0c73a9774d2",
+    "scripts/canonical_initial.py": "45f69e015712f403edd17693723b06cb3b9f6044d42bf8ef64f4183ebeac2de5",
+    "scripts/chart-current-policy.json": "1f4db8a934c9dcf9b12d82e70277021e2e6df2c98b6fd57666db8a242a2169ef",
+    "scripts/chart_current.py": "944a10f8fa9607e3f6b604bf4787c26773fe2abe4142fcdcf55d52fec1ad4159",
+    "scripts/check_app.py": "ad274b2edb92b91dc5d56afd85b945c24f6e672a90aa80360e3dc01a30397303",
+    "scripts/check_asteroid_catalog.py": "4aafe778bbb57b9eec8f918d376bf69b0fa829cb73994d57a54ee82eadd29b44",
+    "scripts/check_asteroid_source.py": "f89c672f7313e1b414bc870d35f24263d7b44d83fc42cf4eae0d0f40bbdb1957",
+    "scripts/check_kuiper_data.py": "744cd57ac29d33de47a2f80fdb4a3d637bf18962191cc3ee7e82ce7d4ecdbb01",
+    "scripts/check_orientation_spice.py": "0b3a70854c2ae9aedd9440d1849e8e422f790ee93b5707f85af5a0e1b593264d",
+    "scripts/check_pluto_source.py": "94de3d6250e85ddae474e9a7e3183aa29b94b47fbf38f16a7ad0d6ff4c23e09d",
+    "scripts/check_portable.py": "b0971c327e4779b53dcde3dc0b67f951fcc74aba9bbca1952a23ad279dd12a92",
+    "scripts/check_project.py": "fb1ba5f4e1458adb3edab5e83f2d558121d5d11b3fd9c17522666d897b317704",
+    "scripts/check_relative_checkpoint.py": "83e85be3988c4e0d2698514f15eb7eb53fdaf96e6308b58b7a36e39b25654033",
+    "scripts/check_ring_field.py": "258e210280e061cf1c856add694a885c67bc6330e10749dacf11ded0da501bfc",
+    "scripts/check_ring_kbo_orbits.py": "b91f70ea0e10cc158858f06bce29f684b1721f4ab30b8d47e33e8f0cab300b47",
+    "scripts/check_solar_pole.py": "a7e0b597632a2779c9ad7607a366bed4fba88deaec03bddc976f474519d2eaee",
+    "scripts/continuum_conventions.py": "2a6d08e7905648678115622e9f5bd63564306342e2493cb35034a9f3771be250",
+    "scripts/continuum_sphere.py": "b1546b2c756107e64b0409bb81b2e8578c2209b5750a6ca93991ecb957ed2144",
+    "scripts/continuum_stress.py": "e159bd5e381a6ad7e9b8f196acb768cbbf7b54ec79f522d7e42af3dfa73caf04",
+    "scripts/density_moments.py": "61ef05d60187e1620ef33d40b60d5d3df1cfaa76153cbf0db56d50ef59313141",
+    "scripts/diagnose_rotation_limits.py": "47e0d5e8c431aad119a4ca583581ed9045d49f5afda1e7a13ab108e3248f5ab7",
+    "scripts/diagnose_rotation_reference.py": "7899b12903f29782669bfbced5fbfd886d3b014b7b2e7afcfcb706d4399f0cad",
+    "scripts/external_metric.py": "3ab81738bdf2f9bec0e19643384c2b0e15ac9260524806c706eaa3f08926a25a",
+    "scripts/fetch_asteroid_catalog.py": "8792c91727b561f47a5a12846b69ad6527bb181b1fc5ef6a9ce44cf4b08bffad",
+    "scripts/fetch_asteroid_data.py": "8fd64f88a3751f40bf1f799e4f66c254b851ffeb8a6729ba9bee2aced53ae454",
+    "scripts/fetch_ephemerides.py": "719d31998368f4c200a60f1460abd4530a04c4063a9c8e60f6b2d2988a8dc232",
+    "scripts/fetch_figure_profile.py": "e7c293dcbf51dc80c2731eec20b03d874bbd1b2e08be85f9ca5ec748b0bba6cd",
+    "scripts/fetch_kuiper_data.py": "c461ba2e7698fead601daf41c7ecc272689a076af5ef8c0454f9d05ba6ef748c",
+    "scripts/fetch_orbit_cohort.py": "7a2b5c6c42c547a5c45998e79e0d75f9eedef56114e068b7649acd14714c7a06",
+    "scripts/fetch_orbit_observations.py": "d4938989612b5ac18ad7ec21e960ca68312b3801c3cf7779217143f9ad37a37d",
+    "scripts/fetch_orientation_data.py": "b28f1a43e5a180a65ecc8aeadf8b90898ef50f697c87035efca019321820b313",
+    "scripts/fetch_pluto_data.py": "5ec397bdabde3f4a727ae807b1d133d2d3a5ea87169ac4e7380c4cacdd2a552b",
+    "scripts/fetch_resolved_moon.py": "789f960632345307f8a7b2f3c53128ec19b7aa4314aaf25f33410a12522f08f3",
+    "scripts/fetch_solar_profile.py": "b40e14630517640c7544d4b1c8a56ec4ae7dabe77d98d2ad1b6d4c08ad8c6320",
+    "scripts/fluid_spin.py": "3a9ef4940de96b049d8f41528946e6b24134f343378951955eb55eae9eb02326",
+    "scripts/harmonic_sphere.py": "2854385934a5b0481936e0b0bdd1265a07c54aa709d5c54481d82bb4d935492f",
+    "scripts/independent_anchored_reference.py": "5f7ca98203e18ca6e2a40ff8b2d5660fe6f1a96b85b37abadd8a7cc71b13e581",
+    "scripts/independent_bound_reference.py": "a418a2c95cf16da583d89292be1ecbcd8ec75386c5b8790a6f67a3c915e4bd88",
+    "scripts/independent_conventions_reference.py": "c2cac2d7bf0ae6ddac32984c83ab49fbb1a37283f9fdc6f6d12859cfd40c46c8",
+    "scripts/independent_current_reference.py": "b85cd21b2bb0c2988b6fb14f99aabc78b268f5b776e86e0e8f17c2ace85944ce",
+    "scripts/independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+    "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+    "scripts/independent_fluid_reference.py": "f9d4b4c2e714719149129e0de7ef500d99f5ed66feb4b70cd1ef97bc18b908da",
+    "scripts/independent_harmonic_reference.py": "be6821be5e77ae10246b899342041bc58ad54ca9c24d70179c3b1babbbe26d76",
+    "scripts/independent_local_multipole.py": "5c341ccc95cdc46b02f4ab8302d5b686f9fc6d76b4df9e9612ccb95a3edda8c7",
+    "scripts/independent_nbody_pn_spin.py": "8d0b6070bced7acef5fc6c88aad0122f7e4b6a0d555cc86c152837e16251114c",
+    "scripts/independent_pn_spin.py": "b33ed5bf64c54fa1b2e1a18f82d024dd4b275096265a3986294832aa0d7f524a",
+    "scripts/independent_relative_canonical.py": "9d53a3eb2ed1f814d83fc70c1a2a33bc3ed428f448bb607e689c918653d865a1",
+    "scripts/independent_rigid_pn.py": "06a64e7b296cdcd22b317bed375303ac4462b530c800fd00a40db68c104dcfec",
+    "scripts/independent_schwarzschild_spin.py": "63ca372b4c4b24d5a4fcf6302088436d0bc9d5c765e6437fa2f9ae3368532167",
+    "scripts/independent_sr_reference.py": "6a9491555412ed4d14a799c2e4fd94434fde55ce49ae154fa47f7f520a0ff16e",
+    "scripts/independent_stress_reference.py": "a5fba47ab712d3e351a7724509922e647ac8a806064cc0954d41534f51118509",
+    "scripts/local_event_map.py": "f89a3aeb5dbb0c5f48a66c6f73a8b69d0ede14e0c085a6819ed6ee2fa2466272",
+    "scripts/local_multipole.py": "760e947532a4ac64dcc9adfab1b1e31491b0614b6bcfb5ef06dbacac48eee98b",
+    "scripts/local_rotation_transfer.py": "414d49f8a9c191f2dfc14557fe3f2d687fd5d4fe1c3f9763c5c3135210988786",
+    "scripts/lunar_canonical_diagnostic.py": "4552ffbcc1db6989724ad76ce888a30aa77d30cb5ebd50639b1ad63f8204240b",
+    "scripts/lunar_initial_boundary.py": "2591ae7718a1b9a927ce1a34fd1643fa699e9a3cb4bc14f9297514c1c42fecc7",
+    "scripts/lunar_initial_receipt.py": "919741524e03fb2bcc76367e395105d7a5af0abcc1cde7bb22f6a2f820227342",
+    "scripts/lunar_research.py": "eed1b0087c8b2888887aff4db9941dd16d50d63757ff5a726a3d15e66254ccdb",
+    "scripts/metric-spin-policy.json": "6c16d925211245a1e72954479f46da7a40fe717bae14a745894a8fe6ca63253d",
+    "scripts/metric_spin_transport.py": "5437c9c567fad6f6ab5d4e85fd8bf305d8c7184e201ae7c9a7f0bf5734c9a666",
+    "scripts/nbody_pn_spin.py": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d",
+    "scripts/pinned_lunar_initial.py": "fc4f71a605ae1f1aa97c61b0937304242ef404929f3cf6bc9a568ab6c68536b2",
+    "scripts/plot_asteroids_catalog.py": "bef3cf8e2e2f5b6d3bfb6c8c1c2db704c1f19ee77c1a62830ed05105e07106d9",
+    "scripts/plot_error_control.py": "84594357a354f815195d743a7484aef01b0fb9a2f5a5470274f60bcc39c284d3",
+    "scripts/plot_kuiper.py": "8b7361dac77ff6baff28ad737005ef583edc7206b733cf7e43b454cd9384b76c",
+    "scripts/plot_kuiper_ring.py": "7b29bd4fcc8fe9de4db4c417a91362053e9a08846bcfad149080c574941fe68e",
+    "scripts/plot_orbit_cohort.py": "af9b96358089a18eb67a296af7e7316bc182f1195f3d34c5c3a2fed40f62e583",
+    "scripts/plot_orbit_observations.py": "d6f74b3d1474abd900604a232d5194843bff0c51a1e51190fa543e260cfe5d24",
+    "scripts/pn_spin_model.py": "5dc2df3223fb5e8fc21045698e120b6197a0965a6cd6a6289030c2f2f62b9235",
+    "scripts/refine_rotation_year_reference.py": "b9f8cd549ba094ad2528cf8a577153495002bbbf01d8f9615aec066b61cddfe7",
+    "scripts/relative_canonical.py": "3d44dfdbeeffc41e3ce037fe78fb282df010eee27c0b6d88b4afda1370fb80e7",
+    "scripts/relative_canonical_checkpoint.py": "a92bd4a7ae4bd131a76fc840187e64626eaab8445b34ee99acfaa8fc059a7919",
+    "scripts/resume_relative_canonical.py": "72c7947f9bb5a246ba115f0846ea490ba81f116d14e92eec988288c2ffd7b0dd",
+    "scripts/rigid_pn_model.py": "bd1b7126e7d29a4c899e20b5b27b6f42b316a58724f968ce8e054f5d749afbf1",
+    "scripts/rotation_time.py": "0d88272ade5c6cad2aef50dbe45bef4869e4766d479b8f5bc9b36fa4cc4bfca0",
+    "scripts/run_lunar_research.py": "3f4f3ae7ed318b789cdf8da9659a305fafce656a24eea0e5ca4b76ad6cd88ebb",
+    "scripts/schwarzschild_metric.py": "561960a22313995c0a2098138d5e7b73bcd31f006de853d00b4291f850e24fe6",
+    "scripts/setup_gnu_tools.py": "e85c285e029f4e5cc4b8f887cf0e715baf7d9ca5730ab27f59703f936c435101",
+    "scripts/sr_cloud.py": "bdc3d8220a30a7af9040dcab936cb76c189f107ebebf8da30254e0e0c30171f3",
+    "scripts/validation/kuiper_absolute_assessment.py": "d09ba117e5c1f9113d97d8847c59efdfb1e98d6d0d4c741b8c79e9747710215b",
+    "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+    "src/solar_simulator/__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/app.py": "b8b2419f2dbf74a5040b00379ee313193f21892824e9d5c371f7fb52cddefb8e",
+    "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+    "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+    "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+    "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/data/__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+    "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+    "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/experiment.py": "de97ad1c37b0af79aecb986a3923634fa4131e248e82eff93ec25edf22d34395",
+    "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+    "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+    "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+    "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+    "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+    "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src/solar_simulator/storage.py": "7cf8047292d34d20fafb864e593809e37f1e242023d2fd00d9cfac167bed562c",
+    "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+    "tests/test_accuracy.py": "4c5b08e3af5eeb03ef7fa509bcc981b30066dfd7454442835bc91cd5621ad001",
+    "tests/test_anchored_reference.py": "d48de0afba91552a17028c2e04ed44f1bc341366fae694536d1b04af8786e995",
+    "tests/test_app.py": "3824192b27e687fc09ca6f78df2b1e127428b4ec9392b71ad86774b451447c58",
+    "tests/test_asteroid_catalog.py": "74e5c113fddbf76d1d9d39efb290aac1f474fc30c57caeab11ee6b74c759b266",
+    "tests/test_asteroids.py": "5117ace9d7062c17ed7cfcaa4b0bf6af56b8575e48fc898be2cfa599d97cd2e0",
+    "tests/test_asteroids_catalog.py": "af944829871e3599dbad28b22c55498323a98186d6f015fb22386811c76fb625",
+    "tests/test_asteroids_full.py": "e5930a58c2a0767d579a48370df3a5a4e7247127d585c3da503f1b237b6c36f5",
+    "tests/test_bound_body.py": "ee1bac943dcb1b520b590e2c4c2f74f829e97df0c5319e5b00bb293e6b186b74",
+    "tests/test_bound_body_audit.py": "9190bdb57e9b382fc22b51d13e6ee5559fb6bcda3d82d0213565f5ff878c9e19",
+    "tests/test_boundary_cloud_audit.py": "2396d2baad67b4af451012078ae1c20319e90042a76d551a10a638e757bd15ac",
+    "tests/test_canonical_checkpoint.py": "59d41e5ee641f40bd1ab25a80d07cfc24aa57e8c1791084417629af008766a94",
+    "tests/test_canonical_initial.py": "5f9c38d3f5d636ee2e5a7cbdbd85d200d04d4c56854b6adae20662d3125a4d4e",
+    "tests/test_canonical_solar.py": "d098271e7b79199f5110b87876c8c4b6b3dd0cf9119f83f1aa7c2e71c5f3a36c",
+    "tests/test_catalog_figures.py": "a7c122d7679b374f8ba83ffa545adb110a0be8f2e961f00753246a22299f54e7",
+    "tests/test_chart_current.py": "65fe8eb052917d7e6bdd91877f53bce0c3392141d8001dd3b6a77a984c35d141",
+    "tests/test_cli.py": "d6e4c91b18ecb59327eee9c3e9dcb160268eedbe8377bb9e4baa5578adf8120e",
+    "tests/test_collisions.py": "0ff4a2795be97838521f6acdcb2bc7e0e240f934fecd1bd047c4e4d26303ec20",
+    "tests/test_contacts.py": "e67a8ca66906ad3c2ffe6ff56630c0d42b135cf4b46955fe4824429bb2a66999",
+    "tests/test_continuum_conventions.py": "7364cca772291abe0eeffc490e8cc87aa085b5863f634124a45135a2b93e58ab",
+    "tests/test_continuum_sphere.py": "64bab34907c7eafc1e65e2530f5a272b3bfb40ade00cca5a80e9c8c35e15cb21",
+    "tests/test_continuum_stress.py": "e66cf66bd237542f886a87e5f591578b54e5876f538b23ad63878a029eb81a06",
+    "tests/test_conventions_audit.py": "92eb3e0e03f2843bb2b1a81c666aca2935f4aa93adfdad878d8c8500e7720674",
+    "tests/test_conventions_reference.py": "0083bb53bce068b8a9dd49303c60317396c5abd1c1d4ec6c01b126e4d5a672d4",
+    "tests/test_convergence.py": "d417449edaf3087cf41ec6d2250dd9701ecec92a2bdf770241b8ddcd42c9cd1b",
+    "tests/test_current_audit.py": "09ebdcfe1e959d217b30cf647943df4919a09f3fdf88cb58313ba51c59ca3325",
+    "tests/test_current_reference.py": "42e9faddc06c909002c9eaa13acddd7e773481bc58650cc42d665e2ea20284bd",
+    "tests/test_density_moments.py": "0e15e8b5bb5d85e530e6785c68e2d5cd7b3a841e2c8e2dc97237e97fb45b5639",
+    "tests/test_diagnostics.py": "0908fac7757fe8ca6232363c92b22941b96ced11974d8b063ea88055e860f07f",
+    "tests/test_ephemerides.py": "e679e08381d472b234a871174c56b336bbb1f2d6e4fe75d1b726f6e81e83cc06",
+    "tests/test_error_control.py": "d3fe6d899f6adb9b835ba716667edc2968b5e9fd620f248135f947c89a9f840f",
+    "tests/test_experiment.py": "66c52799a212a3e0fc65feee48b091e3fd62174869230922c0d131d51f29ffba",
+    "tests/test_external_metric.py": "b32e638f0a66b721586eb1de6169a00ced68faff0518b206cd3a83135b452380",
+    "tests/test_fluid_spin.py": "8f76897090aefc46d2b1cd3d2faa1ee37adde4008f43a3f640812a47098264e2",
+    "tests/test_fluid_spin_audit.py": "3849ab99c4ea1637b1aabe24ca0e4690ecfe3cce38f31544c4ee2e919ee5d4ad",
+    "tests/test_harmonic_audit.py": "7cfcbee8681e08031a6611b02743df646b7e73f7f3263912b083c4d20d9fd1ce",
+    "tests/test_harmonic_matching.py": "e3ae8e490b4f4f82a1cf5745f9190ae4a2443fcb2539f641c635b836626b637b",
+    "tests/test_harmonic_reference.py": "b7a9206da5085c8d86d843107f945b2da297a43605d27f1c89c16c88820517a4",
+    "tests/test_harmonic_sphere.py": "b51a55f08379437be410ded0143c21807b94d0084a6ca2c4993156265e884d6b",
+    "tests/test_impacts.py": "3972505cdb4bffb58cdf21956dc9985a15c52dd0dae0271714fa9b7e5d333362",
+    "tests/test_independent_eih_rust.py": "c2220cd35e8faf6f608a89be9a4b90633d1a4b03c344cf26b459ed4d0039c335",
+    "tests/test_kuiper.py": "ea88b092905bb2395070648f705b2689a12886da0e988447fd21777efb3bca93",
+    "tests/test_kuiper_ring.py": "e6108c79bc8300f3d021eb9e8d513b17903c93b0ea579f0f1ae3155a8c9a9fc4",
+    "tests/test_local_event_map.py": "9e29d2b3b0a5f1985a79e35dd8d6fc7d74efafa829eabfd5fa6f52bdbea82c3c",
+    "tests/test_local_multipole.py": "ec85166fd2db1385f54336a08c7c47fbc0c005d142be63ce4844274cb925cdbd",
+    "tests/test_local_rotation_audit.py": "c647c887e4e2761e121440aa0e34c2ce8b3e658dd7d8dbd6c3a9ef88268a133c",
+    "tests/test_local_rotation_transfer.py": "ebe59d03e3fb412ae8ede8a4f523ebd2e80329e187865df26cc6738e2d19e343",
+    "tests/test_lunar_canonical_diagnostic.py": "d0fc8076504fa2ac811d777a62c77188961a40a3f6647d36ebc604ec542c084b",
+    "tests/test_lunar_initial_boundary.py": "7445d564959cb49c46a82716df0d1da4cbb72239b35b25d9a2ac0bce83057543",
+    "tests/test_lunar_initial_receipt.py": "a761409c689c0a3bb3073c8f3d40dc355b41839dbc000c648d277edc1a1602d9",
+    "tests/test_lunar_research.py": "07cd39d8544930c4522c2c8bdf7af0995ee0560b672008e327a3d872648684b7",
+    "tests/test_lunar_research_audit.py": "3e25f48d54c7557541fefd542652b966b0b66ddf08752ad7df72b755d7cc3555",
+    "tests/test_mergers.py": "729297ce9bf4e16f97b0d47d03206b2c5edbc64d21693b72b6fb9dba720a825e",
+    "tests/test_metric_spin_audit.py": "13bd521daaffe5beaab954ea73b197824df519a2e638087fa084245264a8abab",
+    "tests/test_metric_spin_transport.py": "f4b51a33b8295d1c3c77d475f5d5bb8674d654b18d609471f28441e5b53d859d",
+    "tests/test_motion.py": "a6c764d0f4c5a158fe9029ecb022d81fc2c83d2a709ff0d4391caa698f9e74c8",
+    "tests/test_native.py": "0ad0c6b793f0aacebfa0a34a34b89bb4474a7921386c83730a51234b55a4779d",
+    "tests/test_native_collisions.py": "90846f052c6361918a0f1a054a68550d257dc5243bd86ccc32329e1b999a5e5c",
+    "tests/test_native_forces.py": "230ff8e9b9a987ebc843a4310e06f6d6fef6147c181dda1040c174623f63c59e",
+    "tests/test_nbody_pn_spin.py": "f1b3ded9886fa86cbc2fd94c385f2a7cb178d1fc0b1a43676e1b71a75cc64565",
+    "tests/test_nbody_rotation.py": "2cd76002ac6b91a266e51d200ad4b66e271ab0d0227e3d19657f169ff4cd596f",
+    "tests/test_oblateness.py": "5d47221540da059b4f9ae44bb3a3a4117fb689a1163ed334130ffd23b9c28957",
+    "tests/test_orbit_determination.py": "7db993ec1e3121efab1d8102bf645d24d7018e445660d255fbcf0f5d84c52469",
+    "tests/test_orbit_noise.py": "a8cc6f417a880ac87ee639e8f0821b695562f11c811af475444ba5d62e1ca0b3",
+    "tests/test_orientation.py": "c053a6635f42e46d22c054f10591f1e728d1cbd25d015ddb13466384296a007d",
+    "tests/test_perturber_audit.py": "33740870b47a7cb47640856230273e261dfc2610c84137c672667a3bc250d7e9",
+    "tests/test_perturbers.py": "64b4bec6ae6590848770f467313f492ccbafcdfb1812a952daecd33ed53feae7",
+    "tests/test_physics_symmetries.py": "50e32b8de961a83a34d8bab1639014b6e888530ccb87c6a3d14531ccdbf3caf0",
+    "tests/test_pinned_lunar_initial.py": "52f510aadcc25cce21a03fa724ee8aac5317cbc930f0ca5fd885a706a5bb6fe2",
+    "tests/test_planets.py": "9a04ef6edab70cb3184fd1046ce27cb14145f34f96c547c41ec8bef826a1daa0",
+    "tests/test_pn_spin_model.py": "10b42726ffc81d0cb21e4b69e957fd9bd8cf9c2f6ebacfb0d5c89a682204ed27",
+    "tests/test_relative_canonical.py": "f43300fd0e26e32daeee75d1acf4160dcc9d21bdbd86a985f21ead345f291335",
+    "tests/test_relative_canonical_audit.py": "fe6dcb55edd27b8788c1d15362ea02d7d43e58ddc6bdcb3ae148a119add54243",
+    "tests/test_relative_canonical_checkpoint.py": "12a92989baae4a572e39e58869d5a6473a3e082159d2fcf677442747e7ed5153",
+    "tests/test_relative_canonical_checkpoint_audit.py": "7a157cf81973f4ebad58d28d7a8364c30ecc0fc5d054f716f5d9278a2238fde4",
+    "tests/test_relative_coordinates.py": "26ad7a3d129494bd0ab7cc3b0dec6a841767474c34fa8a1cf5e805cf9afb3ed0",
+    "tests/test_relativity.py": "80a8181d47c81a6cdb6db45bba12f69ca1ecceffad42a25c77c41a85ccbadab5",
+    "tests/test_resolved_moon.py": "a583968d665db2161a316c7e29d7fbd72fb14a188bf7987192d965319eb82a18",
+    "tests/test_rigid_pn_model.py": "190400bbab11118b895be42985129ebae2b7d0d895cde082dd1ca07aa3f091f2",
+    "tests/test_rotation.py": "6e2144971517263c10351a7d44b55f596804251b423f32e57d9058500620947b",
+    "tests/test_rotation_runtime_checks.py": "db2f6216e136472bb6ea47cc03d81c626b2beeda93345e4534c860d346e74ffc",
+    "tests/test_rotation_time.py": "ac269bfb7eacdc054ad031634bfd5b194e7c643971f47655d242d33080010457",
+    "tests/test_rotation_time_audit.py": "bcb6e9c52f482c99086b1c5731eda9f48ddee24367af588f5a095f78d9ccbd2e",
+    "tests/test_rotation_year_audit.py": "a6b3ce614761be270d85e2ba9a9f1b240e763bf7223b4b0931f7bdbfde2d9688",
+    "tests/test_runner.py": "f17379673316ce7675b02643ecbd8310b47742e2246e418ac35b4f04e68d13a3",
+    "tests/test_rust_backend.py": "87579c57069c1bf41c8393cb6071071949248864c445c3e5af63ad1d597083a8",
+    "tests/test_rust_contacts.py": "ccb5f3b008d2dfe82a3051c56bc6a046859d1b0af2885e4b7ac952ce857162d6",
+    "tests/test_scenarios.py": "2c3467304ca471a9db00c11bb9618f167a806fedee592cbe971d93c53b48d7c8",
+    "tests/test_simulation.py": "bb6e20176fa4ca727181b1eca0e384d67edecca36acc9af77e8f02a78e330786",
+    "tests/test_solar_j2.py": "b849ace46ed78d3ef8e4ff36d7b10aa614fb0764d0f249f798e6f446032dd051",
+    "tests/test_spin_initial.py": "4d5fd696a2ac5b4d54defd0189ecd978a233f40a40bd90d81cbf3c5147b9cf58",
+    "tests/test_sr_cloud.py": "b192e19fd1e4a2d5080a03e65605ddc1ff82f72c8e393ff72ba1bb2d924cc64d",
+    "tests/test_storage.py": "d93ae7d464f1d9b61c4ddbb93cc6726f53da041387d274873398735d88ae51a5",
+    "tests/test_stress_audit.py": "d5fdc95fa014fc128e3a22f0ca09b8fe3ebd261b84f35a5f18975d3ac796d43f",
+    "tests/test_vector3.py": "8aa3a5b1293f8e179b9097a3a592d22ad8a2777fb5ca56e2aa41d37d3dd07ef0",
+    ".tools/rotation99/harmonic-primary.html": "ebf3e7551aadd6f467e95da6db7d8c957278a425c19589543b6d4aac7b8feb57",
+    ".tools/rotation99/junction-comment.html": "fca0b32023b52cef3913b6e3b7807cb57b28e4b2e8d60a29eeb727efddd3f408",
+    ".tools/rotation99/source-review.json": "fb9143aed8b770c5cfee24ff0dc69baae65b04986d1e6093ebcdad5ce24a0889",
+    ".tools/rotation99/polynomial-check.json": "eca3b4b71f5746786ce5b91446c7c2a3d07da145d34578286fc8b8034f16fcec",
+    ".tools/rotation99/check_polynomials.py": "eea61e3b4cff97f5e553e2c7239f5c981bc6ff653866dcefa01ae5c7ae033272",
+    ".tools/rotation86-89/hartle1967.pdf": "ed263946e9bc13842399b5c9e9c2eae31823e7323bc81b456fb5174697cefc35",
+    ".tools/rotation86-89/source-review.json": "b86e631ae250b6d37920138123231eb1dae8ef4edb5a19390b21e74ac89cfbb4"
+  },
+  "arrays": {
+    "case-0-production": {
+      "path": ".tools/rotation107/case-0-production.npz",
+      "sha256": "d989d61d8b53cdf44052389e0867739210ccb824b269bb3eacfde8d5968b121f",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-0-reference-0": {
+      "path": ".tools/rotation107/case-0-reference-0.npz",
+      "sha256": "2067598f44ae80279326eddb0bfef2e1379388201b5fa5a058179c7056aed862",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-0-reference-1": {
+      "path": ".tools/rotation107/case-0-reference-1.npz",
+      "sha256": "11e29180471f0f075091c48808616c217121d1219712f339c7b1094ad9576f80",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-0-tighter": {
+      "path": ".tools/rotation107/case-0-tighter.npz",
+      "sha256": "5baa1abfec8bcc90b88a794a3adbf8194111e0933d7573ee3ee80ca9f56da8db",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-0-pointgrid-0": {
+      "path": ".tools/rotation107/case-0-pointgrid-0.npz",
+      "sha256": "23cac6141241d4398a80aba9fb75f3d9cc1ddc221416a2f4fcd54687429a3f40",
+      "shapes": {
+        "radius_fraction": [
+          5760
+        ],
+        "directions": [
+          5760,
+          3
+        ],
+        "quadrature_weights": [
+          5760
+        ],
+        "masses_kg": [
+          5760
+        ],
+        "positions_m": [
+          5760,
+          3
+        ],
+        "velocities_m_s": [
+          5760,
+          3
+        ],
+        "momenta_kg_m_s": [
+          5760,
+          3
+        ],
+        "areal_coordinate_density": [
+          5760
+        ],
+        "mapped_coordinate_density": [
+          5760
+        ],
+        "mapped_positions_m": [
+          5760,
+          3
+        ],
+        "mapped_velocities_m_s": [
+          5760,
+          3
+        ],
+        "mapped_momenta_kg_m_s": [
+          5760,
+          3
+        ],
+        "jacobians": [
+          5760,
+          3,
+          3
+        ],
+        "determinants": [
+          5760
+        ],
+        "areal_metrics": [
+          5760,
+          3,
+          3
+        ],
+        "mapped_metrics": [
+          5760,
+          3,
+          3
+        ],
+        "areal_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_Euclidean_C_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_STF_M_kg_m2": [
+          3,
+          3
+        ],
+        "areal_first_moment_kg_m": [
+          3
+        ],
+        "mapped_first_moment_kg_m": [
+          3
+        ],
+        "areal_axial_charge_kg_m2_s": [
+          3
+        ],
+        "mapped_axial_charge_kg_m2_s": [
+          3
+        ],
+        "areal_pairing_kg_m2_s2": [
+          5760
+        ],
+        "mapped_pairing_kg_m2_s2": [
+          5760
+        ],
+        "areal_quadratic_kinetic_j": [],
+        "mapped_quadratic_kinetic_j": []
+      }
+    },
+    "case-0-pointgrid-1": {
+      "path": ".tools/rotation107/case-0-pointgrid-1.npz",
+      "sha256": "472a593609ae50dda52cf8473366e0202a74f1d196d8b4d30710dbe6cd1639c7",
+      "shapes": {
+        "radius_fraction": [
+          25600
+        ],
+        "directions": [
+          25600,
+          3
+        ],
+        "quadrature_weights": [
+          25600
+        ],
+        "masses_kg": [
+          25600
+        ],
+        "positions_m": [
+          25600,
+          3
+        ],
+        "velocities_m_s": [
+          25600,
+          3
+        ],
+        "momenta_kg_m_s": [
+          25600,
+          3
+        ],
+        "areal_coordinate_density": [
+          25600
+        ],
+        "mapped_coordinate_density": [
+          25600
+        ],
+        "mapped_positions_m": [
+          25600,
+          3
+        ],
+        "mapped_velocities_m_s": [
+          25600,
+          3
+        ],
+        "mapped_momenta_kg_m_s": [
+          25600,
+          3
+        ],
+        "jacobians": [
+          25600,
+          3,
+          3
+        ],
+        "determinants": [
+          25600
+        ],
+        "areal_metrics": [
+          25600,
+          3,
+          3
+        ],
+        "mapped_metrics": [
+          25600,
+          3,
+          3
+        ],
+        "areal_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_Euclidean_C_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_STF_M_kg_m2": [
+          3,
+          3
+        ],
+        "areal_first_moment_kg_m": [
+          3
+        ],
+        "mapped_first_moment_kg_m": [
+          3
+        ],
+        "areal_axial_charge_kg_m2_s": [
+          3
+        ],
+        "mapped_axial_charge_kg_m2_s": [
+          3
+        ],
+        "areal_pairing_kg_m2_s2": [
+          25600
+        ],
+        "mapped_pairing_kg_m2_s2": [
+          25600
+        ],
+        "areal_quadratic_kinetic_j": [],
+        "mapped_quadratic_kinetic_j": []
+      }
+    },
+    "case-1-production": {
+      "path": ".tools/rotation107/case-1-production.npz",
+      "sha256": "9c029fa659b3734e65f5bfb28b55088ca9c011d1b8d08d1a56771b4f88b886e8",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-1-reference-0": {
+      "path": ".tools/rotation107/case-1-reference-0.npz",
+      "sha256": "c685c52490a1df31c5359c3e53e44889bb89b2040753f69081528ec015e4d453",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-1-reference-1": {
+      "path": ".tools/rotation107/case-1-reference-1.npz",
+      "sha256": "6deca71dd8f6a6ae6a558b7ec20ff35e0991967e8be3896db2255c66ccaeb023",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-1-tighter": {
+      "path": ".tools/rotation107/case-1-tighter.npz",
+      "sha256": "8f9eeb3a5e564db6244f27d0bab056859fec6608081617582decdf6a5b2697e3",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-1-pointgrid-0": {
+      "path": ".tools/rotation107/case-1-pointgrid-0.npz",
+      "sha256": "b7ccb3b5e708372bfccb381c596e0233b10c7d918ee3447f16d21daf20d774d1",
+      "shapes": {
+        "radius_fraction": [
+          5760
+        ],
+        "directions": [
+          5760,
+          3
+        ],
+        "quadrature_weights": [
+          5760
+        ],
+        "masses_kg": [
+          5760
+        ],
+        "positions_m": [
+          5760,
+          3
+        ],
+        "velocities_m_s": [
+          5760,
+          3
+        ],
+        "momenta_kg_m_s": [
+          5760,
+          3
+        ],
+        "areal_coordinate_density": [
+          5760
+        ],
+        "mapped_coordinate_density": [
+          5760
+        ],
+        "mapped_positions_m": [
+          5760,
+          3
+        ],
+        "mapped_velocities_m_s": [
+          5760,
+          3
+        ],
+        "mapped_momenta_kg_m_s": [
+          5760,
+          3
+        ],
+        "jacobians": [
+          5760,
+          3,
+          3
+        ],
+        "determinants": [
+          5760
+        ],
+        "areal_metrics": [
+          5760,
+          3,
+          3
+        ],
+        "mapped_metrics": [
+          5760,
+          3,
+          3
+        ],
+        "areal_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_Euclidean_C_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_STF_M_kg_m2": [
+          3,
+          3
+        ],
+        "areal_first_moment_kg_m": [
+          3
+        ],
+        "mapped_first_moment_kg_m": [
+          3
+        ],
+        "areal_axial_charge_kg_m2_s": [
+          3
+        ],
+        "mapped_axial_charge_kg_m2_s": [
+          3
+        ],
+        "areal_pairing_kg_m2_s2": [
+          5760
+        ],
+        "mapped_pairing_kg_m2_s2": [
+          5760
+        ],
+        "areal_quadratic_kinetic_j": [],
+        "mapped_quadratic_kinetic_j": []
+      }
+    },
+    "case-1-pointgrid-1": {
+      "path": ".tools/rotation107/case-1-pointgrid-1.npz",
+      "sha256": "5ee4f25093f0a0c7ac8d39fe7f80fba8cd557b99a57e59d8340ce3d83bc11718",
+      "shapes": {
+        "radius_fraction": [
+          25600
+        ],
+        "directions": [
+          25600,
+          3
+        ],
+        "quadrature_weights": [
+          25600
+        ],
+        "masses_kg": [
+          25600
+        ],
+        "positions_m": [
+          25600,
+          3
+        ],
+        "velocities_m_s": [
+          25600,
+          3
+        ],
+        "momenta_kg_m_s": [
+          25600,
+          3
+        ],
+        "areal_coordinate_density": [
+          25600
+        ],
+        "mapped_coordinate_density": [
+          25600
+        ],
+        "mapped_positions_m": [
+          25600,
+          3
+        ],
+        "mapped_velocities_m_s": [
+          25600,
+          3
+        ],
+        "mapped_momenta_kg_m_s": [
+          25600,
+          3
+        ],
+        "jacobians": [
+          25600,
+          3,
+          3
+        ],
+        "determinants": [
+          25600
+        ],
+        "areal_metrics": [
+          25600,
+          3,
+          3
+        ],
+        "mapped_metrics": [
+          25600,
+          3,
+          3
+        ],
+        "areal_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_Euclidean_C_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_STF_M_kg_m2": [
+          3,
+          3
+        ],
+        "areal_first_moment_kg_m": [
+          3
+        ],
+        "mapped_first_moment_kg_m": [
+          3
+        ],
+        "areal_axial_charge_kg_m2_s": [
+          3
+        ],
+        "mapped_axial_charge_kg_m2_s": [
+          3
+        ],
+        "areal_pairing_kg_m2_s2": [
+          25600
+        ],
+        "mapped_pairing_kg_m2_s2": [
+          25600
+        ],
+        "areal_quadratic_kinetic_j": [],
+        "mapped_quadratic_kinetic_j": []
+      }
+    },
+    "case-2-production": {
+      "path": ".tools/rotation107/case-2-production.npz",
+      "sha256": "c7e731188ce530e4cd0c10989937e87159b28b9128879a84cb29456310a4748d",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-2-reference-0": {
+      "path": ".tools/rotation107/case-2-reference-0.npz",
+      "sha256": "6e2bb9acf5fe7d9537cb7fc5e1190064e73eaa48093d5aa915822803aeb6ce8b",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-2-reference-1": {
+      "path": ".tools/rotation107/case-2-reference-1.npz",
+      "sha256": "864908abc3146735e140a9e6c68c8a1092766df6104445833a7db0f2afc685e1",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-2-tighter": {
+      "path": ".tools/rotation107/case-2-tighter.npz",
+      "sha256": "45bada85deae96f73138cf67a1669f3694408ad9e2d9810f10d90f6d305dfee4",
+      "shapes": {
+        "radius_fraction": [
+          129
+        ],
+        "initial": [
+          2
+        ],
+        "states": [
+          129,
+          2
+        ]
+      }
+    },
+    "case-2-pointgrid-0": {
+      "path": ".tools/rotation107/case-2-pointgrid-0.npz",
+      "sha256": "a5d73eb24df060c86de77b96e03d89ef45e18334fb3a577fbca0e848e09a8374",
+      "shapes": {
+        "radius_fraction": [
+          5760
+        ],
+        "directions": [
+          5760,
+          3
+        ],
+        "quadrature_weights": [
+          5760
+        ],
+        "masses_kg": [
+          5760
+        ],
+        "positions_m": [
+          5760,
+          3
+        ],
+        "velocities_m_s": [
+          5760,
+          3
+        ],
+        "momenta_kg_m_s": [
+          5760,
+          3
+        ],
+        "areal_coordinate_density": [
+          5760
+        ],
+        "mapped_coordinate_density": [
+          5760
+        ],
+        "mapped_positions_m": [
+          5760,
+          3
+        ],
+        "mapped_velocities_m_s": [
+          5760,
+          3
+        ],
+        "mapped_momenta_kg_m_s": [
+          5760,
+          3
+        ],
+        "jacobians": [
+          5760,
+          3,
+          3
+        ],
+        "determinants": [
+          5760
+        ],
+        "areal_metrics": [
+          5760,
+          3,
+          3
+        ],
+        "mapped_metrics": [
+          5760,
+          3,
+          3
+        ],
+        "areal_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_Euclidean_C_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_STF_M_kg_m2": [
+          3,
+          3
+        ],
+        "areal_first_moment_kg_m": [
+          3
+        ],
+        "mapped_first_moment_kg_m": [
+          3
+        ],
+        "areal_axial_charge_kg_m2_s": [
+          3
+        ],
+        "mapped_axial_charge_kg_m2_s": [
+          3
+        ],
+        "areal_pairing_kg_m2_s2": [
+          5760
+        ],
+        "mapped_pairing_kg_m2_s2": [
+          5760
+        ],
+        "areal_quadratic_kinetic_j": [],
+        "mapped_quadratic_kinetic_j": []
+      }
+    },
+    "case-2-pointgrid-1": {
+      "path": ".tools/rotation107/case-2-pointgrid-1.npz",
+      "sha256": "b85eba7b447adc73bade381e7394f58e5437b2b0f1440c1cda0068dc3218cee7",
+      "shapes": {
+        "radius_fraction": [
+          25600
+        ],
+        "directions": [
+          25600,
+          3
+        ],
+        "quadrature_weights": [
+          25600
+        ],
+        "masses_kg": [
+          25600
+        ],
+        "positions_m": [
+          25600,
+          3
+        ],
+        "velocities_m_s": [
+          25600,
+          3
+        ],
+        "momenta_kg_m_s": [
+          25600,
+          3
+        ],
+        "areal_coordinate_density": [
+          25600
+        ],
+        "mapped_coordinate_density": [
+          25600
+        ],
+        "mapped_positions_m": [
+          25600,
+          3
+        ],
+        "mapped_velocities_m_s": [
+          25600,
+          3
+        ],
+        "mapped_momenta_kg_m_s": [
+          25600,
+          3
+        ],
+        "jacobians": [
+          25600,
+          3,
+          3
+        ],
+        "determinants": [
+          25600
+        ],
+        "areal_metrics": [
+          25600,
+          3,
+          3
+        ],
+        "mapped_metrics": [
+          25600,
+          3,
+          3
+        ],
+        "areal_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_second_moment_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_Euclidean_C_kg_m2": [
+          3,
+          3
+        ],
+        "mapped_STF_M_kg_m2": [
+          3,
+          3
+        ],
+        "areal_first_moment_kg_m": [
+          3
+        ],
+        "mapped_first_moment_kg_m": [
+          3
+        ],
+        "areal_axial_charge_kg_m2_s": [
+          3
+        ],
+        "mapped_axial_charge_kg_m2_s": [
+          3
+        ],
+        "areal_pairing_kg_m2_s2": [
+          25600
+        ],
+        "mapped_pairing_kg_m2_s2": [
+          25600
+        ],
+        "areal_quadratic_kinetic_j": [],
+        "mapped_quadratic_kinetic_j": []
+      }
+    }
+  },
+  "jobs": {
+    "case-0-production": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "max_step": 0.001953125,
+      "nfev": 7775,
+      "seconds": 0.5087358000000677
+    },
+    "case-0-reference-0": {
+      "method": "RK45",
+      "rtol": 2e-09,
+      "max_step": 0.03125,
+      "nfev": 374,
+      "seconds": 0.05009310000059486
+    },
+    "case-0-reference-1": {
+      "method": "RK45",
+      "rtol": 2e-12,
+      "max_step": 0.03125,
+      "nfev": 1280,
+      "seconds": 0.054633300000205054
+    },
+    "case-0-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "max_step": 0.00390625,
+      "nfev": 4604,
+      "seconds": 0.08307869999953255
+    },
+    "case-1-production": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "max_step": 0.001953125,
+      "nfev": 7832,
+      "seconds": 0.49016279999977996
+    },
+    "case-1-reference-0": {
+      "method": "RK45",
+      "rtol": 2e-09,
+      "max_step": 0.03125,
+      "nfev": 752,
+      "seconds": 0.04931529999976192
+    },
+    "case-1-reference-1": {
+      "method": "RK45",
+      "rtol": 2e-12,
+      "max_step": 0.03125,
+      "nfev": 2732,
+      "seconds": 0.0689594000004945
+    },
+    "case-1-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "max_step": 0.00390625,
+      "nfev": 5366,
+      "seconds": 0.08836049999990792
+    },
+    "case-2-production": {
+      "method": "DOP853",
+      "rtol": 1e-11,
+      "max_step": 0.001953125,
+      "nfev": 7889,
+      "seconds": 0.5031975999991118
+    },
+    "case-2-reference-0": {
+      "method": "RK45",
+      "rtol": 2e-09,
+      "max_step": 0.03125,
+      "nfev": 950,
+      "seconds": 0.052841600000647304
+    },
+    "case-2-reference-1": {
+      "method": "RK45",
+      "rtol": 2e-12,
+      "max_step": 0.03125,
+      "nfev": 3530,
+      "seconds": 0.07657099999960337
+    },
+    "case-2-tighter": {
+      "method": "DOP853",
+      "rtol": 2e-13,
+      "max_step": 0.00390625,
+      "nfev": 5756,
+      "seconds": 0.09283580000010261
+    }
+  },
+  "metrics": {
+    "mass_reference_relative": 9.897727452325476e-15,
+    "areal_first_reference_relative": 1.45307600907145e-14,
+    "harmonic_first_reference_relative": 1.5615269595875703e-14,
+    "areal_second_reference_relative": 1.9181658360738975e-14,
+    "harmonic_second_reference_relative": 1.7716375598392205e-14,
+    "axial_reference_relative": 1.6655737399883753e-14,
+    "kinetic_reference_relative": 2.3854554465392414e-14,
+    "pointgrid_levels_relative": 8.973777359641007e-15,
+    "analytic_quadrature_levels_relative": 2.145193746887807e-14,
+    "radial_reference_levels_relative": 4.913518197884197e-12,
+    "radial_reference_tighter_relative": 4.348549978297926e-15,
+    "cotangent_pairing_relative": 1.335774795193948e-16,
+    "axial_pullback_relative": 1.9093110806731908e-16,
+    "kinetic_pullback_relative": 1.9867458096719205e-16,
+    "metric_pullback_relative": 2.7583586153404117e-16,
+    "density_measure_relative": 5.475683218127566e-17,
+    "coordinate_C_M_reference_relative": 5.628283845963891e-14,
+    "sampled_current_shape_floor": 0.3169394128414617,
+    "sampled_differential_floor": 0.5791933741368573,
+    "wrong_forward_momentum_pairing_relative": 0.2671961675057785,
+    "wrong_Euclidean_momentum_axial_relative": 0.7548114661463909,
+    "wrong_differential_as_position_relative": 0.7942536995121028,
+    "wrong_centre_affine_tensor_relative": 0.2098135786939242,
+    "wrong_density_as_scalar_mass_relative": 0.6591603975183514
+  },
+  "confirmations": {
+    "sources_preserved": true,
+    "arrays_reverified": true,
+    "raw_initial_preserved": true,
+    "grid_preserved": true,
+    "physical_claims_false": true
+  },
+  "cases": [
+    {
+      "compactness": 0.02,
+      "point_counts": [
+        5760,
+        25600
+      ],
+      "chart": {
+        "scale": 0.9701006954464743,
+        "residual_gauge": -4.468746140933882e-05
+      },
+      "analytic": {
+        "mass_kg": 1.5799830376456376,
+        "areal_first_kg_m": [
+          0.08112590064170747,
+          -0.03245036025668298,
+          0.048675540385024474
+        ],
+        "harmonic_first_kg_m": [
+          0.07924783676320453,
+          -0.03169913470528181,
+          0.047548702057922713
+        ],
+        "areal_second_kg_m2": [
+          [
+            1.3946762831825583,
+            0.047557987968066415,
+            0.0
+          ],
+          [
+            0.047557987968066415,
+            1.3188238235159133,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.2536053124513409
+          ]
+        ],
+        "harmonic_second_kg_m2": [
+          [
+            1.3320233909053327,
+            0.04542154560289942,
+            0.0
+          ],
+          [
+            0.04542154560289942,
+            1.2595784431048909,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.1972897361801618
+          ]
+        ],
+        "axial_kg_m2_s": [
+          0.0026522775182043663,
+          -0.001132850503246785,
+          0.0019440329538319948
+        ],
+        "quadratic_kinetic_j": 1.059889696054287e-05,
+        "harmonic_Euclidean_C_kg_m2": [
+          [
+            2.4568681792850526,
+            -0.04542154560289942,
+            0.0
+          ],
+          [
+            -0.04542154560289942,
+            2.5293131270854943,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            2.5916018340102234
+          ]
+        ],
+        "harmonic_STF_M_kg_m2": [
+          [
+            0.06905953417520427,
+            0.04542154560289942,
+            0.0
+          ],
+          [
+            0.04542154560289942,
+            -0.0033854136252375877,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.06567412054996669
+          ]
+        ]
+      },
+      "point_snapshots": [
+        {
+          "mass_kg": 1.5799830376456272,
+          "areal_first_kg_m": [
+            0.08112590064170626,
+            -0.032450360256682693,
+            0.048675540385023926
+          ],
+          "harmonic_first_kg_m": [
+            0.07924783676320357,
+            -0.031699134705281545,
+            0.04754870205792226
+          ],
+          "areal_second_kg_m2": [
+            [
+              1.3946762831825363,
+              0.047557987968065575,
+              2.3852447794681098e-18
+            ],
+            [
+              0.047557987968065575,
+              1.3188238235158922,
+              -7.15573433840433e-18
+            ],
+            [
+              8.456776945386935e-18,
+              -8.456776945386935e-18,
+              1.253605312451322
+            ]
+          ],
+          "harmonic_second_kg_m2": [
+            [
+              1.3320233909053165,
+              0.04542154560289881,
+              4.119968255444917e-18
+            ],
+            [
+              0.0454215456028988,
+              1.2595784431048755,
+              -1.5178830414797062e-18
+            ],
+            [
+              9.324138683375338e-18,
+              -2.6020852139652106e-18,
+              1.197289736180148
+            ]
+          ],
+          "axial_kg_m2_s": [
+            0.0026522775182043295,
+            -0.0011328505032467664,
+            0.0019440329538319607
+          ],
+          "quadratic_kinetic_j": 1.0598896960542703e-05
+        },
+        {
+          "mass_kg": 1.5799830376456314,
+          "areal_first_kg_m": [
+            0.08112590064170686,
+            -0.032450360256682714,
+            0.048675540385024155
+          ],
+          "harmonic_first_kg_m": [
+            0.07924783676320427,
+            -0.031699134705281615,
+            0.04754870205792214
+          ],
+          "areal_second_kg_m2": [
+            [
+              1.3946762831825474,
+              0.04755798796806606,
+              1.463672932855431e-18
+            ],
+            [
+              0.047557987968066054,
+              1.3188238235159033,
+              -4.4181238528784306e-18
+            ],
+            [
+              3.0086610286472748e-18,
+              -2.358139725155972e-18,
+              1.253605312451323
+            ]
+          ],
+          "harmonic_second_kg_m2": [
+            [
+              1.3320233909053267,
+              0.04542154560289921,
+              -6.505213034913027e-19
+            ],
+            [
+              0.0454215456028992,
+              1.2595784431048853,
+              -3.496552006265752e-18
+            ],
+            [
+              -1.4365678785432934e-18,
+              -4.228388472693467e-18,
+              1.1972897361801491
+            ]
+          ],
+          "axial_kg_m2_s": [
+            0.0026522775182043316,
+            -0.001132850503246767,
+            0.0019440329538319811
+          ],
+          "quadratic_kinetic_j": 1.0598896960542764e-05
+        }
+      ]
+    },
+    {
+      "compactness": 0.15,
+      "point_counts": [
+        5760,
+        25600
+      ],
+      "chart": {
+        "scale": 0.781040216121971,
+        "residual_gauge": -0.002101976444294031
+      },
+      "analytic": {
+        "mass_kg": 1.736778848052613,
+        "areal_first_kg_m": [
+          0.09003714537398105,
+          -0.03601485814959242,
+          0.05402228722438862
+        ],
+        "harmonic_first_kg_m": [
+          0.07427936922787241,
+          -0.029711747691148958,
+          0.04456762153672344
+        ],
+        "areal_second_kg_m2": [
+          [
+            1.5586651058012946,
+            0.05314995116916315,
+            0.0
+          ],
+          [
+            0.05314995116916315,
+            1.473893762445681,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.401006728605328
+          ]
+        ],
+        "harmonic_second_kg_m2": [
+          [
+            1.0684855468399412,
+            0.0364349945527935,
+            0.0
+          ],
+          [
+            0.0364349945527935,
+            1.010373669680085,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.960408643889369
+          ]
+        ],
+        "axial_kg_m2_s": [
+          0.003558656617337202,
+          -0.001519986469048793,
+          0.00260837928459293
+        ],
+        "quadratic_kinetic_j": 1.705367527402379e-05,
+        "harmonic_Euclidean_C_kg_m2": [
+          [
+            1.9707823135694542,
+            -0.0364349945527935,
+            0.0
+          ],
+          [
+            -0.0364349945527935,
+            2.0288941907293108,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            2.0788592165200264
+          ]
+        ],
+        "harmonic_STF_M_kg_m2": [
+          [
+            0.05539626003680942,
+            0.0364349945527935,
+            0.0
+          ],
+          [
+            0.0364349945527935,
+            -0.0027156171230469095,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.05268064291376284
+          ]
+        ]
+      },
+      "point_snapshots": [
+        {
+          "mass_kg": 1.7367788480525994,
+          "areal_first_kg_m": [
+            0.09003714537397962,
+            -0.03601485814959203,
+            0.05402228722438798
+          ],
+          "harmonic_first_kg_m": [
+            0.0742793692278716,
+            -0.02971174769114865,
+            0.04456762153672304
+          ],
+          "areal_second_kg_m2": [
+            [
+              1.5586651058012673,
+              0.05314995116916217,
+              1.1275702593849246e-17
+            ],
+            [
+              0.053149951169162185,
+              1.4738937624456558,
+              -1.0191500421363742e-17
+            ],
+            [
+              4.336808689942018e-18,
+              -1.3877787807814457e-17,
+              1.4010067286053052
+            ]
+          ],
+          "harmonic_second_kg_m2": [
+            [
+              1.0684855468399268,
+              0.03643499455279295,
+              2.6020852139652106e-18
+            ],
+            [
+              0.03643499455279294,
+              1.0103736696800714,
+              4.7704895589362195e-18
+            ],
+            [
+              5.637851296924623e-18,
+              1.734723475976807e-18,
+              0.9604086438893564
+            ]
+          ],
+          "axial_kg_m2_s": [
+            0.003558656617337146,
+            -0.0015199864690487654,
+            0.0026083792845928836
+          ],
+          "quadratic_kinetic_j": 1.7053675274023477e-05
+        },
+        {
+          "mass_kg": 1.7367788480526047,
+          "areal_first_kg_m": [
+            0.09003714537398022,
+            -0.036014858149592245,
+            0.05402228722438801
+          ],
+          "harmonic_first_kg_m": [
+            0.07427936922787186,
+            -0.02971174769114883,
+            0.04456762153672285
+          ],
+          "areal_second_kg_m2": [
+            [
+              1.5586651058012806,
+              0.053149951169162706,
+              -9.378348791999613e-18
+            ],
+            [
+              0.0531499511691627,
+              1.473893762445669,
+              3.9302328752599536e-18
+            ],
+            [
+              -1.1438332919722072e-17,
+              5.908901840045999e-18,
+              1.4010067286053067
+            ]
+          ],
+          "harmonic_second_kg_m2": [
+            [
+              1.0684855468399366,
+              0.0364349945527933,
+              -6.3696877633523385e-18
+            ],
+            [
+              0.0364349945527933,
+              1.0103736696800805,
+              -3.0899761915836876e-18
+            ],
+            [
+              -7.291259609965017e-18,
+              1.870248747537495e-18,
+              0.9604086438893581
+            ]
+          ],
+          "axial_kg_m2_s": [
+            0.0035586566173371552,
+            -0.0015199864690487706,
+            0.0026083792845929066
+          ],
+          "quadratic_kinetic_j": 1.7053675274023592e-05
+        }
+      ]
+    },
+    {
+      "compactness": 0.3,
+      "point_counts": [
+        5760,
+        25600
+      ],
+      "chart": {
+        "scale": 0.579193251492611,
+        "residual_gauge": -0.005997651307997106
+      },
+      "analytic": {
+        "mass_kg": 2.0190507911548488,
+        "areal_first_kg_m": [
+          0.10641126638992923,
+          -0.04256450655597168,
+          0.06384675983395752
+        ],
+        "harmonic_first_kg_m": [
+          0.06880241482108354,
+          -0.02752096592843341,
+          0.04128144889265012
+        ],
+        "areal_second_kg_m2": [
+          [
+            1.8649784778632268,
+            0.06359513320792043,
+            0.0
+          ],
+          [
+            0.06359513320792043,
+            1.7635476250717304,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.6763366206541617
+          ]
+        ],
+        "harmonic_second_kg_m2": [
+          [
+            0.7917557899156358,
+            0.02699860375092211,
+            0.0
+          ],
+          [
+            0.02699860375092211,
+            0.7486944538589536,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.7116699956619449
+          ]
+        ],
+        "axial_kg_m2_s": [
+          0.006000133317407188,
+          -0.00256279895354781,
+          0.004397902111058831
+        ],
+        "quadratic_kinetic_j": 3.9485148997993975e-05,
+        "harmonic_Euclidean_C_kg_m2": [
+          [
+            1.4603644495208985,
+            -0.02699860375092211,
+            0.0
+          ],
+          [
+            -0.02699860375092211,
+            1.5034257855775808,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.5404502437745893
+          ]
+        ],
+        "harmonic_STF_M_kg_m2": [
+          [
+            0.041049043436791055,
+            0.02699860375092211,
+            0.0
+          ],
+          [
+            0.02699860375092211,
+            -0.0020122926198911095,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            -0.039036750816899835
+          ]
+        ]
+      },
+      "point_snapshots": [
+        {
+          "mass_kg": 2.0190507911548288,
+          "areal_first_kg_m": [
+            0.10641126638992757,
+            -0.04256450655597109,
+            0.06384675983395685
+          ],
+          "harmonic_first_kg_m": [
+            0.06880241482108242,
+            -0.027520965928433033,
+            0.04128144889264953
+          ],
+          "areal_second_kg_m2": [
+            [
+              1.8649784778631908,
+              0.0635951332079191,
+              -1.3010426069826053e-18
+            ],
+            [
+              0.06359513320791908,
+              1.7635476250716962,
+              1.1058862159352145e-17
+            ],
+            [
+              -8.239936510889834e-18,
+              1.734723475976807e-18,
+              1.6763366206541301
+            ]
+          ],
+          "harmonic_second_kg_m2": [
+            [
+              0.7917557899156216,
+              0.026998603750921578,
+              4.9873299934333204e-18
+            ],
+            [
+              0.026998603750921578,
+              0.7486944538589402,
+              -3.7947076036992655e-18
+            ],
+            [
+              2.3852447794681098e-18,
+              3.7947076036992655e-18,
+              0.7116699956619327
+            ]
+          ],
+          "axial_kg_m2_s": [
+            0.006000133317407093,
+            -0.0025627989535477722,
+            0.0043979021110587555
+          ],
+          "quadratic_kinetic_j": 3.948514899799303e-05
+        },
+        {
+          "mass_kg": 2.0190507911548363,
+          "areal_first_kg_m": [
+            0.10641126638992868,
+            -0.042564506555971375,
+            0.06384675983395662
+          ],
+          "harmonic_first_kg_m": [
+            0.06880241482108308,
+            -0.027520965928433224,
+            0.041281448892649626
+          ],
+          "areal_second_kg_m2": [
+            [
+              1.864978477863207,
+              0.06359513320791976,
+              -6.071532165918825e-18
+            ],
+            [
+              0.06359513320791976,
+              1.7635476250717121,
+              2.656295322589486e-18
+            ],
+            [
+              -8.998878031629687e-18,
+              1.4094628242311558e-18,
+              1.6763366206541335
+            ]
+          ],
+          "harmonic_second_kg_m2": [
+            [
+              0.7917557899156298,
+              0.026998603750921894,
+              -2.8189256484623115e-18
+            ],
+            [
+              0.026998603750921894,
+              0.7486944538589482,
+              1.0570971181733668e-18
+            ],
+            [
+              -3.0899761915836876e-18,
+              1.0842021724855044e-19,
+              0.7116699956619349
+            ]
+          ],
+          "axial_kg_m2_s": [
+            0.0060001333174071365,
+            -0.0025627989535477787,
+            0.004397902111058802
+          ],
+          "quadratic_kinetic_j": 3.948514899799336e-05
+        }
+      ]
+    }
+  ],
+  "passed": true,
+  "failed": [],
+  "seconds": 3.1193726999999853,
+  "physical_lunar_mapping_certified": false,
+  "physical_accuracy_certified": false,
+  "PN_fluid_inertia_certified": false,
+  "temporal_E_J_conservation_certified": false,
+  "runtime_changed": false,
+  "old_trajectories_reused": false,
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1"
+  },
+  "limitations": "Supplied-current static-time tracer snapshot, not self-consistent rotating fluid or EOS. Coordinate D/C/STF moments are not physical PN fluid inertia. Quadratic particle kinetic measure omits full rest/potential/body-field energy; no temporal E/J conservation certified. DomainC>=1e-4 excludes Mooncompactness. No ADM/SSC/lunar map or tides. Sampled numerical agreement and reference sensitivity are not rigorous physical accuracy bounds."
+}

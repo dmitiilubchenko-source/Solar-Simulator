@@ -11,7 +11,6 @@ from .ephemerides import EphemerisOrigin
 from .oblateness import FixedJ2, PrescribedQuadrupole, validate_figures, validate_orientation_origin
 from .coordinates import prepare_pair, validate_pair_option
 from .error_control import validate_error_control
-from .kuiper_ring import solar_system_ring
 
 
 @dataclass(frozen=True)
@@ -123,9 +122,24 @@ def reset(experiment: Experiment) -> Experiment:
                              rotations=experiment.initial_rotations)
 
 
+def validate_start(experiment: Experiment):
+    """Reject an unrecorded edit at t=0; contact events may change the start."""
+    if experiment.time != 0 or experiment.events:
+        return
+    def state(body):
+        return (body.name, body.mass, body.radius,
+                *(v for vector in (body.position, body.velocity, body.spin)
+                  for v in (vector.x, vector.y, vector.z)))
+    if ([state(b) for b in experiment.initial] != [state(b) for b in experiment.bodies]
+            or experiment.dissipated_energy != 0 or experiment.model_energy_offset != 0
+            or experiment.orientation_work != 0 or experiment.halted):
+        raise ValueError("Состояние t=0 не соответствует исходному; создайте новый эксперимент")
+
+
 def advance(experiment: Experiment, steps: int) -> Experiment:
     if type(steps) is not int or steps < 0:
         raise ValueError("steps должен быть неотрицательным целым")
+    validate_start(experiment)
     if experiment.halted or steps == 0:
         return experiment
     settings = experiment.settings
@@ -231,13 +245,16 @@ PRESETS = ("sun-earth","earth-moon","binary-star","sun-earth-moon","spheres","so
 
 
 def preset(name: str, *, backend: str = "python", eccentricity: float = 0.0) -> Experiment:
+    if name == "solar-system-kuiper-ring":
+        from .kuiper_ring import solar_system_ring
+        bodies, origin = solar_system_ring()
+        return create_experiment(bodies,Settings(3600,backend,integrator="dop853" if backend=="python" else "verlet"),origin=origin)
     if name in ("solar-system-pluto","solar-system-asteroids","solar-system-asteroids-full","solar-system-asteroids-catalog","solar-system-kuiper","solar-system-kuiper-ring"):
         from .perturbers import solar_system_pluto,solar_system_asteroids,solar_system_asteroids_full,solar_system_asteroids_catalog,solar_system_kuiper
         loader={"solar-system-pluto":solar_system_pluto,"solar-system-asteroids":solar_system_asteroids,
                 "solar-system-asteroids-full":solar_system_asteroids_full,
                 "solar-system-asteroids-catalog":solar_system_asteroids_catalog,
-                "solar-system-kuiper":solar_system_kuiper,
-                "solar-system-kuiper-ring":solar_system_ring}[name]
+                "solar-system-kuiper":solar_system_kuiper}[name]
         bodies,origin=loader()
         return create_experiment(bodies,Settings(3600,backend,integrator="dop853" if backend=="python" else "verlet"),origin=origin)
     if name in ("solar-system", "solar-system-moon"):

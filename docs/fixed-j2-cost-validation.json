@@ -1,0 +1,109 @@
+{
+  "protocol": "docs/qualification-extension-protocol.md",
+  "results": {
+    "old": {
+      "force_seconds": [
+        0.07675020000897348,
+        0.07896859999164008,
+        0.0808987999917008,
+        0.07877130000269972,
+        0.0780287999950815
+      ],
+      "physics_seconds": [
+        0.8890541000000667,
+        0.8993000000191387,
+        0.8829719000204932
+      ],
+      "checkpoints": [
+        "8442a1b3f9a58b2d53f7c2e548643ac1a5e403f3e39c747f66f95ec3ae985df9",
+        "8442a1b3f9a58b2d53f7c2e548643ac1a5e403f3e39c747f66f95ec3ae985df9",
+        "8442a1b3f9a58b2d53f7c2e548643ac1a5e403f3e39c747f66f95ec3ae985df9"
+      ],
+      "force_median_seconds": 0.07877130000269972,
+      "physics_median_seconds": 0.8890541000000667
+    },
+    "candidate": {
+      "force_seconds": [
+        0.06942410001647659,
+        0.06554760001017712,
+        0.06542880000779405,
+        0.06475440002395771,
+        0.06557679999968968
+      ],
+      "physics_seconds": [
+        0.7705941000021994,
+        0.9418241000093985,
+        0.7720236000022851
+      ],
+      "checkpoints": [
+        "8442a1b3f9a58b2d53f7c2e548643ac1a5e403f3e39c747f66f95ec3ae985df9",
+        "8442a1b3f9a58b2d53f7c2e548643ac1a5e403f3e39c747f66f95ec3ae985df9",
+        "8442a1b3f9a58b2d53f7c2e548643ac1a5e403f3e39c747f66f95ec3ae985df9"
+      ],
+      "force_median_seconds": 0.06554760001017712,
+      "physics_median_seconds": 0.7720236000022851
+    }
+  },
+  "settings": {
+    "dt": 3600,
+    "backend": "rust",
+    "contact_mode": "stop",
+    "restitution": 1.0,
+    "integrator": "dop853",
+    "rtol": 1e-13,
+    "position_atol": 0.001,
+    "velocity_atol": 1e-09,
+    "physics": "eih-1pn",
+    "figures": [
+      {
+        "body": "Sun",
+        "coefficient": 2.1961391516529825e-07,
+        "reference_radius": 696000000.0,
+        "axis": [
+          0.12235349347232782,
+          -0.0310378702450671,
+          0.9920011457885356
+        ],
+        "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+      },
+      {
+        "body": "Earth",
+        "coefficient": 0.00108262539,
+        "reference_radius": 6378136.6,
+        "axis": [
+          0.0026020959422886785,
+          0.39776866017225926,
+          0.9174820554547499
+        ],
+        "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+      }
+    ],
+    "relative_pair": [
+      "Earth",
+      "Moon"
+    ],
+    "error_control": "per-body"
+  },
+  "origin": {
+    "epoch_jd_tdb": 2461321.5,
+    "frame": "Ecliptic J2000",
+    "center": "Solar System Barycenter",
+    "ephemeris": "DE441",
+    "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+  },
+  "duration_seconds": 4320000,
+  "packets": 60,
+  "force_calls_per_repeat": 1000,
+  "force_equality_cases": 200,
+  "checkpoint_equal": true,
+  "runtime_unchanged": true,
+  "physics_reduction_fraction": 0.1316348465158339,
+  "implementation_gate": false,
+  "source_sha256": {
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "scripts/assess_fixed_j2_cost.py": "647eff33c7efe52e266c82cb1702f4868d3e5d1f285f2c4a552be642c598e96e",
+    "scripts/profile_runtime.py": "f0f2f0fd927e0d14e68fada67d7c0a2923313ff4dc6895e310198ec52094e2f1"
+  },
+  "limitations": "Rust point force plus Python figures; one machine and profile. Temporary candidate, not runtime. No altered tolerances or force equations."
+}
