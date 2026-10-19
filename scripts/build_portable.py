@@ -8,10 +8,12 @@ from datetime import datetime
 import hashlib
 from importlib import metadata
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
 import sys
+import tempfile
 import zipfile
 
 from packaging.requirements import Requirement
@@ -88,6 +90,27 @@ def unpack_wheel(path,target):
             if not destination.is_relative_to(target.resolve()):
                 raise ValueError("Unsafe wheel path")
         archive.extractall(target)
+
+
+def run_build_smokes(executable,output,probes):
+    """Keep generated recovery/font files out of both the user profile and ZIP."""
+    tools=(ROOT/'.tools').resolve()
+    tools.mkdir(parents=True,exist_ok=True)
+    with tempfile.TemporaryDirectory(prefix='portable-smoke-',dir=tools) as temporary:
+        scratch=Path(temporary).resolve()
+        if scratch.parent!=tools:
+            raise ValueError('Smoke cleanup must stay inside the build tools directory')
+        environment=os.environ.copy()
+        for name in ('PYTHONHOME','PYTHONPATH','TCL_LIBRARY','TK_LIBRARY'):
+            environment.pop(name,None)
+        environment['LOCALAPPDATA']=str(scratch/'user data')
+        environment['MPLCONFIGDIR']=str(scratch/'matplotlib')
+        if os.name=='nt':
+            windows=Path(os.environ['SystemRoot'])
+            environment['PATH']=str(windows/'System32')+os.pathsep+str(windows)
+        for probe in probes:
+            subprocess.run([str(executable),'-B','-I','-c',probe],check=True,cwd=output,
+                           env=environment,timeout=120)
 
 
 def build():
@@ -226,7 +249,7 @@ def build():
         f"Версия{project_version}: запись траектории и отдельный просмотр без расчёта, "
         "сравнение исходного и изменённого опыта на общих сохранённых временах, "
         "удобные единицы редактора и рецепт повторения. "
-        "[Область кандидата и приёмка](docs/candidate-030rc1.md). "
+        f"[Состав версии и приёмка](docs/releases/v{project_version}.md). "
         "Принятие конкретного ZIP подтверждается отдельно результатом его проверки и SHA256.\n\n"
         "Отдельный экспериментальный расчёт354тел без анимации: `Continuous Catalog Experimental.cmd`; "
         "[Профильные проверки и непройденный общий критерий](docs/continuous-integration-validation.md).\n\n"
@@ -256,9 +279,8 @@ def build():
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     # Prove the copied runtime imports local packages and initializes real Tk.
     probe="import sys,pathlib,tkinter,solar_simulator,solar_native,numpy,matplotlib,scipy; from solar_simulator.experiment import advance,preset; r=tkinter.Tk(); r.withdraw(); r.destroy(); s=advance(preset('spheres',backend='rust'),2000); assert len(s.events)==2; from dataclasses import replace; a=preset('sun-earth'); a=replace(a,settings=replace(a.settings,integrator='dop853')); assert advance(a,20).time>0; assert len(advance(preset('solar-system'),20).bodies)==9; print(sys.prefix); print(pathlib.Path(solar_simulator.__file__).resolve()); print('portable Tk + native physics OK')"
-    subprocess.run([str(runtime/"python.exe"),"-B","-I","-c",probe],check=True,cwd=output)
     smoke="import tkinter; from solar_simulator.app import Laboratory; from solar_simulator.experiment import preset; r=tkinter.Tk(); r.withdraw(); a=Laboratory(r,preset('spheres',backend='rust')); a._start(); r.after(1000,a.close); r.mainloop(); print('portable application OK')"
-    subprocess.run([str(runtime/"python.exe"),"-B","-I","-c",smoke],check=True,cwd=output)
+    run_build_smokes(runtime/'python.exe',output,(probe,smoke))
     archive=output.with_name(output.name+".zip")
     with zipfile.ZipFile(archive,"w",compression=zipfile.ZIP_DEFLATED,compresslevel=6) as file:
         for path in output.rglob("*"):
@@ -273,6 +295,8 @@ def build():
 
 def prepare_documents(output):
     """Prepare the same public documents for staging tests and actual builds."""
+    import tomllib
+    project_version=tomllib.loads((ROOT/'pyproject.toml').read_text(encoding='utf-8'))['project']['version']
     documents=output/"docs"
     documents.mkdir()
     for name in ("physics.md","rust.md","user-guide.md","core-validation.md","core-validation.json","accuracy-validation.md","accuracy-validation.json","ephemerides.md","solar-system-reference.json","solar-system-validation.json","relativity.md","relativity-validation.json","moon.md","solar-system-moon-reference.json","moon-validation.json","oblateness.md","oblateness-validation.json","orientation.md","orientation-validation.json","orientation-spice-reference.json","relative-coordinates.md","relative-coordinates-validation.json","relative-checkpoint-validation.json","solar-j2.md","solar-j2-validation.json","solar-pole-validation.json","solar-checkpoint-validation.json"):
@@ -319,7 +343,7 @@ def prepare_documents(output):
         "sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
         "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
         "qualification-extension-validation.md", "verification-bundle-validation.md",
-        "continuous-integration-validation.md", "candidate-030rc1.md"))
+        "continuous-integration-validation.md", f"releases/v{project_version}.md"))
     orientation_doc=documents/"orientation.md"
     orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
         "../src/solar_simulator/data/ERFA-LICENSE.txt",

@@ -65,3 +65,51 @@ def test_new_workflows_across_real_isolated_processes(tmp_path):
         assert report['isolated'] == 1
     assert set(report['results']) == {'python', 'rust'}
     assert report['physical_accuracy_claim'] is False
+
+
+@pytest.mark.parametrize('fail', [False, True])
+def test_build_smokes_share_owned_profile_and_cleanup_without_touching_caller(tmp_path, monkeypatch, fail):
+    from scripts import build_portable as builder
+    root = tmp_path/'source'
+    root.mkdir()
+    output = tmp_path/'future ZIP'
+    output.mkdir()
+    caller = tmp_path/'caller user data'
+    caller.mkdir()
+    sentinel = caller/'keep.json'
+    sentinel.write_bytes(b'actual user data must survive')
+    monkeypatch.setattr(builder, 'ROOT', root)
+    monkeypatch.setenv('LOCALAPPDATA', str(caller))
+    for key in ('PYTHONHOME', 'PYTHONPATH', 'TCL_LIBRARY', 'TK_LIBRARY', 'MPLCONFIGDIR'):
+        monkeypatch.setenv(key, str(caller/'do not use'))
+    parent_environment = dict(os.environ)
+    create = '''
+import json,os,pathlib
+from solar_simulator.recovery import save_recovery
+from solar_simulator.experiment import preset
+assert not any(name in os.environ for name in ('PYTHONHOME','PYTHONPATH','TCL_LIBRARY','TK_LIBRARY'))
+path=save_recovery(preset('sun-earth'),reason='closed')
+pathlib.Path('smoke-receipt.json').write_text(json.dumps(dict(
+    profile=os.environ['LOCALAPPDATA'],matplotlib=os.environ['MPLCONFIGDIR'],recovery=str(path))))
+'''
+    restore = f'''
+import json,os,pathlib,sys
+from solar_simulator.storage import load
+receipt=json.loads(pathlib.Path('smoke-receipt.json').read_text())
+assert receipt['profile']==os.environ['LOCALAPPDATA']
+assert load(receipt['recovery']).time==0
+sys.exit({7 if fail else 0})
+'''
+    if fail:
+        with pytest.raises(subprocess.CalledProcessError) as caught:
+            builder.run_build_smokes(Path(sys.executable), output, (create, restore))
+        assert caught.value.returncode == 7
+    else:
+        builder.run_build_smokes(Path(sys.executable), output, (create, restore))
+    receipt = json.loads((output/'smoke-receipt.json').read_text())
+    profile = Path(receipt['profile'])
+    assert profile.is_relative_to(root/'.tools') and not profile.is_relative_to(output)
+    assert Path(receipt['matplotlib']).parent == profile.parent
+    assert not profile.parent.exists() and list((root/'.tools').iterdir()) == []
+    assert list(caller.iterdir()) == [sentinel] and sentinel.read_bytes() == b'actual user data must survive'
+    assert dict(os.environ) == parent_environment

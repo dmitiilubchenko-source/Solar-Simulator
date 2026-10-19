@@ -60,7 +60,7 @@ build/checkportable scripts. Старые отчёты не переписаны
 
 ## Код и ограничения
 
-[Сборка](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:93),
+[Сборка](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:116),
 [relocation check](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:11),
 [проверки документарной границы](C:/Users/Admin/Desktop/Solar-simulator/tests/test_portable_rotation_documents.py:8).
 Лунный профиль — прежняя mean-solid rigid-аппроксимация, не mantle/core

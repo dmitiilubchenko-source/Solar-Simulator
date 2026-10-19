@@ -38,9 +38,9 @@ abs1e-10 и rel0. Просмотр запрещает solver; исходные �
 
 ## Проверенные места реализации
 
-- [build_portable.py:candidate_versions](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:29)
-- [build_portable.py:select_native_wheel](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:41)
-- [build_portable.py:build](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:93)
+- [build_portable.py:candidate_versions](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:31)
+- [build_portable.py:select_native_wheel](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:43)
+- [build_portable.py:build](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:116)
 - [check_portable.py:check_recording_workflows](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:316)
 - [portable_workflows.py:create](C:/Users/Admin/Desktop/Solar-simulator/scripts/portable_workflows.py:29)
 - [portable_workflows.py:restore](C:/Users/Admin/Desktop/Solar-simulator/scripts/portable_workflows.py:112)
