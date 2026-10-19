@@ -30,6 +30,11 @@ def main():
     runtime=folder/"runtime"
     probe="""
 import json,pathlib,sys,tkinter,solar_native,numpy,matplotlib,scipy,solar_simulator
+from importlib.metadata import version
+from packaging.version import Version
+build=json.loads(pathlib.Path('BUILD-INFO.json').read_bytes())
+assert version('solar-simulator')==build['project_version']
+assert Version(version('solar-native'))==Version(build['rust_versions']['solar_native'])
 root=pathlib.Path(sys.executable).resolve().parent
 assert pathlib.Path(sys.prefix).resolve()==root
 for module in (solar_native,numpy,matplotlib,scipy,solar_simulator):
@@ -203,6 +208,7 @@ print(json.dumps(dict(prefix=str(root),tcl=str(library),events=len(experiment.ev
     result['document_links']=document_links
     result["gui"]=check_gui(folder,environment)
     result['recovery']=check_recovery(folder,environment)
+    result['recording_workflows']=check_recording_workflows(folder,environment)
     replay_output=subprocess.check_output([str(runtime/"python.exe"),"-X","utf8","-B","-I",
         str(folder/"verification/replay_jpl.py"),str(folder/"verification")],cwd=folder,env=environment,text=True,encoding="utf-8")
     result["jpl_replay"]=json.loads(replay_output)
@@ -305,6 +311,21 @@ print(json.dumps(dict(isolated=sys.flags.isolated,restart=results,CLI_finished_r
     result=json.loads(process.stdout)
     if result['isolated']!=1:raise ValueError('Recovery must use an isolated runtime')
     return result
+
+
+def check_recording_workflows(folder,environment):
+    """Exercise the actual extracted package across independent process lifetimes."""
+    script=Path(__file__).with_name('portable_workflows.py')
+    results={}
+    for phase in ('create','restore'):
+        process=subprocess.run([str(folder/'runtime/python.exe'),'-X','utf8','-B','-I',str(script),phase],
+            cwd=folder,env=environment,capture_output=True,text=True,encoding='utf-8',timeout=240)
+        if process.returncode:
+            raise RuntimeError(f'Relocated recording {phase} failed:\n'+process.stdout+process.stderr)
+        results[phase]=json.loads(process.stdout)
+        if results[phase]['isolated']!=1:
+            raise ValueError('Recording acceptance must use an isolated interpreter')
+    return results
 
 
 def check_document_links(folder):

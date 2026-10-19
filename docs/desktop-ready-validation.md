@@ -96,4 +96,4 @@ hardcoded8seeds при fixture6seeds. Документы сборки подкл
 
 [test_history_limit_keeps_all_1500_retained_snapshots_without_thinning](C:/Users/Admin/Desktop/Solar-simulator/tests/test_orbit_view.py:41)
 
-[copy_public_rotation_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:298)
+[copy_public_rotation_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:332)

@@ -15,12 +15,40 @@ import sys
 import zipfile
 
 from packaging.requirements import Requirement
+from packaging.tags import sys_tags
+from packaging.utils import parse_wheel_filename
+from packaging.version import Version
 
 ROOT=Path(__file__).resolve().parents[1]
 PUBLIC_DOCUMENT_ARCHIVES={
     'docs/de441-reader-inputs.zip','docs/nominal-jpl440-inputs.zip',
     'docs/runtime-sources-before301.zip','tests/data/jpl-verification.zip',
 }
+
+
+def candidate_versions(root=ROOT):
+    """Validate the product's paired Python/Rust versions before creating output."""
+    import tomllib
+    python=tomllib.loads((root/'pyproject.toml').read_text(encoding='utf-8'))['project']['version']
+    rust={crate:tomllib.loads((root/f'rust/{crate}/Cargo.toml').read_text(encoding='utf-8'))['package']['version']
+          for crate in ('solar_core','solar_native')}
+    native=tomllib.loads((root/'rust/solar_native/pyproject.toml').read_text(encoding='utf-8'))['project']['version']
+    if any(Version(value)!=Version(python) for value in (*rust.values(),native)):
+        raise ValueError(f'Python/Rust release versions disagree: {python}, {rust}, native wheel {native}')
+    return python,rust
+
+
+def select_native_wheel(directory,version):
+    """Reject stale or ambiguous artifacts instead of trusting modification time."""
+    supported=set(sys_tags())
+    candidates=[]
+    for path in directory.glob('solar_native-*.whl'):
+        name,actual,_,tags=parse_wheel_filename(path.name)
+        if name=='solar-native' and actual==Version(version) and tags & supported:
+            candidates.append(path)
+    if len(candidates)!=1:
+        raise ValueError(f'Expected one compatible solar-native {version} wheel; found {len(candidates)}')
+    return candidates[0]
 
 
 def dependency_closure():
@@ -66,7 +94,7 @@ def build():
     if sys.platform!="win32" or sys.prefix==sys.base_prefix:
         raise RuntimeError("Build from the project Windows .venv")
     stamp=datetime.now().strftime("%Y%m%d-%H%M%S")
-    project_version=__import__("tomllib").loads((ROOT/"pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
+    project_version,rust_versions=candidate_versions()
     output=ROOT/"dist"/f"SolarSimulator-{project_version}-{stamp}"
     output.mkdir(parents=True,exist_ok=False)
     runtime=output/"runtime"
@@ -93,8 +121,7 @@ def build():
     subprocess.run([sys.executable,"-B","-m","pip","wheel","--no-deps","--wheel-dir",str(wheels),str(ROOT)],check=True)
     unpack_wheel(wheels/f"solar_simulator-{project_version}-py3-none-any.whl",packages)
     subprocess.run([sys.executable,"-B",str(ROOT/"scripts/build_native.py"),"--wheel"],check=True,cwd=ROOT)
-    native_wheels=list((ROOT/".tools/wheels").glob("solar_native-*.whl"))
-    native_wheel=max(native_wheels,key=lambda p:p.stat().st_mtime)
+    native_wheel=select_native_wheel(ROOT/'.tools/wheels',rust_versions['solar_native'])
     unpack_wheel(native_wheel,packages)
     # _pth isolates imports from user packages, environment variables and registry.
     dll_name=f"python{sys.version_info.major}{sys.version_info.minor}"+("t" if __import__("sysconfig").get_config_var("Py_GIL_DISABLED") else "")
@@ -196,6 +223,11 @@ def build():
         "[Порядок восстановления и ограничения](docs/controlled-stop.md). "
         "[Демонстрация](docs/sandbox-demo.md), [годовые измерения](docs/sandbox-demo-validation.md). "
         "Показатели относятся к исходной системе/годовой сетке, не к любым пользовательским системам.\n\n"
+        f"Версия{project_version}: запись траектории и отдельный просмотр без расчёта, "
+        "сравнение исходного и изменённого опыта на общих сохранённых временах, "
+        "удобные единицы редактора и рецепт повторения. "
+        "[Область кандидата и приёмка](docs/candidate-030rc1.md). "
+        "Принятие конкретного ZIP подтверждается отдельно результатом его проверки и SHA256.\n\n"
         "Отдельный экспериментальный расчёт354тел без анимации: `Continuous Catalog Experimental.cmd`; "
         "[Профильные проверки и непройденный общий критерий](docs/continuous-integration-validation.md).\n\n"
         "Вращение Луны — ньютоновская жёсткая solid-аппроксимация с обратными силами и моментами, "
@@ -208,7 +240,7 @@ def build():
         "и [отчёте тока](docs/chart-current-validation.md); эти исследовательские модели не подставлены "
         "в физическую инерцию Луны. Личные рабочие документы и исследовательский кеш не входят в сборку.\n",
         encoding="utf-8")
-    manifest=dict(python=sys.version,python_abi=dll_name,project_version=project_version,
+    manifest=dict(python=sys.version,python_abi=dll_name,project_version=project_version,rust_versions=rust_versions,
                   native_wheel=native_wheel.name,dependencies={name:d.version for name,d in dependencies.items()},
                   rotation_documents=rotation_documents,rotation_scenario="scenarios/solar-system-moon-newton-dynamic-q2.json",
                   desktop_features=["ready-lunar-rotation", "earth-moon-view", "worker-error-recovery", "visible-diagnostics",
@@ -217,7 +249,9 @@ def build():
                                     "restore-immediate-parent", "remove-point-body", "sandbox-cli", "orbital-csv-provenance",
                                     "persistent-plot-artists", "qualified-strict-sandbox-profile", "offline-jpl-replay", "fresh-year-verification",
                                     "experimental-continuous-catalog-interval", "explicit-standard-strict-selection",
-                                    "committed-packet-safe-close", "local-recovery-browser", "CLI-final-output-recovery"],
+                                    "committed-packet-safe-close", "local-recovery-browser", "CLI-final-output-recovery",
+                                    "recorded-trajectories", "independent-playback", "parent-child-comparison",
+                                    "explicit-editor-units", "recording-recipes", "full-frame-replay"],
                   physical_PN_lunar_rotation_certified=False)
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     # Prove the copied runtime imports local packages and initializes real Tk.
@@ -285,7 +319,7 @@ def prepare_documents(output):
         "sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
         "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
         "qualification-extension-validation.md", "verification-bundle-validation.md",
-        "continuous-integration-validation.md"))
+        "continuous-integration-validation.md", "candidate-030rc1.md"))
     orientation_doc=documents/"orientation.md"
     orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
         "../src/solar_simulator/data/ERFA-LICENSE.txt",

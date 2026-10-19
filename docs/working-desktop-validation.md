@@ -75,7 +75,7 @@ SHA256: `2a54399c6248a8de86d271f55353903dce57d23cf9f572d63acce40f4e2e3b15`.
 [общий лунный профиль](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/application_profiles.py:15),
 [цикл рабочего потока](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:436),
 [расположение элементов](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:101),
-[проверка перенесённого GUI](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:327),
+[проверка перенесённого GUI](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:348),
 [проверка сохранения/продолжения](C:/Users/Admin/Desktop/Solar-simulator/tests/test_app_workflows.py:184),
 [проверка видимости диагностики](C:/Users/Admin/Desktop/Solar-simulator/tests/test_app_workflows.py:208).
 

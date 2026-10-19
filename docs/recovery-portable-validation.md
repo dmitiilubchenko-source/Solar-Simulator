@@ -83,12 +83,12 @@ settings и продолжение сравниваются с тем же ис�
 - [recovery.py:list_recoveries](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/recovery.py:27)
 - [app.py:_restore_recovery](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:731)
 - [app.py:_show_recoveries](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:780)
-- [build_portable.py:build](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:65)
-- [build_portable.py:prepare_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:240)
-- [build_portable.py:copy_public_rotation_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:298)
-- [build_portable.py:export_guide](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:341)
-- [check_portable.py:check_recovery](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:222)
-- [check_portable.py:check_document_links](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:310)
+- [build_portable.py:build](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:93)
+- [build_portable.py:prepare_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:274)
+- [build_portable.py:copy_public_rotation_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:332)
+- [build_portable.py:export_guide](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:375)
+- [check_portable.py:check_recovery](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:228)
+- [check_portable.py:check_document_links](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:331)
 - [test_recovery_journey.py:test_final_output_failure_recovers_finished_result](C:/Users/Admin/Desktop/Solar-simulator/tests/test_recovery_journey.py:23)
 - [test_recovery_journey.py:test_final_output_recovery_falls_back_to_local_data](C:/Users/Admin/Desktop/Solar-simulator/tests/test_recovery_journey.py:55)
 - [test_recovery_journey.py:test_final_output_and_both_recoveries_fail_explicitly](C:/Users/Admin/Desktop/Solar-simulator/tests/test_recovery_journey.py:73)
@@ -153,7 +153,7 @@ LATEST обновлён только после этих проверок и SHA
 сетка parent/child, удобные единицы и рецепт повторения. Не расширять сейчас
 состав тел/вращение/приливы/Rust под видом завершения интерфейсного цикла.
 
-Исправленный приёмочный стенд: [check_gui](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:327).
+Исправленный приёмочный стенд: [check_gui](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:348).
 
 
 ### Измерения годового повторения из ZIP (отдельная сетка125эпох)
