@@ -14,3 +14,11 @@ dist/
 /rust/solar_native/wheels/
 
 /.tools/
+
+# Automatic recovery copies may be placed beside a CLI output inside this checkout.
+solar-interrupted-*/
+solar-failed-*/
+solar-stopped-*/
+solar-closed-*/
+
+solar-trajectory-*/

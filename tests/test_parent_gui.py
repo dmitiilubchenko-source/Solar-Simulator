@@ -30,7 +30,9 @@ def _check_parent_return(tmp_path):
         app._reset();assert app.parent_snapshot==branch.parent_snapshot
         app.experiment=advance(app.experiment,1);current=to_document(app.experiment)
         with patch('solar_simulator.app.filedialog.asksaveasfilename',return_value=str(checkpoint)):app._restore_parent()
-        assert to_document(load(checkpoint))==current
+        from solar_simulator.branch_io import open_experiment
+        saved,snapshot=open_experiment(checkpoint)
+        assert to_document(saved)==current and snapshot==branch.parent_snapshot
         assert to_document(app.experiment)==to_document(parent)
         assert app.parent_snapshot is None and str(app.parent_button['state'])=='disabled'
         original=to_document(parent);app.experiment.bodies[0].position.x+=1

@@ -17,6 +17,10 @@ import zipfile
 from packaging.requirements import Requirement
 
 ROOT=Path(__file__).resolve().parents[1]
+PUBLIC_DOCUMENT_ARCHIVES={
+    'docs/de441-reader-inputs.zip','docs/nominal-jpl440-inputs.zip',
+    'docs/runtime-sources-before301.zip','tests/data/jpl-verification.zip',
+}
 
 
 def dependency_closure():
@@ -96,80 +100,7 @@ def build():
     dll_name=f"python{sys.version_info.major}{sys.version_info.minor}"+("t" if __import__("sysconfig").get_config_var("Py_GIL_DISABLED") else "")
     (runtime/f"{dll_name}._pth").write_text(".\nLib\nDLLs\nLib/site-packages\nimport site\n",encoding="utf-8")
     (output/"Solar Simulator.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui\r\nif errorlevel 1 pause\r\n',encoding="ascii")
-    (output/"USER-GUIDE.md").write_text(
-        (ROOT/"docs/user-guide.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)", "(docs/accuracy-validation.md)").replace("(ephemerides.md)", "(docs/ephemerides.md)").replace("(relativity.md)", "(docs/relativity.md)").replace("(moon.md)", "(docs/moon.md)").replace("(oblateness.md)", "(docs/oblateness.md)").replace("(orientation.md)", "(docs/orientation.md)").replace("(relative-coordinates.md)", "(docs/relative-coordinates.md)").replace("(solar-j2.md)", "(docs/solar-j2.md)"),
-        encoding="utf-8")
-    guide=output/"USER-GUIDE.md"
-    guide.write_text(guide.read_text(encoding="utf-8").replace("(pluto.md)","(docs/pluto.md)"),encoding="utf-8")
-    guide.write_text(guide.read_text(encoding="utf-8").replace("(asteroids.md)","(docs/asteroids.md)").replace("(body-data.md)","(docs/body-data.md)").replace("(asteroids-full.md)","(docs/asteroids-full.md)"),encoding="utf-8")
-    guide.write_text(guide.read_text(encoding="utf-8").replace("(runtime-walkthrough.md)","(docs/runtime-walkthrough.md)").replace("(desktop-render-benchmark.md)","(docs/desktop-render-benchmark.md)"),encoding="utf-8")
-    for name in ("sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
-                 "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
-                 "qualification-extension-validation.md", "verification-bundle-validation.md",
-                 "continuous-integration-validation.md"):
-        guide.write_text(guide.read_text(encoding="utf-8").replace(f"({name})",f"(docs/{name})"),encoding="utf-8")
-    (output/"PHYSICS.md").write_text(
-        (ROOT/"docs/physics.md").read_text(encoding="utf-8").replace("(accuracy-validation.md)","(docs/accuracy-validation.md)").replace("(relativity.md)","(docs/relativity.md)").replace("(oblateness.md)","(docs/oblateness.md)").replace("(orientation.md)","(docs/orientation.md)").replace("(user-guide.md)","(docs/user-guide.md)").replace("(relative-coordinates.md)","(docs/relative-coordinates.md)").replace("(solar-j2.md)","(docs/solar-j2.md)"),
-        encoding="utf-8")
-    documents=output/"docs"
-    physics=output/"PHYSICS.md"
-    physics.write_text(physics.read_text(encoding="utf-8").replace("(pluto.md)","(docs/pluto.md)"),encoding="utf-8")
-    physics.write_text(physics.read_text(encoding="utf-8").replace("(asteroids.md)","(docs/asteroids.md)").replace("(body-data.md)","(docs/body-data.md)").replace("(asteroids-full.md)","(docs/asteroids-full.md)"),encoding="utf-8")
-    documents.mkdir()
-    for name in ("physics.md","rust.md","user-guide.md","core-validation.md","core-validation.json","accuracy-validation.md","accuracy-validation.json","ephemerides.md","solar-system-reference.json","solar-system-validation.json","relativity.md","relativity-validation.json","moon.md","solar-system-moon-reference.json","moon-validation.json","oblateness.md","oblateness-validation.json","orientation.md","orientation-validation.json","orientation-spice-reference.json","relative-coordinates.md","relative-coordinates-validation.json","relative-checkpoint-validation.json","solar-j2.md","solar-j2-validation.json","solar-pole-validation.json","solar-checkpoint-validation.json"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("pluto.md","pluto-reference.json","pluto-source-validation.json","pluto-validation.json","pluto-checkpoint-validation.json"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("asteroids.md","body-data.md","asteroids-reference.json","asteroids-source-validation.json","asteroids-validation.json","asteroids-checkpoint-validation.json"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("asteroids-full.md","asteroids-full-reference.json","asteroids-full-source-validation.json","asteroids-full-validation.json","asteroids-full-checkpoint-validation.json"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("native-eih.md", "native-eih-validation.json"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("error-control.md", "error-control-validation.json", "error-control-comparison.png"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("orbit-observations.md", "orbit-observations-validation.json", "orbit-observations-residuals.png"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("orbit-cohort.md", "orbit-cohort-manifest.json", "orbit-cohort-validation.json", "orbit-cohort-residuals.png"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    observation_data = output/"data"
-    observation_data.mkdir()
-    shutil.copy2(ROOT/"src/solar_simulator/data/orbit-observations-13270.json",observation_data/"orbit-observations-13270.json")
-    for path in (ROOT/"src/solar_simulator/data").glob("orbit-cohort-*.json"):
-        shutil.copy2(path,observation_data/path.name)
-    (output/"scripts").mkdir()
-    shutil.copy2(ROOT/"scripts/orbit-cohort-policy.json",output/"scripts/orbit-cohort-policy.json")
-    for name in ("asteroids-catalog.md", "asteroids-catalog-validation.json", "asteroids-catalog-comparison.png"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("asteroids-343.md", "asteroids-343-initial.json", "asteroids-343-source-validation.json", "asteroids-343-assessment.json"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("kuiper.md", "kuiper-ring-design.md", "kuiper-initial.json", "kuiper-source-validation.json", "kuiper-validation.json", "kuiper-absolute-reference-validation.json", "kuiper-comparison.png", "perturber-audit.md", "perturber-audit.json"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    for name in ("kuiper-ring.md", "kuiper-ring-validation.json", "kuiper-ring-refinement-validation.json", "kuiper-ring-field-validation.json", "kuiper-ring-kbo-validation.json", "kuiper-ring-comparison.png"):
-        shutil.copy2(ROOT/"docs"/name,documents/name)
-    shutil.copy2(ROOT/"scripts/kuiper-ring-policy.json",output/"scripts/kuiper-ring-policy.json")
-    shutil.copy2(ROOT/"scripts/kuiper-ring-refinement-policy.json",output/"scripts/kuiper-ring-refinement-policy.json")
-    shutil.copy2(ROOT/"scripts/sb441-kuiper-ranges.json",output/"scripts/sb441-kuiper-ranges.json")
-    shutil.copy2(ROOT/"scripts/de441-perturber-catalog.json",output/"scripts/de441-perturber-catalog.json")
-    (output/"scripts/validation").mkdir()
-    shutil.copy2(ROOT/"scripts/sb441-343-ranges.json",output/"scripts/sb441-343-ranges.json")
-    shutil.copy2(ROOT/"scripts/validation/sb441-343-year.bin",output/"scripts/validation/sb441-343-year.bin")
-    shutil.copy2(ROOT/"scripts/validation/de441-header.441",output/"scripts/validation/de441-header.441")
-    shutil.copy2(ROOT/"scripts/validation/kuiper_absolute_assessment.py",output/"scripts/validation/kuiper_absolute_assessment.py")
-    rotation_documents=copy_public_rotation_documents(output,extra_seeds=("runtime-walkthrough.md","desktop-render-benchmark.md",
-        "sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
-        "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
-        "qualification-extension-validation.md", "verification-bundle-validation.md",
-        "continuous-integration-validation.md"))
-    orientation_doc=documents/"orientation.md"
-    orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
-        "../src/solar_simulator/data/ERFA-LICENSE.txt",
-        "../runtime/Lib/site-packages/solar_simulator/data/ERFA-LICENSE.txt"),encoding="utf-8")
-    for guide_name in ("USER-GUIDE.md", "PHYSICS.md"):
-        guide_path=output/guide_name
-        guide_path.write_text(guide_path.read_text(encoding="utf-8").replace("(nbody-rotation.md)","(docs/nbody-rotation.md)").replace("(kuiper-ring.md)","(docs/kuiper-ring.md)").replace("(kuiper.md)","(docs/kuiper.md)").replace("(orbit-cohort.md)","(docs/orbit-cohort.md)").replace("(orbit-observations.md)","(docs/orbit-observations.md)").replace("(error-control.md)","(docs/error-control.md)").replace(
-            "(native-eih.md)", "(docs/native-eih.md)").replace(
-            "(asteroids-catalog.md)", "(docs/asteroids-catalog.md)"),encoding="utf-8")
+    rotation_documents=prepare_documents(output)
     from solar_simulator.experiment import preset, PRESETS
     from solar_simulator.storage import save
     scenarios=output/"scenarios"
@@ -260,6 +191,9 @@ def build():
         "[Автономное сравнение и новый годовой расчёт](docs/verification-bundle-validation.md) "
         "запускаются отдельно: `JPL Verification.cmd` и `Physics Verification.cmd`. "
         "Расчёт до времени, ветки редактирования и добавление точечного тела доступны в окне. "
+        "«Стоп и копия» и закрытие окна дожидаются пакета и сохраняют child+parent; "
+        "«Recovery-копии…» открывает список локальных сохранений. "
+        "[Порядок восстановления и ограничения](docs/controlled-stop.md). "
         "[Демонстрация](docs/sandbox-demo.md), [годовые измерения](docs/sandbox-demo-validation.md). "
         "Показатели относятся к исходной системе/годовой сетке, не к любым пользовательским системам.\n\n"
         "Отдельный экспериментальный расчёт354тел без анимации: `Continuous Catalog Experimental.cmd`; "
@@ -282,7 +216,8 @@ def build():
                                     "ready-solar-sandbox", "saved-experiment-branches", "add-point-body", "target-time-packets",
                                     "restore-immediate-parent", "remove-point-body", "sandbox-cli", "orbital-csv-provenance",
                                     "persistent-plot-artists", "qualified-strict-sandbox-profile", "offline-jpl-replay", "fresh-year-verification",
-                                    "experimental-continuous-catalog-interval"],
+                                    "experimental-continuous-catalog-interval", "explicit-standard-strict-selection",
+                                    "committed-packet-safe-close", "local-recovery-browser", "CLI-final-output-recovery"],
                   physical_PN_lunar_rotation_certified=False)
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     # Prove the copied runtime imports local packages and initializes real Tk.
@@ -300,6 +235,64 @@ def build():
     archive.with_suffix(".zip.sha256").write_text(f"{checksum}  {archive.name}\n",encoding="ascii")
     print(f"PORTABLE_DIR={output}\nPORTABLE_ZIP={archive}\nSHA256={checksum}")
     return output
+
+
+def prepare_documents(output):
+    """Prepare the same public documents for staging tests and actual builds."""
+    documents=output/"docs"
+    documents.mkdir()
+    for name in ("physics.md","rust.md","user-guide.md","core-validation.md","core-validation.json","accuracy-validation.md","accuracy-validation.json","ephemerides.md","solar-system-reference.json","solar-system-validation.json","relativity.md","relativity-validation.json","moon.md","solar-system-moon-reference.json","moon-validation.json","oblateness.md","oblateness-validation.json","orientation.md","orientation-validation.json","orientation-spice-reference.json","relative-coordinates.md","relative-coordinates-validation.json","relative-checkpoint-validation.json","solar-j2.md","solar-j2-validation.json","solar-pole-validation.json","solar-checkpoint-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("pluto.md","pluto-reference.json","pluto-source-validation.json","pluto-validation.json","pluto-checkpoint-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("asteroids.md","body-data.md","asteroids-reference.json","asteroids-source-validation.json","asteroids-validation.json","asteroids-checkpoint-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("asteroids-full.md","asteroids-full-reference.json","asteroids-full-source-validation.json","asteroids-full-validation.json","asteroids-full-checkpoint-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("native-eih.md", "native-eih-validation.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("error-control.md", "error-control-validation.json", "error-control-comparison.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("orbit-observations.md", "orbit-observations-validation.json", "orbit-observations-residuals.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("orbit-cohort.md", "orbit-cohort-manifest.json", "orbit-cohort-validation.json", "orbit-cohort-residuals.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    observation_data = output/"data"
+    observation_data.mkdir()
+    shutil.copy2(ROOT/"src/solar_simulator/data/orbit-observations-13270.json",observation_data/"orbit-observations-13270.json")
+    for path in (ROOT/"src/solar_simulator/data").glob("orbit-cohort-*.json"):
+        shutil.copy2(path,observation_data/path.name)
+    (output/"scripts").mkdir()
+    shutil.copy2(ROOT/"scripts/orbit-cohort-policy.json",output/"scripts/orbit-cohort-policy.json")
+    for name in ("asteroids-catalog.md", "asteroids-catalog-validation.json", "asteroids-catalog-comparison.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("asteroids-343.md", "asteroids-343-initial.json", "asteroids-343-source-validation.json", "asteroids-343-assessment.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("kuiper.md", "kuiper-ring-design.md", "kuiper-initial.json", "kuiper-source-validation.json", "kuiper-validation.json", "kuiper-absolute-reference-validation.json", "kuiper-comparison.png", "perturber-audit.md", "perturber-audit.json"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    for name in ("kuiper-ring.md", "kuiper-ring-validation.json", "kuiper-ring-refinement-validation.json", "kuiper-ring-field-validation.json", "kuiper-ring-kbo-validation.json", "kuiper-ring-comparison.png"):
+        shutil.copy2(ROOT/"docs"/name,documents/name)
+    shutil.copy2(ROOT/"scripts/kuiper-ring-policy.json",output/"scripts/kuiper-ring-policy.json")
+    shutil.copy2(ROOT/"scripts/kuiper-ring-refinement-policy.json",output/"scripts/kuiper-ring-refinement-policy.json")
+    shutil.copy2(ROOT/"scripts/sb441-kuiper-ranges.json",output/"scripts/sb441-kuiper-ranges.json")
+    shutil.copy2(ROOT/"scripts/de441-perturber-catalog.json",output/"scripts/de441-perturber-catalog.json")
+    (output/"scripts/validation").mkdir()
+    shutil.copy2(ROOT/"scripts/sb441-343-ranges.json",output/"scripts/sb441-343-ranges.json")
+    shutil.copy2(ROOT/"scripts/validation/sb441-343-year.bin",output/"scripts/validation/sb441-343-year.bin")
+    shutil.copy2(ROOT/"scripts/validation/de441-header.441",output/"scripts/validation/de441-header.441")
+    shutil.copy2(ROOT/"scripts/validation/kuiper_absolute_assessment.py",output/"scripts/validation/kuiper_absolute_assessment.py")
+    rotation_documents=copy_public_rotation_documents(output,extra_seeds=("user-guide.md","physics.md","rust.md","runtime-walkthrough.md","desktop-render-benchmark.md",
+        "sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
+        "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
+        "qualification-extension-validation.md", "verification-bundle-validation.md",
+        "continuous-integration-validation.md"))
+    orientation_doc=documents/"orientation.md"
+    orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
+        "../src/solar_simulator/data/ERFA-LICENSE.txt",
+        "../runtime/Lib/site-packages/solar_simulator/data/ERFA-LICENSE.txt"),encoding="utf-8")
+    for source,target in (("user-guide.md","USER-GUIDE.md"),("physics.md","PHYSICS.md")):
+        export_guide(documents/source,output/target)
+    return rotation_documents
 
 
 def copy_public_rotation_documents(output,extra_seeds=()):
@@ -324,7 +317,8 @@ def copy_public_rotation_documents(output,extra_seeds=()):
         allowed=((relative.parts[0]=='docs' and (source.suffix in {'.md','.json','.png','.txt'}
                   or source.name=='continuous-integration-reference.npz'))
                  or (relative.parts[0]=='scripts' and source.suffix=='.json')
-                 or relative.as_posix()=='src/solar_simulator/data/ERFA-LICENSE.txt')
+                 or relative.as_posix()=='src/solar_simulator/data/ERFA-LICENSE.txt'
+                 or relative.as_posix() in PUBLIC_DOCUMENT_ARCHIVES)
         if not allowed:raise ValueError('Unsupported portable document: '+str(relative))
         if not source.is_file():raise FileNotFoundError('Public rotation document unavailable: '+str(relative))
         target=destination_root/relative;target.parent.mkdir(parents=True,exist_ok=True)
@@ -335,13 +329,27 @@ def copy_public_rotation_documents(output,extra_seeds=()):
                 if not raw or ':' in raw:return match.group(0)
                 candidate=(source.parent/raw).resolve()
                 if candidate.name in private or '.tools' in candidate.parts:return label
-                if candidate.suffix in {'.md','.json','.png','.txt'} or candidate.name=='continuous-integration-reference.npz':pending.append(candidate)
+                if candidate.suffix in {'.md','.json','.png','.txt','.zip'} or candidate.name=='continuous-integration-reference.npz':pending.append(candidate)
                 return match.group(0)
             text=re.sub(r'\[([^\]]*)\]\(([^)]+)\)',local_link,text)
             target.write_text(text,encoding='utf-8')
         else:shutil.copy2(source,target)
         copied.add(source)
     return sorted(path.relative_to(ROOT.resolve()).as_posix() for path in copied)
+
+
+def export_guide(source,target):
+    """Rebase every relative Markdown asset from docs/ to the exported guide."""
+    import os
+    import re
+    def rebase(match):
+        label,link=match.group(1),match.group(2)
+        raw,separator,fragment=link.partition('#')
+        if not raw or ':' in raw:return match.group(0)
+        relative=Path(os.path.relpath(source.parent/raw.strip('<>'),target.parent)).as_posix()
+        return f'[{label}]({relative}{separator}{fragment})'
+    target.write_text(re.sub(r'\[([^\]]*)\]\(([^)]+)\)',rebase,source.read_text(encoding='utf-8')),
+                      encoding='utf-8')
 
 
 if __name__=="__main__":

@@ -206,7 +206,7 @@ pub fn run_until_contact(
     validate_input(bodies, radii, dt)?;
     let mut state = bodies.to_vec();
     let mut elapsed = 0.0;
-    for _ in 0..steps {
+    for index in 0..steps {
         if let Some(mut event) = first_contact(&state, radii, dt)? {
             if event.time > 0.0 {
                 state = evolve(&state, event.time, 1)?;
@@ -220,7 +220,8 @@ pub fn run_until_contact(
             });
         }
         state = evolve(&state, dt, 1)?;
-        elapsed += dt;
+        // Canonical completed-step boundary; an actual contact keeps its offset.
+        elapsed = (index + 1) as f64 * dt;
         if !elapsed.is_finite() {
             return Err("Elapsed time overflow".into());
         }
@@ -297,5 +298,31 @@ mod tests {
         for (a, b) in roots.iter().zip([0.2, 0.4, 0.6, 0.8]) {
             assert!((a - b).abs() < 1e-10);
         }
+    }
+
+    #[test]
+    fn fractional_packet_without_contact_has_exact_boundary() {
+        let bodies = vec![Body {
+            spin: [0.0; 3],
+            name: "free".into(),
+            mass: 1.0,
+            position: [0.0; 3],
+            velocity: [1.0, 0.0, 0.0],
+        }];
+        let result = run_until_contact(&bodies, &[1.0], 0.1, 20).unwrap();
+        assert_eq!(result.time, 0.1 * 20.0);
+        assert!(result.contact.is_none());
+        assert!((result.bodies[0].position[0] - 2.0).abs() < 1e-14);
+    }
+
+    #[test]
+    fn fractional_packet_contact_keeps_actual_event_time() {
+        let mut bodies = pair(0.0);
+        bodies[0].position[0] = -2.95;
+        bodies[1].position[0] = 2.95;
+        let result = run_until_contact(&bodies, &[1.0, 1.0], 0.1, 20).unwrap();
+        assert!(result.time < 2.0);
+        assert!((result.time - 1.95).abs() < 2e-12);
+        assert_eq!(result.time, result.contact.unwrap().time);
     }
 }

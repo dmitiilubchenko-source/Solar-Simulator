@@ -71,13 +71,13 @@ SHA256: `2a54399c6248a8de86d271f55353903dce57d23cf9f572d63acce40f4e2e3b15`.
 
 ## Код и ограничения
 
-[Подготовка сценария](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:279),
+[Подготовка сценария](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:296),
 [общий лунный профиль](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/application_profiles.py:15),
-[цикл рабочего потока](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:411),
-[расположение элементов](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:93),
-[проверка перенесённого GUI](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:218),
-[проверка сохранения/продолжения](C:/Users/Admin/Desktop/Solar-simulator/tests/test_app_workflows.py:181),
-[проверка видимости диагностики](C:/Users/Admin/Desktop/Solar-simulator/tests/test_app_workflows.py:205).
+[цикл рабочего потока](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:436),
+[расположение элементов](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:101),
+[проверка перенесённого GUI](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:327),
+[проверка сохранения/продолжения](C:/Users/Admin/Desktop/Solar-simulator/tests/test_app_workflows.py:184),
+[проверка видимости диагностики](C:/Users/Admin/Desktop/Solar-simulator/tests/test_app_workflows.py:208).
 
 Луна — [ньютоновская mean-solid rigid-аппроксимация](nbody-rotation.md),
 без приливов, внутреннего ядра и полной PN-модели вращения. Отправленный

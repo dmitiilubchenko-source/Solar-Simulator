@@ -58,5 +58,5 @@ JPLпоказатели относятся только к исходным10т�
 Полная воспроизводимость старых researchfixtures наcleanclone не доказана:
 часть прежних тестов всё ещё использует локальныйcache; следующий этап125.
 
-[Сборщик](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:61),
-[проверка перенесённогоGUI](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:218).
+[Сборщик](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:65),
+[проверка перенесённогоGUI](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:327).

@@ -2,7 +2,7 @@
   "protocol": "docs/qualification-extension-protocol.md",
   "source_sha256": {
     "scripts/assess_sandbox_limits.py": "1711a95f9e461e6a10d2ab503d78a79a6205bdf57ddde41100c6160d614fabee",
-    "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+    "src/solar_simulator/sandbox.py": "46120a00ac7434d107b9e9b5aa653d3401c225adc7ad9fce33b2b274b6851806",
     "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
     "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
     "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
@@ -43,7 +43,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.6038771999883465
+      "wall_seconds": 0.7121620000107214
     },
     {
       "name": "slow-velocity",
@@ -62,7 +62,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.7025566000083927
+      "wall_seconds": 0.8805936000135262
     },
     {
       "name": "escape-velocity",
@@ -84,7 +84,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.25881449997541495
+      "wall_seconds": 0.3180393000075128
     },
     {
       "name": "eccentric-095",
@@ -103,7 +103,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.537092099984875
+      "wall_seconds": 0.684806099976413
     },
     {
       "name": "add-companion",
@@ -122,7 +122,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 1.1702067000151146
+      "wall_seconds": 1.4926439999835566
     },
     {
       "name": "remove-primary",
@@ -132,7 +132,7 @@
       "checks_passed": true,
       "parent_preserved": true,
       "duration_seconds": 1000000.0,
-      "wall_seconds": 0.05899590000626631
+      "wall_seconds": 0.06764239998301491
     },
     {
       "name": "mass-double",
@@ -151,7 +151,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.3327451000222936
+      "wall_seconds": 0.42556319999857806
     },
     {
       "name": "slow-velocity",
@@ -170,7 +170,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.39639929999248125
+      "wall_seconds": 0.4731006000074558
     },
     {
       "name": "escape-velocity",
@@ -192,7 +192,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.219527500012191
+      "wall_seconds": 0.26387439999962226
     },
     {
       "name": "eccentric-095",
@@ -211,7 +211,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.3101514999871142
+      "wall_seconds": 0.37991419999161735
     },
     {
       "name": "add-companion",
@@ -230,7 +230,7 @@
       "parent_preserved": true,
       "checkpoint_continue_exact": true,
       "checks_passed": true,
-      "wall_seconds": 0.6616833000152837
+      "wall_seconds": 0.8626554999791551
     },
     {
       "name": "remove-primary",
@@ -240,7 +240,7 @@
       "checks_passed": true,
       "parent_preserved": true,
       "duration_seconds": 1000000.0,
-      "wall_seconds": 0.032124799996381626
+      "wall_seconds": 0.03597579998313449
     }
   ],
   "checks_passed": true,

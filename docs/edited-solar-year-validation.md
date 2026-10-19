@@ -126,8 +126,8 @@ CLIпроцесса с егоCSV/JSON/report (а не чистого solver):
 В app.py batch по умолчанию 20 при strict dt=3600 с даёт 72000 с / 20 ч; у continuous CLI
 packet_steps по умолчанию также 20. Исследовательские выходы через 6 ч ограничивают пакет.
 Проверка двух годовых сеток через 6 ч не сертифицирует пакеты по 20 ч и GUI с настройками по умолчанию.
-[GUIbatch](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:54),
-[GUIsubmit](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:399),
+[GUIbatch](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:62),
+[GUIsubmit](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:424),
 [длительностьadvance](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:139),
 [границыпакета](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/time_control.py:31).
 

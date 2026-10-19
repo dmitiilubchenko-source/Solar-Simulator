@@ -1,5 +1,6 @@
 """User journeys run in fresh Tcl interpreters, including actual widgets."""
 from pathlib import Path
+import os
 import subprocess
 import sys
 
@@ -12,8 +13,10 @@ spec = importlib.util.spec_from_file_location('workflow_checks', sys.argv[1])
 module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
 getattr(module, sys.argv[2])(Path(sys.argv[3]))
 """
+    environment=os.environ.copy()
+    environment['LOCALAPPDATA']=str(tmp_path/'appdata')
     result = subprocess.run([sys.executable, '-B', '-c', code, str(source or Path(__file__).resolve()),
-                             function, str(tmp_path)], capture_output=True, text=True, timeout=40)
+                             function, str(tmp_path)], capture_output=True, text=True, timeout=40,env=environment)
     assert result.returncode == 0, result.stdout+result.stderr
 
 

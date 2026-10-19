@@ -1,8 +1,8 @@
 """Read a checkpoint plus its optional immutable immediate-parent snapshot."""
 import json
 
-from .sandbox import from_branch_document
-from .storage import _read_document, from_document
+from .sandbox import ExperimentBranch, from_branch_document, save_branch
+from .storage import _read_document, from_document, save
 
 
 def open_experiment(path):
@@ -19,3 +19,11 @@ def open_experiment(path):
 def parent_experiment(snapshot):
     if snapshot is None:raise ValueError("В этом опыте нет сохранённого родителя; откройте файл ветки")
     return from_document(json.loads(snapshot))
+
+
+def save_experiment(experiment, path, *, parent_snapshot=None):
+    """Atomically keep the immediate parent whenever the opened file has one."""
+    if parent_snapshot is None:
+        save(experiment, path)
+    else:
+        save_branch(ExperimentBranch(parent_snapshot, experiment), path)

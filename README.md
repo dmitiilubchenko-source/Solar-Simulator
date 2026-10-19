@@ -4,6 +4,10 @@
 взаимное движение N тел в 3D, проекции XY/XZ/YZ, траектории,
 диагностика, контакты сфер, отскоки, слияния и контрольные точки.
 
+[Карта проекта, реестр файлов и правила хранения сборок](docs/project-map.md).
+
+[Безопасная остановка, закрытие и восстановление опыта](docs/controlled-stop.md).
+
 ## Направление следующей версии
 
 Solar развивается в физическую песочницу: Солнечная система — исходный
@@ -92,15 +96,24 @@ ZIP 0.2.0 сохраняет прежнее поведение.
 
 Python 3.11 или новее с Tk:
 
+Для повторения опубликованных измерений используйте проверенный Windows x64 /
+CPython 3.14t и constraints ниже. Это не проверка всех Python ≥3.11 и платформ;
+для другой среды нужны отдельные проверки. Переменная команда `python` должна
+выбирать нужный интерпретатор до создания `.venv`.
+
 ```powershell
 python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev,native]"
+.\.venv\Scripts\python.exe -m pip install -e ".[dev,native]" -c requirements/validated-windows-cp314t.txt
+.\.venv\Scripts\python.exe -m pip check
 .\.venv\Scripts\python.exe -B scripts/build_native.py
-.\.venv\Scripts\python.exe -B scripts/check_project.py
+& "$env:USERPROFILE\.cargo\bin\cargo.exe" build --release --manifest-path rust/solar_core/Cargo.toml
+.\.venv\Scripts\python.exe -B scripts/check_project.py --require-native
 ```
 
 Python-ядро работает без Rust. Для native-сборки нужен Cargo;
 подготовка Windows GNU-инструментов описана в `docs/rust.md`.
+Обычный checker без `--require-native` сохраняет прежнюю политику пропусков.
+[Выбор Standard/Strict и область проверок](docs/profile-selection.md).
 На текущем компьютере используется CPython 3.14t; native wheel
 привязан к соответствующему ABI. Переносимая сборка включает этот Python.
 
@@ -248,3 +261,19 @@ restart и bitwise round-trip проверены; это исследовате�
 
 
 Проверенные параметры, численные и JPL-показатели, режимы пакетов и ограничения: [паспорт рабочего профиля](docs/solar-working-profile.md).
+
+[Аудит восстановления и подготовки актуальной portable](docs/recovery-portable-validation.md).
+
+[Запись полных траекторий и независимый просмотр](docs/trajectory-recording.md):
+новый режим исходного GUI/CLI, снимки/с отдельно от численных пакетов;
+сохранённая portable315 остаётся прежней.
+
+[Сравнение исходного и изменённого опыта](docs/trajectory-comparison.md):
+общие сохранённые эпохи, наложение орбит, Δr/Δv и JSON с происхождением;
+доступно в исходном GUI/CLI.
+
+[Удобные единицы редактора](docs/body-editor-units.md): учебные массы
+Земли/Солнца, км/au, км/с и ввод относительно тела с сохранением SI.
+
+[Рецепт записи и повтор опыта](docs/recording-recipe.md): происхождение
+кода/окружения, фактические пакеты и проверка полных кадров в новом процессе.

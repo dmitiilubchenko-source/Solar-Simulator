@@ -1,6 +1,6 @@
 """Detached point-mass experiments with an immutable immediate-parent snapshot.
 
-No force formulas or GUI dependencies. Bundle v1 wraps ordinary checkpoints;
+No force formulas or GUI dependencies. Bundles wrap ordinary checkpoints;
 the child uses its own energy baseline and makes no claim of unchanged JPL data.
 """
 from dataclasses import dataclass
@@ -81,7 +81,7 @@ def branch_experiment(parent: Experiment, *, replacements=(), additions=(), remo
     return branch
 
 
-def to_branch_document(branch):
+def to_branch_document(branch, *, version=None):
     if not isinstance(branch, ExperimentBranch) or type(branch.parent_snapshot) is not str:
         raise ValueError("Неверная ветка опыта")
     if len(branch.parent_snapshot.encode("utf-8")) > MAX_BYTES:
@@ -93,9 +93,14 @@ def to_branch_document(branch):
     child_document = to_document(branch.child)
     _supported(parent)
     _supported(branch.child)
-    if branch.child.origin is not None or branch.child.settings != parent.settings:
+    if version is None:
+        version = 1 if branch.child.settings == parent.settings else 2
+    if type(version) is not int or version not in (1, 2):
+        raise ValueError("Неподдерживаемая версия ветки опыта")
+    if branch.child.origin is not None or (version == 1 and branch.child.settings != parent.settings):
         raise ValueError("Дочерний опыт должен иметь собственный старт и прежние настройки")
-    document = dict(format="solar-experiment-branch", version=1,
+    # v2 records current child settings independently; the parent stays immutable.
+    document = dict(format="solar-experiment-branch", version=version,
                     parent=parent_document, parent_sha256=branch.parent_sha256,
                     child=child_document, changes=branch.changes())
     if len(_canonical(document).encode("utf-8")) > MAX_BYTES:
@@ -105,13 +110,13 @@ def to_branch_document(branch):
 
 def from_branch_document(document):
     _keys(document, ("format", "version", "parent", "parent_sha256", "child", "changes"))
-    if document["format"] != "solar-experiment-branch" or type(document["version"]) is not int or document["version"] != 1:
+    if document["format"] != "solar-experiment-branch" or type(document["version"]) is not int or document["version"] not in (1, 2):
         raise ValueError("Неподдерживаемый формат ветки опыта")
     snapshot = _canonical(document["parent"])
     if _digest(snapshot) != document["parent_sha256"]:
         raise ValueError("Изменена родительская контрольная точка")
     branch = ExperimentBranch(snapshot, from_document(document["child"]))
-    if to_branch_document(branch) != document:
+    if to_branch_document(branch, version=document["version"]) != document:
         raise ValueError("Несогласованная история правок ветки")
     return branch
 

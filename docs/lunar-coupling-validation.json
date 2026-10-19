@@ -1,0 +1,618 @@
+{
+  "generated_at": "2026-10-16T23:43:59+03:00",
+  "stages": [
+    243,
+    244,
+    245,
+    246,
+    247
+  ],
+  "measurements": {
+    "complete": true,
+    "checks_passed": true,
+    "source_sha256": {
+      "docs/lunar-coupling-protocol.md": "cf178f335dfbaf9907dae8d6f628934ac5606bbfa17f9beb5c641fa61a42ca10",
+      "scripts\\assess_de441_reader.py": "4996d087ac20270520ed1ca4c29fe7896f45c6a609bfd0072a052a3f5d0de30e",
+      "scripts\\assess_dense_jpl.py": "601558a9bc71c22c7b51f533002d91eaa41ff85c2454c011f08f0f0bdb60ebb7",
+      "scripts\\assess_edited_solar.py": "13cad662ee8b1d16e981571d604073b5dfb3a3a19a324a93727e0c8d32d4bd9f",
+      "scripts\\assess_edited_solar_month.py": "55d017f6d09c8f9ac4dfe073b68035ad0cb57e925fb12e50ec03d697fd3e8917",
+      "scripts\\assess_edited_solar_packet20.py": "e081c049e1b253ee0854a918e79418f02fbdf1b6d861b8ef2c6a6022083edfdd",
+      "scripts\\assess_edited_solar_year.py": "1e1eaa7823a576fa0743ffcb050e18243bbfbe793560b7994d449724e0282a33",
+      "scripts\\assess_lunar_coupling.py": "5ce0d6a2ca0390316e75e48bf3b782af96203604550297584ce249581995f16a",
+      "scripts\\assess_nominal_jpl.py": "27b1289c04700c935b36ad9a1b55e9dd00c2bc525a52386ee0107f70956d03ff",
+      "scripts\\assess_nominal_solar_packets.py": "3d3e7eee99f9527cd0db45eab9006cc977ba9d3a20497c5a82223d4fb1c4b2ff",
+      "scripts\\assess_oblateness.py": "304ff7b1ff651c24ebe67d2b3bc9ad029c9dff12777a076b0a474abdcc9912cc",
+      "scripts\\assess_orientation.py": "f01b698a08c3cd15c5236113a9d89d02d8514671f24a96e21b181c9988722460",
+      "scripts\\assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+      "scripts\\assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+      "scripts\\assess_resolved_moon.py": "7b633b17c41fa5509c4ea074235e088fdba76cff3680ea73d28c996bb1d41df5",
+      "scripts\\assess_sandbox_models.py": "39f3414626175c94c6205e472dc8d81b63284a22113d20c68993c998c614c54d",
+      "scripts\\assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+      "scripts\\assess_solar_defect.py": "b21105b1ca27680b2d109ecd7efa5056a2f662b9e6112d4aea0adfd4752a6f8b",
+      "scripts\\assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+      "scripts\\assess_solar_system.py": "e61195be6e072013687ff18a1672fb6e12603d43a70afebcf70b9c3993e7c052",
+      "scripts\\de441_decimal.py": "7464d84e5906e4dfeabe7e1704ef2a205624af1e17370498bbe3cd7dc4ce06b4",
+      "scripts\\de441_reader.py": "26b71cb0b755f9fa025288b588d5b5c3184d6fac9fad416056bc22f9da1e4ab9",
+      "scripts\\edited_j2.py": "31418782c1585c87fb3cb9b8dd6dc141055372679f3efdffddaffbb2d2d7244e",
+      "scripts\\edited_solar_interval.py": "bdd2215d2d178382fb7523a2b1933abddcd0df1cb91312697c23de1f10ec800f",
+      "scripts\\eih_year.py": "a9bcbac8897b42601627ff81ef03cba7ee0fc29b2a431cd4a35b37b89cf16bb1",
+      "scripts\\fetch_ephemerides.py": "719d31998368f4c200a60f1460abd4530a04c4063a9c8e60f6b2d2988a8dc232",
+      "scripts\\fetch_figure_profile.py": "e7c293dcbf51dc80c2731eec20b03d874bbd1b2e08be85f9ca5ec748b0bba6cd",
+      "scripts\\fixed_j2_ias.py": "fd77c72ce6742fedc479064947de863b4632e3aee9f48a793005f861c0d96df5",
+      "scripts\\fixed_j2_year.py": "99fe334594c3391e6f3dabe89a33cded5aec93a2763d112d7b4f276b4af8d51c",
+      "scripts\\ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+      "scripts\\ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+      "scripts\\independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+      "scripts\\independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+      "scripts\\independent_lunar_coupling.py": "62398d7e88f6200332853cda0d56b5a409eba309f4182cb759e847c1387b5040",
+      "scripts\\newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+      "scripts\\nominal_jpl.py": "c73072be9f2eb4c02c345707d84256a966849ba097d03528ce74fae22c0c8937",
+      "scripts\\verify_edited_solar_cli.py": "e3431f13d342cf91545c2546b7c5ab788be8202b0569876729ee09df7c17689a",
+      "scripts\\verify_edited_solar_packets.py": "141a86fd3e169eb8de0f8f084bbd422777f1a5208a5f90f876774758a9533be0",
+      "src\\solar_simulator\\__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+      "src\\solar_simulator\\accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+      "src\\solar_simulator\\application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+      "src\\solar_simulator\\collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+      "src\\solar_simulator\\contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+      "src\\solar_simulator\\continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+      "src\\solar_simulator\\coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "src\\solar_simulator\\data\\__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+      "src\\solar_simulator\\diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+      "src\\solar_simulator\\ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+      "src\\solar_simulator\\error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+      "src\\solar_simulator\\experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+      "src\\solar_simulator\\impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+      "src\\solar_simulator\\native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "src\\solar_simulator\\nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+      "src\\solar_simulator\\oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+      "src\\solar_simulator\\orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+      "src\\solar_simulator\\perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+      "src\\solar_simulator\\relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+      "src\\solar_simulator\\rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+      "src\\solar_simulator\\sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+      "src\\solar_simulator\\scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+      "src\\solar_simulator\\simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+      "src\\solar_simulator\\spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "src\\solar_simulator\\storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+      "src\\solar_simulator\\time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+      "src\\solar_simulator\\vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2"
+    },
+    "input_sha256": {
+      ".tools\\de441236\\audit238-final.json": "9f49d79793b47597fe92e4fbadc6d5ab5577dc3b96b83f8fa05309788b9d379d",
+      "docs/de441-reader-inputs.zip": "eaf32db3d18daffc1ec7fd0193c8811b05e2cc2013f34918aca541cbb6e9ee06",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\asteroids-20261008.json": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\asteroids-catalog-20261008.json": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\asteroids-full-20261008.json": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\earth-j2-20261008.json": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-20261010.json": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-036-0-20261011.json": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-036-1-20261011.json": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-072-0-20261011.json": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-072-1-20261011.json": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-144-0-20261011.json": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-144-1-20261011.json": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-manifest.json": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orbit-cohort-13270.json": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orbit-cohort-13271.json": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orbit-observations-13270.json": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orientation-de441-20261008.json": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\pluto-system-20261008.json": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\solar-j2-20261008.json": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\solar-system-20261008.json": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702"
+    },
+    "protocol": "docs/lunar-coupling-protocol.md",
+    "units": "SI",
+    "origin": {
+      "epoch_jd_tdb": 2461321.5,
+      "frame": "Ecliptic J2000",
+      "center": "Solar System Barycenter",
+      "ephemeris": "DE441",
+      "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+      "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+    },
+    "settings": {
+      "dt": 3600,
+      "backend": "rust",
+      "contact_mode": "stop",
+      "restitution": 1.0,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "position_atol": 0.001,
+      "velocity_atol": 1e-09,
+      "physics": "eih-1pn",
+      "figures": [
+        {
+          "body": "Sun",
+          "coefficient": 2.1961391516529825e-07,
+          "reference_radius": 696000000.0,
+          "axis": [
+            0.12235349347232782,
+            -0.0310378702450671,
+            0.9920011457885356
+          ],
+          "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+        },
+        {
+          "body": "Earth",
+          "coefficient": 0.00108262539,
+          "reference_radius": 6378136.6,
+          "axis": [
+            0.0026020959422886785,
+            0.39776866017225926,
+            0.9174820554547499
+          ],
+          "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+        }
+      ],
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "error_control": "per-body"
+    },
+    "names": [
+      "Sun",
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Moon",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "masses_kg": [
+      1.988409871316534e+30,
+      3.301000636980658e+23,
+      4.867305814842006e+24,
+      5.972168399787584e+24,
+      7.345789248996225e+22,
+      6.416909011545196e+23,
+      1.898517658780696e+27,
+      5.684578883448452e+26,
+      8.68189383156286e+25,
+      1.0243062344486162e+26
+    ],
+    "coefficients": {
+      "reference_radius_m": 1738000.0,
+      "nominal_j2": 0.000203214360135,
+      "nominal_c22": 2.2380850528171017e-05,
+      "solid_j2": 0.00020323499999994383,
+      "solid_c22": 2.2427500000015814e-05,
+      "moments_kg_m2": [
+        8.71174869368716e+34,
+        8.71373927015286e+34,
+        8.71725356622506e+34
+      ]
+    },
+    "propagation_performed": false,
+    "parameters_fitted": false,
+    "runtime_modified": false,
+    "network_used": false,
+    "prescribed_orientation_is_external": true,
+    "physical_lunar_mapping_certified": false,
+    "full_year_noether_balances_verified": false,
+    "conservative_spin_forecast_qualified": false,
+    "checks_maximum_relative": {
+      "force": 3.997839034315558e-12,
+      "torque": 2.4282749899554764e-11,
+      "potential": 3.776483911765403e-12,
+      "power": 1.3294019128228544e-10,
+      "prescribed_bridge": 8.773730099497059e-13,
+      "linear": 1.4492507305181907e-16,
+      "angular": 9.244070452717483e-15
+    },
+    "negative_controls_maximum": {
+      "missing_reaction": 0.4999999944495252,
+      "missing_torque": 0.49999865395337845,
+      "missing_spin_power": 0.49999999999952305
+    },
+    "samples": 440,
+    "coupling_checks_passed": true,
+    "previous_force_bridges_passed": true,
+    "models": {
+      "earth_prescribed": {
+        "bodies": {
+          "Sun": {
+            "maximum_m_per_s2": 6.398845900302931e-13,
+            "rms_m_per_s2": 4.937337018337179e-13,
+            "initial_m_per_s2": 4.509420477557437e-13,
+            "final_m_per_s2": 5.527769696662453e-13,
+            "worst_seconds": 26856000.0
+          },
+          "Mercury": {
+            "maximum_m_per_s2": 2.2504497872711e-11,
+            "rms_m_per_s2": 1.3259908316025796e-12,
+            "initial_m_per_s2": 2.785991722526584e-13,
+            "final_m_per_s2": 2.5746320021969145e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Venus": {
+            "maximum_m_per_s2": 1.997682382082517e-12,
+            "rms_m_per_s2": 6.676788055555305e-13,
+            "initial_m_per_s2": 5.597604357510926e-13,
+            "final_m_per_s2": 6.63098063927978e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Earth": {
+            "maximum_m_per_s2": 1.850083841354225e-12,
+            "rms_m_per_s2": 7.445563206151162e-13,
+            "initial_m_per_s2": 6.525176760672263e-13,
+            "final_m_per_s2": 2.808613491439674e-13,
+            "worst_seconds": 6192000.0
+          },
+          "Moon": {
+            "maximum_m_per_s2": 3.813806634417459e-11,
+            "rms_m_per_s2": 2.8257397422865997e-11,
+            "initial_m_per_s2": 2.9761559292450963e-11,
+            "final_m_per_s2": 2.3210901232474833e-11,
+            "worst_seconds": 30672000.0
+          },
+          "Mars": {
+            "maximum_m_per_s2": 2.4275110507566063e-12,
+            "rms_m_per_s2": 1.3676469055327984e-12,
+            "initial_m_per_s2": 2.3587326983136913e-12,
+            "final_m_per_s2": 2.807056311205653e-13,
+            "worst_seconds": 720000.0
+          },
+          "Jupiter": {
+            "maximum_m_per_s2": 6.064228374013227e-13,
+            "rms_m_per_s2": 5.402369568949833e-13,
+            "initial_m_per_s2": 4.625119885020462e-13,
+            "final_m_per_s2": 5.441174025633563e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Saturn": {
+            "maximum_m_per_s2": 6.881131486198806e-14,
+            "rms_m_per_s2": 5.946838488011414e-14,
+            "initial_m_per_s2": 6.868075907577234e-14,
+            "final_m_per_s2": 5.4738691709861273e-14,
+            "worst_seconds": 3312000.0
+          },
+          "Uranus": {
+            "maximum_m_per_s2": 3.7117832442622877e-14,
+            "rms_m_per_s2": 3.500559342050131e-14,
+            "initial_m_per_s2": 3.4815041600485515e-14,
+            "final_m_per_s2": 3.5896215604255845e-14,
+            "worst_seconds": 31032000.0
+          },
+          "Neptune": {
+            "maximum_m_per_s2": 1.3550608632500595e-13,
+            "rms_m_per_s2": 1.3034944359089708e-13,
+            "initial_m_per_s2": 1.2927087448116077e-13,
+            "final_m_per_s2": 1.3120578740572324e-13,
+            "worst_seconds": 14400000.0
+          }
+        },
+        "moon_relative": {
+          "maximum_m_per_s2": 3.8964981392701934e-11,
+          "rms_m_per_s2": 2.860509353264871e-11,
+          "initial_m_per_s2": 2.9917586379423244e-11,
+          "final_m_per_s2": 2.3324678264963485e-11,
+          "worst_seconds": 11664000.0
+        }
+      },
+      "nominal_moon": {
+        "bodies": {
+          "Sun": {
+            "maximum_m_per_s2": 6.398845900302931e-13,
+            "rms_m_per_s2": 4.937337018342173e-13,
+            "initial_m_per_s2": 4.509420477510312e-13,
+            "final_m_per_s2": 5.52776969666233e-13,
+            "worst_seconds": 26856000.0
+          },
+          "Mercury": {
+            "maximum_m_per_s2": 2.2504497872711e-11,
+            "rms_m_per_s2": 1.3259908316025796e-12,
+            "initial_m_per_s2": 2.785991722526584e-13,
+            "final_m_per_s2": 2.5746320021969145e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Venus": {
+            "maximum_m_per_s2": 1.997682382082517e-12,
+            "rms_m_per_s2": 6.676788055555305e-13,
+            "initial_m_per_s2": 5.597604357510926e-13,
+            "final_m_per_s2": 6.63098063927978e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Earth": {
+            "maximum_m_per_s2": 1.81598026426423e-12,
+            "rms_m_per_s2": 6.542409875537429e-13,
+            "initial_m_per_s2": 6.628210048847105e-13,
+            "final_m_per_s2": 3.059322704365932e-13,
+            "worst_seconds": 6192000.0
+          },
+          "Moon": {
+            "maximum_m_per_s2": 1.17869491669369e-11,
+            "rms_m_per_s2": 1.0434008011311406e-12,
+            "initial_m_per_s2": 6.84397591078509e-13,
+            "final_m_per_s2": 3.543753216146547e-13,
+            "worst_seconds": 6480000.0
+          },
+          "Mars": {
+            "maximum_m_per_s2": 2.4275110507566063e-12,
+            "rms_m_per_s2": 1.3676469055327984e-12,
+            "initial_m_per_s2": 2.3587326983136913e-12,
+            "final_m_per_s2": 2.807056311205653e-13,
+            "worst_seconds": 720000.0
+          },
+          "Jupiter": {
+            "maximum_m_per_s2": 6.064228374013227e-13,
+            "rms_m_per_s2": 5.402369568949833e-13,
+            "initial_m_per_s2": 4.625119885020462e-13,
+            "final_m_per_s2": 5.441174025633563e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Saturn": {
+            "maximum_m_per_s2": 6.881131486198806e-14,
+            "rms_m_per_s2": 5.946838488011414e-14,
+            "initial_m_per_s2": 6.868075907577234e-14,
+            "final_m_per_s2": 5.4738691709861273e-14,
+            "worst_seconds": 3312000.0
+          },
+          "Uranus": {
+            "maximum_m_per_s2": 3.7117832442622877e-14,
+            "rms_m_per_s2": 3.500559342050131e-14,
+            "initial_m_per_s2": 3.4815041600485515e-14,
+            "final_m_per_s2": 3.5896215604255845e-14,
+            "worst_seconds": 31032000.0
+          },
+          "Neptune": {
+            "maximum_m_per_s2": 1.3550608632500595e-13,
+            "rms_m_per_s2": 1.3034944359089708e-13,
+            "initial_m_per_s2": 1.2927087448116077e-13,
+            "final_m_per_s2": 1.3120578740572324e-13,
+            "worst_seconds": 14400000.0
+          }
+        },
+        "moon_relative": {
+          "maximum_m_per_s2": 1.1248379431095697e-11,
+          "rms_m_per_s2": 8.088282014598321e-13,
+          "initial_m_per_s2": 7.722148694430797e-14,
+          "final_m_per_s2": 7.764136529472123e-14,
+          "worst_seconds": 6480000.0
+        }
+      },
+      "solid_moon": {
+        "bodies": {
+          "Sun": {
+            "maximum_m_per_s2": 6.398845900302931e-13,
+            "rms_m_per_s2": 4.937337018342173e-13,
+            "initial_m_per_s2": 4.509420477510312e-13,
+            "final_m_per_s2": 5.52776969666233e-13,
+            "worst_seconds": 26856000.0
+          },
+          "Mercury": {
+            "maximum_m_per_s2": 2.2504497872711e-11,
+            "rms_m_per_s2": 1.3259908316025796e-12,
+            "initial_m_per_s2": 2.785991722526584e-13,
+            "final_m_per_s2": 2.5746320021969145e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Venus": {
+            "maximum_m_per_s2": 1.997682382082517e-12,
+            "rms_m_per_s2": 6.676788055555305e-13,
+            "initial_m_per_s2": 5.597604357510926e-13,
+            "final_m_per_s2": 6.63098063927978e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Earth": {
+            "maximum_m_per_s2": 1.8160105581361105e-12,
+            "rms_m_per_s2": 6.542471600199686e-13,
+            "initial_m_per_s2": 6.629370416640629e-13,
+            "final_m_per_s2": 3.060777768018875e-13,
+            "worst_seconds": 6192000.0
+          },
+          "Moon": {
+            "maximum_m_per_s2": 1.1784099597519746e-11,
+            "rms_m_per_s2": 1.0421123787938185e-12,
+            "initial_m_per_s2": 6.74574086654782e-13,
+            "final_m_per_s2": 3.4028396651868016e-13,
+            "worst_seconds": 6480000.0
+          },
+          "Mars": {
+            "maximum_m_per_s2": 2.4275110507566063e-12,
+            "rms_m_per_s2": 1.3676469055327984e-12,
+            "initial_m_per_s2": 2.3587326983136913e-12,
+            "final_m_per_s2": 2.807056311205653e-13,
+            "worst_seconds": 720000.0
+          },
+          "Jupiter": {
+            "maximum_m_per_s2": 6.064228374013227e-13,
+            "rms_m_per_s2": 5.402369568949833e-13,
+            "initial_m_per_s2": 4.625119885020462e-13,
+            "final_m_per_s2": 5.441174025633563e-13,
+            "worst_seconds": 25488000.0
+          },
+          "Saturn": {
+            "maximum_m_per_s2": 6.881131486198806e-14,
+            "rms_m_per_s2": 5.946838488011414e-14,
+            "initial_m_per_s2": 6.868075907577234e-14,
+            "final_m_per_s2": 5.4738691709861273e-14,
+            "worst_seconds": 3312000.0
+          },
+          "Uranus": {
+            "maximum_m_per_s2": 3.7117832442622877e-14,
+            "rms_m_per_s2": 3.500559342050131e-14,
+            "initial_m_per_s2": 3.4815041600485515e-14,
+            "final_m_per_s2": 3.5896215604255845e-14,
+            "worst_seconds": 31032000.0
+          },
+          "Neptune": {
+            "maximum_m_per_s2": 1.3550608632500595e-13,
+            "rms_m_per_s2": 1.3034944359089708e-13,
+            "initial_m_per_s2": 1.2927087448116077e-13,
+            "final_m_per_s2": 1.3120578740572324e-13,
+            "worst_seconds": 14400000.0
+          }
+        },
+        "moon_relative": {
+          "maximum_m_per_s2": 1.1242864993674504e-11,
+          "rms_m_per_s2": 8.075562770673469e-13,
+          "initial_m_per_s2": 7.134925711996134e-14,
+          "final_m_per_s2": 5.887570904944451e-14,
+          "worst_seconds": 6480000.0
+        }
+      }
+    },
+    "moon_field_difference": {
+      "bodies": {
+        "Sun": {
+          "maximum_m_per_s2": 1.439206378241167e-26,
+          "rms_m_per_s2": 1.0623041618216304e-26,
+          "initial_m_per_s2": 9.10113202980966e-27,
+          "final_m_per_s2": 1.1391516019391734e-26,
+          "worst_seconds": 7920000.0
+        },
+        "Mercury": {
+          "maximum_m_per_s2": 1.3545170695582464e-25,
+          "rms_m_per_s2": 3.259011815887752e-26,
+          "initial_m_per_s2": 6.853617819192259e-27,
+          "final_m_per_s2": 3.234878738476342e-26,
+          "worst_seconds": 22032000.0
+        },
+        "Venus": {
+          "maximum_m_per_s2": 2.284024135197495e-24,
+          "rms_m_per_s2": 5.173835219304932e-25,
+          "initial_m_per_s2": 9.477417812807e-25,
+          "final_m_per_s2": 1.547740768970373e-27,
+          "worst_seconds": 1512000.0
+        },
+        "Earth": {
+          "maximum_m_per_s2": 4.103336471773549e-16,
+          "rms_m_per_s2": 3.085171068754289e-16,
+          "initial_m_per_s2": 3.225587432663748e-16,
+          "final_m_per_s2": 2.5136070505702856e-16,
+          "worst_seconds": 6696000.0
+        },
+        "Moon": {
+          "maximum_m_per_s2": 3.336072266822583e-14,
+          "rms_m_per_s2": 2.5082614478248197e-14,
+          "initial_m_per_s2": 2.6224207715848273e-14,
+          "final_m_per_s2": 2.0435662877513e-14,
+          "worst_seconds": 6696000.0
+        },
+        "Mars": {
+          "maximum_m_per_s2": 6.348657801351162e-26,
+          "rms_m_per_s2": 1.923707481250022e-26,
+          "initial_m_per_s2": 1.4477926793526692e-27,
+          "final_m_per_s2": 4.379994303023282e-28,
+          "worst_seconds": 11736000.0
+        },
+        "Jupiter": {
+          "maximum_m_per_s2": 3.661006582305527e-29,
+          "rms_m_per_s2": 1.7116946223138067e-29,
+          "initial_m_per_s2": 1.0522817944870394e-29,
+          "final_m_per_s2": 5.539328510198951e-30,
+          "worst_seconds": 10512000.0
+        },
+        "Saturn": {
+          "maximum_m_per_s2": 2.7027973439942116e-30,
+          "rms_m_per_s2": 1.472037575478292e-30,
+          "initial_m_per_s2": 1.8774892469185758e-30,
+          "final_m_per_s2": 2.3535160741508367e-30,
+          "worst_seconds": 31032000.0
+        },
+        "Uranus": {
+          "maximum_m_per_s2": 1.15176338536526e-31,
+          "rms_m_per_s2": 7.581472692063699e-32,
+          "initial_m_per_s2": 9.206499880360892e-32,
+          "final_m_per_s2": 6.970647477113387e-32,
+          "worst_seconds": 4104000.0
+        },
+        "Neptune": {
+          "maximum_m_per_s2": 1.9137153397732697e-32,
+          "rms_m_per_s2": 1.343981326152332e-32,
+          "initial_m_per_s2": 1.5575397385296725e-32,
+          "final_m_per_s2": 1.5324147250552234e-32,
+          "worst_seconds": 30888000.0
+        }
+      },
+      "moon_relative": {
+        "maximum_m_per_s2": 3.3771056315401373e-14,
+        "rms_m_per_s2": 2.5391131585103597e-14,
+        "initial_m_per_s2": 2.6546766459100588e-14,
+        "final_m_per_s2": 2.068702358254506e-14,
+        "worst_seconds": 6696000.0
+      }
+    },
+    "npz_sha256": "e157c31f5124f226ddc6f1f2340aa0bb05b2e07798f225e548e078db22412bed",
+    "wall_seconds": 4.208036900000025
+  },
+  "offline_replay": {
+    "returncode": 0,
+    "wall_seconds": 12.56885850000026,
+    "stdout": "DE441 reader complete True passed True seconds 3.260040499999832\nLunar coupling audit complete True checks passed True\n",
+    "stderr": "",
+    "network_disabled": true,
+    "prior_tools_absent": true,
+    "imports_from_copy_checked": true,
+    "native_dependency_shared_with_original": true,
+    "all_decoded_arrays_exact": true,
+    "array_count": 17,
+    "scientific_metrics_exact": true
+  },
+  "full_regression": {
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "scripts/check_project.py"
+    ],
+    "returncode": 0,
+    "wall_seconds": 477.3123620000001,
+    "public_files": 817,
+    "public_unchanged": true,
+    "log_sha256": "06b9e13ea00da0cf4a9e456d55de7d47a50175029a79ec45ea81319d5d22135b",
+    "finished_at": "2026-10-16T23:43:25.664979+03:00"
+  },
+  "environment_observed_during_full": {
+    "recorded_at": "2026-10-16T23:36:09+03:00",
+    "recorded_during_full246": true,
+    "python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1",
+    "measurement": "environment observed during regression, not an earlier-environment timestamp claim"
+  },
+  "prior_budget_comparison": {
+    "all_ten_bodies_all_statistics_exact": {
+      "earth_prescribed": true,
+      "nominal_moon": true
+    }
+  },
+  "original_failures_preserved": {
+    "fixture": {
+      "stage": 244,
+      "result": "1 failed, 16 passed in 2.27s",
+      "test": "test_coupling_identity_uses_reaction_and_spin_power",
+      "cause": "Synthetic J2=.075/C22=.0125 exceeded existing PrescribedQuadrupole .01 domain; test failed before force evaluation",
+      "correction": "Use reference radius 3000 instead of 1000 for the SAME I and field; J2/C22 rescale by 1/9, physical bounding sphere unchanged",
+      "criteria_changed": false
+    },
+    "guard": {
+      "original": "audit245.json",
+      "probe": "probe245.json",
+      "cause": "dataclasses.asdict deep-copies non-dataclass Vector3 instances; Vector3 has identity equality, so equal numeric copies compare unequal",
+      "source_hashes_changed": false,
+      "physical_model_changed": false,
+      "correction": "Compare deterministic storage primitive document bytes rather than identity of deep-copied Vector3",
+      "criteria_changed": false
+    },
+    "failed_audit_sha256": {
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\lunar243\\audit245.json": "bc76a871d780857989e15a1d0af22760269a1977b74285f6b03c465387983b00",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\lunar243\\probe245.json": "0644883351513355706b2597495ad991b697e00f2605b669f1320de8e547e4f9",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\lunar243\\assess_lunar_coupling245-initial.py": "83ea295ca9ed7b9a0bb45635957d24fd3a797a50718929c6e79342a34a629c28",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\lunar243\\test244-initial.py": "df2a777dfc31e1561d0db149e73e010b036c82e41942794970c468af86e5be05"
+    }
+  },
+  "physical_lunar_mapping_certified": false,
+  "eih_dynamic_rotation_supported": false,
+  "free_spin_forecast_qualified": false,
+  "new_annual_integration": false,
+  "publication_performed": false
+}

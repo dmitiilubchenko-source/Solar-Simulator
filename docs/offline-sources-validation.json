@@ -1,0 +1,496 @@
+{
+  "generated_at": "2026-10-16T21:28:27+03:00",
+  "stages": [
+    234,
+    235
+  ],
+  "purpose": "Offline data reserve; no model/integrator changes",
+  "complete_with_declared_official_document_fallback": true,
+  "original_preferred_source_plan_complete": false,
+  "source_sha256": {
+    "scripts/prefetch_physics_sources.py": "e90e6c66240c04a5f9be9793c33193f970bf976ffe8986de4f8e377ebc1809e8",
+    "tests/test_physics_source_reserve.py": "31ccf389cfc397bf9a188b1a059f3e4ccf9345c6b8845474213899b1c2f59080"
+  },
+  "reserve_directory": ".tools/offline234/sources",
+  "manifest_sha256": "9bb19c96de7c5be71fb97fccff39c4ea8ced1fe8100d19a294a18a91e48a5b75",
+  "offline_validation": {
+    "complete": true,
+    "network_disabled": true,
+    "download_disabled": true,
+    "files": 16,
+    "file_bytes": 9663740,
+    "de441_validation": {
+      "records": 115,
+      "coefficients_per_record": 1018,
+      "interval_days": 32,
+      "raw_start_jd_tdb": 2461296.5,
+      "raw_end_jd_tdb": 2464976.5,
+      "intended_start_jd_tdb": 2461321.5,
+      "intended_end_jd_tdb": 2464974.0,
+      "old_one_year_overlap_bytes": 348673,
+      "old_overlap_bitexact": true,
+      "ephemeris": "DE441",
+      "native_frame": "ICRF",
+      "native_position_units": "km",
+      "time_scale": "TDB",
+      "includes_system_barycentres": true,
+      "includes_geocentric_moon": true,
+      "includes_lunar_librations": true,
+      "standalone_reader_qualified": false,
+      "simulator_ten_year_accuracy_qualified": false
+    },
+    "manifest_sha256": "9bb19c96de7c5be71fb97fccff39c4ea8ced1fe8100d19a294a18a91e48a5b75",
+    "source_sha256": "e90e6c66240c04a5f9be9793c33193f970bf976ffe8986de4f8e377ebc1809e8",
+    "gm_matches_initial_origin": true,
+    "missing_preferred_documents": [
+      "horizons-api.html"
+    ],
+    "historical_failures_preserved": 4,
+    "wall_seconds": 0.09753040000214241
+  },
+  "files": [
+    {
+      "file": "de441-header.txt",
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+      "bytes": 22802,
+      "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\de441-header.txt",
+      "copied_utc": "2026-10-16T18:18:23.095225+00:00"
+    },
+    {
+      "file": "de441-year-records.txt",
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/ascp02000.441",
+      "bytes": 348673,
+      "sha256": "1699167f07cf3ec4ee5d5827b99e2ada335ccb32b5ddec939c24eb50f81a21ab",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\de441-year-records.txt",
+      "copied_utc": "2026-10-16T18:18:23.117960+00:00"
+    },
+    {
+      "file": "de441-year.headers",
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/ascp02000.441",
+      "bytes": 326,
+      "sha256": "80f4fec3c72cc6151e0e719d199edcee99d5442eb45aea6872e5b54f66ddf982",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\de441-year.headers",
+      "copied_utc": "2026-10-16T18:18:23.118629+00:00"
+    },
+    {
+      "file": "pck00011.tpc",
+      "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/pck/pck00011.tpc",
+      "bytes": 131226,
+      "sha256": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\pck00011.tpc",
+      "copied_utc": "2026-10-16T18:18:23.120333+00:00"
+    },
+    {
+      "file": "ltpequ.c",
+      "url": "https://raw.githubusercontent.com/liberfa/erfa/v2.0.1/src/ltpequ.c",
+      "bytes": 6499,
+      "sha256": "8b6db221ef3203e1ba9e4af96b58caeadd2e1978b8b7c6be8c49aed52aa4570f",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\ltpequ.c",
+      "copied_utc": "2026-10-16T18:18:23.122545+00:00"
+    },
+    {
+      "file": "ltpecl.c",
+      "url": "https://raw.githubusercontent.com/liberfa/erfa/v2.0.1/src/ltpecl.c",
+      "bytes": 6225,
+      "sha256": "13e4936ac97abe110b75cbdbbcba04c37cb6bcb59952c0f727ccabab1d55e9cf",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\ltpecl.c",
+      "copied_utc": "2026-10-16T18:18:23.124830+00:00"
+    },
+    {
+      "file": "gm_Horizons-original.pck",
+      "url": "https://ssd.jpl.nasa.gov/ftp/xfr/gm_Horizons.pck",
+      "bytes": 15428,
+      "sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\jpl-20261008\\gm_Horizons.pck",
+      "copied_utc": "2026-10-16T18:18:23.127048+00:00"
+    },
+    {
+      "file": "ERFA-LICENSE.txt",
+      "url": "Preserved ERFA redistribution notice",
+      "bytes": 2694,
+      "sha256": "18e2c04c5328fe190fd5487da86ea538068c219174f65c6df71288e48fd60047",
+      "reused_from": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\ERFA-LICENSE.txt",
+      "copied_utc": "2026-10-16T18:18:23.127799+00:00"
+    },
+    {
+      "file": "Vines-EIH-Lagrangian.pdf",
+      "url": "https://fiteoweb.unige.ch/~maggiore/GWVol1/EIHLagrangian.pdf",
+      "bytes": 123804,
+      "sha256": "b46e92e61735189459b1732cc29a1330c6480ab1bb2dd13630cebed2de4c4c2f",
+      "fetched_utc": "2026-10-16T18:20:14.641466+00:00",
+      "byte_range": null,
+      "http_headers_file": "Vines-EIH-Lagrangian.headers",
+      "http_headers_sha256": "c6f41aa0a847c5b722098456c50082cf42019ec5a30d616f3780c2d4115a9e3c"
+    },
+    {
+      "file": "horizons-manual.html",
+      "url": "https://ssd.jpl.nasa.gov/horizons/manual.html",
+      "bytes": 229798,
+      "sha256": "5c5100b08abeb10f4a6074e02102e4fe5d915203eed360bb4dd839a77210ddcc",
+      "fetched_utc": "2026-10-16T18:20:42.593519+00:00",
+      "byte_range": null,
+      "http_headers_file": "horizons-manual.headers",
+      "http_headers_sha256": "cf224c3b6acc5ca828494872fa5d0f1ab8715fea2857e6d345078b928a27490d"
+    },
+    {
+      "file": "de-ascii-format.txt",
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/ascii_format.txt",
+      "bytes": 2286,
+      "sha256": "ee3c94fcb66eb15efa6fd0084e1629c8464defafa547d73c641eb692a7bb73dd",
+      "fetched_utc": "2026-10-16T18:20:43.471362+00:00",
+      "byte_range": null,
+      "http_headers_file": "de-ascii-format.headers",
+      "http_headers_sha256": "fae30d14469357ecb60c7e29e13bd9d286c37a157008a587e06425d555e8248e"
+    },
+    {
+      "file": "de441-tech-comments.txt",
+      "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_tech-comments.txt",
+      "bytes": 59453,
+      "sha256": "eda144896f7a09fd810c6261036d05d767ce8c77cb2b3795bc824fb623881007",
+      "fetched_utc": "2026-10-16T18:20:46.859954+00:00",
+      "byte_range": null,
+      "http_headers_file": "de441-tech-comments.headers",
+      "http_headers_sha256": "0216fda703001564278a9783991b33a3c60117101f27112a32657b7d006db682"
+    },
+    {
+      "file": "pck-required-reading.html",
+      "url": "https://naif.jpl.nasa.gov/pub/naif/toolkit_docs/C/req/pck.html",
+      "bytes": 89169,
+      "sha256": "771177b1c21a448bd81b5b5f872840797d30e0c1400af363aa0fde730bf1585f",
+      "fetched_utc": "2026-10-16T18:20:48.052998+00:00",
+      "byte_range": null,
+      "http_headers_file": "pck-required-reading.headers",
+      "http_headers_sha256": "daede7846bc11f03c1200786265445f4583a468c3a7580e0177df537cb0a732c"
+    },
+    {
+      "file": "de441-ten-year-records.txt",
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/ascp02000.441",
+      "bytes": 3084415,
+      "sha256": "e0d975d767d1f694bda72a68f522dff8ead85b2416a1d361c63a8ca48cb00eb9",
+      "byte_range": [
+        8180405,
+        11264819
+      ],
+      "fetched_utc": "2026-10-16T18:22:35.601530+00:00",
+      "recovered_from_timeout": true,
+      "http_headers_file": "de441-ten-year-records.headers",
+      "http_headers_sha256": "8430b57bd8878730553fcb5e9d0fff13be38d7a986fd9f71bd502c76d2b9c412",
+      "fragments": [
+        {
+          "file": "de441-ten-year-records.txt.part",
+          "sha256": "894cdb4542ef5021d93222fbc5f608d6b6f317bcb7101cbda6d1d6469598589f",
+          "partial_response": true
+        },
+        {
+          "file": "resume-de441-ten-year-records.txt/bytes-9556333-9818476",
+          "sha256": "fffe8e5db5b605aede51340cbcc0d25ab44f29d52b51659b42941aabc9c3898b",
+          "headers": "resume-de441-ten-year-records.txt/bytes-9556333-9818476.headers",
+          "headers_sha256": "2c8f36c4579633add0ef8487451fff0b2471d83ecaeb6e70dda1ffa151e173fb",
+          "byte_range": [
+            9556333,
+            9818476
+          ]
+        },
+        {
+          "file": "resume-de441-ten-year-records.txt/bytes-9818477-10080620",
+          "sha256": "79ef24a8a444d163bcf4d336e39162d05b93f7c76226c553e604e0cdbf2201bc",
+          "headers": "resume-de441-ten-year-records.txt/bytes-9818477-10080620.headers",
+          "headers_sha256": "f9b00f8487c16ca67ea7b69c2fa68c9b500e5cd21065571cc8693301e83efbf7",
+          "byte_range": [
+            9818477,
+            10080620
+          ]
+        },
+        {
+          "file": "resume-de441-ten-year-records.txt/bytes-10080621-10342764",
+          "sha256": "d3d752f13f23c918d126c560c0d0791b2687e15b8b0121a5f7d85c7bb46cf4d7",
+          "headers": "resume-de441-ten-year-records.txt/bytes-10080621-10342764.headers",
+          "headers_sha256": "88289be7647d02efa90e87f484f6a40e78b172b760de729305ff2e063a1d84d1",
+          "byte_range": [
+            10080621,
+            10342764
+          ]
+        },
+        {
+          "file": "resume-de441-ten-year-records.txt/bytes-10342765-10604908",
+          "sha256": "787102bd484e75f8021ca65adca4ebede822c1fede994405ff31c071fa4720c1",
+          "headers": "resume-de441-ten-year-records.txt/bytes-10342765-10604908.headers",
+          "headers_sha256": "4aa1ff6956819aef45211701018d0d7405668303e48d4909a0f92327740b5c26",
+          "byte_range": [
+            10342765,
+            10604908
+          ]
+        },
+        {
+          "file": "resume-de441-ten-year-records.txt/bytes-10604909-10867052",
+          "sha256": "5144c4bbebf20fac7c823a7db3eae814a988f053656ba842399d1176ab857349",
+          "headers": "resume-de441-ten-year-records.txt/bytes-10604909-10867052.headers",
+          "headers_sha256": "2df0aa264de792788e6394fb9f03c1f306e84da9a3641eadee2e3f0d1a0e3df8",
+          "byte_range": [
+            10604909,
+            10867052
+          ]
+        },
+        {
+          "file": "resume-de441-ten-year-records.txt/bytes-10867053-11129196",
+          "sha256": "60b8a45c2b4acda8b913733e6bedcc3a6744eeae8a23fb94a32f4ea294fda348",
+          "headers": "resume-de441-ten-year-records.txt/bytes-10867053-11129196.headers",
+          "headers_sha256": "cb0ac402ea4f7af9cc9ab458ed8d472b1461a306472d886626dba1989d6bd877",
+          "byte_range": [
+            10867053,
+            11129196
+          ]
+        },
+        {
+          "file": "resume-de441-ten-year-records.txt/bytes-11129197-11264819",
+          "sha256": "55fa06803b565b90bf3545b3230c2d36590458634f61b8f18aaafca050375c2a",
+          "headers": "resume-de441-ten-year-records.txt/bytes-11129197-11264819.headers",
+          "headers_sha256": "543b57545ac80c535c96afcfcd52b8a91731998fbf50bfc25b8f06a11f4ed6f0",
+          "byte_range": [
+            11129197,
+            11264819
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Park2021-DE440-DE441.pdf",
+      "url": "https://ssd.jpl.nasa.gov/doc/Park.2021.AJ.DE440.pdf",
+      "bytes": 5501569,
+      "sha256": "96c3945deb12e0f0843c2bf0703d3542d950cf85ff903b1fe11a501634f68ee0",
+      "byte_range": null,
+      "fetched_utc": "2026-10-16T18:23:37.986018+00:00",
+      "recovered_from_timeout": true,
+      "http_headers_file": "Park2021-DE440-DE441.headers",
+      "http_headers_sha256": "a47f4d40009eb1a353280f878eb719518198a970d91722e12b673da0fb9fd19a",
+      "fragments": [
+        {
+          "file": "Park2021-DE440-DE441.pdf.part",
+          "sha256": "d77d3a9e53c14ed7cafb39a043e4bd110f8e2f7b5e5a5cdecdfee533a8832d51",
+          "partial_response": true
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-1343142-1605285",
+          "sha256": "e406bdc0cafb04b225cd5fd4516ad3f8d0a70afae2e286fb7c5298cfaa10c91e",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-1343142-1605285.headers",
+          "headers_sha256": "fcd48324ac112f1e9f5b5bf65b3c40fd1cbf3d5a260500bb52c0112b20cd34b1",
+          "byte_range": [
+            1343142,
+            1605285
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-1605286-1867429",
+          "sha256": "ce730245110e1ebc990ee42b8ae02968dc72f89baf8b88606a35a11c22bf7d68",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-1605286-1867429.headers",
+          "headers_sha256": "06e58290c99d144ce02dd96a9ce3e9f288ed2caa96a141b13d87cc3ba1cf34cb",
+          "byte_range": [
+            1605286,
+            1867429
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-1867430-2129573",
+          "sha256": "3b4925f1dbd215bef948d190ed813066609bfcaacc69fa0cd3ba012f2d7c9486",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-1867430-2129573.headers",
+          "headers_sha256": "c10fa522b39ebb4bad5807adc137c6b071a4ce426a2dfaab36a6ab424d1394f6",
+          "byte_range": [
+            1867430,
+            2129573
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-2129574-2391717",
+          "sha256": "ba79ee89b89a4a295147e71142e38bb239a95e41bec3812258e84cb935df62c6",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-2129574-2391717.headers",
+          "headers_sha256": "e451d7a10fb165c23996ef468f5241ef869711b22f6f29c7c38dde2049260a70",
+          "byte_range": [
+            2129574,
+            2391717
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-2391718-2653861",
+          "sha256": "bb53918ac5a835022c85de5f41610561acb51ad16d7656898d13e754f326971e",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-2391718-2653861.headers",
+          "headers_sha256": "cf1d4a32a772c5f127f2dfd58269d536e4318b328bc919022a72d86365e435b5",
+          "byte_range": [
+            2391718,
+            2653861
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-2653862-2916005",
+          "sha256": "e27d2cb8ad6ec0f10d94e203dcb3f41e7a1b74f09b5acd1c312f2e63f929a8f9",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-2653862-2916005.headers",
+          "headers_sha256": "8c9286e123364218d3dc0b6c6979a2552e159d4805f67b0bb995e8862d761183",
+          "byte_range": [
+            2653862,
+            2916005
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-2916006-3178149",
+          "sha256": "0ab0008757cdaaa7891cb4fe5f534c9f8b807459aa5e708bf7a5e4bc6d2fac01",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-2916006-3178149.headers",
+          "headers_sha256": "86204088d48abc29385ae016fd499d4f066325f6ce7bd486e5dcc6307b13a940",
+          "byte_range": [
+            2916006,
+            3178149
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-3178150-3440293",
+          "sha256": "9f6a18c958e25cf00440137a4d3eedc0a366a6815e332273e29f703851763861",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-3178150-3440293.headers",
+          "headers_sha256": "83f5ce85278e70268b8864fbbefbad57c216c67b454fd6790196924d129711a9",
+          "byte_range": [
+            3178150,
+            3440293
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-3440294-3702437",
+          "sha256": "864692987f1679a6fad5173a7a0b46bb25294bf213d2b997ce763a3aeb3d30d5",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-3440294-3702437.headers",
+          "headers_sha256": "464ad92284dec1dcd3a715e21d4d29a9e69190583d8480a28c75079988a8f66e",
+          "byte_range": [
+            3440294,
+            3702437
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-3702438-3964581",
+          "sha256": "bda4e250a02ffa07b2361514635eb1b6f70540bf92c7d35149df7fe6034b7b25",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-3702438-3964581.headers",
+          "headers_sha256": "2e87114368a3620f86cb15508c6d2ec09525510323eae9cd3667a9b23e0799ae",
+          "byte_range": [
+            3702438,
+            3964581
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-3964582-4226725",
+          "sha256": "7678244cfb140453f0f3a81d7688b7e79995f514bc12add7409047d5ab275123",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-3964582-4226725.headers",
+          "headers_sha256": "cc0f28725a9bd4bec1a7f34549c83469ae24f3d7fff5503453c47927db51d435",
+          "byte_range": [
+            3964582,
+            4226725
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-4226726-4488869",
+          "sha256": "29544e917b707ee2a87e076a70ad7d105a5aec6f462de0bb59450d687fa68c6e",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-4226726-4488869.headers",
+          "headers_sha256": "4ca65ba1a749c55065848a7b9f0556a67ba67b5eea4862288dac9c5b88faec9a",
+          "byte_range": [
+            4226726,
+            4488869
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-4488870-4751013",
+          "sha256": "d566c3de3df66371b34612b09d878a5a09575b0b45d7e0163a4b5e63ead6896e",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-4488870-4751013.headers",
+          "headers_sha256": "f4f98b6cb1e76483476a8724190b15f8715f73d701a6d72b334584eed574c0c1",
+          "byte_range": [
+            4488870,
+            4751013
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-4751014-5013157",
+          "sha256": "45a989d951f637c43aab54cd9faee90c5aae0a42d677422fccbcb67bb3573e57",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-4751014-5013157.headers",
+          "headers_sha256": "f7829fda33ab830b22e3f063c407fc68fe9c53d51f3f19e60c91e0278e61cf4d",
+          "byte_range": [
+            4751014,
+            5013157
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-5013158-5275301",
+          "sha256": "f147a6cd859ff2dba649e365633a5445610aa0b145e0c75af3506484a434d4a4",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-5013158-5275301.headers",
+          "headers_sha256": "e06a7a08ef9ac8dfed2757d693c8effd2b581a8be0da5052f21d36448df0ac4f",
+          "byte_range": [
+            5013158,
+            5275301
+          ]
+        },
+        {
+          "file": "resume-Park2021-DE440-DE441.pdf/bytes-5275302-5501568",
+          "sha256": "645f07b1e32b73b512cca5b459b851c92773b4df122150dc30cbc7c40eed0155",
+          "headers": "resume-Park2021-DE440-DE441.pdf/bytes-5275302-5501568.headers",
+          "headers_sha256": "c535e26901028952678736032af7e84e69b0e539285902f38563443be817bd73",
+          "byte_range": [
+            5275302,
+            5501568
+          ]
+        }
+      ]
+    },
+    {
+      "file": "horizons-batch-instructions.txt",
+      "url": "https://ssd.jpl.nasa.gov/ftp/ssd/horizons_batch.txt",
+      "bytes": 39373,
+      "sha256": "49df264d719f7841660549107adefdaf1ca03ed84affb56ec2220361d07ec208",
+      "fetched_utc": "2026-10-16T18:25:56.104486+00:00",
+      "byte_range": null,
+      "http_headers_file": "horizons-batch-instructions.headers",
+      "http_headers_sha256": "dcb81a4a062a3aae8b0b84206bed3c001ea42836fc1542f8e78a990675f09a59"
+    }
+  ],
+  "transfer_failures_preserved": [
+    {
+      "file": "de441-ten-year-records.txt",
+      "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/ascp02000.441",
+      "type": "RuntimeError",
+      "message": "Source download failed: curl: (28) Operation timed out after 55006 milliseconds with 1375928 out of 3084415 bytes received\r\n"
+    },
+    {
+      "file": "Park2021-DE440-DE441.pdf",
+      "url": "https://ssd.jpl.nasa.gov/doc/Park.2021.AJ.DE440.pdf",
+      "type": "RuntimeError",
+      "message": "Source download failed: curl: (28) Operation timed out after 55007 milliseconds with 1343142 out of 5501569 bytes received\r\n"
+    },
+    {
+      "file": "horizons-api.html",
+      "url": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+      "type": "RuntimeError",
+      "message": "Source download failed: curl: (28) Failed to connect to ssd-api.jpl.nasa.gov:443 after 21641 ms: Could not connect to server\r\n"
+    },
+    {
+      "file": "horizons-api.html",
+      "url": "https://ssd-api.jpl.nasa.gov/doc/horizons.html",
+      "type": "RuntimeError",
+      "message": "Source download failed: curl: (28) Failed to connect to ssd-api.jpl.nasa.gov:443 after 21552 ms: Could not connect to server\r\n"
+    }
+  ],
+  "preferred_api_page_missing": true,
+  "powershell_api_document_attempt": {
+    "failed": true,
+    "timeout_seconds": 30
+  },
+  "source_versions_preserved": [
+    ".tools/offline234/prefetch-attempt1.py",
+    ".tools/offline234/prefetch-attempt2.py"
+  ],
+  "targeted_tests": {
+    "passed": 48,
+    "new_cases": 16,
+    "wall_seconds": 2.05
+  },
+  "last_full_regression": {
+    "stage": 232,
+    "python_passed": 1747,
+    "rust_passed": 17,
+    "repeated_this_block": false
+  },
+  "current_runtime_data_changed": false,
+  "ten_year_simulation_accuracy_claim": false,
+  "standalone_reader_qualified": false,
+  "publication_performed": false
+}

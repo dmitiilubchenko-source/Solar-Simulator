@@ -86,14 +86,14 @@ hardcoded8seeds при fixture6seeds. Документы сборки подкл
 
 [_layout](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/control_row.py:22)
 
-[_fit_graph](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:168)
+[_fit_graph](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:183)
 
 [trajectory_data](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/orbit_view.py:8)
 
-[_poll](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:411)
+[_poll](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:436)
 
 [test_controls_and_footer_fit_three_window_sizes_with_open_and_closed_settings](C:/Users/Admin/Desktop/Solar-simulator/tests/test_app_usability.py:38)
 
 [test_history_limit_keeps_all_1500_retained_snapshots_without_thinning](C:/Users/Admin/Desktop/Solar-simulator/tests/test_orbit_view.py:41)
 
-[copy_public_rotation_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:305)
+[copy_public_rotation_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:298)

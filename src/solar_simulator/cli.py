@@ -6,7 +6,8 @@ import json
 from .diagnostics import model_invariants
 from .experiment import PRESETS, Settings, advance, preset
 from .simulation import center_of_mass
-from .storage import load, save
+from .storage import save
+from .branch_io import open_experiment, save_experiment
 
 
 def report(experiment):
@@ -129,7 +130,8 @@ def main(argv=None):
             return 0
         if args.command == "gui":
             from .app import launch
-            launch(load(args.input) if args.input else None)
+            experiment,snapshot = open_experiment(args.input) if args.input else (None,None)
+            launch(experiment,parent_snapshot=snapshot)
             return 0
         if args.command == "new":
             experiment = preset(args.preset,backend=args.backend,eccentricity=args.eccentricity)
@@ -162,7 +164,7 @@ def main(argv=None):
                 raise ValueError("Допуски q/S требуют --rotation lunar-solid")
             save(experiment,args.output)
         else:
-            experiment = load(args.input)
+            experiment,snapshot = open_experiment(args.input)
             if args.command == "converge":
                 from .convergence import compare_steps
                 print(json.dumps(compare_steps(experiment,args.steps),ensure_ascii=False,allow_nan=False,indent=2))
@@ -171,7 +173,7 @@ def main(argv=None):
                 if args.backend:
                     experiment = replace(experiment,settings=replace(experiment.settings,backend=args.backend))
                 experiment = advance(experiment,args.steps)
-                save(experiment,args.output)
+                save_experiment(experiment,args.output,parent_snapshot=snapshot)
         print(json.dumps(report(experiment),ensure_ascii=False,allow_nan=False,indent=2))
     except (ValueError,RuntimeError,OSError,OverflowError) as error:
         parser.exit(2,f"Ошибка: {error}\n")

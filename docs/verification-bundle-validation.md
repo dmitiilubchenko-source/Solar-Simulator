@@ -75,8 +75,8 @@ replay и полныйгодовойрасчёт. Она дополняет ис
 [replay](C:/Users/Admin/Desktop/Solar-simulator/scripts/replay_jpl.py:69)
 [parse_raw](C:/Users/Admin/Desktop/Solar-simulator/scripts/replay_jpl.py:41)
 [recompute](C:/Users/Admin/Desktop/Solar-simulator/scripts/recompute_jpl.py:13)
-[build](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:61)
-[check_gui](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:218)
+[build](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:65)
+[check_gui](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_portable.py:327)
 [test_isolated_process_outside_checkout_has_no_network_or_solar_import](C:/Users/Admin/Desktop/Solar-simulator/tests/test_jpl_replay.py:99)
 [test_fresh_verification_preserves_existing_output_before_opening_missing_bundle](C:/Users/Admin/Desktop/Solar-simulator/tests/test_verification_commands.py:7)
 

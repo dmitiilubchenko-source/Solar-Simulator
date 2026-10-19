@@ -91,7 +91,7 @@ CSVвызван черезизолированныйsubprocess новогоCLI �
 [КонтроллерCLI](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/commands.py:13),
 [чтениеветки](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/branch_io.py:8),
 [CSV](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/state_export.py:13),
-[parentGUI](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:553),
-[removeGUI](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:611),
+[parentGUI](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:599),
+[removeGUI](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:662),
 [publicinputs](C:/Users/Admin/Desktop/Solar-simulator/scripts/prepare_test_inputs.py:18),
-[переносимые ссылки](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_project.py:23).
+[переносимые ссылки](C:/Users/Admin/Desktop/Solar-simulator/scripts/check_project.py:24).

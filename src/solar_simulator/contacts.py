@@ -104,7 +104,7 @@ def run_until_contact(bodies: list[Body], dt: float, steps: int, *, backend: str
         raise ValueError("Неизвестное ядро")
     state = list(bodies)
     elapsed = 0.0
-    for _ in range(steps):
+    for index in range(steps):
         event = first_contact(state,dt)
         if event is not None:
             if event.time > 0:
@@ -112,5 +112,7 @@ def run_until_contact(bodies: list[Body], dt: float, steps: int, *, backend: str
             elapsed += event.time
             return RunResult(state,elapsed,Contact(event.first,event.second,elapsed))
         state = step(state,dt)
-        elapsed += dt
+        # Match the packet boundary used by target-time control. Contact times
+        # above remain the completed prefix plus the actual within-step event.
+        elapsed = (index+1)*dt
     return RunResult(state,elapsed,None)

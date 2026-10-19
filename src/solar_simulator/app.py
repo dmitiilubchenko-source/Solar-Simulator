@@ -11,15 +11,15 @@ from matplotlib.figure import Figure
 from .cli import report
 from .experiment import PRESETS, Settings, advance, create_experiment, preset, reset
 from .simulation import Body
-from .storage import load, save
 from .vector3 import Vector3
 from .scenario_catalog import CATALOG, ScenarioVariable
 from .control_row import ControlRow
 from .time_control import advance_towards, validate_target
+from .branch_io import save_experiment
 
 
 class Laboratory:
-    def __init__(self, root, experiment=None):
+    def __init__(self, root, experiment=None, *, parent_snapshot=None):
         self.root = root
         self.root.title("Solar Simulator — гравитационная лаборатория")
         self.root.geometry("1180x820")
@@ -31,8 +31,15 @@ class Laboratory:
         self.future = None
         self.running = False
         self.target_time = None
-        self.parent_snapshot = None
+        self.parent_snapshot = parent_snapshot
         self.closed = False
+        self._stop_requested = False
+        self._close_requested = False
+        self._recovery_failed = False
+        self.last_recovery_path = None
+        self._trajectory_stop = None
+        self.last_trajectory_path = None
+        self.trajectory_status = None
         self.frames = deque(maxlen=1500)
         self.energies = deque(maxlen=1500)
         self.actions = []
@@ -40,6 +47,7 @@ class Laboratory:
         self.scenario_info = tk.StringVar(value=CATALOG["sun-earth"][1])
         self.scenario.trace_add("write",lambda *_:self.scenario_info.set(CATALOG[self.scenario.get()][1]))
         self.backend = tk.StringVar(value=self.experiment.settings.backend)
+        self.solar_profile = tk.StringVar(value='strict')
         self.integrator = tk.StringVar(value=self.experiment.settings.integrator)
         self.physics = tk.StringVar(value=self.experiment.settings.physics)
         self.figures = tk.StringVar(value="saved" if self.experiment.settings.figures else "none")
@@ -61,8 +69,8 @@ class Laboratory:
         self.details = tk.StringVar()
         self.model_info = tk.StringVar()
         self._build()
-        self._set_experiment(self.experiment)
-        self.root.protocol("WM_DELETE_WINDOW",self.close)
+        self._set_experiment(self.experiment,parent_snapshot=parent_snapshot)
+        self.root.protocol("WM_DELETE_WINDOW",self._request_close)
         self.root.after(40,self._poll)
 
     def _button(self,parent,text,command):
@@ -97,12 +105,14 @@ class Laboratory:
         self._entry(top,"Эксцентриситет Земли",self.eccentricity,7)
         self._button(top,"Новый сценарий",self._new)
         self._button(top,"Открыть JSON",self._load)
+        self._button(top,"Recovery-копии…",self._show_recoveries)
         self._button(top,"Сохранить JSON",self._save)
         self._button(top,"Сбросить",self._reset)
         self.scenario_info_widget=ttk.Label(self.root,textvariable=self.scenario_info,anchor="w",wraplength=1140)
         self.scenario_info_widget.pack(fill="x",padx=12,pady=3)
         quick=ControlRow(self.root); quick.pack(fill="x",padx=8)
         self._button(quick,"Луна: свободное вращение",self._open_lunar_rotation)
+        self._combo(quick,'Солн. профиль',self.solar_profile,('standard','strict'),width=9)
         self._button(quick,"Солнечная система: EIH + J2",self._open_solar_sandbox)
         self.settings_button=self._button(quick,"Настройки расчёта",self._toggle_settings)
         self.view_widget=self._combo(quick,"Показать",self.view,("Все тела",),width=16,
@@ -134,7 +144,7 @@ class Laboratory:
         self.pause_button=ttk.Button(playback,text="Пауза",command=self._pause)
         playback.add(self.pause_button)
         self.step_button=self._button(playback,"Один шаг",lambda:self._submit(1))
-        self._entry(playback,"Шагов за кадр (скорость)",self.batch,7)
+        self._entry(playback,"Шагов в расчётном пакете",self.batch,7)
         self.reference_widget=self._combo(playback,"Относительно",self.reference,("Инерциальная",),
             callback=self._draw,lock=False,width=16)
         self._combo(playback,"Проекция",self.plane,("XY","XZ","YZ"),width=5,callback=self._draw,lock=False)
@@ -146,6 +156,11 @@ class Laboratory:
         self.target_button=self._button(destination,"Рассчитать до t",self._start_target)
         destination.add(ttk.Label(destination,text="Вперёд; пауза ждёт пакет"))
         self.parent_button=self._button(destination,"Вернуть родителя…",self._restore_parent)
+        self.stop_button=ttk.Button(destination,text='Стоп и копия',command=self._stop_and_save)
+        destination.add(self.stop_button)
+        self._button(destination,'Записать траекторию…',self._record_trajectory)
+        self._button(destination,'Просмотр траектории…',self._open_trajectory)
+        self._button(destination,'Сравнить траектории…',self._open_comparison)
         self.model_info_widget=ttk.Label(self.root,textvariable=self.model_info,anchor="w",wraplength=1140)
         self.model_info_widget.pack(fill="x",padx=12,pady=(4,0))
         self.figure=Figure(figsize=(10,6),dpi=100)
@@ -195,7 +210,7 @@ class Laboratory:
             messagebox.showerror("Расчёт не выполнен",str(error),parent=self.root)
 
     def _lock(self):
-        busy=self.future is not None or self.running
+        busy=self.future is not None or self.running or self._stop_requested
         for widget in self.actions:
             if busy:
                 widget.configure(state="disabled")
@@ -203,6 +218,7 @@ class Laboratory:
                 widget.configure(state="readonly" if isinstance(widget,ttk.Combobox) else "normal")
         self.pause_button.configure(state="normal" if busy else "disabled")
         self.parent_button.configure(state="disabled" if busy or self.parent_snapshot is None else "normal")
+        self.stop_button.configure(state='disabled' if self._stop_requested else 'normal')
 
     def _settings(self):
         settings=Settings(float(self.dt.get()),self.backend.get(),self.mode.get(),float(self.restitution.get()),
@@ -235,6 +251,7 @@ class Laboratory:
             values=self._record()
         else:
             values=None
+        self._update_profile_info()
         self._draw(values)
 
     def _selected_figures(self, experiment, *, new=False):
@@ -302,7 +319,7 @@ class Laboratory:
         path=filedialog.asksaveasfilename(parent=self.root,defaultextension=".json",
                                         filetypes=[("Solar JSON","*.json")])
         if path:
-            save(self.experiment,path)
+            save_experiment(self.experiment,path,parent_snapshot=self.parent_snapshot)
 
     def _set_experiment(self,experiment,*,parent_snapshot=None):
         self.experiment=experiment
@@ -321,6 +338,8 @@ class Laboratory:
                 + (" Добавлен барицентр системы Плутона." if any(b.name=="Pluto-System" for b in experiment.initial) else ""))
         else:
             self.model_info.set("Все величины в SI. Размер маркеров условный. Учебные начальные условия, без эфемерид.")
+        self.origin_info=self.model_info.get()
+        self._update_profile_info()
         self.running=False
         self.target_time=None
         self.frames.clear(); self.energies.clear()
@@ -348,6 +367,11 @@ class Laboratory:
         self.dt.set(f"{settings.dt:.17g}")
         self.mode.set(settings.contact_mode)
         self.restitution.set(str(settings.restitution))
+
+    def _update_profile_info(self):
+        from .solar_profiles import profile_text
+        text=profile_text(self.experiment)
+        self.model_info.set(self.origin_info+(' '+text if text else ''))
 
     def _record(self):
         self.frames.append({b.name:(b.position.x,b.position.y,b.position.z) for b in self.experiment.bodies})
@@ -387,17 +411,18 @@ class Laboratory:
 
     def _pause(self):
         self.running=False
+        if self._trajectory_stop is not None:self._trajectory_stop.set()
         self._lock()
         self._draw()
 
     def _batch_size(self):
         value=int(self.batch.get())
         if not 1<=value<=2000:
-            raise ValueError("Шагов за кадр: от 1 до 2000")
+            raise ValueError("Расчётный пакет: от 1 до 2000 шагов")
         return value
 
     def _submit(self,steps):
-        if self.future is None:
+        if self.future is None and not self._stop_requested:
             if not self.running:
                 self._settings()
             if self.running and self.target_time is not None:
@@ -415,18 +440,35 @@ class Laboratory:
             if self.future is not None and self.future.done():
                 future=self.future
                 self.future=None
-                self.experiment=future.result()
-                values=self._record()
-                if self.experiment.halted or (self.target_time is not None and self.experiment.time >= self.target_time):
-                    self.running=False
-                self._draw(values)
+                try:
+                    completed=future.result()
+                except Exception:
+                    self._trajectory_stop=None
+                    self._stop_requested=True
+                    self._recovery_failed=True
+                    raise
+                if self._trajectory_stop is not None:
+                    self._trajectory_stop=None
+                    self.trajectory_status=completed['status']
+                    self._update_status()
+                else:
+                    self.experiment=completed
+                    values=self._record()
+                    if self.experiment.halted or (self.target_time is not None and self.experiment.time >= self.target_time):
+                        self.running=False
+                    self._draw(values)
             if self.running and self.future is None:
                 self._submit(self._batch_size())
         except Exception as error:
             self.running=False
-            self._update_status()
-            messagebox.showerror("Расчёт остановлен",str(error),parent=self.root)
+            if self._stop_requested and self.future is None:
+                self._finish_stop()
+            if not self.closed:
+                self._update_status()
+                messagebox.showerror("Расчёт остановлен",str(error),parent=self.root)
         finally:
+            if self._stop_requested and self.future is None:
+                self._finish_stop()
             # Input/submission errors must not terminate the Tk polling loop.
             if not self.closed:
                 self._lock()
@@ -439,14 +481,19 @@ class Laboratory:
         if self.experiment.halted:
             state="контакт: остановка"
         elif self.future is not None:
-            state="расчёт пакета" if self.running else "завершает пакет (пауза)"
+            state=("завершает пакет перед сохранением" if self._stop_requested else
+                   "расчёт пакета" if self.running else "завершает пакет (пауза)")
         else:
             state="работает" if self.running else "пауза"
+        if self._trajectory_stop is not None:state='запись траектории; остановка ждёт пакет'
+        elif self.trajectory_status is not None:state+=f'; траектория: {self.trajectory_status} — {self.last_trajectory_path}'
         if self.target_time is not None:
             state += f"; цель {self.target_time:.9g} с"
         self.status.set(f"t = {values['time_seconds']:.9g} с | dt = {self.experiment.settings.dt:.6g} с | "
                         f"{state} | {values['physics']}{' + Q2' if self.experiment.settings.figures else ''}{' + вращение' if self.experiment.rotations else ''} | {len(self.experiment.bodies)} тел | событий: {values['events']} | "
                         f"потери: {values['dissipated_energy_joules']:.6g} Дж")
+        if self.last_recovery_path is not None:
+            self.status.set(self.status.get()+f' | Последняя копия: {self.last_recovery_path}')
 
     def _draw(self,values=None):
         axes={"XY":(0,1),"XZ":(0,2),"YZ":(1,2)}
@@ -497,29 +544,28 @@ class Laboratory:
 
     def _edit(self):
         self._check_body_editor()
+        from .body_fields import BodyFields
+        from .storage import to_document
+        parent=self.experiment
+        parent_document=to_document(parent)
         dialog=tk.Toplevel(self.root)
         dialog.title("Новый опыт — исходный вариант будет сохранён в файле ветки")
         dialog.transient(self.root); dialog.grab_set()
         selected=tk.StringVar(value=self.experiment.bodies[0].name)
         combo=ttk.Combobox(dialog,textvariable=selected,values=[b.name for b in self.experiment.bodies],state="readonly")
         combo.grid(row=0,column=0,columnspan=2,padx=10,pady=8)
-        fields=("Имя","Масса, кг","Радиус, м","x, м","y, м","z, м","vx, м/с","vy, м/с","vz, м/с")
-        variables=[tk.StringVar() for _ in fields]
-        for row,(field,variable) in enumerate(zip(fields,variables),start=1):
-            ttk.Label(dialog,text=field).grid(row=row,column=0,sticky="w",padx=10,pady=3)
-            ttk.Entry(dialog,textvariable=variable,width=30).grid(row=row,column=1,padx=10)
+        fields=BodyFields(dialog,parent.bodies,has_radius=True)
+        dialog.body_fields=fields
         def populate(_=None):
-            b=next(b for b in self.experiment.bodies if b.name==selected.get())
-            values=(b.name,b.mass,b.radius,b.position.x,b.position.y,b.position.z,b.velocity.x,b.velocity.y,b.velocity.z)
-            for variable,value in zip(variables,values):
-                variable.set(value if isinstance(value,str) else f"{value:.17g}")
+            b=next(b for b in parent.bodies if b.name==selected.get())
+            fields.populate(b)
         def apply():
             try:
                 self._check_body_editor()
-                values=[v.get() for v in variables]
-                mass,radius,x,y,z,vx,vy,vz=map(float,values[1:])
-                old=next(b for b in self.experiment.bodies if b.name==selected.get())
-                body=Body(values[0],mass,Vector3(x,y,z),Vector3(vx,vy,vz),radius,old.spin)
+                if self.experiment is not parent or to_document(parent)!=parent_document:
+                    raise ValueError('Опыт изменился; откройте редактор заново')
+                old=next(b for b in parent.bodies if b.name==selected.get())
+                body=fields.read(spin=old.spin)
                 # Fixed figures retain their explicit parameters; renaming a
                 # source requires updating the figure and is rejected here.
                 from .sandbox import branch_experiment
@@ -529,7 +575,7 @@ class Laboratory:
                 messagebox.showerror("Неверное тело",str(error),parent=dialog)
         combo.bind("<<ComboboxSelected>>",populate)
         populate()
-        ttk.Button(dialog,text="Применить как новый эксперимент",command=apply).grid(row=10,column=0,columnspan=2,pady=12)
+        ttk.Button(dialog,text="Применить как новый эксперимент",command=apply).grid(row=14,column=0,columnspan=2,pady=12)
 
     def _check_body_editor(self):
         if self.future is not None or self.running:
@@ -556,12 +602,12 @@ class Laboratory:
         path=filedialog.asksaveasfilename(parent=self.root,defaultextension=".json",
             title="Сохранить текущий опыт перед возвратом к родителю",filetypes=[("Solar JSON","*.json")])
         if not path:return
-        save(self.experiment,path)
+        save_experiment(self.experiment,path,parent_snapshot=self.parent_snapshot)
         self._set_experiment(restored)
 
     def _open_solar_sandbox(self):
-        from .application_profiles import solar_sandbox
-        result=solar_sandbox(backend=self.backend.get())
+        from .solar_profiles import solar_sandbox
+        result=solar_sandbox(profile=self.solar_profile.get(),backend=self.backend.get())
         self.view.set("Все тела")
         self.reference.set("Инерциальная")
         self._set_experiment(result)
@@ -569,7 +615,11 @@ class Laboratory:
 
     def _add_body(self):
         self._check_body_editor()
+        from .body_fields import BodyFields
+        from .storage import to_document
         from .simulation import SUN_MASS, EARTH_MASS
+        parent=self.experiment
+        parent_document=to_document(parent)
         dialog=tk.Toplevel(self.root)
         dialog.title("Добавить точечное тело — новый опыт с сохранением родителя")
         dialog.transient(self.root);dialog.grab_set()
@@ -578,24 +628,25 @@ class Laboratory:
         selected=tk.StringVar(value=next(iter(templates)))
         combo=ttk.Combobox(dialog,textvariable=selected,values=tuple(templates),state="readonly",width=38)
         combo.grid(row=0,column=0,columnspan=2,padx=10,pady=8)
-        fields=("Имя","Масса, кг","x, м","y, м","z, м","vx, м/с","vy, м/с","vz, м/с")
-        variables=[tk.StringVar() for _ in fields]
-        for row,(field,variable) in enumerate(zip(fields,variables),start=1):
-            ttk.Label(dialog,text=field).grid(row=row,column=0,sticky="w",padx=10,pady=3)
-            ttk.Entry(dialog,textvariable=variable,width=30).grid(row=row,column=1,padx=10)
+        fields=BodyFields(dialog,parent.bodies,has_radius=False)
+        dialog.body_fields=fields
         def populate(_=None):
             label,mass=templates[selected.get()]
             names={b.name for b in self.experiment.bodies}
             index=1
             while f"{label} {index}" in names:index+=1
-            variables[0].set(f"{label} {index}")
-            variables[1].set(f"{mass:.17g}")
+            # Selecting a mass template preserves already entered vectors.
+            fields.variables['name'].set(f'{label} {index}')
+            if not fields.si:
+                fields.populate(Body(f'{label} {index}',mass,Vector3(0,0,0),Vector3(0,0,0)),blank_vectors=True)
+            else:
+                fields.set_mass(mass)
         def apply():
             try:
                 self._check_body_editor()
-                values=[v.get() for v in variables]
-                mass,x,y,z,vx,vy,vz=map(float,values[1:])
-                body=Body(values[0],mass,Vector3(x,y,z),Vector3(vx,vy,vz))
+                if self.experiment is not parent or to_document(parent)!=parent_document:
+                    raise ValueError('Опыт изменился; откройте редактор заново')
+                body=fields.read()
                 from .sandbox import branch_experiment
                 branch=branch_experiment(self.experiment,additions=(body,))
                 self._commit_body_branch(branch,dialog)
@@ -603,10 +654,10 @@ class Laboratory:
                 messagebox.showerror("Неверное тело",str(error),parent=dialog)
         combo.bind("<<ComboboxSelected>>",populate)
         populate()
-        ttk.Label(dialog,text="Векторы вводятся явно в текущей инерциальной системе (SI).\n"
+        ttk.Label(dialog,text="Векторы преобразуются в текущую инерциальную систему (SI).\n"
             "Тело точечное (радиус 0); шаблон массы не задаёт готовую орбиту.",
-            wraplength=420).grid(row=9,column=0,columnspan=2,padx=10,pady=8)
-        ttk.Button(dialog,text="Сохранить и добавить как новый опыт",command=apply).grid(row=10,column=0,columnspan=2,pady=12)
+            wraplength=560).grid(row=13,column=0,columnspan=2,padx=10,pady=8)
+        ttk.Button(dialog,text="Сохранить и добавить как новый опыт",command=apply).grid(row=14,column=0,columnspan=2,pady=12)
 
     def _remove_body(self):
         self._check_body_editor()
@@ -627,14 +678,135 @@ class Laboratory:
                 messagebox.showerror("Удаление не выполнено",str(error),parent=dialog)
         ttk.Button(dialog,text="Сохранить и удалить как новый опыт",command=apply).pack(padx=12,pady=12)
 
+    def _request_close(self):
+        self._stop_and_save(close_after=True)
+
+    def _stop_and_save(self, *, close_after=False):
+        if self.closed:return
+        self.running=False
+        if self._trajectory_stop is not None:self._trajectory_stop.set()
+        self._close_requested=self._close_requested or close_after
+        self._stop_requested=True
+        self._lock()
+        self._update_status()
+        if self.future is None:self._finish_stop()
+
+    def _finish_stop(self):
+        from .recovery import save_recovery
+        close_after=self._close_requested
+        reason='failed' if self._recovery_failed else 'closed' if close_after else 'stopped'
+        self._recovery_failed=False
+        self._stop_requested=False
+        self._close_requested=False
+        try:
+            path=save_recovery(self.experiment,parent_snapshot=self.parent_snapshot,
+                               reason=reason)
+        except (ValueError,RuntimeError,OSError,OverflowError) as error:
+            self._lock()
+            self._draw()
+            messagebox.showerror('Копия не сохранена — окно оставлено открытым',str(error),parent=self.root)
+            return
+        self.last_recovery_path=path
+        if close_after:
+            self._destroy()
+        else:
+            self._draw()
+            self._lock()
+
     def close(self):
+        """Programmatic cleanup; an active packet still needs a safe handoff."""
+        if self.closed:return
+        if self.future is not None:
+            self._stop_and_save(close_after=True)
+        else:
+            self._destroy()
+
+    def _destroy(self):
+        if self.future is not None:raise RuntimeError('Нельзя закрыть окно до завершения пакета')
         self.closed=True
         self.running=False
         self.pool.shutdown(wait=False,cancel_futures=True)
         self.root.destroy()
 
+    def _restore_recovery(self,path):
+        if self.future is not None or self.running or self._stop_requested:
+            raise ValueError('Восстановление требует паузы и завершения пакета')
+        from .branch_io import open_experiment
+        experiment,snapshot=open_experiment(path)
+        self._set_experiment(experiment,parent_snapshot=snapshot)
 
-def launch(experiment=None):
+    def _record_trajectory(self):
+        from datetime import datetime,timezone
+        from pathlib import Path
+        from threading import Event
+        from uuid import uuid4
+        from .trajectory import record_trajectory
+        target=float(self.target.get());batch=self._batch_size()
+        validate_target(self.experiment,target,batch)
+        base=filedialog.askdirectory(parent=self.root,title='Каталог для новой папки траектории')
+        if not base:return
+        self._settings()
+        self.last_trajectory_path=Path(base)/('solar-trajectory-'+datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')+'-'+uuid4().hex)
+        event=Event()
+        self.future=self.pool.submit(record_trajectory,self.experiment,self.last_trajectory_path,target,
+            packet_steps=batch,parent_snapshot=self.parent_snapshot,stop_requested=event.is_set)
+        self._trajectory_stop=event;self.trajectory_status=None
+        self.target_time=None;self._lock();self._update_status()
+
+    def _open_comparison(self):
+        parent=filedialog.askdirectory(parent=self.root,title='Траектория исходного опыта (родитель)')
+        if not parent:return
+        child=filedialog.askdirectory(parent=self.root,title='Траектория изменённого опыта (ветка с parent)')
+        if not child:return
+        after=messagebox.askyesnocancel('Сторона мгновенного события',
+            'Сравнивать после события?\nДа — after (после). Нет — before (до).\n'
+            'Недостающие эпохи не интерполируются.',parent=self.root)
+        if after is None:return
+        from .comparison import Comparison
+        from .comparison_view import ComparisonViewer
+        from .trajectory import Trajectory
+        comparison=Comparison(Trajectory(parent),Trajectory(child),event_side='after' if after else 'before')
+        ComparisonViewer(tk.Toplevel(self.root),comparison)
+
+    def _open_trajectory(self):
+        from .trajectory import Trajectory
+        from .trajectory_view import TrajectoryViewer
+        path=filedialog.askdirectory(parent=self.root,title='Папка с manifest.json траектории',
+            initialdir=str(self.last_trajectory_path) if self.last_trajectory_path else None)
+        if path:
+            trajectory=Trajectory(path)
+            TrajectoryViewer(tk.Toplevel(self.root),trajectory)
+
+    def _show_recoveries(self):
+        from .recovery import list_recoveries,recovery_directory
+        paths=list_recoveries()
+        dialog=tk.Toplevel(self.root);dialog.title('Локальные recovery-копии')
+        dialog.transient(self.root);dialog.grab_set()
+        dialog.columnconfigure(0,weight=1);dialog.rowconfigure(2,weight=1)
+        ttk.Label(dialog,text=f'Каталог: {recovery_directory()}',wraplength=760).grid(row=0,column=0,columnspan=2,padx=12,pady=8)
+        ttk.Label(dialog,text='Открытие заменит текущий опыт; сначала сохраните его.\n'
+                  'Копии рядом с CLI output открываются через «Открыть JSON».',wraplength=760).grid(row=1,column=0,columnspan=2,padx=12)
+        tree=ttk.Treeview(dialog,columns=('copy',),show='headings',height=10)
+        tree.heading('copy',text='Копия (новые сверху; дата имени — UTC)')
+        tree.column('copy',width=740)
+        scroll=ttk.Scrollbar(dialog,orient='vertical',command=tree.yview)
+        tree.configure(yscrollcommand=scroll.set)
+        tree.grid(row=2,column=0,sticky='nsew',padx=(12,0),pady=8)
+        scroll.grid(row=2,column=1,sticky='ns',padx=(0,12),pady=8)
+        for index,path in enumerate(paths):tree.insert('', 'end',iid=str(index),values=(path.parent.name,))
+        def restore():
+            selected=tree.selection()
+            if not selected:raise ValueError('Выберите recovery-копию')
+            self._restore_recovery(paths[int(selected[0])])
+            dialog.destroy()
+        ttk.Button(dialog,text='Открыть выбранную копию',command=lambda:self._guard(restore),
+                   state='normal' if paths else 'disabled').grid(row=3,column=0,columnspan=2,padx=12,pady=6)
+        if not paths:ttk.Label(dialog,text='Сохранённых локальных копий нет.').grid(row=4,column=0,columnspan=2,pady=6)
+        ttk.Button(dialog,text='Закрыть список',command=dialog.destroy).grid(row=5,column=0,columnspan=2,pady=6)
+        return dialog
+
+
+def launch(experiment=None, *, parent_snapshot=None):
     root=tk.Tk()
-    Laboratory(root,experiment)
+    Laboratory(root,experiment,parent_snapshot=parent_snapshot)
     root.mainloop()

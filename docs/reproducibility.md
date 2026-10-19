@@ -7,10 +7,11 @@
 ```powershell
 python -m venv .venv
 .\.venv\Scripts\python.exe -X utf8 -m pip install -e ".[dev,native]" -c requirements/validated-windows-cp314t.txt
+.\.venv\Scripts\python.exe -X utf8 -m pip check
 .\.venv\Scripts\python.exe -X utf8 -B scripts/setup_gnu_tools.py
 .\.venv\Scripts\python.exe -X utf8 -B scripts/build_native.py
 & "$env:USERPROFILE\.cargo\bin\cargo.exe" build --release --manifest-path rust/solar_core/Cargo.toml
-.\.venv\Scripts\python.exe -X utf8 -B scripts/check_project.py
+.\.venv\Scripts\python.exe -X utf8 -B scripts/check_project.py --require-native
 ```
 
 GNUbootstrap нужен только при отсутствии binutils: загружает официальные
@@ -19,6 +20,15 @@ MSYS2пакеты сSHA. Если инструменты уже есть, вме
 и ихDLL. PATH меняется только дочернему процессу; глобальные PATH/реестр
 не меняются. Portable включает runtime, Rust нужен для разработки/сборки.
 StandaloneRustrelease нужен для4integrationtests; без него они явноskip.
+В режиме `--require-native` такие пропуски завершают аудит ошибкой, поэтому
+отдельный `cargo build --release` выше необходим. `pip check` проверяет
+согласованность установленных зависимостей, а не точность модели. Constraints
+закрепляют выбранные версии пакетов, но не Python/Tk, ABI, Rust/toolchain,
+изолированные build-зависимости, колёса всех платформ или системные библиотеки.
+Это проверенный профиль, не полный hermetic lock и не гарантия битового
+совпадения расчётов на любом компьютере. ContinuousRun отдельно требует SciPy1.18.1;
+локальный PerBodyDOP853 использует внутренний hook SciPy. Обновление этих
+зависимостей требует относящихся численных проверок до обновления профиля.
 
 Pytest sessionsetup проверяет публичный tests/data/research63-inputs.zip
 и manifest, восстанавливает только7отсутствующих файлов в.tools. Это
@@ -33,3 +43,15 @@ freshRustrelease1334passed безskip. Freshnative собран изкопии �
 commit: при будущей публикации необходимо включить все публичныефайлы.
 Личные документы/готоваяvenv/targets/privatecache не копировались.
 Ссылки проверяются поROOT текущейкопии. [Критерии](reproducibility-protocol.md).
+
+
+## Стабилизация установки и остановки312–314
+
+Основные инструкции теперь используют constraints/pipcheck/native+standalonebuild
+и --require-native. Локальные18версий/CPython3.14t/Windowsx64 совпали;
+чистая установка снуля повторно не выполнялась, прежние clean-copy измерения — история.
+Управляемые GUIstop/close и CLIinterrupt сохраняют завершённое состояние вместе
+с parent; ошибка worker пишет копию до уведомления. Исправлен сброс parent в
+конструкторе при первоначальном открытии. [Поведение и восстановление](controlled-stop.md).
+Полный 2023Python/19Rust/fmt/skip0 PASS, source/data/native frozen.
+Численные формулы/пакеты/допуски прежние; новой годовой квалификации/portable нет.

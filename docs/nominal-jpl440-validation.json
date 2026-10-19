@@ -1,0 +1,1763 @@
+{
+  "generated_at": "2026-10-16T21:12:04+03:00",
+  "stages": [
+    229,
+    230,
+    231,
+    232,
+    233
+  ],
+  "protocol": "docs/nominal-jpl440-protocol.md",
+  "source_sha256": {
+    "docs/nominal-jpl440-protocol.md": "0c40e66654e23324d9dc35e27a43b607654b5965c7a6913787e813534e2249bf",
+    "scripts/nominal_jpl.py": "c73072be9f2eb4c02c345707d84256a966849ba097d03528ce74fae22c0c8937",
+    "scripts/fetch_nominal_jpl.py": "8b402c37b622fe1ac968a989dc6a412bdf273054a617330e9511bfbf03be8df7",
+    "scripts/assess_nominal_jpl.py": "27b1289c04700c935b36ad9a1b55e9dd00c2bc525a52386ee0107f70956d03ff",
+    "tests/test_nominal_jpl.py": "914415400d8d32b2b1b2e999bb37ddcc4f5c8b43436ee095501a6d60e35839f5",
+    "tests/test_nominal_jpl_audit.py": "8df82f7354a3f7a2a0dc602f75ef72dc1f3d929ebbefd2584846a3aabba5de6f"
+  },
+  "archive": {
+    "path": "docs/nominal-jpl440-inputs.zip",
+    "files": 56,
+    "archive_sha256": "89b1d13600055ccb254515ebe9bdbc71ade0551d133ccee2a69947590f5cc4db",
+    "archive_bytes": 2012159,
+    "raw_response_bytes": 991722,
+    "fetch_wall_seconds": 43.49008540000068,
+    "maximum_jd_offset_seconds": 2.88e-05,
+    "maximum_calendar_offset_seconds": 0.0,
+    "overlap_position_max": 0.0,
+    "overlap_velocity_max": 0.0
+  },
+  "measurements": {
+    "complete": true,
+    "checks_passed": true,
+    "protocol": "docs/nominal-jpl440-protocol.md",
+    "source_sha256": {
+      "docs/nominal-jpl440-protocol.md": "0c40e66654e23324d9dc35e27a43b607654b5965c7a6913787e813534e2249bf",
+      "scripts/assess_nominal_jpl.py": "27b1289c04700c935b36ad9a1b55e9dd00c2bc525a52386ee0107f70956d03ff",
+      "scripts/nominal_jpl.py": "c73072be9f2eb4c02c345707d84256a966849ba097d03528ce74fae22c0c8937"
+    },
+    "archive_sha256": "89b1d13600055ccb254515ebe9bdbc71ade0551d133ccee2a69947590f5cc4db",
+    "archive_bytes": 2012159,
+    "network_used": false,
+    "integration_performed": false,
+    "runtime_modified": false,
+    "physical_parameters_fitted": false,
+    "general_release": false,
+    "full_year_noether_balances_verified": false,
+    "original_noether_visibility_failure_preserved": true,
+    "current_dependencies_reverified": true,
+    "no_new_physical_precision_claim": true,
+    "origin": {
+      "epoch_jd_tdb": 2461321.5,
+      "frame": "Ecliptic J2000",
+      "center": "Solar System Barycenter",
+      "ephemeris": "DE441",
+      "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+      "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+    },
+    "settings": {
+      "dt": 3600,
+      "backend": "rust",
+      "contact_mode": "stop",
+      "restitution": 1.0,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "position_atol": 0.001,
+      "velocity_atol": 1e-09,
+      "physics": "eih-1pn",
+      "figures": [
+        {
+          "body": "Sun",
+          "coefficient": 2.1961391516529825e-07,
+          "reference_radius": 696000000.0,
+          "axis": [
+            0.12235349347232782,
+            -0.0310378702450671,
+            0.9920011457885356
+          ],
+          "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+        },
+        {
+          "body": "Earth",
+          "coefficient": 0.00108262539,
+          "reference_radius": 6378136.6,
+          "axis": [
+            0.0026020959422886785,
+            0.39776866017225926,
+            0.9174820554547499
+          ],
+          "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+        }
+      ],
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "error_control": "per-body"
+    },
+    "units": "SI",
+    "names": [
+      "Sun",
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Moon",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "epochs_seconds": [
+      0.0,
+      72000.0,
+      144000.0,
+      216000.0,
+      288000.0,
+      360000.0,
+      432000.0,
+      504000.0,
+      576000.0,
+      648000.0,
+      720000.0,
+      792000.0,
+      864000.0,
+      936000.0,
+      1008000.0,
+      1080000.0,
+      1152000.0,
+      1224000.0,
+      1296000.0,
+      1368000.0,
+      1440000.0,
+      1512000.0,
+      1584000.0,
+      1656000.0,
+      1728000.0,
+      1800000.0,
+      1872000.0,
+      1944000.0,
+      2016000.0,
+      2088000.0,
+      2160000.0,
+      2232000.0,
+      2304000.0,
+      2376000.0,
+      2448000.0,
+      2520000.0,
+      2592000.0,
+      2664000.0,
+      2736000.0,
+      2808000.0,
+      2880000.0,
+      2952000.0,
+      3024000.0,
+      3096000.0,
+      3168000.0,
+      3240000.0,
+      3312000.0,
+      3384000.0,
+      3456000.0,
+      3528000.0,
+      3600000.0,
+      3672000.0,
+      3744000.0,
+      3816000.0,
+      3888000.0,
+      3960000.0,
+      4032000.0,
+      4104000.0,
+      4176000.0,
+      4248000.0,
+      4320000.0,
+      4392000.0,
+      4464000.0,
+      4536000.0,
+      4608000.0,
+      4680000.0,
+      4752000.0,
+      4824000.0,
+      4896000.0,
+      4968000.0,
+      5040000.0,
+      5112000.0,
+      5184000.0,
+      5256000.0,
+      5328000.0,
+      5400000.0,
+      5472000.0,
+      5544000.0,
+      5616000.0,
+      5688000.0,
+      5760000.0,
+      5832000.0,
+      5904000.0,
+      5976000.0,
+      6048000.0,
+      6120000.0,
+      6192000.0,
+      6264000.0,
+      6336000.0,
+      6408000.0,
+      6480000.0,
+      6552000.0,
+      6624000.0,
+      6696000.0,
+      6768000.0,
+      6840000.0,
+      6912000.0,
+      6984000.0,
+      7056000.0,
+      7128000.0,
+      7200000.0,
+      7272000.0,
+      7344000.0,
+      7416000.0,
+      7488000.0,
+      7560000.0,
+      7632000.0,
+      7704000.0,
+      7776000.0,
+      7848000.0,
+      7920000.0,
+      7992000.0,
+      8064000.0,
+      8136000.0,
+      8208000.0,
+      8280000.0,
+      8352000.0,
+      8424000.0,
+      8496000.0,
+      8568000.0,
+      8640000.0,
+      8712000.0,
+      8784000.0,
+      8856000.0,
+      8928000.0,
+      9000000.0,
+      9072000.0,
+      9144000.0,
+      9216000.0,
+      9288000.0,
+      9360000.0,
+      9432000.0,
+      9504000.0,
+      9576000.0,
+      9648000.0,
+      9720000.0,
+      9792000.0,
+      9864000.0,
+      9936000.0,
+      10008000.0,
+      10080000.0,
+      10152000.0,
+      10224000.0,
+      10296000.0,
+      10368000.0,
+      10440000.0,
+      10512000.0,
+      10584000.0,
+      10656000.0,
+      10728000.0,
+      10800000.0,
+      10872000.0,
+      10944000.0,
+      11016000.0,
+      11088000.0,
+      11160000.0,
+      11232000.0,
+      11304000.0,
+      11376000.0,
+      11448000.0,
+      11520000.0,
+      11592000.0,
+      11664000.0,
+      11736000.0,
+      11808000.0,
+      11880000.0,
+      11952000.0,
+      12024000.0,
+      12096000.0,
+      12168000.0,
+      12240000.0,
+      12312000.0,
+      12384000.0,
+      12456000.0,
+      12528000.0,
+      12600000.0,
+      12672000.0,
+      12744000.0,
+      12816000.0,
+      12888000.0,
+      12960000.0,
+      13032000.0,
+      13104000.0,
+      13176000.0,
+      13248000.0,
+      13320000.0,
+      13392000.0,
+      13464000.0,
+      13536000.0,
+      13608000.0,
+      13680000.0,
+      13752000.0,
+      13824000.0,
+      13896000.0,
+      13968000.0,
+      14040000.0,
+      14112000.0,
+      14184000.0,
+      14256000.0,
+      14328000.0,
+      14400000.0,
+      14472000.0,
+      14544000.0,
+      14616000.0,
+      14688000.0,
+      14760000.0,
+      14832000.0,
+      14904000.0,
+      14976000.0,
+      15048000.0,
+      15120000.0,
+      15192000.0,
+      15264000.0,
+      15336000.0,
+      15408000.0,
+      15480000.0,
+      15552000.0,
+      15624000.0,
+      15696000.0,
+      15768000.0,
+      15840000.0,
+      15912000.0,
+      15984000.0,
+      16056000.0,
+      16128000.0,
+      16200000.0,
+      16272000.0,
+      16344000.0,
+      16416000.0,
+      16488000.0,
+      16560000.0,
+      16632000.0,
+      16704000.0,
+      16776000.0,
+      16848000.0,
+      16920000.0,
+      16992000.0,
+      17064000.0,
+      17136000.0,
+      17208000.0,
+      17280000.0,
+      17352000.0,
+      17424000.0,
+      17496000.0,
+      17568000.0,
+      17640000.0,
+      17712000.0,
+      17784000.0,
+      17856000.0,
+      17928000.0,
+      18000000.0,
+      18072000.0,
+      18144000.0,
+      18216000.0,
+      18288000.0,
+      18360000.0,
+      18432000.0,
+      18504000.0,
+      18576000.0,
+      18648000.0,
+      18720000.0,
+      18792000.0,
+      18864000.0,
+      18936000.0,
+      19008000.0,
+      19080000.0,
+      19152000.0,
+      19224000.0,
+      19296000.0,
+      19368000.0,
+      19440000.0,
+      19512000.0,
+      19584000.0,
+      19656000.0,
+      19728000.0,
+      19800000.0,
+      19872000.0,
+      19944000.0,
+      20016000.0,
+      20088000.0,
+      20160000.0,
+      20232000.0,
+      20304000.0,
+      20376000.0,
+      20448000.0,
+      20520000.0,
+      20592000.0,
+      20664000.0,
+      20736000.0,
+      20808000.0,
+      20880000.0,
+      20952000.0,
+      21024000.0,
+      21096000.0,
+      21168000.0,
+      21240000.0,
+      21312000.0,
+      21384000.0,
+      21456000.0,
+      21528000.0,
+      21600000.0,
+      21672000.0,
+      21744000.0,
+      21816000.0,
+      21888000.0,
+      21960000.0,
+      22032000.0,
+      22104000.0,
+      22176000.0,
+      22248000.0,
+      22320000.0,
+      22392000.0,
+      22464000.0,
+      22536000.0,
+      22608000.0,
+      22680000.0,
+      22752000.0,
+      22824000.0,
+      22896000.0,
+      22968000.0,
+      23040000.0,
+      23112000.0,
+      23184000.0,
+      23256000.0,
+      23328000.0,
+      23400000.0,
+      23472000.0,
+      23544000.0,
+      23616000.0,
+      23688000.0,
+      23760000.0,
+      23832000.0,
+      23904000.0,
+      23976000.0,
+      24048000.0,
+      24120000.0,
+      24192000.0,
+      24264000.0,
+      24336000.0,
+      24408000.0,
+      24480000.0,
+      24552000.0,
+      24624000.0,
+      24696000.0,
+      24768000.0,
+      24840000.0,
+      24912000.0,
+      24984000.0,
+      25056000.0,
+      25128000.0,
+      25200000.0,
+      25272000.0,
+      25344000.0,
+      25416000.0,
+      25488000.0,
+      25560000.0,
+      25632000.0,
+      25704000.0,
+      25776000.0,
+      25848000.0,
+      25920000.0,
+      25992000.0,
+      26064000.0,
+      26136000.0,
+      26208000.0,
+      26280000.0,
+      26352000.0,
+      26424000.0,
+      26496000.0,
+      26568000.0,
+      26640000.0,
+      26712000.0,
+      26784000.0,
+      26856000.0,
+      26928000.0,
+      27000000.0,
+      27072000.0,
+      27144000.0,
+      27216000.0,
+      27288000.0,
+      27360000.0,
+      27432000.0,
+      27504000.0,
+      27576000.0,
+      27648000.0,
+      27720000.0,
+      27792000.0,
+      27864000.0,
+      27936000.0,
+      28008000.0,
+      28080000.0,
+      28152000.0,
+      28224000.0,
+      28296000.0,
+      28368000.0,
+      28440000.0,
+      28512000.0,
+      28584000.0,
+      28656000.0,
+      28728000.0,
+      28800000.0,
+      28872000.0,
+      28944000.0,
+      29016000.0,
+      29088000.0,
+      29160000.0,
+      29232000.0,
+      29304000.0,
+      29376000.0,
+      29448000.0,
+      29520000.0,
+      29592000.0,
+      29664000.0,
+      29736000.0,
+      29808000.0,
+      29880000.0,
+      29952000.0,
+      30024000.0,
+      30096000.0,
+      30168000.0,
+      30240000.0,
+      30312000.0,
+      30384000.0,
+      30456000.0,
+      30528000.0,
+      30600000.0,
+      30672000.0,
+      30744000.0,
+      30816000.0,
+      30888000.0,
+      30960000.0,
+      31032000.0,
+      31104000.0,
+      31176000.0,
+      31248000.0,
+      31320000.0,
+      31392000.0,
+      31464000.0,
+      31536000.0,
+      31557600.0
+    ],
+    "time_probe": {
+      "Mercury": {
+        "position_metres": 0.5485970388910759,
+        "velocity_m_per_s": 3.982259508371517e-07
+      },
+      "Earth": {
+        "position_metres": 0.3983089450524356,
+        "velocity_m_per_s": 7.979096740717368e-08
+      },
+      "Moon": {
+        "position_metres": 0.3857526386929692,
+        "velocity_m_per_s": 4.7935571244776017e-08
+      },
+      "Moon-Earth": {
+        "position_metres": 0.013832358742175893,
+        "velocity_m_per_s": 3.67685242581139e-08
+      }
+    },
+    "timing": {
+      "maximum_barycentric_speed_m_per_s": 58968.980727894996,
+      "maximum_moon_relative_speed_m_per_s": 1103.5918243172707,
+      "maximum_jd_offset_seconds": 2.88e-05,
+      "maximum_calendar_offset_seconds": 0.0,
+      "representation_envelope_seconds": 0.0001,
+      "body_allowance_metres": 10.0,
+      "pair_allowance_metres": 0.2,
+      "exact_jpl_epoch_coincidence_claim": false
+    },
+    "candidates": {
+      "legacy_python": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.80481656348667,
+            "velocity_m_per_s": 1.3782271727795647e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 99.57151879666742,
+            "final_position_metres": 218.80481656348667,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 228.80481656348667,
+            "timing_aware_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.70041280645813,
+            "velocity_m_per_s": 2.6778453404943033e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 100.90497178567725,
+            "final_position_metres": 207.70041280645813,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 217.70041280645813,
+            "timing_aware_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4711624963722,
+            "velocity_m_per_s": 2.3332501767394544e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 112.13328019437,
+            "final_position_metres": 257.4711624963722,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 267.4711624963722,
+            "timing_aware_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 175.04793704043033,
+            "velocity_m_per_s": 4.1723960897461575e-05,
+            "worst_epoch_jd_tdb": 2461571.5,
+            "position_goal_passed": true,
+            "position_rms_metres": 111.86187543002634,
+            "final_position_metres": 146.18228437066298,
+            "worst_nominal_seconds": 21600000.0,
+            "position_plus_timing_allowance_metres": 185.04793704043033,
+            "timing_aware_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 772.1180749506162,
+            "velocity_m_per_s": 0.00199704574559114,
+            "worst_epoch_jd_tdb": 2461668.1666666665,
+            "position_goal_passed": true,
+            "position_rms_metres": 414.6203609973066,
+            "final_position_metres": 671.8628071263036,
+            "worst_nominal_seconds": 29952000.0,
+            "position_plus_timing_allowance_metres": 782.1180749506162,
+            "timing_aware_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3379199073911,
+            "velocity_m_per_s": 4.372273315291673e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 314.33992009789563,
+            "final_position_metres": 571.3379199073911,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 581.3379199073911,
+            "timing_aware_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.26363525739066,
+            "velocity_m_per_s": 1.8870181455420358e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 119.13132194037993,
+            "final_position_metres": 273.26363525739066,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 283.26363525739066,
+            "timing_aware_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.073211164506993,
+            "velocity_m_per_s": 1.911276154312302e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 14.125106920991195,
+            "final_position_metres": 31.073211164506993,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 41.07321116450699,
+            "timing_aware_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.177936312353783,
+            "velocity_m_per_s": 1.0823433479739954e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 7.733182568649465,
+            "final_position_metres": 17.177936312353783,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 27.177936312353783,
+            "timing_aware_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 64.71067798433195,
+            "velocity_m_per_s": 4.113516454759334e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 29.053240776607566,
+            "final_position_metres": 64.71067798433195,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 74.71067798433195,
+            "timing_aware_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 725.5149393915734,
+          "velocity_m_per_s": 0.002018242566192856,
+          "position_goal_passed": true,
+          "position_rms_metres": 405.93656187471765,
+          "final_position_metres": 642.7958559646473,
+          "worst_nominal_seconds": 30672000.0,
+          "position_plus_timing_allowance_metres": 725.7149393915735,
+          "timing_aware_goal_passed": true
+        },
+        "physical_goals_passed": true,
+        "timing_aware_goals_passed": true
+      },
+      "legacy_rust": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.80481598762356,
+            "velocity_m_per_s": 1.3782271714824451e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 99.57151852452539,
+            "final_position_metres": 218.80481598762356,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 228.80481598762356,
+            "timing_aware_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.6911832285694,
+            "velocity_m_per_s": 2.6788398655530623e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 100.90501298575296,
+            "final_position_metres": 207.6911832285694,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 217.6911832285694,
+            "timing_aware_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4670927576317,
+            "velocity_m_per_s": 2.3331278348709605e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 112.13195616890258,
+            "final_position_metres": 257.4670927576317,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 267.4670927576317,
+            "timing_aware_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 175.0500873641021,
+            "velocity_m_per_s": 4.1724227538243586e-05,
+            "worst_epoch_jd_tdb": 2461571.5,
+            "position_goal_passed": true,
+            "position_rms_metres": 111.86177486406388,
+            "final_position_metres": 146.17483422186518,
+            "worst_nominal_seconds": 21600000.0,
+            "position_plus_timing_allowance_metres": 185.0500873641021,
+            "timing_aware_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 772.1075974165826,
+            "velocity_m_per_s": 0.001997034294225107,
+            "worst_epoch_jd_tdb": 2461668.1666666665,
+            "position_goal_passed": true,
+            "position_rms_metres": 414.61674793883714,
+            "final_position_metres": 671.8612533745629,
+            "worst_nominal_seconds": 29952000.0,
+            "position_plus_timing_allowance_metres": 782.1075974165826,
+            "timing_aware_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3400547073581,
+            "velocity_m_per_s": 4.372392135507869e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 314.3392098899135,
+            "final_position_metres": 571.3400547073581,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 581.3400547073581,
+            "timing_aware_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.2593471123484,
+            "velocity_m_per_s": 1.887018098793408e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 119.12915019581244,
+            "final_position_metres": 273.2593471123484,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 283.2593471123484,
+            "timing_aware_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.070512004153752,
+            "velocity_m_per_s": 1.9112985031489334e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 14.12372040157432,
+            "final_position_metres": 31.070512004153752,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 41.070512004153755,
+            "timing_aware_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.19116695293259,
+            "velocity_m_per_s": 1.0823424972534597e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 7.7416683857237425,
+            "final_position_metres": 17.19116695293259,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 27.19116695293259,
+            "timing_aware_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 64.69236441736581,
+            "velocity_m_per_s": 4.1135138698373275e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 29.037602941167457,
+            "final_position_metres": 64.69236441736581,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 74.69236441736581,
+            "timing_aware_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 725.5097087887926,
+          "velocity_m_per_s": 0.002018229265582195,
+          "position_goal_passed": true,
+          "position_rms_metres": 405.93252958028387,
+          "final_position_metres": 642.7959811411502,
+          "worst_nominal_seconds": 30672000.0,
+          "position_plus_timing_allowance_metres": 725.7097087887927,
+          "timing_aware_goal_passed": true
+        },
+        "physical_goals_passed": true,
+        "timing_aware_goals_passed": true
+      },
+      "continuous_rust": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.80481787902877,
+            "velocity_m_per_s": 1.3782271797113683e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 99.57151899062347,
+            "final_position_metres": 218.80481787902877,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 228.80481787902877,
+            "timing_aware_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.68893409937027,
+            "velocity_m_per_s": 2.678845173220101e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 100.90516073196048,
+            "final_position_metres": 207.68893409937027,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 217.68893409937027,
+            "timing_aware_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4641396740577,
+            "velocity_m_per_s": 2.3330253822198955e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 112.13057826005894,
+            "final_position_metres": 257.4641396740577,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 267.4641396740577,
+            "timing_aware_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 175.0466357424827,
+            "velocity_m_per_s": 4.17250426432083e-05,
+            "worst_epoch_jd_tdb": 2461571.5,
+            "position_goal_passed": true,
+            "position_rms_metres": 111.8617385647603,
+            "final_position_metres": 146.18667013702407,
+            "worst_nominal_seconds": 21600000.0,
+            "position_plus_timing_allowance_metres": 185.0466357424827,
+            "timing_aware_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 772.1627846295936,
+            "velocity_m_per_s": 0.001997179011756924,
+            "worst_epoch_jd_tdb": 2461668.1666666665,
+            "position_goal_passed": true,
+            "position_rms_metres": 414.6412871016794,
+            "final_position_metres": 671.899493264243,
+            "worst_nominal_seconds": 29952000.0,
+            "position_plus_timing_allowance_metres": 782.1627846295936,
+            "timing_aware_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3415691060144,
+            "velocity_m_per_s": 4.3724416387740555e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 314.33899198404373,
+            "final_position_metres": 571.3415691060144,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 581.3415691060144,
+            "timing_aware_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.27695397671386,
+            "velocity_m_per_s": 1.8870295355421907e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 119.13915011733332,
+            "final_position_metres": 273.27695397671386,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 283.27695397671386,
+            "timing_aware_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.100123068884347,
+            "velocity_m_per_s": 1.911349172802199e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 14.14087195837704,
+            "final_position_metres": 31.100123068884347,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 41.10012306888434,
+            "timing_aware_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.11514488975486,
+            "velocity_m_per_s": 1.082341068432979e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 7.69657486970409,
+            "final_position_metres": 17.11514488975486,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 27.11514488975486,
+            "timing_aware_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 64.7940566924415,
+            "velocity_m_per_s": 4.113521041064781e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true,
+            "position_rms_metres": 29.101240533328568,
+            "final_position_metres": 64.7940566924415,
+            "worst_nominal_seconds": 31557600.0,
+            "position_plus_timing_allowance_metres": 74.7940566924415,
+            "timing_aware_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 725.5658216623544,
+          "velocity_m_per_s": 0.0020183786475732224,
+          "position_goal_passed": true,
+          "position_rms_metres": 405.95870763994816,
+          "final_position_metres": 642.8328178777948,
+          "worst_nominal_seconds": 30672000.0,
+          "position_plus_timing_allowance_metres": 725.7658216623545,
+          "timing_aware_goal_passed": true
+        },
+        "physical_goals_passed": true,
+        "timing_aware_goals_passed": true
+      }
+    },
+    "independent_reference": {
+      "jpl_residuals": {
+        "Sun": {
+          "position_metres": 218.80482280188244,
+          "velocity_m_per_s": 1.3782271893346689e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 99.57152251055012,
+          "final_position_metres": 218.80482280188244,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 228.80482280188244,
+          "timing_aware_goal_passed": true
+        },
+        "Mercury": {
+          "position_metres": 207.74810449151477,
+          "velocity_m_per_s": 2.6720330147102302e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 100.90224244254681,
+          "final_position_metres": 207.74810449151477,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 217.74810449151477,
+          "timing_aware_goal_passed": true
+        },
+        "Venus": {
+          "position_metres": 257.4773767785106,
+          "velocity_m_per_s": 2.333315452780468e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 112.13659819709264,
+          "final_position_metres": 257.4773767785106,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 267.4773767785106,
+          "timing_aware_goal_passed": true
+        },
+        "Earth": {
+          "position_metres": 175.0502672230899,
+          "velocity_m_per_s": 4.172541418813505e-05,
+          "worst_epoch_jd_tdb": 2461571.5,
+          "position_goal_passed": true,
+          "position_rms_metres": 111.86556641638364,
+          "final_position_metres": 146.20041530572246,
+          "worst_nominal_seconds": 21600000.0,
+          "position_plus_timing_allowance_metres": 185.0502672230899,
+          "timing_aware_goal_passed": true
+        },
+        "Moon": {
+          "position_metres": 772.1936620453547,
+          "velocity_m_per_s": 0.0019972212844606425,
+          "worst_epoch_jd_tdb": 2461668.1666666665,
+          "position_goal_passed": true,
+          "position_rms_metres": 414.6490127231743,
+          "final_position_metres": 671.9370128651813,
+          "worst_nominal_seconds": 29952000.0,
+          "position_plus_timing_allowance_metres": 782.1936620453547,
+          "timing_aware_goal_passed": true
+        },
+        "Mars": {
+          "position_metres": 571.3415830829969,
+          "velocity_m_per_s": 4.372480897703957e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 314.3376449326609,
+          "final_position_metres": 571.3415830829969,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 581.3415830829969,
+          "timing_aware_goal_passed": true
+        },
+        "Jupiter": {
+          "position_metres": 273.28788535490617,
+          "velocity_m_per_s": 1.8870327973754292e-05,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 119.14595821987024,
+          "final_position_metres": 273.28788535490617,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 283.28788535490617,
+          "timing_aware_goal_passed": true
+        },
+        "Saturn": {
+          "position_metres": 31.110210701563744,
+          "velocity_m_per_s": 1.911341909350417e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 14.145687321974911,
+          "final_position_metres": 31.110210701563744,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 41.110210701563744,
+          "timing_aware_goal_passed": true
+        },
+        "Uranus": {
+          "position_metres": 17.0600107777449,
+          "velocity_m_per_s": 1.0823933003587822e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 7.665030700931463,
+          "final_position_metres": 17.0600107777449,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 27.0600107777449,
+          "timing_aware_goal_passed": true
+        },
+        "Neptune": {
+          "position_metres": 64.7923734843061,
+          "velocity_m_per_s": 4.113511876623312e-06,
+          "worst_epoch_jd_tdb": 2461686.75,
+          "position_goal_passed": true,
+          "position_rms_metres": 29.11028696037016,
+          "final_position_metres": 64.7923734843061,
+          "worst_nominal_seconds": 31557600.0,
+          "position_plus_timing_allowance_metres": 74.7923734843061,
+          "timing_aware_goal_passed": true
+        }
+      },
+      "moon_relative_jpl": {
+        "position_metres": 725.5755729580118,
+        "velocity_m_per_s": 0.002018421926475919,
+        "position_goal_passed": true,
+        "position_rms_metres": 405.9659806862854,
+        "final_position_metres": 642.8709581131858,
+        "worst_nominal_seconds": 30672000.0,
+        "position_plus_timing_allowance_metres": 725.7755729580118,
+        "timing_aware_goal_passed": true
+      },
+      "physical_goals_passed": true,
+      "timing_aware_goals_passed": true
+    },
+    "previous_24_epoch_results": {
+      "legacy_python": {
+        "moon_relative_jpl": {
+          "position_metres": 691.5969820118503,
+          "velocity_m_per_s": 0.0018941753095200649,
+          "position_goal_passed": true
+        }
+      },
+      "legacy_rust": {
+        "moon_relative_jpl": {
+          "position_metres": 691.5915890505812,
+          "velocity_m_per_s": 0.0018941613391105232,
+          "position_goal_passed": true
+        }
+      },
+      "continuous_rust": {
+        "moon_relative_jpl": {
+          "position_metres": 691.6446756571738,
+          "velocity_m_per_s": 0.0018943005063550035,
+          "position_goal_passed": true
+        }
+      }
+    },
+    "reference_refinement": {
+      "all_bodies": {
+        "position_metres": 0.08789292570917555,
+        "velocity_m_per_s": 3.596203460729797e-08
+      },
+      "moon_relative_to_earth": {
+        "position_metres": 0.00034009113426403424,
+        "velocity_m_per_s": 7.996602851957907e-10
+      }
+    },
+    "archive_files_sha256": {
+      "annual.json": "d663204172af0244cb0655bb73329bc1a7a1f5387d6f81895cacd64674fba0d0",
+      "annual.npz": "68c92a60437e31c7199077fc63d140c51d5cf36f4fab47e2c92f065446169040",
+      "probe/1-jd.json": "ad55c2226d79772ca361a243727517ecd13d28bfaa05ebbe790adb15991f3b6a",
+      "probe/1-jd.request.json": "b6a3a02ed1d5d69b46a31b3111d0f3fdf2b8deaaad7ac6fa1eddac61e6f3ec97",
+      "probe/1-regular.json": "1317009955bddf211850da3c02eb3a435606f902958613b0d9ec73629c841773",
+      "probe/1-regular.request.json": "ef30351a4368d00847fe170227482d2e30359b3f0c24a0696bc14e670c788dd9",
+      "probe/301-jd.json": "edfc86433e09d24fa77bec7d684e3786268c75d4c3ac78762692a1f0957cd76b",
+      "probe/301-jd.request.json": "9ad43dc08fb326ec94515bafcabd83a8e8dfc83aff22acc03d9efd326b8eead9",
+      "probe/301-regular.json": "528cfb1f831b0959b2330dbe8d0b1515df170139568e51ac4720052bf313d1fc",
+      "probe/301-regular.request.json": "d36e17c60ed30d7e65af88751f8ce2aff7b864c0b9be49cc7d902b238e307403",
+      "probe/399-jd.json": "84c259203adcd2e3f5c9b643c6acb243260956aeca6ee1a39b43a2fb591343ac",
+      "probe/399-jd.request.json": "996a89c187f6ef0257b015d75a009fef0adc55698077f53562931802f01af665",
+      "probe/399-regular.json": "5a379ed2f24d2172508bac08dc8cc27b5f9d721b571871af16743a80565021ef",
+      "probe/399-regular.request.json": "200970d11b96f33945e22383dd09fc4ff9a6656b1394850e50453a6d52e54319",
+      "probe229.json": "5993461e25abee352ba1cdfe17568ec3bd1c91b2bdb5cc60bd5a6f8c8036dc21",
+      "raw/horizons-1-final.json": "fafd994a9fec68e4da3a0d042a46b2c82cdfd5ca52ea210e514c2abfb0333a84",
+      "raw/horizons-1-final.request.json": "15e6bc8c84bf5434d570484dd6ee062e1dd1e9d943e3beb7a1566cb701031244",
+      "raw/horizons-1-regular.json": "b3f49015a08508d29d507c4b049c81ac99cb88c304c3dceac03b08e9c6263ec5",
+      "raw/horizons-1-regular.request.json": "2916c4a95c814becf1653bde8e134041013165111f768623936cb1d705a4a2c3",
+      "raw/horizons-10-final.json": "faf98991fb8a7580b9cd092decfeedd57a930f47acdd68f99acb87d0785e3cfa",
+      "raw/horizons-10-final.request.json": "79b2c8dcda7e362631fe04623bd8bb9967980997510b8dc6cdf2ee9f94a79602",
+      "raw/horizons-10-regular.json": "dd031ddaf8eddde99123cf35a97beca0c6e4774d467dc2d48449f7d78c1de089",
+      "raw/horizons-10-regular.request.json": "1d0d6ed6a9c2b59140892914d5b575e0b57d0e29a6aa38674640dd3d5a8d4bad",
+      "raw/horizons-2-final.json": "00c51d04be148f51586bc5ab131bdf00c840bd15369764f2c5e279f848d9b4de",
+      "raw/horizons-2-final.request.json": "af782482ff790238a02412c44997680c6f8bfce18f362e3a4a6cf6a5f67f6013",
+      "raw/horizons-2-regular.json": "9e1ef1d0d465bb820a262528324c223af5cceab769e8a08ebcbdf27301891919",
+      "raw/horizons-2-regular.request.json": "c7cb6aed696f7d8f403b8bd1bcef3255af015a824064ec7f4754439b4b884d90",
+      "raw/horizons-301-final.json": "737978659827e0c5f2c23c2215d52ecaf46d92349a7c8ab1c570f432d8bf877f",
+      "raw/horizons-301-final.request.json": "540bbcf0bd74c1d5f3b9972921d2ca8399d6095f1c611a7695efcaaf90c28654",
+      "raw/horizons-301-regular.json": "a13760ada1df266759da44c348bd3cf4bde506c94b2c145640c800e67b7cf625",
+      "raw/horizons-301-regular.request.json": "6faa60c64030e7ecc6e15f70091141d912692577da49b47bf65ff7f3ffd1f35d",
+      "raw/horizons-399-final.json": "4b90a10edd82ba0aa6824a145e337446f6e29d305b5d25b8467b4003272b5592",
+      "raw/horizons-399-final.request.json": "30cc932dfa4aef71d80aed6b4c478e7eac7b1b396ee09104d94ea90a07aeb54d",
+      "raw/horizons-399-regular.json": "cb07abbf37df125116898c6a89fe770de6bc0a1134f3ce70b75b5d7fe1777b0b",
+      "raw/horizons-399-regular.request.json": "ceed378283f823382c9cecbb8c6fd0ce1511f518a0a240cf87ee52fa72d65b1a",
+      "raw/horizons-4-final.json": "dd3bede8707f2588ac33409588b2c13bae11115e319caadcd80505c87267fc11",
+      "raw/horizons-4-final.request.json": "35c807cfd2e654cdc2d9dbb0bb182a334466aeaae35cef80481a7ff0653afc5c",
+      "raw/horizons-4-regular.json": "dc3fa451129025a5ece829c8a9501d9f6b075b5a4768b2b4a6092c90b142eb84",
+      "raw/horizons-4-regular.request.json": "54ed4324e433d0211abe4834dc75808643529cc6ef93a1a62ee924a4645b32b6",
+      "raw/horizons-5-final.json": "95e417038d0e60ce202c10859383040da48801c414e927fed3d1fb8666a28803",
+      "raw/horizons-5-final.request.json": "2666556d4e22cfe04975ada9e7fe632ac6740b665be09b3d703eb5f6603d18ef",
+      "raw/horizons-5-regular.json": "5ecffcc4755e1dae1247eac8528eae0d29438b231b5f0b62b24a41173d69380c",
+      "raw/horizons-5-regular.request.json": "5d9d4f6926b4ba1e350b46261d92744755aedf8725fcccbca08d229fbdff96bd",
+      "raw/horizons-6-final.json": "6819607111c6814bbec3b8f2e623dc523f96fd5b60e4ecd875cba47a33c077ba",
+      "raw/horizons-6-final.request.json": "730c6a7d802addcdab6c3e906dbe1111390c7126680dce712d26f12303791e9a",
+      "raw/horizons-6-regular.json": "56bb21c81be4747c8d3393fc112430224e78473a48d76ebd76f845876e89851b",
+      "raw/horizons-6-regular.request.json": "28efc2acb5d31b175fcf45b2a3a76d7a9f4ac7063c36b6e288869f4e65069702",
+      "raw/horizons-7-final.json": "b5d2785cb7cba0cf4f581fb4975f4ea0d3a2735998f3f42b09513b3c7ef5a052",
+      "raw/horizons-7-final.request.json": "7e14c7eec713cb1601636ca4e95c057fc02d73969a8374e3a02d833daaaa2457",
+      "raw/horizons-7-regular.json": "4f1913d07e941ea863cb7081dd9adade8eefe67e89b662093cd9ba0d2af23ca2",
+      "raw/horizons-7-regular.request.json": "cf08bbb911949c2b6f986c314f9ec628f80a70510c274c0b534df181909c2a39",
+      "raw/horizons-8-final.json": "ced3063ad1cdcb5f4ebf3c4d357910ffd4238a3b12deffdf33fb28b65113e552",
+      "raw/horizons-8-final.request.json": "95b03362ebe1e222b4f4d0adf228df1e2ada53bc56924b408cdb76c47f690380",
+      "raw/horizons-8-regular.json": "b6b71ec4cafe1572b457301d9d8856b5e195ac78adeeba056575dec615b894f6",
+      "raw/horizons-8-regular.request.json": "405b2555ca060a513d12b07c0b42c4b932ae5c83901da7af39a6f47a2810bae9",
+      "reference230.json": "87845f8de557115b71b5064171a17bc73e255e760b455861c1d0fe351d70175b"
+    },
+    "wall_seconds": 0.23819950000324752
+  },
+  "time_probe": {
+    "complete": true,
+    "checks_passed": true,
+    "started_utc": "2026-10-16T18:02:38.389839+00:00",
+    "source_sha256": {
+      "docs/nominal-jpl440-protocol.md": "0c40e66654e23324d9dc35e27a43b607654b5965c7a6913787e813534e2249bf",
+      "scripts/nominal_jpl.py": "c73072be9f2eb4c02c345707d84256a966849ba097d03528ce74fae22c0c8937",
+      "scripts/fetch_ephemerides.py": "719d31998368f4c200a60f1460abd4530a04c4063a9c8e60f6b2d2988a8dc232",
+      "tests/test_nominal_jpl.py": "914415400d8d32b2b1b2e999bb37ddcc4f5c8b43436ee095501a6d60e35839f5"
+    },
+    "requests": [
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%271%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&VEC_TABLE=%272%27&OUT_UNITS=%27KM-S%27&CSV_FORMAT=%27YES%27&TIME_TYPE=%27TDB%27&TIME_DIGITS=%27FRACSEC%27&CAL_TYPE=%27GREGORIAN%27&START_TIME=%272026-10-08+00%3A00%3A00%27&STOP_TIME=%272026-10-10+12%3A00%3A00%27&STEP_SIZE=%2720h%27",
+        "sha256": "1317009955bddf211850da3c02eb3a435606f902958613b0d9ec73629c841773",
+        "fetched_utc": "2026-10-16T18:02:39.624547+00:00"
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%271%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&VEC_TABLE=%272%27&OUT_UNITS=%27KM-S%27&CSV_FORMAT=%27YES%27&TIME_TYPE=%27TDB%27&TIME_DIGITS=%27FRACSEC%27&CAL_TYPE=%27GREGORIAN%27&TLIST=%272461321.500000000000000%27+%272461322.333333333333333%27+%272461323.166666666666667%27+%272461324.000000000000000%27&TLIST_TYPE=%27JD%27",
+        "sha256": "ad55c2226d79772ca361a243727517ecd13d28bfaa05ebbe790adb15991f3b6a",
+        "fetched_utc": "2026-10-16T18:02:40.411153+00:00"
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27399%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&VEC_TABLE=%272%27&OUT_UNITS=%27KM-S%27&CSV_FORMAT=%27YES%27&TIME_TYPE=%27TDB%27&TIME_DIGITS=%27FRACSEC%27&CAL_TYPE=%27GREGORIAN%27&START_TIME=%272026-10-08+00%3A00%3A00%27&STOP_TIME=%272026-10-10+12%3A00%3A00%27&STEP_SIZE=%2720h%27",
+        "sha256": "5a379ed2f24d2172508bac08dc8cc27b5f9d721b571871af16743a80565021ef",
+        "fetched_utc": "2026-10-16T18:02:41.202017+00:00"
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27399%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&VEC_TABLE=%272%27&OUT_UNITS=%27KM-S%27&CSV_FORMAT=%27YES%27&TIME_TYPE=%27TDB%27&TIME_DIGITS=%27FRACSEC%27&CAL_TYPE=%27GREGORIAN%27&TLIST=%272461321.500000000000000%27+%272461322.333333333333333%27+%272461323.166666666666667%27+%272461324.000000000000000%27&TLIST_TYPE=%27JD%27",
+        "sha256": "84c259203adcd2e3f5c9b643c6acb243260956aeca6ee1a39b43a2fb591343ac",
+        "fetched_utc": "2026-10-16T18:02:42.612082+00:00"
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27301%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&VEC_TABLE=%272%27&OUT_UNITS=%27KM-S%27&CSV_FORMAT=%27YES%27&TIME_TYPE=%27TDB%27&TIME_DIGITS=%27FRACSEC%27&CAL_TYPE=%27GREGORIAN%27&START_TIME=%272026-10-08+00%3A00%3A00%27&STOP_TIME=%272026-10-10+12%3A00%3A00%27&STEP_SIZE=%2720h%27",
+        "sha256": "528cfb1f831b0959b2330dbe8d0b1515df170139568e51ac4720052bf313d1fc",
+        "fetched_utc": "2026-10-16T18:02:44.924198+00:00"
+      },
+      {
+        "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27301%27&OBJ_DATA=%27NO%27&MAKE_EPHEM=%27YES%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%400%27&REF_SYSTEM=%27ICRF%27&REF_PLANE=%27ECLIPTIC%27&VEC_CORR=%27NONE%27&VEC_TABLE=%272%27&OUT_UNITS=%27KM-S%27&CSV_FORMAT=%27YES%27&TIME_TYPE=%27TDB%27&TIME_DIGITS=%27FRACSEC%27&CAL_TYPE=%27GREGORIAN%27&TLIST=%272461321.500000000000000%27+%272461322.333333333333333%27+%272461323.166666666666667%27+%272461324.000000000000000%27&TLIST_TYPE=%27JD%27",
+        "sha256": "edfc86433e09d24fa77bec7d684e3786268c75d4c3ac78762692a1f0957cd76b",
+        "fetched_utc": "2026-10-16T18:02:45.784102+00:00"
+      }
+    ],
+    "rows": {
+      "Mercury_regular": [
+        {
+          "jd_tdb": 2461321.5,
+          "position": [
+            19750262520.49684,
+            -64849727710.94375,
+            -7051061714.338418
+          ],
+          "velocity": [
+            36761.36442022774,
+            16944.1827517093,
+            -1986.498900879239
+          ],
+          "nominal_seconds": 0,
+          "printed_jd_tdb": "2461321.500000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 00:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        },
+        {
+          "jd_tdb": 2461322.333333333,
+          "position": [
+            22373657087.4318,
+            -63558089878.23736,
+            -7186085262.830388
+          ],
+          "velocity": [
+            36095.14452016497,
+            18933.44280456766,
+            -1762.826224250031
+          ],
+          "nominal_seconds": 72000,
+          "printed_jd_tdb": "2461322.333333333",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 20:00:00.0000",
+          "jd_offset_seconds": -2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": -2.88e-05
+        },
+        {
+          "jd_tdb": 2461323.166666667,
+          "position": [
+            24945694359.226433,
+            -62123518950.77002,
+            -7304717505.816158
+          ],
+          "velocity": [
+            35334.37928539727,
+            20914.068627675442,
+            -1531.187812688116
+          ],
+          "nominal_seconds": 144000,
+          "printed_jd_tdb": "2461323.166666667",
+          "printed_calendar_tdb": "A.D. 2026-Oct-09 16:00:00.0000",
+          "jd_offset_seconds": 2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 2.88e-05
+        },
+        {
+          "jd_tdb": 2461324.0,
+          "position": [
+            27459480340.877148,
+            -60546743207.2127,
+            -7406385668.728538
+          ],
+          "velocity": [
+            34476.635991175426,
+            22883.050367292617,
+            -1291.6065244448068
+          ],
+          "nominal_seconds": 216000,
+          "printed_jd_tdb": "2461324.000000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-10 12:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        }
+      ],
+      "Mercury_jd": [
+        {
+          "jd_tdb": 2461321.5,
+          "position": [
+            19750262520.49684,
+            -64849727710.94375,
+            -7051061714.338418
+          ],
+          "velocity": [
+            36761.36442022774,
+            16944.1827517093,
+            -1986.498900879239
+          ],
+          "nominal_seconds": 0,
+          "printed_jd_tdb": "2461321.500000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 00:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        },
+        {
+          "jd_tdb": 2461322.333333333,
+          "position": [
+            22373657087.913723,
+            -63558089877.984566,
+            -7186085262.853924
+          ],
+          "velocity": [
+            36095.14452003274,
+            18933.44280493583,
+            -1762.826224207815
+          ],
+          "nominal_seconds": 72000,
+          "printed_jd_tdb": "2461322.333333333",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 20:00:00.0000",
+          "jd_offset_seconds": -2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": -2.88e-05
+        },
+        {
+          "jd_tdb": 2461323.166666667,
+          "position": [
+            24945694358.75466,
+            -62123518951.049255,
+            -7304717505.795714
+          ],
+          "velocity": [
+            35334.37928554726,
+            20914.068627309138,
+            -1531.187812731808
+          ],
+          "nominal_seconds": 144000,
+          "printed_jd_tdb": "2461323.166666667",
+          "printed_calendar_tdb": "A.D. 2026-Oct-09 16:00:00.0000",
+          "jd_offset_seconds": 2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 2.88e-05
+        },
+        {
+          "jd_tdb": 2461324.0,
+          "position": [
+            27459480340.877148,
+            -60546743207.2127,
+            -7406385668.728538
+          ],
+          "velocity": [
+            34476.635991175426,
+            22883.050367292617,
+            -1291.6065244448068
+          ],
+          "nominal_seconds": 216000,
+          "printed_jd_tdb": "2461324.000000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-10 12:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        }
+      ],
+      "Earth_regular": [
+        {
+          "jd_tdb": 2461321.5,
+          "position": [
+            144650899686.84598,
+            36316866220.35821,
+            10986666.35056399
+          ],
+          "velocity": [
+            -7857.880626198839,
+            28762.01732400517,
+            -0.8206446406369139
+          ],
+          "nominal_seconds": 0,
+          "printed_jd_tdb": "2461321.500000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 00:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        },
+        {
+          "jd_tdb": 2461322.333333333,
+          "position": [
+            144070153267.10812,
+            38383864448.70247,
+            10925573.5710077
+          ],
+          "velocity": [
+            -8273.7480982062,
+            28653.52281506618,
+            -0.8830019871695072
+          ],
+          "nominal_seconds": 72000,
+          "printed_jd_tdb": "2461322.333333333",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 20:00:00.0000",
+          "jd_offset_seconds": -2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": -2.88e-05
+        },
+        {
+          "jd_tdb": 2461323.166666667,
+          "position": [
+            143459513320.918,
+            40442818579.18934,
+            10858619.2332767
+          ],
+          "velocity": [
+            -8688.225756974316,
+            28538.57378008667,
+            -0.9825987263170077
+          ],
+          "nominal_seconds": 144000,
+          "printed_jd_tdb": "2461323.166666667",
+          "printed_calendar_tdb": "A.D. 2026-Oct-09 16:00:00.0000",
+          "jd_offset_seconds": 2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 2.88e-05
+        },
+        {
+          "jd_tdb": 2461324.0,
+          "position": [
+            142819086437.257,
+            42493264925.59814,
+            10783323.97553883
+          ],
+          "velocity": [
+            -9101.133800491963,
+            28417.20257272455,
+            -1.113640198736832
+          ],
+          "nominal_seconds": 216000,
+          "printed_jd_tdb": "2461324.000000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-10 12:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        }
+      ],
+      "Earth_jd": [
+        {
+          "jd_tdb": 2461321.5,
+          "position": [
+            144650899686.84598,
+            36316866220.35821,
+            10986666.35056399
+          ],
+          "velocity": [
+            -7857.880626198839,
+            28762.01732400517,
+            -0.8206446406369139
+          ],
+          "nominal_seconds": 0,
+          "printed_jd_tdb": "2461321.500000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 00:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        },
+        {
+          "jd_tdb": 2461322.333333333,
+          "position": [
+            144070153266.99768,
+            38383864449.085045,
+            10925573.57099466
+          ],
+          "velocity": [
+            -8273.748098283193,
+            28653.52281504545,
+            -0.883001987183718
+          ],
+          "nominal_seconds": 72000,
+          "printed_jd_tdb": "2461322.333333333",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 20:00:00.0000",
+          "jd_offset_seconds": -2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": -2.88e-05
+        },
+        {
+          "jd_tdb": 2461323.166666667,
+          "position": [
+            143459513321.03403,
+            40442818578.808304,
+            10858619.23328973
+          ],
+          "velocity": [
+            -8688.225756897595,
+            28538.57378010859,
+            -0.9825987262956914
+          ],
+          "nominal_seconds": 144000,
+          "printed_jd_tdb": "2461323.166666667",
+          "printed_calendar_tdb": "A.D. 2026-Oct-09 16:00:00.0000",
+          "jd_offset_seconds": 2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 2.88e-05
+        },
+        {
+          "jd_tdb": 2461324.0,
+          "position": [
+            142819086437.257,
+            42493264925.59814,
+            10783323.97553883
+          ],
+          "velocity": [
+            -9101.133800491963,
+            28417.20257272455,
+            -1.113640198736832
+          ],
+          "nominal_seconds": 216000,
+          "printed_jd_tdb": "2461324.000000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-10 12:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        }
+      ],
+      "Moon_regular": [
+        {
+          "jd_tdb": 2461321.5,
+          "position": [
+            144291740650.0716,
+            36436297810.50089,
+            3384733.587212861
+          ],
+          "velocity": [
+            -8214.871315810784,
+            27788.63301669028,
+            -92.33042087229926
+          ],
+          "nominal_seconds": 0,
+          "printed_jd_tdb": "2461321.500000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 00:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        },
+        {
+          "jd_tdb": 2461322.333333333,
+          "position": [
+            143692249570.2006,
+            38431341716.03078,
+            -3077088.653070852
+          ],
+          "velocity": [
+            -8436.481997087416,
+            27634.70252491334,
+            -86.62160086812953
+          ],
+          "nominal_seconds": 72000,
+          "printed_jd_tdb": "2461322.333333333",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 20:00:00.0000",
+          "jd_offset_seconds": -2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": -2.88e-05
+        },
+        {
+          "jd_tdb": 2461323.166666667,
+          "position": [
+            143076962693.6557,
+            40416477029.09561,
+            -9015389.059007168
+          ],
+          "velocity": [
+            -8654.9330885245,
+            27513.30052323629,
+            -77.8586305049469
+          ],
+          "nominal_seconds": 144000,
+          "printed_jd_tdb": "2461323.166666667",
+          "printed_calendar_tdb": "A.D. 2026-Oct-09 16:00:00.0000",
+          "jd_offset_seconds": 2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 2.88e-05
+        },
+        {
+          "jd_tdb": 2461324.0,
+          "position": [
+            142445836057.7343,
+            42394005839.881424,
+            -14226680.73280528
+          ],
+          "velocity": [
+            -8877.6537617563,
+            27423.05227109133,
+            -66.51260288015592
+          ],
+          "nominal_seconds": 216000,
+          "printed_jd_tdb": "2461324.000000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-10 12:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        }
+      ],
+      "Moon_jd": [
+        {
+          "jd_tdb": 2461321.5,
+          "position": [
+            144291740650.0716,
+            36436297810.50089,
+            3384733.587212861
+          ],
+          "velocity": [
+            -8214.871315810784,
+            27788.63301669028,
+            -92.33042087229926
+          ],
+          "nominal_seconds": 0,
+          "printed_jd_tdb": "2461321.500000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 00:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        },
+        {
+          "jd_tdb": 2461322.333333333,
+          "position": [
+            143692249570.088,
+            38431341716.399734,
+            -3077088.654227555
+          ],
+          "velocity": [
+            -8436.481997127978,
+            27634.70252488783,
+            -86.62160086677417
+          ],
+          "nominal_seconds": 72000,
+          "printed_jd_tdb": "2461322.333333333",
+          "printed_calendar_tdb": "A.D. 2026-Oct-08 20:00:00.0000",
+          "jd_offset_seconds": -2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": -2.88e-05
+        },
+        {
+          "jd_tdb": 2461323.166666667,
+          "position": [
+            143076962693.7712,
+            40416477028.72828,
+            -9015389.057967812
+          ],
+          "velocity": [
+            -8654.933088483813,
+            27513.30052325585,
+            -77.85863050682629
+          ],
+          "nominal_seconds": 144000,
+          "printed_jd_tdb": "2461323.166666667",
+          "printed_calendar_tdb": "A.D. 2026-Oct-09 16:00:00.0000",
+          "jd_offset_seconds": 2.88e-05,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 2.88e-05
+        },
+        {
+          "jd_tdb": 2461324.0,
+          "position": [
+            142445836057.7343,
+            42394005839.881424,
+            -14226680.73280528
+          ],
+          "velocity": [
+            -8877.6537617563,
+            27423.05227109133,
+            -66.51260288015592
+          ],
+          "nominal_seconds": 216000,
+          "printed_jd_tdb": "2461324.000000000",
+          "printed_calendar_tdb": "A.D. 2026-Oct-10 12:00:00.0000",
+          "jd_offset_seconds": 0.0,
+          "calendar_offset_seconds": 0.0,
+          "jd_calendar_offset_seconds": 0.0
+        }
+      ]
+    },
+    "comparison": {
+      "Mercury": {
+        "position_metres": 0.5485970388910759,
+        "velocity_m_per_s": 3.982259508371517e-07
+      },
+      "Earth": {
+        "position_metres": 0.3983089450524356,
+        "velocity_m_per_s": 7.979096740717368e-08
+      },
+      "Moon": {
+        "position_metres": 0.3857526386929692,
+        "velocity_m_per_s": 4.7935571244776017e-08
+      },
+      "Moon-Earth": {
+        "position_metres": 0.013832358742175893,
+        "velocity_m_per_s": 3.67685242581139e-08
+      }
+    },
+    "wall_seconds": 7.395560600009048
+  },
+  "offline_replay": {
+    "returncode": 0,
+    "wall_seconds": 0.9562742999987677,
+    "stdout": "offline JPL440 complete, passed True seconds 0.233653500006767\n",
+    "stderr": "",
+    "initial_private_tools_absent": true,
+    "network_disabled": true,
+    "source_imports_checked": true
+  },
+  "full_project_check": {
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "scripts/check_project.py"
+    ],
+    "returncode": 0,
+    "wall_seconds": 213.5309031999932,
+    "finished_at": "2026-10-16T21:11:54.505972+03:00",
+    "public_files": 793,
+    "public_unchanged": true,
+    "log_sha256": "e7819fe8540fbcbb87b9bf1749cb6b16a262cfad65f02733faf48c14f89cc3f6",
+    "python_tests_passed": 1747,
+    "rust_tests_passed": 17
+  },
+  "targeted_tests": {
+    "passed": 69,
+    "wall_seconds": 3.28,
+    "new_cases": 32
+  },
+  "receipts_sha256": {
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\jpl229\\probe229.json": "5993461e25abee352ba1cdfe17568ec3bd1c91b2bdb5cc60bd5a6f8c8036dc21",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\jpl229\\reference230.json": "87845f8de557115b71b5064171a17bc73e255e760b455861c1d0fe351d70175b",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\jpl229\\pack230.json": "2015105cfc2729f3c463e8cc78b2c8961606134e8528347de12ce312a83b3313",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\jpl229\\assessment231.json": "7f739dccbfbb9b350085a6f754ce1f535611b31b21b4dca34519eeacf72ab03f",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\jpl229\\replay231.json": "3d480732f9c8d72f4bb07f71bd61877b7c9410f742c6dbd58ea8cae8d71fece6",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\jpl229\\check232.json": "28aa9f38220af608ac4f4af07e143b855587c70231f113fe062e78a350cd0a70"
+  },
+  "nominal_jpl440_qualified": true,
+  "nominal_exact_jpl_epoch_coincidence_claim": false,
+  "standard_profile_qualified": false,
+  "arbitrary_parameters_qualified": false,
+  "full_year_noether_balances_verified": false,
+  "original_noether_visibility_failure_preserved": true,
+  "runtime_modified": false,
+  "initial_dataset_changed": false,
+  "physical_parameters_fitted": false,
+  "no_new_physical_precision_claim": true,
+  "general_release": false
+}

@@ -1,0 +1,1286 @@
+{
+  "generated_at": "2026-10-16T17:51:41+03:00",
+  "stages": [
+    219,
+    220,
+    221,
+    222
+  ],
+  "measurements": {
+    "protocol": "docs/solar-noether-pilot-protocol.md",
+    "complete": true,
+    "checks_passed": false,
+    "phase": "complete",
+    "source_sha256": {
+      "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+      "src/solar_simulator/app.py": "dfd5fcd3844228902a582e82fce035b8dfe4997b7442ffb943f760e1435cb8ce",
+      "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+      "src/solar_simulator/branch_io.py": "2fe4be2a8ad4fca4deba58105f2ae303d3c3d1b5b8790a33e41322773349b89c",
+      "src/solar_simulator/cli.py": "0e51b7443fab84b5094e219847970df9f89cf5da0bcce80a281f9258c1e6f027",
+      "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+      "src/solar_simulator/commands.py": "355082ee5d8eb8371409afae15f5053ad714f73037f6c8196f9447006480fe21",
+      "src/solar_simulator/contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+      "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+      "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+      "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+      "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+      "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+      "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+      "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+      "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+      "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+      "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+      "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+      "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+      "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+      "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+      "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+      "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+      "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+      "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+      "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+      "src/solar_simulator/plot_artists.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+      "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+      "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+      "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+      "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+      "src/solar_simulator/sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+      "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+      "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+      "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+      "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+      "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+      "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+      "src/solar_simulator/vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+      "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+      "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+      "scripts/fixed_j2_ias.py": "fd77c72ce6742fedc479064947de863b4632e3aee9f48a793005f861c0d96df5",
+      "scripts/assess_fixed_j2_ias.py": "514c3c11f4586e02ba8cff8ff45a5c79c5d44b438f82319b0159c8eb4f2772bc",
+      "scripts/eih_year.py": "a9bcbac8897b42601627ff81ef03cba7ee0fc29b2a431cd4a35b37b89cf16bb1",
+      "scripts/ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+      "scripts/ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+      "scripts/newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+      "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+      "docs/fixed-j2-ias-protocol.md": "dc079df8323b6625780a00bc37f971712157b5a19ebdf7061f8035322f16c45e",
+      "docs/solar-noether-pilot-protocol.md": "f87753b549ea101a741b34554e2b9ff80f469db472964ed9ebf2fd5e7ce02688",
+      "scripts/assess_solar_noether.py": "2464031dc85017e11f0d7bc0888a615de7313936134b6c4a7953ee2bc32ec9a6",
+      "tests/test_solar_noether.py": "a539633ac8d3d7d2de23a4b32b81357731598552e82121442cef3931070d58ee",
+      "scripts/assess_nominal_solar_packets.py": "3d3e7eee99f9527cd0db45eab9006cc977ba9d3a20497c5a82223d4fb1c4b2ff",
+      "scripts/fixed_j2_year.py": "99fe334594c3391e6f3dabe89a33cded5aec93a2763d112d7b4f276b4af8d51c",
+      "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060"
+    },
+    "input_sha256": {
+      "docs/solar-sandbox-strict-checkpoint.json": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d",
+      "docs/continuous-integration-reference.npz": "e1cb054f6d5f2ca9b0e983e7f824fcd3e03e99c471266d8bfc3200bd74d67b55",
+      "docs/continuous-integration-validation.json": "043164cf12c2271f4ba29ac345b82eb2cb7cf3e2453641e3212b66abab85b871",
+      "docs/strict-profile-validation.json": "bcd4fb6ae800ee88962d3a988a9e8944e2a692dc7a5a0a80cfffae865e9db172",
+      "docs/qualification-grid-validation.json": "ad95ca2e1012fc7778232430b993133ead4d2e62548a38275559af239660d0b0",
+      "docs/qualification-grid-reference.json": "f565c3d12394c6def8cc594ff614415ba8f05495bd89a1ac4b9dbc81c4609cbe",
+      "docs/dense-jpl-validation.json": "fb6a38baa0fff419e1c67c48447b3b385602a84274a93d560f5f1c92f3ebb3cc",
+      "docs/fixed-j2-ias-validation.json": "d3095ce27d1a40518f4a89faf2a9e682615ad8660aec73c3b7e6966a8f7b356f"
+    },
+    "dependency_sha256": {
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd": "19327a3e4ff91d22ba7f6c181c0f37f4a134b16cb5d441cbc899a220d4e310f7",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\scipy\\integrate\\_ivp\\rk.py": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Lib\\site-packages\\scipy\\integrate\\_ivp\\base.py": "5bd1a3ddb9fb986333d3d3cc2d2e00bc19efbda00169dcc5b82324aad9f198af",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\independent-eih-47ffd86634e23c9b.dll": "0257cec446be76e55622d943af9d1a266aa4c19c7f8eaaab1eae2cbb2490e715"
+    },
+    "origin": {
+      "epoch_jd_tdb": 2461321.5,
+      "frame": "Ecliptic J2000",
+      "center": "Solar System Barycenter",
+      "ephemeris": "DE441",
+      "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+      "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+    },
+    "settings": {
+      "dt": 3600,
+      "backend": "rust",
+      "contact_mode": "stop",
+      "restitution": 1.0,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "position_atol": 0.001,
+      "velocity_atol": 1e-09,
+      "physics": "eih-1pn",
+      "figures": [
+        {
+          "body": "Sun",
+          "coefficient": 2.1961391516529825e-07,
+          "reference_radius": 696000000.0,
+          "axis": [
+            0.12235349347232782,
+            -0.0310378702450671,
+            0.9920011457885356
+          ],
+          "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+        },
+        {
+          "body": "Earth",
+          "coefficient": 0.00108262539,
+          "reference_radius": 6378136.6,
+          "axis": [
+            0.0026020959422886785,
+            0.39776866017225926,
+            0.9174820554547499
+          ],
+          "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+        }
+      ],
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "error_control": "per-body"
+    },
+    "names": [
+      "Sun",
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Moon",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "masses_kg": [
+      1.988409871316534e+30,
+      3.301000636980658e+23,
+      4.867305814842006e+24,
+      5.972168399787584e+24,
+      7.345789248996225e+22,
+      6.416909011545196e+23,
+      1.898517658780696e+27,
+      5.684578883448452e+26,
+      8.68189383156286e+25,
+      1.0243062344486162e+26
+    ],
+    "snapshot_controls": {
+      "tensor_vector_relative_error": 1.2741411154914075e-13,
+      "tensor_runtime_relative_error": 1.6431939178601177e-16,
+      "potential_gradient_relative_error": 5.192236775074617e-16,
+      "correct_scaled_net_force": 3.214111688657223e-17,
+      "missing_source_scaled_net_force": 0.4891967382778353,
+      "torque_relative_error": 5.956386071697123e-17,
+      "full_eih_relative_error": 3.3784657546099905e-16,
+      "amplified_pn_relative_error": 4.229539049433136e-12,
+      "checks_passed": true
+    },
+    "oracle_snapshot": {
+      "physical_c_full_relative_error": 2.0975847280033437e-16,
+      "amplified_pn_relative_error": 2.1644144220759768e-11,
+      "checks_passed": true
+    },
+    "epochs_seconds": [
+      0.0,
+      72000.0,
+      144000.0,
+      216000.0,
+      259200.0
+    ],
+    "reference_levels": [
+      {
+        "rtol": 3e-14,
+        "max_step_seconds": 1800.0,
+        "rhs_calls": 902,
+        "length_metres": 100000000.0,
+        "clock_seconds": 86.74670817334797,
+        "mass_kg": 1.991077981148492e+30,
+        "interpolation": "RK45 quartic",
+        "wall_seconds": 2.6932153000088874
+      },
+      {
+        "rtol": 3e-14,
+        "max_step_seconds": 900.0,
+        "rhs_calls": 1754,
+        "length_metres": 100000000.0,
+        "clock_seconds": 86.74670817334797,
+        "mass_kg": 1.991077981148492e+30,
+        "interpolation": "RK45 quartic",
+        "wall_seconds": 5.485896400001366
+      },
+      {
+        "rtol": 3e-14,
+        "max_step_seconds": 450.0,
+        "rhs_calls": 3482,
+        "length_metres": 100000000.0,
+        "clock_seconds": 86.74670817334797,
+        "mass_kg": 1.991077981148492e+30,
+        "interpolation": "RK45 quartic",
+        "wall_seconds": 10.954501300002448
+      }
+    ],
+    "reference_comparisons": {
+      "0_to_1": {
+        "state": {
+          "all_bodies": {
+            "position_metres": 0.0014850522018238178,
+            "velocity_m_per_s": 3.292743362739001e-10
+          },
+          "moon_relative_to_earth": {
+            "position_metres": 0.00021700240635502943,
+            "velocity_m_per_s": 3.4489376824302715e-10
+          }
+        },
+        "budgets": {
+          "groups": {
+            "figure_torque": {
+              "energy": {
+                "signal": 0.0,
+                "scaled_difference": 0.0,
+                "relative_difference": 0.0,
+                "active": false,
+                "checks_passed": true
+              },
+              "momentum": {
+                "signal": 0.0,
+                "scaled_difference": 0.0,
+                "relative_difference": 0.0,
+                "active": false,
+                "checks_passed": true
+              },
+              "angular": {
+                "signal": 2.8631046599419147e-16,
+                "scaled_difference": 3.7017676508157687e-29,
+                "relative_difference": 1.2929208291291973e-13,
+                "active": true,
+                "checks_passed": true
+              }
+            },
+            "pn2": {
+              "energy": {
+                "signal": 1.117992954721985e-18,
+                "scaled_difference": 3.2312766344599874e-33,
+                "relative_difference": 2.8902477612334507e-15,
+                "active": true,
+                "checks_passed": true
+              },
+              "momentum": {
+                "signal": 1.2203233561749367e-19,
+                "scaled_difference": 3.4812694344064018e-34,
+                "relative_difference": 2.8527434280356035e-15,
+                "active": true,
+                "checks_passed": true
+              },
+              "angular": {
+                "signal": 1.383783862073754e-21,
+                "scaled_difference": 1.6057695202239025e-34,
+                "relative_difference": 1.160419314196567e-13,
+                "active": true,
+                "checks_passed": true
+              }
+            },
+            "pn_q2": {
+              "energy": {
+                "signal": 7.331478926997244e-22,
+                "scaled_difference": 6.479119872758759e-34,
+                "relative_difference": 8.837398207475192e-13,
+                "active": true,
+                "checks_passed": true
+              },
+              "momentum": {
+                "signal": 8.632106312024682e-23,
+                "scaled_difference": 1.3885871919176126e-34,
+                "relative_difference": 1.6086307810913837e-12,
+                "active": true,
+                "checks_passed": true
+              },
+              "angular": {
+                "signal": 1.548076271638129e-23,
+                "scaled_difference": 1.2112440044886965e-35,
+                "relative_difference": 7.824188166174743e-13,
+                "active": true,
+                "checks_passed": true
+              }
+            }
+          },
+          "maximum_scaled_component": 3.352020823715192e-29,
+          "checks_passed": true
+        }
+      },
+      "1_to_2": {
+        "state": {
+          "all_bodies": {
+            "position_metres": 0.0029700988917471774,
+            "velocity_m_per_s": 1.7429127594921497e-10
+          },
+          "moon_relative_to_earth": {
+            "position_metres": 0.0001954126268811631,
+            "velocity_m_per_s": 1.9033635148915184e-10
+          }
+        },
+        "budgets": {
+          "groups": {
+            "figure_torque": {
+              "energy": {
+                "signal": 0.0,
+                "scaled_difference": 0.0,
+                "relative_difference": 0.0,
+                "active": false,
+                "checks_passed": true
+              },
+              "momentum": {
+                "signal": 0.0,
+                "scaled_difference": 0.0,
+                "relative_difference": 0.0,
+                "active": false,
+                "checks_passed": true
+              },
+              "angular": {
+                "signal": 2.863104659941713e-16,
+                "scaled_difference": 3.448212398196573e-29,
+                "relative_difference": 1.2043612818075507e-13,
+                "active": true,
+                "checks_passed": true
+              }
+            },
+            "pn2": {
+              "energy": {
+                "signal": 1.1179929547219888e-18,
+                "scaled_difference": 3.7159681296289854e-33,
+                "relative_difference": 3.3237849254184564e-15,
+                "active": true,
+                "checks_passed": true
+              },
+              "momentum": {
+                "signal": 1.2203233561749408e-19,
+                "scaled_difference": 4.005125142947022e-34,
+                "relative_difference": 3.282019575123876e-15,
+                "active": true,
+                "checks_passed": true
+              },
+              "angular": {
+                "signal": 1.3837838620737134e-21,
+                "scaled_difference": 4.935364225856394e-35,
+                "relative_difference": 3.5665716020566584e-14,
+                "active": true,
+                "checks_passed": true
+              }
+            },
+            "pn_q2": {
+              "energy": {
+                "signal": 7.331478927000241e-22,
+                "scaled_difference": 6.260598479266226e-34,
+                "relative_difference": 8.539339117800372e-13,
+                "active": true,
+                "checks_passed": true
+              },
+              "momentum": {
+                "signal": 8.632106312020792e-23,
+                "scaled_difference": 7.653267832617732e-35,
+                "relative_difference": 8.866049091587344e-13,
+                "active": true,
+                "checks_passed": true
+              },
+              "angular": {
+                "signal": 1.548076271638168e-23,
+                "scaled_difference": 8.43103934854643e-36,
+                "relative_difference": 5.446139510700424e-13,
+                "active": true,
+                "checks_passed": true
+              }
+            }
+          },
+          "maximum_scaled_component": 3.1273827789845406e-29,
+          "checks_passed": true
+        }
+      }
+    },
+    "candidates": {
+      "legacy_python": {
+        "all_bodies": {
+          "position_metres": 0.00196833296274021,
+          "velocity_m_per_s": 7.979876659815204e-11
+        },
+        "moon_relative_to_earth": {
+          "position_metres": 0.00015728818261613378,
+          "velocity_m_per_s": 5.743532430221534e-11
+        },
+        "per_body": {
+          "Sun": {
+            "position_metres": 4.809088622776959e-07,
+            "velocity_m_per_s": 1.2716809975079646e-14
+          },
+          "Mercury": {
+            "position_metres": 0.0001452123777802889,
+            "velocity_m_per_s": 7.979876659815204e-11
+          },
+          "Venus": {
+            "position_metres": 0.00021434559560383143,
+            "velocity_m_per_s": 2.401242565293529e-11
+          },
+          "Earth": {
+            "position_metres": 0.00015930643585623428,
+            "velocity_m_per_s": 2.033692011341627e-11
+          },
+          "Moon": {
+            "position_metres": 0.00013498248764834699,
+            "velocity_m_per_s": 4.9841262677265724e-11
+          },
+          "Mars": {
+            "position_metres": 0.0001526333324001969,
+            "velocity_m_per_s": 1.8646027759651502e-11
+          },
+          "Jupiter": {
+            "position_metres": 0.0006574130225988039,
+            "velocity_m_per_s": 1.095357342171811e-11
+          },
+          "Saturn": {
+            "position_metres": 0.001007080078125,
+            "velocity_m_per_s": 1.4559192308521332e-11
+          },
+          "Uranus": {
+            "position_metres": 0.00196833296274021,
+            "velocity_m_per_s": 4.296874644961933e-12
+          },
+          "Neptune": {
+            "position_metres": 0.000996505240921368,
+            "velocity_m_per_s": 4.548916569831609e-12
+          }
+        },
+        "checks_passed": true,
+        "balance": {
+          "corrected": {
+            "energy": 1.4910699214639211e-15,
+            "momentum": 3.784117638339672e-16,
+            "angular": 3.3818204899527483e-16
+          },
+          "raw": {
+            "energy": 1.490163327681023e-15,
+            "momentum": 3.7837977949343375e-16,
+            "angular": 4.272339395927727e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941713e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219888e-18,
+              "momentum": 1.2203233561749408e-19,
+              "angular": 1.3837838620737134e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478927000241e-22,
+              "momentum": 8.632106312020792e-23,
+              "angular": 1.548076271638168e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        },
+        "statistics": {
+          "packet_endpoints": [
+            72000.0,
+            144000.0,
+            216000.0,
+            259200.0
+          ],
+          "packets": 4,
+          "finished": true,
+          "failed": false,
+          "rhs_calls": null,
+          "controller_restarted_per_packet": true
+        },
+        "repeat_bitexact": true,
+        "legacy_checkpoint_continue_exact": true
+      },
+      "legacy_rust": {
+        "all_bodies": {
+          "position_metres": 0.0024535895875479495,
+          "velocity_m_per_s": 8.479484591987977e-11
+        },
+        "moon_relative_to_earth": {
+          "position_metres": 0.0001502862834707292,
+          "velocity_m_per_s": 9.777283270041994e-11
+        },
+        "per_body": {
+          "Sun": {
+            "position_metres": 7.18082922639965e-07,
+            "velocity_m_per_s": 1.2560862332344599e-14
+          },
+          "Mercury": {
+            "position_metres": 0.0001452092461446707,
+            "velocity_m_per_s": 6.100440373173364e-11
+          },
+          "Venus": {
+            "position_metres": 0.00016859548604428686,
+            "velocity_m_per_s": 2.2737651759641175e-11
+          },
+          "Earth": {
+            "position_metres": 0.00021847261223317666,
+            "velocity_m_per_s": 1.959117199492893e-11
+          },
+          "Moon": {
+            "position_metres": 0.00021484593955785686,
+            "velocity_m_per_s": 8.479484591987977e-11
+          },
+          "Mars": {
+            "position_metres": 0.00024421337373735006,
+            "velocity_m_per_s": 2.5613874131575474e-11
+          },
+          "Jupiter": {
+            "position_metres": 0.0006824177819466629,
+            "velocity_m_per_s": 1.2237188052837469e-11
+          },
+          "Saturn": {
+            "position_metres": 0.0009999164922685443,
+            "velocity_m_per_s": 1.2741432049998414e-11
+          },
+          "Uranus": {
+            "position_metres": 0.0024535895875479495,
+            "velocity_m_per_s": 4.574482741441301e-12
+          },
+          "Neptune": {
+            "position_metres": 0.001998843126686135,
+            "velocity_m_per_s": 4.548627994263324e-12
+          }
+        },
+        "checks_passed": true,
+        "balance": {
+          "corrected": {
+            "energy": 1.8636107533841768e-15,
+            "momentum": 4.07576415481959e-16,
+            "angular": 6.543324695418356e-16
+          },
+          "raw": {
+            "energy": 1.8627041596012787e-15,
+            "momentum": 4.0754361267140084e-16,
+            "angular": 6.950448409625185e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941713e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219888e-18,
+              "momentum": 1.2203233561749408e-19,
+              "angular": 1.3837838620737134e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478927000241e-22,
+              "momentum": 8.632106312020792e-23,
+              "angular": 1.548076271638168e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        },
+        "statistics": {
+          "packet_endpoints": [
+            72000.0,
+            144000.0,
+            216000.0,
+            259200.0
+          ],
+          "packets": 4,
+          "finished": true,
+          "failed": false,
+          "rhs_calls": null,
+          "controller_restarted_per_packet": true
+        },
+        "repeat_bitexact": true,
+        "legacy_checkpoint_continue_exact": true
+      },
+      "continuous_rust": {
+        "all_bodies": {
+          "position_metres": 0.0024535895875479495,
+          "velocity_m_per_s": 1.1201749023995618e-10
+        },
+        "moon_relative_to_earth": {
+          "position_metres": 0.00017145120659642208,
+          "velocity_m_per_s": 1.0371354014104209e-10
+        },
+        "per_body": {
+          "Sun": {
+            "position_metres": 5.964653956778477e-07,
+            "velocity_m_per_s": 1.2560862332344599e-14
+          },
+          "Mercury": {
+            "position_metres": 0.00013813471266555714,
+            "velocity_m_per_s": 7.675166728537349e-11
+          },
+          "Venus": {
+            "position_metres": 0.0001386079582139905,
+            "velocity_m_per_s": 3.7100946592728905e-11
+          },
+          "Earth": {
+            "position_metres": 0.00021847261163765916,
+            "velocity_m_per_s": 2.033692263473982e-11
+          },
+          "Moon": {
+            "position_metres": 0.0001870381080136315,
+            "velocity_m_per_s": 1.1201749023995618e-10
+          },
+          "Mars": {
+            "position_metres": 0.00021372786147393316,
+            "velocity_m_per_s": 1.833709134521628e-11
+          },
+          "Jupiter": {
+            "position_metres": 0.0005493296515669288,
+            "velocity_m_per_s": 1.2370987754394605e-11
+          },
+          "Saturn": {
+            "position_metres": 0.0009999164922685443,
+            "velocity_m_per_s": 1.458064857601757e-11
+          },
+          "Uranus": {
+            "position_metres": 0.0024535895875479495,
+            "velocity_m_per_s": 5.46059373481395e-12
+          },
+          "Neptune": {
+            "position_metres": 0.001958184840697011,
+            "velocity_m_per_s": 5.4588182687357024e-12
+          }
+        },
+        "checks_passed": true,
+        "balance": {
+          "corrected": {
+            "energy": 1.8636107533841768e-15,
+            "momentum": 4.07576415481959e-16,
+            "angular": 4.881444289506353e-16
+          },
+          "raw": {
+            "energy": 1.8627041596012787e-15,
+            "momentum": 4.0754361267140084e-16,
+            "angular": 5.289453646313003e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941713e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219888e-18,
+              "momentum": 1.2203233561749408e-19,
+              "angular": 1.3837838620737134e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478927000241e-22,
+              "momentum": 8.632106312020792e-23,
+              "angular": 1.548076271638168e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        },
+        "statistics": {
+          "packets": 4,
+          "rhs_calls": 170,
+          "failed": false,
+          "finished": true,
+          "packet_endpoints": [
+            72000.0,
+            144000.0,
+            216000.0,
+            259200.0
+          ]
+        },
+        "repeat_bitexact": true,
+        "legacy_checkpoint_continue_exact": null
+      }
+    },
+    "runtime_modified": false,
+    "general_release": false,
+    "annual_balances_verified": false,
+    "jpl_comparison": false,
+    "npz_sha256": "147b0322e17e3b1064e1210166c9df9d05180e4d56b420f47f59d12969106905",
+    "scales_SI": [
+      1.9806413142555253e+35,
+      5.392530159378718e+31,
+      5.392530159378718e+31,
+      5.392530159378718e+31,
+      3.1325390257041467e+43,
+      3.1325390257041467e+43,
+      3.1325390257041467e+43
+    ],
+    "reference_passed": true,
+    "reference_initial_roundtrip": {
+      "all_bodies": {
+        "position_metres": 3.0517578125e-05,
+        "velocity_m_per_s": 7.291041013024353e-12
+      },
+      "moon_relative_to_earth": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 3.749942721349417e-12
+      }
+    },
+    "reference_balance": {
+      "corrected": {
+        "energy": 2.2349688753496728e-15,
+        "momentum": 5.144494542867171e-16,
+        "angular": 3.175786789854391e-16
+      },
+      "raw": {
+        "energy": 2.235244991521535e-15,
+        "momentum": 5.143502365084018e-16,
+        "angular": 3.5008685755376916e-16
+      },
+      "source_integrals": {
+        "figure_torque": {
+          "energy": 0.0,
+          "momentum": 0.0,
+          "angular": 2.8631046599417125e-16
+        },
+        "pn2": {
+          "energy": 1.1179929547219891e-18,
+          "momentum": 1.2203233561749408e-19,
+          "angular": 1.3837838620737132e-21
+        },
+        "pn_q2": {
+          "energy": 7.331478927000244e-22,
+          "momentum": 8.632106312020792e-23,
+          "angular": 1.5480762716381677e-23
+        }
+      },
+      "single_axis_angular_projection": null
+    },
+    "source_observability": {
+      "groups": {
+        "figure_torque": {
+          "energy": {
+            "active": false,
+            "scaled_signal": 0.0,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 0.0,
+            "omitted_scaled_residual": 2.2349688753496728e-15,
+            "checks_passed": true
+          },
+          "momentum": {
+            "active": false,
+            "scaled_signal": 0.0,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 0.0,
+            "omitted_scaled_residual": 5.144494542867171e-16,
+            "checks_passed": true
+          },
+          "angular": {
+            "active": true,
+            "scaled_signal": 2.8631046599417125e-16,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 0.04029461587386321,
+            "omitted_scaled_residual": 3.500864156910441e-16,
+            "checks_passed": false
+          }
+        },
+        "pn2": {
+          "energy": {
+            "active": true,
+            "scaled_signal": 1.1179929547219891e-18,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 0.0001573435204465247,
+            "omitted_scaled_residual": 2.2352455076476635e-15,
+            "checks_passed": false
+          },
+          "momentum": {
+            "active": true,
+            "scaled_signal": 1.2203233561749408e-19,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 1.717452441294055e-05,
+            "omitted_scaled_residual": 5.143503079948235e-16,
+            "checks_passed": false
+          },
+          "angular": {
+            "active": true,
+            "scaled_signal": 1.3837838620737132e-21,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 1.9475026517489002e-07,
+            "omitted_scaled_residual": 3.175788089395542e-16,
+            "checks_passed": false
+          }
+        },
+        "pn_q2": {
+          "energy": {
+            "active": true,
+            "scaled_signal": 7.331478927000244e-22,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 1.0318139301160295e-07,
+            "omitted_scaled_residual": 2.2349683592235443e-15,
+            "checks_passed": false
+          },
+          "momentum": {
+            "active": true,
+            "scaled_signal": 8.632106312020792e-23,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 1.2148609615699795e-08,
+            "omitted_scaled_residual": 5.144493827948509e-16,
+            "checks_passed": false
+          },
+          "angular": {
+            "active": true,
+            "scaled_signal": 1.5480762716381677e-23,
+            "scaled_resolution": 7.105427357601002e-15,
+            "signal_to_resolution": 2.178723662528362e-09,
+            "omitted_scaled_residual": 3.175786696445096e-16,
+            "checks_passed": false
+          }
+        }
+      },
+      "resolution_is_rigorous_bound": false,
+      "checks_passed": false
+    },
+    "cost": {
+      "legacy_python": {
+        "seconds": [
+          0.22526889998698607,
+          0.23840250000648666,
+          0.20792139999684878
+        ],
+        "median_seconds": 0.22526889998698607
+      },
+      "legacy_rust": {
+        "seconds": [
+          0.12203080000472255,
+          0.15832370000134688,
+          0.11653139999543782
+        ],
+        "median_seconds": 0.12203080000472255
+      },
+      "continuous_rust": {
+        "seconds": [
+          0.04277879999426659,
+          0.05860079999547452,
+          0.05061930000374559
+        ],
+        "median_seconds": 0.05061930000374559
+      }
+    },
+    "warnings": [],
+    "source_input_dependencies_unchanged": true,
+    "numerical_checks_passed": true,
+    "full_source_observability_passed": false
+  },
+  "precision_diagnosis": {
+    "protocol": "docs/solar-noether-precision-protocol.md",
+    "source_sha256": {
+      "docs/solar-noether-precision-protocol.md": "746cf44b82026924ea9d17a49dbe4a07a7eaa489e5a41350fdc3bd0c63a390d3",
+      "scripts/decimal_noether.py": "4924b56dc5d2bbb38d5ced004879d1b953ddb348daf957144e68aa03d03ba0c8",
+      "scripts/assess_decimal_noether.py": "034ba7419547e4925f1956e9c4f3dec1b019833077ce5035337a56502447a0f3",
+      "tests/test_decimal_noether.py": "1264a3519ec2af3bd77a29a6f8170288a55d14ba17a507f1bb3a51987e3480f3"
+    },
+    "input_sha256": {
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\pilot220.json": "ecb3102b3367b0866ba811fdfe1392c91cbc6b422edbd7c7ab4b7ac658351781",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\pilot220.npz": "147b0322e17e3b1064e1210166c9df9d05180e4d56b420f47f59d12969106905"
+    },
+    "complete": true,
+    "checks_passed": true,
+    "readouts": {
+      "reference_0": {
+        "precision_50_to_70_maximum_scaled_component": 3.2791143732577824e-49,
+        "precision_checks_passed": true,
+        "float_total_readout_difference": {
+          "energy": 1.921334682370429e-15,
+          "momentum": 2.7839670160637255e-16,
+          "angular": 2.656966592239896e-16
+        },
+        "float_delta_arithmetic_difference": {
+          "energy": 2.3514930172316316e-15,
+          "momentum": 3.8402346328124395e-16,
+          "angular": 2.743361226106363e-16
+        },
+        "decimal_raw": {
+          "energy": 1.4616469560874646e-15,
+          "momentum": 2.8929192111969547e-16,
+          "angular": 6.007335421130169e-16
+        },
+        "decimal_corrected": {
+          "energy": 1.4627645024530816e-15,
+          "momentum": 2.8931015739760564e-16,
+          "angular": 5.479355175965704e-16
+        },
+        "trajectories_reintegrated": false,
+        "full_source_observability_qualified": false,
+        "float_balance": {
+          "corrected": {
+            "energy": 2.2361515853044336e-15,
+            "momentum": 4.44081030237015e-16,
+            "angular": 8.124387766284946e-16
+          },
+          "raw": {
+            "energy": 2.235244991521535e-15,
+            "momentum": 4.4405184785250185e-16,
+            "angular": 8.43108319647626e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941578e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219886e-18,
+              "momentum": 1.2203233561749335e-19,
+              "angular": 1.383783862073618e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478926992038e-22,
+              "momentum": 8.632106312010813e-23,
+              "angular": 1.5480762716369396e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        }
+      },
+      "reference_1": {
+        "precision_50_to_70_maximum_scaled_component": 4.211652189370077e-49,
+        "precision_checks_passed": true,
+        "float_total_readout_difference": {
+          "energy": 1.773448915773045e-15,
+          "momentum": 2.7839670160637255e-16,
+          "angular": 1.9889423939981188e-16
+        },
+        "float_delta_arithmetic_difference": {
+          "energy": 1.9166142509146367e-15,
+          "momentum": 4.169584414208391e-16,
+          "angular": 2.607303843948348e-16
+        },
+        "decimal_raw": {
+          "energy": 1.925480776192997e-15,
+          "momentum": 6.085926709811368e-16,
+          "angular": 8.555103814149552e-16
+        },
+        "decimal_corrected": {
+          "energy": 1.9260585784397797e-15,
+          "momentum": 6.086575184200325e-16,
+          "angular": 8.495876249106243e-16
+        },
+        "trajectories_reintegrated": false,
+        "full_source_observability_qualified": false,
+        "float_balance": {
+          "corrected": {
+            "energy": 1.862428043429417e-15,
+            "momentum": 7.26133710774094e-16,
+            "angular": 1.1102697551878955e-15
+          },
+          "raw": {
+            "energy": 1.8627041596012794e-15,
+            "momentum": 7.260381936835391e-16,
+            "angular": 1.1140858406826549e-15
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941914e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219853e-18,
+              "momentum": 1.2203233561749367e-19,
+              "angular": 1.3837838620737538e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478926997247e-22,
+              "momentum": 8.632106312024682e-23,
+              "angular": 1.548076271638129e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        }
+      },
+      "reference_2": {
+        "precision_50_to_70_maximum_scaled_component": 3.2791143732577824e-49,
+        "precision_checks_passed": true,
+        "float_total_readout_difference": {
+          "energy": 1.788286943781621e-15,
+          "momentum": 2.7839670160637255e-16,
+          "angular": 3.1846625507489984e-16
+        },
+        "float_delta_arithmetic_difference": {
+          "energy": 2.0113165438470817e-15,
+          "momentum": 5.285579229182669e-16,
+          "angular": 3.971594880676186e-16
+        },
+        "decimal_raw": {
+          "energy": 1.462813457469816e-15,
+          "momentum": 3.1331911426561984e-16,
+          "angular": 5.85034590257837e-16
+        },
+        "decimal_corrected": {
+          "energy": 1.4622356552230331e-15,
+          "momentum": 3.133987870891934e-16,
+          "angular": 5.637508809200861e-16
+        },
+        "trajectories_reintegrated": false,
+        "full_source_observability_qualified": false,
+        "float_balance": {
+          "corrected": {
+            "energy": 2.2349688753496728e-15,
+            "momentum": 5.144494542867171e-16,
+            "angular": 3.175786789854391e-16
+          },
+          "raw": {
+            "energy": 2.235244991521535e-15,
+            "momentum": 5.143502365084018e-16,
+            "angular": 3.5008685755376916e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.8631046599417125e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219891e-18,
+              "momentum": 1.2203233561749408e-19,
+              "angular": 1.3837838620737132e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478927000244e-22,
+              "momentum": 8.632106312020792e-23,
+              "angular": 1.5480762716381677e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        }
+      },
+      "legacy_python": {
+        "precision_50_to_70_maximum_scaled_component": 2.5334233144525392e-49,
+        "precision_checks_passed": true,
+        "float_total_readout_difference": {
+          "energy": 1.9724074676082145e-15,
+          "momentum": 2.575510292730473e-16,
+          "angular": 3.1846384654051075e-16
+        },
+        "float_delta_arithmetic_difference": {
+          "energy": 1.7222548920596516e-15,
+          "momentum": 3.8162561703381003e-16,
+          "angular": 3.0193073959224946e-16
+        },
+        "decimal_raw": {
+          "energy": 2.320915643786285e-16,
+          "momentum": 1.6984222185781117e-16,
+          "angular": 2.882621128729115e-16
+        },
+        "decimal_corrected": {
+          "energy": 2.311849705957302e-16,
+          "momentum": 1.6983312977579867e-16,
+          "angular": 6.905696672930952e-17
+        },
+        "trajectories_reintegrated": false,
+        "full_source_observability_qualified": false,
+        "float_balance": {
+          "corrected": {
+            "energy": 1.4910699214639211e-15,
+            "momentum": 3.784117638339672e-16,
+            "angular": 3.3818204899527483e-16
+          },
+          "raw": {
+            "energy": 1.490163327681023e-15,
+            "momentum": 3.7837977949343375e-16,
+            "angular": 4.272339395927727e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941713e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219888e-18,
+              "momentum": 1.2203233561749408e-19,
+              "angular": 1.3837838620737134e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478927000241e-22,
+              "momentum": 8.632106312020792e-23,
+              "angular": 1.548076271638168e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        }
+      },
+      "legacy_rust": {
+        "precision_50_to_70_maximum_scaled_component": 1.7054862431034637e-49,
+        "precision_checks_passed": true,
+        "float_total_readout_difference": {
+          "energy": 1.6228475280197643e-15,
+          "momentum": 2.575510292730473e-16,
+          "angular": 2.3430729008790617e-16
+        },
+        "float_delta_arithmetic_difference": {
+          "energy": 1.3726949524712012e-15,
+          "momentum": 3.6135589224604775e-16,
+          "angular": 3.795700308001129e-16
+        },
+        "decimal_raw": {
+          "energy": 8.613986165298172e-16,
+          "momentum": 1.2725544716138047e-16,
+          "angular": 4.558360169293051e-16
+        },
+        "decimal_corrected": {
+          "energy": 8.625161628954342e-16,
+          "momentum": 1.272887960088777e-16,
+          "angular": 3.739031362888321e-16
+        },
+        "trajectories_reintegrated": false,
+        "full_source_observability_qualified": false,
+        "float_balance": {
+          "corrected": {
+            "energy": 1.8636107533841768e-15,
+            "momentum": 4.07576415481959e-16,
+            "angular": 6.543324695418356e-16
+          },
+          "raw": {
+            "energy": 1.8627041596012787e-15,
+            "momentum": 4.0754361267140084e-16,
+            "angular": 6.950448409625185e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941713e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219888e-18,
+              "momentum": 1.2203233561749408e-19,
+              "angular": 1.3837838620737134e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478927000241e-22,
+              "momentum": 8.632106312020792e-23,
+              "angular": 1.548076271638168e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        }
+      },
+      "continuous_rust": {
+        "precision_50_to_70_maximum_scaled_component": 1.1791228821443602e-49,
+        "precision_checks_passed": true,
+        "float_total_readout_difference": {
+          "energy": 1.9900121308186765e-15,
+          "momentum": 2.575510292730473e-16,
+          "angular": 2.3430729008790617e-16
+        },
+        "float_delta_arithmetic_difference": {
+          "energy": 1.7398595552701136e-15,
+          "momentum": 3.6135589224604775e-16,
+          "angular": 3.767778457071311e-16
+        },
+        "decimal_raw": {
+          "energy": 2.4481828452412475e-16,
+          "momentum": 8.401926204158144e-17,
+          "angular": 2.918226916578375e-16
+        },
+        "decimal_corrected": {
+          "energy": 2.4539608677090765e-16,
+          "momentum": 8.406612289998211e-17,
+          "angular": 1.5709187149001578e-16
+        },
+        "trajectories_reintegrated": false,
+        "full_source_observability_qualified": false,
+        "float_balance": {
+          "corrected": {
+            "energy": 1.8636107533841768e-15,
+            "momentum": 4.07576415481959e-16,
+            "angular": 4.881444289506353e-16
+          },
+          "raw": {
+            "energy": 1.8627041596012787e-15,
+            "momentum": 4.0754361267140084e-16,
+            "angular": 5.289453646313003e-16
+          },
+          "source_integrals": {
+            "figure_torque": {
+              "energy": 0.0,
+              "momentum": 0.0,
+              "angular": 2.863104659941713e-16
+            },
+            "pn2": {
+              "energy": 1.1179929547219888e-18,
+              "momentum": 1.2203233561749408e-19,
+              "angular": 1.3837838620737134e-21
+            },
+            "pn_q2": {
+              "energy": 7.331478927000241e-22,
+              "momentum": 8.632106312020792e-23,
+              "angular": 1.548076271638168e-23
+            }
+          },
+          "single_axis_angular_projection": null
+        }
+      }
+    },
+    "trajectories_reintegrated": false,
+    "original_pilot_checks_passed": false,
+    "original_pilot_visibility_passed": false,
+    "original_failed_gate_requalified": false,
+    "runtime_modified": false,
+    "annual_balances_verified": false,
+    "npz_sha256": "e7ee82c10589a336cfc5eb815fb0d7eca04c7bc806d73f3925d3bec664952faa",
+    "wall_seconds": 1.5098476999992272,
+    "source_input_dependencies_unchanged": true
+  },
+  "vector_snapshot_diagnosis": {
+    "relative_pair_vector_gap": 5.192236775074617e-16,
+    "unconditioned_gap": 1.2741411154914075e-13,
+    "runtime_modified": false,
+    "snapshot_only": true
+  },
+  "tests": {
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "tests/test_solar_noether.py",
+      "tests/test_decimal_noether.py",
+      "tests/test_decimal_noether_action.py",
+      "tests/test_fixed_j2_ias.py",
+      "tests/test_edited_j2.py",
+      "tests/test_edited_j2_three.py",
+      "tests/test_eih_year.py",
+      "tests/test_ias15_eih.py",
+      "tests/test_independent_eih_rust.py",
+      "tests/test_physics_symmetries.py",
+      "tests/test_relativity.py",
+      "tests/test_native_forces.py",
+      "tests/test_solar_j2.py",
+      "tests/test_solar_sandbox_profile.py",
+      "tests/test_nominal_solar_packets.py",
+      "tests/test_fixed_j2_year.py",
+      "tests/test_newton_year.py",
+      "tests/test_edited_solar.py",
+      "tests/test_edited_solar_interval.py",
+      "tests/test_continuous.py"
+    ],
+    "returncode": 0,
+    "wall_seconds": 23.277168200002052,
+    "completed_at": "2026-10-16T17:48:03+03:00",
+    "log_sha256": "28b055756768971b22413b13d78fe7711cd89985a0135b27fad79f3244752276",
+    "public_files_unchanged": true
+  },
+  "new_test_cases": 20,
+  "receipts": {
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\pilot220.json": "ecb3102b3367b0866ba811fdfe1392c91cbc6b422edbd7c7ab4b7ac658351781",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\pilot220.npz": "147b0322e17e3b1064e1210166c9df9d05180e4d56b420f47f59d12969106905",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\pilot220.log": "435d4dbdcf1ec5f7d7537cbabc7ea2fc121a7cf265cdbb9d83dd128d42a23d5e",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\process220.json": "6354ddb729bac0a9d1d7a3e937d539a46d58c3e87f8b24a49d25f43cc4000868",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\precision221.json": "4755e4cc5d65f138b2fc0031fb044af9e78f5f0ef45ebd08d6cbdd362a45c86a",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\precision221.npz": "e7ee82c10589a336cfc5eb815fb0d7eca04c7bc806d73f3925d3bec664952faa",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\regression222.json": "c5dceebab288b20b826e8b6d724c45e03a73edbfaa5642ecadd09a3324f8c6fb",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\regression222.log": "28b055756768971b22413b13d78fe7711cd89985a0135b27fad79f3244752276",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\noether219\\vector-conditioning222.json": "64d8d59d0155083edbb31dd524f530988ede0b88f8557921d0c3db80454a6260"
+  },
+  "numerical_pilot_passed": true,
+  "all_declared_pilot_gates_passed": false,
+  "source_observability_qualified": false,
+  "annual_source_balances_verified": false,
+  "runtime_modified": false,
+  "general_release": false,
+  "jpl_comparison": false,
+  "original_failed_gate_retained": true
+}

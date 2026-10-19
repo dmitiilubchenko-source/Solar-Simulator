@@ -41,7 +41,7 @@ Settings. Теперь [advance_towards](C:/Users/Admin/Desktop/Solar-simulator/
 
 ## Поведение приложения
 
-[Старт до цели](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:377)
+[Старт до цели](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:401)
 проверяет ввод до применения настроек; worker получает ограниченный пакет.
 Пауза завершает текущий пакет, достигнутая цель автоматически останавливает
 отправку. Обычный запуск/один шаг выходят из режима цели. JSON сохраняет

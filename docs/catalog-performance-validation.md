@@ -73,7 +73,7 @@ scaled P drift≤7.350e-17. Все заранее заданные критер�
 История повторяет два реальных состояния для renderer stress;
 это не1500последовательных интегрированных кадров и не измеренный FPS.
 Стоимость диагностики в эту таблицу не включена. В интерфейсе
-[report выполняется в главном потоке](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:352),
+[report выполняется в главном потоке](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:376),
 поэтому он тоже влияет на отзывчивость; worker/UI overlap не измерялся.
 
 До кандидатов установлен gate≥15% fullrender354/1500/all. Два временных

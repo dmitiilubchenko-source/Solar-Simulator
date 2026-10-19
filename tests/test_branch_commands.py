@@ -22,7 +22,10 @@ def test_extract_each_side_preserves_complete_checkpoint_and_bundle(tmp_path):
     assert path.read_bytes()==original
     output=tmp_path/"progress.json";result=command("run-until",path,output,"--time","6","--batch","2")
     assert result.returncode==0,result.stderr
-    assert to_document(load(output))==to_document(advance(branch.child,2))
+    from solar_simulator.branch_io import open_experiment
+    continued,snapshot=open_experiment(output)
+    assert to_document(continued)==to_document(advance(branch.child,2))
+    assert snapshot==branch.parent_snapshot
 
 
 @pytest.mark.parametrize("kind",["ordinary","tampered"])

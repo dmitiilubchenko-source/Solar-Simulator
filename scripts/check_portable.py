@@ -26,6 +26,7 @@ def main():
                 raise ValueError("Private file in portable ZIP: "+member.filename)
         archive.extractall(target)
     folder=next(p for p in target.iterdir() if p.is_dir())
+    document_links=check_document_links(folder)
     runtime=folder/"runtime"
     probe="""
 import json,pathlib,sys,tkinter,solar_native,numpy,matplotlib,scipy,solar_simulator
@@ -196,9 +197,12 @@ print(json.dumps(dict(prefix=str(root),tcl=str(library),events=len(experiment.ev
     environment["PATH"]=str(windows/"System32")+os.pathsep+str(windows)
     for name in ("PYTHONHOME","PYTHONPATH","TCL_LIBRARY","TK_LIBRARY"):
         environment.pop(name,None)
+    environment['LOCALAPPDATA']=str(target/'isolated user data')
     output=subprocess.check_output([str(runtime/"python.exe"),"-B","-I","-c",probe],cwd=folder,text=True,env=environment)
     result=json.loads(output)
+    result['document_links']=document_links
     result["gui"]=check_gui(folder,environment)
+    result['recovery']=check_recovery(folder,environment)
     replay_output=subprocess.check_output([str(runtime/"python.exe"),"-X","utf8","-B","-I",
         str(folder/"verification/replay_jpl.py"),str(folder/"verification")],cwd=folder,env=environment,text=True,encoding="utf-8")
     result["jpl_replay"]=json.loads(replay_output)
@@ -213,6 +217,111 @@ print(json.dumps(dict(prefix=str(root),tcl=str(library),events=len(experiment.ev
     result["continuous"]=check_continuous(folder,environment)
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print(f"RELOCATED_DIR={folder}")
+
+
+def check_recovery(folder,environment):
+    """Save/close and restore/continue in separate isolated runtime processes."""
+    create=r'''
+import json,pathlib,time,tkinter
+from dataclasses import replace
+from solar_simulator.app import Laboratory
+from solar_simulator.branch_io import save_experiment
+from solar_simulator.experiment import advance,preset
+from solar_simulator.sandbox import branch_experiment
+paths={}
+for backend in ('python','rust'):
+    seed=preset('sun-earth',backend=backend)
+    seed=replace(seed,settings=replace(seed.settings,integrator='dop853'))
+    parent=advance(seed,2)
+    body=replace(parent.bodies[0],mass=parent.bodies[0].mass*1.1)
+    branch=branch_experiment(parent,replacements=((body.name,body),))
+    expected=advance(branch.child,2)
+    save_experiment(expected,f'recovery-expected-{backend}.json',parent_snapshot=branch.parent_snapshot)
+    window=tkinter.Tk();window.withdraw()
+    app=Laboratory(window,branch.child,parent_snapshot=branch.parent_snapshot)
+    app._submit(2);app._request_close()
+    deadline=time.monotonic()+20
+    while not app.closed and time.monotonic()<deadline:
+        window.update();time.sleep(.01)
+    assert app.closed and app.last_recovery_path.is_file()
+    paths[backend]=str(app.last_recovery_path)
+pathlib.Path('recovery-stage.json').write_text(json.dumps(paths),encoding='utf-8')
+print(json.dumps(dict(saved=list(paths))))
+'''
+    restore=r'''
+import contextlib,io,json,pathlib,sys,tkinter
+from tkinter import ttk
+from solar_simulator.app import Laboratory
+from solar_simulator.branch_io import open_experiment
+from solar_simulator.experiment import advance
+from solar_simulator.storage import to_document
+from solar_simulator.commands import main
+paths=json.loads(pathlib.Path('recovery-stage.json').read_bytes())
+results={}
+for backend,path in paths.items():
+    window=tkinter.Tk();window.withdraw();app=Laboratory(window)
+    try:
+        expected,parent=open_experiment(f'recovery-expected-{backend}.json')
+        actual,actual_parent=open_experiment(path)
+        assert to_document(actual)==to_document(expected) and actual_parent==parent
+        dialog=app._show_recoveries()
+        tree=next(w for w in dialog.winfo_children() if isinstance(w,ttk.Treeview))
+        item=next(i for i in tree.get_children() if tree.item(i,'values')[0]==pathlib.Path(path).parent.name)
+        tree.selection_set(item)
+        button=next(w for w in dialog.winfo_children() if isinstance(w,ttk.Button) and w.cget('text')=='Открыть выбранную копию')
+        button.invoke()
+        assert not dialog.winfo_exists()
+        assert to_document(app.experiment)==to_document(expected) and app.parent_snapshot==parent
+        continued=advance(expected,2)
+        app._submit(2);app.future.result(timeout=20);app._poll()
+        assert to_document(app.experiment)==to_document(continued) and app.parent_snapshot==parent
+        app._request_close()
+        saved,saved_parent=open_experiment(app.last_recovery_path)
+        assert to_document(saved)==to_document(continued) and saved_parent==parent
+        results[backend]=dict(time_seconds=continued.time,parent_preserved=True,exact_continuation=True)
+    finally:
+        if not app.closed:app.close()
+source=paths['rust'];initial,parent=open_experiment(source)
+expected=advance(initial,1)
+for destination,fallback in ((pathlib.Path('absent output')/'out.json',False),
+                             (pathlib.Path('blocked output')/'out.json',True)):
+    if fallback:destination.parent.write_bytes(b'keep blocker')
+    stderr=io.StringIO();stdout=io.StringIO()
+    with contextlib.redirect_stderr(stderr),contextlib.redirect_stdout(stdout):
+        try:main(['run-until',source,str(destination),'--time',str(expected.time)])
+        except SystemExit as error:assert error.code==2
+        else:raise AssertionError('Expected final output failure')
+    diagnostic=json.loads(stderr.getvalue().splitlines()[0])
+    child,recovered_parent=open_experiment(diagnostic['recovery_path'])
+    assert to_document(child)==to_document(expected) and recovered_parent==parent
+    assert diagnostic['target_reached'] and diagnostic['recovery_fallback']==fallback
+    assert not destination.exists() and not stdout.getvalue()
+print(json.dumps(dict(isolated=sys.flags.isolated,restart=results,CLI_finished_result_recovered=True,CLI_local_fallback=True)))
+'''
+    for name,probe in (('create',create),('restore',restore)):
+        process=subprocess.run([str(folder/'runtime/python.exe'),'-X','utf8','-B','-I','-c',probe],
+            cwd=folder,env=environment,capture_output=True,text=True,encoding='utf-8',timeout=60)
+        if process.returncode:raise RuntimeError(f'Relocated recovery {name} failed:\n'+process.stdout+process.stderr)
+    result=json.loads(process.stdout)
+    if result['isolated']!=1:raise ValueError('Recovery must use an isolated runtime')
+    return result
+
+
+def check_document_links(folder):
+    """Validate actual packaged relative Markdown targets before launching Python."""
+    import re
+    count=0
+    root=Path(folder).resolve()
+    for path in root.rglob('*.md'):
+        if 'runtime' in path.relative_to(root).parts:continue
+        for link in re.findall(r'\]\(([^)]+)\)',path.read_text(encoding='utf-8')):
+            raw=link.split('#',1)[0].strip('<>')
+            if not raw or ':' in raw:continue
+            target=(path.parent/raw).resolve()
+            if not target.is_relative_to(root) or not target.is_file():
+                raise ValueError(f'Broken portable document link: {path.relative_to(root)} -> {link}')
+            count+=1
+    return count
 
 
 def check_gui(folder,environment):
@@ -259,6 +368,8 @@ try:
     assert app.integrator.get()=='verlet' and app.mode.get()=='bounce'
     app._submit(2); wait_for_worker(); assert app.experiment.time==.1
     contacts_time=app.experiment.time
+    assert app.solar_profile.get()=='strict'
+    app.solar_profile.set('standard')
     app.backend.set('rust'); app._open_solar_sandbox()
     sandbox_start=to_document(app.experiment)
     assert sandbox_start==to_document(load('scenarios/solar-sandbox-eih-fixed-j2.json'))
@@ -310,7 +421,9 @@ try:
     application.filedialog.asksaveasfilename=lambda **kwargs:str(child_path)
     child_before=to_document(app.experiment)
     app._restore_parent()
-    assert to_document(load(child_path))==child_before and to_document(app.experiment)==to_document(parent)
+    preserved=load_branch(child_path)
+    assert to_document(preserved.child)==child_before and preserved.parent_snapshot==saved.parent_snapshot
+    assert to_document(app.experiment)==to_document(parent) and app.parent_snapshot is None
     app.scenario.set('sun-earth');app._select_scenario();app._new()
     removal_parent=app.experiment
     removal_path=pathlib.Path('Удалённое Солнце.json').resolve()
@@ -324,7 +437,7 @@ try:
     expected_free=advance(app.experiment,1);app._submit(1);wait_for_worker()
     assert to_document(app.experiment)==to_document(expected_free)
     csv_input=pathlib.Path('CSV source.json');csv_output=pathlib.Path('Orbit slice.csv')
-    application.save(app.experiment,csv_input)
+    application.save_experiment(app.experiment,csv_input,parent_snapshot=app.parent_snapshot)
     import subprocess,csv
     exported=subprocess.run([sys.executable,'-B','-I','-m','solar_simulator','export-state',str(csv_input),str(csv_output)],
                             capture_output=True,text=True,encoding='utf-8',timeout=20)
@@ -341,6 +454,8 @@ try:
     application.filedialog.askopenfilename=lambda **kwargs:str(strict_path)
     app._load()
     assert to_document(app.experiment)==to_document(strict) and float(app.rtol.get())==3e-14
+    app.solar_profile.set('strict');app._open_solar_sandbox()
+    assert to_document(app.experiment)==to_document(strict)
     from solar_simulator.time_control import advance_towards
     expected_strict=advance_towards(strict,10000.25)
     app.batch.set('20');app.target.set('10000.25');app._start_target()

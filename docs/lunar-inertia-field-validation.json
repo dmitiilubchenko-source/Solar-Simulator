@@ -1,0 +1,1638 @@
+{
+  "generated_at": "2026-10-18T17:04:59+03:00",
+  "stages": [
+    287,
+    288,
+    289,
+    290,
+    291,
+    292,
+    293
+  ],
+  "measurements": {
+    "complete": true,
+    "checks_passed": true,
+    "preflight": false,
+    "protocol": "docs/lunar-inertia-field-protocol.md",
+    "source_sha256": {
+      "docs/lunar-inertia-field-protocol.md": "1ff31279feb55e0e6412cd893afe720faeb0e1aa6ce935d6a2e9f55a3a972215",
+      "scripts\\assess_de441_reader.py": "4996d087ac20270520ed1ca4c29fe7896f45c6a609bfd0072a052a3f5d0de30e",
+      "scripts\\assess_dense_jpl.py": "601558a9bc71c22c7b51f533002d91eaa41ff85c2454c011f08f0f0bdb60ebb7",
+      "scripts\\assess_edited_solar.py": "13cad662ee8b1d16e981571d604073b5dfb3a3a19a324a93727e0c8d32d4bd9f",
+      "scripts\\assess_edited_solar_month.py": "55d017f6d09c8f9ac4dfe073b68035ad0cb57e925fb12e50ec03d697fd3e8917",
+      "scripts\\assess_edited_solar_packet20.py": "e081c049e1b253ee0854a918e79418f02fbdf1b6d861b8ef2c6a6022083edfdd",
+      "scripts\\assess_edited_solar_year.py": "1e1eaa7823a576fa0743ffcb050e18243bbfbe793560b7994d449724e0282a33",
+      "scripts\\assess_lunar_coupling.py": "5ce0d6a2ca0390316e75e48bf3b782af96203604550297584ce249581995f16a",
+      "scripts\\assess_lunar_inertia_field.py": "35f088c71d75ebbdc6bf4726d1d261a71d419451f8a21e590153020aa14a53c5",
+      "scripts\\assess_nominal_jpl.py": "27b1289c04700c935b36ad9a1b55e9dd00c2bc525a52386ee0107f70956d03ff",
+      "scripts\\assess_nominal_solar_packets.py": "3d3e7eee99f9527cd0db45eab9006cc977ba9d3a20497c5a82223d4fb1c4b2ff",
+      "scripts\\assess_oblateness.py": "304ff7b1ff651c24ebe67d2b3bc9ad029c9dff12777a076b0a474abdcc9912cc",
+      "scripts\\assess_orientation.py": "f01b698a08c3cd15c5236113a9d89d02d8514671f24a96e21b181c9988722460",
+      "scripts\\assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+      "scripts\\assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+      "scripts\\assess_resolved_moon.py": "7b633b17c41fa5509c4ea074235e088fdba76cff3680ea73d28c996bb1d41df5",
+      "scripts\\assess_sandbox_models.py": "39f3414626175c94c6205e472dc8d81b63284a22113d20c68993c998c614c54d",
+      "scripts\\assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+      "scripts\\assess_solar_defect.py": "b21105b1ca27680b2d109ecd7efa5056a2f662b9e6112d4aea0adfd4752a6f8b",
+      "scripts\\assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+      "scripts\\assess_solar_system.py": "e61195be6e072013687ff18a1672fb6e12603d43a70afebcf70b9c3993e7c052",
+      "scripts\\canonical_initial.py": "45f69e015712f403edd17693723b06cb3b9f6044d42bf8ef64f4183ebeac2de5",
+      "scripts\\de441_decimal.py": "7464d84e5906e4dfeabe7e1704ef2a205624af1e17370498bbe3cd7dc4ce06b4",
+      "scripts\\de441_reader.py": "26b71cb0b755f9fa025288b588d5b5c3184d6fac9fad416056bc22f9da1e4ab9",
+      "scripts\\edited_j2.py": "31418782c1585c87fb3cb9b8dd6dc141055372679f3efdffddaffbb2d2d7244e",
+      "scripts\\edited_solar_interval.py": "bdd2215d2d178382fb7523a2b1933abddcd0df1cb91312697c23de1f10ec800f",
+      "scripts\\eih_year.py": "a9bcbac8897b42601627ff81ef03cba7ee0fc29b2a431cd4a35b37b89cf16bb1",
+      "scripts\\fetch_ephemerides.py": "719d31998368f4c200a60f1460abd4530a04c4063a9c8e60f6b2d2988a8dc232",
+      "scripts\\fetch_figure_profile.py": "e7c293dcbf51dc80c2731eec20b03d874bbd1b2e08be85f9ca5ec748b0bba6cd",
+      "scripts\\fixed_j2_ias.py": "fd77c72ce6742fedc479064947de863b4632e3aee9f48a793005f861c0d96df5",
+      "scripts\\fixed_j2_year.py": "99fe334594c3391e6f3dabe89a33cded5aec93a2763d112d7b4f276b4af8d51c",
+      "scripts\\free_lunar_rotation.py": "62e0984c2c0bb384ded4a9630d96d47a61198ff0f923cf7e4c57b863b25ff07d",
+      "scripts\\hybrid_rotation.py": "b943891710d422492e2370463d5cbb9dcbdd0498ce35d28b63663040c048f4bf",
+      "scripts\\ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+      "scripts\\ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+      "scripts\\independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+      "scripts\\independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+      "scripts\\independent_lunar_coupling.py": "62398d7e88f6200332853cda0d56b5a409eba309f4182cb759e847c1387b5040",
+      "scripts\\nbody_pn_spin.py": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d",
+      "scripts\\newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+      "scripts\\nominal_jpl.py": "c73072be9f2eb4c02c345707d84256a966849ba097d03528ce74fae22c0c8937",
+      "scripts\\rigid_pn_model.py": "bd1b7126e7d29a4c899e20b5b27b6f42b316a58724f968ce8e054f5d749afbf1",
+      "scripts\\verify_edited_solar_cli.py": "e3431f13d342cf91545c2546b7c5ab788be8202b0569876729ee09df7c17689a",
+      "scripts\\verify_edited_solar_packets.py": "141a86fd3e169eb8de0f8f084bbd422777f1a5208a5f90f876774758a9533be0",
+      "src\\solar_simulator\\__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+      "src\\solar_simulator\\accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+      "src\\solar_simulator\\application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+      "src\\solar_simulator\\collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+      "src\\solar_simulator\\contacts.py": "2381373284c84e6e7d19579b3a612a1a4af7f1e19b6b1e953c0a02cfbd387266",
+      "src\\solar_simulator\\continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+      "src\\solar_simulator\\coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "src\\solar_simulator\\data\\__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+      "src\\solar_simulator\\diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+      "src\\solar_simulator\\ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+      "src\\solar_simulator\\error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+      "src\\solar_simulator\\experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+      "src\\solar_simulator\\impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+      "src\\solar_simulator\\native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "src\\solar_simulator\\nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+      "src\\solar_simulator\\oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+      "src\\solar_simulator\\orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+      "src\\solar_simulator\\perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+      "src\\solar_simulator\\relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+      "src\\solar_simulator\\rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+      "src\\solar_simulator\\sandbox.py": "9a3022f97dcdbf4195ea5c285872ae4ab2d4304134983189e8e55966b295e443",
+      "src\\solar_simulator\\scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+      "src\\solar_simulator\\simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+      "src\\solar_simulator\\spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "src\\solar_simulator\\storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+      "src\\solar_simulator\\time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+      "src\\solar_simulator\\vector3.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+      "tests/test_lunar_inertia_field.py": "55490a57d8c78a748a121753b6b251811f7e951d47c9d8ddedc530bfa6d656c4"
+    },
+    "input_sha256": {
+      ".tools\\de441236\\audit238-final.json": "9f49d79793b47597fe92e4fbadc6d5ab5577dc3b96b83f8fa05309788b9d379d",
+      "docs/de441-reader-inputs.zip": "eaf32db3d18daffc1ec7fd0193c8811b05e2cc2013f34918aca541cbb6e9ee06",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\asteroids-20261008.json": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\asteroids-catalog-20261008.json": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\asteroids-full-20261008.json": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\earth-j2-20261008.json": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-20261010.json": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-036-0-20261011.json": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-036-1-20261011.json": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-072-0-20261011.json": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-072-1-20261011.json": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-144-0-20261011.json": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-144-1-20261011.json": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\kuiper-ring-manifest.json": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orbit-cohort-13270.json": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orbit-cohort-13271.json": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orbit-observations-13270.json": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\orientation-de441-20261008.json": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\pluto-system-20261008.json": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\solar-j2-20261008.json": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\solar-system-20261008.json": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\src\\solar_simulator\\data\\solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702"
+    },
+    "arithmetic": {
+      "solid_coefficients": {
+        "j2": "0.000203235",
+        "c22": "0.0000224275"
+      },
+      "nominal_coefficients": {
+        "j2": "0.000203214360135000010",
+        "c22": "0.0000223808505281710172"
+      },
+      "completions": [
+        {
+          "mean": "0.392728",
+          "normalized_moments": [
+            "0.3926155001788986579622666666666666666666666666666666666666666666666667",
+            "0.3927050235810113420310666666666666666666666666666666666666666666666667",
+            "0.3928634762400900000066666666666666666666666666666666666666666666666667"
+          ],
+          "decimal_relative": [
+            "0E-49",
+            "0E-48"
+          ],
+          "float_relative": [
+            7.627232179174825e-14,
+            3.0520030946945553e-13
+          ]
+        },
+        {
+          "mean": "0.4320008",
+          "normalized_moments": [
+            "0.4318883001788986579622666666666666666666666666666666666666666666666667",
+            "0.4319778235810113420310666666666666666666666666666666666666666666666667",
+            "0.4321362762400900000066666666666666666666666666666666666666666666666667"
+          ],
+          "decimal_relative": [
+            "0E-49",
+            "0E-48"
+          ],
+          "float_relative": [
+            7.627232179174825e-14,
+            3.0520030946945553e-13
+          ]
+        }
+      ],
+      "nominal_minus_solid": {
+        "j2": "-2.0639864999990E-8",
+        "c22": "-4.66494718289828E-8"
+      },
+      "rounding": {
+        "assumption": "Independent nearest rounding of each offset to 1e-8; not covariance",
+        "vertices": 8,
+        "bounds": [
+          [
+            "0.000203225",
+            "0.000203245"
+          ],
+          [
+            "0.000022425",
+            "0.000022430"
+          ]
+        ],
+        "nominal_inside": [
+          false,
+          false
+        ],
+        "mean_uncertainty_cancels": true
+      },
+      "ratios": {
+        "solid_c22_over_j2": "0.1103525475434841439712647919895687258592270032228700765124117401038207",
+        "nominal_c22_over_j2": "0.1101341977668453125071176325486348235171863510966036427253221537397509",
+        "common_mass_radius_scaling_cannot_change_ratio": true
+      },
+      "conditional_park": {
+        "assumption": "Header J2M treated as undistorted J2 tilde; no I/S certification",
+        "normalized_moments": [
+          "0.3927622575169337421192644567450931321725908354101086657741453331273583",
+          "0.3928517809190464261869115104854942379545197536591589539047915044178475",
+          "0.3930102335781250841630879836152936850635552945346338098394684187726029"
+        ],
+        "j2_roundtrip": "0E-70",
+        "inferred_c22": "0.0000223808505281710169117634351002764454822295622625720326615428226223",
+        "c22_minus_header": "-2.882365648997235545177704377374279673384571773777E-22",
+        "beta_roundtrip": "9.93E-71",
+        "gamma_roundtrip": "1.986E-70"
+      },
+      "physical_spin_mapping_certified": false
+    },
+    "samples": 1462,
+    "names": [
+      "Sun",
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Moon",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "units": "SI",
+    "frame": "Ecliptic J2000",
+    "center": "SSB",
+    "epoch_jd_tdb": 2461321.5,
+    "propagation_performed": false,
+    "runtime_modified": false,
+    "parameters_fitted": false,
+    "network_used": false,
+    "physical_lunar_mapping_certified": false,
+    "real_error_cause_attributed": false,
+    "source_seams_included_in_overall_statistics": true,
+    "earth_orientation_is_approximate": true,
+    "prescribed_orientation_is_external": true,
+    "models": {
+      "strict": {
+        "all": {
+          "samples": 1462,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.32660359398676e-13,
+              "rms_m_per_s2": 4.93806085793375e-13,
+              "initial_m_per_s2": 4.509420477507591e-13,
+              "final_m_per_s2": 5.527769697521011e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 1.5467963023535507e-12,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 6.883724559250534e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.5075600626148782e-12,
+              "rms_m_per_s2": 7.489215902093042e-13,
+              "initial_m_per_s2": 6.526381922091942e-13,
+              "final_m_per_s2": 2.8204628529708557e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 4.0383307646120486e-11,
+              "rms_m_per_s2": 2.8204564373245982e-11,
+              "initial_m_per_s2": 2.9765448253578925e-11,
+              "final_m_per_s2": 2.326272753285493e-11,
+              "worst_seconds": 28252800.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3681184668304367e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.402214135793157e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947528593727088e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500600127991567e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034732044194426e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 4.142042683162683e-11,
+            "rms_m_per_s2": 2.85516266349622e-11,
+            "initial_m_per_s2": 2.9921717283271556e-11,
+            "final_m_per_s2": 2.337806202949917e-11,
+            "worst_seconds": 4060800.0
+          }
+        },
+        "boundary": {
+          "samples": 91,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.32660359398676e-13,
+              "rms_m_per_s2": 5.003542260600434e-13,
+              "initial_m_per_s2": 4.5129380803248735e-13,
+              "final_m_per_s2": 5.527164573859152e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 5.351223415127351e-12,
+              "initial_m_per_s2": 3.137616649134895e-13,
+              "final_m_per_s2": 2.7595445570360505e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 1.0036487147090033e-12,
+              "initial_m_per_s2": 5.708519684647912e-13,
+              "final_m_per_s2": 6.733424683156797e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.5075600626148782e-12,
+              "rms_m_per_s2": 8.666588326988676e-13,
+              "initial_m_per_s2": 4.720397331406389e-13,
+              "final_m_per_s2": 3.8589870085277187e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 4.0383307646120486e-11,
+              "rms_m_per_s2": 2.8221657751870998e-11,
+              "initial_m_per_s2": 2.6724642416104538e-11,
+              "final_m_per_s2": 2.4491622232689916e-11,
+              "worst_seconds": 28252800.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.406400739031683e-12,
+              "rms_m_per_s2": 1.3619879564504562e-12,
+              "initial_m_per_s2": 2.3724787157818513e-12,
+              "final_m_per_s2": 2.8251422795937914e-13,
+              "worst_seconds": 1296000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.404619990760252e-13,
+              "initial_m_per_s2": 4.635170976714157e-13,
+              "final_m_per_s2": 5.413031505419646e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 6.873964372466127e-14,
+              "rms_m_per_s2": 5.941400942291909e-14,
+              "initial_m_per_s2": 6.843728066889276e-14,
+              "final_m_per_s2": 5.4500862050529e-14,
+              "worst_seconds": 950400.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.716135827540578e-14,
+              "rms_m_per_s2": 3.499707730016101e-14,
+              "initial_m_per_s2": 3.467960815841303e-14,
+              "final_m_per_s2": 3.6260027357100567e-14,
+              "worst_seconds": 31017600.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3424671179400663e-13,
+              "rms_m_per_s2": 1.3036374788139358e-13,
+              "initial_m_per_s2": 1.289696304617516e-13,
+              "final_m_per_s2": 1.31397973577889e-13,
+              "worst_seconds": 8899200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 4.142042683162683e-11,
+            "rms_m_per_s2": 2.8551554782302762e-11,
+            "initial_m_per_s2": 2.651441831183875e-11,
+            "final_m_per_s2": 2.47502688856848e-11,
+            "worst_seconds": 4060800.0
+          }
+        },
+        "interior": {
+          "samples": 1371,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 6.091044106247373e-13,
+              "rms_m_per_s2": 4.93368377857742e-13,
+              "initial_m_per_s2": 4.509420477507591e-13,
+              "final_m_per_s2": 5.527769697521011e-13,
+              "worst_seconds": 25552800.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 5.9515183729740605e-12,
+              "rms_m_per_s2": 8.066605172039713e-13,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 2700000.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 2.6578722886987462e-12,
+              "rms_m_per_s2": 6.621545669479488e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 2008800.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 1.8094782419466547e-12,
+              "rms_m_per_s2": 7.404445370420257e-13,
+              "initial_m_per_s2": 6.526381922091942e-13,
+              "final_m_per_s2": 2.8204628529708557e-13,
+              "worst_seconds": 6177600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 3.8577514402912087e-11,
+              "rms_m_per_s2": 2.820342943515998e-11,
+              "initial_m_per_s2": 2.9765448253578925e-11,
+              "final_m_per_s2": 2.326272753285493e-11,
+              "worst_seconds": 25790400.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3685244069916062e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 5.991358749566229e-13,
+              "rms_m_per_s2": 5.402054409469465e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25509600.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947935092620804e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500659352774799e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034622999887876e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 3.933691830434021e-11,
+            "rms_m_per_s2": 2.8551631404169523e-11,
+            "initial_m_per_s2": 2.9921717283271556e-11,
+            "final_m_per_s2": 2.337806202949917e-11,
+            "worst_seconds": 25790400.0
+          }
+        }
+      },
+      "solid_fixed": {
+        "all": {
+          "samples": 1462,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.326603593986887e-13,
+              "rms_m_per_s2": 4.938060857939377e-13,
+              "initial_m_per_s2": 4.5094204774604654e-13,
+              "final_m_per_s2": 5.527769697520888e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 1.5467963023535507e-12,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 6.883724559250534e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.6312335877982406e-12,
+              "rms_m_per_s2": 6.591275711512577e-13,
+              "initial_m_per_s2": 6.630285947688262e-13,
+              "final_m_per_s2": 3.0656949022374484e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 1.1785905035937891e-11,
+              "rms_m_per_s2": 1.035915931916682e-12,
+              "initial_m_per_s2": 6.660070687625521e-13,
+              "final_m_per_s2": 3.3703785601449184e-13,
+              "worst_seconds": 6480000.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3681184668304367e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.402214135793157e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947528593727088e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500600127991567e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034732044194426e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.122898972039144e-11,
+            "rms_m_per_s2": 7.706160913555675e-13,
+            "initial_m_per_s2": 5.792369540592367e-14,
+            "final_m_per_s2": 1.61588640210402e-13,
+            "worst_seconds": 6480000.0
+          }
+        },
+        "boundary": {
+          "samples": 91,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.326603593986887e-13,
+              "rms_m_per_s2": 5.00354226060556e-13,
+              "initial_m_per_s2": 4.5129380802793876e-13,
+              "final_m_per_s2": 5.527164573859035e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 5.351223415127351e-12,
+              "initial_m_per_s2": 3.137616649134895e-13,
+              "final_m_per_s2": 2.7595445570360505e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 1.0036487147090033e-12,
+              "initial_m_per_s2": 5.708519684647912e-13,
+              "final_m_per_s2": 6.733424683156797e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.6312335877982406e-12,
+              "rms_m_per_s2": 7.926284749267569e-13,
+              "initial_m_per_s2": 6.781499916337199e-13,
+              "final_m_per_s2": 2.891705180646374e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 1.1785905035937891e-11,
+              "rms_m_per_s2": 3.0507874219196064e-12,
+              "initial_m_per_s2": 6.978795090188906e-13,
+              "final_m_per_s2": 1.8467161969911368e-13,
+              "worst_seconds": 6480000.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.406400739031683e-12,
+              "rms_m_per_s2": 1.3619879564504562e-12,
+              "initial_m_per_s2": 2.3724787157818513e-12,
+              "final_m_per_s2": 2.8251422795937914e-13,
+              "worst_seconds": 1296000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.404619990760252e-13,
+              "initial_m_per_s2": 4.635170976714157e-13,
+              "final_m_per_s2": 5.413031505419646e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 6.873964372466127e-14,
+              "rms_m_per_s2": 5.941400942291909e-14,
+              "initial_m_per_s2": 6.843728066889276e-14,
+              "final_m_per_s2": 5.4500862050529e-14,
+              "worst_seconds": 950400.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.716135827540578e-14,
+              "rms_m_per_s2": 3.499707730016101e-14,
+              "initial_m_per_s2": 3.467960815841303e-14,
+              "final_m_per_s2": 3.6260027357100567e-14,
+              "worst_seconds": 31017600.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3424671179400663e-13,
+              "rms_m_per_s2": 1.3036374788139358e-13,
+              "initial_m_per_s2": 1.289696304617516e-13,
+              "final_m_per_s2": 1.31397973577889e-13,
+              "worst_seconds": 8899200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.122898972039144e-11,
+            "rms_m_per_s2": 2.8713832962937515e-12,
+            "initial_m_per_s2": 1.623331980410902e-13,
+            "final_m_per_s2": 1.3692544228693406e-13,
+            "worst_seconds": 6480000.0
+          }
+        },
+        "interior": {
+          "samples": 1371,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 6.091044106247373e-13,
+              "rms_m_per_s2": 4.933683778583081e-13,
+              "initial_m_per_s2": 4.5094204774604654e-13,
+              "final_m_per_s2": 5.527769697520888e-13,
+              "worst_seconds": 25552800.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 5.9515183729740605e-12,
+              "rms_m_per_s2": 8.066605172039713e-13,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 2700000.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 2.6578722886987462e-12,
+              "rms_m_per_s2": 6.621545669479488e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 2008800.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 1.7905181549685341e-12,
+              "rms_m_per_s2": 6.4929576047837e-13,
+              "initial_m_per_s2": 6.630285947688262e-13,
+              "final_m_per_s2": 3.0656949022374484e-13,
+              "worst_seconds": 6177600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 2.5562500479635506e-12,
+              "rms_m_per_s2": 7.256574491227184e-13,
+              "initial_m_per_s2": 6.660070687625521e-13,
+              "final_m_per_s2": 3.3703785601449184e-13,
+              "worst_seconds": 6523200.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3685244069916062e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 5.991358749566229e-13,
+              "rms_m_per_s2": 5.402054409469465e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25509600.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947935092620804e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500659352774799e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034622999887876e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.8127616289404479e-12,
+            "rms_m_per_s2": 2.9328349053418177e-13,
+            "initial_m_per_s2": 5.792369540592367e-14,
+            "final_m_per_s2": 1.61588640210402e-13,
+            "worst_seconds": 6523200.0
+          }
+        }
+      },
+      "nominal_fixed": {
+        "all": {
+          "samples": 1462,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.326603593986887e-13,
+              "rms_m_per_s2": 4.938060857939505e-13,
+              "initial_m_per_s2": 4.5094204774604654e-13,
+              "final_m_per_s2": 5.527769697520888e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 1.5467963023535507e-12,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 6.883724559250534e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.6311011117100136e-12,
+              "rms_m_per_s2": 6.591214066676732e-13,
+              "initial_m_per_s2": 6.629125941287042e-13,
+              "final_m_per_s2": 3.064247268887656e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 1.1788306084622528e-11,
+              "rms_m_per_s2": 1.0355403535857252e-12,
+              "initial_m_per_s2": 6.760892687359841e-13,
+              "final_m_per_s2": 3.5416927749801505e-13,
+              "worst_seconds": 6480000.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3681184668304367e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.402214135793157e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947528593727088e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500600127991567e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034732044194426e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.1234029126543493e-11,
+            "rms_m_per_s2": 7.696705527728119e-13,
+            "initial_m_per_s2": 6.64337384487156e-14,
+            "final_m_per_s2": 1.7543167397861311e-13,
+            "worst_seconds": 6480000.0
+          }
+        },
+        "boundary": {
+          "samples": 91,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.326603593986887e-13,
+              "rms_m_per_s2": 5.00354226060556e-13,
+              "initial_m_per_s2": 4.5129380802793876e-13,
+              "final_m_per_s2": 5.527164573859035e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 5.351223415127351e-12,
+              "initial_m_per_s2": 3.137616649134895e-13,
+              "final_m_per_s2": 2.7595445570360505e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 1.0036487147090033e-12,
+              "initial_m_per_s2": 5.708519684647912e-13,
+              "final_m_per_s2": 6.733424683156797e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.6311011117100136e-12,
+              "rms_m_per_s2": 7.92621518393507e-13,
+              "initial_m_per_s2": 6.779112341145015e-13,
+              "final_m_per_s2": 2.891131660868956e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 1.1788306084622528e-11,
+              "rms_m_per_s2": 3.0497722098870575e-12,
+              "initial_m_per_s2": 7.143644681250468e-13,
+              "final_m_per_s2": 1.9759701383290346e-13,
+              "worst_seconds": 6480000.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.406400739031683e-12,
+              "rms_m_per_s2": 1.3619879564504562e-12,
+              "initial_m_per_s2": 2.3724787157818513e-12,
+              "final_m_per_s2": 2.8251422795937914e-13,
+              "worst_seconds": 1296000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.404619990760252e-13,
+              "initial_m_per_s2": 4.635170976714157e-13,
+              "final_m_per_s2": 5.413031505419646e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 6.873964372466127e-14,
+              "rms_m_per_s2": 5.941400942291909e-14,
+              "initial_m_per_s2": 6.843728066889276e-14,
+              "final_m_per_s2": 5.4500862050529e-14,
+              "worst_seconds": 950400.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.716135827540578e-14,
+              "rms_m_per_s2": 3.499707730016101e-14,
+              "initial_m_per_s2": 3.467960815841303e-14,
+              "final_m_per_s2": 3.6260027357100567e-14,
+              "worst_seconds": 31017600.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3424671179400663e-13,
+              "rms_m_per_s2": 1.3036374788139358e-13,
+              "initial_m_per_s2": 1.289696304617516e-13,
+              "final_m_per_s2": 1.31397973577889e-13,
+              "worst_seconds": 8899200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.1234029126543493e-11,
+            "rms_m_per_s2": 2.8701339089489264e-12,
+            "initial_m_per_s2": 1.5254022557390623e-13,
+            "final_m_per_s2": 1.4493472619697838e-13,
+            "worst_seconds": 6480000.0
+          }
+        },
+        "interior": {
+          "samples": 1371,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 6.091044106247373e-13,
+              "rms_m_per_s2": 4.933683778583217e-13,
+              "initial_m_per_s2": 4.5094204774604654e-13,
+              "final_m_per_s2": 5.527769697520888e-13,
+              "worst_seconds": 25552800.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 5.9515183729740605e-12,
+              "rms_m_per_s2": 8.066605172039713e-13,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 2700000.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 2.6578722886987462e-12,
+              "rms_m_per_s2": 6.621545669479488e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 2008800.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 1.7904752401678174e-12,
+              "rms_m_per_s2": 6.49289650956438e-13,
+              "initial_m_per_s2": 6.629125941287042e-13,
+              "final_m_per_s2": 3.064247268887656e-13,
+              "worst_seconds": 6177600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 2.545574284961696e-12,
+              "rms_m_per_s2": 7.253689984370886e-13,
+              "initial_m_per_s2": 6.760892687359841e-13,
+              "final_m_per_s2": 3.5416927749801505e-13,
+              "worst_seconds": 6523200.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3685244069916062e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 5.991358749566229e-13,
+              "rms_m_per_s2": 5.402054409469465e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25509600.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947935092620804e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500659352774799e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034622999887876e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.8130011387966374e-12,
+            "rms_m_per_s2": 2.9144170822848985e-13,
+            "initial_m_per_s2": 6.64337384487156e-14,
+            "final_m_per_s2": 1.7543167397861311e-13,
+            "worst_seconds": 6523200.0
+          }
+        }
+      },
+      "nominal_earth_prescribed": {
+        "all": {
+          "samples": 1462,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.326603593988622e-13,
+              "rms_m_per_s2": 4.938060857944556e-13,
+              "initial_m_per_s2": 4.5094204774618907e-13,
+              "final_m_per_s2": 5.52776969749862e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 1.5467963023535689e-12,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 6.883724559251584e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.631348580880992e-12,
+              "rms_m_per_s2": 6.591398397218332e-13,
+              "initial_m_per_s2": 6.628218372492663e-13,
+              "final_m_per_s2": 3.0593234105542607e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 1.1786948295867365e-11,
+              "rms_m_per_s2": 1.021838580724953e-12,
+              "initial_m_per_s2": 6.843983486785523e-13,
+              "final_m_per_s2": 3.543721448471115e-13,
+              "worst_seconds": 6480000.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3681184668304215e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.402214135793157e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947528593727088e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500600127991567e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034732044194426e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.1248379799508456e-11,
+            "rms_m_per_s2": 7.522655192136222e-13,
+            "initial_m_per_s2": 7.722174371305809e-14,
+            "final_m_per_s2": 7.763962964515676e-14,
+            "worst_seconds": 6480000.0
+          }
+        },
+        "boundary": {
+          "samples": 91,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 8.326603593988622e-13,
+              "rms_m_per_s2": 5.003542260608351e-13,
+              "initial_m_per_s2": 4.5129380803266557e-13,
+              "final_m_per_s2": 5.527164573836678e-13,
+              "worst_seconds": 17193600.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 2.253786058637455e-11,
+              "rms_m_per_s2": 5.351223415127351e-12,
+              "initial_m_per_s2": 3.137616649134895e-13,
+              "final_m_per_s2": 2.7595445570360505e-13,
+              "worst_seconds": 10281600.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 7.008931144463614e-12,
+              "rms_m_per_s2": 1.0036487147090033e-12,
+              "initial_m_per_s2": 5.708519684647912e-13,
+              "final_m_per_s2": 6.733424683156797e-13,
+              "worst_seconds": 1987200.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 2.631348580880992e-12,
+              "rms_m_per_s2": 7.925802289728145e-13,
+              "initial_m_per_s2": 6.775988351504705e-13,
+              "final_m_per_s2": 2.8757952879866576e-13,
+              "worst_seconds": 3369600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 1.1786948295867365e-11,
+              "rms_m_per_s2": 3.0357589631140558e-12,
+              "initial_m_per_s2": 7.313782962199848e-13,
+              "final_m_per_s2": 3.4684017210469743e-13,
+              "worst_seconds": 6480000.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.406400739031683e-12,
+              "rms_m_per_s2": 1.3619879564504562e-12,
+              "initial_m_per_s2": 2.3724787157818513e-12,
+              "final_m_per_s2": 2.8251422795937914e-13,
+              "worst_seconds": 1296000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 6.06422861067047e-13,
+              "rms_m_per_s2": 5.404619990760252e-13,
+              "initial_m_per_s2": 4.635170976714157e-13,
+              "final_m_per_s2": 5.413031505419646e-13,
+              "worst_seconds": 25488000.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 6.873964372466127e-14,
+              "rms_m_per_s2": 5.941400942291909e-14,
+              "initial_m_per_s2": 6.843728066889276e-14,
+              "final_m_per_s2": 5.4500862050529e-14,
+              "worst_seconds": 950400.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.716135827540578e-14,
+              "rms_m_per_s2": 3.499707730016101e-14,
+              "initial_m_per_s2": 3.467960815841303e-14,
+              "final_m_per_s2": 3.6260027357100567e-14,
+              "worst_seconds": 31017600.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3424671179400663e-13,
+              "rms_m_per_s2": 1.3036374788139358e-13,
+              "initial_m_per_s2": 1.289696304617516e-13,
+              "final_m_per_s2": 1.31397973577889e-13,
+              "worst_seconds": 8899200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.1248379799508456e-11,
+            "rms_m_per_s2": 2.854120176744033e-12,
+            "initial_m_per_s2": 1.1548946570933303e-13,
+            "final_m_per_s2": 1.7429692231646844e-13,
+            "worst_seconds": 6480000.0
+          }
+        },
+        "interior": {
+          "samples": 1371,
+          "bodies": {
+            "Sun": {
+              "maximum_m_per_s2": 6.091044106246725e-13,
+              "rms_m_per_s2": 4.93368377858842e-13,
+              "initial_m_per_s2": 4.5094204774618907e-13,
+              "final_m_per_s2": 5.52776969749862e-13,
+              "worst_seconds": 25552800.0
+            },
+            "Mercury": {
+              "maximum_m_per_s2": 5.9515183729740605e-12,
+              "rms_m_per_s2": 8.066605172040088e-13,
+              "initial_m_per_s2": 2.7859215569277856e-13,
+              "final_m_per_s2": 2.574554084964739e-13,
+              "worst_seconds": 2700000.0
+            },
+            "Venus": {
+              "maximum_m_per_s2": 2.6578722886987462e-12,
+              "rms_m_per_s2": 6.621545669480653e-13,
+              "initial_m_per_s2": 5.597638349010134e-13,
+              "final_m_per_s2": 6.631005196570368e-13,
+              "worst_seconds": 2008800.0
+            },
+            "Earth": {
+              "maximum_m_per_s2": 1.789909294367272e-12,
+              "rms_m_per_s2": 6.493129504924351e-13,
+              "initial_m_per_s2": 6.628218372492663e-13,
+              "final_m_per_s2": 3.0593234105542607e-13,
+              "worst_seconds": 6177600.0
+            },
+            "Moon": {
+              "maximum_m_per_s2": 2.4580184485188034e-12,
+              "rms_m_per_s2": 7.08349967530015e-13,
+              "initial_m_per_s2": 6.843983486785523e-13,
+              "final_m_per_s2": 3.543721448471115e-13,
+              "worst_seconds": 6523200.0
+            },
+            "Mars": {
+              "maximum_m_per_s2": 2.430723200316231e-12,
+              "rms_m_per_s2": 1.3685244069915903e-12,
+              "initial_m_per_s2": 2.35873527165232e-12,
+              "final_m_per_s2": 2.807054756696147e-13,
+              "worst_seconds": 756000.0
+            },
+            "Jupiter": {
+              "maximum_m_per_s2": 5.991358749566229e-13,
+              "rms_m_per_s2": 5.402054409469465e-13,
+              "initial_m_per_s2": 4.625120265825488e-13,
+              "final_m_per_s2": 5.441174394054874e-13,
+              "worst_seconds": 25509600.0
+            },
+            "Saturn": {
+              "maximum_m_per_s2": 7.09512274411644e-14,
+              "rms_m_per_s2": 5.947935092620804e-14,
+              "initial_m_per_s2": 6.868075910347252e-14,
+              "final_m_per_s2": 5.473867010692348e-14,
+              "worst_seconds": 3348000.0
+            },
+            "Uranus": {
+              "maximum_m_per_s2": 3.723272685418377e-14,
+              "rms_m_per_s2": 3.500659352774799e-14,
+              "initial_m_per_s2": 3.4815046642759315e-14,
+              "final_m_per_s2": 3.5896221834163706e-14,
+              "worst_seconds": 30996000.0
+            },
+            "Neptune": {
+              "maximum_m_per_s2": 1.3561984661200995e-13,
+              "rms_m_per_s2": 1.3034622999887876e-13,
+              "initial_m_per_s2": 1.2927087530234404e-13,
+              "final_m_per_s2": 1.3120578987411054e-13,
+              "worst_seconds": 14407200.0
+            }
+          },
+          "moon_relative": {
+            "maximum_m_per_s2": 1.805679754175666e-12,
+            "rms_m_per_s2": 2.5054951566162425e-13,
+            "initial_m_per_s2": 7.722174371305809e-14,
+            "final_m_per_s2": 7.763962964515676e-14,
+            "worst_seconds": 6782400.0
+          }
+        }
+      }
+    },
+    "checks_maximum_per_body": {
+      "point": {
+        "Sun": 6.310309220909826e-16,
+        "Mercury": 7.830780261154409e-16,
+        "Venus": 5.854761515867828e-16,
+        "Earth": 7.066583022652035e-16,
+        "Moon": 1.295492811406183e-15,
+        "Mars": 7.122539905781612e-16,
+        "Jupiter": 8.097180061800453e-16,
+        "Saturn": 6.398221594939204e-16,
+        "Uranus": 6.988295735295366e-16,
+        "Neptune": 7.746264737805092e-16
+      },
+      "nominal_vector": {
+        "Sun": 2.9847458442386824e-15,
+        "Mercury": 2.4367538996709828e-15,
+        "Venus": 2.502151827599595e-15,
+        "Earth": 2.9367678034030747e-15,
+        "Moon": 2.818940658695456e-15,
+        "Mars": 2.446865028810815e-15,
+        "Jupiter": 2.3425490273986065e-15,
+        "Saturn": 2.6100187786974948e-15,
+        "Uranus": 2.5420770899273382e-15,
+        "Neptune": 2.4706441977047266e-15
+      },
+      "completion_mean": {
+        "Sun": 1.5576856242892864e-12,
+        "Mercury": 1.558507537405488e-12,
+        "Venus": 1.5588289303369028e-12,
+        "Earth": 4.577504511341532e-13,
+        "Moon": 4.576806140301789e-13,
+        "Mars": 1.5577504303421224e-12,
+        "Jupiter": 1.5586690715888791e-12,
+        "Saturn": 1.5581783107411345e-12,
+        "Uranus": 1.5571790864523712e-12,
+        "Neptune": 1.5586837709335362e-12
+      },
+      "completion_shifted": {
+        "Sun": 8.529520571024736e-13,
+        "Mercury": 8.534132093546848e-13,
+        "Venus": 8.535446080058742e-13,
+        "Earth": 6.105601920075518e-14,
+        "Moon": 6.111248625738866e-14,
+        "Mars": 8.520408108014776e-13,
+        "Jupiter": 8.53885565988698e-13,
+        "Saturn": 8.529897444218039e-13,
+        "Uranus": 8.52418542183238e-13,
+        "Neptune": 8.544772874972258e-13
+      }
+    },
+    "boundary": {
+      "samples": 91,
+      "interior_samples": 1371,
+      "jump_step_seconds": 0.001,
+      "maximum_relative_acceleration_jump_m_per_s2": 2.9622509402106064e-11,
+      "endpoint_jump_unavailable": true
+    },
+    "field_change": {
+      "all": {
+        "samples": 1462,
+        "bodies": {
+          "Sun": {
+            "maximum_m_per_s2": 1.4405734111382802e-26,
+            "rms_m_per_s2": 1.0622414296534466e-26,
+            "initial_m_per_s2": 9.10113202980966e-27,
+            "final_m_per_s2": 1.1391516019391734e-26,
+            "worst_seconds": 7927200.0
+          },
+          "Mercury": {
+            "maximum_m_per_s2": 1.355981838960382e-25,
+            "rms_m_per_s2": 3.2603460279001037e-26,
+            "initial_m_per_s2": 6.853617819192259e-27,
+            "final_m_per_s2": 3.234878738477129e-26,
+            "worst_seconds": 22010400.0
+          },
+          "Venus": {
+            "maximum_m_per_s2": 2.2840241351969476e-24,
+            "rms_m_per_s2": 5.174906951554299e-25,
+            "initial_m_per_s2": 9.47741781280813e-25,
+            "final_m_per_s2": 1.5477407689703728e-27,
+            "worst_seconds": 1512000.0
+          },
+          "Earth": {
+            "maximum_m_per_s2": 4.103336471773549e-16,
+            "rms_m_per_s2": 3.0862805953575043e-16,
+            "initial_m_per_s2": 3.225587432663748e-16,
+            "final_m_per_s2": 2.5136070505702856e-16,
+            "worst_seconds": 6696000.0
+          },
+          "Moon": {
+            "maximum_m_per_s2": 3.336072266822583e-14,
+            "rms_m_per_s2": 2.509163515979109e-14,
+            "initial_m_per_s2": 2.6224207715848273e-14,
+            "final_m_per_s2": 2.0435662877513e-14,
+            "worst_seconds": 6696000.0
+          },
+          "Mars": {
+            "maximum_m_per_s2": 6.367309086714285e-26,
+            "rms_m_per_s2": 1.9267694293372185e-26,
+            "initial_m_per_s2": 1.4477926793526694e-27,
+            "final_m_per_s2": 4.379994303023531e-28,
+            "worst_seconds": 11750400.0
+          },
+          "Jupiter": {
+            "maximum_m_per_s2": 3.6655381950199295e-29,
+            "rms_m_per_s2": 1.713939316789788e-29,
+            "initial_m_per_s2": 1.0522817944871654e-29,
+            "final_m_per_s2": 5.539328510199304e-30,
+            "worst_seconds": 10519200.0
+          },
+          "Saturn": {
+            "maximum_m_per_s2": 2.7146320783149486e-30,
+            "rms_m_per_s2": 1.4690019096766932e-30,
+            "initial_m_per_s2": 1.877489246917938e-30,
+            "final_m_per_s2": 2.3535160741509134e-30,
+            "worst_seconds": 30996000.0
+          },
+          "Uranus": {
+            "maximum_m_per_s2": 1.151763385364808e-31,
+            "rms_m_per_s2": 7.5813780564799e-32,
+            "initial_m_per_s2": 9.206499880360892e-32,
+            "final_m_per_s2": 6.970647477113387e-32,
+            "worst_seconds": 4104000.0
+          },
+          "Neptune": {
+            "maximum_m_per_s2": 1.9182734413432133e-32,
+            "rms_m_per_s2": 1.3433526216111452e-32,
+            "initial_m_per_s2": 1.5575397385296725e-32,
+            "final_m_per_s2": 1.5324147250552456e-32,
+            "worst_seconds": 30866400.0
+          }
+        },
+        "moon_relative": {
+          "maximum_m_per_s2": 3.3771056315398704e-14,
+          "rms_m_per_s2": 2.5400263219306857e-14,
+          "initial_m_per_s2": 2.6546766459099897e-14,
+          "final_m_per_s2": 2.0687023582544282e-14,
+          "worst_seconds": 6696000.0
+        }
+      },
+      "boundary": {
+        "samples": 91,
+        "bodies": {
+          "Sun": {
+            "maximum_m_per_s2": 1.3975765055368037e-26,
+            "rms_m_per_s2": 1.0629851458760537e-26,
+            "initial_m_per_s2": 1.3541281956727143e-26,
+            "final_m_per_s2": 9.891959627867398e-27,
+            "worst_seconds": 9244800.0
+          },
+          "Mercury": {
+            "maximum_m_per_s2": 1.354517069558015e-25,
+            "rms_m_per_s2": 3.264823076040867e-26,
+            "initial_m_per_s2": 9.7571286945037e-27,
+            "final_m_per_s2": 2.094429331122276e-26,
+            "worst_seconds": 22032000.0
+          },
+          "Venus": {
+            "maximum_m_per_s2": 2.0331165130654597e-24,
+            "rms_m_per_s2": 5.158342891552561e-25,
+            "initial_m_per_s2": 1.4449751332849202e-24,
+            "final_m_per_s2": 1.1467503568880789e-27,
+            "worst_seconds": 1641600.0
+          },
+          "Earth": {
+            "maximum_m_per_s2": 4.0655985651912396e-16,
+            "rms_m_per_s2": 3.086366994662875e-16,
+            "initial_m_per_s2": 2.873539589868288e-16,
+            "final_m_per_s2": 2.6635580657644077e-16,
+            "worst_seconds": 25833600.0
+          },
+          "Moon": {
+            "maximum_m_per_s2": 3.305322661297047e-14,
+            "rms_m_per_s2": 2.5092337793790256e-14,
+            "initial_m_per_s2": 2.3361681042393522e-14,
+            "final_m_per_s2": 2.1655066805755536e-14,
+            "worst_seconds": 25833600.0
+          },
+          "Mars": {
+            "maximum_m_per_s2": 5.941590779849771e-26,
+            "rms_m_per_s2": 1.9307231838775044e-26,
+            "initial_m_per_s2": 1.5555770789812153e-27,
+            "final_m_per_s2": 5.511966527227423e-28,
+            "worst_seconds": 11664000.0
+          },
+          "Jupiter": {
+            "maximum_m_per_s2": 3.619484629189504e-29,
+            "rms_m_per_s2": 1.7163391395344582e-29,
+            "initial_m_per_s2": 7.532367919235152e-30,
+            "final_m_per_s2": 7.342234502148397e-30,
+            "worst_seconds": 11664000.0
+          },
+          "Saturn": {
+            "maximum_m_per_s2": 2.7141118636951363e-30,
+            "rms_m_per_s2": 1.466447595563117e-30,
+            "initial_m_per_s2": 2.5897819631280492e-30,
+            "final_m_per_s2": 1.74043798506688e-30,
+            "worst_seconds": 31017600.0
+          },
+          "Uranus": {
+            "maximum_m_per_s2": 1.1326811915320085e-31,
+            "rms_m_per_s2": 7.576820269787533e-32,
+            "initial_m_per_s2": 6.656205363966813e-32,
+            "final_m_per_s2": 1.0240950502418186e-31,
+            "worst_seconds": 4060800.0
+          },
+          "Neptune": {
+            "maximum_m_per_s2": 1.8668725154626506e-32,
+            "rms_m_per_s2": 1.343268697039851e-32,
+            "initial_m_per_s2": 1.782967672583773e-32,
+            "final_m_per_s2": 1.5391809204733445e-32,
+            "worst_seconds": 29635200.0
+          }
+        },
+        "moon_relative": {
+          "maximum_m_per_s2": 3.345978646948808e-14,
+          "rms_m_per_s2": 2.5400974493236438e-14,
+          "initial_m_per_s2": 2.3649035001378035e-14,
+          "final_m_per_s2": 2.19214226123233e-14,
+          "worst_seconds": 25833600.0
+        }
+      },
+      "interior": {
+        "samples": 1371,
+        "bodies": {
+          "Sun": {
+            "maximum_m_per_s2": 1.4405734111382802e-26,
+            "rms_m_per_s2": 1.0621920471282526e-26,
+            "initial_m_per_s2": 9.10113202980966e-27,
+            "final_m_per_s2": 1.1391516019391734e-26,
+            "worst_seconds": 7927200.0
+          },
+          "Mercury": {
+            "maximum_m_per_s2": 1.355981838960382e-25,
+            "rms_m_per_s2": 3.260048646645767e-26,
+            "initial_m_per_s2": 6.853617819192259e-27,
+            "final_m_per_s2": 3.234878738477129e-26,
+            "worst_seconds": 22010400.0
+          },
+          "Venus": {
+            "maximum_m_per_s2": 2.2840241351969476e-24,
+            "rms_m_per_s2": 5.176004513570365e-25,
+            "initial_m_per_s2": 9.47741781280813e-25,
+            "final_m_per_s2": 1.5477407689703728e-27,
+            "worst_seconds": 1512000.0
+          },
+          "Earth": {
+            "maximum_m_per_s2": 4.103336471773549e-16,
+            "rms_m_per_s2": 3.0862748605258885e-16,
+            "initial_m_per_s2": 3.225587432663748e-16,
+            "final_m_per_s2": 2.5136070505702856e-16,
+            "worst_seconds": 6696000.0
+          },
+          "Moon": {
+            "maximum_m_per_s2": 3.336072266822583e-14,
+            "rms_m_per_s2": 2.509158852182713e-14,
+            "initial_m_per_s2": 2.6224207715848273e-14,
+            "final_m_per_s2": 2.0435662877513e-14,
+            "worst_seconds": 6696000.0
+          },
+          "Mars": {
+            "maximum_m_per_s2": 6.367309086714285e-26,
+            "rms_m_per_s2": 1.9265067120742933e-26,
+            "initial_m_per_s2": 1.4477926793526694e-27,
+            "final_m_per_s2": 4.379994303023531e-28,
+            "worst_seconds": 11750400.0
+          },
+          "Jupiter": {
+            "maximum_m_per_s2": 3.6655381950199295e-29,
+            "rms_m_per_s2": 1.713779909845088e-29,
+            "initial_m_per_s2": 1.0522817944871654e-29,
+            "final_m_per_s2": 5.539328510199304e-30,
+            "worst_seconds": 10519200.0
+          },
+          "Saturn": {
+            "maximum_m_per_s2": 2.7146320783149486e-30,
+            "rms_m_per_s2": 1.4691712948765842e-30,
+            "initial_m_per_s2": 1.877489246917938e-30,
+            "final_m_per_s2": 2.3535160741509134e-30,
+            "worst_seconds": 30996000.0
+          },
+          "Uranus": {
+            "maximum_m_per_s2": 1.151763385364808e-31,
+            "rms_m_per_s2": 7.581680482188515e-32,
+            "initial_m_per_s2": 9.206499880360892e-32,
+            "final_m_per_s2": 6.970647477113387e-32,
+            "worst_seconds": 4104000.0
+          },
+          "Neptune": {
+            "maximum_m_per_s2": 1.9182734413432133e-32,
+            "rms_m_per_s2": 1.3433581919113592e-32,
+            "initial_m_per_s2": 1.5575397385296725e-32,
+            "final_m_per_s2": 1.5324147250552456e-32,
+            "worst_seconds": 30866400.0
+          }
+        },
+        "moon_relative": {
+          "maximum_m_per_s2": 3.3771056315398704e-14,
+          "rms_m_per_s2": 2.5400216007859743e-14,
+          "initial_m_per_s2": 2.6546766459099897e-14,
+          "final_m_per_s2": 2.0687023582544282e-14,
+          "worst_seconds": 6696000.0
+        }
+      }
+    },
+    "maximum_torque_change_N_m": 1.3248109631699627e+17,
+    "npz_sha256": "7f4b9a9d1bb7509921a3844f56d3c8a3f3370eebd8821004b635521f9099977e",
+    "wall_seconds": 8.046473399997922
+  },
+  "primary_review": {
+    "primary_files": [
+      {
+        "file": "Park2021-DE440-DE441.pdf",
+        "url": "https://ssd.jpl.nasa.gov/doc/Park.2021.AJ.DE440.pdf",
+        "bytes": 5501569,
+        "sha256": "96c3945deb12e0f0843c2bf0703d3542d950cf85ff903b1fe11a501634f68ee0"
+      },
+      {
+        "file": "de441-tech-comments.txt",
+        "url": "https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/de441_tech-comments.txt",
+        "bytes": 59453,
+        "sha256": "eda144896f7a09fd810c6261036d05d767ce8c77cb2b3795bc824fb623881007"
+      },
+      {
+        "file": "de441-header.txt",
+        "url": "https://ssd.jpl.nasa.gov/ftp/eph/planets/ascii/de441/header.441",
+        "bytes": 22802,
+        "sha256": "376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c"
+      }
+    ],
+    "reviewed_park_section": "4.2 Eq46-54",
+    "extracted_text_sha256": "9b6d9ab0d854a097058b8414212f973a8f5ac79fead3737e95707c77b9b79f0e",
+    "williams_attempt_http": 403,
+    "williams_attempt_is_paper": false,
+    "tech_comments_c22": "2.2380845245752079e-5",
+    "tech_comments_replaces_header": false
+  },
+  "related_tests": {
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "-m",
+      "pytest",
+      "-q",
+      "-p",
+      "no:cacheprovider",
+      "tests/test_free_lunar_rotation.py",
+      "tests/test_real_spin_scales.py",
+      "tests/test_hybrid_rotation.py",
+      "tests/test_lunar_coupling.py",
+      "tests/test_noether_identities.py",
+      "tests/test_noether_source_bridge.py",
+      "tests/test_decimal_noether_action.py",
+      "tests/test_nbody_pn_spin.py",
+      "tests/test_rigid_pn_model.py",
+      "tests/test_spin_initial.py",
+      "tests/test_rotation.py",
+      "tests/test_canonical_initial.py",
+      "tests/test_eih_year.py",
+      "tests/test_nbody_rotation.py",
+      "tests/test_relative_coordinates.py",
+      "tests/test_error_control.py",
+      "tests/test_free_lunar_months.py",
+      "tests/test_free_lunar_year.py",
+      "tests/test_prescribed_lunar.py",
+      "tests/test_lunar_inertia_field.py"
+    ],
+    "returncode": 0,
+    "wall_seconds": 14.1580629000091,
+    "public_files": 862,
+    "public_unchanged": true,
+    "full_suite_repeated": false,
+    "log_sha256": "0c0f9c666535478734e5839045cb4585ee166a86dbee24fcc6aa04e62bd0b475"
+  },
+  "offline_repeat": {
+    "returncode": 0,
+    "wall_seconds": 12.215893500018865,
+    "stdout": "DE441 reader complete True passed True seconds 2.0965436000260524\nInertia/field snapshots 1462 passed True seconds 9.154770299996017\nFresh reader and all 1462 snapshots replayed offline\n",
+    "stderr": "",
+    "network_disabled": true,
+    "prior_tools_absent": true,
+    "imports_from_copy_checked": true,
+    "installed_environment_shared": true,
+    "new_environment_qualified": false,
+    "full_year_snapshots_recomputed": true,
+    "propagation_performed": false,
+    "decoded_arrays_exact": 27,
+    "all_scientific_metrics_exact": true,
+    "sources_unchanged": true
+  },
+  "local_evidence_sha256": {
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\before.json": "ac97f223197dfc53731eca671587cf6c9f96ee89216cb19c657a97bb5360dc82",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\primary-review.json": "218d0700f1b0a8418bd77244386d5854fd175b1a0c4bc0ee120365654a1abc50",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\Williams2014.headers": "54ef2aa53c884ae2cd90a102d5a5f878d69dc80ac633ccd6f5f2ec08862ca4f0",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\Williams2014-attempt.html": "a1eb33cc55e5aa064272f39b3458cb685a2dce9e4940af6f5a7518fbfa64447d",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\preflight288.json": "577cf43855148b448ad32c935a4f0d6f2e89c8924aefd5b714fdee4d50ca818c",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\preflight288.npz": "fcb8887e47db40e47963cffbb18224b90f3b03059241bcd77b4285ff75839da1",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\audit289.json": "58a0db9197e37ef8ccc5b5c2398293af6d92fea42cbf6afb7475404d9cd87ea3",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\audit289.npz": "7f4b9a9d1bb7509921a3844f56d3c8a3f3370eebd8821004b635521f9099977e",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\check290.py": "f8085ab46ac5c5679c4393f94bae6c50d44d99981f2bf18505eb4ea57c3f4f98",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\check290.json": "f03b561bb1cccac5b7615f6da4c57772448e88933a03016925064e3ea86e4e61",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\check290.log": "0c0f9c666535478734e5839045cb4585ee166a86dbee24fcc6aa04e62bd0b475",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\offline290.py": "1f4e4dbc94f9327739fd5c23adab62e5d95762d5342966b75d608f1ed37f3b15",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\offline290_child.py": "c01baaadc19cffac4d06974d5fd5082144429c06dc486925f97e8db38c7c51dc",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\inertia287\\offline290.json": "6c3a6cb9d3b42052dd57894bf62c425a09f52b482592a6693848aa745624ef0a"
+  },
+  "numerical_snapshot_checks_passed": true,
+  "physical_spin_model_changed": false,
+  "nominal_coefficients_fit_by_this_work": false,
+  "runtime_accuracy_requalified": false,
+  "full_year_noether_balances_verified": false,
+  "physical_lunar_mapping_certified": false,
+  "pure_polynomial_endpoint_jump_measured": false,
+  "interpretation": "Force-only diagnostics. Finite t+-0.001s difference includes smooth acceleration variation. No new orbit or causal attribution."
+}

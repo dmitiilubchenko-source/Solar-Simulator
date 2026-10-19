@@ -36,7 +36,7 @@ Verlet и собственные силы, REBOUND/Tudat не подключен
 
 ## Точки входа
 
-[_submit](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:399)
+[_submit](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:424)
 
 [advance](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:139)
 
@@ -44,7 +44,7 @@ Verlet и собственные силы, REBOUND/Tudat не подключен
 
 [integrate](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:139)
 
-[_poll](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:411)
+[_poll](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:436)
 
 [save](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/storage.py:300)
 
