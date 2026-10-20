@@ -49,6 +49,12 @@ Recovery-копии находятся вне репозитория, содер
   независимый Decimal-аудит и сохранённый FAIL общего критерия (5/9).
   `scripts/assess_rust_adaptive.py` — явный стенд; приложение его не использует.
 
+- [Диагностика сохранённой ошибки Rust DOP853](rust-adaptive-diagnosis.md):
+  отдельные IC/GM-чувствительности не объясняют ни один из четырёх FAIL.
+  `scripts/diagnose_rust_adaptive.py` анализирует прежние массивы без интеграции;
+  локализация округления внутри Rust-шагов ещё предстоит.
+
+
 - [Рабочий профиль](solar-working-profile.md) и его [JSON](solar-working-profile.json)
   определяют режим и область измерений. Standard и Strict не взаимозаменяемы.
 - [Стабилизация runtime](runtime-stabilization.md) описывает текущие исправления
