@@ -119,3 +119,7 @@ carry/sum159–179. Сравнение двух численных путей н
 - [Точные примеры](C:/Users/Admin/Desktop/Solar-simulator/tests/test_rust_trace.py:12),
   [повреждённые записи](C:/Users/Admin/Desktop/Solar-simulator/tests/test_rust_trace.py:51),
   [независимость сеансов](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/tests/trace.rs:36).
+
+338–339 выполнены: [исходная shadow-сетка](rust-adaptive-shadow-validation.md)
+и [вложенное уточнение](rust-adaptive-refinement-validation.md).
+Все прежние числа337 сохраняются; новая относительная диагностика не исправляет runtime.

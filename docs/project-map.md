@@ -57,6 +57,12 @@ Recovery-копии находятся вне репозитория, содер
   Feature `diagnostic-trace` отключена по умолчанию; сырые записи локальны.
   Все4 орбитальных FAIL сохраняются; глобальная причина пока не установлена.
 
+- [Высокоточный shadow338](rust-adaptive-shadow-validation.md) сохраняет4FAIL
+  на исходной сетке; [вложенное уточнение339](rust-adaptive-refinement-validation.md)
+  даёт9/9 относительных диагностик при d2/d4, но равномерный порядок8 не доказан.
+  Это исследовательские Python/Decimal-стенды; float64 Rust остаётся5/9.
+
+
 
 - [Рабочий профиль](solar-working-profile.md) и его [JSON](solar-working-profile.json)
   определяют режим и область измерений. Standard и Strict не взаимозаменяемы.
