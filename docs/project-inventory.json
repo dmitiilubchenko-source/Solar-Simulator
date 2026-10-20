@@ -2,6 +2,7 @@
   "schema_version": 1,
   "groups": {
     "docs": [
+      "docs/Solar-Simulator-Scientific-Verification-Proposal-v0.3.md",
       "docs/accuracy-validation.json",
       "docs/accuracy-validation.md",
       "docs/asteroids-343-assessment.json",
