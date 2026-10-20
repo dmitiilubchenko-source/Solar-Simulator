@@ -9,6 +9,7 @@ dist/
 *.egg-info/
 
 /rust/solar_core/target/
+/rust/solar_adaptive/target/
 
 /rust/solar_native/target/
 /rust/solar_native/wheels/

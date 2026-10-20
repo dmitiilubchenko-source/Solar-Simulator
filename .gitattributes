@@ -10,3 +10,7 @@ scripts/validation/*.441 -text whitespace=-blank-at-eol,-blank-at-eof,-space-bef
 scripts/validation/*.bin -text
 # Archived experiment source text is byte-bound by regression reports too.
 scripts/validation/*.txt -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Keep the isolated solver build/provenance inputs byte-stable on checkout.
+rust/solar_adaptive/Cargo.toml -text
+rust/solar_adaptive/Cargo.lock -text
+rust/solar_adaptive/LICENSE-SCIPY.txt -text
