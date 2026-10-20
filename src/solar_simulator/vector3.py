@@ -51,9 +51,12 @@ class Vector3:
         return divi
 
     def distance_to(self, other: "Vector3") -> float:
-        dist = self.subtract(other)
-        magni = dist.magnitude()
-        return magni
+        x = self.x - other.x
+        y = self.y - other.y
+        z = self.z - other.z
+        if not (isfinite(x) and isfinite(y) and isfinite(z)):
+            raise ValueError("Координаты должны быть конечными числами")
+        return hypot(x, y, z)
 
     def __repr__(self) -> str:
         return (f"Vector3({self.x}, {self.y}, {self.z})")

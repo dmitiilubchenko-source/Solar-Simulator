@@ -14,15 +14,15 @@ def check_links():
     count=0
     for path in (ROOT/"docs").glob("*.md"):
         for name,line in re.findall(r"\]\(([^)]+):([0-9]+)\)",path.read_text(encoding="utf-8")):
-            source=project_source(name, ROOT)
+            source=project_source(name, ROOT, relative_to=path.parent)
             if not source.is_file() or not 1<=int(line)<=len(source.read_text(encoding="utf-8").splitlines()):
                 raise ValueError(f"Invalid link: {path.name}: {name}:{line}")
             count+=1
     print(f"Documentation file/line links valid: {count}")
 
 
-def project_source(name, root):
-    """Resolve historical absolute project links inside this checkout only."""
+def project_source(name, root, *, relative_to=None):
+    """Resolve Markdown-relative and historical absolute links inside this checkout."""
     root=Path(root).resolve()
     candidate=Path(name)
     if candidate.is_absolute() and candidate.resolve().is_relative_to(root):
@@ -34,6 +34,8 @@ def project_source(name, root):
             candidate=Path(*parts[anchors[0]+1:])
         elif candidate.is_absolute() or PureWindowsPath(name).is_absolute() or len(anchors)>1:
             raise ValueError("Unknown project link root: "+name)
+        elif relative_to is not None:
+            candidate=Path(relative_to)/candidate
         source=(root/candidate).resolve()
     if not source.is_relative_to(root):raise ValueError("Project link escapes checkout: "+name)
     return source

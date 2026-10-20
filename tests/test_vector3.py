@@ -233,3 +233,30 @@ def test_circular_position_through_instance():
 def test_nonfinite_coordinates(value):
     with pytest.raises(ValueError):
         Vector3(value, 0, 0)
+
+
+@pytest.mark.parametrize("first, second", [
+    ((3., 4., 0.), (0., 0., 0.)),
+    ((0., -0., 0.), (-0., 0., 0.)),
+    ((5e-324, 5e-324, 0.), (0., 0., 0.)),
+    ((1e200, -2e200, 3e200), (-1e200, 0., 0.)),
+    ((1e-200, -2e-200, 3e-200), (-1e-200, 0., 0.)),
+    ((1e308, 1e308, 1e308), (-2.5e307, -2.5e307, -2.5e307)),
+])
+def test_distance_extreme_scales_match_independent_scalar_distance(first, second):
+    # Preserve hypot's range: subnormals survive and a finite displacement
+    # can legitimately have an infinite, unrepresentable scalar length.
+    assert Vector3(*first).distance_to(Vector3(*second)) == math.dist(first, second)
+
+
+def test_distance_rejects_overflowing_displacement():
+    with pytest.raises(ValueError, match="Координаты должны быть конечными"):
+        Vector3(1e308, 0., 0.).distance_to(Vector3(-1e308, 0., 0.))
+
+
+@pytest.mark.parametrize("value", [float("nan"), float("inf"), -float("inf")])
+def test_distance_revalidates_mutated_coordinates(value):
+    first = Vector3(1., 2., 3.)
+    first.y = value
+    with pytest.raises(ValueError, match="Координаты должны быть конечными"):
+        first.distance_to(Vector3(0., 0., 0.))

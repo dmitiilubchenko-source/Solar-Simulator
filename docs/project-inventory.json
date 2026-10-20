@@ -79,6 +79,8 @@
       "docs/desktop-ready-validation.md",
       "docs/desktop-render-benchmark.json",
       "docs/desktop-render-benchmark.md",
+      "docs/distance-performance-validation.json",
+      "docs/distance-performance-validation.md",
       "docs/earth-moon.png",
       "docs/edited-j2-protocol.md",
       "docs/edited-j2-refinement-protocol.md",
@@ -373,7 +375,8 @@
       "scripts/validation/kuiper_absolute_assessment.py",
       "scripts/validation/sb441-343-year.bin",
       "scripts/validation/sb441-catalog-metadata.bin",
-      "scripts/validation/sb441-kuiper-year.bin"
+      "scripts/validation/sb441-kuiper-year.bin",
+      "scripts/validation/vector3_before331.py"
     ],
     "requirements": [
       "requirements/research-ias15.txt",
@@ -656,6 +659,7 @@
       "scripts/prepare_test_inputs.py",
       "scripts/prescribed_lunar_control.py",
       "scripts/profile_catalog.py",
+      "scripts/profile_distance.py",
       "scripts/profile_runtime.py",
       "scripts/project_inventory.py",
       "scripts/qualify_strict_profile.py",

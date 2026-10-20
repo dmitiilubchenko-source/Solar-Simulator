@@ -33,3 +33,30 @@ def test_archival_verification_rejects_corruption_and_unrecorded_sources(tmp_pat
     elif corruption=='unarchived':binding={'src/solar_simulator/relativity.py':sha}
     else:binding={'../outside.py':sha}
     with pytest.raises(ValueError):audit.verify_frozen_sources(binding)
+
+
+@pytest.mark.parametrize('damage', [None, 'bytes', 'missing', 'expected_sha'])
+def test_later_frozen_file_retains_exact_old_source_without_qualifying_live_code(tmp_path, monkeypatch, damage):
+    name = 'src/solar_simulator/vector3.py'
+    frozen_name, expected = audit.SOURCE_FILE_SNAPSHOTS[name]
+    raw = (audit.ROOT/frozen_name).read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == expected
+    setup_snapshot(tmp_path, monkeypatch)
+    frozen = tmp_path/frozen_name
+    frozen.parent.mkdir(parents=True)
+    frozen.write_bytes(raw)
+    live = tmp_path/name
+    live.parent.mkdir(parents=True)
+    live.write_bytes(b'changed live geometry')
+    if damage == 'bytes':
+        frozen.write_bytes(raw+b'altered')
+    elif damage == 'missing':
+        frozen.unlink()
+    elif damage == 'expected_sha':
+        expected = '0'*64
+    if damage is None:
+        audit.verify_frozen_sources({name: expected})
+        assert live.read_bytes() == b'changed live geometry'
+    else:
+        with pytest.raises(ValueError, match='Frozen source SHA mismatch'):
+            audit.verify_frozen_sources({name: expected})

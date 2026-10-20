@@ -25,6 +25,10 @@ NOMINAL_REPORT = 'docs/nominal-solar-packet20-validation.json'
 NOMINAL_REPORT_SHA256 = '16c619a971484d05105326c481c76f014d4aefba8d9aa84fa3e9c5a79ec3bf77'
 SOURCE_SNAPSHOT = 'docs/runtime-sources-before301.zip'
 SOURCE_SNAPSHOT_SHA256 = 'a810441919c0ea429e43f66242f3d41ad58e4b0ba462bcaefab89b7630248e99'
+SOURCE_FILE_SNAPSHOTS = {
+    'src/solar_simulator/vector3.py': ('scripts/validation/vector3_before331.py',
+        '479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2'),
+}
 
 
 def verify_frozen_sources(bindings):
@@ -41,6 +45,13 @@ def verify_frozen_sources(bindings):
         if not path.is_relative_to(ROOT.resolve()):
             raise ValueError('Receipt path outside project: '+name)
         if path.is_file() and digest(path.read_bytes()) == expected:
+            continue
+        frozen = SOURCE_FILE_SNAPSHOTS.get(normalized)
+        if frozen is not None and frozen[1] == expected:
+            source = (ROOT/frozen[0]).resolve()
+            if (not source.is_relative_to(ROOT.resolve()) or not source.is_file()
+                    or digest(source.read_bytes()) != expected):
+                raise ValueError('Frozen source SHA mismatch: '+name)
             continue
         if archived is None:
             raw = (ROOT/SOURCE_SNAPSHOT).read_bytes()
