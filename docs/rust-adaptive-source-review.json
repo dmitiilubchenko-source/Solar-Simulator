@@ -1,0 +1,305 @@
+{
+  "review_date": "2026-10-20",
+  "baseline_commit": "9316dbf610c360e0b776d175d2363ee90a9f2203",
+  "git_tree_clean_during_related_tests": true,
+  "scope": "Static source/API review and current-contract regression only.",
+  "source_review_complete": true,
+  "physics_runtime_changed": false,
+  "cargo_dependencies_changed": false,
+  "new_accuracy_claim": false,
+  "new_speed_claim": false,
+  "new_rust_solver_implemented": false,
+  "current_source_sha256": {
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "rust/solar_core/Cargo.toml": "31aecbab0975c2a657e0379d648d3dc78dc270bde37b4396e78de6f38506fd77",
+    "rust/solar_core/Cargo.lock": "e9929d38e48cce2af2c2e8c064d69db44d241a07ca16549afa667834152a9310",
+    "rust/solar_native/Cargo.toml": "30f61108b9c28102d8802073e242a0bd0ebe49cf8572ebfa585ae76753497947",
+    "rust/solar_native/Cargo.lock": "3973ba88d0f5d86cb195adf9bb897cac6b2c03ebaa2d6dad8c37317a954d02d1",
+    "tests/test_error_control.py": "d3fe6d899f6adb9b835ba716667edc2968b5e9fd620f248135f947c89a9f840f",
+    "tests/test_continuous.py": "305f90f33a17d5bb6c750315fbbdeaf3586a1ae56e26cc053c09fad93d5ed7ee",
+    "tests/test_relative_coordinates.py": "26ad7a3d129494bd0ab7cc3b0dec6a841767474c34fa8a1cf5e805cf9afb3ed0",
+    "tests/test_time_control.py": "d8101f72e910d736c8931f53a3c355d12fb3363387075ab5ed45d262b15c8e8e",
+    "scripts/assess_kepler_holdout.py": "d3082ee6eec7164b505530f06dd28412d9d74985d49256bea9542e8a22b5ad50",
+    "scripts/assess_kepler_phase.py": "f0b2f6bece3a7653efd883f7041e1ee2d5fb2fcf13d91331fb70b406d24d3677"
+  },
+  "candidates": [
+    {
+      "name": "ode_solvers",
+      "version": "0.6.2",
+      "source_url": "https://static.crates.io/crates/ode_solvers/ode_solvers-0.6.2.crate",
+      "metadata_url": "https://crates.io/api/v1/crates/ode_solvers/0.6.2",
+      "archive_sha256": "18501982e08afc982434c92e1a2968d3b696b368c6df40a210475ba447fba8d9",
+      "registry_checksum_match": true,
+      "archive_bytes": 29097,
+      "published": "2026-06-07T20:36:26.747003Z",
+      "yanked": false,
+      "license": "Apache-2.0",
+      "license_file_sha256": "c2659b7f5ae9a9458b88aa17a30de10a486f761939258faabed7ba736deb4768",
+      "source_verification": "PASS",
+      "vector_tolerances": false,
+      "session_api": "Private endpoint and controller; integrate is the public execution entry.",
+      "compatibility_gaps": [
+        "scalar_tolerances",
+        "global_error_aggregation",
+        "no_owned_step_boundary_api"
+      ],
+      "drop_in_contract": "FAIL",
+      "runtime_qualification": "INCOMPLETE",
+      "compiled": false,
+      "numerical_benchmark_run": false,
+      "installed": false,
+      "evidence": [
+        {
+          "path": "src/dop853.rs",
+          "line_start": 29,
+          "line_end": 57,
+          "sha256": "af8ebd4830ed50754db5f84ca86cffeb7aa8ed2311d989adb588d75070dccce7",
+          "finding": "Private endpoint/controller and scalar rtol/atol."
+        },
+        {
+          "path": "src/dop853.rs",
+          "line_start": 347,
+          "line_end": 369,
+          "sha256": "af8ebd4830ed50754db5f84ca86cffeb7aa8ed2311d989adb588d75070dccce7",
+          "finding": "Global dimension-normalized joint 5(3) error."
+        },
+        {
+          "path": "src/dop853.rs",
+          "line_start": 569,
+          "line_end": 581,
+          "sha256": "af8ebd4830ed50754db5f84ca86cffeb7aa8ed2311d989adb588d75070dccce7",
+          "finding": "Output accessors do not expose an endpoint setter."
+        }
+      ]
+    },
+    {
+      "name": "ivp",
+      "version": "0.6.0",
+      "source_url": "https://static.crates.io/crates/ivp/ivp-0.6.0.crate",
+      "metadata_url": "https://crates.io/api/v1/crates/ivp/0.6.0",
+      "archive_sha256": "bcaaf80b900acaa4053b9a3346c6bf804f870a18dcecfa21c063f520d4029cba",
+      "registry_checksum_match": true,
+      "archive_bytes": 127149,
+      "published": "2026-03-10T03:59:41.983857Z",
+      "yanked": false,
+      "license": "Apache-2.0",
+      "license_file_sha256": "94cb1ebec6c45d7c0fd8e3aedcb9694c34f58c18722e7f79143e017dc3304cfe",
+      "source_verification": "PASS",
+      "vector_tolerances": true,
+      "session_api": "The inspected DOP853 exposes solve, not a resumable owned step state.",
+      "compatibility_gaps": [
+        "global_error_aggregation",
+        "controller_local_to_solve"
+      ],
+      "drop_in_contract": "FAIL",
+      "runtime_qualification": "INCOMPLETE",
+      "compiled": false,
+      "numerical_benchmark_run": false,
+      "installed": false,
+      "evidence": [
+        {
+          "path": "src/methods/mod.rs",
+          "line_start": 153,
+          "line_end": 160,
+          "sha256": "8ead6ea8d3debd19e894ff2f2533d1e647c8f2ef6c30c01de9d826fbf1f7ed6c",
+          "finding": "Tolerance supports scalar/vector values."
+        },
+        {
+          "path": "src/methods/dop853.rs",
+          "line_start": 117,
+          "line_end": 124,
+          "sha256": "98937e12c42ffcebf21cd39d503fbdfa71db24018f7644353810867e3cbd16bb",
+          "finding": "solve receives endpoint and tolerances; controller variables are local."
+        },
+        {
+          "path": "src/methods/dop853.rs",
+          "line_start": 407,
+          "line_end": 433,
+          "sha256": "98937e12c42ffcebf21cd39d503fbdfa71db24018f7644353810867e3cbd16bb",
+          "finding": "5(3) errors are accumulated over all n components."
+        }
+      ]
+    },
+    {
+      "name": "differential-equations",
+      "version": "0.7.0",
+      "source_url": "https://static.crates.io/crates/differential-equations/differential-equations-0.7.0.crate",
+      "metadata_url": "https://crates.io/api/v1/crates/differential-equations/0.7.0",
+      "archive_sha256": "86fe8ca0920655c3e1add6f0f4365cf549266b6cae435a9ae6b0c33c77158e30",
+      "registry_checksum_match": true,
+      "archive_bytes": 731227,
+      "published": "2026-10-11T21:36:39.055982Z",
+      "yanked": false,
+      "license": "Apache-2.0",
+      "license_file_sha256": "59899c6091b540582ed617e8eeaac4919dc985ccfc35459ee9752b699be5205b",
+      "source_verification": "PASS",
+      "vector_tolerances": true,
+      "session_api": "Public owned stepping and set_h; boundary driver and error semantics still need adaptation.",
+      "compatibility_gaps": [
+        "global_error_aggregation",
+        "no_joint_per_block_error_callback",
+        "dense_stages_on_accepted_step"
+      ],
+      "drop_in_contract": "FAIL",
+      "runtime_qualification": "INCOMPLETE",
+      "compiled": false,
+      "numerical_benchmark_run": false,
+      "installed": false,
+      "evidence": [
+        {
+          "path": "src/tolerance.rs",
+          "line_start": 11,
+          "line_end": 14,
+          "sha256": "a7a8c93199056339ba5e8b7b507db168acce84916696c324e476b219cdd46611",
+          "finding": "Scalar and vector tolerances."
+        },
+        {
+          "path": "src/ode/numerical_method.rs",
+          "line_start": 14,
+          "line_end": 70,
+          "sha256": "445bde7eed77dc1723a3abb3e80d93f68dce0366fee6773a6c56896e6b8559d6",
+          "finding": "Public init/step, state/time accessors and set_h."
+        },
+        {
+          "path": "src/traits.rs",
+          "line_start": 965,
+          "line_end": 975,
+          "sha256": "33161b52ebe46b30c4fa3d61f55eec0d4287838246d8237483f98052bb77fec9",
+          "finding": "Vec state default error_norm returns a whole-state sum of squares."
+        },
+        {
+          "path": "src/methods/erk/dormandprince/ordinary.rs",
+          "line_start": 122,
+          "line_end": 150,
+          "sha256": "da04e6c322f3e7e09ef7edcc949455c19d948a306fb6817b41a3d3fdb5a81644",
+          "finding": "DOP853 combines two separate whole-state norms."
+        },
+        {
+          "path": "src/methods/erk/dormandprince/ordinary.rs",
+          "line_start": 210,
+          "line_end": 225,
+          "sha256": "da04e6c322f3e7e09ef7edcc949455c19d948a306fb6817b41a3d3fdb5a81644",
+          "finding": "Three additional RHS stages for the dense polynomial."
+        },
+        {
+          "path": "src/methods/erk/dormandprince/mod.rs",
+          "line_start": 44,
+          "line_end": 49,
+          "sha256": "368cdfecad380c03b1083653d9de3de2001debee6e1494cfb401df91895eb15a",
+          "finding": "DOP853 constructor uses 12 stages and 16 extended entries."
+        },
+        {
+          "path": "src/methods/erk/adaptive/ordinary.rs",
+          "line_start": 124,
+          "line_end": 126,
+          "sha256": "5fc490436b4c88fe8f5d4d514400fd0b2af63952117d7d81e5242d8999b98062",
+          "finding": "Infinity norm belongs to another method family."
+        },
+        {
+          "path": "src/tableau/dorman_prince.rs",
+          "line_start": 375,
+          "line_end": 379,
+          "sha256": "30d145dcacd55d871a2eedc607b754a97168e82485f9c2fb357ef6eed56310f6",
+          "finding": "DOP853 tableau enables dense-output coefficients."
+        }
+      ]
+    }
+  ],
+  "recommended_next_route": {
+    "description": "Isolated narrow port of the current pinned SciPy DOP853 controller plus Solar per-block estimator; reuse existing Rust forces.",
+    "dependency_to_add": null,
+    "status": "INCOMPLETE",
+    "scipy_version": "1.18.1",
+    "scipy_source_sha256": {
+      "scipy/integrate/_ivp/rk.py": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+      "scipy/integrate/_ivp/common.py": "741da5d84f09020c628a8b6e4cde6723fd11fdb4fc5e0c9a4816ca269bbdb706",
+      "scipy/integrate/_ivp/dop853_coefficients.py": "e283219a0f1e5f2cc37924ab961d9d24932f69a6d69fe68ee384b7c31f08839a"
+    },
+    "scipy_distribution_license_sha256": "f0f5c56b298ec9795df1199edc328a987242716d14a1bde6813112e22dc15f99",
+    "license_first_section": "BSD-3-Clause",
+    "implementation_and_independent_validation_required": true
+  },
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1",
+    "native_probe_passed": true,
+    "native_binary_sha256": "400dd54976aed46aa5d4d11212dfe484e2e98b8d7b84ec2612d28a93ca5e5dc6",
+    "rust_toolchain": {
+      "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+      "cargo": "cargo 1.99.0 (5f94df478 2026-08-27)"
+    }
+  },
+  "checks": {
+    "python": {
+      "status": "PASS",
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "-p",
+        "scripts.native_audit",
+        "tests/test_error_control.py",
+        "tests/test_continuous.py",
+        "tests/test_relative_coordinates.py",
+        "tests/test_time_control.py"
+      ],
+      "passed": 88,
+      "skipped": 0,
+      "seconds": 3.9
+    },
+    "rust": {
+      "status": "PASS",
+      "command": [
+        "C:/Users/Admin/.cargo/bin/cargo.exe",
+        "test",
+        "--manifest-path",
+        "rust/solar_core/Cargo.toml"
+      ],
+      "passed": 19,
+      "ignored": 0
+    },
+    "full_project_suite": "NOT_RUN",
+    "rust_candidate_compilation": "NOT_RUN",
+    "rust_candidate_physics_validation": "NOT_RUN",
+    "new_portable": "NOT_RUN"
+  },
+  "access_failures": [
+    {
+      "stage": "documentation",
+      "status": "INCOMPLETE",
+      "urls": [
+        "https://docs.rs/ode_solvers/0.6.2/src/ode_solvers/dop853.rs.html",
+        "https://docs.rs/differential-equations/0.6.1/differential_equations/"
+      ],
+      "reason": "Fixed-version pages unavailable to web tool.",
+      "resolution": "Read and checksum official crates.io archives; differential-equations review pinned to 0.7.0."
+    },
+    {
+      "stage": "rust_test_invocation",
+      "status": "FAIL",
+      "command": "cargo test --manifest-path rust/solar_core/Cargo.toml",
+      "reason": "cargo not on PowerShell PATH.",
+      "resolution": "Existing installation invoked by absolute path; 19 tests passed."
+    }
+  ],
+  "limitations": [
+    "No Rust candidate compiled or benchmarked.",
+    "No new force or integrator executed.",
+    "Existing general Kepler failure is not resolved by source review.",
+    "Library compatibility failure is specific to the Solar contract, not a library quality claim.",
+    "Broad 10-body/year, EIH and figure qualification require separate predeclared protocols."
+  ],
+  "source_review_verification": "PASS"
+}

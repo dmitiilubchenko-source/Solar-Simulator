@@ -302,6 +302,8 @@
       "docs/runtime-stabilization-validation.json",
       "docs/runtime-stabilization.md",
       "docs/runtime-walkthrough.md",
+      "docs/rust-adaptive-contract.md",
+      "docs/rust-adaptive-source-review.json",
       "docs/rust-comparison.json",
       "docs/rust.md",
       "docs/sandbox-acceptance-validation.json",
