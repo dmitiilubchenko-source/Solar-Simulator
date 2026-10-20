@@ -29,6 +29,17 @@ struct Response {
     compute_seconds: f64,
 }
 fn run() -> Result<Response, String> {
+    let arguments: Vec<_> = std::env::args_os().skip(1).collect();
+    #[cfg(not(feature = "diagnostic-trace"))]
+    if !arguments.is_empty() {
+        return Err("Diagnostic trace requires the explicit diagnostic-trace feature".into());
+    }
+    #[cfg(feature = "diagnostic-trace")]
+    let trace_path = match arguments.as_slice() {
+        [] => None,
+        [flag, path] if flag == "--trace" => Some(std::path::PathBuf::from(path)),
+        _ => return Err("Expected --trace NEW_FILE or no arguments".into()),
+    };
     let mut input = String::new();
     io::stdin()
         .take(16_000_001)
@@ -64,6 +75,10 @@ fn run() -> Result<Response, String> {
         request.relative_pair,
         config,
     )?;
+    #[cfg(feature = "diagnostic-trace")]
+    if let Some(path) = trace_path {
+        session.enable_trace(&path)?;
+    }
     let mut snapshots = Vec::new();
     let mut endpoints = Vec::new();
     let mut error = None;
@@ -88,6 +103,12 @@ fn run() -> Result<Response, String> {
             }
         }
         snapshots.push(session.current());
+    }
+    #[cfg(feature = "diagnostic-trace")]
+    if error.is_none() {
+        if let Err(message) = session.finish_trace() {
+            error = Some(message);
+        }
     }
     Ok(Response {
         complete: error.is_none(),

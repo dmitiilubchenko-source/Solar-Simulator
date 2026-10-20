@@ -131,6 +131,8 @@ pub struct Dop853 {
     h_abs: f64,
     committed: Snapshot,
     stats: Statistics,
+    #[cfg(feature = "diagnostic-trace")]
+    trace: Option<crate::trace::Recorder>,
 }
 impl Dop853 {
     pub fn new<F>(
@@ -177,6 +179,8 @@ impl Dop853 {
                 rhs_calls: 1,
                 ..Statistics::default()
             },
+            #[cfg(feature = "diagnostic-trace")]
+            trace: None,
         };
         solver.h_abs = match config.first_step {
             Some(step) if step.is_finite() && step > 0. && step <= initial_bound - start => step,
@@ -290,6 +294,15 @@ impl Dop853 {
                 if h <= 0. {
                     return Err("Endpoint below floating resolution".into());
                 }
+                #[cfg(feature = "diagnostic-trace")]
+                let mut trace_sums = self
+                    .trace
+                    .as_ref()
+                    .map(|_| vec![vec![0.; self.values.len()]; 11]);
+                #[cfg(feature = "diagnostic-trace")]
+                let mut trace_stages = self.trace.as_ref().map(|_| Vec::with_capacity(11));
+                #[cfg(feature = "diagnostic-trace")]
+                let mut trace_update = self.trace.as_ref().map(|_| vec![0.; self.values.len()]);
                 self.k[0].copy_from_slice(&self.f);
                 for s in 1..12 {
                     for i in 0..self.values.len() {
@@ -298,8 +311,16 @@ impl Dop853 {
                             sum += A[s][j] * self.k[j][i];
                         }
                         self.stage[i] = self.values[i] + h * sum;
+                        #[cfg(feature = "diagnostic-trace")]
+                        if let Some(rows) = &mut trace_sums {
+                            rows[s - 1][i] = sum;
+                        }
                     }
                     finite(&self.stage)?;
+                    #[cfg(feature = "diagnostic-trace")]
+                    if let Some(rows) = &mut trace_stages {
+                        rows.push(self.stage.clone());
+                    }
                     self.stats.rhs_calls += 1;
                     rhs(self.time + C[s] * h, &self.stage, &mut self.k[s])?;
                     finite(&self.k[s])?;
@@ -310,6 +331,10 @@ impl Dop853 {
                         sum += B[j] * self.k[j][i];
                     }
                     self.trial[i] = self.values[i] + h * sum;
+                    #[cfg(feature = "diagnostic-trace")]
+                    if let Some(row) = &mut trace_update {
+                        row[i] = sum;
+                    }
                 }
                 finite(&self.trial)?;
                 self.stats.rhs_calls += 1;
@@ -331,6 +356,24 @@ impl Dop853 {
                     self.e3[i] = e3 / scale;
                 }
                 let error = grouped_error(&self.e5, &self.e3, h)?;
+                #[cfg(feature = "diagnostic-trace")]
+                if let Some(recorder) = &mut self.trace {
+                    recorder.record(&crate::trace::Attempt {
+                        kind: "attempt",
+                        time: self.time,
+                        next,
+                        packet_end: end,
+                        h,
+                        old: &self.values,
+                        k: &self.k,
+                        stage_sums: trace_sums.as_deref().ok_or("Missing trace sums")?,
+                        stages: trace_stages.as_deref().ok_or("Missing trace stages")?,
+                        update_sum: trace_update.as_deref().ok_or("Missing trace update")?,
+                        trial: &self.trial,
+                        error,
+                        accepted: error < 1.,
+                    })?;
+                }
                 if error < 1. {
                     let mut factor = if error == 0. {
                         10.
@@ -351,6 +394,23 @@ impl Dop853 {
                 rejected = true;
                 h_abs = h * (0.9 * error.powf(-1. / 8.)).max(0.2);
             }
+        }
+        #[cfg(feature = "diagnostic-trace")]
+        if let Some(recorder) = &mut self.trace {
+            recorder.flush()?;
+        }
+        Ok(())
+    }
+}
+
+#[cfg(feature = "diagnostic-trace")]
+impl Dop853 {
+    pub(crate) fn attach_trace(&mut self, trace: crate::trace::Recorder) {
+        self.trace = Some(trace);
+    }
+    pub(crate) fn finish_trace(&mut self) -> Result<(), String> {
+        if let Some(trace) = self.trace.take() {
+            trace.finish(self.stats)?;
         }
         Ok(())
     }

@@ -114,12 +114,15 @@ oracle. Самостоятельная точность новой модели 
 ## Проверенные участки реализации
 
 - [Совместная норма](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/src/solver.rs:75),
-  [контроллер и commit](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/src/solver.rs:247).
-- [Newton-адаптер](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/src/newton.rs:89),
-  [пакет физического состояния](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/src/newton.rs:195).
+  [контроллер и commit](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/src/solver.rs:251).
+- [Newton-адаптер](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/src/newton.rs:91),
+  [пакет физического состояния](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/src/newton.rs:199).
 - [Независимые аналитические тесты](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/tests/contract.rs:48),
   [сохранение при отказе](C:/Users/Admin/Desktop/Solar-simulator/rust/solar_adaptive/tests/contract.rs:119).
 - [Аудит](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_rust_adaptive.py:91),
   [контроль полноты результата](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_rust_adaptive.py:68),
   [негативные тесты отчёта](C:/Users/Admin/Desktop/Solar-simulator/tests/test_rust_adaptive_audit.py:23).
 - [Уведомление SciPy](../rust/solar_adaptive/LICENSE-SCIPY.txt).
+
+337: ссылки на функции обновлены после добавления отключённого recorder;
+исходные SHA/данные335 сохранены. [Побитный replay и локальная арифметика](rust-adaptive-trace-validation.md).

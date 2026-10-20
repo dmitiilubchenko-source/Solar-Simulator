@@ -4,6 +4,9 @@ version = "0.3.0"
 edition = "2021"
 publish = false
 
+[features]
+diagnostic-trace = []
+
 [dependencies]
 solar_core = { path = "../solar_core" }
 serde = { version = "1", features = ["derive"] }

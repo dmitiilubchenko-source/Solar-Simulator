@@ -111,3 +111,6 @@ JSON и исходный dirty-снимок сохранены в `.tools/rust33
 - [Точный3D-пример](C:/Users/Admin/Desktop/Solar-simulator/tests/test_rust_adaptive_diagnosis.py:13),
   [защита контекста Decimal](C:/Users/Admin/Desktop/Solar-simulator/tests/test_rust_adaptive_diagnosis.py:38),
   [отклонение повреждённых входов](C:/Users/Admin/Desktop/Solar-simulator/tests/test_rust_adaptive_diagnosis.py:83).
+
+337 выполнен: [запись и точный анализ](rust-adaptive-trace-validation.md).
+Все9 траекторий в3режимах прежние; следующий шаг уточнён там, результаты336 сохранены.

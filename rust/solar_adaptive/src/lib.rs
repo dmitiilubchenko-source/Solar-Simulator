@@ -2,6 +2,8 @@
 mod coefficients;
 mod newton;
 mod solver;
+#[cfg(feature = "diagnostic-trace")]
+mod trace;
 
 pub use newton::{NewtonRun, PhysicalSnapshot};
 pub use solver::{grouped_error, Config, Dop853, Snapshot, Statistics};

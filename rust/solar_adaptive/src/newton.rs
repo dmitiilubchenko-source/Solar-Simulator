@@ -84,6 +84,8 @@ pub struct NewtonRun {
     failed: bool,
     packets: usize,
     force_calls: usize,
+    #[cfg(feature = "diagnostic-trace")]
+    trace: Option<crate::trace::Recorder>,
 }
 impl NewtonRun {
     pub fn new(
@@ -176,6 +178,8 @@ impl NewtonRun {
             failed: false,
             packets: 0,
             force_calls: 0,
+            #[cfg(feature = "diagnostic-trace")]
+            trace: None,
         })
     }
     pub fn current(&self) -> PhysicalSnapshot {
@@ -226,6 +230,13 @@ impl NewtonRun {
                         local,
                         config,
                     )?);
+                    #[cfg(feature = "diagnostic-trace")]
+                    if let Some(trace) = self.trace.take() {
+                        solver
+                            .as_mut()
+                            .ok_or("Missing trace solver")?
+                            .attach_trace(trace);
+                    }
                 }
                 solver
                     .as_mut()
@@ -271,6 +282,31 @@ impl NewtonRun {
                 self.failed = true;
                 Err(error)
             }
+        }
+    }
+}
+
+#[cfg(feature = "diagnostic-trace")]
+impl NewtonRun {
+    /// Start a new diagnostic file before the first packet; two-body research only.
+    pub fn enable_trace(&mut self, path: &std::path::Path) -> Result<(), String> {
+        if self.masses.len() != 2 || self.solver.is_some() || self.trace.is_some() || self.failed {
+            return Err("Trace requires a fresh two-body Newton session".into());
+        }
+        self.trace = Some(crate::trace::Recorder::create(path)?);
+        Ok(())
+    }
+    /// Seal the diagnostic stream only after the requested horizon is committed.
+    pub fn finish_trace(&mut self) -> Result<(), String> {
+        if self.failed || self.committed.time != self.horizon {
+            return Err("Cannot finish an incomplete trace".into());
+        }
+        if let Some(solver) = &mut self.solver {
+            solver.finish_trace()
+        } else if let Some(trace) = self.trace.take() {
+            trace.finish(self.statistics())
+        } else {
+            Ok(())
         }
     }
 }

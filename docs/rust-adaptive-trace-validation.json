@@ -1,0 +1,1107 @@
+{
+  "protocol": "docs/rust-adaptive-trace-protocol.md",
+  "complete": true,
+  "all_modes_bitexact": true,
+  "runtime_modified": false,
+  "production_eligible": false,
+  "source_sha256": {
+    "docs/rust-adaptive-prototype-protocol.md": "373995246ed9269889a42fe12b86b6f9f5977020848affa1d160c35f639179dd",
+    "rust/solar_adaptive/Cargo.lock": "e88456727deadd89772939729e4f199b1b2baa3619540f0a60a59f9a3febc84c",
+    "rust/solar_adaptive/Cargo.toml": "b29aa0553f6e8af4ed652e0f6653ce43a7a90896240bbfb4630693d12635c6ab",
+    "rust/solar_adaptive/LICENSE-SCIPY.txt": "221e59f5e910fd7f94e44f0dac77436a11338c285c6346232e4a850a50da0e94",
+    "rust/solar_adaptive/src/coefficients.rs": "ca2fcc2ffda57474ad16761972983a1836d1e57d8dc17726aa26bddabfee4cee",
+    "rust/solar_adaptive/src/lib.rs": "4c9fe3787b5213a22cc2706d32b59c9c4410fe675a1093ff398968dacff75965",
+    "rust/solar_adaptive/src/main.rs": "54206c7eaf5706ecd644009985e6778481eb86a0778702a7526ba13ee52b2985",
+    "rust/solar_adaptive/src/newton.rs": "67d55b849b00b3a3f2f44b7eeb549138fdcc90e1f46fa118761523d3ce40627b",
+    "rust/solar_adaptive/src/solver.rs": "aedb17cf95d40973242e9aac676dc163aa2f2bd2d009da7029302fb8e6374e37",
+    "rust/solar_adaptive/src/trace.rs": "69a5a27475c5539706e95cfecf8de1754bd045ebf8af19bdccc2f1e1a5ffe370",
+    "rust/solar_adaptive/tests/contract.rs": "6fa5714980420ac60471bf8a5c557ff29f2fbdd8c3d0ffb0f3f8adf84b1107d2",
+    "rust/solar_adaptive/tests/trace.rs": "e837aeb76a6ed46d4a282e9b60c92185cfabc9addc0efa6c2e98dee4dec0be6e",
+    "rust/solar_core/Cargo.lock": "e9929d38e48cce2af2c2e8c064d69db44d241a07ca16549afa667834152a9310",
+    "rust/solar_core/Cargo.toml": "31aecbab0975c2a657e0379d648d3dc78dc270bde37b4396e78de6f38506fd77",
+    "rust/solar_core/src/lib.rs": "6df5a41ccdcd9ea2317d4e25db82a5074c1029cb2099142029a88d93781608ad",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "scripts/assess_continuous.py": "9cb3f746825ff4327d99b04f83c2a47dbe99ca3869111a56a4cbf94fca2d9823",
+    "scripts/assess_ias15.py": "2c007ffc29ed96af0718807cf82f0877090474cdd5733a83ab6d9b7e35d7ec3a",
+    "scripts/assess_kepler_holdout.py": "d3082ee6eec7164b505530f06dd28412d9d74985d49256bea9542e8a22b5ad50",
+    "scripts/assess_kepler_phase.py": "f0b2f6bece3a7653efd883f7041e1ee2d5fb2fcf13d91331fb70b406d24d3677",
+    "scripts/assess_rust_adaptive.py": "de7beb6a14652d13c6f808dc07590f5abf67c50b8f3e3c599875d9d6cdaf0ba6",
+    "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+    "scripts/ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+    "scripts/kepler_reference.py": "abc7f6f010049d489c71d5331e7942c786600432097b72d94204ff26cc9c14a2",
+    "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src/solar_simulator/vector3.py": "88f5fe1bb4c19c41ef5210b7d8d6f4ad874bed1ed7baed0c784618737b67274b",
+    "docs/rust-adaptive-trace-protocol.md": "97f566005f551297d7a15d28cb159b02c7f25610892c0b6b9664d49a9131523a",
+    "scripts/assess_rust_trace.py": "8941130b155ac36834ac586dcbbbaf20e91fc43887c05a73d247a1dcb99e6f68"
+  },
+  "historical_source_commit": "c60e1e22335d4e5faf0471f2b35e1c133bd6c44a",
+  "historical_sources_verified": [
+    "rust/solar_adaptive/Cargo.toml",
+    "rust/solar_adaptive/src/lib.rs",
+    "rust/solar_adaptive/src/main.rs",
+    "rust/solar_adaptive/src/newton.rs",
+    "rust/solar_adaptive/src/solver.rs"
+  ],
+  "binary_sha256": {
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\rust337\\target-default\\release\\solar_adaptive_research.exe": "d1702ca39ddd94530197ff968a7d1bf52a5710431b26e48d2970dfbfb075861b",
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\rust337\\target-trace\\release\\solar_adaptive_research.exe": "120a503f6e70bf59bdfaa4081a02ad04369d7093a0adae97e1302a4a5698d3ca"
+  },
+  "input_sha256": {
+    "docs/rust-adaptive-prototype-validation.json": "a49ec0d43894137589911dc47241b953f7ee907bcffd82bd4ab2207acff54256",
+    "docs/rust-adaptive-prototype-samples.npz": "15d26eb8005626b1382ed28223349096dbc1ef81d5f1613cf5ba96d2b6c59da4"
+  },
+  "provenance": {
+    "commit": "2388ced6a2e7b909e00b03618ad60d196289190e",
+    "git_status": " M rust/solar_adaptive/Cargo.toml\n M rust/solar_adaptive/src/lib.rs\n M rust/solar_adaptive/src/main.rs\n M rust/solar_adaptive/src/newton.rs\n M rust/solar_adaptive/src/solver.rs\n?? docs/rust-adaptive-trace-protocol.md\n?? rust/solar_adaptive/src/trace.rs\n?? rust/solar_adaptive/tests/trace.rs\n?? scripts/assess_rust_trace.py\n?? tests/test_rust_trace.py\n",
+    "tracked_patch_sha256": "71d2e5a843a1113ed8a3bb8cc83fd4b2de54d72defb9718432b091add73430c3",
+    "untracked_archive_sha256": "ce8c3e77d682ae72dbe945f0c87be8a7af890e8981e8028fcc84c09041ed2e66",
+    "untracked_source_sha256": {
+      "docs/rust-adaptive-trace-protocol.md": "97f566005f551297d7a15d28cb159b02c7f25610892c0b6b9664d49a9131523a",
+      "rust/solar_adaptive/src/trace.rs": "69a5a27475c5539706e95cfecf8de1754bd045ebf8af19bdccc2f1e1a5ffe370",
+      "rust/solar_adaptive/tests/trace.rs": "e837aeb76a6ed46d4a282e9b60c92185cfabc9addc0efa6c2e98dee4dec0be6e",
+      "scripts/assess_rust_trace.py": "8941130b155ac36834ac586dcbbbaf20e91fc43887c05a73d247a1dcb99e6f68",
+      "tests/test_rust_trace.py": "3f655536e73653ba62743d30b6e8833eb030d87a93272cdadd2a550c18e6ef3b"
+    },
+    "snapshot_directory": ".tools/rust337/audit/result-sources"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "build_flags": {
+      "RUSTFLAGS": null,
+      "CARGO_ENCODED_RUSTFLAGS": null,
+      "CARGO_PROFILE_RELEASE_OPT_LEVEL": null,
+      "CARGO_PROFILE_RELEASE_LTO": null,
+      "CARGO_PROFILE_RELEASE_CODEGEN_UNITS": null
+    }
+  },
+  "results": {
+    "holdout_circular": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.02038699999684468
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.021741600008681417
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.018972999998368323
+        }
+      },
+      "original_gate_passed": true,
+      "trace_path": ".tools/rust337/audit/holdout_circular-trace.jsonl",
+      "trace_sha256": "19584b388231fb9167badbf4f9fdc6c8b7491820414ee451f229103e2998baf6",
+      "trace_bytes": 2641032,
+      "local_analysis": {
+        "attempts": 273,
+        "accepted": 273,
+        "rejected": 0,
+        "packets": 131,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 0.0001268580502789361,
+              "velocity_m_per_s": 1.8322243240056364e-11
+            },
+            "multiply": {
+              "position_metres": 9.493054809201555e-07,
+              "velocity_m_per_s": 2.2290338169778817e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.8189894035458565e-12
+            },
+            "total": {
+              "position_metres": 0.00012873983571617264,
+              "velocity_m_per_s": 1.8055162936779422e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 1.2001872597976107e-05,
+              "velocity_m_per_s": 2.604825782863815e-12
+            },
+            "multiply": {
+              "position_metres": 9.337348178029487e-07,
+              "velocity_m_per_s": 2.1540417488152017e-13
+            },
+            "addition": {
+              "position_metres": 1.4781951904296875e-05,
+              "velocity_m_per_s": 1.8189894035458565e-12
+            },
+            "total": {
+              "position_metres": 1.6633395483550908e-05,
+              "velocity_m_per_s": 3.0273327950905423e-12
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            "multiply": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            "addition": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            "total": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          -9.00643783366262e-05,
+          -7.306607748838461e-05,
+          1.4895081482023816e-05,
+          -1.9235524202557084e-11,
+          -2.1924158855380385e-11,
+          -7.116625886783795e-12
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.0010357908214413615,
+          0.0007622070512316571,
+          0.0005557402393264932,
+          1.9974433142372986e-10,
+          1.8431251787576394e-10,
+          9.937468531209577e-11
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 3.2030992999789305
+    },
+    "holdout_moderate": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.012735199998132885
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.011336399998981506
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.019529699988197535
+        }
+      },
+      "original_gate_passed": true,
+      "trace_path": ".tools/rust337/audit/holdout_moderate-trace.jsonl",
+      "trace_sha256": "8de93c4c46801bbd1c6d2ce513e6334e5342b10352a620ca6dd860a03e3c1471",
+      "trace_bytes": 3365237,
+      "local_analysis": {
+        "attempts": 350,
+        "accepted": 348,
+        "rejected": 2,
+        "packets": 131,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 7.898602591907845e-05,
+              "velocity_m_per_s": 2.066230937760168e-11
+            },
+            "multiply": {
+              "position_metres": 8.780238845483655e-07,
+              "velocity_m_per_s": 2.1949966275882214e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 3.637978807091713e-12
+            },
+            "total": {
+              "position_metres": 7.606504540556312e-05,
+              "velocity_m_per_s": 2.0228984601680365e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 1.1736055862276248e-05,
+              "velocity_m_per_s": 2.240258931524318e-12
+            },
+            "multiply": {
+              "position_metres": 9.256218265476189e-07,
+              "velocity_m_per_s": 2.142857795393942e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 3.623767952376511e-12
+            },
+            "total": {
+              "position_metres": 1.9952389991054358e-05,
+              "velocity_m_per_s": 3.699571938607007e-12
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 1.8585943668293755e-06,
+              "velocity_m_per_s": 1.4123464085206012e-12
+            },
+            "multiply": {
+              "position_metres": 1.7310564035108097e-07,
+              "velocity_m_per_s": 1.689991166518615e-13
+            },
+            "addition": {
+              "position_metres": 1.8477439880371094e-06,
+              "velocity_m_per_s": 1.5916157281026244e-12
+            },
+            "total": {
+              "position_metres": 1.839114248218084e-06,
+              "velocity_m_per_s": 1.7211090802888917e-12
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          -8.096727408105044e-05,
+          0.00012902225807867785,
+          6.635695144684132e-05,
+          -2.347157610670091e-11,
+          7.318932912788317e-12,
+          -7.339819614506633e-12
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.0011878783904350355,
+          0.001267739122303897,
+          0.0007022486756384211,
+          3.1122018109322424e-10,
+          2.528556739684128e-10,
+          1.4910369785162746e-10
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 4.128668800054584
+    },
+    "holdout_original": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.014389900024980307
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.013585400010924786
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.028849299997091293
+        }
+      },
+      "original_gate_passed": false,
+      "trace_path": ".tools/rust337/audit/holdout_original-trace.jsonl",
+      "trace_sha256": "3c88e969fec88e991aa5d95b97fe0492c70f4b7701cc60ad366c11e0f4b900a5",
+      "trace_bytes": 6243811,
+      "local_analysis": {
+        "attempts": 655,
+        "accepted": 637,
+        "rejected": 18,
+        "packets": 131,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 4.109165766652503e-05,
+              "velocity_m_per_s": 5.743927634970727e-11
+            },
+            "multiply": {
+              "position_metres": 4.750372681992668e-07,
+              "velocity_m_per_s": 4.5345110732869187e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 5.3613186858644555e-05,
+              "velocity_m_per_s": 5.687344354804037e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 6.827147374693631e-06,
+              "velocity_m_per_s": 6.241217569922343e-12
+            },
+            "multiply": {
+              "position_metres": 4.760660789052736e-07,
+              "velocity_m_per_s": 4.545712274415468e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 1.8504761448589678e-05,
+              "velocity_m_per_s": 1.7601552464448508e-11
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 8.852596196962382e-07,
+              "velocity_m_per_s": 5.492807256367163e-12
+            },
+            "multiply": {
+              "position_metres": 5.392583285425065e-08,
+              "velocity_m_per_s": 3.76103895407693e-13
+            },
+            "addition": {
+              "position_metres": 9.5367431640625e-07,
+              "velocity_m_per_s": 1.2732925824820995e-11
+            },
+            "total": {
+              "position_metres": 1.535231900304395e-06,
+              "velocity_m_per_s": 1.4929371862968975e-11
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          -2.4688225694255987e-05,
+          -0.00023067727515425064,
+          1.9054746092164003e-06,
+          1.5841579029616234e-10,
+          1.4879051161130957e-11,
+          -4.832291577521632e-11
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.001113817229722628,
+          0.002201388425205679,
+          0.001083765551490504,
+          1.194167405545788e-09,
+          9.429456448945914e-10,
+          5.853218225408532e-10
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 7.399917799979448
+    },
+    "holdout_permuted": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.013650700042489916
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.014309099991805851
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.029512299981433898
+        }
+      },
+      "original_gate_passed": false,
+      "trace_path": ".tools/rust337/audit/holdout_permuted-trace.jsonl",
+      "trace_sha256": "591999e981de23eb7203e73d2008fbe8cca97cfb89cd4bb37cffbb96b792ee52",
+      "trace_bytes": 6214560,
+      "local_analysis": {
+        "attempts": 659,
+        "accepted": 641,
+        "rejected": 18,
+        "packets": 131,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 3.911171825390719e-05,
+              "velocity_m_per_s": 4.718618126987111e-11
+            },
+            "multiply": {
+              "position_metres": 4.5922377716193824e-07,
+              "velocity_m_per_s": 4.5378080146247205e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 4.530875780158522e-05,
+              "velocity_m_per_s": 5.024192047146546e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 6.489354525218597e-06,
+              "velocity_m_per_s": 7.010137522721746e-12
+            },
+            "multiply": {
+              "position_metres": 4.59708990915988e-07,
+              "velocity_m_per_s": 4.494614672040053e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.432454155292362e-11
+            },
+            "total": {
+              "position_metres": 1.8315246777860794e-05,
+              "velocity_m_per_s": 1.5986621474572025e-11
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 6.870874365629072e-07,
+              "velocity_m_per_s": 5.251562942274903e-12
+            },
+            "multiply": {
+              "position_metres": 5.185193270780021e-08,
+              "velocity_m_per_s": 4.075178984307288e-13
+            },
+            "addition": {
+              "position_metres": 7.152557373046875e-07,
+              "velocity_m_per_s": 1.318767317570746e-11
+            },
+            "total": {
+              "position_metres": 1.0135727181274745e-06,
+              "velocity_m_per_s": 1.4093581283390713e-11
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          0.0001998974245735498,
+          0.00012596759160893377,
+          -0.0001350069168739138,
+          -3.3721894100018346e-11,
+          3.415197132646491e-11,
+          4.848292371542285e-11
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.0022294680020447646,
+          0.0010801734445777182,
+          0.0011616661907903906,
+          9.055783456525614e-10,
+          5.96336880295507e-10,
+          1.0945580866304642e-09
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 8.084771100024227
+    },
+    "holdout_apocentre": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.013449200021568686
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.01506349997362122
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.03182620002189651
+        }
+      },
+      "original_gate_passed": false,
+      "trace_path": ".tools/rust337/audit/holdout_apocentre-trace.jsonl",
+      "trace_sha256": "7d296ee9fee9ae0dd852839c7bd78fef8946a6b5516f31ac718b88c36d293546",
+      "trace_bytes": 6186446,
+      "local_analysis": {
+        "attempts": 650,
+        "accepted": 630,
+        "rejected": 20,
+        "packets": 131,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 3.6526839259275326e-05,
+              "velocity_m_per_s": 5.0471432278095686e-11
+            },
+            "multiply": {
+              "position_metres": 4.711116012501488e-07,
+              "velocity_m_per_s": 4.5313326619215093e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 4.004603677184659e-05,
+              "velocity_m_per_s": 4.9312489475222465e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 7.038924721011928e-06,
+              "velocity_m_per_s": 6.5801850586041785e-12
+            },
+            "multiply": {
+              "position_metres": 4.654367836812482e-07,
+              "velocity_m_per_s": 4.477741156298234e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 1.7442798139927437e-05,
+              "velocity_m_per_s": 1.4922277405790873e-11
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 8.95230183337499e-07,
+              "velocity_m_per_s": 7.785157135455878e-12
+            },
+            "multiply": {
+              "position_metres": 2.3385878878157975e-07,
+              "velocity_m_per_s": 3.808989711831842e-13
+            },
+            "addition": {
+              "position_metres": 6.67572021484375e-06,
+              "velocity_m_per_s": 1.3869794202037156e-11
+            },
+            "total": {
+              "position_metres": 6.802802339934707e-06,
+              "velocity_m_per_s": 1.644713332708247e-11
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          -3.721267644128561e-05,
+          0.0001055120846913492,
+          -1.3655847906835461e-05,
+          -3.423779564120136e-11,
+          -7.457577800987055e-11,
+          -1.1027002038571103e-12
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.0011716124407395616,
+          0.0022117185770212404,
+          0.0011320271384882743,
+          1.0142938394424453e-09,
+          9.259316241416758e-10,
+          5.768813761233844e-10
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 8.362209899991285
+    },
+    "holdout_eccentric_phase": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.015590300026815385
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.013495800027158111
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.030527900031302124
+        }
+      },
+      "original_gate_passed": true,
+      "trace_path": ".tools/rust337/audit/holdout_eccentric_phase-trace.jsonl",
+      "trace_sha256": "ba2629035df2c85825bfacb781826f155a897f69898e54c4763ac9d64ce68dee",
+      "trace_bytes": 6720253,
+      "local_analysis": {
+        "attempts": 705,
+        "accepted": 685,
+        "rejected": 20,
+        "packets": 131,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 4.2647067076587015e-05,
+              "velocity_m_per_s": 5.465501831431118e-11
+            },
+            "multiply": {
+              "position_metres": 4.4423505483003577e-07,
+              "velocity_m_per_s": 4.546668434885569e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 4.5062550854000906e-05,
+              "velocity_m_per_s": 5.95192136052369e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 6.045264573534926e-06,
+              "velocity_m_per_s": 8.968315989683786e-12
+            },
+            "multiply": {
+              "position_metres": 4.382257539285836e-07,
+              "velocity_m_per_s": 4.474733421877309e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 1.6824220636337414e-05,
+              "velocity_m_per_s": 1.766771130809395e-11
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 2.179542647109279e-06,
+              "velocity_m_per_s": 8.432380620517707e-12
+            },
+            "multiply": {
+              "position_metres": 2.1631589014119254e-07,
+              "velocity_m_per_s": 8.407965357841546e-13
+            },
+            "addition": {
+              "position_metres": 1.1444091796875e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 1.2772131994116775e-05,
+              "velocity_m_per_s": 1.7475295640916585e-11
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          -7.206777034281562e-06,
+          8.414487319264456e-05,
+          -0.00012141038562044701,
+          1.2985282216661293e-10,
+          1.442549445874287e-10,
+          4.416128635811159e-11
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.0010679889121249177,
+          0.002110338904020937,
+          0.0011450484983608047,
+          1.2931483190901514e-09,
+          1.399924780532217e-09,
+          7.607636065437516e-10
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 8.170270700007677
+    },
+    "original_0.0": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.012869699974544346
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.012203100020997226
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.019719599978998303
+        }
+      },
+      "original_gate_passed": true,
+      "trace_path": ".tools/rust337/audit/original_0.0-trace.jsonl",
+      "trace_sha256": "d2b60b593ee5348985dbee6310724b695521b96c44b86e724df3e5e788f07d2e",
+      "trace_bytes": 2604550,
+      "local_analysis": {
+        "attempts": 270,
+        "accepted": 270,
+        "rejected": 0,
+        "packets": 112,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 0.00011012972227924562,
+              "velocity_m_per_s": 1.9473612145119955e-11
+            },
+            "multiply": {
+              "position_metres": 9.481619009989398e-07,
+              "velocity_m_per_s": 2.2619809080085463e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.8189894035458565e-12
+            },
+            "total": {
+              "position_metres": 0.00010866093337650158,
+              "velocity_m_per_s": 1.9357095670785304e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 1.6067462860972126e-05,
+              "velocity_m_per_s": 3.3452502081974465e-12
+            },
+            "multiply": {
+              "position_metres": 9.504291206369832e-07,
+              "velocity_m_per_s": 2.059408894729194e-13
+            },
+            "addition": {
+              "position_metres": 1.5139579772949219e-05,
+              "velocity_m_per_s": 1.8189894035458565e-12
+            },
+            "total": {
+              "position_metres": 1.5875707992409206e-05,
+              "velocity_m_per_s": 3.3604617069885305e-12
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            "multiply": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            "addition": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            "total": {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          -7.72257252907164e-05,
+          5.8155883275045764e-05,
+          1.5788656602209532e-05,
+          -3.662690617275879e-11,
+          -3.6614231231789136e-12,
+          -1.7790902009920694e-12
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.0011466653000210374,
+          0.0007063076112572176,
+          0.0005089660654418978,
+          1.7409546918228963e-10,
+          1.8098184437407086e-10,
+          1.0172796339122553e-10
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 3.0479995000059716
+    },
+    "original_0.5": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.012800600030459464
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.012003299954812974
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.02134380000643432
+        }
+      },
+      "original_gate_passed": true,
+      "trace_path": ".tools/rust337/audit/original_0.5-trace.jsonl",
+      "trace_sha256": "2e5f53455161000a22b5c1569db274cefc5ccbbc8af78b9006b89a73c9b4c159",
+      "trace_bytes": 3360571,
+      "local_analysis": {
+        "attempts": 349,
+        "accepted": 347,
+        "rejected": 2,
+        "packets": 112,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 8.382601197812919e-05,
+              "velocity_m_per_s": 2.0368100700941198e-11
+            },
+            "multiply": {
+              "position_metres": 9.202756660875704e-07,
+              "velocity_m_per_s": 2.2718610802053198e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 3.637978807091713e-12
+            },
+            "total": {
+              "position_metres": 8.460118770756687e-05,
+              "velocity_m_per_s": 1.973517021447969e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 1.125701180012693e-05,
+              "velocity_m_per_s": 2.6323265898048495e-12
+            },
+            "multiply": {
+              "position_metres": 9.224219153229803e-07,
+              "velocity_m_per_s": 2.2014238816038788e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 3.637978807091713e-12
+            },
+            "total": {
+              "position_metres": 2.062382876439136e-05,
+              "velocity_m_per_s": 4.5356139669196944e-12
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 1.5871984667098502e-06,
+              "velocity_m_per_s": 1.033852645841545e-12
+            },
+            "multiply": {
+              "position_metres": 1.2740682302610695e-07,
+              "velocity_m_per_s": 5.788897255874897e-14
+            },
+            "addition": {
+              "position_metres": 3.2186508178710938e-06,
+              "velocity_m_per_s": 2.1600499167107046e-12
+            },
+            "total": {
+              "position_metres": 4.0380382360017385e-06,
+              "velocity_m_per_s": 2.2285266050815963e-12
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          8.21646012281478e-05,
+          -4.464987609747552e-05,
+          4.362430298342631e-05,
+          -1.8019588083163669e-12,
+          -4.200351867976917e-11,
+          -1.2166141309618704e-11
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.001111933944597297,
+          0.0012911386201037202,
+          0.0006828162380880719,
+          3.0431373723446593e-10,
+          2.873216918403301e-10,
+          1.6710052241471688e-10
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 5.268753400014248
+    },
+    "original_0.95": {
+      "modes": {
+        "plain": {
+          "bitexact": true,
+          "process_seconds": 0.01494220003951341
+        },
+        "feature_idle": {
+          "bitexact": true,
+          "process_seconds": 0.013753200008068234
+        },
+        "recording": {
+          "bitexact": true,
+          "process_seconds": 0.03289800003403798
+        }
+      },
+      "original_gate_passed": false,
+      "trace_path": ".tools/rust337/audit/original_0.95-trace.jsonl",
+      "trace_sha256": "abcdb3b367d6110c47f028d1b7a46f4f26386da5993020a8ca55b44d5360232c",
+      "trace_bytes": 6298288,
+      "local_analysis": {
+        "attempts": 661,
+        "accepted": 642,
+        "rejected": 19,
+        "packets": 112,
+        "max_abs_relative_component": {
+          "stages": {
+            "dot": {
+              "position_metres": 5.795543903385755e-05,
+              "velocity_m_per_s": 5.233825545476133e-11
+            },
+            "multiply": {
+              "position_metres": 4.58677551411137e-07,
+              "velocity_m_per_s": 4.5345110732869187e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 4.7732346887386365e-05,
+              "velocity_m_per_s": 5.002735107375096e-11
+            }
+          },
+          "accepted_update": {
+            "dot": {
+              "position_metres": 5.247705026585998e-06,
+              "velocity_m_per_s": 6.241217569922343e-12
+            },
+            "multiply": {
+              "position_metres": 4.7115644759439766e-07,
+              "velocity_m_per_s": 4.528163636421482e-13
+            },
+            "addition": {
+              "position_metres": 1.52587890625e-05,
+              "velocity_m_per_s": 1.4551915228366852e-11
+            },
+            "total": {
+              "position_metres": 1.659624355915632e-05,
+              "velocity_m_per_s": 1.651927576029435e-11
+            }
+          },
+          "rejected_update": {
+            "dot": {
+              "position_metres": 9.06707942549171e-07,
+              "velocity_m_per_s": 5.317507610090866e-12
+            },
+            "multiply": {
+              "position_metres": 2.0938427212236637e-07,
+              "velocity_m_per_s": 4.4257824379708984e-13
+            },
+            "addition": {
+              "position_metres": 9.059906005859375e-06,
+              "velocity_m_per_s": 1.318767317570746e-11
+            },
+            "total": {
+              "position_metres": 8.555017293623697e-06,
+              "velocity_m_per_s": 1.4784316969092158e-11
+            }
+          }
+        },
+        "accepted_addition_signed_component_sum": [
+          -1.004370430988664e-05,
+          9.848745005006696e-05,
+          -6.943938576993077e-05,
+          1.2291020113484398e-10,
+          -5.830705630919902e-11,
+          -5.02146318492765e-11
+        ],
+        "accepted_addition_absolute_component_sum": [
+          0.0011364206284789008,
+          0.0022817412147314677,
+          0.0011639061614954185,
+          1.1874937340201113e-09,
+          9.064348380384429e-10,
+          6.156615080615549e-10
+        ],
+        "units_of_sums": [
+          "m",
+          "m",
+          "m",
+          "m/s",
+          "m/s",
+          "m/s"
+        ],
+        "global_error_bound": false,
+        "all_recorded_operations_replayed_bitexact": true,
+        "all_local_identities_exact": true
+      },
+      "analysis_seconds": 8.150287800002843
+    }
+  },
+  "source_unchanged": true,
+  "input_unchanged": true,
+  "original_passed_cases": 5,
+  "original_failed_cases": 4,
+  "wall_seconds": 56.477657299954444,
+  "publication": {
+    "raw_receipt_sha256": "b0aad29531e59306993406090fb1206aa81f8150f01817acf69ffd9f08faaa6a",
+    "preserved_executable_sha256": {
+      ".tools/rust337/audited-default.exe": "d1702ca39ddd94530197ff968a7d1bf52a5710431b26e48d2970dfbfb075861b",
+      ".tools/rust337/audited-trace.exe": "120a503f6e70bf59bdfaa4081a02ad04369d7093a0adae97e1302a4a5698d3ca"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "toolchain": {
+      "rustc": "rustc 1.99.0 (b940084d7 2026-09-28)",
+      "cargo": "cargo 1.99.0 (5f94df478 2026-08-27)"
+    },
+    "tests": {
+      "python_related": 55,
+      "python_seconds": 3.74,
+      "skips": 0,
+      "new_python": 8,
+      "rust_default_debug": 12,
+      "rust_all_features_debug": 15,
+      "rust_all_features_release": 15,
+      "fmt_crates": 3,
+      "full_production_suite_repeated": false
+    },
+    "trace_bytes": 43634748,
+    "component_decompositions": 658368,
+    "new_accuracy_claim": false,
+    "new_speed_claim": false,
+    "portable_built": false
+  }
+}
