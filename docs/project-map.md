@@ -235,3 +235,11 @@ check_project --require-native не ослаблен. Приёмка новог�
 [audit_dop853_coefficients](../scripts/audit_dop853_coefficients.py) и
 test_dop853_coefficients.py. Проверяет literal/binary64 A/B/C и200 автономных
 rooted-tree условий до8; не меняет solver и не квалифицирует орбиты.
+
+[Literal-table shadow347](dop853-literal-shadow-validation.md),
+[протокол](dop853-literal-shadow-protocol.md),
+[receipt](dop853-literal-shadow-validation.json) и
+[Decimal samples](dop853-literal-shadow-samples.npz):
+[assess_literal_shadow](../scripts/assess_literal_shadow.py) меняет только A/B
+в исследовании338/339; binary80 replay всех27вариантов точный, runtime прежний.
+test_literal_shadow.py проверяет driver и воспроизводит все метрики из NPZ.
