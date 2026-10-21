@@ -223,3 +223,8 @@ Python/Tcl настройки и изолирует font/recovery-файлы; о
 [workflow](../.github/workflows/checks.yml) связывают явные ограниченные
 подмножества с проверками GitHub. .github включена в общий inventory; полный
 check_project --require-native не ослаблен. Приёмка нового ZIP отдельно.
+
+
+[Итог исправлений341–345](review-followup-validation.md) сохраняет исходный
+полныйFAIL и пределы измерений. Точные старые [PlotArtists](../scripts/validation/plot_artists_before344.py)
+нужны только для SHA-привязки исторического JPL440, не запускаются какruntime.

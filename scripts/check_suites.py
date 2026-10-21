@@ -11,6 +11,7 @@ SUITES={
     'python':[
         'tests/test_vector3.py','tests/test_simulation.py','tests/test_storage.py',
         'tests/test_environment_check.py','tests/test_gui_process_encoding.py','tests/test_project_links.py',
+        'tests/test_nominal_jpl_audit.py',
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[sun-earth-rust]',
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[spheres-rust]'],
     'desktop':[

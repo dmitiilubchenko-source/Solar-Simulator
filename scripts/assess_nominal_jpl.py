@@ -28,6 +28,8 @@ SOURCE_SNAPSHOT_SHA256 = 'a810441919c0ea429e43f66242f3d41ad58e4b0ba462bcaefab89b
 SOURCE_FILE_SNAPSHOTS = {
     'src/solar_simulator/vector3.py': ('scripts/validation/vector3_before331.py',
         '479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2'),
+    'src/solar_simulator/plot_artists.py': ('scripts/validation/plot_artists_before344.py',
+        '7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661'),
 }
 
 

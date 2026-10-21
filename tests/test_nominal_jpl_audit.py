@@ -27,6 +27,20 @@ def test_frozen_payload_and_raw_data_qualify_without_network_or_propagation(evid
     assert module.validate_probe(evidence)['Moon-Earth']['position_metres'] < .2
 
 
+def test_historical_plot_snapshot_is_verified_by_its_original_bytes(tmp_path,monkeypatch):
+    name='src/solar_simulator/plot_artists.py'
+    snapshot,expected=module.SOURCE_FILE_SNAPSHOTS[name]
+    original=(module.ROOT/snapshot).read_bytes()
+    assert module.digest(original)==expected
+    current=tmp_path/name;current.parent.mkdir(parents=True);current.write_bytes(b'new runtime bytes')
+    frozen=tmp_path/snapshot;frozen.parent.mkdir(parents=True);frozen.write_bytes(original)
+    monkeypatch.setattr(module,'ROOT',tmp_path)
+    module.verify_frozen_sources({name:expected})
+    frozen.write_bytes(original+b'changed')
+    with pytest.raises(ValueError,match='Frozen source SHA mismatch'):
+        module.verify_frozen_sources({name:expected})
+
+
 def test_archive_byte_tampering_is_rejected_before_parsing(tmp_path):
     raw = (module.ROOT/module.ARCHIVE).read_bytes()
     path = tmp_path/'altered.zip'
