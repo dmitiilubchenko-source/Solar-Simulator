@@ -291,7 +291,7 @@ class Laboratory:
                            velocity_atol=float(self.velocity_atol.get()),physics=self.physics.get(),
                            figures=self._selected_figures(experiment,new=True),relative_pair=self._selected_pair(experiment,new=True),
                            error_control=self.error_control.get())
-        self._set_experiment(create_experiment(experiment.bodies, settings,origin=experiment.origin))
+        self._replace_experiment(create_experiment(experiment.bodies, settings,origin=experiment.origin))
 
     def _select_scenario(self):
         from .application_profiles import scenario
@@ -302,18 +302,18 @@ class Laboratory:
     def _open_lunar_rotation(self):
         from .application_profiles import lunar_rotation
         prepared=lunar_rotation(backend=self.backend.get())
-        self._set_experiment(prepared)
+        self._replace_experiment(prepared)
         self.scenario.set("solar-system-moon")
 
     def _reset(self):
-        self._set_experiment(reset(self.experiment),parent_snapshot=self.parent_snapshot)
+        self._replace_experiment(reset(self.experiment),parent_snapshot=self.parent_snapshot)
 
     def _load(self):
         path=filedialog.askopenfilename(parent=self.root,filetypes=[("Solar JSON","*.json")])
         if path:
             from .branch_io import open_experiment
             experiment,snapshot=open_experiment(path)
-            self._set_experiment(experiment,parent_snapshot=snapshot)
+            self._replace_experiment(experiment,parent_snapshot=snapshot)
 
     def _save(self):
         path=filedialog.asksaveasfilename(parent=self.root,defaultextension=".json",
@@ -608,9 +608,9 @@ class Laboratory:
     def _open_solar_sandbox(self):
         from .solar_profiles import solar_sandbox
         result=solar_sandbox(profile=self.solar_profile.get(),backend=self.backend.get())
+        self._replace_experiment(result)
         self.view.set("Все тела")
         self.reference.set("Инерциальная")
-        self._set_experiment(result)
         self.scenario.set("solar-system-moon")
 
     def _add_body(self):
@@ -733,7 +733,7 @@ class Laboratory:
             raise ValueError('Восстановление требует паузы и завершения пакета')
         from .branch_io import open_experiment
         experiment,snapshot=open_experiment(path)
-        self._set_experiment(experiment,parent_snapshot=snapshot)
+        self._replace_experiment(experiment,parent_snapshot=snapshot)
 
     def _record_trajectory(self):
         from datetime import datetime,timezone
@@ -784,7 +784,7 @@ class Laboratory:
         dialog.transient(self.root);dialog.grab_set()
         dialog.columnconfigure(0,weight=1);dialog.rowconfigure(2,weight=1)
         ttk.Label(dialog,text=f'Каталог: {recovery_directory()}',wraplength=760).grid(row=0,column=0,columnspan=2,padx=12,pady=8)
-        ttk.Label(dialog,text='Открытие заменит текущий опыт; сначала сохраните его.\n'
+        ttk.Label(dialog,text='Перед открытием текущий опыт получит recovery-копию.\n'
                   'Копии рядом с CLI output открываются через «Открыть JSON».',wraplength=760).grid(row=1,column=0,columnspan=2,padx=12)
         tree=ttk.Treeview(dialog,columns=('copy',),show='headings',height=10)
         tree.heading('copy',text='Копия (новые сверху; дата имени — UTC)')
@@ -804,6 +804,21 @@ class Laboratory:
         if not paths:ttk.Label(dialog,text='Сохранённых локальных копий нет.').grid(row=4,column=0,columnspan=2,pady=6)
         ttk.Button(dialog,text='Закрыть список',command=dialog.destroy).grid(row=5,column=0,columnspan=2,pady=6)
         return dialog
+
+    def _replace_experiment(self,experiment,*,parent_snapshot=None):
+        """Validate the candidate, persist the old result, then replace the window state."""
+        if self.closed or self.future is not None or self.running or self._stop_requested:
+            raise ValueError('Смена опыта требует паузы и завершения текущего пакета')
+        if parent_snapshot is None:
+            from .storage import from_document,to_document
+            from_document(to_document(experiment))
+        else:
+            from .sandbox import ExperimentBranch,from_branch_document,to_branch_document
+            from_branch_document(to_branch_document(ExperimentBranch(parent_snapshot,experiment)))
+        from .recovery import save_recovery
+        path=save_recovery(self.experiment,parent_snapshot=self.parent_snapshot,reason='replaced')
+        self.last_recovery_path=path
+        self._set_experiment(experiment,parent_snapshot=parent_snapshot)
 
 
 def launch(experiment=None, *, parent_snapshot=None):

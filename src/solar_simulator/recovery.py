@@ -8,7 +8,7 @@ from .branch_io import save_experiment
 
 
 def save_recovery(experiment, *, parent_snapshot=None, directory=None, reason='stopped'):
-    if reason not in ('stopped', 'closed', 'interrupted', 'failed'):
+    if reason not in ('stopped', 'closed', 'interrupted', 'failed', 'replaced'):
         raise ValueError('Unknown recovery reason')
     if directory is None:directory = recovery_directory()
     stamp = datetime.now(timezone.utc).strftime('%Y%m%d-%H%M%S')

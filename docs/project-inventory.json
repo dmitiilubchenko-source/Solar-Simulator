@@ -863,6 +863,7 @@
       "tests/test_ephemerides.py",
       "tests/test_error_control.py",
       "tests/test_experiment.py",
+      "tests/test_experiment_transition_gui.py",
       "tests/test_external_metric.py",
       "tests/test_fixed_j2_ias.py",
       "tests/test_fixed_j2_year.py",
