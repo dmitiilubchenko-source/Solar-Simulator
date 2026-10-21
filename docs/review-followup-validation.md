@@ -53,7 +53,7 @@ SHA256 7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661
 совпадает с исходным frozen annualreceipt. Прежний verifier получил явную
 привязку; JSON/NPZ/архивы/пороги не менялись.16относящихся тестов прошли3.32с,
 включая порчу snapshot; старая440-эпохальная проверка воспроизводится офлайн.
-Эта проверка добавлена и в Python CI. Полный строгий повтор выполняется отдельно.
+Эта проверка добавлена и в Python CI. Результат полного строгого повтора приведён ниже.
 
 ## Ограничения
 
@@ -72,4 +72,43 @@ SHA256 7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661
 как public inventory. Обычные публичные outside/unknown ссылки всё ещё
 отклоняются.30проверок sourcebinding/link/native-policy PASS8.50с; публичных
 file/line links1387. Начавшийся повтор был остановлен до этого исправления
-и не выдаётся за полную приёмку. Ожидается новый полный строгий результат.
+и не выдаётся за полную приёмку. Результат нового полного строгого прогона приведён ниже.
+
+
+## Итоговая проверка исходников и переносимости
+
+Полный `check_project.py --require-native` на5c725b0 завершён:2224PythonPASS
+1060.35с,0skip;19RustPASS, оба production fmt PASS;1387publiclinks и988inventory.
+Весь вызов1066.954с. Все tracked-байты до/после совпали. Формулы/данные/
+solver/time-control сверены побайтно с19ed4a5; принятыйZIP0.3.0 SHA прежний.
+
+Расширенный [Linux CI5c725b0](https://github.com/dmitiilubchenko-source/Solar-Simulator/actions/runs/39627457821)
+выявил2FAIL/105PASS/2deselected: Windows-пути frozenreceipt обрабатывались
+нативным Path.name и вPOSIX давали KeyError annual.json. Ошибка воспроизведена
+наWindows заменой только Path наPurePosixPath. Исправлена нормализацией
+разделителей при выделении имени; исходные receipt/JSON/NPZ/SHA неизменны.
+Все9массивов/receipt до/после наWindows иPOSIX rules совпали побайтно.
+
+После этого изолированного инфраструктурного исправления:31относящийся
+тест sourcebinding/link/native-policy PASS6.50с,0skip; новый regression
+сPOSIX rules добавлен вPython CI. Полный17-минутный Windows-прогон после
+однострочной нормализации повторно не запускался: runtime/численные
+модули не изменились, проверены сам parser и байты всех9выходныхмассивов.
+Python CI теперь также запускает общую проверку публичных file/line ссылок.
+Актуальные результаты последнего dev-коммита: [CI](https://github.com/dmitiilubchenko-source/Solar-Simulator/actions?query=branch%3Adev).
+
+Готовность: исправления исходников проверены в указанном объёме. Для нового
+выпуска0.3.1 ещё нужны версия-кандидат, новый portableZIP и его приёмка.
+Публикация вmain/новые теги/релизы не выполнялись.
+
+[safe transition](../src/solar_simulator/app.py:806).
+
+[background reader](../src/solar_simulator/trajectory_loader.py:17).
+
+[Tk loader](../src/solar_simulator/trajectory_loader.py:30).
+
+[environment preflight](../scripts/check_environment.py:17).
+
+[real recovery regression](../tests/test_experiment_transition_gui.py:95).
+
+[reader/close regression](../tests/test_trajectory_loading.py:87).

@@ -41,6 +41,16 @@ def test_historical_plot_snapshot_is_verified_by_its_original_bytes(tmp_path,mon
         module.verify_frozen_sources({name:expected})
 
 
+def test_windows_receipt_paths_are_portable_with_posix_path_rules(evidence,monkeypatch):
+    from pathlib import PurePosixPath
+    seed,*_=inputs()
+    before,receipt=module.validate_frozen(evidence,seed)
+    monkeypatch.setattr(module,'Path',PurePosixPath)
+    after,copy=module.validate_frozen(evidence,seed)
+    assert receipt==copy and set(before)==set(after)
+    assert all(before[name].tobytes()==after[name].tobytes() for name in before)
+
+
 def test_archive_byte_tampering_is_rejected_before_parsing(tmp_path):
     raw = (module.ROOT/module.ARCHIVE).read_bytes()
     path = tmp_path/'altered.zip'

@@ -184,7 +184,7 @@ def validate_frozen(files, seed, verify_dependencies=False):
     verify({NOMINAL_REPORT: NOMINAL_REPORT_SHA256})
     published = json.loads((ROOT/NOMINAL_REPORT).read_bytes())
     receipt = json.loads(files['annual.json'])
-    pins = {Path(name).name: sha for name, sha in published['receipts'].items()}
+    pins = {name.replace('\\', '/').rsplit('/', 1)[-1]: sha for name, sha in published['receipts'].items()}
     if (digest(files['annual.json']) != pins['annual.json']
             or digest(files['annual.npz']) != pins['annual.npz']
             or digest(files['annual.npz']) != receipt['npz_sha256']

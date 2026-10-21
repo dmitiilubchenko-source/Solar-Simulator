@@ -39,6 +39,8 @@ def main(argv=None):
         run(python+['scripts/check_environment.py','--require-native','--gui'])
         plugins=['-p','scripts.native_audit']
     run(python+['-m','pytest','-q','-p','no:cacheprovider',*plugins,*SUITES[args.suite]])
+    if args.suite=='python':
+        run(python+['-c','from scripts.check_project import check_links; check_links()'])
     if args.suite=='desktop':
         for crate in ('solar_core','solar_native'):
             run([cargo,'fmt','--manifest-path',f'rust/{crate}/Cargo.toml','--check'])
