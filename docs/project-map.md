@@ -264,3 +264,11 @@ root portability, битовую хронологию, точные суммы �
 [assess_transport_split](../scripts/assess_transport_split.py) разделяет RK и
 native вклады на всех4473 шагах, проверяет semigroup и точные векторные суммы.
 test_transport_split.py проверяет компенсацию/знаки, root-portability и public replay.
+
+[Порядок разложения 351](rust-transport-order-validation.md),
+[протокол](rust-transport-order-protocol.md), [receipt](rust-transport-order-validation.json)
+и [Decimal samples](rust-transport-order-samples.npz):
+[assess_transport_order](../scripts/assess_transport_order.py) переставляет два
+локальных остатка на прежних 4473 шагах, сохраняя общие векторы 349.
+test_transport_order.py проверяет независимые affine/quadratic задачи,
+точные противоположные изменения, перенос кеша и все опубликованные метрики.
