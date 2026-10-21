@@ -228,3 +228,10 @@ check_project --require-native не ослаблен. Приёмка новог�
 [Итог исправлений341–345](review-followup-validation.md) сохраняет исходный
 полныйFAIL и пределы измерений. Точные старые [PlotArtists](../scripts/validation/plot_artists_before344.py)
 нужны только для SHA-привязки исторического JPL440, не запускаются какruntime.
+
+[Диагностика коэффициентов346](dop853-coefficients-validation.md):
+[протокол](dop853-coefficients-protocol.md),
+[exact residuals](dop853-coefficients-validation.json),
+[audit_dop853_coefficients](../scripts/audit_dop853_coefficients.py) и
+test_dop853_coefficients.py. Проверяет literal/binary64 A/B/C и200 автономных
+rooted-tree условий до8; не меняет solver и не квалифицирует орбиты.
