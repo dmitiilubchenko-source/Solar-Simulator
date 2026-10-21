@@ -1,0 +1,526 @@
+{
+  "protocol": "docs/rust-transport-protocol.md",
+  "complete": true,
+  "runtime_modified": false,
+  "production_eligible": false,
+  "global_error_bound": false,
+  "telescoping_is_identity": true,
+  "source_sha256": {
+    "docs/rust-transport-protocol.md": "3d892aa2df05e9e4cdd8c225b9e937c65facf63f956fabcc1471a91ff1689a76",
+    "scripts/assess_rust_transport.py": "ddbb8fde5cd4a7fa8c5f87132529a67888cf7a4878da97f1733db2dbfad53e16",
+    "scripts/kepler_transport.py": "bfc2af2debeeec0b86bc0632848c1570cdca460054702cf2a744d3c8bc8d1ee0",
+    "scripts/kepler_reference.py": "abc7f6f010049d489c71d5331e7942c786600432097b72d94204ff26cc9c14a2",
+    "scripts/kepler_shadow.py": "3a69e39e2f5b3cb2cf6fb8c7bb4f7a0c38d7110efcc12d57993aa3801b549941",
+    "scripts/assess_kepler_phase.py": "f0b2f6bece3a7653efd883f7041e1ee2d5fb2fcf13d91331fb70b406d24d3677",
+    "scripts/assess_rust_adaptive.py": "de7beb6a14652d13c6f808dc07590f5abf67c50b8f3e3c599875d9d6cdaf0ba6"
+  },
+  "input_sha256": {
+    "docs/rust-local-error-validation.json": "f92c202e861fb913e0b1a973f83d01bed14260052beabc2abf75f5609753307b",
+    "docs/rust-local-error-samples.npz": "2888e1093ae6e7f9ffa6c855dabbd8cd3c6f799b40dcfe74b2977f12f7b05294",
+    "docs/rust-adaptive-shadow-validation.json": "a96ae08228021abad04a1047656bd18e38d703bea2c4b2f3747d3b1a0cbf4338",
+    "docs/rust-adaptive-shadow-samples.npz": "74624affcb687342b4828c167a6d73396cba007140acd3021793eda4934b9ae6",
+    "docs/rust-adaptive-prototype-validation.json": "a49ec0d43894137589911dc47241b953f7ee907bcffd82bd4ab2207acff54256",
+    "docs/rust-adaptive-prototype-samples.npz": "15d26eb8005626b1382ed28223349096dbc1ef81d5f1613cf5ba96d2b6c59da4"
+  },
+  "provenance": {
+    "commit": "d0baf5a9605431976ba89301e99a6cf70bbb595d",
+    "git_status": "?? docs/rust-transport-protocol.md\n?? scripts/assess_rust_transport.py\n?? scripts/kepler_transport.py\n?? tests/test_kepler_transport.py\n",
+    "tracked_patch_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "untracked_archive_sha256": "6b40bd6fbb60cffd2e954e9c4c4dac76c2cb48d5d5ddfa7c9442c5c5b10f4af8",
+    "untracked_source_sha256": {
+      "docs/rust-transport-protocol.md": "3d892aa2df05e9e4cdd8c225b9e937c65facf63f956fabcc1471a91ff1689a76",
+      "scripts/assess_rust_transport.py": "ddbb8fde5cd4a7fa8c5f87132529a67888cf7a4878da97f1733db2dbfad53e16",
+      "scripts/kepler_transport.py": "bfc2af2debeeec0b86bc0632848c1570cdca460054702cf2a744d3c8bc8d1ee0",
+      "tests/test_kepler_transport.py": "8d5da97f683b5bbaa2befde617411e21dfa9cdabb5ed69b48ef1c58ded1886a9"
+    },
+    "snapshot_directory": ".tools/transport349/first/result-sources"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.5.1"
+  },
+  "results": {
+    "holdout_circular": {
+      "nodes": 274,
+      "accepted": 273,
+      "exact_horizon_seconds": "63114866.862200140954950511318344297251314856112003326416015625",
+      "horizon_minus_nominal_seconds": "1.886546474594297251314856112003326416015625E-12",
+      "precision_difference": {
+        "position_metres": 5.418737954598893e-60,
+        "velocity_m_per_s": 1.0788879515984224e-66
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 0.0017739918220804442,
+        "velocity_m_per_s": 3.841302228223388e-10
+      },
+      "final_actual_error": {
+        "position_metres": 0.0016001407174774129,
+        "velocity_m_per_s": 3.484328321513067e-10
+      },
+      "physical_export_difference": {
+        "position_metres": 1.2830375716279707e-05,
+        "velocity_m_per_s": 3.080161782157743e-12
+      },
+      "transported_summary": {
+        "total_vector": [
+          "-0.0017637468288182492842978712357074942901575168552841963123006182415397351141742820600805013484973645489412871",
+          "-0.000093643635185581448530352937829795983655432959115661577873290041398451668520741515985997474442466877649351",
+          "-0.0001657557788769176414537799263411871936479692884030785715439225822779897771559022851623587786753567197634118",
+          "2.646752584276363979653562694079730195691078400905986098773895221089860759643545049786192792717136241117559E-10",
+          "2.6014008513048510079931819451139500162262585924529665362441594415191663830533545515586747618151011375679337E-10",
+          "-9.914722270496292340279471328751528384591365669865542923146775064266863960814104509212151792204669013077393E-11"
+        ],
+        "position_metres": 0.0017739918220804442,
+        "velocity_m_per_s": 3.841302228223388e-10,
+        "signed_parallel_metres": "-0.0016171116629600347408506486829497895443389303775597164710376421658166635522835034360666996669420746082402757800",
+        "perpendicular_metres": 0.0007293811447569272,
+        "absolute_parallel_fraction": 0.911566582682197,
+        "positive_parallel_count": 134,
+        "negative_parallel_count": 139,
+        "absolute_parallel_sum_metres": 0.0397481662652078,
+        "position_variation_metres": 0.04080730005547816,
+        "velocity_variation_m_per_s": 7.889714834845934e-09
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": true,
+      "transport_seconds": {
+        "70": 8.257568000000902,
+        "100": 18.445478400040884
+      },
+      "seconds": 26.776425099989865
+    },
+    "holdout_moderate": {
+      "nodes": 349,
+      "accepted": 348,
+      "exact_horizon_seconds": "63114866.8622001409548840367147448660034569911658763885498046875",
+      "horizon_minus_nominal_seconds": "1.8200718709948660034569911658763885498046875E-12",
+      "precision_difference": {
+        "position_metres": 4.8985530368332073e-60,
+        "velocity_m_per_s": 2.2523992659480184e-66
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 0.024847115148767158,
+        "velocity_m_per_s": 1.2125036794905477e-08
+      },
+      "final_actual_error": {
+        "position_metres": 0.024934561214334214,
+        "velocity_m_per_s": 1.2164480712247306e-08
+      },
+      "physical_export_difference": {
+        "position_metres": 3.5683225505580343e-06,
+        "velocity_m_per_s": 5.715034406417539e-12
+      },
+      "transported_summary": {
+        "total_vector": [
+          "0.0222739192716150922535355527607796938257909645658241330261815647526010734141991441640822999865484715564795737",
+          "-0.0078735024687935319652415477098158663632997647843494814123475450074851086483268617890361707575174252986262209",
+          "0.0076980263945747993020716776571490227541414319576031512393673921117916440010723701886038547166597389644263511",
+          "-5.2288095448470781619909083105055133588256708689777467685458700355957875314553558252087054142038463167153589E-9",
+          "-9.8100588620318932367119862144635206990653976948955862902697885352411749511106510641163963648160068693937526E-9",
+          "4.8413648018918460572823459018533670624908457015149426275047548721955588961410354901795542921514544515513788E-9"
+        ],
+        "position_metres": 0.024847115148767158,
+        "velocity_m_per_s": 1.2125036794905477e-08,
+        "signed_parallel_metres": "0.024842510650529311114287328011165858504869217493384981983842953393226576377034792037172666964404589657884593610",
+        "perpendicular_metres": 0.00047832603361313273,
+        "absolute_parallel_fraction": 0.9998146868072902,
+        "positive_parallel_count": 168,
+        "negative_parallel_count": 180,
+        "absolute_parallel_sum_metres": 0.32767332799596055,
+        "position_variation_metres": 0.32808441331000104,
+        "velocity_variation_m_per_s": 1.5087390278637696e-07
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": true,
+      "transport_seconds": {
+        "70": 10.100080600008368,
+        "100": 23.310333799978253
+      },
+      "seconds": 33.49167970003327
+    },
+    "holdout_original": {
+      "nodes": 638,
+      "accepted": 637,
+      "exact_horizon_seconds": "63114866.862200140953078675298826283324160613119602203369140625",
+      "horizon_minus_nominal_seconds": "1.4710455076283324160613119602203369140625E-14",
+      "precision_difference": {
+        "position_metres": 2.25096775594915e-60,
+        "velocity_m_per_s": 2.870618107853494e-65
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 4.372093393305461,
+        "velocity_m_per_s": 5.5754677394967696e-05
+      },
+      "final_actual_error": {
+        "position_metres": 4.411366987219882,
+        "velocity_m_per_s": 5.625552469199898e-05
+      },
+      "physical_export_difference": {
+        "position_metres": 1.066240299940009e-06,
+        "velocity_m_per_s": 1.5750503234652893e-11
+      },
+      "transported_summary": {
+        "total_vector": [
+          "-3.95475300466111735254104712224449574433747902672512958463352060328270507301415645552631032209690844617089547878",
+          "1.31814879946271872103074513922778812989016029911445197559829565621740261499092911535823133876899218493558031312",
+          "-1.31818551592107702097179540268152532119299409744885021418982215743733556463911912656038485884302681254221569048",
+          "0.000022763274821840262653624321545663430520077739838595143316232799257873874726312952213327163408455246082619322508",
+          "0.0000455230499077051251424579993234310491833331394016728153968883991649575239028884592494841598268228993551723047020",
+          "-0.0000227611356900942767102827571854834418824570849152131053900949934222365263390905867565886484674984241047137648286"
+        ],
+        "position_metres": 4.372093393305461,
+        "velocity_m_per_s": 5.5754677394967696e-05,
+        "signed_parallel_metres": "-4.3720933919128421279889118722137808051442161580256227232576065053933494845457744342177165861346369195664642283",
+        "perpendicular_metres": 0.00011035088305610012,
+        "absolute_parallel_fraction": 0.9999999996814756,
+        "positive_parallel_count": 311,
+        "negative_parallel_count": 326,
+        "absolute_parallel_sum_metres": 11.91580624152019,
+        "position_variation_metres": 11.915853767693223,
+        "velocity_variation_m_per_s": 0.0001519601423966088
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": false,
+      "transport_seconds": {
+        "70": 17.96505729999626,
+        "100": 41.527182499994524
+      },
+      "seconds": 59.64891790004913
+    },
+    "holdout_permuted": {
+      "nodes": 642,
+      "accepted": 641,
+      "exact_horizon_seconds": "63114866.862200140953031546331430945429019629955291748046875",
+      "horizon_minus_nominal_seconds": "-3.2418512319054570980370044708251953125E-14",
+      "precision_difference": {
+        "position_metres": 2.2795200396013327e-60,
+        "velocity_m_per_s": 2.9070285189592443e-65
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 3.598936885728133,
+        "velocity_m_per_s": 4.589443173471883e-05
+      },
+      "final_actual_error": {
+        "position_metres": 3.6382104883725357,
+        "velocity_m_per_s": 4.639527914322134e-05
+      },
+      "physical_export_difference": {
+        "position_metres": 9.5367431640625e-07,
+        "velocity_m_per_s": 5.058596466382326e-12
+      },
+      "transported_summary": {
+        "total_vector": [
+          "1.08497733380683883524391321839996580542158084521458923142593512060003399653072018329763936090419211946382306608",
+          "1.08505791928375182257475433199668317830784346907481702451656394565524188498832031917486816661576457953213621491",
+          "3.25542934255675894440908662494515168738389500952286785364444141758162311411423068568507816282453776125444043447",
+          "0.0000374720644731347180120326548668900647789332980671778925160556426091787816589324616604676113816469520587213075829",
+          "0.0000187354792637627540169751975199555432763990202748222411211755131078657307948666511974510713250047181245911567465",
+          "-0.000018738331439354929944151781985608662920169363564595907372325906972894107678255791373581668784482502832404335188"
+        ],
+        "position_metres": 3.598936885728133,
+        "velocity_m_per_s": 4.589443173471883e-05,
+        "signed_parallel_metres": "-3.5989368816970771189355738365354267809790922828903403445648372566028653260232574263733253160209592817746418193",
+        "perpendicular_metres": 0.00017033799334457828,
+        "absolute_parallel_fraction": 0.9999999988799315,
+        "positive_parallel_count": 317,
+        "negative_parallel_count": 324,
+        "absolute_parallel_sum_metres": 12.627175152929544,
+        "position_variation_metres": 12.627216757634956,
+        "velocity_variation_m_per_s": 0.0001610321382689873
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": false,
+      "transport_seconds": {
+        "70": 18.323739899962675,
+        "100": 42.1290307000163
+      },
+      "seconds": 60.60640390001936
+    },
+    "holdout_apocentre": {
+      "nodes": 631,
+      "accepted": 630,
+      "exact_horizon_seconds": "63114866.8622001408948065381832037701315130107104778289794921875",
+      "horizon_minus_nominal_seconds": "-5.82574266605462298684869892895221710205078125E-11",
+      "precision_difference": {
+        "position_metres": 2.2344202150057703e-60,
+        "velocity_m_per_s": 7.306445109417637e-67
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 0.026996646930564035,
+        "velocity_m_per_s": 2.384916730573126e-09
+      },
+      "final_actual_error": {
+        "position_metres": 0.027000468993124905,
+        "velocity_m_per_s": 2.3862205018177346e-09
+      },
+      "physical_export_difference": {
+        "position_metres": 4.3295133448853176e-05,
+        "velocity_m_per_s": 4.5024251240867373e-13
+      },
+      "transported_summary": {
+        "total_vector": [
+          "-0.010563523189340817609824172652918478436855390267706671576632566732374824138692683131712051187401062787884548",
+          "-0.022261092856157227566685862299757818047762889467024520801874790886179607904855933902632257239025752760989652",
+          "0.011030624106157227523551325291373740146542672395134256692597677019978540503847789846966212890144887397373687",
+          "-5.4828993461558725760709654272274440264750731043617865406327684718848807690218868928454007559011951441089290E-10",
+          "-2.04813870096110068048682723657763777569811854187056759222655607488323242818281097681559205092547389005661301E-9",
+          "1.09194039260035510973739658918441884960068861313270299835498917873227991661461280778767552311118314585891318E-9"
+        ],
+        "position_metres": 0.026996646930564035,
+        "velocity_m_per_s": 2.384916730573126e-09,
+        "signed_parallel_metres": "-0.0004827641037200599372211996229900391979224619070913709596133803522735437521298673016166845668391777039939969757",
+        "perpendicular_metres": 0.02699233010159908,
+        "absolute_parallel_fraction": 0.017882372761392915,
+        "positive_parallel_count": 321,
+        "negative_parallel_count": 309,
+        "absolute_parallel_sum_metres": 0.3226265482766442,
+        "position_variation_metres": 0.5570619555804137,
+        "velocity_variation_m_per_s": 1.0644344855212095e-07
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": false,
+      "transport_seconds": {
+        "70": 18.43813200003933,
+        "100": 41.586698800034355
+      },
+      "seconds": 60.17720120004378
+    },
+    "holdout_eccentric_phase": {
+      "nodes": 686,
+      "accepted": 685,
+      "exact_horizon_seconds": "63114866.8622001409548680495031902637492748908698558807373046875",
+      "horizon_minus_nominal_seconds": "1.8040846594402637492748908698558807373046875E-12",
+      "precision_difference": {
+        "position_metres": 6.234086117493371e-60,
+        "velocity_m_per_s": 3.062403467260173e-66
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 0.03489128083003263,
+        "velocity_m_per_s": 1.6508907848255827e-08
+      },
+      "final_actual_error": {
+        "position_metres": 0.03571661717062392,
+        "velocity_m_per_s": 1.6914913413757984e-08
+      },
+      "physical_export_difference": {
+        "position_metres": 8.599609754977909e-06,
+        "velocity_m_per_s": 1.875940477307749e-12
+      },
+      "transported_summary": {
+        "total_vector": [
+          "-0.01088215419304987833403670020366441437368932108700171123586637593667898899221865020892055215821182312690545974",
+          "-0.0295096063197314670649572171677455308919159514065045491702453647684411076755193992565018406900304885243789433",
+          "0.0151050763961442537848465988162756783473190037167936417897885745982916784811971839529836635961633176675458347",
+          "-1.5015419148130337354899201973062357396921733117308310148825041448218179720013773215430801136329060813259677E-9",
+          "1.41557218338242782907937256290000420163599554232396528916484088623410922662952834715495801748309944030712527E-8",
+          "-8.3609179868991113198218553322251007133575931190680477546473549010151079759049571972911585431733675210899463E-9"
+        ],
+        "position_metres": 0.03489128083003263,
+        "velocity_m_per_s": 1.6508907848255827e-08,
+        "signed_parallel_metres": "0.034845054504669173383089786714939709121233872502593191345221806294350876765422694963644598752718602924379579406",
+        "perpendicular_metres": 0.0017954538498210458,
+        "absolute_parallel_fraction": 0.9986751324610683,
+        "positive_parallel_count": 393,
+        "negative_parallel_count": 292,
+        "absolute_parallel_sum_metres": 3.355506477449071,
+        "position_variation_metres": 3.358980088024378,
+        "velocity_variation_m_per_s": 1.6679478556025985e-06
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": true,
+      "transport_seconds": {
+        "70": 18.57569590001367,
+        "100": 42.69976350001525
+      },
+      "seconds": 61.44515440001851
+    },
+    "original_0.0": {
+      "nodes": 271,
+      "accepted": 270,
+      "exact_horizon_seconds": "63114866.862200140954950511318344297251314856112003326416015625",
+      "horizon_minus_nominal_seconds": "1.886546474594297251314856112003326416015625E-12",
+      "precision_difference": {
+        "position_metres": 5.370726892684488e-60,
+        "velocity_m_per_s": 1.0693287957068109e-66
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 0.007376622122678092,
+        "velocity_m_per_s": 1.4232234025453866e-09
+      },
+      "final_actual_error": {
+        "position_metres": 0.007180466317217342,
+        "velocity_m_per_s": 1.3848696880266106e-09
+      },
+      "physical_export_difference": {
+        "position_metres": 1.2830375716279707e-05,
+        "velocity_m_per_s": 3.078774376751211e-12
+      },
+      "transported_summary": {
+        "total_vector": [
+          "-0.0067381120631932492842978712357074942901575168552841963123006182415397351141742820600805013484973645489412871",
+          "0.002103621989814418551469647062170204016344567040884338422126709958601548331479258484014002525557533122350649",
+          "-0.0021417689624706676414537799263411871936479692884030785715439225822779897771559022851623587786753567197634118",
+          "6.102832451013491283730711131579730195691078400905986098773895221089860759643545049786192792717136241117559E-10",
+          "1.14780691406086306100439631951139500162262585924529665362441594415191663830533545515586747618151011375679337E-9",
+          "-5.7936042524106903302193533828751528384591365669865542923146775064266863960814104509212151792204669013077393E-10"
+        ],
+        "position_metres": 0.007376622122678092,
+        "velocity_m_per_s": 1.4232234025453866e-09,
+        "signed_parallel_metres": "-0.0073748852185488862090875840661974895453210703186796034301071521894501852611752709744867141131742873903700592906",
+        "perpendicular_metres": 0.0001600685915880668,
+        "absolute_parallel_fraction": 0.9997645393649939,
+        "positive_parallel_count": 115,
+        "negative_parallel_count": 155,
+        "absolute_parallel_sum_metres": 0.046894283146850846,
+        "position_variation_metres": 0.047758569653212624,
+        "velocity_variation_m_per_s": 9.244089190125553e-09
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": true,
+      "transport_seconds": {
+        "70": 7.9273251999984495,
+        "100": 18.90332019998459
+      },
+      "seconds": 26.897088600031566
+    },
+    "original_0.5": {
+      "nodes": 348,
+      "accepted": 347,
+      "exact_horizon_seconds": "63114866.8622001409548840367147448660034569911658763885498046875",
+      "horizon_minus_nominal_seconds": "1.8200718709948660034569911658763885498046875E-12",
+      "precision_difference": {
+        "position_metres": 4.9079901215914816e-60,
+        "velocity_m_per_s": 2.2567384933107563e-66
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 0.00484744672329886,
+        "velocity_m_per_s": 1.3438830744547003e-09
+      },
+      "final_actual_error": {
+        "position_metres": 0.004761598980294367,
+        "velocity_m_per_s": 1.3044154652833498e-09
+      },
+      "physical_export_difference": {
+        "position_metres": 2.3360154559928683e-06,
+        "velocity_m_per_s": 5.7282977493057035e-12
+      },
+      "transported_summary": {
+        "total_vector": [
+          "-0.0046387699373692827464644472392203061742090354341758669738184352473989265858008558359177000134515284435204263",
+          "0.0008545248749564680347584522901841336367002352156505185876524549925148913516731382109638292424825747013737791",
+          "-0.0011177389862845756979283223428509772458585680423968487606326078882083559989276298113961452833402610355736489",
+          "4.464373942159940425989354394944866411743291310222532314541299644042124685446441747912945857961536832846411E-10",
+          "1.1293434108928876089301036292864793009346023051044137097302114647588250488893489358836036351839931306062474E-9",
+          "-5.755856418677145277396267543966329375091542984850573724952451278044411038589645098204457078485455484486212E-10"
+        ],
+        "position_metres": 0.00484744672329886,
+        "velocity_m_per_s": 1.3438830744547003e-09,
+        "signed_parallel_metres": "-0.0047905852116743016363339582788796421473991195362047529396921257878998990345428277600540209305502639545224091765",
+        "perpendicular_metres": 0.0007402925535950934,
+        "absolute_parallel_fraction": 0.9882698016357233,
+        "positive_parallel_count": 169,
+        "negative_parallel_count": 178,
+        "absolute_parallel_sum_metres": 0.34988278591943833,
+        "position_variation_metres": 0.3503135465218438,
+        "velocity_variation_m_per_s": 1.6108083447279703e-07
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": true,
+      "transport_seconds": {
+        "70": 10.247098799969535,
+        "100": 23.776689400023315
+      },
+      "seconds": 34.10981420002645
+    },
+    "original_0.95": {
+      "nodes": 643,
+      "accepted": 642,
+      "exact_horizon_seconds": "63114866.862200140953078675298826283324160613119602203369140625",
+      "horizon_minus_nominal_seconds": "1.4710455076283324160613119602203369140625E-14",
+      "precision_difference": {
+        "position_metres": 2.25096775594915e-60,
+        "velocity_m_per_s": 2.870618107853494e-65
+      },
+      "initial_reference_alignment": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "final_prepared_error": {
+        "position_metres": 4.004342924628504,
+        "velocity_m_per_s": 5.106471420094542e-05
+      },
+      "final_actual_error": {
+        "position_metres": 4.043616518535148,
+        "velocity_m_per_s": 5.156556149790603e-05
+      },
+      "physical_export_difference": {
+        "position_metres": 1.3486991523486091e-06,
+        "velocity_m_per_s": 1.1225199026247298e-11
+      },
+      "transported_summary": {
+        "total_vector": [
+          "-3.62211617147019938379104712224449574433747902672512958463352060328270507301415645552631032209690844617089547878",
+          "1.20725745729963278353074513922778812989016029911445197559829565621740261499092911535823133876899218493558031312",
+          "-1.20729703478094030222179540268152532119299409744885021418982215743733556463911912656038485884302681254221569048",
+          "0.000020848737542904949428831841076913430520077739838595143316232799257873874726312952213327163408455246082619322508",
+          "0.0000416935387923776476873188391671810491833331394016728153968883991649575239028884592494841598268228993551723047020",
+          "-0.0000208466784466927195031752132401709418824570849152131053900949934222365263390905867565886484674984241047137648286"
+        ],
+        "position_metres": 4.004342924628504,
+        "velocity_m_per_s": 5.106471420094542e-05,
+        "signed_parallel_metres": "-4.0043429226940202214804685356239699463591026827570754871582963488036838406033944956478994418253788861338275811",
+        "perpendicular_metres": 0.00012446956442533036,
+        "absolute_parallel_fraction": 0.9999999995169035,
+        "positive_parallel_count": 329,
+        "negative_parallel_count": 313,
+        "absolute_parallel_sum_metres": 12.332024089845824,
+        "position_variation_metres": 12.33206461160032,
+        "velocity_variation_m_per_s": 0.00015726779899629724
+      },
+      "exact_telescoping": true,
+      "original_rust_gate": false,
+      "transport_seconds": {
+        "70": 18.544647399976384,
+        "100": 41.93041200004518
+      },
+      "seconds": 60.63177830004133
+    }
+  },
+  "source_unchanged": true,
+  "input_unchanged": true,
+  "npz_sha256": "0be0c404d7d8bcf1eff648352c920a97573426844640d8b3e04cd52917607742",
+  "wall_seconds": 424.81937859999016,
+  "sample_archive": "docs/rust-transport-samples.npz"
+}

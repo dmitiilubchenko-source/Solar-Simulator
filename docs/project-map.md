@@ -250,3 +250,10 @@ test_literal_shadow.py проверяет driver и воспроизводит �
 [assess_rust_local_error](../scripts/assess_rust_local_error.py) сравнивает все
 4572 попытки337 с аналитическим f/g и RK50/80 без изменения solver.
 test_rust_local_error.py повторяет нормы и метрики публичногоNPZ безrawtrace.
+
+[Перенос349](rust-transport-validation.md), [протокол](rust-transport-protocol.md),
+[receipt](rust-transport-validation.json), [Decimal samples](rust-transport-samples.npz):
+[kepler_transport](../scripts/kepler_transport.py) проверяет публичные входы,
+принятую последовательность и exact clocks; [стенд](../scripts/assess_rust_transport.py)
+переносит4482 узла к общему T. test_kepler_transport.py проверяет semigroup,
+root portability, битовую хронологию, точные суммы и все опубликованные метрики.
