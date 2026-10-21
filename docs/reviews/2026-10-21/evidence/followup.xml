@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="3" skipped="0" tests="5" time="8.801" timestamp="2026-10-21T09:04:12.867532+03:00" hostname="K1ros"><testcase classname="tests.test_asteroid_catalog" name="test_git_line_ending_filters_preserve_pinned_scientific_source_bytes" time="0.258" /><testcase classname="tests.test_kuiper" name="test_git_filters_preserve_checked_scientific_code_hashes_across_windows_clone" time="0.400" /><testcase classname="tests.test_body_units_gui" name="test_real_unit_editor_journey[_check_equivalent_rust]" time="2.743"><failure message="AssertionError: Traceback (most recent call last):&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py&quot;, line 7, in prepare&#10;      import solar_native&#10;  ModuleNotFoundError: No module named 'solar_native'&#10;  &#10;  The above exception was the direct cause of the following exception:&#10;  &#10;  Traceback (most recent call last):&#10;    File &quot;&lt;string&gt;&quot;, line 6, in &lt;module&gt;&#10;      getattr(module, sys.argv[2])(Path(sys.argv[3]))&#10;      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_body_units_gui.py&quot;, line 93, in _check_equivalent_rust&#10;      _check_equivalent(tmp_path, 'rust')&#10;      ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_body_units_gui.py&quot;, line 81, in _check_equivalent&#10;      assert _canonical(to_document(advance_towards(children[0], 20., 2))) == _canonical(&#10;                                    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\time_control.py&quot;, line 46, in advance_towards&#10;      return _interval(experiment, duration, target)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\time_control.py&quot;, line 27, in _interval&#10;      result = advance(replace(experiment, settings=replace(settings, dt=duration)), 1)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\experiment.py&quot;, line 163, in advance&#10;      bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,&#10;                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;                              backend=settings.backend,&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^&#10;      ...&lt;2 lines&gt;...&#10;                              start_time=experiment.time, return_work=True, relative_pair=settings.relative_pair,&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;                              error_control=settings.error_control)&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\accuracy.py&quot;, line 51, in evolve_accurate&#10;      native_force = prepare_native(masses)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py&quot;, line 9, in prepare&#10;      raise RuntimeError('Соберите Rust-модуль: python scripts/build_native.py') from error&#10;  RuntimeError: Соберите Rust-модуль: python scripts/build_native.py&#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.venv\\Scripts\\python.exe', '-B'...ь: python scripts/build_native.py\') from error\nRuntimeError: Соберите Rust-модуль: python scripts/build_native.py\n').returncode">tmp_path = WindowsPath('C:/Users/lubch/AppData/Local/Temp/pytest-of-lubch/pytest-53/test_real_unit_editor_journey_0')
+journey = '_check_equivalent_rust'
+
+    @pytest.mark.parametrize('journey', ['_check_equivalent_python', '_check_equivalent_rust',
+        '_check_switching_and_pending_edits', '_check_partial_invalid_and_stale_input', '_check_add_relative_body',
+        '_check_unrepresentable_display_and_inplace_change'])
+    def test_real_unit_editor_journey(tmp_path, journey):
+        from test_app_workflows import run_gui_check
+&gt;       run_gui_check(journey, tmp_path, source=__file__)
+
+tests\test_body_units_gui.py:257: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function = '_check_equivalent_rust'
+tmp_path = WindowsPath('C:/Users/lubch/AppData/Local/Temp/pytest-of-lubch/pytest-53/test_real_unit_editor_journey_0')
+source = 'C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\tests\\test_body_units_gui.py'
+
+    def run_gui_check(function, tmp_path, source=None):
+        code = """
+    import importlib.util, sys
+    from pathlib import Path
+    spec = importlib.util.spec_from_file_location('workflow_checks', sys.argv[1])
+    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    getattr(module, sys.argv[2])(Path(sys.argv[3]))
+    """
+        environment=os.environ.copy()
+        environment['LOCALAPPDATA']=str(tmp_path/'appdata')
+        result = subprocess.run([sys.executable, '-B', '-c', code, str(source or Path(__file__).resolve()),
+                                 function, str(tmp_path)], capture_output=True, text=True, timeout=40,env=environment)
+&gt;       assert result.returncode == 0, result.stdout+result.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py", line 7, in prepare
+E             import solar_native
+E         ModuleNotFoundError: No module named 'solar_native'
+E         
+E         The above exception was the direct cause of the following exception:
+E         
+E         Traceback (most recent call last):
+E           File "&lt;string&gt;", line 6, in &lt;module&gt;
+E             getattr(module, sys.argv[2])(Path(sys.argv[3]))
+E             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_body_units_gui.py", line 93, in _check_equivalent_rust
+E             _check_equivalent(tmp_path, 'rust')
+E             ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_body_units_gui.py", line 81, in _check_equivalent
+E             assert _canonical(to_document(advance_towards(children[0], 20., 2))) == _canonical(
+E                                           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\time_control.py", line 46, in advance_towards
+E             return _interval(experiment, duration, target)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\time_control.py", line 27, in _interval
+E             result = advance(replace(experiment, settings=replace(settings, dt=duration)), 1)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\experiment.py", line 163, in advance
+E             bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,
+E                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                                     backend=settings.backend,
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+E             ...&lt;2 lines&gt;...
+E                                     start_time=experiment.time, return_work=True, relative_pair=settings.relative_pair,
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                                     error_control=settings.error_control)
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\accuracy.py", line 51, in evolve_accurate
+E             native_force = prepare_native(masses)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py", line 9, in prepare
+E             raise RuntimeError('Соберите Rust-модуль: python scripts/build_native.py') from error
+E         RuntimeError: Соберите Rust-модуль: python scripts/build_native.py
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.venv\\Scripts\\python.exe', '-B'...ь: python scripts/build_native.py\') from error\nRuntimeError: Соберите Rust-модуль: python scripts/build_native.py\n').returncode
+
+tests\test_app_workflows.py:20: AssertionError</failure></testcase><testcase classname="tests.test_recovery_journey" name="test_save_close_restart_restore_continue[rust]" time="2.005"><failure message="AssertionError: Traceback (most recent call last):&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py&quot;, line 7, in prepare&#10;      import solar_native&#10;  ModuleNotFoundError: No module named 'solar_native'&#10;  &#10;  The above exception was the direct cause of the following exception:&#10;  &#10;  Traceback (most recent call last):&#10;    File &quot;&lt;string&gt;&quot;, line 6, in &lt;module&gt;&#10;      getattr(module, sys.argv[2])(Path(sys.argv[3]))&#10;      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_recovery_journey.py&quot;, line 104, in _create_recovery&#10;      original = make_branch(backend)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_recovery_journey.py&quot;, line 17, in make_branch&#10;      parent = advance(seed, 2)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\experiment.py&quot;, line 163, in advance&#10;      bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,&#10;                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;                              backend=settings.backend,&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^&#10;      ...&lt;2 lines&gt;...&#10;                              start_time=experiment.time, return_work=True, relative_pair=settings.relative_pair,&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;                              error_control=settings.error_control)&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\accuracy.py&quot;, line 51, in evolve_accurate&#10;      native_force = prepare_native(masses)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py&quot;, line 9, in prepare&#10;      raise RuntimeError('Соберите Rust-модуль: python scripts/build_native.py') from error&#10;  RuntimeError: Соберите Rust-модуль: python scripts/build_native.py&#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.venv\\Scripts\\python.exe', '-B'...ь: python scripts/build_native.py\') from error\nRuntimeError: Соберите Rust-модуль: python scripts/build_native.py\n').returncode">tmp_path = WindowsPath('C:/Users/lubch/AppData/Local/Temp/pytest-of-lubch/pytest-53/test_save_close_restart_restor0')
+backend = 'rust'
+
+    @pytest.mark.parametrize('backend', ['python', 'rust'])
+    def test_save_close_restart_restore_continue(tmp_path, backend):
+        from test_app_workflows import run_gui_check
+        (tmp_path/'backend.txt').write_text(backend)
+&gt;       run_gui_check('_create_recovery', tmp_path, source=__file__)
+
+tests\test_recovery_journey.py:157: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function = '_create_recovery'
+tmp_path = WindowsPath('C:/Users/lubch/AppData/Local/Temp/pytest-of-lubch/pytest-53/test_save_close_restart_restor0')
+source = 'C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\tests\\test_recovery_journey.py'
+
+    def run_gui_check(function, tmp_path, source=None):
+        code = """
+    import importlib.util, sys
+    from pathlib import Path
+    spec = importlib.util.spec_from_file_location('workflow_checks', sys.argv[1])
+    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    getattr(module, sys.argv[2])(Path(sys.argv[3]))
+    """
+        environment=os.environ.copy()
+        environment['LOCALAPPDATA']=str(tmp_path/'appdata')
+        result = subprocess.run([sys.executable, '-B', '-c', code, str(source or Path(__file__).resolve()),
+                                 function, str(tmp_path)], capture_output=True, text=True, timeout=40,env=environment)
+&gt;       assert result.returncode == 0, result.stdout+result.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py", line 7, in prepare
+E             import solar_native
+E         ModuleNotFoundError: No module named 'solar_native'
+E         
+E         The above exception was the direct cause of the following exception:
+E         
+E         Traceback (most recent call last):
+E           File "&lt;string&gt;", line 6, in &lt;module&gt;
+E             getattr(module, sys.argv[2])(Path(sys.argv[3]))
+E             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_recovery_journey.py", line 104, in _create_recovery
+E             original = make_branch(backend)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_recovery_journey.py", line 17, in make_branch
+E             parent = advance(seed, 2)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\experiment.py", line 163, in advance
+E             bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,
+E                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                                     backend=settings.backend,
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+E             ...&lt;2 lines&gt;...
+E                                     start_time=experiment.time, return_work=True, relative_pair=settings.relative_pair,
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                                     error_control=settings.error_control)
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\accuracy.py", line 51, in evolve_accurate
+E             native_force = prepare_native(masses)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py", line 9, in prepare
+E             raise RuntimeError('Соберите Rust-модуль: python scripts/build_native.py') from error
+E         RuntimeError: Соберите Rust-модуль: python scripts/build_native.py
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.venv\\Scripts\\python.exe', '-B'...ь: python scripts/build_native.py\') from error\nRuntimeError: Соберите Rust-модуль: python scripts/build_native.py\n').returncode
+
+tests\test_app_workflows.py:20: AssertionError</failure></testcase><testcase classname="tests.test_trajectory_gui" name="test_real_trajectory_journey[_check_close_waits_for_recorded_packet]" time="2.004"><failure message="AssertionError: Traceback (most recent call last):&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py&quot;, line 7, in prepare&#10;      import solar_native&#10;  ModuleNotFoundError: No module named 'solar_native'&#10;  &#10;  The above exception was the direct cause of the following exception:&#10;  &#10;  Traceback (most recent call last):&#10;    File &quot;&lt;string&gt;&quot;, line 6, in &lt;module&gt;&#10;      getattr(module, sys.argv[2])(Path(sys.argv[3]))&#10;      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_trajectory_gui.py&quot;, line 73, in _check_close_waits_for_recorded_packet&#10;      branch=make_branch('rust');root=tk.Tk();root.withdraw()&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_trajectory_gui.py&quot;, line 13, in make_branch&#10;      parent=advance(seed,2);body=replace(parent.bodies[0],mass=parent.bodies[0].mass*1.1)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\experiment.py&quot;, line 163, in advance&#10;      bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,&#10;                     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;                              backend=settings.backend,&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^&#10;      ...&lt;2 lines&gt;...&#10;                              start_time=experiment.time, return_work=True, relative_pair=settings.relative_pair,&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;                              error_control=settings.error_control)&#10;                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\accuracy.py&quot;, line 51, in evolve_accurate&#10;      native_force = prepare_native(masses)&#10;    File &quot;C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py&quot;, line 9, in prepare&#10;      raise RuntimeError('Соберите Rust-модуль: python scripts/build_native.py') from error&#10;  RuntimeError: Соберите Rust-модуль: python scripts/build_native.py&#10;  &#10;assert 1 == 0&#10; +  where 1 = CompletedProcess(args=['C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.venv\\Scripts\\python.exe', '-B'...ь: python scripts/build_native.py\') from error\nRuntimeError: Соберите Rust-модуль: python scripts/build_native.py\n').returncode">tmp_path = WindowsPath('C:/Users/lubch/AppData/Local/Temp/pytest-of-lubch/pytest-53/test_real_trajectory_journey__0')
+journey = '_check_close_waits_for_recorded_packet'
+
+    @pytest.mark.parametrize('journey',['_check_record_and_view','_check_close_waits_for_recorded_packet',
+                                        '_check_invalid_folder_does_not_create_empty_viewer'])
+    def test_real_trajectory_journey(tmp_path,journey):
+        from test_app_workflows import run_gui_check
+&gt;       run_gui_check(journey,tmp_path,source=__file__)
+
+tests\test_trajectory_gui.py:117: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+function = '_check_close_waits_for_recorded_packet'
+tmp_path = WindowsPath('C:/Users/lubch/AppData/Local/Temp/pytest-of-lubch/pytest-53/test_real_trajectory_journey__0')
+source = 'C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\tests\\test_trajectory_gui.py'
+
+    def run_gui_check(function, tmp_path, source=None):
+        code = """
+    import importlib.util, sys
+    from pathlib import Path
+    spec = importlib.util.spec_from_file_location('workflow_checks', sys.argv[1])
+    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+    getattr(module, sys.argv[2])(Path(sys.argv[3]))
+    """
+        environment=os.environ.copy()
+        environment['LOCALAPPDATA']=str(tmp_path/'appdata')
+        result = subprocess.run([sys.executable, '-B', '-c', code, str(source or Path(__file__).resolve()),
+                                 function, str(tmp_path)], capture_output=True, text=True, timeout=40,env=environment)
+&gt;       assert result.returncode == 0, result.stdout+result.stderr
+E       AssertionError: Traceback (most recent call last):
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py", line 7, in prepare
+E             import solar_native
+E         ModuleNotFoundError: No module named 'solar_native'
+E         
+E         The above exception was the direct cause of the following exception:
+E         
+E         Traceback (most recent call last):
+E           File "&lt;string&gt;", line 6, in &lt;module&gt;
+E             getattr(module, sys.argv[2])(Path(sys.argv[3]))
+E             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_trajectory_gui.py", line 73, in _check_close_waits_for_recorded_packet
+E             branch=make_branch('rust');root=tk.Tk();root.withdraw()
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\tests\test_trajectory_gui.py", line 13, in make_branch
+E             parent=advance(seed,2);body=replace(parent.bodies[0],mass=parent.bodies[0].mass*1.1)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\experiment.py", line 163, in advance
+E             bodies, work = evolve_accurate(experiment.bodies, duration, rtol=settings.rtol,
+E                            ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                                     backend=settings.backend,
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^
+E             ...&lt;2 lines&gt;...
+E                                     start_time=experiment.time, return_work=True, relative_pair=settings.relative_pair,
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E                                     error_control=settings.error_control)
+E                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\accuracy.py", line 51, in evolve_accurate
+E             native_force = prepare_native(masses)
+E           File "C:\Users\lubch\AppData\Local\Temp\solar-audit-19ed4a5\src\solar_simulator\native_forces.py", line 9, in prepare
+E             raise RuntimeError('Соберите Rust-модуль: python scripts/build_native.py') from error
+E         RuntimeError: Соберите Rust-модуль: python scripts/build_native.py
+E         
+E       assert 1 == 0
+E        +  where 1 = CompletedProcess(args=['C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.venv\\Scripts\\python.exe', '-B'...ь: python scripts/build_native.py\') from error\nRuntimeError: Соберите Rust-модуль: python scripts/build_native.py\n').returncode
+
+tests\test_app_workflows.py:20: AssertionError</failure></testcase></testsuite></testsuites>
