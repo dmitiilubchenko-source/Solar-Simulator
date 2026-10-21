@@ -294,3 +294,12 @@ restart и bitwise round-trip проверены; это исследовате�
 
 [Приёмка подготовленной 0.3.0](docs/release-030-validation.md) отделяет новый
 проверенный ZIP от публикации версии в main/GitHub Release.
+
+
+## Диагностика и автоматические проверки
+
+Перед долгим прогоном: `python -X utf8 -B scripts/check_environment.py`.
+[Параметры диагностики](docs/reproducibility.md),
+[явные группы Python/desktop/research и CI](docs/ci-checks.md).
+Полная приёмка остаётся `scripts/check_project.py --require-native`;
+новый ZIP и физические исследования проверяются отдельно.

@@ -1,6 +1,9 @@
 {
   "schema_version": 1,
   "groups": {
+    ".github": [
+      ".github/workflows/checks.yml"
+    ],
     "docs": [
       "docs/Solar-Simulator-Scientific-Verification-Proposal-v0.3.md",
       "docs/accuracy-validation.json",
@@ -45,6 +48,7 @@
       "docs/chart-current-contract.md",
       "docs/chart-current-validation.json",
       "docs/chart-current-validation.md",
+      "docs/ci-checks.md",
       "docs/conservative-rotation-refinement-validation.json",
       "docs/conservative-rotation-validation.json",
       "docs/conservative-rotation.md",
@@ -604,6 +608,7 @@
       "scripts/check_ring_field.py",
       "scripts/check_ring_kbo_orbits.py",
       "scripts/check_solar_pole.py",
+      "scripts/check_suites.py",
       "scripts/continuum-conventions-policy.json",
       "scripts/continuum-stress-policy.json",
       "scripts/continuum_conventions.py",

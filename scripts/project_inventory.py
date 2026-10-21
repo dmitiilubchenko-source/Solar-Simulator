@@ -16,7 +16,7 @@ IGNORED_PARTS = {"__pycache__", ".pytest_cache", "target"}
 def inventory(root):
     """Index public component trees, excluding generated and personal files."""
     groups = {}
-    for directory in ("src", "rust", "scripts", "tests", "docs", "examples", "requirements"):
+    for directory in ("src", "rust", "scripts", "tests", "docs", "examples", "requirements", ".github"):
         for path in sorted((root / directory).rglob("*")):
             relative = path.relative_to(root)
             if not path.is_file() or IGNORED_PARTS.intersection(relative.parts):

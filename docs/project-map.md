@@ -217,3 +217,9 @@ Python/Tcl настройки и изолирует font/recovery-файлы; о
 просмотр в рабочем потоке, Tk остаётся в главном; [контракт](trajectory-recording.md).
 [Measure playback](../scripts/measure_playback.py) и [оба прогона](review-followup-cost.json)
 оценивают только отрисовку одинаковых синтетических координат.
+
+
+[Группы CI](ci-checks.md), [check_suites](../scripts/check_suites.py) и
+[workflow](../.github/workflows/checks.yml) связывают явные ограниченные
+подмножества с проверками GitHub. .github включена в общий inventory; полный
+check_project --require-native не ослаблен. Приёмка нового ZIP отдельно.
