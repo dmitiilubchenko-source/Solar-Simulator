@@ -207,3 +207,7 @@ Python/Tcl настройки и изолирует font/recovery-файлы; о
 `docs/reviews/2026-10-21/evidence/audit-probes.py` принимает --project,
 обязательный новый --output и явный --benchmarks; импорт не запускает GUI.
 Сохранённые JSON/log/XML старого запуска не перезаписываются.
+
+
+Диагностика окружения до долгого прогона: [check_environment](../scripts/check_environment.py),
+параметры и границы — [воспроизводимость](reproducibility.md). Ничего не устанавливает.

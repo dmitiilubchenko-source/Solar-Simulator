@@ -15,9 +15,11 @@ getattr(module, sys.argv[2])(Path(sys.argv[3]))
 """
     environment=os.environ.copy()
     environment['LOCALAPPDATA']=str(tmp_path/'appdata')
-    result = subprocess.run([sys.executable, '-B', '-c', code, str(source or Path(__file__).resolve()),
-                             function, str(tmp_path)], capture_output=True, text=True, timeout=40,env=environment)
-    assert result.returncode == 0, result.stdout+result.stderr
+    environment['PYTHONUTF8']='1'
+    environment['PYTHONIOENCODING']='utf-8'
+    result = subprocess.run([sys.executable, '-X', 'utf8', '-B', '-c', code, str(source or Path(__file__).resolve()),
+                             function, str(tmp_path)], capture_output=True, text=True, encoding='utf-8',timeout=40,env=environment)
+    assert result.returncode == 0, f'GUI child exit {result.returncode}\n{result.stdout or ""}{result.stderr or ""}'
 
 
 def _check_scenario_selection(tmp_path):
