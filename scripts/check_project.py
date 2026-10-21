@@ -8,11 +8,14 @@ import subprocess
 import sys
 
 ROOT=Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:sys.path.insert(0,str(ROOT))
+from scripts.project_inventory import PRIVATE_DOCS
 
 
 def check_links():
     count=0
     for path in (ROOT/"docs").glob("*.md"):
+        if path.name in PRIVATE_DOCS:continue
         for name,line in re.findall(r"\]\(([^)]+):([0-9]+)\)",path.read_text(encoding="utf-8")):
             source=project_source(name, ROOT, relative_to=path.parent)
             if not source.is_file() or not 1<=int(line)<=len(source.read_text(encoding="utf-8").splitlines()):

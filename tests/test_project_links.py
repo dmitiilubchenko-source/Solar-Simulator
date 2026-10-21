@@ -5,6 +5,17 @@ import pytest
 from scripts import check_project as checker
 
 
+def test_private_context_does_not_change_public_link_validation(tmp_path,monkeypatch):
+    docs=tmp_path/'docs';docs.mkdir()
+    (docs/'changes.md').write_text('[private](C:/OtherPrivate/context.py:999)')
+    (docs/'report.md').write_text('[valid](source.py:1)')
+    (docs/'source.py').write_text('public source\n')
+    monkeypatch.setattr(checker,'ROOT',tmp_path)
+    checker.check_links()
+    (docs/'report.md').write_text('[invalid](C:/OtherPrivate/context.py:999)')
+    with pytest.raises(ValueError,match='Unknown project link root'):checker.check_links()
+
+
 def test_historical_anchor_resolves_current_copy_and_never_reads_original_checkout(tmp_path,monkeypatch):
     root=tmp_path/"new checkout";root.mkdir();source=root/"src/model.py"
     source.parent.mkdir();source.write_text("first\nsecond\n",encoding="utf-8")
