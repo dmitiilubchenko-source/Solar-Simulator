@@ -97,7 +97,9 @@ class Trajectory:
     frame() decodes a fresh full experiment so callers cannot mutate the recording.
     This first format loads all frames into memory; it is intended for modest runs.
     """
-    def __init__(self,directory):
+    def __init__(self,directory,*,progress=None,stop_requested=None):
+        from concurrent.futures import CancelledError
+        if stop_requested is not None and stop_requested():raise CancelledError()
         self.directory=Path(directory).resolve()
         document=_read_document(self.directory/'manifest.json')
         keys={'format','schema_version','units','engine','packet_steps','start_time_seconds',
@@ -113,6 +115,7 @@ class Trajectory:
             raise ValueError('Неконечное время траектории')
         raw_frames=[];times=[];settings=None;parent=None;initial=None;origin=None;previous_halted=False
         for index,entry in enumerate(document['frames']):
+            if stop_requested is not None and stop_requested():raise CancelledError()
             name=f'frame-{index:06d}.json'
             if (type(entry) is not dict or set(entry)!={'file','time_seconds','sha256'} or entry['file']!=name
                     or type(entry['time_seconds']) not in (int,float) or not isfinite(entry['time_seconds'])):
@@ -137,6 +140,8 @@ class Trajectory:
                   or state_document['origin']!=origin):
                 raise ValueError('Настройки, начальные данные или родитель изменились между кадрами')
             raw_frames.append(raw);times.append(state.time);previous_halted=state.halted
+            if progress is not None:progress(index+1,len(document['frames']))
+        if stop_requested is not None and stop_requested():raise CancelledError()
         if (document['status']=='complete' and times[-1]!=target
                 or document['status']=='halted' and not state.halted):
             raise ValueError('Статус не соответствует конечному кадру')

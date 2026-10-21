@@ -7,20 +7,21 @@ from pathlib import Path
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg,NavigationToolbar2Tk
 from matplotlib.figure import Figure
 
-from .orbit_view import draw_orbits
+from .plot_artists import PlotArtists
 from .playback import Playback
-from .trajectory import Trajectory
 
 
 class TrajectoryViewer:
-    def __init__(self,window,trajectory):
+    def __init__(self,window,trajectory,*,frames=None):
         self.window=window;self.player=Playback(trajectory)
         self.window.title('Solar — просмотр записанной траектории')
         self.window.geometry('1000x750')
-        self.frames=[]
-        for index in range(len(trajectory.times)):
-            state,_=trajectory.frame(index)
-            self.frames.append({b.name:(b.position.x,b.position.y,b.position.z) for b in state.bodies})
+        self.frames=frames
+        if self.frames is None:
+            self.frames=[]
+            for index in range(len(trajectory.times)):
+                state,_=trajectory.frame(index)
+                self.frames.append({b.name:(b.position.x,b.position.y,b.position.z) for b in state.bodies})
         controls=ttk.Frame(window);controls.pack(fill='x',padx=8,pady=6)
         ttk.Button(controls,text='Просмотр',command=self._play).pack(side='left')
         ttk.Button(controls,text='Пауза',command=self.player.pause).pack(side='left')
@@ -43,6 +44,7 @@ class TrajectoryViewer:
         ttk.Label(window,textvariable=self.status,wraplength=950).pack(fill='x',padx=10,pady=4)
         ttk.Label(window,text='Только сохранённые снимки. Нет расчёта и интерполяции между ними.').pack()
         self.figure=Figure(figsize=(9,5),dpi=100);self.axis=self.figure.add_subplot(111)
+        self._plot_artists=PlotArtists(self.axis)
         self.canvas=FigureCanvasTkAgg(self.figure,master=window)
         self.canvas.get_tk_widget().pack(fill='both',expand=True)
         NavigationToolbar2Tk(self.canvas,window)
@@ -58,8 +60,7 @@ class TrajectoryViewer:
         self.reference.current(self.references.index(selected) if selected in self.references else 0)
         reference=self.references[self.reference.current()]
         axes={'XY':(0,1),'XZ':(0,2),'YZ':(1,2)}[self.plane.get()]
-        self.axis.clear()
-        draw_orbits(self.axis,self.frames[:index+1],names,reference,axes)
+        self._plot_artists.update(self.frames[:index+1],names,reference,axes,())
         self.axis.set_xlabel(self.plane.get()[0]+', м');self.axis.set_ylabel(self.plane.get()[1]+', м')
         self.axis.set_aspect('equal',adjustable='datalim')
         self.position.set(index)
@@ -120,5 +121,5 @@ class TrajectoryViewer:
 
 
 def launch(directory):
-    trajectory=Trajectory(directory)
-    root=tk.Tk();TrajectoryViewer(root,trajectory);root.mainloop()
+    from .trajectory_loader import TrajectoryLoader
+    root=tk.Tk();TrajectoryLoader(root,directory);root.mainloop()

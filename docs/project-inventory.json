@@ -272,6 +272,7 @@
       "docs/releases/v0.3.0.md",
       "docs/reproducibility-protocol.md",
       "docs/reproducibility.md",
+      "docs/review-followup-cost.json",
       "docs/reviews/2026-10-21/PROJECT_REVIEW.md",
       "docs/reviews/2026-10-21/evidence/audit-probes.py",
       "docs/reviews/2026-10-21/evidence/encoding-probe.json",
@@ -686,6 +687,7 @@
       "scripts/lunar_initial_boundary.py",
       "scripts/lunar_initial_receipt.py",
       "scripts/lunar_research.py",
+      "scripts/measure_playback.py",
       "scripts/metric-spin-policy.json",
       "scripts/metric_spin_transport.py",
       "scripts/native_audit.py",
@@ -798,6 +800,7 @@
       "src/solar_simulator/storage.py",
       "src/solar_simulator/time_control.py",
       "src/solar_simulator/trajectory.py",
+      "src/solar_simulator/trajectory_loader.py",
       "src/solar_simulator/trajectory_view.py",
       "src/solar_simulator/vector3.py"
     ],
@@ -997,6 +1000,7 @@
       "tests/test_time_control_gui.py",
       "tests/test_trajectory.py",
       "tests/test_trajectory_gui.py",
+      "tests/test_trajectory_loading.py",
       "tests/test_vector3.py",
       "tests/test_verification_commands.py"
     ]

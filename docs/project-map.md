@@ -211,3 +211,9 @@ Python/Tcl настройки и изолирует font/recovery-файлы; о
 
 Диагностика окружения до долгого прогона: [check_environment](../scripts/check_environment.py),
 параметры и границы — [воспроизводимость](reproducibility.md). Ничего не устанавливает.
+
+
+[TrajectoryLoader](../src/solar_simulator/trajectory_loader.py) проверяет/готовит
+просмотр в рабочем потоке, Tk остаётся в главном; [контракт](trajectory-recording.md).
+[Measure playback](../scripts/measure_playback.py) и [оба прогона](review-followup-cost.json)
+оценивают только отрисовку одинаковых синтетических координат.

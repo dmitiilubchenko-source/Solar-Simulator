@@ -769,13 +769,11 @@ class Laboratory:
         ComparisonViewer(tk.Toplevel(self.root),comparison)
 
     def _open_trajectory(self):
-        from .trajectory import Trajectory
-        from .trajectory_view import TrajectoryViewer
+        from .trajectory_loader import TrajectoryLoader
         path=filedialog.askdirectory(parent=self.root,title='Папка с manifest.json траектории',
             initialdir=str(self.last_trajectory_path) if self.last_trajectory_path else None)
         if path:
-            trajectory=Trajectory(path)
-            TrajectoryViewer(tk.Toplevel(self.root),trajectory)
+            return TrajectoryLoader(tk.Toplevel(self.root),path)
 
     def _show_recoveries(self):
         from .recovery import list_recoveries,recovery_directory

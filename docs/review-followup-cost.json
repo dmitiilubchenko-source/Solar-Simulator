@@ -1,0 +1,146 @@
+{
+  "baseline_commit": "dda0238",
+  "scope": "Two sequential runs of the same display-only fixture; all samples retained; no precision/solver changes; no claim about physical integration speed or constant speedup",
+  "runs": [
+    {
+      "scope": "display only; same deterministic coordinates, 120frames, synchronous canvas draw; six samples per variant; no solver or precision changes",
+      "results": [
+        {
+          "bodies": 10,
+          "mode": "before",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            0.3455089000053704,
+            0.31297280004946515,
+            0.31181420001666993,
+            0.3654386000125669,
+            0.398585099959746,
+            0.39483370003290474
+          ],
+          "median_seconds": 0.35547375000896864,
+          "collections": 2
+        },
+        {
+          "bodies": 10,
+          "mode": "after",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            0.30556910001905635,
+            0.2722423000377603,
+            0.2756292999838479,
+            0.25740349997067824,
+            0.257430600002408,
+            0.2825881000026129
+          ],
+          "median_seconds": 0.2739358000108041,
+          "collections": 2
+        },
+        {
+          "bodies": 354,
+          "mode": "before",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            0.5530744999996386,
+            0.5736247000168078,
+            0.5398050000076182,
+            0.5516447999980301,
+            0.5543116999906488,
+            0.6002848000498489
+          ],
+          "median_seconds": 0.5536930999951437,
+          "collections": 2
+        },
+        {
+          "bodies": 354,
+          "mode": "after",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            0.45037049998063594,
+            0.4773408999899402,
+            0.5296762000070885,
+            0.41140749998157844,
+            0.4636869000387378,
+            0.5878917999798432
+          ],
+          "median_seconds": 0.470513900014339,
+          "collections": 2
+        }
+      ],
+      "run": "viewer-cost.json"
+    },
+    {
+      "scope": "display only; same deterministic coordinates, 120frames, synchronous canvas draw; six samples per variant; no solver or precision changes",
+      "results": [
+        {
+          "bodies": 10,
+          "mode": "before",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            0.46876209997572005,
+            0.5679660000023432,
+            0.6323021000134759,
+            0.6308544999919832,
+            0.7019792000064626,
+            0.6168678000103682
+          ],
+          "median_seconds": 0.6238611500011757,
+          "collections": 2
+        },
+        {
+          "bodies": 10,
+          "mode": "after",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            0.5328287999727763,
+            0.4912045000237413,
+            0.4852880000253208,
+            0.4736343999975361,
+            0.4915107999695465,
+            0.4643736000289209
+          ],
+          "median_seconds": 0.48824625002453104,
+          "collections": 2
+        },
+        {
+          "bodies": 354,
+          "mode": "before",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            1.105145999987144,
+            1.1414874999900348,
+            1.1063571000122465,
+            0.9697773000225425,
+            0.8562904999707825,
+            0.8486946999910288
+          ],
+          "median_seconds": 1.0374616500048432,
+          "collections": 2
+        },
+        {
+          "bodies": 354,
+          "mode": "after",
+          "frames": 120,
+          "draws_per_sample": 4,
+          "samples_seconds": [
+            0.7431763000204228,
+            0.794089300034102,
+            0.6707713999785483,
+            0.6503571000066586,
+            0.6504092999966815,
+            0.6697271000011824
+          ],
+          "median_seconds": 0.6702492499898653,
+          "collections": 2
+        }
+      ],
+      "run": "viewer-cost-public.json"
+    }
+  ]
+}

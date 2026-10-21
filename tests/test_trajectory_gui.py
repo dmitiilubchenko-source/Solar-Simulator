@@ -103,9 +103,13 @@ def _check_invalid_folder_does_not_create_empty_viewer(tmp_path):
     root=tk.Tk();root.withdraw();app=Laboratory(root)
     try:
         with patch('solar_simulator.app.filedialog.askdirectory',return_value=str(tmp_path)):
-            try:app._open_trajectory()
+            loader=app._open_trajectory()
+            try:loader.future.result(timeout=10)
             except OSError:pass
             else:raise AssertionError('Invalid recording should fail')
+        with patch('solar_simulator.trajectory_loader.messagebox.showerror') as error:
+            loader._poll()
+        assert error.call_count==1 and loader.viewer is None and loader.closed
         assert not any(isinstance(w,tk.Toplevel) for w in root.winfo_children())
     finally:app.close()
 

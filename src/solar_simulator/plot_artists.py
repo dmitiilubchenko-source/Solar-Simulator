@@ -9,12 +9,12 @@ from .orbit_view import trajectory_data
 
 
 class PlotArtists:
-    def __init__(self,orbit,energy):
+    def __init__(self,orbit,energy=None):
         self.orbit,self.energy=orbit,energy
         self.paths=LineCollection([],linewidths=1)
         orbit.add_collection(self.paths)
         self.markers=orbit.scatter([],[],s=36,zorder=3)
-        self.balance,=energy.plot([],[],color="#b35c1e")
+        self.balance=energy.plot([],[],color="#b35c1e")[0] if energy is not None else None
         self.legend_key=None
 
     def update(self,frames,names,reference,axes,energies):
@@ -42,8 +42,9 @@ class PlotArtists:
             self.orbit.set_xlim(0,1);self.orbit.set_ylim(0,1)
         self.orbit.set_autoscalex_on(True);self.orbit.set_autoscaley_on(True)
         if paths:self.orbit.autoscale_view()
-        self.balance.set_data([p[0] for p in energies],[p[1] for p in energies])
-        if energies:self.energy.relim()
-        self.energy.set_autoscalex_on(True);self.energy.set_autoscaley_on(True)
-        self.energy.autoscale_view()
+        if self.energy is not None:
+            self.balance.set_data([p[0] for p in energies],[p[1] for p in energies])
+            if energies:self.energy.relim()
+            self.energy.set_autoscalex_on(True);self.energy.set_autoscaley_on(True)
+            self.energy.autoscale_view()
         return visible,paths,markers
