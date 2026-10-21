@@ -353,6 +353,10 @@
       "docs/rust-local-error-validation.md",
       "docs/rust-transport-protocol.md",
       "docs/rust-transport-samples.npz",
+      "docs/rust-transport-split-protocol.md",
+      "docs/rust-transport-split-samples.npz",
+      "docs/rust-transport-split-validation.json",
+      "docs/rust-transport-split-validation.md",
       "docs/rust-transport-validation.json",
       "docs/rust-transport-validation.md",
       "docs/rust.md",
@@ -597,6 +601,7 @@
       "scripts/assess_solar_noether.py",
       "scripts/assess_solar_system.py",
       "scripts/assess_time_control.py",
+      "scripts/assess_transport_split.py",
       "scripts/audit_dop853_coefficients.py",
       "scripts/audit_perturbers.py",
       "scripts/bound-body-policy.json",
@@ -1032,6 +1037,7 @@
       "tests/test_trajectory.py",
       "tests/test_trajectory_gui.py",
       "tests/test_trajectory_loading.py",
+      "tests/test_transport_split.py",
       "tests/test_vector3.py",
       "tests/test_verification_commands.py"
     ]

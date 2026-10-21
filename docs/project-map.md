@@ -257,3 +257,10 @@ test_rust_local_error.py повторяет нормы и метрики пуб�
 принятую последовательность и exact clocks; [стенд](../scripts/assess_rust_transport.py)
 переносит4482 узла к общему T. test_kepler_transport.py проверяет semigroup,
 root portability, битовую хронологию, точные суммы и все опубликованные метрики.
+
+[Разложение350](rust-transport-split-validation.md),
+[протокол](rust-transport-split-protocol.md), [receipt](rust-transport-split-validation.json)
+и [Decimal samples](rust-transport-split-samples.npz):
+[assess_transport_split](../scripts/assess_transport_split.py) разделяет RK и
+native вклады на всех4473 шагах, проверяет semigroup и точные векторные суммы.
+test_transport_split.py проверяет компенсацию/знаки, root-portability и public replay.
