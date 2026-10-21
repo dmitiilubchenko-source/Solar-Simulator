@@ -1,0 +1,77 @@
+{
+  "scope": "Independent audit probes; no source modifications; no scientific accuracy certification",
+  "source_counts": {
+    "src": {
+      "files": 56,
+      "lines": 6752
+    },
+    "scripts": {
+      "files": 239,
+      "lines": 31446
+    },
+    "tests": {
+      "files": 191,
+      "lines": 17979
+    },
+    "rust": {
+      "files": 15,
+      "lines": 2814
+    }
+  },
+  "syntax_errors": [],
+  "replace_unsaved_state": [
+    {
+      "action": "_reset",
+      "time_before": 10.0,
+      "time_after": 0.0,
+      "checkpoint_writes": 0,
+      "recovery_writes": 0,
+      "old_state_still_current": false
+    },
+    {
+      "action": "_new",
+      "time_before": 10.0,
+      "time_after": 0.0,
+      "checkpoint_writes": 0,
+      "recovery_writes": 0,
+      "old_state_still_current": false
+    },
+    {
+      "action": "_load",
+      "time_before": 10.0,
+      "time_after": 0.0,
+      "checkpoint_writes": 0,
+      "recovery_writes": 0,
+      "old_state_still_current": false
+    }
+  ],
+  "trajectory_benchmark": {
+    "fixture": "One ballistic body, Verlet dt=1, batch=1; dependency fingerprint stubbed to isolate recording cost; real atomic writer and full reader",
+    "measurements": [
+      {
+        "packets": 100,
+        "frames": 101,
+        "write_seconds": 2.4246872000001076,
+        "read_seconds": 0.04176540000003115,
+        "retained_frame_bytes": 113001,
+        "total_disk_bytes": 152490
+      },
+      {
+        "packets": 400,
+        "frames": 401,
+        "write_seconds": 4.719407700000147,
+        "read_seconds": 0.14750230000004194,
+        "retained_frame_bytes": 449301,
+        "total_disk_bytes": 604590
+      },
+      {
+        "packets": 1000,
+        "frames": 1001,
+        "write_seconds": 12.079651399999875,
+        "read_seconds": 0.3592958000001545,
+        "retained_frame_bytes": 1121903,
+        "total_disk_bytes": 1508797
+      }
+    ]
+  }
+}

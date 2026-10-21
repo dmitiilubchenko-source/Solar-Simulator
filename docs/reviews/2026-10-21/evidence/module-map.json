@@ -1,0 +1,582 @@
+[
+  {
+    "path": "src/solar_simulator/__init__.py",
+    "lines": 1,
+    "summary": "Учебная математика и механика Solar Simulator.",
+    "public_definitions": []
+  },
+  {
+    "path": "src/solar_simulator/__main__.py",
+    "lines": 4,
+    "summary": null,
+    "public_definitions": []
+  },
+  {
+    "path": "src/solar_simulator/accuracy.py",
+    "lines": 136,
+    "summary": "Adaptive high-accuracy integration of smooth Newtonian or EIH 1PN masses.\n\nError tolerances control local estimates, not guaranteed global error bounds.\nWork in a translating centre-of-mass frame; optionally integrate one relative\npair separately to reduce the scale of its local error-control variables.",
+    "public_definitions": [
+      "evolve_accurate"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/app.py",
+    "lines": 812,
+    "summary": "Tk/Matplotlib лаборатория. Физика в рабочем потоке, Tk только в главном.",
+    "public_definitions": [
+      "Laboratory",
+      "launch"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/application_profiles.py",
+    "lines": 38,
+    "summary": "Ready application profiles using the already validated physical models.",
+    "public_definitions": [
+      "scenario",
+      "lunar_rotation",
+      "solar_sandbox"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/body_fields.py",
+    "lines": 123,
+    "summary": "Shared edit/add fields. Only this input layer knows display units and origin.",
+    "public_definitions": [
+      "BodyFields"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/branch_io.py",
+    "lines": 29,
+    "summary": "Read a checkpoint plus its optional immutable immediate-parent snapshot.",
+    "public_definitions": [
+      "open_experiment",
+      "parent_experiment",
+      "save_experiment"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/cli.py",
+    "lines": 180,
+    "summary": "Командная строка лаборатории: создание, продолжение, отчёт и интерфейс.",
+    "public_definitions": [
+      "report",
+      "main"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/collisions.py",
+    "lines": 74,
+    "summary": "Цикл последовательных ударов на Python или одним вызовом Rust.",
+    "public_definitions": [
+      "CollisionResult",
+      "simulate_collisions"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/commands.py",
+    "lines": 155,
+    "summary": "Sandbox commands alongside the byte-frozen historical CLI diagnostics.",
+    "public_definitions": [
+      "main"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/comparison.py",
+    "lines": 136,
+    "summary": "Exact saved-epoch comparison of an immediate parent and its edited branch.\n\nNo solver, interpolation, nearest-time matching or ephemeris fitting. The\nbundle's immutable checkpoint, not a body's name or rounded JD, anchors time.",
+    "public_definitions": [
+      "Comparison"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/comparison_view.py",
+    "lines": 142,
+    "summary": "Read-only overlay and residuals at verified common saved epochs.",
+    "public_definitions": [
+      "ComparisonViewer",
+      "launch"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/contacts.py",
+    "lines": 118,
+    "summary": "Контакт сфер вдоль параболической интерполяции положения Verlet.\n\nЭто детектор численного шага, не точное решение непрерывной гравитации.\nУменьшение dt необходимо для сходимости времени контакта.",
+    "public_definitions": [
+      "Contact",
+      "RunResult",
+      "first_contact",
+      "run_until_contact"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/continuous.py",
+    "lines": 177,
+    "summary": "Explicit, bounded DOP853 continuation for smooth native point-mass models.\n\nThis session owns solver buffers; ordinary advance/checkpoints keep their old\nbehavior. Every snapshot is an accepted step endpoint, never extrapolated.\nExtending a finished solver relies on the pinned SciPy implementation.",
+    "public_definitions": [
+      "ContinuousRun"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/continuous_cli.py",
+    "lines": 118,
+    "summary": "Explicit experimental interval calculation; legacy GUI/defaults are unchanged.",
+    "public_definitions": [
+      "run",
+      "main"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/control_row.py",
+    "lines": 34,
+    "summary": "Wrap complete control groups when the available width changes.",
+    "public_definitions": [
+      "ControlRow"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/convergence.py",
+    "lines": 114,
+    "summary": "Сравнение фиксированных шагов на одном интервале, без ложных гарантий.",
+    "public_definitions": [
+      "compare_steps",
+      "compare_tolerances"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/coordinates.py",
+    "lines": 55,
+    "summary": "Constant linear change of solver coordinates for one selected pair.\n\nOne slot stores the pair's Newtonian mass centre, the other stores r2-r1.\nThese are numerical variables, not a new physical reference frame. Inertial\npositions/velocities are reconstructed before evaluating every force.",
+    "public_definitions": [
+      "validate_pair_option",
+      "PairCoordinates",
+      "prepare_pair"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/data/__init__.py",
+    "lines": 1,
+    "summary": "Versioned offline astronomical initial states.",
+    "public_definitions": []
+  },
+  {
+    "path": "src/solar_simulator/diagnostics.py",
+    "lines": 77,
+    "summary": "Диагностика ньютоновского движения. Величины в SI, углы в радианах.",
+    "public_definitions": [
+      "model_invariants",
+      "angular_momentum",
+      "OrbitParameters",
+      "orbit_parameters"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/ephemerides.py",
+    "lines": 96,
+    "summary": "Strict offline snapshots of JPL geometric barycentric states, in SI.",
+    "public_definitions": [
+      "EphemerisOrigin",
+      "decode_snapshot",
+      "solar_system"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/error_control.py",
+    "lines": 53,
+    "summary": "DOP853 acceptance from the worst position/velocity block, independent of N.\n\nThe state layout is [all positions, all velocities, optional scaled work].\nEach three-vector has its own dimensionless 5(3) estimate. Relative coordinates\nretain separate barycentre and internal-orbit blocks. This bounds local\nestimates only; convergence and independent global checks remain necessary.",
+    "public_definitions": [
+      "validate_error_control",
+      "PerBodyDOP853"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/experiment.py",
+    "lines": 278,
+    "summary": "Состояние воспроизводимого эксперимента, независимо от CLI и интерфейса.",
+    "public_definitions": [
+      "Settings",
+      "Event",
+      "Experiment",
+      "copy_bodies",
+      "create_experiment",
+      "reset",
+      "validate_start",
+      "advance",
+      "preset"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/impacts.py",
+    "lines": 59,
+    "summary": "Мгновенный импульс между касающимися гладкими сферами, без трения.",
+    "public_definitions": [
+      "ImpactResult",
+      "resolve_contact"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/input_units.py",
+    "lines": 52,
+    "summary": "Input-only SI conversions; existing teaching masses are explicit scales.\n\nau: IAU 2012 B2, 149597870700 m exactly. Earth/Sun scales below reuse\nsimulation.py; they are NOT IAU 2015 nominal GM parameters or JPL masses.",
+    "public_definitions": [
+      "to_si",
+      "from_si"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/kuiper_ring.py",
+    "lines": 42,
+    "summary": "Explicit own discrete ring approximation, sharing the normal body/force model.\n\nThe six pinned initial snapshots allow phase and point-count comparisons. Ring\npoints interact with every body, including one another; no masked EIH terms,\nfuture trajectories, source interpolation or forced circular paths are used.",
+    "public_definitions": [
+      "specifications",
+      "solar_system_ring"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/mergers.py",
+    "lines": 54,
+    "summary": "Учебное слияние: масса, импульс, объём и полный угловой момент.",
+    "public_definitions": [
+      "MergerResult",
+      "merge_contact"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/motion.py",
+    "lines": 25,
+    "summary": "Кинематика в SI. Ускорение в этих формулах постоянно.",
+    "public_definitions": [
+      "calculate_position",
+      "update_velocity",
+      "update_position"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/native_forces.py",
+    "lines": 33,
+    "summary": "Working Rust force adapter; SciPy integration and figures stay in Python.",
+    "public_definitions": [
+      "prepare"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/nbody_rotation.py",
+    "lines": 252,
+    "summary": "Conservative Newtonian N-body with ONE dynamical rigid Q2 figure.\n\nSI; q=(w,x,y,z) body→inertial, S inertial. Point forces are computed once;\nthe figure correction, reaction and torque follow one common potential.\nNo prescribed axes, tides, EIH, contacts or figure–figure terms.",
+    "public_definitions": [
+      "RotationState",
+      "validate",
+      "correction",
+      "validate_experiment",
+      "RotationDOP853",
+      "integrate",
+      "invariants",
+      "lunar_initial"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/oblateness.py",
+    "lines": 286,
+    "summary": "Exterior quadrupole gravity, with fixed or explicitly prescribed axes.\n\nThis is a controlled approximation, not coupled spin/orbit dynamics.\nEvery figure/point interaction includes the reaction on the figure's body.",
+    "public_definitions": [
+      "FixedJ2",
+      "PrescribedQuadrupole",
+      "prescribed",
+      "validate_orientation_origin",
+      "validate_figures",
+      "prepare",
+      "tensors",
+      "acceleration",
+      "potential_energy",
+      "orientation_power",
+      "orbital_torque",
+      "earth_j2",
+      "earth_moon_quadrupoles",
+      "solar_j2",
+      "sun_earth_moon_quadrupoles"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/orbit_determination.py",
+    "lines": 522,
+    "summary": "Restricted optical orbit determination in ICRF/SSB, AU and TDB days.\n\nThe fitted target is a massless Newtonian particle. Prescribed background\nephemerides and measured observer positions are external inputs. They are not\nthe target's future trajectory. This module does not replace the closed N-body\nsimulation, nor infer physical accuracy in metres from angular residuals.",
+    "public_definitions": [
+      "OpticalObservation",
+      "EphemerisBackground",
+      "propagate",
+      "predict_directions",
+      "angular_residuals",
+      "measurement_covariance",
+      "station_night_groups",
+      "OpticalNoiseModel",
+      "initial_states",
+      "fit_orbit",
+      "decode_dataset",
+      "evaluate_predictions",
+      "prediction_uncertainty",
+      "prediction_coverage",
+      "fit_dataset"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/orbit_view.py",
+    "lines": 49,
+    "summary": "Project saved snapshots; rendering never changes the physical experiment.",
+    "public_definitions": [
+      "trajectory_data",
+      "draw_orbits"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/orientation.py",
+    "lines": 130,
+    "summary": "Prescribed orientation, independent of the simulated planetary positions.\n\nDE441 lunar mantle Euler angles and ERFA 2.0.1 Vondrak tables are pinned\nin package data. ERFA/SOFA heritage and redistribution terms: data/ERFA-LICENSE.txt.\nEarth: precession plus the dominant 18.6-year nutation, without fitted frame bias.\nThis module supplies orientation, not an equation for spin evolution.",
+    "public_definitions": [
+      "profile",
+      "validate_time",
+      "precession_matrix",
+      "earth_pole",
+      "ecliptic_rotation",
+      "lunar_angles",
+      "lunar_rotation"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/perturbers.py",
+    "lines": 204,
+    "summary": "Pinned additional DE441 bodies; no runtime trajectory interpolation.",
+    "public_definitions": [
+      "SupplementSpec",
+      "decode_supplement",
+      "decode_body_dataset",
+      "figure_parent_origin",
+      "additional_names",
+      "extend_system",
+      "solar_system_pluto",
+      "solar_system_asteroids",
+      "solar_system_asteroids_full",
+      "solar_system_asteroids_catalog",
+      "solar_system_kuiper"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/planets.py",
+    "lines": 65,
+    "summary": null,
+    "public_definitions": [
+      "create_catalog",
+      "add_planet",
+      "find_planet_by_id",
+      "change_planet_mass",
+      "remove_planet",
+      "planets_heavier_than",
+      "mass_difference"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/playback.py",
+    "lines": 39,
+    "summary": "A cursor over verified recorded endpoints; elapsed wall time never reaches a solver.",
+    "public_definitions": [
+      "Playback"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/plot_artists.py",
+    "lines": 49,
+    "summary": "Update saved orbital snapshots without rebuilding axes or static artists.",
+    "public_definitions": [
+      "PlotArtists"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/recipe.py",
+    "lines": 208,
+    "summary": "Installation fingerprints and a bound recipe; no force/integration formulas.\n\nHashes describe files, not loaded-code attestation or a hermetic OS image.\nNever install dependencies or run code supplied by a recipe.",
+    "public_definitions": [
+      "file_sha",
+      "runtime_fingerprint",
+      "write_recipe",
+      "read_recipe",
+      "audit_recipe",
+      "replay_trajectory"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/recovery.py",
+    "lines": 32,
+    "summary": "Unique local recovery copies using the existing atomic experiment writer.",
+    "public_definitions": [
+      "save_recovery",
+      "recovery_directory",
+      "list_recoveries"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/relativity.py",
+    "lines": 109,
+    "summary": "Order-reduced Einstein–Infeld–Hoffmann dynamics in harmonic coordinates.\n\nAll massive point particles contribute, including three-body potential terms.\nKeep terms through c^-2 only: source accelerations in the correction are\nNewtonian. No spin, radiation reaction, extended bodies, or strong fields.\nEquations and the EIH Lagrangian: see docs/relativity.md (primary sources).",
+    "public_definitions": [
+      "eih_acceleration",
+      "validate_bodies",
+      "invariants"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/rotation.py",
+    "lines": 139,
+    "summary": "Conservative Newtonian model tasks, not the planetary runtime.\n\nOne rigid figure and one point mass, truncated at second mass moment.\nSI; quaternion (w,x,y,z) maps principal body axes to an inertial right frame;\nspin angular momentum is inertial. See docs/conservative-rotation.md.",
+    "public_definitions": [
+      "RigidFigure",
+      "rotation_matrix",
+      "angular_velocity",
+      "quaternion_rate",
+      "pair_field",
+      "free_rhs",
+      "pair_rhs",
+      "invariants",
+      "integrate"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/runner.py",
+    "lines": 33,
+    "summary": "Отделяет физический шаг от частоты выдачи снимков для графиков.",
+    "public_definitions": [
+      "sampled_states"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/rust_backend.py",
+    "lines": 102,
+    "summary": "Пакетный PyO3-модуль; JSON-мост сохранён для независимого сравнения.",
+    "public_definitions": [
+      "evolve",
+      "run_until_contact",
+      "resolve_contact",
+      "simulate_collisions"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/sandbox.py",
+    "lines": 143,
+    "summary": "Detached point-mass experiments with an immutable immediate-parent snapshot.\n\nNo force formulas or GUI dependencies. Bundles wrap ordinary checkpoints;\nthe child uses its own energy baseline and makes no claim of unchanged JPL data.",
+    "public_definitions": [
+      "ExperimentBranch",
+      "branch_experiment",
+      "to_branch_document",
+      "from_branch_document",
+      "save_branch",
+      "load_branch",
+      "load_experiment"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/scenario_catalog.py",
+    "lines": 37,
+    "summary": "Display names only: canonical experiment/CLI/storage keys stay unchanged.",
+    "public_definitions": [
+      "ScenarioVariable"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/scenarios.py",
+    "lines": 43,
+    "summary": "Учебные сценарии: начальные условия в SI, без реальных эфемерид.",
+    "public_definitions": [
+      "circular_pair",
+      "earth_moon",
+      "binary_star",
+      "sun_earth_moon"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/simulation.py",
+    "lines": 115,
+    "summary": "Ньютоновские точечные массы и Velocity Verlet. Все величины в SI.",
+    "public_definitions": [
+      "Body",
+      "accelerations",
+      "step",
+      "total_energy",
+      "total_momentum",
+      "center_of_mass",
+      "sun_earth"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/solar_profiles.py",
+    "lines": 57,
+    "summary": "Explicit access to existing Standard/Strict settings and their historical scope.\n\nThe original factory remains unchanged because scientific receipts pin its bytes.\nThis module selects settings; it neither changes forces nor certifies trajectories.",
+    "public_definitions": [
+      "solar_sandbox",
+      "profile_scope",
+      "profile_text"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/spin_initial.py",
+    "lines": 79,
+    "summary": "Validate orientation snapshots and convert R/Rdot to conservative q/S.\n\nNo future orientation samples are part of a spin initial condition.",
+    "public_definitions": [
+      "SpinInitial",
+      "from_rotation_rate",
+      "lunar_solid_equivalent_initial"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/state_export.py",
+    "lines": 38,
+    "summary": "An orbital CSV slice with explicit units and checkpoint provenance.",
+    "public_definitions": [
+      "export_state"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/storage.py",
+    "lines": 351,
+    "summary": "Версионные контрольные точки SI, строгая загрузка и атомарная запись.",
+    "public_definitions": [
+      "to_document",
+      "from_document",
+      "save",
+      "load"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/time_control.py",
+    "lines": 57,
+    "summary": "Bounded forward packets; solver settings and physical time stay explicit.",
+    "public_definitions": [
+      "validate_target",
+      "advance_towards"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/trajectory.py",
+    "lines": 152,
+    "summary": "Full, committed packet endpoints; no new integration or interpolation scheme.",
+    "public_definitions": [
+      "record_trajectory",
+      "Trajectory"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/trajectory_view.py",
+    "lines": 124,
+    "summary": "Read-only desktop playback of saved packet endpoints.",
+    "public_definitions": [
+      "TrajectoryViewer",
+      "launch"
+    ]
+  },
+  {
+    "path": "src/solar_simulator/vector3.py",
+    "lines": 121,
+    "summary": null,
+    "public_definitions": [
+      "Vector3"
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "default_child": {
+    "encoding": "cp1251",
+    "returncode": 1,
+    "stderr_is_none": true,
+    "reader_unicode_error": true,
+    "stderr": null
+  },
+  "utf8_child": {
+    "encoding": "utf-8",
+    "returncode": 1,
+    "stderr_is_none": false,
+    "reader_unicode_error": false,
+    "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    raise RuntimeError('Соберите Rust-модуль')\nRuntimeError: Соберите Rust-модуль\n"
+  }
+}

@@ -1,0 +1,376 @@
+{
+  "review_date": "2026-10-21",
+  "source_commit": "19ed4a523c2cbf2acc474e386f6bfa6443f85313",
+  "local_main_commit": "45ea0c76695105e41f3b7107e3b307e9f17ba91e",
+  "environment": {
+    "python": "3.14.5 ordinary CPython",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "pytest": "9.1.1",
+    "native_available": false,
+    "cargo_available": false,
+    "external_pytest_plugin_autoload": false
+  },
+  "full_pytest": {
+    "passed": 1975,
+    "failed": 80,
+    "skipped": 131,
+    "warnings": 3,
+    "seconds": 490.74
+  },
+  "failure_analysis": {
+    "missing_native_extension": 75,
+    "of_which_gui_error_was_masked_by_encoding": 3,
+    "missing_rustc_for_independent_oracle": 3,
+    "git_attributes_unavailable_in_archive": 2
+  },
+  "followup": {
+    "passed": 2,
+    "failed": 3,
+    "seconds": 8.81,
+    "notes": "Git tests passed with explicit read-only GIT_DIR/GIT_WORK_TREE. Three GUI tests showed missing native correctly with PYTHONUTF8=1; no reader warnings."
+  },
+  "checks": {
+    "inventory_files": 964,
+    "file_line_links": 1387,
+    "missing_relative_links": 0,
+    "syntax_errors_in_src": 0,
+    "pyflakes_findings": 83,
+    "pyflakes_undefined_names": 0
+  },
+  "skip_reasons": {
+    "collection skipped": 2,
+    "could not import 'solar_native': No module named 'solar_native'": 83,
+    "Optional research library absent": 1,
+    "Optional research REBOUND absent": 9,
+    "Optional isolated IAS15 research package is absent": 3,
+    "Developer Rust compiler absent": 6,
+    "Build PyO3 module: scripts/build_native.py": 20,
+    "Optional REBOUND research library absent": 3,
+    "Build Rust release executable before running integration tests": 4
+  },
+  "failed_cases": [
+    {
+      "test": "tests.test_asteroid_catalog::test_git_line_ending_filters_preserve_pinned_scientific_source_bytes",
+      "message": "AssertionError: assert '89cad5b2dd73...28e2d304c6e93' == '68003c612f8d...5215d858e011d'\n  \n  - 68003c612f8da45851e87c4b3755215d858e011d\n  + 89cad5b2dd73bc6785ef6ecc76928e2d304c6e93"
+    },
+    {
+      "test": "tests.test_body_units_gui::test_real_unit_editor_journey[_check_equivalent_rust]",
+      "message": "TypeError: can only concatenate str (not \"NoneType\") to str"
+    },
+    {
+      "test": "tests.test_continuous::test_exact_packet_endpoints_do_not_expose_future_or_mutable_buffers",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous::test_failed_packet_preserves_committed_snapshot_and_cannot_resume",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous::test_fractional_target_changing_packets_and_repeatability",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous::test_holdout_snapshots_are_exact_boundaries_and_cannot_extend_horizon",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous::test_relative_newtonian_motion_matches_independent_analytic_circular_orbit",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous_cli::test_complete_run_records_every_frame_provenance_and_original_checkpoint",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous_cli::test_invalid_input_leaves_no_result_directory[10.0-0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous_cli::test_invalid_input_leaves_no_result_directory[10.0-2001]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous_cli::test_partial_run_is_marked_and_saves_only_last_committed_snapshot[failure0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous_cli::test_partial_run_is_marked_and_saves_only_last_committed_snapshot[failure1]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_continuous_cli::test_default_cli_output_stays_in_local_appdata",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_only_declared_parameter_changes_without_recentring[mass_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_only_declared_parameter_changes_without_recentring[position_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_only_declared_parameter_changes_without_recentring[velocity_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_child_j2_and_pn_corrections_separately_match_independent_force[mass_start]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_child_j2_and_pn_corrections_separately_match_independent_force[position_start]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_child_j2_and_pn_corrections_separately_match_independent_force[velocity_start]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_child_j2_and_pn_corrections_separately_match_independent_force[mass_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_child_j2_and_pn_corrections_separately_match_independent_force[position_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_child_j2_and_pn_corrections_separately_match_independent_force[velocity_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_reference_uses_child_mass_clock_and_resets_source_integrals[mass_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_legacy_checkpoint_and_packet_times_match_continuous[python]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2::test_legacy_checkpoint_and_packet_times_match_continuous[rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2_three::test_membership_edit_preserves_unedited_states_and_parent[add_start]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2_three::test_membership_edit_preserves_unedited_states_and_parent[remove_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2_three::test_membership_edit_preserves_unedited_states_and_parent[mass_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2_three::test_full_three_body_pn_is_not_a_sum_of_isolated_pairs[add_start]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2_three::test_full_three_body_pn_is_not_a_sum_of_isolated_pairs[mass_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_j2_three::test_three_body_figure_gradient_reaction_and_covariance[mass_quarter]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[mass-0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[mass-86400]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[position-0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[position-86400]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[velocity-0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[velocity-86400]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[add-0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[add-86400]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[remove-0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_edited_jpl_origin_does_not_return_through_io[remove-86400]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_scope::test_position_edit_dynamics_against_actual_ic_decimal_oracle[rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_edited_solar::test_loaded_scalar_oracle_matches_independent_matrix_before_use[sun_mass]",
+      "message": "FileNotFoundError: [WinError 2] Не удается найти указанный файл"
+    },
+    {
+      "test": "tests.test_edited_solar::test_loaded_scalar_oracle_matches_independent_matrix_before_use[earth_position]",
+      "message": "FileNotFoundError: [WinError 2] Не удается найти указанный файл"
+    },
+    {
+      "test": "tests.test_edited_solar::test_loaded_scalar_oracle_matches_independent_matrix_before_use[moon_velocity]",
+      "message": "FileNotFoundError: [WinError 2] Не удается найти указанный файл"
+    },
+    {
+      "test": "tests.test_eih_year::test_matrix_and_separate_pn_agree_with_scalar_and_native[2]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_eih_year::test_matrix_and_separate_pn_agree_with_scalar_and_native[3]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_eih_year::test_matrix_and_separate_pn_agree_with_scalar_and_native[10]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_eih_year::test_units_and_conditioned_pair[pair0-31557600.0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_eih_year::test_units_and_conditioned_pair[pair0-86400.0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_eih_year::test_units_and_conditioned_pair[pair1-31557600.0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_eih_year::test_units_and_conditioned_pair[pair1-86400.0]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_fixed_j2_ias::test_tensor_complex_step_gradient_reaction_torque_and_full_callback[newton_one]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_fixed_j2_ias::test_tensor_complex_step_gradient_reaction_torque_and_full_callback[newton_two]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_fixed_j2_ias::test_tensor_complex_step_gradient_reaction_torque_and_full_callback[eih_two]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_fixed_j2_ias::test_axis_reversal_and_exterior_guards",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_ias15_eih::test_analytic_equal_mass_eih_circle_force",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_kuiper::test_git_filters_preserve_checked_scientific_code_hashes_across_windows_clone",
+      "message": "AssertionError: src/solar_simulator/accuracy.py\nassert '2877b0a35230...158b5c3873e69' == '5aa3dfa05a7d...709d377992a54'\n  \n  - 5aa3dfa05a7d11229a2dada8dcc709d377992a54\n  + 2877b0a35230983c100e7f98796158b5c3873e69"
+    },
+    {
+      "test": "tests.test_kuiper_ring::test_native_polygon_self_gravity_matches_closed_radial_sum_and_grows_with_resolution",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_noether_source_bridge::test_real_ten_body_native_and_source_bridge",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_portable_candidate::test_new_workflows_across_real_isolated_processes",
+      "message": "AssertionError: Traceback (most recent call last):\n    File \"C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\src\\solar_simulator\\trajectory.py\", line 50, in record_trajectory\n      fingerprint_start=runtime_fingerprint(current.settings.backend)\n    File \"C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\src\\solar_simulator\\recipe.py\", line 99, in runtime_fingerprint\n      dependencies=_dependencies(), native=_native(backend),\n                                           ~~~~~~~^^^^^^^^^\n    File \"C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\src\\solar_simulator\\recipe.py\", line 69, in _native\n      wrapper = import_module('solar_native')\n    File \"C:\\Users\\lubch\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\importlib\\__init__.py\", line 88, in import_module\n      return _bootstrap._gcd_import(name[level:], package, level)\n             ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    File \"<frozen importlib._bootstrap>\", line 1406, in _gcd_import\n    File \"<frozen importlib._bootstrap>\", line 1371, in _find_and_load\n    File \"<frozen importlib._bootstrap>\", line 1335, in _find_and_load_unlocked\n  ModuleNotFoundError: No module named 'solar_native'\n  \n  The above exception was the direct cause of the following exception:\n  \n  Traceback (most recent call last):\n    File \"C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\scripts\\portable_workflows.py\", line 207, in <module>\n      result = {'create': create, 'restore': restore}[phase]()\n    File \"C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\scripts\\portable_workflows.py\", line 46, in create\n      trajectory.record_trajectory(seed, directory/'parent', 60., packet_steps=2)\n      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    File \"C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\src\\solar_simulator\\trajectory.py\", line 88, in record_trajectory\n      raise RuntimeError(f'{error}{detail}; recovery: {recovery}; траектория: {directory}') from error\n  RuntimeError: No module named 'solar_native'; recovery: C:\\Users\\lubch\\AppData\\Local\\Temp\\pytest-of-lubch\\pytest-52\\test_new_workflows_across_real0\\user data\\SolarSimulator\\recovery\\solar-failed-20261021-060017-5af063bb0918421b8d5ba6c4373bf212\\checkpoint.json; траектория: C:\\Users\\lubch\\AppData\\Local\\Temp\\pytest-of-lubch\\pytest-52\\test_new_workflows_across_real0\\acceptance workflows\\rust\\parent\n  \nassert 1 == 0\n +  where 1 = CompletedProcess(args=['C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\.venv\\\\Scripts\\\\python.exe', '-X', 'utf8', '-B', '-I', 'C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\scripts\\\\portable_workflows.py', 'create'], returncode=1, stdout='', stderr='Traceback (most recent call last):\\n  File \"C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\src\\\\solar_simulator\\\\trajectory.py\", line 50, in record_trajectory\\n    fingerprint_start=runtime_fingerprint(current.settings.backend)\\n  File \"C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\src\\\\solar_simulator\\\\recipe.py\", line 99, in runtime_fingerprint\\n    dependencies=_dependencies(), native=_native(backend),\\n                                         ~~~~~~~^^^^^^^^^\\n  File \"C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\src\\\\solar_simulator\\\\recipe.py\", line 69, in _native\\n    wrapper = import_module(\\'solar_native\\')\\n  File \"C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Python\\\\pythoncore-3.14-64\\\\Lib\\\\importlib\\\\__init__.py\", line 88, in import_module\\n    return _bootstrap._gcd_import(name[level:], package, level)\\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^...ng exception:\\n\\nTraceback (most recent call last):\\n  File \"C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\scripts\\\\portable_workflows.py\", line 207, in <module>\\n    result = {\\'create\\': create, \\'restore\\': restore}[phase]()\\n  File \"C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\scripts\\\\portable_workflows.py\", line 46, in create\\n    trajectory.record_trajectory(seed, directory/\\'parent\\', 60., packet_steps=2)\\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\src\\\\solar_simulator\\\\trajectory.py\", line 88, in record_trajectory\\n    raise RuntimeError(f\\'{error}{detail}; recovery: {recovery}; траектория: {directory}\\') from error\\nRuntimeError: No module named \\'solar_native\\'; recovery: C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-lubch\\\\pytest-52\\\\test_new_workflows_across_real0\\\\user data\\\\SolarSimulator\\\\recovery\\\\solar-failed-20261021-060017-5af063bb0918421b8d5ba6c4373bf212\\\\checkpoint.json; траектория: C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-lubch\\\\pytest-52\\\\test_new_workflows_across_real0\\\\acceptance workflows\\\\rust\\\\parent\\n').returncode"
+    },
+    {
+      "test": "tests.test_profile_selection::test_selected_strict_continuation_matches_original_pinned_path[rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_recipe::test_real_recipe_replays_in_fresh_process_with_analytic_positions[rust-verlet]",
+      "message": "RuntimeError: No module named 'solar_native'; recovery: C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.audit-user\\SolarSimulator\\recovery\\solar-failed-20261021-060040-9afdd387c6274550a6ad86587dabd205\\checkpoint.json; траектория: C:\\Users\\lubch\\AppData\\Local\\Temp\\pytest-of-lubch\\pytest-52\\test_real_recipe_replays_in_fr1\\source"
+    },
+    {
+      "test": "tests.test_recovery_journey::test_save_close_restart_restore_continue[rust]",
+      "message": "TypeError: can only concatenate str (not \"NoneType\") to str"
+    },
+    {
+      "test": "tests.test_required_native::test_native_probe_executes_real_extension",
+      "message": "RuntimeError: solar_native required; run .venv/Scripts/python.exe scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_required_native::test_strict_audit_rejects_runtime_and_collection_skips_but_default_allows_them",
+      "message": "AssertionError: ERROR: solar_native required; run .venv/Scripts/python.exe scripts/build_native.py\n  \n  \nassert 4 == 1\n +  where 4 = CompletedProcess(args=['C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\solar-audit-19ed4a5\\\\.venv\\\\Scripts\\\\python.exe', '-X', 'utf8', '-B', '-m', 'pytest', '-q', '-p', 'no:cacheprovider', 'C:\\\\Users\\\\lubch\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-lubch\\\\pytest-52\\\\test_strict_audit_rejects_runt0', '-p', 'scripts.native_audit'], returncode=4, stdout='', stderr='ERROR: solar_native required; run .venv/Scripts/python.exe scripts/build_native.py\\n\\n').returncode"
+    },
+    {
+      "test": "tests.test_rotation_runtime_checks::test_legacy_ring_runtime_matches_exact_archived_experiment[36]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_rotation_runtime_checks::test_legacy_ring_runtime_matches_exact_archived_experiment[144]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_sandbox_acceptance::test_strict_checkpoint_target_branch_export_and_continuation",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_sandbox_limits::test_edited_system_against_independent_orbit_or_free_motion[mass-double-rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_sandbox_limits::test_edited_system_against_independent_orbit_or_free_motion[slow-velocity-rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_sandbox_limits::test_edited_system_against_independent_orbit_or_free_motion[escape-velocity-rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_sandbox_limits::test_edited_system_against_independent_orbit_or_free_motion[eccentric-095-rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_sandbox_limits::test_edited_system_against_independent_orbit_or_free_motion[add-companion-rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_sandbox_limits::test_edited_system_against_independent_orbit_or_free_motion[remove-primary-rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_solar_noether::test_ten_body_tensor_vector_runtime_gradient_and_reaction_controls",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_trajectory::test_packets_equal_direct_continuation_with_full_state[branch-rust]",
+      "message": "RuntimeError: Соберите Rust-модуль: python scripts/build_native.py"
+    },
+    {
+      "test": "tests.test_trajectory::test_packets_equal_direct_continuation_with_full_state[strict-rust]",
+      "message": "RuntimeError: No module named 'solar_native'; recovery: C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.audit-user\\SolarSimulator\\recovery\\solar-failed-20261021-060202-93574e5a6e9f49d2b3da98855d795bfa\\checkpoint.json; траектория: C:\\Users\\lubch\\AppData\\Local\\Temp\\pytest-of-lubch\\pytest-52\\test_packets_equal_direct_cont3\\track"
+    },
+    {
+      "test": "tests.test_trajectory::test_packets_equal_direct_continuation_with_full_state[rotation-rust]",
+      "message": "RuntimeError: No module named 'solar_native'; recovery: C:\\Users\\lubch\\AppData\\Local\\Temp\\solar-audit-19ed4a5\\.audit-user\\SolarSimulator\\recovery\\solar-failed-20261021-060205-aac34c595203420a8d20d7012c64b9b8\\checkpoint.json; траектория: C:\\Users\\lubch\\AppData\\Local\\Temp\\pytest-of-lubch\\pytest-52\\test_packets_equal_direct_cont5\\track"
+    },
+    {
+      "test": "tests.test_trajectory_gui::test_real_trajectory_journey[_check_close_waits_for_recorded_packet]",
+      "message": "TypeError: can only concatenate str (not \"NoneType\") to str"
+    }
+  ],
+  "full_release_acceptance_passed": false
+}

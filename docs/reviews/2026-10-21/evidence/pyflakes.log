@@ -1,0 +1,83 @@
+src\solar_simulator\storage.py:224:13: '.kuiper_ring.RING_SPECS' imported but unused
+scripts\assess_accuracy.py:3:1: 'dataclasses.replace' imported but unused
+scripts\assess_canonical_checkpoint.py:2:1: 'dataclasses.replace' imported but unused
+scripts\assess_canonical_checkpoint.py:13:1: 'scripts.canonical_checkpoint.to_document' imported but unused
+scripts\assess_canonical_initial.py:14:1: 'scripts.canonical_initial.kinematics' imported but unused
+scripts\assess_continuous.py:122:5: local variable 'differences' is assigned to but never used
+scripts\assess_edited_j2.py:65:17: local variable 'scale' is assigned to but never used
+scripts\assess_fixed_j2_ias.py:14:1: 'scripts.fixed_j2_ias.potential' imported but unused
+scripts\assess_fixed_j2_ias.py:19:1: 'scripts.ias15_eih.noether' imported but unused
+scripts\assess_free_lunar_rotation.py:48:5: local variable 'n' is assigned to but never used
+scripts\assess_native_eih.py:16:1: 'solar_simulator.simulation.G' imported but unused
+scripts\assess_newton_year.py:16:1: 'scripts.newton_year.YEAR' imported but unused
+scripts\assess_orbit_observations.py:12:1: 'solar_simulator.orbit_determination.prediction_uncertainty' imported but unused
+scripts\assess_real_spin_scales.py:23:1: 'scripts.real_spin_scales.relative' imported but unused
+scripts\assess_relative_canonical.py:16:1: 'scripts.relative_canonical.to_cartesian' imported but unused
+scripts\assess_rigid_pn.py:20:1: 'solar_simulator.rotation.quaternion_rate' imported but unused
+scripts\assess_ring_resolution.py:3:1: 'hashlib' imported but unused
+scripts\assess_ring_resolution.py:11:1: 'scripts.assess_kuiper_ring.CODE' imported but unused
+scripts\assess_rotation_time.py:19:1: 'scripts.rigid_pn_model.hamiltonian' imported but unused
+scripts\assess_solar_j2.py:35:5: 'assess_resolved_moon.states' imported but unused
+scripts\assess_solar_noether.py:22:1: 'scripts.fixed_j2_year.within' imported but unused
+scripts\assess_solar_system.py:4:1: 'hashlib' imported but unused
+scripts\check_ring_field.py:16:1: 'solar_simulator.simulation.G' imported but unused
+scripts\fetch_orbit_observations.py:9:1: 'datetime.timezone' imported but unused
+scripts\hybrid_rotation.py:11:1: 'solar_simulator.rotation.rotation_matrix' imported but unused
+scripts\ias15_eih.py:2:1: 'dataclasses.replace' imported but unused
+scripts\local_multipole.py:74:8: local variable 'p' is assigned to but never used
+scripts\plot_asteroids_catalog.py:3:1: 'json' imported but unused
+scripts\plot_asteroids_catalog.py:9:1: 'solar_simulator.perturbers.solar_system_asteroids_full' imported but unused
+scripts\plot_orbit_cohort.py:11:1: 'numpy as np' imported but unused
+scripts\plot_orbit_observations.py:11:1: 'numpy as np' imported but unused
+scripts\prescribed_lunar_control.py:113:13: local variable 'n' is assigned to but never used
+tests\test_accuracy.py:9:1: 'solar_simulator.simulation.AU' imported but unused
+tests\test_accuracy.py:115:5: 'scripts.assess_accuracy.kepler_relative' imported but unused
+tests\test_asteroids_full.py:2:1: 'dataclasses.replace' imported but unused
+tests\test_bound_body_audit.py:23:21: local variable 'et' is assigned to but never used
+tests\test_conventions_audit.py:2:1: 'pathlib.Path' imported but unused
+tests\test_de441_reader_audit.py:3:1: 'json' imported but unused
+tests\test_de441_reader_audit.py:5:1: 'numpy as np' imported but unused
+tests\test_edited_solar_packets.py:3:1: 'pathlib.Path' imported but unused
+tests\test_ephemerides.py:2:1: 'copy.deepcopy' imported but unused
+tests\test_ephemerides.py:3:1: 'dataclasses.replace' imported but unused
+tests\test_fixed_j2_ias.py:8:1: 'scripts.fixed_j2_ias.ias_trajectory' imported but unused
+tests\test_fixed_j2_ias.py:14:1: 'solar_simulator.oblateness.FixedJ2' imported but unused
+tests\test_fluid_spin_audit.py:2:1: 'pathlib.Path' imported but unused
+tests\test_free_lunar_months.py:2:1: 'json' imported but unused
+tests\test_frozen_source_snapshot.py:3:1: 'pathlib.Path' imported but unused
+tests\test_hybrid_rotation.py:3:1: 'decimal.Decimal' imported but unused
+tests\test_jpl_replay.py:2:1: 'copy.deepcopy' imported but unused
+tests\test_kuiper_ring.py:67:35: local variable 'den' is assigned to but never used
+tests\test_local_rotation_audit.py:2:1: 'pathlib.Path' imported but unused
+tests\test_lunar_canonical_diagnostic.py:2:1: 'dataclasses.replace' imported but unused
+tests\test_lunar_initial_receipt.py:3:1: 'json' imported but unused
+tests\test_lunar_research.py:2:1: 'dataclasses.replace' imported but unused
+tests\test_native_forces.py:5:1: 'pathlib.Path' imported but unused
+tests\test_native_forces.py:19:1: 'scripts.fetch_asteroid_catalog.trial_system' imported but unused
+tests\test_newton_year.py:12:1: 'solar_simulator.simulation.AU' imported but unused
+tests\test_nominal_jpl.py:6:1: 'numpy as np' imported but unused
+tests\test_nominal_solar_io.py:6:1: 'numpy as np' imported but unused
+tests\test_oblateness.py:9:1: 'solar_simulator.accuracy.evolve_accurate' imported but unused
+tests\test_orbit_determination.py:11:1: 'solar_simulator.orbit_determination.ARCSEC_PER_RADIAN' imported but unused
+tests\test_orbit_noise.py:9:1: 'solar_simulator.orbit_determination.OpticalObservation' imported but unused
+tests\test_orientation.py:15:1: 'solar_simulator.oblateness.PrescribedQuadrupole' imported but unused
+tests\test_parent_gui.py:10:5: 'solar_simulator.storage.load' imported but unused
+tests\test_perturbers.py:12:1: 'solar_simulator.experiment.create_experiment' imported but unused
+tests\test_pn_spin_model.py:7:1: 'scripts.pn_spin_model.invariants' imported but unused
+tests\test_profile_selection.py:4:1: 'pathlib.Path' imported but unused
+tests\test_project_links.py:1:1: 'pathlib.Path' imported but unused
+tests\test_public_test_inputs.py:3:1: 'pathlib.Path' imported but unused
+tests\test_relative_canonical_checkpoint.py:4:1: 'json' imported but unused
+tests\test_resolved_moon.py:10:1: 'solar_simulator.ephemerides.RESOLVED_IDS' imported but unused
+tests\test_resolved_moon.py:13:1: 'solar_simulator.simulation.G' imported but unused
+tests\test_resolved_moon.py:15:1: 'solar_simulator.vector3.Vector3' imported but unused
+tests\test_rigid_pn_model.py:7:1: 'scripts.rigid_pn_model.invariants' imported but unused
+tests\test_rust_adaptive_audit.py:4:1: 'pathlib.Path' imported but unused
+tests\test_sandbox_acceptance.py:3:1: 'pathlib.Path' imported but unused
+tests\test_sandbox_branch.py:4:1: 'json' imported but unused
+tests\test_sandbox_commands.py:2:1: 'pathlib.Path' imported but unused
+tests\test_storage.py:3:1: 'json' imported but unused
+tests\test_trajectory.py:2:1: 'dataclasses.replace' imported but unused
+tests\test_trajectory.py:5:1: 'pathlib.Path' imported but unused
+tests\test_trajectory.py:9:1: 'solar_simulator.experiment.preset' imported but unused
+tests\test_trajectory_gui.py:2:1: 'pathlib.Path' imported but unused
