@@ -243,3 +243,10 @@ rooted-tree условий до8; не меняет solver и не квалиф�
 [assess_literal_shadow](../scripts/assess_literal_shadow.py) меняет только A/B
 в исследовании338/339; binary80 replay всех27вариантов точный, runtime прежний.
 test_literal_shadow.py проверяет driver и воспроизводит все метрики из NPZ.
+
+[Локальная ошибка348](rust-local-error-validation.md),
+[протокол](rust-local-error-protocol.md), [receipt](rust-local-error-validation.json)
+и [Decimal samples](rust-local-error-samples.npz):
+[assess_rust_local_error](../scripts/assess_rust_local_error.py) сравнивает все
+4572 попытки337 с аналитическим f/g и RK50/80 без изменения solver.
+test_rust_local_error.py повторяет нормы и метрики публичногоNPZ безrawtrace.

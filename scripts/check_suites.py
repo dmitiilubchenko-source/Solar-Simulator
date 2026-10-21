@@ -22,7 +22,8 @@ SUITES={
     'adaptive':[
         'tests/test_rust_adaptive_audit.py','tests/test_rust_adaptive_diagnosis.py',
         'tests/test_kepler_shadow.py','tests/test_shadow_refinement.py','tests/test_rust_trace.py',
-        'tests/test_dop853_coefficients.py','tests/test_literal_shadow.py']}
+        'tests/test_dop853_coefficients.py','tests/test_literal_shadow.py',
+        'tests/test_rust_local_error.py']}
 
 
 def main(argv=None):
