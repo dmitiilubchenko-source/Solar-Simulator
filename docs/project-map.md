@@ -325,3 +325,15 @@ lifecycle356, [полный стенд](../scripts/assess_ias15_native_session.p
 реальные callback failures и независимые fault/alias/circle guards.
 [Точный исходник356](../scripts/validation/ias15_session_356.py) оставлен для
 исторического replay356 с прежним SHA; старый PASS не квалифицирует новый код.
+
+[Год с силой Rust359](native-newton-year-validation.md),
+[протокол](native-newton-year-protocol.md), [receipt](native-newton-year-validation.json),
+[новые массивы](native-newton-year-samples.npz),
+[pilot175](native-newton-pilot-reference.npz)/[year175](native-newton-year-reference.npz):
+[квалификация кеша](../scripts/newton_year_cache.py) сохраняет исходные SHA175,
+проверяет узкие reference-dependencies и отдельно сообщает широкий source mismatch.
+[Адаптер](../scripts/native_newton_year.py) и [стенд](../scripts/assess_native_newton_year.py)
+дали8/8PASS для C/native×2epsilon×pilot/year; оба повторных RK45 уровня битовые.
+[Offline replay](../scripts/replay_native_newton_year.py), test_native_newton_year.py и
+test_native_newton_year_replay.py проверяют пер-тельные/парные критерии и повреждение
+данных. N2-owned session358 и runtime не расширяются этим whole-trajectory стендом.

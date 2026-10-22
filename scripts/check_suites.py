@@ -27,7 +27,7 @@ SUITES={
         'tests/test_transport_split.py','tests/test_transport_order.py',
         'tests/test_ias15_restart_replay.py','tests/test_ias15_restart_step_replay.py',
         'tests/test_ias15_session_replay.py','tests/test_ias15_native_newton_replay.py',
-        'tests/test_ias15_native_session_replay.py']}
+        'tests/test_ias15_native_session_replay.py','tests/test_native_newton_year_replay.py']}
 
 
 def main(argv=None):
