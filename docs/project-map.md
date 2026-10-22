@@ -304,3 +304,13 @@ baseline353bitexact и dt-sidecars. У saved-dt остаются5FAIL/18; runtim
 [Стенд](../scripts/assess_ias15_session.py) подтвердил18/18bitexact353warm;
 [replay](../scripts/replay_ias15_session.py), test_ias15_session.py и
 test_ias15_session_replay.py проверяют partialfailure/aliasing/close и публичные данные.
+
+[Сила Rust в IAS15,357](ias15-native-newton-validation.md),
+[протокол](ias15-native-newton-protocol.md), [receipt](ias15-native-newton-validation.json),
+[массивы](ias15-native-newton-samples.npz):
+[обвязка](../scripts/ias15_native_newton.py),
+[стенд](../scripts/assess_ias15_native_newton.py) и
+[offline replay](../scripts/replay_ias15_native_newton.py) сравнивают Cbasic и
+полный native Newton callback на9×2epsilon. Оба18/18PASS, Cbitexact353warm.
+test_ias15_native_newton.py проверяет независимую силу/круг/negative callbacks;
+test_ias15_native_newton_replay.py — другой корень и повреждение public receipt.
