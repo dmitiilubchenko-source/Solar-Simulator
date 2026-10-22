@@ -41,8 +41,20 @@ class IAS15Session:
         def counter(pointer):
             calls[0] += 1
         self._count_forces = bool(count_forces)
-        self._sim = simulation(library, 0., masses, initial, packet_dt, epsilon,
-                               counter if count_forces else None)
+        self._sim = self._create_simulation(library, masses, initial, counter if count_forces else None)
+
+    def _create_simulation(self, library, masses, initial, counter):
+        return simulation(library, 0., masses, initial, self._packet_dt, self._epsilon, counter)
+
+    def _integrate(self, end):
+        self._sim.integrate(end, exact_finish_time=1)
+
+    def _verify_simulation(self):
+        if (self._sim.G != G or self._sim.gravity != 'basic' or self._sim.softening != 0
+                or self._sim.N != 2 or bits([p.m for p in self._sim.particles]) != bits(self._masses)
+                or self._sim.integrator.epsilon != self._epsilon
+                or self._sim.integrator.adaptive_mode != 'PRS23' or self._sim.integrator.min_dt != 0):
+            raise RuntimeError('IAS15 physical model or masses changed inside a packet')
 
     @property
     def target(self):
@@ -84,14 +96,10 @@ class IAS15Session:
         try:
             if self._sim.t != current.time:
                 raise RuntimeError('IAS15 controller clock differs from committed snapshot')
-            self._sim.integrate(end, exact_finish_time=1)
+            self._integrate(end)
             if self._sim.t != end:
                 raise RuntimeError('IAS15 did not reach the exact packet endpoint')
-            if (self._sim.G != G or self._sim.gravity != 'basic' or self._sim.softening != 0
-                    or self._sim.N != 2 or bits([p.m for p in self._sim.particles]) != bits(self._masses)
-                    or self._sim.integrator.epsilon != self._epsilon
-                    or self._sim.integrator.adaptive_mode != 'PRS23' or self._sim.integrator.min_dt != 0):
-                raise RuntimeError('IAS15 physical model or masses changed inside a packet')
+            self._verify_simulation()
             candidate = _physical_snapshot(end, self._masses, snapshot(self._sim), current.origin)
             steps = int(self._sim.steps_done)
             if steps < committed_steps:

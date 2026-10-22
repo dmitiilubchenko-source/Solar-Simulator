@@ -314,3 +314,14 @@ test_ias15_session_replay.py проверяют partialfailure/aliasing/close и
 полный native Newton callback на9×2epsilon. Оба18/18PASS, Cbitexact353warm.
 test_ias15_native_newton.py проверяет независимую силу/круг/negative callbacks;
 test_ias15_native_newton_replay.py — другой корень и повреждение public receipt.
+
+[Тёплый native-сеанс358](ias15-native-session-validation.md),
+[протокол](ias15-native-session-protocol.md), [receipt](ias15-native-session-validation.json):
+[IAS15NativeSession](../scripts/ias15_native_session.py) повторно использует
+lifecycle356, [полный стенд](../scripts/assess_ias15_native_session.py) подтвердил
+36/36bitexact357, поэтому новый receipt использует существующий архив357.
+[Replay358](../scripts/replay_ias15_native_session.py) и test_ias15_native_session_replay.py
+проверяют текущий код отдельно от истории; test_ias15_native_session.py —
+реальные callback failures и независимые fault/alias/circle guards.
+[Точный исходник356](../scripts/validation/ias15_session_356.py) оставлен для
+исторического replay356 с прежним SHA; старый PASS не квалифицирует новый код.

@@ -14,6 +14,18 @@ from scripts.kepler_transport import public_path, sha
 from scripts.replay_ias15_restart import RECEIPT as BASELINE, replay as replay_baseline
 
 RECEIPT = 'docs/ias15-session-validation.json'
+FROZEN_SESSION = 'scripts/validation/ias15_session_356.py'
+FROZEN_SHA = '1058c0f065edc4dfef26df9f153c4c2dbb071342f7cdd122e9e1c76d15fe17c2'
+
+
+def source_path(root, name, expected):
+    """Receipt356 describes historical code, never the subsequently extended live class."""
+    if name == 'scripts/ias15_session.py' and expected == FROZEN_SHA:
+        name = FROZEN_SESSION
+    path = public_path(root, name)
+    if sha(path) != expected:
+        raise ValueError('Changed session source/input: '+name)
+    return path
 
 
 def replay(root=ROOT):
@@ -28,8 +40,7 @@ def replay(root=ROOT):
             or report['baseline_integrity'] != baseline_summary):
         raise ValueError('Require complete owned-session research receipt and faithful baseline')
     for name, expected in {**report['source_sha256'], **report['input_sha256']}.items():
-        if sha(public_path(root, name)) != expected:
-            raise ValueError('Changed session source/input: '+name)
+        source_path(root, name, expected)
     archive = public_path(root, report['sample_archive'])
     if sha(archive) != report['npz_sha256']:
         raise ValueError('Session archive SHA mismatch')

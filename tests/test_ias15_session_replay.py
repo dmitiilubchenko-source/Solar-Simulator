@@ -6,12 +6,12 @@ import pytest
 
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_restart import RECEIPT as BASELINE
-from scripts.replay_ias15_session import RECEIPT, replay
+from scripts.replay_ias15_session import FROZEN_SESSION, RECEIPT, replay
 
 
 @pytest.fixture
 def portable(tmp_path):
-    names = set()
+    names = {FROZEN_SESSION}
     for name in (BASELINE, RECEIPT):
         row = json.loads((ROOT/name).read_text())
         names.update((name, row['sample_archive'], *row['source_sha256'], *row['input_sha256']))
@@ -34,6 +34,13 @@ def test_all_18_owned_sessions_replay_without_library_raw_or_network(portable, m
     assert result['arrays'] == 90 and result['physical_checkpoints'] == 2262 and result['packets'] == 2244
 
 
+def test_historical_receipt_uses_exact_frozen_source_without_qualifying_live_extension(portable):
+    root, report = portable
+    assert sha(root/FROZEN_SESSION) == report['source_sha256']['scripts/ias15_session.py']
+    (root/'scripts/ias15_session.py').write_bytes(b'unrelated future implementation')
+    assert replay(root)['passed'] == 18
+
+
 @pytest.mark.parametrize('damage', ['physical', 'lifecycle', 'source', 'partial'])
 def test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected(portable, damage):
     root, report = portable
@@ -48,7 +55,7 @@ def test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejecte
     elif damage == 'lifecycle':
         next(iter(report['results'].values()))['1e-09']['statistics']['closed'] = False
     elif damage == 'source':
-        path = root/'scripts/ias15_session.py'
+        path = root/FROZEN_SESSION
         path.write_bytes(path.read_bytes()+b'changed')
     else:
         report['complete'] = False

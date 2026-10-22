@@ -3,10 +3,14 @@
 22 октября2026,356. [Протокол до реализации](ias15-session-protocol.md),
 [полные метрики/SHA/счётчики](ias15-session-validation.json),
 [все массивы и physical JSON](ias15-session-samples.npz),
-[сеанс](../scripts/ias15_session.py), [полный стенд](../scripts/assess_ias15_session.py),
+[исторический сеанс356](../scripts/validation/ias15_session_356.py), [полный стенд](../scripts/assess_ias15_session.py),
 [offline replay](../scripts/replay_ias15_session.py).
 
 ## Что изменилось
+
+Примечание 23 октября2026,358: точный исходник этого опыта сохранён по ссылке
+выше, с исходным SHA из неизменённого receipt356. Текущий research-класс
+расширен отдельно; исторический replay не квалифицирует новую реализацию.
 
 Добавлен только исследовательский IAS15Session. Он копирует masses/p/v,
 создаёт один controller и сохраняет его между пакетами. `current` и `next`
