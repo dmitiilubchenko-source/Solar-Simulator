@@ -295,3 +295,12 @@ test_ias15_restart.py проверяет независимый круг, JSON/�
 [replay](../scripts/replay_ias15_restart_step.py), test_ias15_restart_step.py и
 test_ias15_restart_step_replay.py проверяют36вариантов reset/saved-dt,
 baseline353bitexact и dt-sidecars. У saved-dt остаются5FAIL/18; runtime прежний.
+
+[Тёплый сеанс356](ias15-session-validation.md),
+[протокол](ias15-session-protocol.md), [receipt](ias15-session-validation.json),
+[массивы](ias15-session-samples.npz):
+[IAS15Session](../scripts/ias15_session.py) владеет одним controller и копиями
+снимков, публикует только целый пакет и защёлкивает отказ.
+[Стенд](../scripts/assess_ias15_session.py) подтвердил18/18bitexact353warm;
+[replay](../scripts/replay_ias15_session.py), test_ias15_session.py и
+test_ias15_session_replay.py проверяют partialfailure/aliasing/close и публичные данные.
