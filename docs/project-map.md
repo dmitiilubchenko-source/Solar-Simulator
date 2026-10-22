@@ -277,4 +277,21 @@ test_transport_order.py проверяет независимые affine/quadrat
 [сверка источников](integrator-candidate-review.json) сопоставляют бюджет335–351,
 исторические IAS15165–179 и контракт334. Код продукта не меняется.
 [Протокол353](ias15-restart-protocol.md) заранее задаёт проверку холодного
-восстановления IAS15 на всех девяти модельных задачах; реализация ещё впереди.
+восстановления IAS15 на всех девяти модельных задачах; реализация и результаты ниже.
+
+[Опыт восстановления353](ias15-restart-validation.md),
+[receipt](ias15-restart-validation.json), [массивы](ias15-restart-samples.npz):
+[ias15_restart](../scripts/ias15_restart.py) и
+[assess_ias15_restart](../scripts/assess_ias15_restart.py) выполняют54варианта;
+полный результат49PASS/5FAIL. [Replay354](ias15-restart-replay-validation.md),
+[валидатор](../scripts/replay_ias15_restart.py) и test_ias15_restart_replay.py
+повторяют все метрики/6786physicalcheckpoints без REBOUND/raw/сети.
+test_ias15_restart.py проверяет независимый круг, JSON/границы/guard/oracle.
+
+[Контроль dt355](ias15-restart-step-validation.md),
+[протокол](ias15-restart-step-protocol.md), [receipt](ias15-restart-step-validation.json),
+[массивы](ias15-restart-step-samples.npz):
+[стенд](../scripts/assess_ias15_restart_step.py),
+[replay](../scripts/replay_ias15_restart_step.py), test_ias15_restart_step.py и
+test_ias15_restart_step_replay.py проверяют36вариантов reset/saved-dt,
+baseline353bitexact и dt-sidecars. У saved-dt остаются5FAIL/18; runtime прежний.
