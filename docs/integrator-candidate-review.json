@@ -1,0 +1,159 @@
+{
+  "date": "2026-10-22",
+  "stage": 352,
+  "baseline_commit": "c9a8fc928569fc704920fb6779323332b6409ade",
+  "scope": "Static source/API/provenance audit and existing targeted tests; no new full orbit audit.",
+  "runtime_modified": false,
+  "dependencies_modified": false,
+  "new_accuracy_claim": false,
+  "source_sha256": {
+    "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+    "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "scripts/ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+    "scripts/ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+    "scripts/assess_ias15.py": "2c007ffc29ed96af0718807cf82f0877090474cdd5733a83ab6d9b7e35d7ec3a",
+    "scripts/assess_ias15_original_grid.py": "fd8f49bee51e053ecfb31fb7d55da623c4ecde6416f94ef58423edddcf9434a3",
+    "scripts/kepler_transport.py": "bfc2af2debeeec0b86bc0632848c1570cdca460054702cf2a744d3c8bc8d1ee0",
+    "tests/test_ias15_reference.py": "9aeb427de49bd2aac834a7763338e24b952c75c5b3075bed567d0b3618a1c294",
+    "tests/test_ias15_eih.py": "fe72a4da8ecfb2e0c16dcf686648e9d001117b53cae1650622f7956b595b3ced",
+    "tests/test_ias15_audit.py": "b4b6b5d3ac92f6ff1b0c617ced680290cb8c342850c3d91f28fef7d89b8699bd",
+    "requirements/research-ias15.txt": "209eede65c9b99ae0c40b5e34c1644b71ab0bba442ea818c68d40494dd1a1eba",
+    "pyproject.toml": "0b26b0a06324c09098d23b9739e2f96bf1d22e1398f6fe58ec6d1a5f78500105"
+  },
+  "receipt_sha256": {
+    "docs/ias15-comparison-validation.json": "bc7e3d9a8b85c697565df46cd745308b519ca2c0b6380a64d859dd3c6605362b",
+    "docs/ias15-eih-validation.json": "fcf4702ef79ea7e664642506071da7c2101e6205fdc2c624805e003725890f1a",
+    "docs/rust-adaptive-source-review.json": "151267bcfae705c1e264429be661eb80eda5e817076d796c9b0da55ac0a81c38",
+    "docs/rust-adaptive-prototype-validation.json": "a49ec0d43894137589911dc47241b953f7ee907bcffd82bd4ab2207acff54256",
+    "docs/rust-transport-validation.json": "b8b10ac75b850ad53bce3ecf16d1a1d654404dd0f993ef02218719c9f7ea7f17",
+    "docs/rust-transport-split-validation.json": "469b11b90aac8b1456df79365e79bcbc7dbfa4e634d4353e1de7311d168595d8",
+    "docs/rust-transport-order-validation.json": "6099cde44add792bb24faf9f0b5bbac875ef5ece5a6c5c435ac941d9749182a8"
+  },
+  "python_version": "3.14.2",
+  "pinned_rebound_version": "5.2.2",
+  "sdist": {
+    "filename": "rebound-5.2.2.tar.gz",
+    "sha256": "cefb2bce433a134e0f6fa0cb68df01079b0a5c160fadd2a2c85b06f286735a5f",
+    "url": "https://files.pythonhosted.org/packages/c4/5c/b0346f6e40cc459b4a0a47f8af222adca9a54c29298bccefcfa55a581d4e/rebound-5.2.2.tar.gz",
+    "bytes": 386244
+  },
+  "upstream_files": {
+    "LICENSE": {
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "lines": 674,
+      "tag_url": "https://raw.githubusercontent.com/hannorein/rebound/5.2.2/LICENSE",
+      "tag_bytes_equal": true,
+      "tag_sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    },
+    "src/integrator_ias15.c": {
+      "sha256": "7d3038a1f1f6ad079f86dd652d75fe16bea76df8c0ae1df630b6001e4871ef6b",
+      "bytes": 52628,
+      "lines": 1067,
+      "tag_url": "https://raw.githubusercontent.com/hannorein/rebound/5.2.2/src/integrator_ias15.c",
+      "tag_bytes_equal": true,
+      "tag_sha256": "7d3038a1f1f6ad079f86dd652d75fe16bea76df8c0ae1df630b6001e4871ef6b"
+    },
+    "src/integrator_ias15.h": {
+      "sha256": "396cf13780240add4ab7c0dddb9648d5ab14442e090dd75ffa0d4dbe5044b324",
+      "bytes": 2639,
+      "lines": 59,
+      "tag_url": "https://raw.githubusercontent.com/hannorein/rebound/5.2.2/src/integrator_ias15.h",
+      "tag_bytes_equal": true,
+      "tag_sha256": "396cf13780240add4ab7c0dddb9648d5ab14442e090dd75ffa0d4dbe5044b324"
+    },
+    "src/simulation.c": {
+      "sha256": "b0ab5e705ab04c54bbc5ecdde9f8fecd3b93f802e5287dc1f8484c4787c87bbd",
+      "bytes": 29743,
+      "lines": 874,
+      "tag_url": "https://raw.githubusercontent.com/hannorein/rebound/5.2.2/src/simulation.c",
+      "tag_bytes_equal": true,
+      "tag_sha256": "b0ab5e705ab04c54bbc5ecdde9f8fecd3b93f802e5287dc1f8484c4787c87bbd"
+    },
+    "rebound/simulation.py": {
+      "sha256": "9d7ee452c54742a67fcf54cd349dfde15b9c2fa41c937caebe6de5987bfb8457",
+      "bytes": 63802,
+      "lines": 1505,
+      "tag_url": "https://raw.githubusercontent.com/hannorein/rebound/5.2.2/rebound/simulation.py",
+      "tag_bytes_equal": true,
+      "tag_sha256": "9d7ee452c54742a67fcf54cd349dfde15b9c2fa41c937caebe6de5987bfb8457"
+    },
+    "src/gravity.c": {
+      "sha256": "62ddbdecff7384fd680967a16c8a5adbef7b8f6db34c450f16f78b6040c8fbb8",
+      "bytes": 43768,
+      "lines": 926,
+      "tag_url": "https://raw.githubusercontent.com/hannorein/rebound/5.2.2/src/gravity.c",
+      "tag_bytes_equal": true,
+      "tag_sha256": "62ddbdecff7384fd680967a16c8a5adbef7b8f6db34c450f16f78b6040c8fbb8"
+    }
+  },
+  "old_evidence_integrity": {
+    "raw_168_169_hashes_match": true,
+    "library_hashes_match": true,
+    "newton_old_source_mismatches": [
+      "src/solar_simulator/app.py",
+      "src/solar_simulator/branch_io.py",
+      "src/solar_simulator/cli.py",
+      "src/solar_simulator/commands.py",
+      "src/solar_simulator/contacts.py",
+      "src/solar_simulator/plot_artists.py",
+      "src/solar_simulator/sandbox.py",
+      "src/solar_simulator/vector3.py",
+      "rust/solar_core/src/contacts.rs",
+      ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd"
+    ],
+    "eih_old_source_mismatches": [
+      "src/solar_simulator/app.py",
+      "src/solar_simulator/branch_io.py",
+      "src/solar_simulator/cli.py",
+      "src/solar_simulator/commands.py",
+      "src/solar_simulator/contacts.py",
+      "src/solar_simulator/plot_artists.py",
+      "src/solar_simulator/sandbox.py",
+      "src/solar_simulator/vector3.py"
+    ],
+    "old_results_requalify_current_runtime": false
+  },
+  "historical_newton_passes": {
+    "grid82": {
+      "dop853": 3,
+      "ias15_1e-09": 6,
+      "ias15_1e-11": 6
+    },
+    "grid60": {
+      "dop853": 2,
+      "ias15_1e-09": 3,
+      "ias15_1e-11": 3
+    }
+  },
+  "root_project_license_files": [],
+  "decision": {
+    "next": "Isolated IAS15 physical-checkpoint contract experiment; existing C research implementation.",
+    "rust_runtime_port_approved": false,
+    "application_backend_approved": false,
+    "current_rust_global_gate": "5 PASS / 4 FAIL",
+    "numerical_accuracy_improved": false,
+    "product_license_choice_made": false
+  },
+  "tests": {
+    "command": ".venv/Scripts/python.exe -X utf8 -B -m pytest -q tests/test_ias15_reference.py tests/test_ias15_eih.py tests/test_ias15_audit.py",
+    "passed": 24,
+    "skipped": 0,
+    "seconds": 2.07,
+    "scope": "Current API/model checks only, not a new nine-case orbit audit"
+  },
+  "proposed_next_protocol": "docs/ias15-restart-protocol.md",
+  "new_numerical_experiment_executed": false,
+  "license_identifier_in_ias15_source": "GPL-3.0-or-later",
+  "wheel_python_comparison": {
+    "file": "rebound/simulation.py",
+    "sdist_bytes": 63802,
+    "installed_bytes": 65307,
+    "equal_after_lf_normalization": true,
+    "source_build_binary_equivalence_claimed": false
+  },
+  "current_source_bindings_rechecked_after_tests": true,
+  "runtime_git_diff_from_baseline": ""
+}
