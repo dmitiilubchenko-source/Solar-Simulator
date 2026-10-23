@@ -15,6 +15,8 @@ SUITES={
         'tests/test_ias15_full_state.py',
         'tests/test_ias15_full_suite.py',
         '--deselect=tests/test_ias15_full_suite.py::test_public_full_suite_replays_all_cases_and_preserves_failures',
+        'tests/test_ias15_process.py',
+        '--deselect=tests/test_ias15_process.py::test_public_process_evidence_replay',
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[sun-earth-rust]',
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[spheres-rust]'],
     'desktop':[
@@ -29,7 +31,8 @@ SUITES={
         'tests/test_rust_local_error.py','tests/test_kepler_transport.py',
         'tests/test_transport_split.py','tests/test_transport_order.py',
         'tests/test_ias15_restart_replay.py','tests/test_ias15_restart_step_replay.py',
-        'tests/test_ias15_session_replay.py','tests/test_ias15_full_suite.py','tests/test_ias15_native_newton_replay.py',
+        'tests/test_ias15_session_replay.py','tests/test_ias15_full_suite.py','tests/test_ias15_process.py',
+        'tests/test_ias15_native_newton_replay.py',
         'tests/test_ias15_native_session_replay.py','tests/test_native_newton_year_replay.py']}
 
 

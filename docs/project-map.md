@@ -378,3 +378,15 @@ payload/metadata, сохранение partial outputs при отказе и п
 `docs/ias15-full-suite-validation.md/json` и `ias15-full-suite-samples.npz`
 фиксируют18/18full PASS и13/18cold с пятью сохранёнными отказами.
 Не runtime backend, не приёмка0.3.2; native/new-process ещё отдельно.
+
+## IAS15 в новом процессе (365)
+
+`scripts/ias15_process.py` — trusted request/identity/signature/commit helpers;
+`scripts/ias15_process_worker.py` — один fresh worker;
+`scripts/assess_ias15_process.py` —36jobs и4negative workers;
+`scripts/replay_ias15_process.py`, `tests/test_ias15_process.py` — offline
+evidence и отказы. `docs/ias15-process-protocol.md` задаёт точки и gates;
+`docs/ias15-process-validation.md/json`, `ias15-process-samples.npz`
+фиксируют3372записи/3336шагов без дублирования rawNPZ364.
+Только same-build/ABI/basic; Windows venv launcher проверяется явно.
+Native callbacks, перенос на другой PC и product adoption остаются отдельно.
