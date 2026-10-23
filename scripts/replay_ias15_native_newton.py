@@ -12,6 +12,7 @@ from scripts.ias15_native_newton import MODES, force_metrics
 from scripts.ias15_reference import EPSILONS, packet_end
 from scripts.ias15_restart import bits, restore
 from scripts.kepler_transport import ROOT, public_path, sha
+from scripts.release_history import historical_sha, historical_cargo_hashes
 from scripts.replay_ias15_restart import RECEIPT as BASELINE, replay as replay_baseline
 
 RECEIPT = 'docs/ias15-native-newton-validation.json'
@@ -31,13 +32,13 @@ def replay(root=ROOT):
             or len(bytes.fromhex(report['native']['sha256'])) != 32):
         raise ValueError('Require complete research-only Newton coupling receipt')
     if (report.get('cargo_hash_policy') != 'cargo-crlf-to-lf-v1'
-            or cargo_hashes(root) != report['cargo_lf_sha256']
+            or historical_cargo_hashes(root, report['cargo_lf_sha256']) != report['cargo_lf_sha256']
             or report['cargo_raw_before_sha256'] != report['cargo_raw_after_sha256']
             or set(report['cargo_raw_before_sha256']) != set(report['cargo_lf_sha256'])
             or any(len(bytes.fromhex(v)) != 32 for v in report['cargo_raw_before_sha256'].values())):
         raise ValueError('Changed Cargo content or invalid build metadata provenance')
     for name, expected in {**report['source_sha256'], **report['input_sha256']}.items():
-        if sha(public_path(root, name)) != expected:
+        if historical_sha(root, name, expected) != expected:
             raise ValueError('Changed Newton coupling source/input: '+name)
     path = public_path(root, report['sample_archive'])
     if sha(path) != report['npz_sha256']:

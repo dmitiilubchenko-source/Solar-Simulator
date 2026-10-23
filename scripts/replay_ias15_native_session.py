@@ -9,6 +9,7 @@ from scripts.assess_ias15_restart import load_cases
 from scripts.ias15_native_newton import MODES
 from scripts.ias15_reference import EPSILONS
 from scripts.kepler_transport import ROOT, public_path, sha
+from scripts.release_history import historical_sha, historical_cargo_hashes
 from scripts.replay_ias15_native_newton import RECEIPT as BASELINE, replay as replay357
 from scripts.replay_ias15_session import replay as replay356
 
@@ -27,12 +28,12 @@ def replay(root=ROOT):
             or report.get('runtime_modified') is not False or report.get('production_eligible') is not False):
         raise ValueError('Require complete native-session research receipt')
     for name, expected in {**report['source_sha256'], **report['input_sha256']}.items():
-        if sha(public_path(root, name)) != expected:
+        if historical_sha(root, name, expected) != expected:
             raise ValueError('Changed live native-session source/input: '+name)
     if (report['sample_archive'] != old['sample_archive'] or report['npz_sha256'] != old['npz_sha256']
             or sha(public_path(root, report['sample_archive'])) != report['npz_sha256']
             or report['cargo_hash_policy'] != 'cargo-crlf-to-lf-v1'
-            or cargo_hashes(root) != report['cargo_lf_sha256']
+            or historical_cargo_hashes(root, report['cargo_lf_sha256']) != report['cargo_lf_sha256']
             or report['cargo_lf_sha256'] != old['cargo_lf_sha256']
             or report['cargo_raw_before_sha256'] != report['cargo_raw_after_sha256']
             or set(report['cargo_raw_before_sha256']) != set(report['cargo_lf_sha256'])

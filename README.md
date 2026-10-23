@@ -1,12 +1,13 @@
-# Solar Simulator 0.3.0
+# Solar Simulator 0.3.1
 
-Текущее состояние21октября2026: принятый выпуск0.3.0; разработка идёт вdev.
-Вdev исправлены сохранность при смене опыта, диагностика среды и загрузка
+23 октября 2026: patch 0.3.1 прошёл source/native и настоящую portable-приёмку в dev.
+Принятый тег пока v0.3.0; перенос в main и новый тег согласуются отдельно.
+[Состав 0.3.1](docs/releases/v0.3.1.md) и
+[фактическая приёмка исходников и portable](docs/release-031-validation.md).
+Исправлены сохранность при смене опыта, диагностика среды и загрузка
 траекторий; [результаты и ограничения](docs/review-followup-validation.md).
-[CI веткиdev](https://github.com/dmitiilubchenko-source/Solar-Simulator/actions?query=branch%3Adev).
-Область проверенных режимов — в [выборе профиля](docs/profile-selection.md);
-экспериментальный Rust-интегратор пока не заменяет рабочий SciPy-runtime.
-Новая portable после этих исправлений ещё не подготовлена.
+[CI ветки dev](https://github.com/dmitiilubchenko-source/Solar-Simulator/actions?query=branch%3Adev).
+Экспериментальные IAS15 и Rust DOP853 не заменяют рабочий SciPy runtime.
 
 Настольная гравитационная лаборатория на Python и Rust:
 взаимное движение N тел в 3D, проекции XY/XZ/YZ, траектории,

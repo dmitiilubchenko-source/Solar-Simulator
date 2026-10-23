@@ -209,6 +209,16 @@ print(json.dumps(dict(prefix=str(root),tcl=str(library),events=len(experiment.ev
     result["gui"]=check_gui(folder,environment)
     result['recovery']=check_recovery(folder,environment)
     result['recording_workflows']=check_recording_workflows(folder,environment)
+    patch_script=Path(__file__).with_name('portable_patch_workflows.py')
+    patch_environment={**environment,'LOCALAPPDATA':str(folder/'patch031 user data'),
+                       'MPLCONFIGDIR':str(folder/'patch031 matplotlib')}
+    patch_process=subprocess.run([str(runtime/'python.exe'),'-X','utf8','-B','-I',str(patch_script)],
+        cwd=folder,env=patch_environment,capture_output=True,text=True,encoding='utf-8',timeout=120)
+    if patch_process.returncode:
+        raise RuntimeError('Relocated patch workflows failed:\n'+patch_process.stdout+patch_process.stderr)
+    result['patch031_workflows']=json.loads(patch_process.stdout)
+    if result['patch031_workflows']['isolated']!=1:
+        raise ValueError('Patch workflows must use isolated runtime')
     replay_output=subprocess.check_output([str(runtime/"python.exe"),"-X","utf8","-B","-I",
         str(folder/"verification/replay_jpl.py"),str(folder/"verification")],cwd=folder,env=environment,text=True,encoding="utf-8")
     result["jpl_replay"]=json.loads(replay_output)

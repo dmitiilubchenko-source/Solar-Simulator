@@ -1,6 +1,6 @@
 # Карта проекта и правила хранения
 
-Актуально на 21 октября 2026. Исходники — в `src` и `rust`; `build`, `dist`
+Актуально на 23 октября 2026. Исходники — в `src` и `rust`; `build`, `dist`
 и тестовые распаковки содержат производные копии. Для разработки запускайте
 исходный проект через его `.venv`, а не старую portable-сборку.
 
@@ -337,3 +337,12 @@ lifecycle356, [полный стенд](../scripts/assess_ias15_native_session.p
 [Offline replay](../scripts/replay_native_newton_year.py), test_native_newton_year.py и
 test_native_newton_year_replay.py проверяют пер-тельные/парные критерии и повреждение
 данных. N2-owned session358 и runtime не расширяются этим whole-trajectory стендом.
+
+
+## Patch 0.3.1 (кандидат прошёл приёмку360)
+
+[Состав](releases/v0.3.1.md) и [новая приёмка](release-031-validation.md)
+отделены от старой0.3.0 и исследовательских IAS15 отчётов.
+[Release history resolver](../scripts/release_history.py), явная карта
+release031-history.json и точный release030-sources.zip сохраняют прежние
+source SHA; новый код не объявляется квалифицированным по старым данным.

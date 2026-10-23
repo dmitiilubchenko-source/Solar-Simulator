@@ -14,6 +14,7 @@ from scripts.ias15_native_newton import MODES
 from scripts.ias15_reference import EPSILONS
 from scripts.ias15_restart import bits
 from scripts.kepler_transport import ROOT, public_path, sha
+from scripts.release_history import historical_sha, historical_cargo_hashes
 from scripts.native_newton_year import force_metrics
 from scripts.newton_year import NAMES, packet_end
 from scripts.newton_year_cache import load
@@ -35,10 +36,10 @@ def replay(root=ROOT):
             or bits(report['masses_kg']) != bits([b.mass for b in seed.bodies])):
         raise ValueError('Require complete, qualified N-body research receipt')
     for name, expected in {**report['source_sha256'], **report['input_sha256']}.items():
-        if sha(public_path(root, name)) != expected:
+        if historical_sha(root, name, expected) != expected:
             raise ValueError('Changed N-body source/input: '+name)
     if (report['cargo_hash_policy'] != 'cargo-crlf-to-lf-v1'
-            or cargo_hashes(root) != report['cargo_lf_sha256']
+            or historical_cargo_hashes(root, report['cargo_lf_sha256']) != report['cargo_lf_sha256']
             or report['cargo_raw_before_sha256'] != report['cargo_raw_after_sha256']
             or set(report['cargo_raw_before_sha256']) != set(report['cargo_lf_sha256'])
             or any(len(bytes.fromhex(v)) != 32 for v in report['cargo_raw_before_sha256'].values())
