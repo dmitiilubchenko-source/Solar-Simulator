@@ -1,0 +1,384 @@
+{
+  "schema": 1,
+  "stage": 362,
+  "rebound_version": "5.2.2",
+  "sdist_sha256": "cefb2bce433a134e0f6fa0cb68df01079b0a5c160fadd2a2c85b06f286735a5f",
+  "upstream_files": {
+    "src/integrator_ias15.h": {
+      "sha256": "396cf13780240add4ab7c0dddb9648d5ab14442e090dd75ffa0d4dbe5044b324",
+      "lines": 59,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/src/integrator_ias15.h"
+    },
+    "src/integrator_ias15.c": {
+      "sha256": "7d3038a1f1f6ad079f86dd652d75fe16bea76df8c0ae1df630b6001e4871ef6b",
+      "lines": 1067,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/src/integrator_ias15.c"
+    },
+    "src/binarydata.c": {
+      "sha256": "9386df80430e3efb91023917b9d596396e51750be37144a00c1f2a069132be08",
+      "lines": 931,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/src/binarydata.c"
+    },
+    "src/binarydata.h": {
+      "sha256": "ff400599b6e56e5fb9425baa2d9e0462b50fa99b69dfa6c18b390512108e9671",
+      "lines": 93,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/src/binarydata.h"
+    },
+    "src/simulation.c": {
+      "sha256": "b0ab5e705ab04c54bbc5ecdde9f8fecd3b93f802e5287dc1f8484c4787c87bbd",
+      "lines": 874,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/src/simulation.c"
+    },
+    "src/simulationarchive.c": {
+      "sha256": "c18e0f5ed059e9032dffe91fa12dba58577f830187d6c9f4e6dac574e699633b",
+      "lines": 668,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/src/simulationarchive.c"
+    },
+    "src/rebound.h": {
+      "sha256": "965800077288c5c49ae2b3c18adcccda02c2059f0fa003ffe9568262d5103196",
+      "lines": 913,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/src/rebound.h"
+    },
+    "rebound/simulation.py": {
+      "sha256": "9d7ee452c54742a67fcf54cd349dfde15b9c2fa41c937caebe6de5987bfb8457",
+      "lines": 1505,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/rebound/simulation.py"
+    },
+    "rebound/simulationarchive.py": {
+      "sha256": "2bb37797b83b771f2a138f6b3eb79277a2578f20a999146f4cde6a20ec95e1a9",
+      "lines": 347,
+      "url": "https://github.com/hannorein/rebound/blob/5.2.2/rebound/simulationarchive.py"
+    }
+  },
+  "ias15_declared_fields": 18,
+  "ias15_written_fields": {
+    "epsilon": {
+      "dtype": "REB_DOUBLE",
+      "member": "epsilon",
+      "line": 92,
+      "elements_per_allocated_coordinate": null
+    },
+    "min_dt": {
+      "dtype": "REB_DOUBLE",
+      "member": "min_dt",
+      "line": 98,
+      "elements_per_allocated_coordinate": null
+    },
+    "adaptive_mode": {
+      "dtype": "REB_UINT",
+      "member": "adaptive_mode",
+      "line": 109,
+      "elements_per_allocated_coordinate": null
+    },
+    "iterations_max_exceeded": {
+      "dtype": "REB_UINT64",
+      "member": "iterations_max_exceeded",
+      "line": 110,
+      "elements_per_allocated_coordinate": null
+    },
+    "at": {
+      "dtype": "REB_POINTER",
+      "member": "at",
+      "line": 111,
+      "elements_per_allocated_coordinate": 1
+    },
+    "x0": {
+      "dtype": "REB_POINTER",
+      "member": "x0",
+      "line": 112,
+      "elements_per_allocated_coordinate": 1
+    },
+    "v0": {
+      "dtype": "REB_POINTER",
+      "member": "v0",
+      "line": 113,
+      "elements_per_allocated_coordinate": 1
+    },
+    "a0": {
+      "dtype": "REB_POINTER",
+      "member": "a0",
+      "line": 114,
+      "elements_per_allocated_coordinate": 1
+    },
+    "csx": {
+      "dtype": "REB_POINTER",
+      "member": "csx",
+      "line": 115,
+      "elements_per_allocated_coordinate": 1
+    },
+    "csv": {
+      "dtype": "REB_POINTER",
+      "member": "csv",
+      "line": 116,
+      "elements_per_allocated_coordinate": 1
+    },
+    "csa0": {
+      "dtype": "REB_POINTER",
+      "member": "csa0",
+      "line": 117,
+      "elements_per_allocated_coordinate": 1
+    },
+    "g": {
+      "dtype": "REB_POINTER",
+      "member": "g",
+      "line": 118,
+      "elements_per_allocated_coordinate": 7
+    },
+    "b": {
+      "dtype": "REB_POINTER",
+      "member": "b",
+      "line": 119,
+      "elements_per_allocated_coordinate": 7
+    },
+    "csb": {
+      "dtype": "REB_POINTER",
+      "member": "csb",
+      "line": 120,
+      "elements_per_allocated_coordinate": 7
+    },
+    "e": {
+      "dtype": "REB_POINTER",
+      "member": "e",
+      "line": 121,
+      "elements_per_allocated_coordinate": 7
+    },
+    "br": {
+      "dtype": "REB_POINTER",
+      "member": "br",
+      "line": 122,
+      "elements_per_allocated_coordinate": 7
+    },
+    "er": {
+      "dtype": "REB_POINTER",
+      "member": "er",
+      "line": 123,
+      "elements_per_allocated_coordinate": 7
+    }
+  },
+  "derived_fields": [
+    "N_allocated"
+  ],
+  "global_written_fields": {
+    "t": {
+      "dtype": "REB_DOUBLE",
+      "member": "t",
+      "line": 43
+    },
+    "G": {
+      "dtype": "REB_DOUBLE",
+      "member": "G",
+      "line": 44
+    },
+    "dt": {
+      "dtype": "REB_DOUBLE",
+      "member": "dt",
+      "line": 46
+    },
+    "dt_last_done": {
+      "dtype": "REB_DOUBLE",
+      "member": "dt_last_done",
+      "line": 105
+    },
+    "steps_done": {
+      "dtype": "REB_UINT64",
+      "member": "steps_done",
+      "line": 104
+    },
+    "N": {
+      "dtype": "REB_SIZE_T",
+      "member": "N",
+      "line": 47
+    },
+    "particles": {
+      "dtype": "REB_POINTER",
+      "member": "particles",
+      "line": 93
+    },
+    "gravity": {
+      "dtype": "REB_INT",
+      "member": "gravity",
+      "line": 88
+    },
+    "softening": {
+      "dtype": "REB_DOUBLE",
+      "member": "softening",
+      "line": 45
+    },
+    "force_is_velocity_dependent": {
+      "dtype": "REB_UINT",
+      "member": "force_is_velocity_dependent",
+      "line": 54
+    },
+    "exact_finish_time": {
+      "dtype": "REB_INT",
+      "member": "exact_finish_time",
+      "line": 53
+    },
+    "integrator.name": {
+      "dtype": "REB_STRING",
+      "member": "integrator.name",
+      "line": 86
+    }
+  },
+  "warning_inventory": {
+    "c_declared": {
+      "REB_BINARYDATA_ERROR_NOFILE": 1,
+      "REB_BINARYDATA_WARNING_VERSION": 2,
+      "REB_BINARYDATA_WARNING_POINTERS": 4,
+      "REB_BINARYDATA_WARNING_PARTICLES": 8,
+      "REB_BINARYDATA_ERROR_FILENOTOPEN": 16,
+      "REB_BINARYDATA_ERROR_OUTOFRANGE": 32,
+      "REB_BINARYDATA_ERROR_SEEK": 64,
+      "REB_BINARYDATA_WARNING_FIELD_UNKNOWN": 128,
+      "REB_BINARYDATA_ERROR_INTEGRATOR": 256,
+      "REB_BINARYDATA_WARNING_CORRUPTFILE": 512,
+      "REB_BINARYDATA_ERROR_OLD": 1024,
+      "REB_BINARYDATA_WARNING_CUSTOM_INTEGRATOR": 2048
+    },
+    "python_mapped": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "c_declared_not_python_mapped": {
+      "REB_BINARYDATA_WARNING_CUSTOM_INTEGRATOR": 2048
+    }
+  },
+  "callback_warning_flag_fields": [
+    "coefficient_of_restitution",
+    "collision_resolve",
+    "additional_forces",
+    "heartbeat",
+    "post_timestep_modifications",
+    "free_particle_ap"
+  ],
+  "evidence": {
+    "writer_integrator_fields": {
+      "file": "src/binarydata.c",
+      "line": 650
+    },
+    "writer_array_bytes": {
+      "file": "src/binarydata.c",
+      "line": 588
+    },
+    "reader_derives_allocation": {
+      "file": "src/binarydata.c",
+      "line": 787
+    },
+    "reader_resets_particle_ap": {
+      "file": "src/binarydata.c",
+      "line": 854
+    },
+    "reader_ignores_githash": {
+      "file": "src/binarydata.c",
+      "line": 707
+    },
+    "writer_pointer_warning": {
+      "file": "src/binarydata.c",
+      "line": 654
+    },
+    "file_first_full_snapshot": {
+      "file": "src/simulationarchive.c",
+      "line": 436
+    },
+    "file_existing_appends": {
+      "file": "src/simulationarchive.c",
+      "line": 441
+    },
+    "python_stream_export": {
+      "file": "rebound/simulation.py",
+      "line": 269
+    },
+    "python_stream_constructor": {
+      "file": "rebound/simulation.py",
+      "line": 105
+    },
+    "python_exact_load_can_integrate": {
+      "file": "rebound/simulationarchive.py",
+      "line": 238
+    },
+    "packet_api_resets_dt_last": {
+      "file": "src/simulation.c",
+      "line": 384
+    }
+  },
+  "controller_array_doubles_per_allocated_coordinate": 49,
+  "decision": "feasible-to-test-same-build-trusted-snapshot; numerical continuation unqualified",
+  "numerical_experiment_executed": false,
+  "runtime_modified": false,
+  "production_eligible": false,
+  "elapsed_seconds": 0.042949599999701604,
+  "installed_library_unchanged_against359": {
+    "receipt": "docs/native-newton-year-validation.json",
+    "receipt_sha256": "4ccb5576b92504f1184b2979bc1cfae29c84f22c5e828f8a343c0cdca1ba46c9",
+    "files": 68
+  },
+  "installed_python_comparison": {
+    "rebound/simulation.py": {
+      "sdist_bytes": 63802,
+      "installed_bytes": 65307,
+      "raw_byteequal": false,
+      "equal_after_CRLF_to_LF": true,
+      "AST_equal": true,
+      "installed_sha256": "db698afa74332b161757b4e848062e8e5206c8cc64420bb720e5143968bfc710"
+    },
+    "rebound/simulationarchive.py": {
+      "sdist_bytes": 14125,
+      "installed_bytes": 14472,
+      "raw_byteequal": false,
+      "equal_after_CRLF_to_LF": true,
+      "AST_equal": true,
+      "installed_sha256": "7516ab99af7cb4da6cd09e8ade8d57faa0b3b6ca5c8e868cdc3945252ae271a2"
+    }
+  },
+  "protocol": "docs/ias15-full-state-protocol.md",
+  "source_sha256": {
+    "scripts/audit_ias15_archive_source.py": "d73af7b4d42bbb676cb1ab9f28b97ba800f6bb452814fc709e040cb37330a1cc",
+    "tests/test_ias15_archive_source.py": "5a2bfefbbc7a9ab0406261bd1e1ceb06ba1c1b3436b540624344edd2f79a4d76",
+    "docs/ias15-full-state-protocol.md": "58552cc43e0abbb80844986d0b6849adf1f72cefefc6dc6d678aed8051d2ad5b"
+  },
+  "tests": {
+    "baseline_python_subset": {
+      "passed": 116,
+      "deselected": 2,
+      "seconds": 16.89
+    },
+    "new_unit_tests": 16,
+    "related_old_replays_and_new": {
+      "passed": 33,
+      "seconds": 43.2,
+      "skipped": 0
+    },
+    "initial_failure": {
+      "passed": 14,
+      "failed": 1,
+      "seconds": 2.05,
+      "reason": "Parser did not recognize nested offsetof member integrator.name; invalid regex string escape also warned"
+    },
+    "final_python_subset": {
+      "passed": 132,
+      "deselected": 2,
+      "seconds": 9.2,
+      "new_source_tests_included": 16,
+      "full_native_acceptance": false
+    }
+  },
+  "limitations": [
+    "Static descriptor coverage is not numerical continuation qualification",
+    "No archive created/loaded and no integration or C code executed by the audit",
+    "Same-version same-library/ABI trusted snapshots only; no cross-platform claim",
+    "Python warning mapping omits declared C bit2048; not an observed IAS15 failure",
+    "POINTERS flag covers six callbacks, not every unsupported hook",
+    "No sdist-to-compiled-library binary equivalence claimed",
+    "Old353/355 cold failures and license/adoption decision remain unchanged",
+    "Strict loader must capture raw C masks through with_messages, not rely solely on Python RuntimeWarning"
+  ]
+}

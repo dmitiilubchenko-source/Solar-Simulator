@@ -346,3 +346,13 @@ test_native_newton_year_replay.py проверяют пер-тельные/па�
 [Release history resolver](../scripts/release_history.py), явная карта
 release031-history.json и точный release030-sources.zip сохраняют прежние
 source SHA; новый код не объявляется квалифицированным по старым данным.
+
+
+## Исходники full-state IAS15 (362)
+
+[Аудит](ias15-archive-source-validation.md), [структурированный результат](ias15-archive-source-validation.json)
+и [протокол будущего pilot](ias15-full-state-protocol.md) отделены от
+численного принятия восстановления. [Статический helper](../scripts/audit_ias15_archive_source.py)
+читает только SHA-pinned upstream tar; test_ias15_archive_source.py проверяет
+отказы/closure без REBOUND. В CI python включён новый лёгкий набор.
+Upstream C не поставляется в Solar; runtime/031/его ZIP не изменены.
