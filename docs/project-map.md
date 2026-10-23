@@ -367,3 +367,14 @@ offline replay: `scripts/replay_ias15_full_state.py`;
 `docs/ias15-full-state-samples.npz`. Только basic circular/pinned same-build,
 не runtime backend и не переносимый Solar checkpoint. Все9/native/new-process
 ещё не проверены для binary restore.
+
+## Расширение IAS15 full-state (364)
+
+`scripts/assess_ias15_full_suite.py` использует неизменные guard/paired363
+для9actual-IC случаев/двухepsilon; `scripts/replay_ias15_full_suite.py`
+проверяет evidence offline, `tests/test_ias15_full_suite.py` — повреждение
+payload/metadata, сохранение partial outputs при отказе и полный replay.
+`docs/ias15-full-suite-protocol.md` задаёт gates до опыта;
+`docs/ias15-full-suite-validation.md/json` и `ias15-full-suite-samples.npz`
+фиксируют18/18full PASS и13/18cold с пятью сохранёнными отказами.
+Не runtime backend, не приёмка0.3.2; native/new-process ещё отдельно.
