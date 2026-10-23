@@ -356,3 +356,14 @@ source SHA; новый код не объявляется квалифициро
 читает только SHA-pinned upstream tar; test_ias15_archive_source.py проверяет
 отказы/closure без REBOUND. В CI python включён новый лёгкий набор.
 Upstream C не поставляется в Solar; runtime/031/его ZIP не изменены.
+
+## Исследование полного состояния IAS15 (363)
+
+Исследовательский strict loader/transaction: `scripts/ias15_full_state.py`;
+ограниченный live pilot: `scripts/assess_ias15_full_state.py`;
+offline replay: `scripts/replay_ias15_full_state.py`;
+негативные проверки и replay: `tests/test_ias15_full_state.py`.
+Результаты/область действия: `docs/ias15-full-state-validation.md`, JSON и
+`docs/ias15-full-state-samples.npz`. Только basic circular/pinned same-build,
+не runtime backend и не переносимый Solar checkpoint. Все9/native/new-process
+ещё не проверены для binary restore.

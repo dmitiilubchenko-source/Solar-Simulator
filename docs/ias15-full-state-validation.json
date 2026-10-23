@@ -1,0 +1,4309 @@
+{
+  "protocol": "docs/ias15-full-state-protocol.md",
+  "complete": true,
+  "guards_only": false,
+  "runtime_modified": false,
+  "production_eligible": false,
+  "case": "holdout_circular",
+  "source_sha256": {
+    "docs/ias15-restart-protocol.md": "f6c1fc24c1edd703a4b4fdaa0bb8c97c4e4cf77b7128c973af8946e4e463e57c",
+    "requirements/research-ias15.txt": "209eede65c9b99ae0c40b5e34c1644b71ab0bba442ea818c68d40494dd1a1eba",
+    "scripts/assess_continuous.py": "9cb3f746825ff4327d99b04f83c2a47dbe99ca3869111a56a4cbf94fca2d9823",
+    "scripts/assess_ias15.py": "2c007ffc29ed96af0718807cf82f0877090474cdd5733a83ab6d9b7e35d7ec3a",
+    "scripts/assess_ias15_restart.py": "427caf96275139f5e2ac6f373c51be54b6c28509619f7cc0286679092e1f6ba6",
+    "scripts/assess_kepler_phase.py": "f0b2f6bece3a7653efd883f7041e1ee2d5fb2fcf13d91331fb70b406d24d3677",
+    "scripts/assess_rust_adaptive.py": "de7beb6a14652d13c6f808dc07590f5abf67c50b8f3e3c599875d9d6cdaf0ba6",
+    "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+    "scripts/ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+    "scripts/ias15_restart.py": "7d186c798926024512f982d90590e4202b07eff74a87dd373626f6b02e93aef6",
+    "scripts/kepler_reference.py": "abc7f6f010049d489c71d5331e7942c786600432097b72d94204ff26cc9c14a2",
+    "scripts/kepler_roundoff.py": "c72737322df2a1f0ba73ce5b2f37e1e1b52495eae593f26e0da158fc199d652f",
+    "scripts/kepler_shadow.py": "3a69e39e2f5b3cb2cf6fb8c7bb4f7a0c38d7110efcc12d57993aa3801b549941",
+    "scripts/kepler_transport.py": "bfc2af2debeeec0b86bc0632848c1570cdca460054702cf2a744d3c8bc8d1ee0",
+    "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+    "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/app.py": "2bf1caf8254d5fc17be8c7908527e11174dee093638e34960637d0a78d0b8ed5",
+    "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+    "src/solar_simulator/body_fields.py": "57cf09e0f959609e72f973dbea4b3ca3b25ec0d472458aee3ab12cadff56e6a3",
+    "src/solar_simulator/branch_io.py": "ac7e55d5217d529ca3aff63f834cbc83817be09c6df1aff333507ac34f1c58c4",
+    "src/solar_simulator/cli.py": "177da68c934509516490e6085e5dfdc69c383f0e980c44b2a7ce08ef18c6b2ed",
+    "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+    "src/solar_simulator/commands.py": "4ef48441cf27dc8d54aa1b967116a0b3b5530caf166bbebaab2bcb7bac0f332d",
+    "src/solar_simulator/comparison.py": "bbd178d4ccf0f4838f03ae29091d0e738ae7baa475d8eee378eec72e4d1317af",
+    "src/solar_simulator/comparison_view.py": "b9646515d4505ffc4a877bd2905afdf4bf345dae9653999b7f16f1184d07b5ed",
+    "src/solar_simulator/contacts.py": "177ddf8b10a17a3319ff4139ac94511b84870b60e3e38d4f406b2b67575d13eb",
+    "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+    "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+    "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+    "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+    "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+    "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+    "src/solar_simulator/input_units.py": "f774ea2af4453a94be178d06d002dfc8c136102aa51c5682c0adb5375963e1ab",
+    "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+    "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+    "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+    "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+    "src/solar_simulator/playback.py": "5961af2bfeafb7eb8bc019b9c38c61dea70b2d2551075e693f235633163be987",
+    "src/solar_simulator/plot_artists.py": "822a9dff2572460bca88c00395f00cefaaa10c451288d2f65f1e36d21d220b76",
+    "src/solar_simulator/recipe.py": "776ef2e2ceb1a6f7985178c006dba828d86b55c1884336e21df90b2cb6f71af1",
+    "src/solar_simulator/recovery.py": "b66d4772555da6cdc86fd6b3efa8c2645f58623bd98c283ff4d1b45c18d5a7ee",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+    "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+    "src/solar_simulator/sandbox.py": "46120a00ac7434d107b9e9b5aa653d3401c225adc7ad9fce33b2b274b6851806",
+    "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+    "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src/solar_simulator/solar_profiles.py": "b626b64a5dacd9eef5cd768d9de91ae909f697eef7d07759a2a62ba350146134",
+    "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+    "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+    "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+    "src/solar_simulator/trajectory.py": "59c3b5b6a1e58a2387fee2ae12c945eeff7256be045834da7adc2257b6e86a68",
+    "src/solar_simulator/trajectory_loader.py": "d204a1dbef010deb7e9a3ca6c08f9f3ab8c9123f912ccb4ee24543eb48b6ffb4",
+    "src/solar_simulator/trajectory_view.py": "b004b251c6cdbb63d5c826de44f7f9a875c807fce89c29724623803d7d85a20d",
+    "src/solar_simulator/vector3.py": "88f5fe1bb4c19c41ef5210b7d8d6f4ad874bed1ed7baed0c784618737b67274b",
+    "docs/ias15-full-state-protocol.md": "58552cc43e0abbb80844986d0b6849adf1f72cefefc6dc6d678aed8051d2ad5b",
+    "scripts/ias15_full_state.py": "50f2a04f1f1062368041b2c693ec84e857b61e92992cc5c78b093fc7e9954e23",
+    "scripts/assess_ias15_full_state.py": "96fa8fc32fabfe5645942434819cae84592f3246b8b22bce81d0a4b0353212fd",
+    "tests/test_ias15_full_state.py": "78d97773d7551303112b953569e44af94466db8a4dd413a36ed6c6e41086260d",
+    "scripts/replay_ias15_full_state.py": "955aed3b3cfb285c2616a645e918761af6e07be5a98904271ee9dd498abbecf4",
+    "docs/ias15-archive-source-validation.json": "da74c27f4f63aac43fcd3385b498f55201402e46c4589d487dd759e8337740f3"
+  },
+  "input_sha256": {
+    "docs/rust-local-error-validation.json": "f92c202e861fb913e0b1a973f83d01bed14260052beabc2abf75f5609753307b",
+    "docs/rust-local-error-samples.npz": "2888e1093ae6e7f9ffa6c855dabbd8cd3c6f799b40dcfe74b2977f12f7b05294",
+    "docs/rust-adaptive-shadow-validation.json": "a96ae08228021abad04a1047656bd18e38d703bea2c4b2f3747d3b1a0cbf4338",
+    "docs/rust-adaptive-shadow-samples.npz": "74624affcb687342b4828c167a6d73396cba007140acd3021793eda4934b9ae6",
+    "docs/rust-adaptive-prototype-validation.json": "a49ec0d43894137589911dc47241b953f7ee907bcffd82bd4ab2207acff54256",
+    "docs/rust-adaptive-prototype-samples.npz": "15d26eb8005626b1382ed28223349096dbc1ef81d5f1613cf5ba96d2b6c59da4",
+    "docs/native-newton-year-validation.json": "4ccb5576b92504f1184b2979bc1cfae29c84f22c5e828f8a343c0cdca1ba46c9",
+    "docs/ias15-restart-validation.json": "799b3d9ad957c10144751ab97c0b9e0b0926b12e2a2447fe6dc53733f2f7add0",
+    "docs/ias15-restart-samples.npz": "1628e7b71a5c94c785f9f594184672b8336c3fc7840b411ade7f749e16ee428a"
+  },
+  "source_archive_sha256": "2808f2d3eb49f3b52d0ef754b7be02ab182b9344eb1dab20219e132839f81e59",
+  "library_files_sha256": {
+    "rebound/binarydata_field_descriptor.py": "63dc50290df3e582df7b3a3b33065bef6a4c649f8aff1715a5539abcc0f3d51a",
+    "rebound/citations.py": "662d4d3b8a25e68089a20ab457598eec8843e77a058d071d572c4a0e0fa2c538",
+    "rebound/frequency_analysis.py": "b1ebdc95ce7776e572203bdd3b3aa9c49cc0936d6ebb8bb1e4b0ae7ba6ec641c",
+    "rebound/horizons.py": "cd473537e1e70455126848cf82d403b08df7c1030cfa7d3b8379d89591049c7c",
+    "rebound/integrator.py": "855ac5f008a63990780285e52e680addbf8f19ce8cb8b134f63fdefb62d2cd41",
+    "rebound/ode.py": "6866453b231ab3533ecc692f30e9a6a9949d2d7e39609c0b042ebc78a44a935b",
+    "rebound/orbit.py": "7667825199620e580ba39dc8c3581bae98cfec32eba95bfc7a823fca3b1e4e86",
+    "rebound/particle.py": "21fcc696bc5b0e7fa05e26d9f4ae517a57e453e0fbfa95fe60c54a54b34d8862",
+    "rebound/particles.py": "ca1cbad53d8446fb1c84c2950b0a113b54097272ec7278474367c17277491920",
+    "rebound/plotting.py": "69c7fa0001dd977fa79cbd32d3daec0edcec11a6f274957c08a6f915be60e1bb",
+    "rebound/rotation.py": "b12dbeb40ae134cbe057169a08da315102983628413bb97796ac36967099078d",
+    "rebound/simulation.py": "db698afa74332b161757b4e848062e8e5206c8cc64420bb720e5143968bfc710",
+    "rebound/simulationarchive.py": "7516ab99af7cb4da6cd09e8ade8d57faa0b3b6ca5c8e868cdc3945252ae271a2",
+    "rebound/tools.py": "bea74d41279d1dface67590f469e6e272087a0fe79c903b7a0e1d234e9b08ce1",
+    "rebound/units.py": "e090acdbf72cd055ffa20fbd4b0981e942d98c8cda3f5f088b7896b52c3a3a00",
+    "rebound/variation.py": "d28259195943b16b6a391913015a4213ca6cec52efe75fb89a62a1292c71984b",
+    "rebound/vectors.py": "fe3ede7b63eaf4bebecd656a4d4abced6abb624c75ef5fb857d0c4c0184784ff",
+    "rebound/widget.py": "dddf7d8a7366c6f2d6f1ea4cc2016ff3c6e3e6089c08523fda1fb1f89455dde4",
+    "rebound/__init__.py": "2a3231c57e7a252000119712779eae79067bce19792bcf9c149a6981839635b9",
+    "rebound/tests/test_additional_forces.py": "1f7d9de8b39c1ab7dcf14a6031d1fb809929962b48a7fb496a423c34a4428696",
+    "rebound/tests/test_binary_fields.py": "0bf2b4ef6abff410bb2a1f8c0b26a2b9696998f076c52926bc8f712c861ad456",
+    "rebound/tests/test_boundary.py": "b014b93194c9aa81d35d5cb5fa01adbcb4c7d6ae06b18dff73948b630bfa61ff",
+    "rebound/tests/test_bs.py": "d87010b6308e4675240a51ce2900ecd2d605a1cbe97f043b489c6ebf5ba344b5",
+    "rebound/tests/test_collisions.py": "52a406ff7332506f76edf8f237200d6791d3a430589568e4e5354a13a06158e5",
+    "rebound/tests/test_copy.py": "d8fb1e12ad969e49b3b8526d005d089649560244bc5885070775d85de998eee0",
+    "rebound/tests/test_data.py": "c50720e9f8b15df86305fdbd8354746f9fc0b0ac1defb53550bbc88d75d42b02",
+    "rebound/tests/test_eos.py": "d25736ca06a12405ef39535dcfc2487e7f13b2925128ca7498f2b06079a25752",
+    "rebound/tests/test_fpcontract.py": "e9e65f1f2b7530819d42963153a1d1ee2f4f2d78f97badd463f99072e76d8dec",
+    "rebound/tests/test_frequency_analysis.py": "f90efeabd9a2a91f446a2d0d95e92ec84bc426ee631a82b8c5e1c44ee772c86f",
+    "rebound/tests/test_gravity.py": "fa2d69fee574a2d3117ef14b0b5cfd96fc00770c2999aea57fa85698765cbc21",
+    "rebound/tests/test_horizons.py": "592b80131988135926e91f6b642382ca1dcb8aaa3712919685e01d9d90a5b86e",
+    "rebound/tests/test_import.py": "becbedef4edfb49deb11bb1d021b001e6015d41e704f1a6285e86e643ba54193",
+    "rebound/tests/test_integrator.py": "70e0cc0bfc19302663554f0bb05e7656c7b0b67da8ade98bc4d4ceb09e4040f5",
+    "rebound/tests/test_janus.py": "18163ff0240b63d882cd8e526df41e0c0957b2a85031afdead66050676456d12",
+    "rebound/tests/test_leapfrog.py": "6e5772691eabfc9f44a193223eccacc23050f1ab81b32d8478a3bc03dd349c43",
+    "rebound/tests/test_megno.py": "059dd025ab343bfc81c04bd33dd5b3d2f74c33144c62581a119c957797df92b4",
+    "rebound/tests/test_mercurius.py": "cdfb2ae7788fe78b818f12ebcb8f171ca4f228d73e5f41f146fce30e9b187d0e",
+    "rebound/tests/test_modify_orbital_parameters.py": "f610943b0593e59d14de09ea79433df4811fc98813fe210b66aa7db770a9689d",
+    "rebound/tests/test_name.py": "a6aa2727c63ab1e78e279085cb1a16d400b19d1326eba261ea4ffa5664832526",
+    "rebound/tests/test_orbital_elements.py": "437565eba3f91502c2a21c66f09a5b42b3a7e3b72ec037641eb5775b500a71ca",
+    "rebound/tests/test_particle.py": "43d3b83d349c6d2c2a7643de10dd2cb0260de1fd84554d1b52f48a204298fc77",
+    "rebound/tests/test_pickle.py": "6eb2088fe8067192f506b3254cf0e4c8a49520958f8192716135352efca02891",
+    "rebound/tests/test_plotting.py": "04df7c807044c6ad3043c7fadcf54fe2fafbd1c723482cc26dc0ab51ae57ed5a",
+    "rebound/tests/test_post_timestep_modifications.py": "27cd1ff112f2534a7b348bf1edc63fc722807b49c685517de6ad66a510303863",
+    "rebound/tests/test_random.py": "608c3dbc467f404ad1a203e12f9548f43138e4ec736a91b7ae535d1127e25efa",
+    "rebound/tests/test_restart_mercurius.py": "764a7b15dbcbc026f055d5bd9b3c090f5608b5f98a32fe36c4c4818aa3176a23",
+    "rebound/tests/test_rotations.py": "e489d2f2e886e566cb5779189066bdd9bc190ad5c52e866cf62a85847cf5693e",
+    "rebound/tests/test_saba.py": "fc120b6426b9287d7bf29eb7580a43c077e790416885da6c0d8a270c65cb38c6",
+    "rebound/tests/test_serialize.py": "2525ff03dbe951b7349ef93b2cfeb691d4b4f08b7b21a53634bab45bb9306b5a",
+    "rebound/tests/test_server.py": "f37ed99dd0c2a3840bfcbcbd2b8cf62b2970547a2abf0f2238dfb35895015c53",
+    "rebound/tests/test_shearingsheet.py": "c13906c29b2a487d39b97fc9ff5ac3169e822bfa6b4cb1195d6379631a79976e",
+    "rebound/tests/test_simulation.py": "5f3c72dcafaa3e90282b6b8293929fefd07ed4205ff81825cce32c69c3a25419",
+    "rebound/tests/test_simulationarchive.py": "333085a03ee8bbc189f43291f5a346bc9242754928cef2f6372c8bf6e6f1b6ff",
+    "rebound/tests/test_simulationarchive_matrix.py": "50292f498a1fb0d3d63bb109f8a817978ce011cee3149ed610b6a425ec817686",
+    "rebound/tests/test_size_of_simulation.py": "d9bedc1e1d8d37035d668cfb7496e45e76f6678e13319565af6631a4070d26de",
+    "rebound/tests/test_tponly_encounter.py": "c1a3e17a6b1a6b6fd44e76743ce2a0373d01ed0acac199dab3bb27deedcffb2f",
+    "rebound/tests/test_trace.py": "290c979ac8d9a01611ac2b1d77cb12ebb82d3759c2f3e3d3268895cc07306426",
+    "rebound/tests/test_trace_full_bs.py": "2c770b18702acd0fc7d041103c098a6990e66d82a120394c985a58e543040b02",
+    "rebound/tests/test_trace_full_ias15.py": "68097543699be88cd81e41e2a2a599b7ba57f39064d698b3bc35c9dbb734ea33",
+    "rebound/tests/test_transformations.py": "353617248882cc31fa1db377368f57bf229775208ebd0830c86ee25658ab3175",
+    "rebound/tests/test_units.py": "71f8cf9f9ac57de217c9de113864826762f39f6b69d95a3af93f7318f1721385",
+    "rebound/tests/test_variational.py": "c79e32917afe7becb984c1f4a5c49b7a9be515f6b14d1f967ac404c2abd65314",
+    "rebound/tests/test_whfast.py": "3a6c4b8540e739465f8938b8867d2bc72dd181a0338c9d0f0bb6b541f91344b6",
+    "rebound/tests/test_whfast512.py": "ff94f005e83d5c8c5e410f1eda4b6703bd9b675220f9ad6b829c93dc48e133e5",
+    "rebound/tests/test_whfast_advanced.py": "93e1b39ca36b07141d69a0ad32c96e1d7b6597a455169a727abe5403045d1f3d",
+    "rebound/tests/test_whfast_testparticles.py": "52998f2bf242699447f593428b6278f077a4ec6f02e34442226d518eba01929e",
+    "rebound/tests/__init__.py": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "librebound.cp314t-win_amd64.pyd": "ad61ffe5db70b03bc217dfe56f5bdbac1c4513365f6567064e9bba87408a698a"
+  },
+  "environment": {
+    "python": "3.14.2",
+    "numpy": "2.5.1",
+    "rebound": "5.2.2",
+    "platform": "Windows-11-10.0.26200-SP0"
+  },
+  "request": {
+    "masses": [
+      1.9885e+30,
+      5.9722e+24
+    ],
+    "states": [
+      [
+        2999816575.5479555,
+        -2000366848.9040887,
+        1000183424.4520444,
+        74.91908371017477,
+        -49.97302790339159,
+        24.973027903391593
+      ],
+      [
+        64072891545.85698,
+        120145783091.71396,
+        -60072891545.85698,
+        27016.837566970098,
+        -9030.612522323367,
+        9005.612522323367
+      ]
+    ],
+    "relative_pair": [
+      0,
+      1
+    ],
+    "times": [
+      0.0,
+      3155.743343110007,
+      31557.43343110007,
+      315574.3343110007,
+      1262297.3372440028,
+      1459531.2961883782,
+      2524594.6744880057,
+      3786892.0117320083,
+      5049189.348976011,
+      5404210.4750758875,
+      6311486.6862200145,
+      7573784.023464017,
+      8836081.36070802,
+      9348889.653963396,
+      10098378.697952023,
+      11360676.035196025,
+      12622973.372440029,
+      13293568.832850905,
+      13885270.709684031,
+      15147568.046928033,
+      15775560.972206926,
+      15778716.715550035,
+      15781872.458893145,
+      16409865.384172037,
+      17238248.011738412,
+      17672162.72141604,
+      18934460.05866004,
+      20196757.395904046,
+      21182927.19062592,
+      21459054.73314805,
+      22721352.07039205,
+      23983649.407636054,
+      25127606.36951343,
+      25245946.744880058,
+      26508244.08212406,
+      27770541.419368062,
+      29032838.756612066,
+      29072285.54840094,
+      30295136.093856066,
+      31525875.99766897,
+      31557433.43110007,
+      31560589.17444318,
+      31588990.864531167,
+      31873007.76541107,
+      32819730.768344074,
+      33016964.727288447,
+      34082028.10558808,
+      35344325.44283208,
+      36606622.78007608,
+      36961643.906175956,
+      37868920.11732008,
+      39131217.45456409,
+      40393514.79180809,
+      40906323.085063465,
+      41655812.129052095,
+      42918109.4662961,
+      44180406.8035401,
+      44851002.263950974,
+      45442704.1407841,
+      46705001.4780281,
+      47332994.403307,
+      47336150.146650106,
+      47339305.88999321,
+      47967298.81527211,
+      48795681.44283848,
+      49229596.15251611,
+      50491893.489760116,
+      51754190.82700412,
+      52740360.62172599,
+      53016488.16424812,
+      54278785.50149212,
+      55541082.838736124,
+      56685039.8006135,
+      56803380.17598013,
+      58065677.51322413,
+      59327974.85046814,
+      60590272.18771213,
+      60629718.97950101,
+      61852569.52495614,
+      63083309.428769045,
+      63111711.11885703,
+      63114866.86220014
+    ],
+    "packet_dt": 631148.6686220014,
+    "rtol": 3e-14,
+    "position_atol": 1e-07,
+    "velocity_atol": 1e-13
+  },
+  "origin": "b54a82854e2f432b084167d1923c23b217aba5662f4266d5446c7337d37e56c6",
+  "results": {
+    "1e-09": {
+      "guards": [
+        {
+          "name": "version",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "abi",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "origin",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "library_sha",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "identities",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "digest",
+          "rejected_before_c": true,
+          "reason": "Binary SHA mismatch"
+        },
+        {
+          "name": "expected-time",
+          "rejected_before_c": true,
+          "reason": "Wrong physical time/mass/order"
+        },
+        {
+          "name": "physical-mass-order",
+          "rejected_before_c": true,
+          "reason": "Wrong physical time/mass/order"
+        },
+        {
+          "name": "binary-G",
+          "rejected_before_c": true,
+          "reason": "Changed binary model/settings"
+        },
+        {
+          "name": "binary-t",
+          "rejected_before_c": true,
+          "reason": "Binary/physical epoch mismatch"
+        },
+        {
+          "name": "binary-functionpointers",
+          "rejected_before_c": true,
+          "reason": "Changed binary model/settings"
+        },
+        {
+          "name": "binary-N",
+          "rejected_before_c": true,
+          "reason": "Changed binary model/settings"
+        },
+        {
+          "name": "missing-at",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-at",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-x0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-x0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-v0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-v0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-a0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-a0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csx",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csx",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csv",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csv",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csa0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csa0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-g",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-g",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-b",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-b",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csb",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csb",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-e",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-e",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-br",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-br",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-er",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-er",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "duplicate-field",
+          "rejected_before_c": true,
+          "reason": "Duplicate field: t"
+        },
+        {
+          "name": "callback-_gravity_custom",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _gravity_custom"
+        },
+        {
+          "name": "callback-_additional_forces",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _additional_forces"
+        },
+        {
+          "name": "callback-_pre_timestep_modifications",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _pre_timestep_modifications"
+        },
+        {
+          "name": "callback-_post_timestep_modifications",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _post_timestep_modifications"
+        },
+        {
+          "name": "callback-_heartbeat",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _heartbeat"
+        },
+        {
+          "name": "callback-_key_callback",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _key_callback"
+        },
+        {
+          "name": "callback-_coefficient_of_restitution",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _coefficient_of_restitution"
+        },
+        {
+          "name": "callback-_collision_resolve",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _collision_resolve"
+        },
+        {
+          "name": "callback-_free_particle_ap",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _free_particle_ap"
+        },
+        {
+          "name": "callback-_extras_cleanup",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _extras_cleanup"
+        },
+        {
+          "name": "_archive_create-mask-4",
+          "injected": true,
+          "rejected": true,
+          "reason": "C archive warning mask: 4"
+        },
+        {
+          "name": "_archive_create-mask-128",
+          "injected": true,
+          "rejected": true,
+          "reason": "C archive warning mask: 128"
+        },
+        {
+          "name": "_archive_create-mask-2048",
+          "injected": true,
+          "rejected": true,
+          "reason": "C archive warning mask: 2048"
+        },
+        {
+          "name": "_initialize-mask-4",
+          "injected": true,
+          "rejected": true,
+          "reason": "C simulation warning mask: 4"
+        },
+        {
+          "name": "_initialize-mask-128",
+          "injected": true,
+          "rejected": true,
+          "reason": "C simulation warning mask: 128"
+        },
+        {
+          "name": "_initialize-mask-2048",
+          "injected": true,
+          "rejected": true,
+          "reason": "C simulation warning mask: 2048"
+        },
+        {
+          "name": "python-RuntimeWarning",
+          "injected": true,
+          "rejected": true,
+          "reason": "Unexpected Python warning: injected RuntimeWarning"
+        }
+      ],
+      "abi": "('little', 8, 8, (816, 8, (('t', 0, 8), ('G', 8, 8), ('softening', 16, 8), ('OMEGA', 24, 8), ('OMEGAZ', 32, 8), ('dt', 40, 8), ('dt_last_done', 48, 8), ('steps_done', 56, 8), ('is_synchronized', 64, 4), ('did_modify_particles', 68, 4), ('N', 72, 8), ('N_allocated', 80, 8), ('_particles', 88, 8), ('_N_map', 96, 8), ('_map', 104, 8), ('N_var', 112, 8), ('_particles_var', 120, 8), ('N_var_config', 128, 8), ('var_config', 136, 8), ('N_active', 144, 8), ('testparticle_type', 152, 4), ('testparticle_hidewarnings', 156, 4), ('_name_list', 160, 8), ('_N_name_list', 168, 8), ('_name_hash_table', 176, 8), ('gravity_cs', 184, 8), ('N_allocated_gravity_cs', 192, 8), ('_tree_root', 200, 8), ('opening_angle2', 208, 8), ('_status', 216, 4), ('exact_finish_time', 220, 4), ('force_is_velocity_dependent', 224, 4), ('gravity_ignore', 228, 4), ('_output_timing_last', 232, 8), ('save_messages', 240, 4), ('messages', 248, 8), ('_messages_var_rescale_warning', 256, 4), ('_messages_timestep_warning', 260, 4), ('exit_max_distance', 264, 8), ('exit_min_distance', 272, 8), ('usleep', 280, 8), ('_display_view', 288, 8), ('_display_data', 296, 8), ('_server_data', 304, 8), ('track_energy_offset', 312, 4), ('energy_offset', 320, 8), ('walltime', 328, 8), ('walltime_last_step', 336, 8), ('walltime_last_steps', 344, 8), ('_walltime_last_steps_sum', 352, 8), ('_walltime_last_steps_N', 360, 4), ('python_unit_t', 364, 4), ('python_unit_l', 368, 4), ('python_unit_m', 372, 4), ('root_size', 376, 8), ('N_root_x', 384, 8), ('N_root_y', 392, 8), ('N_root_z', 400, 8), ('N_ghost_x', 408, 4), ('N_ghost_y', 412, 4), ('N_ghost_z', 416, 4), ('collisions', 424, 8), ('N_allocated_collisions', 432, 8), ('N_collisions', 440, 8), ('N_targets', 448, 8), ('minimum_collision_velocity', 456, 8), ('collisions_plog', 464, 8), ('collisions_log_n', 472, 8), ('_calculate_megno', 480, 4), ('_megno_Ys', 488, 8), ('_megno_Yss', 496, 8), ('_megno_cov_Yt', 504, 8), ('_megno_var_t', 512, 8), ('_megno_mean_t', 520, 8), ('_megno_mean_Y', 528, 8), ('_megno_initial_t', 536, 8), ('_megno_n', 544, 8), ('rand_seed', 552, 4), ('simulationarchive_version', 556, 4), ('simulationarchive_auto_interval', 560, 8), ('simulationarchive_auto_walltime', 568, 8), ('simulationarchive_auto_step', 576, 8), ('simulationarchive_next', 584, 8), ('simulationarchive_next_step', 592, 8), ('_simulationarchive_filename', 600, 8), ('_collision', 608, 4), ('integrator', 616, 80), ('_boundary', 696, 4), ('_gravity', 700, 4), ('_gravity_custom', 704, 8), ('_odes', 712, 8), ('_N_odes', 720, 8), ('_N_allocated_odes', 728, 8), ('_additional_forces', 736, 8), ('_pre_timestep_modifications', 744, 8), ('_post_timestep_modifications', 752, 8), ('_heartbeat', 760, 8), ('_key_callback', 768, 8), ('_coefficient_of_restitution', 776, 8), ('_collision_resolve', 784, 8), ('_free_particle_ap', 792, 8), ('_extras_cleanup', 800, 8), ('extras', 808, 8))), (112, 8, (('x', 0, 8), ('y', 8, 8), ('z', 16, 8), ('vx', 24, 8), ('vy', 32, 8), ('vz', 40, 8), ('ax', 48, 8), ('ay', 56, 8), ('az', 64, 8), ('m', 72, 8), ('r', 80, 8), ('_name', 88, 8), ('ap', 96, 8), ('_sim', 104, 8))), (40, 8, (('epsilon', 0, 8), ('min_dt', 8, 8), ('adaptive_mode', 16, 4), ('iterations_max_exceeded', 24, 8), ('N_allocated', 32, 8))))",
+      "statistics": {
+        "packets": 131,
+        "restored_snapshots": 131,
+        "all_packet_fields_bitexact": true,
+        "all_restored_fields_bitexact": true,
+        "ias15_written_fields": 17,
+        "N_allocated": 6,
+        "raw_c_masks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "stream_bytes": {
+          "initial": 2875,
+          "minimum_committed": 5697,
+          "maximum_committed": 5697
+        },
+        "cost_seconds": {
+          "warm_integration": 0.004722800003946759,
+          "integration": 0.005139200031408109,
+          "serialization": 0.06590539998796885,
+          "reading_validation": 0.26878359998590895
+        },
+        "cost_scope": "single paired run; reading includes strict re-export validation; not a speed benchmark"
+      },
+      "cold_statistics": {
+        "mode": "every-packet",
+        "epsilon": 1e-09,
+        "packets": 131,
+        "simulations": 131,
+        "restart_packet_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130
+        ],
+        "restart_output_index": null,
+        "steps_done": 595,
+        "force_evaluations": null,
+        "initial_dt_seconds": 3155.743343110007,
+        "physical_roundtrip_bitexact": true,
+        "adaptive_mode": "PRS23",
+        "gravity": "basic"
+      },
+      "previous353_warm_cold_bitexact": true,
+      "metrics": {
+        "warm": {
+          "position_metres": 0.003357329786242536,
+          "velocity_m_per_s": 6.588253455129325e-10,
+          "relative_energy_drift": 5.716454937147802e-16,
+          "relative_angular_drift": 1.1329710793940361e-14,
+          "scaled_momentum_drift": 2.2189872695083312e-16,
+          "specific_orbital_energy_drift": 3.591833484137366e-16,
+          "checks_passed": true,
+          "worst_position_time_seconds": 63111711.11885703,
+          "sampled_errors": [
+            {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            {
+              "position_metres": 4.185786387700789e-06,
+              "velocity_m_per_s": 8.750852481461832e-13
+            },
+            {
+              "position_metres": 7.4428901869165186e-06,
+              "velocity_m_per_s": 9.101896901756706e-13
+            },
+            {
+              "position_metres": 8.621990919712849e-06,
+              "velocity_m_per_s": 1.216308283797382e-12
+            },
+            {
+              "position_metres": 1.0638332522477295e-05,
+              "velocity_m_per_s": 1.688578799720984e-12
+            },
+            {
+              "position_metres": 9.073211248880231e-06,
+              "velocity_m_per_s": 1.9689356547643675e-12
+            },
+            {
+              "position_metres": 4.530602183902694e-06,
+              "velocity_m_per_s": 2.8763691935230794e-12
+            },
+            {
+              "position_metres": 1.5836632518516546e-05,
+              "velocity_m_per_s": 2.536802078566626e-12
+            },
+            {
+              "position_metres": 1.338271693932972e-05,
+              "velocity_m_per_s": 3.720452656317269e-12
+            },
+            {
+              "position_metres": 1.3957025224189059e-05,
+              "velocity_m_per_s": 4.157368236198104e-12
+            },
+            {
+              "position_metres": 1.4096539811237922e-05,
+              "velocity_m_per_s": 4.505169193841527e-12
+            },
+            {
+              "position_metres": 2.6140905351534024e-05,
+              "velocity_m_per_s": 6.627369499367115e-12
+            },
+            {
+              "position_metres": 2.8094260156886836e-05,
+              "velocity_m_per_s": 6.094646797275792e-12
+            },
+            {
+              "position_metres": 6.602574359841732e-05,
+              "velocity_m_per_s": 1.0889695766482e-11
+            },
+            {
+              "position_metres": 3.8388211186420286e-05,
+              "velocity_m_per_s": 5.7258335885682926e-12
+            },
+            {
+              "position_metres": 2.7350974569509e-05,
+              "velocity_m_per_s": 5.195809733909267e-12
+            },
+            {
+              "position_metres": 3.6262988026180185e-05,
+              "velocity_m_per_s": 6.731996835036994e-12
+            },
+            {
+              "position_metres": 6.950819505537426e-05,
+              "velocity_m_per_s": 1.3312623256934262e-11
+            },
+            {
+              "position_metres": 4.242027847634601e-05,
+              "velocity_m_per_s": 7.174561992875486e-12
+            },
+            {
+              "position_metres": 1.3020778786085997e-05,
+              "velocity_m_per_s": 4.973710817073693e-12
+            },
+            {
+              "position_metres": 2.2974253174236405e-05,
+              "velocity_m_per_s": 2.0850106524520034e-12
+            },
+            {
+              "position_metres": 1.8273145138448575e-05,
+              "velocity_m_per_s": 1.1606389812393591e-12
+            },
+            {
+              "position_metres": 1.534874789263866e-05,
+              "velocity_m_per_s": 1.1910219789634321e-12
+            },
+            {
+              "position_metres": 1.1438237795417959e-05,
+              "velocity_m_per_s": 5.770533142572929e-12
+            },
+            {
+              "position_metres": 2.1713759192661293e-05,
+              "velocity_m_per_s": 6.801963561169223e-13
+            },
+            {
+              "position_metres": 4.7107240791261145e-05,
+              "velocity_m_per_s": 5.8387538871444934e-12
+            },
+            {
+              "position_metres": 9.582384528921893e-05,
+              "velocity_m_per_s": 1.7364177827249317e-11
+            },
+            {
+              "position_metres": 0.00015166236405800968,
+              "velocity_m_per_s": 2.8806015922471146e-11
+            },
+            {
+              "position_metres": 0.00020650917116298248,
+              "velocity_m_per_s": 3.9697644960573354e-11
+            },
+            {
+              "position_metres": 0.00023281021506698968,
+              "velocity_m_per_s": 4.514522281205975e-11
+            },
+            {
+              "position_metres": 0.00028266180891564765,
+              "velocity_m_per_s": 5.5693080472196606e-11
+            },
+            {
+              "position_metres": 0.00033772414123681713,
+              "velocity_m_per_s": 6.417331799063737e-11
+            },
+            {
+              "position_metres": 0.0003949487136804637,
+              "velocity_m_per_s": 7.528427154654915e-11
+            },
+            {
+              "position_metres": 0.0003942595350087364,
+              "velocity_m_per_s": 7.759843573759189e-11
+            },
+            {
+              "position_metres": 0.00043898505032595914,
+              "velocity_m_per_s": 8.851999063729244e-11
+            },
+            {
+              "position_metres": 0.00048641282372715265,
+              "velocity_m_per_s": 9.918125167156627e-11
+            },
+            {
+              "position_metres": 0.0005338764535792732,
+              "velocity_m_per_s": 1.0916700701281305e-10
+            },
+            {
+              "position_metres": 0.0005364346934530553,
+              "velocity_m_per_s": 1.093228705549226e-10
+            },
+            {
+              "position_metres": 0.0005887665313523531,
+              "velocity_m_per_s": 1.2150754931860687e-10
+            },
+            {
+              "position_metres": 0.0006482637432203635,
+              "velocity_m_per_s": 1.3260064794208575e-10
+            },
+            {
+              "position_metres": 0.0006402760759006087,
+              "velocity_m_per_s": 1.3306713542369444e-10
+            },
+            {
+              "position_metres": 0.0006400817271061828,
+              "velocity_m_per_s": 1.3179899500048374e-10
+            },
+            {
+              "position_metres": 0.0006432284203803474,
+              "velocity_m_per_s": 1.3223821859396342e-10
+            },
+            {
+              "position_metres": 0.0006769588179511867,
+              "velocity_m_per_s": 1.3876712155670756e-10
+            },
+            {
+              "position_metres": 0.0007266276489944974,
+              "velocity_m_per_s": 1.4991906318673612e-10
+            },
+            {
+              "position_metres": 0.0007270069905615654,
+              "velocity_m_per_s": 1.500610051620508e-10
+            },
+            {
+              "position_metres": 0.0006846961601163445,
+              "velocity_m_per_s": 1.3984661729946727e-10
+            },
+            {
+              "position_metres": 0.0005226432733813215,
+              "velocity_m_per_s": 1.0997021638768073e-10
+            },
+            {
+              "position_metres": 0.00036994900996137656,
+              "velocity_m_per_s": 7.704424102173666e-11
+            },
+            {
+              "position_metres": 0.00029042043221610736,
+              "velocity_m_per_s": 6.086502691611556e-11
+            },
+            {
+              "position_metres": 0.0001383589062401441,
+              "velocity_m_per_s": 2.902662680435059e-11
+            },
+            {
+              "position_metres": 2.879579175586006e-05,
+              "velocity_m_per_s": 9.504450596980947e-12
+            },
+            {
+              "position_metres": 0.00016706949072241178,
+              "velocity_m_per_s": 3.7191259440052557e-11
+            },
+            {
+              "position_metres": 0.00025434727660493534,
+              "velocity_m_per_s": 5.275342470336661e-11
+            },
+            {
+              "position_metres": 0.0003262883884782915,
+              "velocity_m_per_s": 6.80615274334864e-11
+            },
+            {
+              "position_metres": 0.0004763383814902455,
+              "velocity_m_per_s": 1.0032618084457368e-10
+            },
+            {
+              "position_metres": 0.0006351122936260306,
+              "velocity_m_per_s": 1.327530206173658e-10
+            },
+            {
+              "position_metres": 0.0007138210032793238,
+              "velocity_m_per_s": 1.4897490616873567e-10
+            },
+            {
+              "position_metres": 0.0007958799250170366,
+              "velocity_m_per_s": 1.6547929989879258e-10
+            },
+            {
+              "position_metres": 0.0009612263039339193,
+              "velocity_m_per_s": 1.9847018473474376e-10
+            },
+            {
+              "position_metres": 0.0010466833121355232,
+              "velocity_m_per_s": 2.148271284588126e-10
+            },
+            {
+              "position_metres": 0.0010469542373012556,
+              "velocity_m_per_s": 2.1519703450071124e-10
+            },
+            {
+              "position_metres": 0.0010499661650683805,
+              "velocity_m_per_s": 2.162950776985505e-10
+            },
+            {
+              "position_metres": 0.001136712551781448,
+              "velocity_m_per_s": 2.3187458204768838e-10
+            },
+            {
+              "position_metres": 0.0012183339302010265,
+              "velocity_m_per_s": 2.4963014957319336e-10
+            },
+            {
+              "position_metres": 0.001305579288210803,
+              "velocity_m_per_s": 2.6643348257353835e-10
+            },
+            {
+              "position_metres": 0.001483641965873929,
+              "velocity_m_per_s": 3.0252728812302257e-10
+            },
+            {
+              "position_metres": 0.0016680669440981366,
+              "velocity_m_per_s": 3.365661388234602e-10
+            },
+            {
+              "position_metres": 0.001852881313364589,
+              "velocity_m_per_s": 3.713936128624441e-10
+            },
+            {
+              "position_metres": 0.0019401485805286525,
+              "velocity_m_per_s": 3.884698987269857e-10
+            },
+            {
+              "position_metres": 0.0021247243121353078,
+              "velocity_m_per_s": 4.2371328133824357e-10
+            },
+            {
+              "position_metres": 0.002308526714008803,
+              "velocity_m_per_s": 4.580051755116629e-10
+            },
+            {
+              "position_metres": 0.0024939287465200123,
+              "velocity_m_per_s": 4.925358167880582e-10
+            },
+            {
+              "position_metres": 0.0024951540322389098,
+              "velocity_m_per_s": 4.920452138888583e-10
+            },
+            {
+              "position_metres": 0.0026739477505165923,
+              "velocity_m_per_s": 5.261074876022597e-10
+            },
+            {
+              "position_metres": 0.0028540079966164053,
+              "velocity_m_per_s": 5.607414532448699e-10
+            },
+            {
+              "position_metres": 0.0030235854662525393,
+              "velocity_m_per_s": 5.931299817610815e-10
+            },
+            {
+              "position_metres": 0.0030246388506920473,
+              "velocity_m_per_s": 5.92823079610616e-10
+            },
+            {
+              "position_metres": 0.00319099318297637,
+              "velocity_m_per_s": 6.25343687769868e-10
+            },
+            {
+              "position_metres": 0.003354483443382669,
+              "velocity_m_per_s": 6.583347496971331e-10
+            },
+            {
+              "position_metres": 0.003357329786242536,
+              "velocity_m_per_s": 6.588253455129325e-10
+            },
+            {
+              "position_metres": 0.003353967101687921,
+              "velocity_m_per_s": 6.5694128152788e-10
+            }
+          ]
+        },
+        "full": {
+          "position_metres": 0.003357329786242536,
+          "velocity_m_per_s": 6.588253455129325e-10,
+          "relative_energy_drift": 5.716454937147802e-16,
+          "relative_angular_drift": 1.1329710793940361e-14,
+          "scaled_momentum_drift": 2.2189872695083312e-16,
+          "specific_orbital_energy_drift": 3.591833484137366e-16,
+          "checks_passed": true,
+          "worst_position_time_seconds": 63111711.11885703,
+          "sampled_errors": [
+            {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            {
+              "position_metres": 4.185786387700789e-06,
+              "velocity_m_per_s": 8.750852481461832e-13
+            },
+            {
+              "position_metres": 7.4428901869165186e-06,
+              "velocity_m_per_s": 9.101896901756706e-13
+            },
+            {
+              "position_metres": 8.621990919712849e-06,
+              "velocity_m_per_s": 1.216308283797382e-12
+            },
+            {
+              "position_metres": 1.0638332522477295e-05,
+              "velocity_m_per_s": 1.688578799720984e-12
+            },
+            {
+              "position_metres": 9.073211248880231e-06,
+              "velocity_m_per_s": 1.9689356547643675e-12
+            },
+            {
+              "position_metres": 4.530602183902694e-06,
+              "velocity_m_per_s": 2.8763691935230794e-12
+            },
+            {
+              "position_metres": 1.5836632518516546e-05,
+              "velocity_m_per_s": 2.536802078566626e-12
+            },
+            {
+              "position_metres": 1.338271693932972e-05,
+              "velocity_m_per_s": 3.720452656317269e-12
+            },
+            {
+              "position_metres": 1.3957025224189059e-05,
+              "velocity_m_per_s": 4.157368236198104e-12
+            },
+            {
+              "position_metres": 1.4096539811237922e-05,
+              "velocity_m_per_s": 4.505169193841527e-12
+            },
+            {
+              "position_metres": 2.6140905351534024e-05,
+              "velocity_m_per_s": 6.627369499367115e-12
+            },
+            {
+              "position_metres": 2.8094260156886836e-05,
+              "velocity_m_per_s": 6.094646797275792e-12
+            },
+            {
+              "position_metres": 6.602574359841732e-05,
+              "velocity_m_per_s": 1.0889695766482e-11
+            },
+            {
+              "position_metres": 3.8388211186420286e-05,
+              "velocity_m_per_s": 5.7258335885682926e-12
+            },
+            {
+              "position_metres": 2.7350974569509e-05,
+              "velocity_m_per_s": 5.195809733909267e-12
+            },
+            {
+              "position_metres": 3.6262988026180185e-05,
+              "velocity_m_per_s": 6.731996835036994e-12
+            },
+            {
+              "position_metres": 6.950819505537426e-05,
+              "velocity_m_per_s": 1.3312623256934262e-11
+            },
+            {
+              "position_metres": 4.242027847634601e-05,
+              "velocity_m_per_s": 7.174561992875486e-12
+            },
+            {
+              "position_metres": 1.3020778786085997e-05,
+              "velocity_m_per_s": 4.973710817073693e-12
+            },
+            {
+              "position_metres": 2.2974253174236405e-05,
+              "velocity_m_per_s": 2.0850106524520034e-12
+            },
+            {
+              "position_metres": 1.8273145138448575e-05,
+              "velocity_m_per_s": 1.1606389812393591e-12
+            },
+            {
+              "position_metres": 1.534874789263866e-05,
+              "velocity_m_per_s": 1.1910219789634321e-12
+            },
+            {
+              "position_metres": 1.1438237795417959e-05,
+              "velocity_m_per_s": 5.770533142572929e-12
+            },
+            {
+              "position_metres": 2.1713759192661293e-05,
+              "velocity_m_per_s": 6.801963561169223e-13
+            },
+            {
+              "position_metres": 4.7107240791261145e-05,
+              "velocity_m_per_s": 5.8387538871444934e-12
+            },
+            {
+              "position_metres": 9.582384528921893e-05,
+              "velocity_m_per_s": 1.7364177827249317e-11
+            },
+            {
+              "position_metres": 0.00015166236405800968,
+              "velocity_m_per_s": 2.8806015922471146e-11
+            },
+            {
+              "position_metres": 0.00020650917116298248,
+              "velocity_m_per_s": 3.9697644960573354e-11
+            },
+            {
+              "position_metres": 0.00023281021506698968,
+              "velocity_m_per_s": 4.514522281205975e-11
+            },
+            {
+              "position_metres": 0.00028266180891564765,
+              "velocity_m_per_s": 5.5693080472196606e-11
+            },
+            {
+              "position_metres": 0.00033772414123681713,
+              "velocity_m_per_s": 6.417331799063737e-11
+            },
+            {
+              "position_metres": 0.0003949487136804637,
+              "velocity_m_per_s": 7.528427154654915e-11
+            },
+            {
+              "position_metres": 0.0003942595350087364,
+              "velocity_m_per_s": 7.759843573759189e-11
+            },
+            {
+              "position_metres": 0.00043898505032595914,
+              "velocity_m_per_s": 8.851999063729244e-11
+            },
+            {
+              "position_metres": 0.00048641282372715265,
+              "velocity_m_per_s": 9.918125167156627e-11
+            },
+            {
+              "position_metres": 0.0005338764535792732,
+              "velocity_m_per_s": 1.0916700701281305e-10
+            },
+            {
+              "position_metres": 0.0005364346934530553,
+              "velocity_m_per_s": 1.093228705549226e-10
+            },
+            {
+              "position_metres": 0.0005887665313523531,
+              "velocity_m_per_s": 1.2150754931860687e-10
+            },
+            {
+              "position_metres": 0.0006482637432203635,
+              "velocity_m_per_s": 1.3260064794208575e-10
+            },
+            {
+              "position_metres": 0.0006402760759006087,
+              "velocity_m_per_s": 1.3306713542369444e-10
+            },
+            {
+              "position_metres": 0.0006400817271061828,
+              "velocity_m_per_s": 1.3179899500048374e-10
+            },
+            {
+              "position_metres": 0.0006432284203803474,
+              "velocity_m_per_s": 1.3223821859396342e-10
+            },
+            {
+              "position_metres": 0.0006769588179511867,
+              "velocity_m_per_s": 1.3876712155670756e-10
+            },
+            {
+              "position_metres": 0.0007266276489944974,
+              "velocity_m_per_s": 1.4991906318673612e-10
+            },
+            {
+              "position_metres": 0.0007270069905615654,
+              "velocity_m_per_s": 1.500610051620508e-10
+            },
+            {
+              "position_metres": 0.0006846961601163445,
+              "velocity_m_per_s": 1.3984661729946727e-10
+            },
+            {
+              "position_metres": 0.0005226432733813215,
+              "velocity_m_per_s": 1.0997021638768073e-10
+            },
+            {
+              "position_metres": 0.00036994900996137656,
+              "velocity_m_per_s": 7.704424102173666e-11
+            },
+            {
+              "position_metres": 0.00029042043221610736,
+              "velocity_m_per_s": 6.086502691611556e-11
+            },
+            {
+              "position_metres": 0.0001383589062401441,
+              "velocity_m_per_s": 2.902662680435059e-11
+            },
+            {
+              "position_metres": 2.879579175586006e-05,
+              "velocity_m_per_s": 9.504450596980947e-12
+            },
+            {
+              "position_metres": 0.00016706949072241178,
+              "velocity_m_per_s": 3.7191259440052557e-11
+            },
+            {
+              "position_metres": 0.00025434727660493534,
+              "velocity_m_per_s": 5.275342470336661e-11
+            },
+            {
+              "position_metres": 0.0003262883884782915,
+              "velocity_m_per_s": 6.80615274334864e-11
+            },
+            {
+              "position_metres": 0.0004763383814902455,
+              "velocity_m_per_s": 1.0032618084457368e-10
+            },
+            {
+              "position_metres": 0.0006351122936260306,
+              "velocity_m_per_s": 1.327530206173658e-10
+            },
+            {
+              "position_metres": 0.0007138210032793238,
+              "velocity_m_per_s": 1.4897490616873567e-10
+            },
+            {
+              "position_metres": 0.0007958799250170366,
+              "velocity_m_per_s": 1.6547929989879258e-10
+            },
+            {
+              "position_metres": 0.0009612263039339193,
+              "velocity_m_per_s": 1.9847018473474376e-10
+            },
+            {
+              "position_metres": 0.0010466833121355232,
+              "velocity_m_per_s": 2.148271284588126e-10
+            },
+            {
+              "position_metres": 0.0010469542373012556,
+              "velocity_m_per_s": 2.1519703450071124e-10
+            },
+            {
+              "position_metres": 0.0010499661650683805,
+              "velocity_m_per_s": 2.162950776985505e-10
+            },
+            {
+              "position_metres": 0.001136712551781448,
+              "velocity_m_per_s": 2.3187458204768838e-10
+            },
+            {
+              "position_metres": 0.0012183339302010265,
+              "velocity_m_per_s": 2.4963014957319336e-10
+            },
+            {
+              "position_metres": 0.001305579288210803,
+              "velocity_m_per_s": 2.6643348257353835e-10
+            },
+            {
+              "position_metres": 0.001483641965873929,
+              "velocity_m_per_s": 3.0252728812302257e-10
+            },
+            {
+              "position_metres": 0.0016680669440981366,
+              "velocity_m_per_s": 3.365661388234602e-10
+            },
+            {
+              "position_metres": 0.001852881313364589,
+              "velocity_m_per_s": 3.713936128624441e-10
+            },
+            {
+              "position_metres": 0.0019401485805286525,
+              "velocity_m_per_s": 3.884698987269857e-10
+            },
+            {
+              "position_metres": 0.0021247243121353078,
+              "velocity_m_per_s": 4.2371328133824357e-10
+            },
+            {
+              "position_metres": 0.002308526714008803,
+              "velocity_m_per_s": 4.580051755116629e-10
+            },
+            {
+              "position_metres": 0.0024939287465200123,
+              "velocity_m_per_s": 4.925358167880582e-10
+            },
+            {
+              "position_metres": 0.0024951540322389098,
+              "velocity_m_per_s": 4.920452138888583e-10
+            },
+            {
+              "position_metres": 0.0026739477505165923,
+              "velocity_m_per_s": 5.261074876022597e-10
+            },
+            {
+              "position_metres": 0.0028540079966164053,
+              "velocity_m_per_s": 5.607414532448699e-10
+            },
+            {
+              "position_metres": 0.0030235854662525393,
+              "velocity_m_per_s": 5.931299817610815e-10
+            },
+            {
+              "position_metres": 0.0030246388506920473,
+              "velocity_m_per_s": 5.92823079610616e-10
+            },
+            {
+              "position_metres": 0.00319099318297637,
+              "velocity_m_per_s": 6.25343687769868e-10
+            },
+            {
+              "position_metres": 0.003354483443382669,
+              "velocity_m_per_s": 6.583347496971331e-10
+            },
+            {
+              "position_metres": 0.003357329786242536,
+              "velocity_m_per_s": 6.588253455129325e-10
+            },
+            {
+              "position_metres": 0.003353967101687921,
+              "velocity_m_per_s": 6.5694128152788e-10
+            }
+          ]
+        },
+        "cold": {
+          "position_metres": 0.008132502634329304,
+          "velocity_m_per_s": 1.5908601118081708e-09,
+          "relative_energy_drift": 1.905484979049267e-15,
+          "relative_angular_drift": 3.928821875078526e-14,
+          "scaled_momentum_drift": 7.391339040428875e-16,
+          "specific_orbital_energy_drift": 1.2875156250391353e-15,
+          "checks_passed": true,
+          "worst_position_time_seconds": 63111711.11885703,
+          "sampled_errors": [
+            {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            {
+              "position_metres": 4.185786387700789e-06,
+              "velocity_m_per_s": 8.750852481461832e-13
+            },
+            {
+              "position_metres": 7.973326167596947e-06,
+              "velocity_m_per_s": 1.3838422611895042e-12
+            },
+            {
+              "position_metres": 8.29312661150953e-06,
+              "velocity_m_per_s": 1.6829267785815288e-12
+            },
+            {
+              "position_metres": 1.1720459741068428e-05,
+              "velocity_m_per_s": 3.3520664947074212e-12
+            },
+            {
+              "position_metres": 9.731600681314793e-06,
+              "velocity_m_per_s": 2.697692489571921e-12
+            },
+            {
+              "position_metres": 1.1740092463614108e-05,
+              "velocity_m_per_s": 6.087739804829396e-12
+            },
+            {
+              "position_metres": 1.9484051832407895e-05,
+              "velocity_m_per_s": 7.257226608090152e-12
+            },
+            {
+              "position_metres": 2.367639595972791e-05,
+              "velocity_m_per_s": 1.2529424848468024e-11
+            },
+            {
+              "position_metres": 3.9986245023673815e-05,
+              "velocity_m_per_s": 1.4185056664341576e-11
+            },
+            {
+              "position_metres": 5.5264571244388934e-05,
+              "velocity_m_per_s": 1.9862338947063164e-11
+            },
+            {
+              "position_metres": 7.960791018679515e-05,
+              "velocity_m_per_s": 2.5434276763847057e-11
+            },
+            {
+              "position_metres": 8.370250525638982e-05,
+              "velocity_m_per_s": 2.4505180995912902e-11
+            },
+            {
+              "position_metres": 4.328947878214418e-05,
+              "velocity_m_per_s": 1.6638996161307534e-11
+            },
+            {
+              "position_metres": 3.7985881686242905e-05,
+              "velocity_m_per_s": 1.680593638790873e-11
+            },
+            {
+              "position_metres": 7.60322364979579e-05,
+              "velocity_m_per_s": 1.4837339368000715e-11
+            },
+            {
+              "position_metres": 2.6812298099466942e-05,
+              "velocity_m_per_s": 1.7392381569782397e-11
+            },
+            {
+              "position_metres": 7.161021228778487e-05,
+              "velocity_m_per_s": 2.819044513627785e-11
+            },
+            {
+              "position_metres": 7.490044039896757e-05,
+              "velocity_m_per_s": 2.9248494844675604e-11
+            },
+            {
+              "position_metres": 8.920460962414103e-05,
+              "velocity_m_per_s": 3.180541503653209e-11
+            },
+            {
+              "position_metres": 0.000142185920961987,
+              "velocity_m_per_s": 4.5097033482759205e-11
+            },
+            {
+              "position_metres": 0.00013741676032270685,
+              "velocity_m_per_s": 4.506205097976964e-11
+            },
+            {
+              "position_metres": 0.00013327977734218382,
+              "velocity_m_per_s": 4.609010096207757e-11
+            },
+            {
+              "position_metres": 0.0001462449764062356,
+              "velocity_m_per_s": 4.792016944946164e-11
+            },
+            {
+              "position_metres": 0.00019153713567407644,
+              "velocity_m_per_s": 5.691327519873573e-11
+            },
+            {
+              "position_metres": 0.00016682996207805647,
+              "velocity_m_per_s": 4.71241538573708e-11
+            },
+            {
+              "position_metres": 0.00016214868969711518,
+              "velocity_m_per_s": 3.637962478771595e-11
+            },
+            {
+              "position_metres": 0.00018023171725637651,
+              "velocity_m_per_s": 2.9910659013166424e-11
+            },
+            {
+              "position_metres": 0.000221019489394499,
+              "velocity_m_per_s": 2.5873404339811664e-11
+            },
+            {
+              "position_metres": 0.0002508296960227252,
+              "velocity_m_per_s": 2.6863601478268314e-11
+            },
+            {
+              "position_metres": 0.0002811231737799415,
+              "velocity_m_per_s": 3.444925342884616e-11
+            },
+            {
+              "position_metres": 0.0003018395774819927,
+              "velocity_m_per_s": 4.1990979704657326e-11
+            },
+            {
+              "position_metres": 0.0003159076664977683,
+              "velocity_m_per_s": 4.986281577300982e-11
+            },
+            {
+              "position_metres": 0.0003389883253779103,
+              "velocity_m_per_s": 5.349111475946902e-11
+            },
+            {
+              "position_metres": 0.0003597239503839758,
+              "velocity_m_per_s": 6.069194373233141e-11
+            },
+            {
+              "position_metres": 0.0003589405462846183,
+              "velocity_m_per_s": 6.634921729488115e-11
+            },
+            {
+              "position_metres": 0.00036498951131278614,
+              "velocity_m_per_s": 7.336683510727934e-11
+            },
+            {
+              "position_metres": 0.0004095253920971506,
+              "velocity_m_per_s": 8.301747542835253e-11
+            },
+            {
+              "position_metres": 0.00042047001240813647,
+              "velocity_m_per_s": 9.038592823489704e-11
+            },
+            {
+              "position_metres": 0.0004378978014672215,
+              "velocity_m_per_s": 9.982301899578624e-11
+            },
+            {
+              "position_metres": 0.00048211222463117464,
+              "velocity_m_per_s": 1.1038317642576641e-10
+            },
+            {
+              "position_metres": 0.0004808758422104304,
+              "velocity_m_per_s": 1.0976168473455283e-10
+            },
+            {
+              "position_metres": 0.0005291526881034893,
+              "velocity_m_per_s": 1.204305785551302e-10
+            },
+            {
+              "position_metres": 0.0005702919473009989,
+              "velocity_m_per_s": 1.3042125496727597e-10
+            },
+            {
+              "position_metres": 0.0006169547262233706,
+              "velocity_m_per_s": 1.4351597658971977e-10
+            },
+            {
+              "position_metres": 0.0006341119642692695,
+              "velocity_m_per_s": 1.4740520902792909e-10
+            },
+            {
+              "position_metres": 0.0004785018215570571,
+              "velocity_m_per_s": 1.202903762396801e-10
+            },
+            {
+              "position_metres": 0.00013291782960825398,
+              "velocity_m_per_s": 4.8802003948881765e-11
+            },
+            {
+              "position_metres": 0.0002590011127818023,
+              "velocity_m_per_s": 2.1868557669026153e-11
+            },
+            {
+              "position_metres": 0.0004185426263875587,
+              "velocity_m_per_s": 5.4748246937911436e-11
+            },
+            {
+              "position_metres": 0.0007363042913729726,
+              "velocity_m_per_s": 1.2139561779148685e-10
+            },
+            {
+              "position_metres": 0.001041424602107366,
+              "velocity_m_per_s": 1.874020870059415e-10
+            },
+            {
+              "position_metres": 0.001341670811308758,
+              "velocity_m_per_s": 2.5335495434127933e-10
+            },
+            {
+              "position_metres": 0.0014856310476643849,
+              "velocity_m_per_s": 2.8546615362681027e-10
+            },
+            {
+              "position_metres": 0.001699833282201256,
+              "velocity_m_per_s": 3.346294312000448e-10
+            },
+            {
+              "position_metres": 0.001975182417607259,
+              "velocity_m_per_s": 3.99411255390267e-10
+            },
+            {
+              "position_metres": 0.00226773148510095,
+              "velocity_m_per_s": 4.6309746878363896e-10
+            },
+            {
+              "position_metres": 0.0025791205530023564,
+              "velocity_m_per_s": 5.288492553381917e-10
+            },
+            {
+              "position_metres": 0.002725280232764688,
+              "velocity_m_per_s": 5.615195351725177e-10
+            },
+            {
+              "position_metres": 0.0030319546448385097,
+              "velocity_m_per_s": 6.269512901659149e-10
+            },
+            {
+              "position_metres": 0.0031865741429149557,
+              "velocity_m_per_s": 6.596245870590488e-10
+            },
+            {
+              "position_metres": 0.0031830225407413863,
+              "velocity_m_per_s": 6.59983922308326e-10
+            },
+            {
+              "position_metres": 0.003179048783889437,
+              "velocity_m_per_s": 6.59599086430155e-10
+            },
+            {
+              "position_metres": 0.0033387824047391174,
+              "velocity_m_per_s": 6.93079118255909e-10
+            },
+            {
+              "position_metres": 0.0035948714162585323,
+              "velocity_m_per_s": 7.413715676163093e-10
+            },
+            {
+              "position_metres": 0.003758640912761842,
+              "velocity_m_per_s": 7.745511562342092e-10
+            },
+            {
+              "position_metres": 0.004114548130415544,
+              "velocity_m_per_s": 8.411697674560868e-10
+            },
+            {
+              "position_metres": 0.004493173005083206,
+              "velocity_m_per_s": 9.077965576147765e-10
+            },
+            {
+              "position_metres": 0.004856642104857126,
+              "velocity_m_per_s": 9.762519617314262e-10
+            },
+            {
+              "position_metres": 0.005029697491857028,
+              "velocity_m_per_s": 1.0088713409977029e-09
+            },
+            {
+              "position_metres": 0.00540733071809772,
+              "velocity_m_per_s": 1.0756948107908047e-09
+            },
+            {
+              "position_metres": 0.005790066673482464,
+              "velocity_m_per_s": 1.1421734309429596e-09
+            },
+            {
+              "position_metres": 0.006153336162933864,
+              "velocity_m_per_s": 1.20855957802133e-09
+            },
+            {
+              "position_metres": 0.006233723147097639,
+              "velocity_m_per_s": 1.2226109213556023e-09
+            },
+            {
+              "position_metres": 0.006587012754470993,
+              "velocity_m_per_s": 1.2874607300828665e-09
+            },
+            {
+              "position_metres": 0.0069187126909466545,
+              "velocity_m_per_s": 1.3484067814325892e-09
+            },
+            {
+              "position_metres": 0.007235107756884674,
+              "velocity_m_per_s": 1.4081801498921903e-09
+            },
+            {
+              "position_metres": 0.007400729247516165,
+              "velocity_m_per_s": 1.4413127419693678e-09
+            },
+            {
+              "position_metres": 0.007693875518679841,
+              "velocity_m_per_s": 1.4999006175668925e-09
+            },
+            {
+              "position_metres": 0.007971858982894674,
+              "velocity_m_per_s": 1.5576555007338558e-09
+            },
+            {
+              "position_metres": 0.008132502634329304,
+              "velocity_m_per_s": 1.5908601118081708e-09
+            },
+            {
+              "position_metres": 0.00812895943143793,
+              "velocity_m_per_s": 1.5897135545683384e-09
+            }
+          ]
+        }
+      },
+      "pilot_passed": true
+    },
+    "1e-11": {
+      "guards": [
+        {
+          "name": "version",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "abi",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "origin",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "library_sha",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "identities",
+          "rejected_before_c": true,
+          "reason": "Wrong origin/version/ABI/library/identity"
+        },
+        {
+          "name": "digest",
+          "rejected_before_c": true,
+          "reason": "Binary SHA mismatch"
+        },
+        {
+          "name": "expected-time",
+          "rejected_before_c": true,
+          "reason": "Wrong physical time/mass/order"
+        },
+        {
+          "name": "physical-mass-order",
+          "rejected_before_c": true,
+          "reason": "Wrong physical time/mass/order"
+        },
+        {
+          "name": "binary-G",
+          "rejected_before_c": true,
+          "reason": "Changed binary model/settings"
+        },
+        {
+          "name": "binary-t",
+          "rejected_before_c": true,
+          "reason": "Binary/physical epoch mismatch"
+        },
+        {
+          "name": "binary-functionpointers",
+          "rejected_before_c": true,
+          "reason": "Changed binary model/settings"
+        },
+        {
+          "name": "binary-N",
+          "rejected_before_c": true,
+          "reason": "Changed binary model/settings"
+        },
+        {
+          "name": "missing-at",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-at",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-x0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-x0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-v0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-v0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-a0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-a0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csx",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csx",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csv",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csv",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csa0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csa0",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-g",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-g",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-b",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-b",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-csb",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-csb",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-e",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-e",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-br",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-br",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "missing-er",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "short-er",
+          "rejected_before_c": true,
+          "reason": "Wrong binary field inventory/length"
+        },
+        {
+          "name": "duplicate-field",
+          "rejected_before_c": true,
+          "reason": "Duplicate field: t"
+        },
+        {
+          "name": "callback-_gravity_custom",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _gravity_custom"
+        },
+        {
+          "name": "callback-_additional_forces",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _additional_forces"
+        },
+        {
+          "name": "callback-_pre_timestep_modifications",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _pre_timestep_modifications"
+        },
+        {
+          "name": "callback-_post_timestep_modifications",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _post_timestep_modifications"
+        },
+        {
+          "name": "callback-_heartbeat",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _heartbeat"
+        },
+        {
+          "name": "callback-_key_callback",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _key_callback"
+        },
+        {
+          "name": "callback-_coefficient_of_restitution",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _coefficient_of_restitution"
+        },
+        {
+          "name": "callback-_collision_resolve",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _collision_resolve"
+        },
+        {
+          "name": "callback-_free_particle_ap",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _free_particle_ap"
+        },
+        {
+          "name": "callback-_extras_cleanup",
+          "rejected_before_export": true,
+          "reason": "Unsupported callback: _extras_cleanup"
+        },
+        {
+          "name": "_archive_create-mask-4",
+          "injected": true,
+          "rejected": true,
+          "reason": "C archive warning mask: 4"
+        },
+        {
+          "name": "_archive_create-mask-128",
+          "injected": true,
+          "rejected": true,
+          "reason": "C archive warning mask: 128"
+        },
+        {
+          "name": "_archive_create-mask-2048",
+          "injected": true,
+          "rejected": true,
+          "reason": "C archive warning mask: 2048"
+        },
+        {
+          "name": "_initialize-mask-4",
+          "injected": true,
+          "rejected": true,
+          "reason": "C simulation warning mask: 4"
+        },
+        {
+          "name": "_initialize-mask-128",
+          "injected": true,
+          "rejected": true,
+          "reason": "C simulation warning mask: 128"
+        },
+        {
+          "name": "_initialize-mask-2048",
+          "injected": true,
+          "rejected": true,
+          "reason": "C simulation warning mask: 2048"
+        },
+        {
+          "name": "python-RuntimeWarning",
+          "injected": true,
+          "rejected": true,
+          "reason": "Unexpected Python warning: injected RuntimeWarning"
+        }
+      ],
+      "abi": "('little', 8, 8, (816, 8, (('t', 0, 8), ('G', 8, 8), ('softening', 16, 8), ('OMEGA', 24, 8), ('OMEGAZ', 32, 8), ('dt', 40, 8), ('dt_last_done', 48, 8), ('steps_done', 56, 8), ('is_synchronized', 64, 4), ('did_modify_particles', 68, 4), ('N', 72, 8), ('N_allocated', 80, 8), ('_particles', 88, 8), ('_N_map', 96, 8), ('_map', 104, 8), ('N_var', 112, 8), ('_particles_var', 120, 8), ('N_var_config', 128, 8), ('var_config', 136, 8), ('N_active', 144, 8), ('testparticle_type', 152, 4), ('testparticle_hidewarnings', 156, 4), ('_name_list', 160, 8), ('_N_name_list', 168, 8), ('_name_hash_table', 176, 8), ('gravity_cs', 184, 8), ('N_allocated_gravity_cs', 192, 8), ('_tree_root', 200, 8), ('opening_angle2', 208, 8), ('_status', 216, 4), ('exact_finish_time', 220, 4), ('force_is_velocity_dependent', 224, 4), ('gravity_ignore', 228, 4), ('_output_timing_last', 232, 8), ('save_messages', 240, 4), ('messages', 248, 8), ('_messages_var_rescale_warning', 256, 4), ('_messages_timestep_warning', 260, 4), ('exit_max_distance', 264, 8), ('exit_min_distance', 272, 8), ('usleep', 280, 8), ('_display_view', 288, 8), ('_display_data', 296, 8), ('_server_data', 304, 8), ('track_energy_offset', 312, 4), ('energy_offset', 320, 8), ('walltime', 328, 8), ('walltime_last_step', 336, 8), ('walltime_last_steps', 344, 8), ('_walltime_last_steps_sum', 352, 8), ('_walltime_last_steps_N', 360, 4), ('python_unit_t', 364, 4), ('python_unit_l', 368, 4), ('python_unit_m', 372, 4), ('root_size', 376, 8), ('N_root_x', 384, 8), ('N_root_y', 392, 8), ('N_root_z', 400, 8), ('N_ghost_x', 408, 4), ('N_ghost_y', 412, 4), ('N_ghost_z', 416, 4), ('collisions', 424, 8), ('N_allocated_collisions', 432, 8), ('N_collisions', 440, 8), ('N_targets', 448, 8), ('minimum_collision_velocity', 456, 8), ('collisions_plog', 464, 8), ('collisions_log_n', 472, 8), ('_calculate_megno', 480, 4), ('_megno_Ys', 488, 8), ('_megno_Yss', 496, 8), ('_megno_cov_Yt', 504, 8), ('_megno_var_t', 512, 8), ('_megno_mean_t', 520, 8), ('_megno_mean_Y', 528, 8), ('_megno_initial_t', 536, 8), ('_megno_n', 544, 8), ('rand_seed', 552, 4), ('simulationarchive_version', 556, 4), ('simulationarchive_auto_interval', 560, 8), ('simulationarchive_auto_walltime', 568, 8), ('simulationarchive_auto_step', 576, 8), ('simulationarchive_next', 584, 8), ('simulationarchive_next_step', 592, 8), ('_simulationarchive_filename', 600, 8), ('_collision', 608, 4), ('integrator', 616, 80), ('_boundary', 696, 4), ('_gravity', 700, 4), ('_gravity_custom', 704, 8), ('_odes', 712, 8), ('_N_odes', 720, 8), ('_N_allocated_odes', 728, 8), ('_additional_forces', 736, 8), ('_pre_timestep_modifications', 744, 8), ('_post_timestep_modifications', 752, 8), ('_heartbeat', 760, 8), ('_key_callback', 768, 8), ('_coefficient_of_restitution', 776, 8), ('_collision_resolve', 784, 8), ('_free_particle_ap', 792, 8), ('_extras_cleanup', 800, 8), ('extras', 808, 8))), (112, 8, (('x', 0, 8), ('y', 8, 8), ('z', 16, 8), ('vx', 24, 8), ('vy', 32, 8), ('vz', 40, 8), ('ax', 48, 8), ('ay', 56, 8), ('az', 64, 8), ('m', 72, 8), ('r', 80, 8), ('_name', 88, 8), ('ap', 96, 8), ('_sim', 104, 8))), (40, 8, (('epsilon', 0, 8), ('min_dt', 8, 8), ('adaptive_mode', 16, 4), ('iterations_max_exceeded', 24, 8), ('N_allocated', 32, 8))))",
+      "statistics": {
+        "packets": 131,
+        "restored_snapshots": 131,
+        "all_packet_fields_bitexact": true,
+        "all_restored_fields_bitexact": true,
+        "ias15_written_fields": 17,
+        "N_allocated": 6,
+        "raw_c_masks": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ],
+        "stream_bytes": {
+          "initial": 2875,
+          "minimum_committed": 5697,
+          "maximum_committed": 5697
+        },
+        "cost_seconds": {
+          "warm_integration": 0.0045024000137345865,
+          "integration": 0.004750099964439869,
+          "serialization": 0.06440029997611418,
+          "reading_validation": 0.2720150999848556
+        },
+        "cost_scope": "single paired run; reading includes strict re-export validation; not a speed benchmark"
+      },
+      "cold_statistics": {
+        "mode": "every-packet",
+        "epsilon": 1e-11,
+        "packets": 131,
+        "simulations": 131,
+        "restart_packet_indices": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71,
+          72,
+          73,
+          74,
+          75,
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87,
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130
+        ],
+        "restart_output_index": null,
+        "steps_done": 595,
+        "force_evaluations": null,
+        "initial_dt_seconds": 3155.743343110007,
+        "physical_roundtrip_bitexact": true,
+        "adaptive_mode": "PRS23",
+        "gravity": "basic"
+      },
+      "previous353_warm_cold_bitexact": true,
+      "metrics": {
+        "warm": {
+          "position_metres": 0.003355059343388938,
+          "velocity_m_per_s": 6.558643422188722e-10,
+          "relative_energy_drift": 5.716454937147802e-16,
+          "relative_angular_drift": 1.1338906213339337e-14,
+          "scaled_momentum_drift": 2.2189872695083312e-16,
+          "specific_orbital_energy_drift": 2.0388258302957376e-16,
+          "checks_passed": true,
+          "worst_position_time_seconds": 63111711.11885703,
+          "sampled_errors": [
+            {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            {
+              "position_metres": 4.185786387700789e-06,
+              "velocity_m_per_s": 8.750852481461832e-13
+            },
+            {
+              "position_metres": 7.4428901869165186e-06,
+              "velocity_m_per_s": 9.101896901756706e-13
+            },
+            {
+              "position_metres": 8.621990919712849e-06,
+              "velocity_m_per_s": 1.216308283797382e-12
+            },
+            {
+              "position_metres": 1.0638332522477295e-05,
+              "velocity_m_per_s": 1.688578799720984e-12
+            },
+            {
+              "position_metres": 9.073211248880231e-06,
+              "velocity_m_per_s": 1.9689356547643675e-12
+            },
+            {
+              "position_metres": 4.530602183902694e-06,
+              "velocity_m_per_s": 2.8763691935230794e-12
+            },
+            {
+              "position_metres": 1.558088214060245e-05,
+              "velocity_m_per_s": 2.536802078566626e-12
+            },
+            {
+              "position_metres": 1.3132632633088894e-05,
+              "velocity_m_per_s": 3.720452656317269e-12
+            },
+            {
+              "position_metres": 1.3957025224189059e-05,
+              "velocity_m_per_s": 4.157368236198104e-12
+            },
+            {
+              "position_metres": 1.4096539811237922e-05,
+              "velocity_m_per_s": 4.505169193841527e-12
+            },
+            {
+              "position_metres": 2.4784972432854782e-05,
+              "velocity_m_per_s": 6.627369499367115e-12
+            },
+            {
+              "position_metres": 2.725895432435659e-05,
+              "velocity_m_per_s": 6.094646797275792e-12
+            },
+            {
+              "position_metres": 6.602574359841732e-05,
+              "velocity_m_per_s": 1.0889695766482e-11
+            },
+            {
+              "position_metres": 3.8388211186420286e-05,
+              "velocity_m_per_s": 5.4085039982476055e-12
+            },
+            {
+              "position_metres": 2.7350974569509e-05,
+              "velocity_m_per_s": 5.195809733909267e-12
+            },
+            {
+              "position_metres": 4.006845573199943e-05,
+              "velocity_m_per_s": 6.513800557311265e-12
+            },
+            {
+              "position_metres": 7.133896425990722e-05,
+              "velocity_m_per_s": 1.2891862481794085e-11
+            },
+            {
+              "position_metres": 4.42249480467021e-05,
+              "velocity_m_per_s": 6.971847072097888e-12
+            },
+            {
+              "position_metres": 1.2368960908635872e-05,
+              "velocity_m_per_s": 5.294179175550203e-12
+            },
+            {
+              "position_metres": 2.2974253174236405e-05,
+              "velocity_m_per_s": 1.6584289952053504e-12
+            },
+            {
+              "position_metres": 1.8273145138448575e-05,
+              "velocity_m_per_s": 1.1606389812393591e-12
+            },
+            {
+              "position_metres": 2.0840132191516204e-05,
+              "velocity_m_per_s": 1.1910219789634321e-12
+            },
+            {
+              "position_metres": 1.1438237795417959e-05,
+              "velocity_m_per_s": 5.770533142572929e-12
+            },
+            {
+              "position_metres": 2.1713759192661293e-05,
+              "velocity_m_per_s": 6.801963561169223e-13
+            },
+            {
+              "position_metres": 4.3925358907527684e-05,
+              "velocity_m_per_s": 5.498900651829746e-12
+            },
+            {
+              "position_metres": 0.00010246067561671191,
+              "velocity_m_per_s": 1.7364177827249317e-11
+            },
+            {
+              "position_metres": 0.00015022838797414454,
+              "velocity_m_per_s": 2.703173762116212e-11
+            },
+            {
+              "position_metres": 0.000201327360930868,
+              "velocity_m_per_s": 3.711616203367262e-11
+            },
+            {
+              "position_metres": 0.00022759865457036227,
+              "velocity_m_per_s": 4.255898314500278e-11
+            },
+            {
+              "position_metres": 0.0002775699687340115,
+              "velocity_m_per_s": 5.3769910073565416e-11
+            },
+            {
+              "position_metres": 0.00032807976738633026,
+              "velocity_m_per_s": 6.260654631098123e-11
+            },
+            {
+              "position_metres": 0.00037211407895315374,
+              "velocity_m_per_s": 7.528427154654915e-11
+            },
+            {
+              "position_metres": 0.0003618003177137267,
+              "velocity_m_per_s": 7.431374083958234e-11
+            },
+            {
+              "position_metres": 0.00041448280046376757,
+              "velocity_m_per_s": 8.491050511133746e-11
+            },
+            {
+              "position_metres": 0.0004651852085448552,
+              "velocity_m_per_s": 9.582278400420501e-11
+            },
+            {
+              "position_metres": 0.0005074583187413829,
+              "velocity_m_per_s": 1.0718975394969534e-10
+            },
+            {
+              "position_metres": 0.0005079466752617247,
+              "velocity_m_per_s": 1.0745976928328372e-10
+            },
+            {
+              "position_metres": 0.0005626230256918993,
+              "velocity_m_per_s": 1.1907953036808707e-10
+            },
+            {
+              "position_metres": 0.0006208033313530234,
+              "velocity_m_per_s": 1.3110904504050774e-10
+            },
+            {
+              "position_metres": 0.00061731175178723,
+              "velocity_m_per_s": 1.3083312107011171e-10
+            },
+            {
+              "position_metres": 0.0006170948468925397,
+              "velocity_m_per_s": 1.303107379021993e-10
+            },
+            {
+              "position_metres": 0.000620273666526002,
+              "velocity_m_per_s": 1.307574335433059e-10
+            },
+            {
+              "position_metres": 0.0006477869717536984,
+              "velocity_m_per_s": 1.3566090613005103e-10
+            },
+            {
+              "position_metres": 0.0007119502201734448,
+              "velocity_m_per_s": 1.486032453320953e-10
+            },
+            {
+              "position_metres": 0.0007157068595241466,
+              "velocity_m_per_s": 1.500610051620508e-10
+            },
+            {
+              "position_metres": 0.0006741211195262737,
+              "velocity_m_per_s": 1.3984661729946727e-10
+            },
+            {
+              "position_metres": 0.0005106094048348148,
+              "velocity_m_per_s": 1.0672523149480487e-10
+            },
+            {
+              "position_metres": 0.00036803322262592885,
+              "velocity_m_per_s": 7.529950935206661e-11
+            },
+            {
+              "position_metres": 0.0002890510265192207,
+              "velocity_m_per_s": 5.950946817794878e-11
+            },
+            {
+              "position_metres": 0.00013988377294690143,
+              "velocity_m_per_s": 3.006023764540072e-11
+            },
+            {
+              "position_metres": 4.4200203024833595e-05,
+              "velocity_m_per_s": 9.356723706029792e-12
+            },
+            {
+              "position_metres": 0.00016071107502303183,
+              "velocity_m_per_s": 3.481626332165339e-11
+            },
+            {
+              "position_metres": 0.0002378821357606712,
+              "velocity_m_per_s": 5.041306352038931e-11
+            },
+            {
+              "position_metres": 0.0002992969429932635,
+              "velocity_m_per_s": 6.764742240692146e-11
+            },
+            {
+              "position_metres": 0.0004558575293936004,
+              "velocity_m_per_s": 9.868585249647628e-11
+            },
+            {
+              "position_metres": 0.0006129648425938789,
+              "velocity_m_per_s": 1.3099010706195228e-10
+            },
+            {
+              "position_metres": 0.0006949564600889602,
+              "velocity_m_per_s": 1.4756903251004243e-10
+            },
+            {
+              "position_metres": 0.0007769541083275794,
+              "velocity_m_per_s": 1.6409353131056096e-10
+            },
+            {
+              "position_metres": 0.0009449048426054537,
+              "velocity_m_per_s": 1.958893810081997e-10
+            },
+            {
+              "position_metres": 0.001030589317807504,
+              "velocity_m_per_s": 2.118912930639381e-10
+            },
+            {
+              "position_metres": 0.0010309101474316128,
+              "velocity_m_per_s": 2.137071732628333e-10
+            },
+            {
+              "position_metres": 0.0010338987382607359,
+              "velocity_m_per_s": 2.1334114342177875e-10
+            },
+            {
+              "position_metres": 0.0011239484748516518,
+              "velocity_m_per_s": 2.3046458077945685e-10
+            },
+            {
+              "position_metres": 0.001207098630293142,
+              "velocity_m_per_s": 2.473140461288915e-10
+            },
+            {
+              "position_metres": 0.001305579288210803,
+              "velocity_m_per_s": 2.6439125405224945e-10
+            },
+            {
+              "position_metres": 0.0014817814565066339,
+              "velocity_m_per_s": 3.012754257764347e-10
+            },
+            {
+              "position_metres": 0.0016653328175123502,
+              "velocity_m_per_s": 3.3687871985026967e-10
+            },
+            {
+              "position_metres": 0.0018547900182003959,
+              "velocity_m_per_s": 3.710566968160756e-10
+            },
+            {
+              "position_metres": 0.0019420390704824426,
+              "velocity_m_per_s": 3.883057369600305e-10
+            },
+            {
+              "position_metres": 0.00212981581880122,
+              "velocity_m_per_s": 4.23329344333309e-10
+            },
+            {
+              "position_metres": 0.0023187482237897,
+              "velocity_m_per_s": 4.5779571686665656e-10
+            },
+            {
+              "position_metres": 0.002506312096097345,
+              "velocity_m_per_s": 4.918064903834072e-10
+            },
+            {
+              "position_metres": 0.0025077283068239142,
+              "velocity_m_per_s": 4.920452138888583e-10
+            },
+            {
+              "position_metres": 0.00268806878178736,
+              "velocity_m_per_s": 5.261074876022597e-10
+            },
+            {
+              "position_metres": 0.0028620612451668395,
+              "velocity_m_per_s": 5.594008686182559e-10
+            },
+            {
+              "position_metres": 0.0030368411443286655,
+              "velocity_m_per_s": 5.921847255690383e-10
+            },
+            {
+              "position_metres": 0.003035970531228509,
+              "velocity_m_per_s": 5.918760208382406e-10
+            },
+            {
+              "position_metres": 0.0031956786583158263,
+              "velocity_m_per_s": 6.241973305595822e-10
+            },
+            {
+              "position_metres": 0.0033500367854957676,
+              "velocity_m_per_s": 6.553678542235637e-10
+            },
+            {
+              "position_metres": 0.003355059343388938,
+              "velocity_m_per_s": 6.558643422188722e-10
+            },
+            {
+              "position_metres": 0.0033471955696636126,
+              "velocity_m_per_s": 6.554964929911904e-10
+            }
+          ]
+        },
+        "full": {
+          "position_metres": 0.003355059343388938,
+          "velocity_m_per_s": 6.558643422188722e-10,
+          "relative_energy_drift": 5.716454937147802e-16,
+          "relative_angular_drift": 1.1338906213339337e-14,
+          "scaled_momentum_drift": 2.2189872695083312e-16,
+          "specific_orbital_energy_drift": 2.0388258302957376e-16,
+          "checks_passed": true,
+          "worst_position_time_seconds": 63111711.11885703,
+          "sampled_errors": [
+            {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            {
+              "position_metres": 4.185786387700789e-06,
+              "velocity_m_per_s": 8.750852481461832e-13
+            },
+            {
+              "position_metres": 7.4428901869165186e-06,
+              "velocity_m_per_s": 9.101896901756706e-13
+            },
+            {
+              "position_metres": 8.621990919712849e-06,
+              "velocity_m_per_s": 1.216308283797382e-12
+            },
+            {
+              "position_metres": 1.0638332522477295e-05,
+              "velocity_m_per_s": 1.688578799720984e-12
+            },
+            {
+              "position_metres": 9.073211248880231e-06,
+              "velocity_m_per_s": 1.9689356547643675e-12
+            },
+            {
+              "position_metres": 4.530602183902694e-06,
+              "velocity_m_per_s": 2.8763691935230794e-12
+            },
+            {
+              "position_metres": 1.558088214060245e-05,
+              "velocity_m_per_s": 2.536802078566626e-12
+            },
+            {
+              "position_metres": 1.3132632633088894e-05,
+              "velocity_m_per_s": 3.720452656317269e-12
+            },
+            {
+              "position_metres": 1.3957025224189059e-05,
+              "velocity_m_per_s": 4.157368236198104e-12
+            },
+            {
+              "position_metres": 1.4096539811237922e-05,
+              "velocity_m_per_s": 4.505169193841527e-12
+            },
+            {
+              "position_metres": 2.4784972432854782e-05,
+              "velocity_m_per_s": 6.627369499367115e-12
+            },
+            {
+              "position_metres": 2.725895432435659e-05,
+              "velocity_m_per_s": 6.094646797275792e-12
+            },
+            {
+              "position_metres": 6.602574359841732e-05,
+              "velocity_m_per_s": 1.0889695766482e-11
+            },
+            {
+              "position_metres": 3.8388211186420286e-05,
+              "velocity_m_per_s": 5.4085039982476055e-12
+            },
+            {
+              "position_metres": 2.7350974569509e-05,
+              "velocity_m_per_s": 5.195809733909267e-12
+            },
+            {
+              "position_metres": 4.006845573199943e-05,
+              "velocity_m_per_s": 6.513800557311265e-12
+            },
+            {
+              "position_metres": 7.133896425990722e-05,
+              "velocity_m_per_s": 1.2891862481794085e-11
+            },
+            {
+              "position_metres": 4.42249480467021e-05,
+              "velocity_m_per_s": 6.971847072097888e-12
+            },
+            {
+              "position_metres": 1.2368960908635872e-05,
+              "velocity_m_per_s": 5.294179175550203e-12
+            },
+            {
+              "position_metres": 2.2974253174236405e-05,
+              "velocity_m_per_s": 1.6584289952053504e-12
+            },
+            {
+              "position_metres": 1.8273145138448575e-05,
+              "velocity_m_per_s": 1.1606389812393591e-12
+            },
+            {
+              "position_metres": 2.0840132191516204e-05,
+              "velocity_m_per_s": 1.1910219789634321e-12
+            },
+            {
+              "position_metres": 1.1438237795417959e-05,
+              "velocity_m_per_s": 5.770533142572929e-12
+            },
+            {
+              "position_metres": 2.1713759192661293e-05,
+              "velocity_m_per_s": 6.801963561169223e-13
+            },
+            {
+              "position_metres": 4.3925358907527684e-05,
+              "velocity_m_per_s": 5.498900651829746e-12
+            },
+            {
+              "position_metres": 0.00010246067561671191,
+              "velocity_m_per_s": 1.7364177827249317e-11
+            },
+            {
+              "position_metres": 0.00015022838797414454,
+              "velocity_m_per_s": 2.703173762116212e-11
+            },
+            {
+              "position_metres": 0.000201327360930868,
+              "velocity_m_per_s": 3.711616203367262e-11
+            },
+            {
+              "position_metres": 0.00022759865457036227,
+              "velocity_m_per_s": 4.255898314500278e-11
+            },
+            {
+              "position_metres": 0.0002775699687340115,
+              "velocity_m_per_s": 5.3769910073565416e-11
+            },
+            {
+              "position_metres": 0.00032807976738633026,
+              "velocity_m_per_s": 6.260654631098123e-11
+            },
+            {
+              "position_metres": 0.00037211407895315374,
+              "velocity_m_per_s": 7.528427154654915e-11
+            },
+            {
+              "position_metres": 0.0003618003177137267,
+              "velocity_m_per_s": 7.431374083958234e-11
+            },
+            {
+              "position_metres": 0.00041448280046376757,
+              "velocity_m_per_s": 8.491050511133746e-11
+            },
+            {
+              "position_metres": 0.0004651852085448552,
+              "velocity_m_per_s": 9.582278400420501e-11
+            },
+            {
+              "position_metres": 0.0005074583187413829,
+              "velocity_m_per_s": 1.0718975394969534e-10
+            },
+            {
+              "position_metres": 0.0005079466752617247,
+              "velocity_m_per_s": 1.0745976928328372e-10
+            },
+            {
+              "position_metres": 0.0005626230256918993,
+              "velocity_m_per_s": 1.1907953036808707e-10
+            },
+            {
+              "position_metres": 0.0006208033313530234,
+              "velocity_m_per_s": 1.3110904504050774e-10
+            },
+            {
+              "position_metres": 0.00061731175178723,
+              "velocity_m_per_s": 1.3083312107011171e-10
+            },
+            {
+              "position_metres": 0.0006170948468925397,
+              "velocity_m_per_s": 1.303107379021993e-10
+            },
+            {
+              "position_metres": 0.000620273666526002,
+              "velocity_m_per_s": 1.307574335433059e-10
+            },
+            {
+              "position_metres": 0.0006477869717536984,
+              "velocity_m_per_s": 1.3566090613005103e-10
+            },
+            {
+              "position_metres": 0.0007119502201734448,
+              "velocity_m_per_s": 1.486032453320953e-10
+            },
+            {
+              "position_metres": 0.0007157068595241466,
+              "velocity_m_per_s": 1.500610051620508e-10
+            },
+            {
+              "position_metres": 0.0006741211195262737,
+              "velocity_m_per_s": 1.3984661729946727e-10
+            },
+            {
+              "position_metres": 0.0005106094048348148,
+              "velocity_m_per_s": 1.0672523149480487e-10
+            },
+            {
+              "position_metres": 0.00036803322262592885,
+              "velocity_m_per_s": 7.529950935206661e-11
+            },
+            {
+              "position_metres": 0.0002890510265192207,
+              "velocity_m_per_s": 5.950946817794878e-11
+            },
+            {
+              "position_metres": 0.00013988377294690143,
+              "velocity_m_per_s": 3.006023764540072e-11
+            },
+            {
+              "position_metres": 4.4200203024833595e-05,
+              "velocity_m_per_s": 9.356723706029792e-12
+            },
+            {
+              "position_metres": 0.00016071107502303183,
+              "velocity_m_per_s": 3.481626332165339e-11
+            },
+            {
+              "position_metres": 0.0002378821357606712,
+              "velocity_m_per_s": 5.041306352038931e-11
+            },
+            {
+              "position_metres": 0.0002992969429932635,
+              "velocity_m_per_s": 6.764742240692146e-11
+            },
+            {
+              "position_metres": 0.0004558575293936004,
+              "velocity_m_per_s": 9.868585249647628e-11
+            },
+            {
+              "position_metres": 0.0006129648425938789,
+              "velocity_m_per_s": 1.3099010706195228e-10
+            },
+            {
+              "position_metres": 0.0006949564600889602,
+              "velocity_m_per_s": 1.4756903251004243e-10
+            },
+            {
+              "position_metres": 0.0007769541083275794,
+              "velocity_m_per_s": 1.6409353131056096e-10
+            },
+            {
+              "position_metres": 0.0009449048426054537,
+              "velocity_m_per_s": 1.958893810081997e-10
+            },
+            {
+              "position_metres": 0.001030589317807504,
+              "velocity_m_per_s": 2.118912930639381e-10
+            },
+            {
+              "position_metres": 0.0010309101474316128,
+              "velocity_m_per_s": 2.137071732628333e-10
+            },
+            {
+              "position_metres": 0.0010338987382607359,
+              "velocity_m_per_s": 2.1334114342177875e-10
+            },
+            {
+              "position_metres": 0.0011239484748516518,
+              "velocity_m_per_s": 2.3046458077945685e-10
+            },
+            {
+              "position_metres": 0.001207098630293142,
+              "velocity_m_per_s": 2.473140461288915e-10
+            },
+            {
+              "position_metres": 0.001305579288210803,
+              "velocity_m_per_s": 2.6439125405224945e-10
+            },
+            {
+              "position_metres": 0.0014817814565066339,
+              "velocity_m_per_s": 3.012754257764347e-10
+            },
+            {
+              "position_metres": 0.0016653328175123502,
+              "velocity_m_per_s": 3.3687871985026967e-10
+            },
+            {
+              "position_metres": 0.0018547900182003959,
+              "velocity_m_per_s": 3.710566968160756e-10
+            },
+            {
+              "position_metres": 0.0019420390704824426,
+              "velocity_m_per_s": 3.883057369600305e-10
+            },
+            {
+              "position_metres": 0.00212981581880122,
+              "velocity_m_per_s": 4.23329344333309e-10
+            },
+            {
+              "position_metres": 0.0023187482237897,
+              "velocity_m_per_s": 4.5779571686665656e-10
+            },
+            {
+              "position_metres": 0.002506312096097345,
+              "velocity_m_per_s": 4.918064903834072e-10
+            },
+            {
+              "position_metres": 0.0025077283068239142,
+              "velocity_m_per_s": 4.920452138888583e-10
+            },
+            {
+              "position_metres": 0.00268806878178736,
+              "velocity_m_per_s": 5.261074876022597e-10
+            },
+            {
+              "position_metres": 0.0028620612451668395,
+              "velocity_m_per_s": 5.594008686182559e-10
+            },
+            {
+              "position_metres": 0.0030368411443286655,
+              "velocity_m_per_s": 5.921847255690383e-10
+            },
+            {
+              "position_metres": 0.003035970531228509,
+              "velocity_m_per_s": 5.918760208382406e-10
+            },
+            {
+              "position_metres": 0.0031956786583158263,
+              "velocity_m_per_s": 6.241973305595822e-10
+            },
+            {
+              "position_metres": 0.0033500367854957676,
+              "velocity_m_per_s": 6.553678542235637e-10
+            },
+            {
+              "position_metres": 0.003355059343388938,
+              "velocity_m_per_s": 6.558643422188722e-10
+            },
+            {
+              "position_metres": 0.0033471955696636126,
+              "velocity_m_per_s": 6.554964929911904e-10
+            }
+          ]
+        },
+        "cold": {
+          "position_metres": 0.008132502634329304,
+          "velocity_m_per_s": 1.5908601118081708e-09,
+          "relative_energy_drift": 1.905484979049267e-15,
+          "relative_angular_drift": 3.928821875078526e-14,
+          "scaled_momentum_drift": 7.391339040428875e-16,
+          "specific_orbital_energy_drift": 1.2875156250391353e-15,
+          "checks_passed": true,
+          "worst_position_time_seconds": 63111711.11885703,
+          "sampled_errors": [
+            {
+              "position_metres": 0.0,
+              "velocity_m_per_s": 0.0
+            },
+            {
+              "position_metres": 4.185786387700789e-06,
+              "velocity_m_per_s": 8.750852481461832e-13
+            },
+            {
+              "position_metres": 7.973326167596947e-06,
+              "velocity_m_per_s": 1.3838422611895042e-12
+            },
+            {
+              "position_metres": 8.29312661150953e-06,
+              "velocity_m_per_s": 1.6829267785815288e-12
+            },
+            {
+              "position_metres": 1.1720459741068428e-05,
+              "velocity_m_per_s": 3.3520664947074212e-12
+            },
+            {
+              "position_metres": 9.731600681314793e-06,
+              "velocity_m_per_s": 2.697692489571921e-12
+            },
+            {
+              "position_metres": 1.1740092463614108e-05,
+              "velocity_m_per_s": 6.087739804829396e-12
+            },
+            {
+              "position_metres": 1.9484051832407895e-05,
+              "velocity_m_per_s": 7.257226608090152e-12
+            },
+            {
+              "position_metres": 2.367639595972791e-05,
+              "velocity_m_per_s": 1.2529424848468024e-11
+            },
+            {
+              "position_metres": 3.9986245023673815e-05,
+              "velocity_m_per_s": 1.4185056664341576e-11
+            },
+            {
+              "position_metres": 5.5264571244388934e-05,
+              "velocity_m_per_s": 1.9862338947063164e-11
+            },
+            {
+              "position_metres": 7.960791018679515e-05,
+              "velocity_m_per_s": 2.5434276763847057e-11
+            },
+            {
+              "position_metres": 8.370250525638982e-05,
+              "velocity_m_per_s": 2.4505180995912902e-11
+            },
+            {
+              "position_metres": 4.328947878214418e-05,
+              "velocity_m_per_s": 1.6638996161307534e-11
+            },
+            {
+              "position_metres": 3.7985881686242905e-05,
+              "velocity_m_per_s": 1.680593638790873e-11
+            },
+            {
+              "position_metres": 7.60322364979579e-05,
+              "velocity_m_per_s": 1.4837339368000715e-11
+            },
+            {
+              "position_metres": 2.6812298099466942e-05,
+              "velocity_m_per_s": 1.7392381569782397e-11
+            },
+            {
+              "position_metres": 7.161021228778487e-05,
+              "velocity_m_per_s": 2.819044513627785e-11
+            },
+            {
+              "position_metres": 7.490044039896757e-05,
+              "velocity_m_per_s": 2.9248494844675604e-11
+            },
+            {
+              "position_metres": 8.920460962414103e-05,
+              "velocity_m_per_s": 3.180541503653209e-11
+            },
+            {
+              "position_metres": 0.000142185920961987,
+              "velocity_m_per_s": 4.5097033482759205e-11
+            },
+            {
+              "position_metres": 0.00013741676032270685,
+              "velocity_m_per_s": 4.506205097976964e-11
+            },
+            {
+              "position_metres": 0.00013327977734218382,
+              "velocity_m_per_s": 4.609010096207757e-11
+            },
+            {
+              "position_metres": 0.0001462449764062356,
+              "velocity_m_per_s": 4.792016944946164e-11
+            },
+            {
+              "position_metres": 0.00019153713567407644,
+              "velocity_m_per_s": 5.691327519873573e-11
+            },
+            {
+              "position_metres": 0.00016682996207805647,
+              "velocity_m_per_s": 4.71241538573708e-11
+            },
+            {
+              "position_metres": 0.00016214868969711518,
+              "velocity_m_per_s": 3.637962478771595e-11
+            },
+            {
+              "position_metres": 0.00018023171725637651,
+              "velocity_m_per_s": 2.9910659013166424e-11
+            },
+            {
+              "position_metres": 0.000221019489394499,
+              "velocity_m_per_s": 2.5873404339811664e-11
+            },
+            {
+              "position_metres": 0.0002508296960227252,
+              "velocity_m_per_s": 2.6863601478268314e-11
+            },
+            {
+              "position_metres": 0.0002811231737799415,
+              "velocity_m_per_s": 3.444925342884616e-11
+            },
+            {
+              "position_metres": 0.0003018395774819927,
+              "velocity_m_per_s": 4.1990979704657326e-11
+            },
+            {
+              "position_metres": 0.0003159076664977683,
+              "velocity_m_per_s": 4.986281577300982e-11
+            },
+            {
+              "position_metres": 0.0003389883253779103,
+              "velocity_m_per_s": 5.349111475946902e-11
+            },
+            {
+              "position_metres": 0.0003597239503839758,
+              "velocity_m_per_s": 6.069194373233141e-11
+            },
+            {
+              "position_metres": 0.0003589405462846183,
+              "velocity_m_per_s": 6.634921729488115e-11
+            },
+            {
+              "position_metres": 0.00036498951131278614,
+              "velocity_m_per_s": 7.336683510727934e-11
+            },
+            {
+              "position_metres": 0.0004095253920971506,
+              "velocity_m_per_s": 8.301747542835253e-11
+            },
+            {
+              "position_metres": 0.00042047001240813647,
+              "velocity_m_per_s": 9.038592823489704e-11
+            },
+            {
+              "position_metres": 0.0004378978014672215,
+              "velocity_m_per_s": 9.982301899578624e-11
+            },
+            {
+              "position_metres": 0.00048211222463117464,
+              "velocity_m_per_s": 1.1038317642576641e-10
+            },
+            {
+              "position_metres": 0.0004808758422104304,
+              "velocity_m_per_s": 1.0976168473455283e-10
+            },
+            {
+              "position_metres": 0.0005291526881034893,
+              "velocity_m_per_s": 1.204305785551302e-10
+            },
+            {
+              "position_metres": 0.0005702919473009989,
+              "velocity_m_per_s": 1.3042125496727597e-10
+            },
+            {
+              "position_metres": 0.0006169547262233706,
+              "velocity_m_per_s": 1.4351597658971977e-10
+            },
+            {
+              "position_metres": 0.0006341119642692695,
+              "velocity_m_per_s": 1.4740520902792909e-10
+            },
+            {
+              "position_metres": 0.0004785018215570571,
+              "velocity_m_per_s": 1.202903762396801e-10
+            },
+            {
+              "position_metres": 0.00013291782960825398,
+              "velocity_m_per_s": 4.8802003948881765e-11
+            },
+            {
+              "position_metres": 0.0002590011127818023,
+              "velocity_m_per_s": 2.1868557669026153e-11
+            },
+            {
+              "position_metres": 0.0004185426263875587,
+              "velocity_m_per_s": 5.4748246937911436e-11
+            },
+            {
+              "position_metres": 0.0007363042913729726,
+              "velocity_m_per_s": 1.2139561779148685e-10
+            },
+            {
+              "position_metres": 0.001041424602107366,
+              "velocity_m_per_s": 1.874020870059415e-10
+            },
+            {
+              "position_metres": 0.001341670811308758,
+              "velocity_m_per_s": 2.5335495434127933e-10
+            },
+            {
+              "position_metres": 0.0014856310476643849,
+              "velocity_m_per_s": 2.8546615362681027e-10
+            },
+            {
+              "position_metres": 0.001699833282201256,
+              "velocity_m_per_s": 3.346294312000448e-10
+            },
+            {
+              "position_metres": 0.001975182417607259,
+              "velocity_m_per_s": 3.99411255390267e-10
+            },
+            {
+              "position_metres": 0.00226773148510095,
+              "velocity_m_per_s": 4.6309746878363896e-10
+            },
+            {
+              "position_metres": 0.0025791205530023564,
+              "velocity_m_per_s": 5.288492553381917e-10
+            },
+            {
+              "position_metres": 0.002725280232764688,
+              "velocity_m_per_s": 5.615195351725177e-10
+            },
+            {
+              "position_metres": 0.0030319546448385097,
+              "velocity_m_per_s": 6.269512901659149e-10
+            },
+            {
+              "position_metres": 0.0031865741429149557,
+              "velocity_m_per_s": 6.596245870590488e-10
+            },
+            {
+              "position_metres": 0.0031830225407413863,
+              "velocity_m_per_s": 6.59983922308326e-10
+            },
+            {
+              "position_metres": 0.003179048783889437,
+              "velocity_m_per_s": 6.59599086430155e-10
+            },
+            {
+              "position_metres": 0.0033387824047391174,
+              "velocity_m_per_s": 6.93079118255909e-10
+            },
+            {
+              "position_metres": 0.0035948714162585323,
+              "velocity_m_per_s": 7.413715676163093e-10
+            },
+            {
+              "position_metres": 0.003758640912761842,
+              "velocity_m_per_s": 7.745511562342092e-10
+            },
+            {
+              "position_metres": 0.004114548130415544,
+              "velocity_m_per_s": 8.411697674560868e-10
+            },
+            {
+              "position_metres": 0.004493173005083206,
+              "velocity_m_per_s": 9.077965576147765e-10
+            },
+            {
+              "position_metres": 0.004856642104857126,
+              "velocity_m_per_s": 9.762519617314262e-10
+            },
+            {
+              "position_metres": 0.005029697491857028,
+              "velocity_m_per_s": 1.0088713409977029e-09
+            },
+            {
+              "position_metres": 0.00540733071809772,
+              "velocity_m_per_s": 1.0756948107908047e-09
+            },
+            {
+              "position_metres": 0.005790066673482464,
+              "velocity_m_per_s": 1.1421734309429596e-09
+            },
+            {
+              "position_metres": 0.006153336162933864,
+              "velocity_m_per_s": 1.20855957802133e-09
+            },
+            {
+              "position_metres": 0.006233723147097639,
+              "velocity_m_per_s": 1.2226109213556023e-09
+            },
+            {
+              "position_metres": 0.006587012754470993,
+              "velocity_m_per_s": 1.2874607300828665e-09
+            },
+            {
+              "position_metres": 0.0069187126909466545,
+              "velocity_m_per_s": 1.3484067814325892e-09
+            },
+            {
+              "position_metres": 0.007235107756884674,
+              "velocity_m_per_s": 1.4081801498921903e-09
+            },
+            {
+              "position_metres": 0.007400729247516165,
+              "velocity_m_per_s": 1.4413127419693678e-09
+            },
+            {
+              "position_metres": 0.007693875518679841,
+              "velocity_m_per_s": 1.4999006175668925e-09
+            },
+            {
+              "position_metres": 0.007971858982894674,
+              "velocity_m_per_s": 1.5576555007338558e-09
+            },
+            {
+              "position_metres": 0.008132502634329304,
+              "velocity_m_per_s": 1.5908601118081708e-09
+            },
+            {
+              "position_metres": 0.00812895943143793,
+              "velocity_m_per_s": 1.5897135545683384e-09
+            }
+          ]
+        }
+      },
+      "pilot_passed": true
+    }
+  },
+  "pilot_passed": true,
+  "array_archive_sha256": "ed3703b0a13a9deb1d95453bcc4b1e981f43f81ed1bb6f1930e7541b0e4c1ae3"
+}
