@@ -9,6 +9,7 @@
 | Назначение | Основные файлы | Граница ответственности |
 | --- | --- | --- |
 | Запуск | [README](../README.md), [commands](../src/solar_simulator/commands.py), [cli](../src/solar_simulator/cli.py) | Команды и параметры запуска |
+| Приёмка песочницы | [Локальная документация компонента](../scripts/sandbox_checks/README.md), [реализация](../scripts/sandbox_checks/accept_sandbox.py) | Короткая проверка научных отчётов, аналитики и пользовательского цикла; старый module entry сохранён |
 | Модель опыта | [experiment](../src/solar_simulator/experiment.py), [sandbox](../src/solar_simulator/sandbox.py) | Тела, настройки, изменение опыта и расчёт |
 | Движение и интегрирование | [motion](../src/solar_simulator/motion.py), [simulation](../src/solar_simulator/simulation.py), [continuous](../src/solar_simulator/continuous.py) | Физический расчёт независимо от Tk |
 | Дополнительная физика | [relativity](../src/solar_simulator/relativity.py), [oblateness](../src/solar_simulator/oblateness.py), [nbody_rotation](../src/solar_simulator/nbody_rotation.py), [contacts](../src/solar_simulator/contacts.py) | Поддержка зависит от конкретного режима; наличие модуля не означает совместимость всех эффектов |
