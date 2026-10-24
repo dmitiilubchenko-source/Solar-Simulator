@@ -12,6 +12,7 @@ SUITES={
         'tests/test_vector3.py','tests/test_simulation.py','tests/test_storage.py',
         'tests/test_environment_check.py','tests/test_gui_process_encoding.py','tests/test_project_links.py',
         'tests/test_documentation_navigation.py',
+        'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
         'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_ias15_archive_source.py',
         'tests/test_ias15_full_state.py',
         'tests/test_ias15_full_suite.py',
