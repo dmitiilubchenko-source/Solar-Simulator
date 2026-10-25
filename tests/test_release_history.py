@@ -71,3 +71,18 @@ def test_entire_mapped_closure_survives_linux_and_windows_cargo_checkout(history
     with ZipFile(root/ARCHIVE) as archive:
         assert b'0.3.0' in archive.read('pyproject.toml')
         assert b'0.3.0' in archive.read('rust/solar_native/pyproject.toml')
+
+
+def test_preparation_snapshot_preserves_accepted031_sources_and_predecessor_map():
+    manifest = json.loads((ROOT/MANIFEST).read_bytes())
+    previous = manifest['prepared_from']
+    assert hashlib.sha256((ROOT/previous['manifest']).read_bytes()).hexdigest() == previous['manifest_sha256']
+    archive = ROOT/previous['archive']
+    assert hashlib.sha256(archive.read_bytes()).hexdigest() == previous['archive_sha256']
+    accepted = json.loads((ROOT/'docs/release-031-validation.json').read_bytes())
+    metadata = {'pyproject.toml', 'rust/solar_core/Cargo.toml', 'rust/solar_core/Cargo.lock',
+                'rust/solar_native/Cargo.toml', 'rust/solar_native/Cargo.lock', 'rust/solar_native/pyproject.toml'}
+    with ZipFile(archive) as saved:
+        assert set(saved.namelist()) == metadata | {'scripts/release_history.py', 'tests/test_release_history.py'}
+        for name in metadata | {'scripts/release_history.py'}:
+            assert hashlib.sha256(saved.read(name)).hexdigest() == accepted['source_sha256'][name]

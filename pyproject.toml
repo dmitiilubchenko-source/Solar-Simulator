@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "solar-simulator"
-version = "0.3.1"
+version = "0.3.2"
 description = "Учебный симулятор движения и гравитационных систем"
 requires-python = ">=3.11"
 

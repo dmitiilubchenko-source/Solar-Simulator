@@ -1,0 +1,644 @@
+{
+  "schema": 1,
+  "version": "0.3.2",
+  "date": "2026-10-25",
+  "product_acceptance_passed": true,
+  "publication_status": "prepared-in-dev; main/tag require user approval",
+  "base_commit": "03b0a6db6b78aee68ebce041463174648c223d19",
+  "source_acceptance": {
+    "command": "scripts/check_project.py --require-native",
+    "python_passed": 2539,
+    "python_seconds": 860.26,
+    "rust_passed": 19,
+    "production_crates_fmt_passed": true,
+    "skipped": 0,
+    "wall_seconds": 868.5768247999949,
+    "source_data_metadata_unchanged": true,
+    "full_log_sha256": "600c3b343dbb218f154dd7e79c714a3c6e5f0e128e52acc9a205a8f0e5403d4a",
+    "installed_versions": {
+      "solar-simulator": "0.3.2",
+      "solar-native": "0.3.2"
+    }
+  },
+  "source_sha256": {
+    "src/solar_simulator/data/orientation-de441-20261008.json": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+    "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+    "pyproject.toml": "94b8edcacb85a24944bbe6a45e40050b260628de2a361af340c92d27dec3790c",
+    "src/solar_simulator/plot_artists.py": "822a9dff2572460bca88c00395f00cefaaa10c451288d2f65f1e36d21d220b76",
+    "scripts/release_history.py": "a6cddc90443624436983305623619c8bcdd3898362bc8b590cd7554ddf7fb192",
+    "scripts/validation/release031-sources.zip": "3cd74e083f149778cac80fc39bb0c1d00f3f229b1722fad321e9f6a9fe0ab4cb",
+    "rust/solar_core/src/lib.rs": "6df5a41ccdcd9ea2317d4e25db82a5074c1029cb2099142029a88d93781608ad",
+    "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+    "src/solar_simulator/collisions.py": "28eaeb0bd788ef74c3f64f2b973a24062810fd7bd8462cd340789e2cd487e416",
+    "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+    "src/solar_simulator/data/solar-system-20261008.json": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+    "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+    "src/solar_simulator/data/earth-j2-20261008.json": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+    "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "rust/solar_core/Cargo.toml": "8a5aeb59a7bc44ea0a07a61f192db5465a1d59c5688a503c4fb81acaac2818e0",
+    "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+    "src/solar_simulator/convergence.py": "30b81b13ca41125ffa53fff331b354839621421dba5f09e846081059c8fa6e43",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "scripts/validation/release032-history.json": "4139358c23b68219216f43a402d2c6aaa449abac52b78e8e19db97cb47c9c4f0",
+    "src/solar_simulator/data/asteroids-catalog-20261008.json": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+    "src/solar_simulator/impacts.py": "a551a989930c91cb3dcdb479ea94f64063a8dd48d0257937daca4e1214fcea1c",
+    "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+    "src/solar_simulator/comparison_view.py": "b9646515d4505ffc4a877bd2905afdf4bf345dae9653999b7f16f1184d07b5ed",
+    "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+    "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/data/kuiper-ring-144-0-20261011.json": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+    "rust/solar_core/src/impacts.rs": "3a9230536702f203d8a079e8d9b51b952e11ac59da1a36cb460272630700d374",
+    "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+    "src/solar_simulator/sandbox.py": "46120a00ac7434d107b9e9b5aa653d3401c225adc7ad9fce33b2b274b6851806",
+    "rust/solar_native/Cargo.lock": "a71c90f3bdfa4d2e3872a426224aea7167e65024e75ed5515da9b09cd6c0ade3",
+    "src/solar_simulator/scenarios.py": "addc2e170b63daba71751c1b2b3b9123eff719c143fe44a89040d480e5e5e2ff",
+    "src/solar_simulator/storage.py": "d4f5aa75b7b46c09e65f1fbe5b39192ee26891306e9f7e13b610af340db9a4be",
+    "src/solar_simulator/recipe.py": "776ef2e2ceb1a6f7985178c006dba828d86b55c1884336e21df90b2cb6f71af1",
+    "rust/solar_core/Cargo.lock": "c9afa096bb70f84778c86f27839a71ad2dc2b308b3206d945943ae88d669d222",
+    "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src/solar_simulator/input_units.py": "f774ea2af4453a94be178d06d002dfc8c136102aa51c5682c0adb5375963e1ab",
+    "src/solar_simulator/data/solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "src/solar_simulator/data/kuiper-ring-036-1-20261011.json": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+    "rust/solar_core/src/main.rs": "1365b6e5edcdb80ee82e1a188e3d8a2d1a17d86732dee1c2c65dd5dce2b5f1d4",
+    "src/solar_simulator/simulation.py": "67822818c84d71fe29f3666552e3e337d5dce7e01c4327217aaab87d0cb3355b",
+    "src/solar_simulator/solar_profiles.py": "b626b64a5dacd9eef5cd768d9de91ae909f697eef7d07759a2a62ba350146134",
+    "src/solar_simulator/data/solar-j2-20261008.json": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+    "src/solar_simulator/data/asteroids-20261008.json": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+    "src/solar_simulator/data/kuiper-ring-072-1-20261011.json": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+    "src/solar_simulator/data/__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+    "src/solar_simulator/data/pluto-system-20261008.json": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+    "src/solar_simulator/trajectory.py": "59c3b5b6a1e58a2387fee2ae12c945eeff7256be045834da7adc2257b6e86a68",
+    "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/data/kuiper-ring-036-0-20261011.json": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+    "rust/solar_core/src/contacts.rs": "0caae19f427120ec73cde2fc79edd4f3da56ddf7c4a4541c14dc9b89da885863",
+    "src/solar_simulator/rust_backend.py": "742f942e54f31291139422d42a061f5553de25c893c18f02c75aeb1c757bf6ba",
+    "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src/solar_simulator/body_fields.py": "57cf09e0f959609e72f973dbea4b3ca3b25ec0d472458aee3ab12cadff56e6a3",
+    "src/solar_simulator/data/kuiper-ring-144-1-20261011.json": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+    "scripts/validation/release031-history.json": "06868fd0aa38313d32afc2f37d5fe3934294842cf86bbbb08aa22aec61802a2c",
+    "src/solar_simulator/vector3.py": "88f5fe1bb4c19c41ef5210b7d8d6f4ad874bed1ed7baed0c784618737b67274b",
+    "scripts/check_portable.py": "497bd6313c98e0727b5a4ccca0328ce8a9a2de5792b22e44407f70fe3496ed97",
+    "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+    "src/solar_simulator/cli.py": "177da68c934509516490e6085e5dfdc69c383f0e980c44b2a7ce08ef18c6b2ed",
+    "src/solar_simulator/data/kuiper-ring-072-0-20261011.json": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+    "src/solar_simulator/playback.py": "5961af2bfeafb7eb8bc019b9c38c61dea70b2d2551075e693f235633163be987",
+    "src/solar_simulator/app.py": "2bf1caf8254d5fc17be8c7908527e11174dee093638e34960637d0a78d0b8ed5",
+    "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+    "src/solar_simulator/trajectory_loader.py": "d204a1dbef010deb7e9a3ca6c08f9f3ab8c9123f912ccb4ee24543eb48b6ffb4",
+    "src/solar_simulator/data/asteroids-full-20261008.json": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/contacts.py": "177ddf8b10a17a3319ff4139ac94511b84870b60e3e38d4f406b2b67575d13eb",
+    "src/solar_simulator/data/ERFA-LICENSE.txt": "18e2c04c5328fe190fd5487da86ea538068c219174f65c6df71288e48fd60047",
+    "src/solar_simulator/rotation.py": "16ec2cf0862414c0dd79ca2daaae06be9f21c3bfc4ea4710ec9f6731912343fa",
+    "src/solar_simulator/data/orbit-cohort-13270.json": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+    "src/solar_simulator/data/kuiper-20261010.json": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+    "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+    "src/solar_simulator/branch_io.py": "ac7e55d5217d529ca3aff63f834cbc83817be09c6df1aff333507ac34f1c58c4",
+    "src/solar_simulator/comparison.py": "bbd178d4ccf0f4838f03ae29091d0e738ae7baa475d8eee378eec72e4d1317af",
+    "rust/solar_core/src/collisions.rs": "dba247071f1fa924157cc8b8e125665731adfe8954f913464af2912cd6520abd",
+    "src/solar_simulator/data/orbit-observations-13270.json": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+    "scripts/portable_patch_workflows.py": "dba6974faac81fc079051b0b9d76b69d633356a6578005415fb078c2d0a4f65b",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/data/kuiper-ring-manifest.json": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461",
+    "rust/solar_native/Cargo.toml": "379329b76f1037d07f5cf52900d00e0e80ced726aacfd931dbb112ac92a698a3",
+    "scripts/validation/release030-sources.zip": "3450b085f03f8d2501c806bdbc117d936617be605c203da2d30dd4e87c06de4e",
+    "src/solar_simulator/nbody_rotation.py": "a14c5ad7ba8944a67588879d0c1e2c9fb83d93e56f47fb7261c778e766404d67",
+    "rust/solar_native/src/lib.rs": "3a38d0d17585c41fe58a97a4673988cbbdf5bcb7444987a908ec6dcf950c3ad6",
+    "src/solar_simulator/recovery.py": "b66d4772555da6cdc86fd6b3efa8c2645f58623bd98c283ff4d1b45c18d5a7ee",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "rust/solar_native/pyproject.toml": "b7bb83f33b0df6f0aed915483d2be3941d7f50a8147d2d6cac56c511287cb72c",
+    "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+    "src/solar_simulator/commands.py": "4ef48441cf27dc8d54aa1b967116a0b3b5530caf166bbebaab2bcb7bac0f332d",
+    "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+    "src/solar_simulator/data/orbit-cohort-13271.json": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+    "scripts/build_portable.py": "cb174123f8518bb56e4756ba10ba23c984f56f9cced72731ff3d3a348a0531f9",
+    "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+    "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+    "src/solar_simulator/trajectory_view.py": "b004b251c6cdbb63d5c826de44f7f9a875c807fce89c29724623803d7d85a20d"
+  },
+  "native_binary": {
+    "path": ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd",
+    "sha256": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+    "version": "0.3.2"
+  },
+  "history": {
+    "metadata": [
+      "pyproject.toml",
+      "rust/solar_core/Cargo.toml",
+      "rust/solar_core/Cargo.lock",
+      "rust/solar_native/Cargo.toml",
+      "rust/solar_native/Cargo.lock",
+      "rust/solar_native/pyproject.toml"
+    ],
+    "prepared_from": {
+      "commit": "03b0a6db6b78aee68ebce041463174648c223d19",
+      "manifest": "scripts/validation/release031-history.json",
+      "manifest_sha256": "06868fd0aa38313d32afc2f37d5fe3934294842cf86bbbb08aa22aec61802a2c",
+      "archive": "scripts/validation/release031-sources.zip",
+      "archive_sha256": "3cd74e083f149778cac80fc39bb0c1d00f3f229b1722fad321e9f6a9fe0ab4cb"
+    },
+    "history_manifest": "scripts/validation/release032-history.json",
+    "history_manifest_sha256": "4139358c23b68219216f43a402d2c6aaa449abac52b78e8e19db97cb47c9c4f0"
+  },
+  "unchanged_physics": {
+    "accepted031_sources_compared": 86,
+    "byteexact": true
+  },
+  "artifact": {
+    "filename": "SolarSimulator-0.3.2-20261025-121729.zip",
+    "sha256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49",
+    "bytes": 112312650,
+    "build_seconds": 43.964042399980826,
+    "relocation_seconds": 209.25192199999583,
+    "CRC_passed": true,
+    "package_files_byteexact": 79,
+    "public_archives_byteexact": 4,
+    "private_excluded": true,
+    "research_dependencies_absent": true,
+    "caller_profile_preserved": true,
+    "isolated_runtime_passed": true
+  },
+  "portable_report": {
+    "prefix": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\portable relocated 20261025-121813\\SolarSimulator-0.3.2-20261025-121729\\runtime",
+    "tcl": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\portable relocated 20261025-121813\\SolarSimulator-0.3.2-20261025-121729\\runtime\\tcl\\tcl8.6",
+    "events": 2,
+    "isolated": 1,
+    "document_links": 566,
+    "gui": {
+      "isolated": 1,
+      "moon_checkpoint_time_s": 7200.0,
+      "moon_continuation_time_s": 10800.0,
+      "contacts_scenario_time_s": 0.1,
+      "footer_visible": true,
+      "GUI_save_load_reset_continue": true,
+      "solar_target_time_s": 10000.25,
+      "solar_target_pause_save_resume": true,
+      "GUI_add_body_saved_parent": true,
+      "GUI_parent_restore_saved_child": true,
+      "GUI_remove_sun_free_motion": true,
+      "isolated_CLI_CSV": true,
+      "strict_checkpoint_sha256": true,
+      "GUI_strict_load_and_exact_target": true
+    },
+    "recovery": {
+      "isolated": 1,
+      "restart": {
+        "python": {
+          "time_seconds": 31557.43343110007,
+          "parent_preserved": true,
+          "exact_continuation": true
+        },
+        "rust": {
+          "time_seconds": 31557.43343110007,
+          "parent_preserved": true,
+          "exact_continuation": true
+        }
+      },
+      "CLI_finished_result_recovered": true,
+      "CLI_local_fallback": true
+    },
+    "recording_workflows": {
+      "create": {
+        "isolated": 1,
+        "edited_recorded_closed": [
+          "python",
+          "rust"
+        ]
+      },
+      "restore": {
+        "isolated": 1,
+        "results": {
+          "python": {
+            "analytic_position_abs_m": 1e-10,
+            "relative_tolerance": 0.0,
+            "complete_samples": 3,
+            "stopped_samples": 2,
+            "restart_exact": true,
+            "playback_no_solver": true,
+            "comparison_analytic": true,
+            "CLI_replay_exact": true
+          },
+          "rust": {
+            "analytic_position_abs_m": 1e-10,
+            "relative_tolerance": 0.0,
+            "complete_samples": 3,
+            "stopped_samples": 2,
+            "restart_exact": true,
+            "playback_no_solver": true,
+            "comparison_analytic": true,
+            "CLI_replay_exact": true
+          }
+        },
+        "physical_accuracy_claim": false
+      }
+    },
+    "patch031_workflows": {
+      "isolated": 1,
+      "preserved_transitions": 6,
+      "rejected_write_failures": 6,
+      "reader_off_Tk_thread": true,
+      "Tk_heartbeat": true,
+      "cancellation_preserves_recording": true,
+      "analytic_free_motion_frames": true,
+      "playback_no_solver": true,
+      "persistent_artists": true,
+      "physical_accuracy_claim": false
+    },
+    "jpl_replay": {
+      "checks_passed": true,
+      "samples": 125,
+      "bodies": 10,
+      "primary_responses": 40,
+      "results": {
+        "python": {
+          "jpl_residuals": {
+            "Sun": {
+              "position_metres": 218.8048217714798,
+              "velocity_m_per_s": 1.3782271755596883e-05
+            },
+            "Mercury": {
+              "position_metres": 207.70130707366334,
+              "velocity_m_per_s": 2.675377497004513e-05
+            },
+            "Venus": {
+              "position_metres": 257.4604365364406,
+              "velocity_m_per_s": 2.329878307318318e-05
+            },
+            "Earth": {
+              "position_metres": 174.5483034470357,
+              "velocity_m_per_s": 4.1423990143708316e-05
+            },
+            "Moon": {
+              "position_metres": 747.8048185804354,
+              "velocity_m_per_s": 0.0019664608550602567
+            },
+            "Mars": {
+              "position_metres": 571.3407838464045,
+              "velocity_m_per_s": 4.3724191910728794e-05
+            },
+            "Jupiter": {
+              "position_metres": 273.2673979640275,
+              "velocity_m_per_s": 1.8870242164141496e-05
+            },
+            "Saturn": {
+              "position_metres": 31.07762373154914,
+              "velocity_m_per_s": 1.911260602576519e-06
+            },
+            "Uranus": {
+              "position_metres": 17.172861230361445,
+              "velocity_m_per_s": 1.0823612392981678e-06
+            },
+            "Neptune": {
+              "position_metres": 64.72591066824349,
+              "velocity_m_per_s": 4.11352126908119e-06
+            }
+          },
+          "moon_relative_jpl": {
+            "position_metres": 718.8720071528617,
+            "velocity_m_per_s": 0.001977737025046704
+          },
+          "physical_goals_passed": true
+        },
+        "rust": {
+          "jpl_residuals": {
+            "Sun": {
+              "position_metres": 218.80481627448157,
+              "velocity_m_per_s": 1.3782271779070336e-05
+            },
+            "Mercury": {
+              "position_metres": 207.7120234106587,
+              "velocity_m_per_s": 2.6742814683240474e-05
+            },
+            "Venus": {
+              "position_metres": 257.4609686772718,
+              "velocity_m_per_s": 2.3298941181801853e-05
+            },
+            "Earth": {
+              "position_metres": 174.5501856309439,
+              "velocity_m_per_s": 4.142101771031377e-05
+            },
+            "Moon": {
+              "position_metres": 747.6991104581004,
+              "velocity_m_per_s": 0.0019661552602323004
+            },
+            "Mars": {
+              "position_metres": 571.3407362084731,
+              "velocity_m_per_s": 4.372392553162854e-05
+            },
+            "Jupiter": {
+              "position_metres": 273.2672796675662,
+              "velocity_m_per_s": 1.8870237389954923e-05
+            },
+            "Saturn": {
+              "position_metres": 31.075154507318086,
+              "velocity_m_per_s": 1.9112680795679167e-06
+            },
+            "Uranus": {
+              "position_metres": 17.181503906345526,
+              "velocity_m_per_s": 1.0823852172255901e-06
+            },
+            "Neptune": {
+              "position_metres": 64.72581016400996,
+              "velocity_m_per_s": 4.113517003481197e-06
+            }
+          },
+          "moon_relative_jpl": {
+            "position_metres": 718.7588270317757,
+            "velocity_m_per_s": 0.001977426004895103
+          },
+          "physical_goals_passed": true
+        },
+        "rust_tighter": {
+          "jpl_residuals": {
+            "Sun": {
+              "position_metres": 218.80481648173037,
+              "velocity_m_per_s": 1.3782271765462503e-05
+            },
+            "Mercury": {
+              "position_metres": 207.69144051820356,
+              "velocity_m_per_s": 2.6764437360386104e-05
+            },
+            "Venus": {
+              "position_metres": 257.4676708106836,
+              "velocity_m_per_s": 2.3301007064953958e-05
+            },
+            "Earth": {
+              "position_metres": 174.54953987985328,
+              "velocity_m_per_s": 4.14231002297057e-05
+            },
+            "Moon": {
+              "position_metres": 747.7552833229641,
+              "velocity_m_per_s": 0.0019663389696992005
+            },
+            "Mars": {
+              "position_metres": 571.3407868132052,
+              "velocity_m_per_s": 4.3723911297535495e-05
+            },
+            "Jupiter": {
+              "position_metres": 273.266259585045,
+              "velocity_m_per_s": 1.8870241624998703e-05
+            },
+            "Saturn": {
+              "position_metres": 31.079502796184933,
+              "velocity_m_per_s": 1.9113130591174613e-06
+            },
+            "Uranus": {
+              "position_metres": 17.16537133926731,
+              "velocity_m_per_s": 1.0823689129771043e-06
+            },
+            "Neptune": {
+              "position_metres": 64.70129994663056,
+              "velocity_m_per_s": 4.113520765396303e-06
+            }
+          },
+          "moon_relative_jpl": {
+            "position_metres": 718.8247845205744,
+            "velocity_m_per_s": 0.0019776112363984583
+          },
+          "physical_goals_passed": true
+        }
+      },
+      "prior_numerical_failure_retained": true,
+      "solver_executed": false,
+      "wall_seconds": 0.07853290002094582,
+      "manifest_sha256": "22629c73c09b69bf9659ab7150197cac55dc41f5d403c892462d817edb921753",
+      "limitations": "Replay of saved trajectories and comparison only; no new integration or independent force verification. Sampled epochs, not continuous error guarantees."
+    },
+    "fresh_year": {
+      "checks_passed": true,
+      "physical_goals_passed": true,
+      "stored_reproduction_passed": true,
+      "solver_executed": true,
+      "samples": 125,
+      "packets": 499,
+      "duration_seconds": 31557600.0,
+      "wall_seconds": 13.721460400003707,
+      "results": {
+        "Sun": {
+          "jpl_residual": {
+            "position_metres": 218.80481648173037,
+            "velocity_m_per_s": 1.3782271765462503e-05
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Mercury": {
+          "jpl_residual": {
+            "position_metres": 207.69144051820356,
+            "velocity_m_per_s": 2.6764437360386104e-05
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Venus": {
+          "jpl_residual": {
+            "position_metres": 257.4676708106836,
+            "velocity_m_per_s": 2.3301007064953958e-05
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Earth": {
+          "jpl_residual": {
+            "position_metres": 174.54953987985328,
+            "velocity_m_per_s": 4.14231002297057e-05
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Moon": {
+          "jpl_residual": {
+            "position_metres": 747.7552833229641,
+            "velocity_m_per_s": 0.0019663389696992005
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Mars": {
+          "jpl_residual": {
+            "position_metres": 571.3407868132052,
+            "velocity_m_per_s": 4.3723911297535495e-05
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Jupiter": {
+          "jpl_residual": {
+            "position_metres": 273.266259585045,
+            "velocity_m_per_s": 1.8870241624998703e-05
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Saturn": {
+          "jpl_residual": {
+            "position_metres": 31.079502796184933,
+            "velocity_m_per_s": 1.9113130591174613e-06
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Uranus": {
+          "jpl_residual": {
+            "position_metres": 17.16537133926731,
+            "velocity_m_per_s": 1.0823689129771043e-06
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        },
+        "Neptune": {
+          "jpl_residual": {
+            "position_metres": 64.70129994663056,
+            "velocity_m_per_s": 4.113520765396303e-06
+          },
+          "stored_difference": {
+            "position_metres": 0.0,
+            "velocity_m_per_s": 0.0
+          }
+        }
+      },
+      "moon_relative_jpl": {
+        "position_metres": 718.8247845205744,
+        "velocity_m_per_s": 0.0019776112363984583
+      },
+      "moon_relative_stored_difference": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "energy_residual": 2.514650615461726e-14,
+      "runtime_source_sha256": {
+        "src/solar_simulator/experiment.py": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+        "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+        "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+        "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+        "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+        "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+        "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+        "src/solar_simulator/application_profiles.py": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+        "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436"
+      },
+      "manifest_sha256": "22629c73c09b69bf9659ab7150197cac55dc41f5d403c892462d817edb921753",
+      "versions": {
+        "python": "3.14.2",
+        "numpy": "2.5.1",
+        "scipy": "1.18.1"
+      },
+      "limitations": "Fresh production propagation at qualified settings; RK45 independence belongs to earlier audit141. FixedJ2 exchanges orbital angular momentum; EIH+J2 omits mixed terms. Sampled JPL goals, no continuous guarantee."
+    },
+    "continuous": {
+      "catalog_reproduction": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "year_reproduction": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "relative_independent": {
+        "position_metres": 0.0400733396033009,
+        "velocity_m_per_s": 8.55921045109164e-08
+      },
+      "catalog_rhs_calls": 530,
+      "catalog_packets": 10,
+      "year_statistics": {
+        "packets": 499,
+        "rhs_calls": 10682,
+        "failed": false,
+        "finished": true
+      },
+      "experimental": true,
+      "isolated": 1,
+      "general_release_passed": false
+    }
+  },
+  "legacy031_compatibility": {
+    "results": {
+      "python": {
+        "samples": 3,
+        "parent_preserved": true,
+        "state_and_continuation_byteexact": true,
+        "strict_replay_rejected": true,
+        "differences": [
+          "application_version"
+        ]
+      },
+      "rust": {
+        "samples": 3,
+        "parent_preserved": true,
+        "state_and_continuation_byteexact": true,
+        "strict_replay_rejected": true,
+        "differences": [
+          "application_version",
+          "native"
+        ]
+      }
+    },
+    "old_version": "0.3.1",
+    "current_version": "0.3.2",
+    "original_files_unchanged": true
+  },
+  "before_after": {
+    "previous_version": "0.3.1",
+    "body_residual_position_change_metres": {
+      "Sun": 0.0,
+      "Mercury": 0.0,
+      "Venus": 0.0,
+      "Earth": 0.0,
+      "Moon": 0.0,
+      "Mars": 0.0,
+      "Jupiter": 0.0,
+      "Saturn": 0.0,
+      "Uranus": 0.0,
+      "Neptune": 0.0
+    },
+    "moon_relative_position_change_metres": 0.0,
+    "timing_is_benchmark": false
+  },
+  "retained_source_failure": {
+    "python_failed": 23,
+    "python_passed": 2516,
+    "python_seconds": 929.0,
+    "wall_seconds": 932.1390567999915,
+    "source_unchanged": true,
+    "full_log_sha256": "b7d5e1a6ce83492b61036c7e2ba9818ab8c153d25e403768175a0cf9b5e2fdee",
+    "reason": "Three offline test fixtures copied a literal031 map rather than the declared current map. Only fixture dependencies changed; thresholds and report values retained.",
+    "focused_rerun_passed": 35,
+    "focused_rerun_seconds": 86.91
+  },
+  "retained_tooling_failure": "Local wrapper initially lacked checkout import path; corrected before check_project started. No physics source or threshold changed.",
+  "physical_model_changed": false,
+  "physical_accuracy_improved_claim": false,
+  "limitations": [
+    "JPL goals apply only to the original ten-body Strict one-year sampled profile",
+    "No bound between sample epochs or for arbitrary edited systems",
+    "Standard numerical FAIL and continuous general_release_passed=False retained",
+    "IAS15 cold restart and experimental Rust solver failures retained; neither adopted",
+    "Kuiper420 geometry FAIL; refined528 individual KBO SB441 residuals increased",
+    "PN/J2/Noether/rotation limitations unchanged; no new tides or 3D",
+    "Global research input setup remains; playback stores full recording in RAM"
+  ]
+}

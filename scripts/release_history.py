@@ -1,11 +1,11 @@
-"""Explicit 0.3.0 evidence migration; historical replay never certifies 0.3.1."""
+"""Explicit 0.3.0 evidence mapping; historical replay never certifies the current product."""
 import hashlib
 import json
 from pathlib import Path
 from zipfile import ZipFile
 
-MANIFEST = 'scripts/validation/release031-history.json'
-MANIFEST_SHA = '06868fd0aa38313d32afc2f37d5fe3934294842cf86bbbb08aa22aec61802a2c'
+MANIFEST = 'scripts/validation/release032-history.json'
+MANIFEST_SHA = '4139358c23b68219216f43a402d2c6aaa449abac52b78e8e19db97cb47c9c4f0'
 ARCHIVE = 'scripts/validation/release030-sources.zip'
 
 
