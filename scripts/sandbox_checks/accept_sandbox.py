@@ -18,28 +18,48 @@ from solar_simulator.vector3 import Vector3
 ROOT = Path(__file__).resolve().parents[2]
 
 
+CURRENT_RECEIPT = "docs/current-runtime-375-validation.json"
+CURRENT_RECEIPT_SHA = "e7d8d97f0a17a142cb4cc1203792fd8cc174fe0bc61a403538de9a524a42f9d6"
+
+
 def check_receipts(root=ROOT):
-    names = ("qualification-grid-validation.json", "strict-profile-validation.json", "sandbox-limits-validation.json")
-    receipts = {}
-    for name in names:
-        receipt = json.loads((root/"docs"/name).read_bytes())
-        for source, expected in receipt["source_sha256"].items():
-            if hashlib.sha256((root/source).read_bytes()).hexdigest() != expected:
-                raise ValueError("Scientific receipt source changed: "+source)
-        receipts[name] = receipt
-    strict = receipts["strict-profile-validation.json"]
-    if not strict["checks_passed"] or not receipts["sandbox-limits-validation.json"]["checks_passed"]:
+    """Require new measured evidence and exact current sources/environment.
+
+    Historical grid/Strict reports are immutable inputs, not today's source
+    authorization. No historical source resolver is used here.
+    """
+    root = Path(root).resolve()
+    path = root/CURRENT_RECEIPT
+    if hashlib.sha256(path.read_bytes()).hexdigest() != CURRENT_RECEIPT_SHA:
+        raise ValueError("Current scientific receipt changed: "+CURRENT_RECEIPT)
+    receipt = json.loads(path.read_bytes())
+    bindings = {**receipt["source_sha256"], **receipt["input_sha256"],
+        receipt["protocol"]:receipt["protocol_sha256"],
+        receipt["array_archive"]:receipt["array_sha256"]}
+    for name, expected in bindings.items():
+        source = (root/name).resolve()
+        if (not source.is_relative_to(root) or not source.is_file()
+                or hashlib.sha256(source.read_bytes()).hexdigest() != expected):
+            raise ValueError("Scientific receipt source/input changed: "+name)
+    if (receipt["current_runtime_qualified"] is not True
+            or receipt["solver_executed"] is not True or receipt["failed_criteria"]
+            or not receipt["gates"] or any(type(v) is not bool or not v for v in receipt["gates"].values())):
         raise ValueError("Current qualification failed")
-    if hashlib.sha256((root/"docs/qualification-grid-validation.json").read_bytes()).hexdigest() != strict["before_report_sha256"]:
-        raise ValueError("Original failure audit changed")
-    if hashlib.sha256((root/"docs/solar-sandbox-strict-checkpoint.json").read_bytes()).hexdigest() != strict["checkpoint_sha256"]:
-        raise ValueError("Strict initial checkpoint changed")
-    for name in ("solar-system-reference.json", "solar-system-moon-reference.json"):
-        expected = receipts["qualification-grid-validation.json"]["reference_sha256"]["docs/"+name]
-        if hashlib.sha256((root/"docs"/name).read_bytes()).hexdigest() != expected:
-            raise ValueError("Pinned JPL benchmark changed")
+    from solar_simulator.recipe import runtime_fingerprint
+    environment = runtime_fingerprint("rust")
+    environment.pop("package_files")  # Executed modules/data are checked above against root.
+    if environment != receipt["environment"]:
+        raise ValueError("Qualified numerical environment/native changed")
+    failed = json.loads((root/"docs/qualification-grid-validation.json").read_bytes())
+    strict = json.loads((root/"docs/strict-profile-validation.json").read_bytes())
+    if (failed["checks_passed"] is not False or strict["checks_passed"] is not True
+            or receipt["original_failure_retained"] is not True):
+        raise ValueError("Original failure or historical Strict qualification changed")
     return dict(current_qualification_passed=True, original_failure_retained=True,
-        new_jpl_epochs_checked=strict["jpl_new_epochs_checked"], reports=list(names))
+        new_jpl_epochs_checked=receipt["jpl_new_epochs_checked"],
+        reports=[CURRENT_RECEIPT,"docs/qualification-grid-validation.json",
+                 "docs/strict-profile-validation.json","docs/sandbox-limits-validation.json"],
+        runtime_commit=receipt["runtime_commit"], scope="qualification375 measured desktop environment")
 
 
 def workflows():

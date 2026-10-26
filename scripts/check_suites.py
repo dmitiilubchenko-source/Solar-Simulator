@@ -27,6 +27,7 @@ SUITES={
         'tests/test_app_workflows.py','tests/test_experiment_transition_gui.py',
         'tests/test_controlled_stop.py','tests/test_recovery_journey.py',
         'tests/test_sandbox_acceptance.py',
+        'tests/test_current_runtime_qualification.py',
         'tests/test_trajectory.py','tests/test_trajectory_gui.py','tests/test_trajectory_loading.py',
         'tests/test_comparison_loading.py','tests/test_comparison_gui.py','tests/test_comparison.py',
         'tests/test_plot_artists.py','tests/test_body_units_gui.py','tests/test_required_native.py'],

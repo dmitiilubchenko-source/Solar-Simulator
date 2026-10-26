@@ -79,6 +79,10 @@ git log -- scripts/sandbox_checks scripts/accept_sandbox.py
 Описание текущего поведения находится здесь, история правок — в Git,
 история выпусков — в [описаниях версий](../../docs/releases).
 
-После числовой валидации 373 текущие source SHA отличаются от годовых
-receipts. `check_receipts` намеренно сохраняет отказ; historical replay не
-делает текущую квалификацию успешной. [Границы и следующий этап](../../docs/development/historical-checkpoints.md).
+В375 выполнены новые годовые/holdout/sandbox расчёты. `check_receipts`
+проверяет [новое доказательство](../../docs/current-runtime-375-validation.md),
+его NPZ/протокол, текущие source/input SHA и измеренное environment/native.
+Старые grid FAIL и Strict PASS сохранены как история. При другом окружении
+или изменении вычислительных зависимостей квалификация требует новой проверки;
+архивные SHA не разрешают сегодняшний solver. Это source desktop scope,
+без новой portable. [Разделение исторических и текущих проверок](../../docs/development/historical-checkpoints.md).

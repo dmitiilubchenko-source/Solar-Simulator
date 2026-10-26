@@ -39,3 +39,6 @@ recovery, пользовательские записи и build/dist — раз
 
 [Исторические доказательства и checkpoint](development/historical-checkpoints.md):
 минимальный resolver, обязательные зависимости и отдельные границы допуска.
+
+[Квалификация текущего ядра375](current-runtime-375-validation.md): фиксированный
+протокол, реальные Python/Rust jobs, независимый reference и source-bound gate.

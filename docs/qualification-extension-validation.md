@@ -117,10 +117,10 @@ Experiment; исправлен скрипт, runtimeAPI сохранён. Пос
 [elliptic_reference](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_sandbox_limits.py:63)
 [hyperbolic_reference](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_sandbox_limits.py:87)
 [main](C:/Users/Admin/Desktop/Solar-simulator/scripts/qualify_strict_profile.py:29)
-[check_receipts](C:/Users/Admin/Desktop/Solar-simulator/scripts/sandbox_checks/accept_sandbox.py:21)
-[workflows](C:/Users/Admin/Desktop/Solar-simulator/scripts/sandbox_checks/accept_sandbox.py:45)
+[check_receipts](C:/Users/Admin/Desktop/Solar-simulator/scripts/sandbox_checks/accept_sandbox.py:25)
+[workflows](C:/Users/Admin/Desktop/Solar-simulator/scripts/sandbox_checks/accept_sandbox.py:65)
 [test_edited_system_against_independent_orbit_or_free_motion](C:/Users/Admin/Desktop/Solar-simulator/tests/test_sandbox_limits.py:13)
-[test_source_or_pinned_reference_change_rejected_before_acceptance](C:/Users/Admin/Desktop/Solar-simulator/tests/test_sandbox_acceptance.py:26)
+[test_source_or_pinned_reference_change_rejected_before_acceptance](C:/Users/Admin/Desktop/Solar-simulator/tests/test_sandbox_acceptance.py:39)
 
 Полная регрессия142:1381Pythonтест passed189.10с,17Rustтестов,
 форматированиеобоихcrates и1403file/lineссылки прошли. Это17новыхтестов

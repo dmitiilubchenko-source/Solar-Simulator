@@ -54,3 +54,7 @@ Kuiper ограничения не отменяются новыми орган�
 [Границы исторической проверки после 374](../development/historical-checkpoints.md):
 архивный replay не квалифицирует сегодняшний runtime; обязательные отказы
 годовых receipts сохраняются до отдельного доказательства.
+
+[Текущая квалификация375](../current-runtime-375-validation.md) содержит свежие
+Strict/holdout/sandbox расчёты и отдельное сравнение с0.3.2. Historical replay
+и current qualification по-прежнему различаются.

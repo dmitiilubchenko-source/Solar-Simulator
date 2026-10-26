@@ -6,6 +6,19 @@ import shutil
 import pytest
 
 from scripts.accept_sandbox import ROOT, check_receipts, workflows
+from scripts.sandbox_checks.accept_sandbox import CURRENT_RECEIPT
+
+
+@pytest.fixture
+def qualified_checkout(tmp_path):
+    current = json.loads((ROOT/CURRENT_RECEIPT).read_bytes())
+    paths = {CURRENT_RECEIPT,current['protocol'],current['array_archive'],
+             *current['source_sha256'],*current['input_sha256']}
+    for name in paths:
+        destination = tmp_path/name
+        destination.parent.mkdir(parents=True,exist_ok=True)
+        shutil.copy2(ROOT/name,destination)
+    return tmp_path
 
 
 def test_dense_failure_retained_and_strict_profile_independently_qualified():
@@ -23,22 +36,12 @@ def test_dense_failure_retained_and_strict_profile_independently_qualified():
 
 
 @pytest.mark.parametrize("target", ["src/solar_simulator/oblateness.py", "docs/solar-system-moon-reference.json"])
-def test_source_or_pinned_reference_change_rejected_before_acceptance(tmp_path, target):
-    paths = set()
-    for name in ("qualification-grid-validation.json", "strict-profile-validation.json", "sandbox-limits-validation.json"):
-        paths.add("docs/"+name)
-        receipt = json.loads((ROOT/"docs"/name).read_bytes())
-        paths.update(receipt["source_sha256"])
-    paths.update(("docs/solar-system-reference.json", "docs/solar-system-moon-reference.json",
-        "docs/solar-sandbox-strict-checkpoint.json"))
-    for name in paths:
-        destination = tmp_path/name
-        destination.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ROOT/name, destination)
-    assert check_receipts(tmp_path)["current_qualification_passed"]
-    with (tmp_path/target).open("ab") as stream:stream.write(b"\n")
-    with pytest.raises(ValueError, match="changed"):
-        check_receipts(tmp_path)
+def test_source_or_pinned_reference_change_rejected_before_acceptance(qualified_checkout, target):
+    import re
+    assert check_receipts(qualified_checkout)["current_qualification_passed"]
+    with (qualified_checkout/target).open("ab") as stream:stream.write(b"\n")
+    with pytest.raises(ValueError, match="changed: "+re.escape(target)):
+        check_receipts(qualified_checkout)
 
 
 def test_strict_checkpoint_target_branch_export_and_continuation():
