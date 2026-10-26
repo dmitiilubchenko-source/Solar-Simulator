@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from math import isfinite
 
 from .simulation import Body
+from ._numbers import finite_number
 
 
 @dataclass(frozen=True)
@@ -19,7 +20,8 @@ def resolve_contact(bodies: list[Body], first: int, second: int, restitution: fl
     restitution=1: упругий удар; 0: равные нормальные скорости после удара.
     Слияния, трения, вращения и исправления глубокого перекрытия здесь нет.
     """
-    if not isfinite(restitution) or not 0 <= restitution <= 1:
+    restitution = finite_number(restitution, "Коэффициент восстановления")
+    if not 0 <= restitution <= 1:
         raise ValueError("Коэффициент восстановления должен быть в диапазоне [0,1]")
     if (type(first) is not int or type(second) is not int or first == second
             or not 0 <= first < len(bodies) or not 0 <= second < len(bodies)):

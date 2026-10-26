@@ -56,17 +56,34 @@ UI_FILES = ('src/solar_simulator/app.py', 'src/solar_simulator/comparison.py',
     'scripts/replay_ias15_restart.py', 'scripts/replay_ias15_restart_step.py',
     'scripts/replay_ias15_session.py', 'tests/test_ias15_session_replay.py')
 
+NUMERIC_ARCHIVE = 'scripts/validation/numeric-before373.zip'
+NUMERIC_ARCHIVE_SHA = '0cbe5a3754c7732ac645d03c9a582b1193b9ec64475b6138974eff9fd2758abb'
+NUMERIC_FILES = ('src/solar_simulator/vector3.py', 'src/solar_simulator/simulation.py',
+    'src/solar_simulator/rotation.py', 'src/solar_simulator/nbody_rotation.py',
+    'src/solar_simulator/experiment.py', 'src/solar_simulator/rust_backend.py',
+    'src/solar_simulator/scenarios.py', 'src/solar_simulator/contacts.py',
+    'src/solar_simulator/storage.py',
+    'src/solar_simulator/impacts.py', 'src/solar_simulator/collisions.py',
+    'scripts/release_history.py', 'scripts/assess_nominal_jpl.py', 'scripts/fixed_j2_year.py')
+
 
 def ui_historical_sha(root,name,expected):
-    """Exact 0.3.2 evidence only; never used to authorize a live C worker."""
+    """Exact historical evidence only; never authorize a live worker."""
     root=Path(root).resolve();path=(root/name).resolve()
     if Path(name).is_absolute() or not path.is_relative_to(root):
         raise ValueError('Historical source escapes checkout')
     actual=digest(path.read_bytes())
-    if actual==expected or name not in UI_FILES:return actual
-    raw=(root/UI_ARCHIVE).read_bytes()
-    if digest(raw)!=UI_ARCHIVE_SHA:raise ValueError('Changed historical UI archive')
+    if actual==expected:return actual
     from io import BytesIO
-    with ZipFile(BytesIO(raw)) as archive:
-        old=digest(archive.read(name))
-    return old if old==expected else actual
+    for archive_name, archive_sha, names in (
+            (UI_ARCHIVE, UI_ARCHIVE_SHA, UI_FILES),
+            (NUMERIC_ARCHIVE, NUMERIC_ARCHIVE_SHA, NUMERIC_FILES)):
+        if name not in names:continue
+        path=root/archive_name
+        if archive_name==NUMERIC_ARCHIVE and not path.is_file():continue
+        raw=path.read_bytes()
+        if digest(raw)!=archive_sha:raise ValueError('Changed historical source archive')
+        with ZipFile(BytesIO(raw)) as archive:
+            old=digest(archive.read(name))
+        if old==expected:return old
+    return actual

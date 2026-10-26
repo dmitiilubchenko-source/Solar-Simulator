@@ -21,8 +21,12 @@ INPUTS = dict(BASE_INPUTS,**{
 })
 
 
-def verify(bindings,root=ROOT):
+def verify(bindings,root=ROOT, *, historical=False):
     """Bind exact bytes; all relative receipt paths must stay inside the repo."""
+    if historical:
+        from scripts.assess_nominal_jpl import verify_frozen_sources
+        verify_frozen_sources(bindings, root=root)
+        return
     root = Path(root).resolve()
     for name,expected in bindings.items():
         path = (root/name).resolve()
@@ -92,7 +96,7 @@ def inputs(root=ROOT):
     continuous = read('continuous-integration-validation.json')
     strict = read('strict-profile-validation.json')
     prior = read('qualification-grid-validation.json')
-    for receipt in (continuous,strict,prior):verify(receipt['source_sha256'],root)
+    for receipt in (continuous,strict,prior):verify(receipt['source_sha256'],root,historical=True)
     verify({'docs/qualification-grid-validation.json':strict['before_report_sha256'],
         'docs/solar-sandbox-strict-checkpoint.json':strict['checkpoint_sha256'],
         'docs/continuous-integration-reference.npz':continuous['public_reference_sha256']},root)

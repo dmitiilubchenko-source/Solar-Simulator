@@ -58,7 +58,7 @@ PN-фигуры, ядра, приливов или излучения. Назв�
 Текущий [EIH](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/relativity.py:47)
 хранит координаты и скорости в фиксированном гармоническом базисе,
 сокращает ускорения до c⁻² и использует соответствующие величины Нётер.
-Нынешнее [вращение](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:20)
+Нынешнее [вращение](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:21)
 хранит ньютоновские body→inertial q, инерцию и S. Совпадающее имя S
 не устанавливает совпадение релятивистских определений.
 

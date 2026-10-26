@@ -128,7 +128,7 @@ packet_steps по умолчанию также 20. Исследовательс
 Проверка двух годовых сеток через 6 ч не сертифицирует пакеты по 20 ч и GUI с настройками по умолчанию.
 [GUIbatch](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:62),
 [GUIsubmit](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:424),
-[длительностьadvance](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:139),
+[длительностьadvance](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:142),
 [границыпакета](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/time_control.py:31).
 
 До траекторий первоначальный тест ошибочно предполагал, что все 362 эпохи

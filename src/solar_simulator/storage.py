@@ -200,6 +200,9 @@ def from_document(document: dict) -> Experiment:
     pair = document["settings"]["relative_pair"]
     if pair is not None and (type(pair) is not list or len(pair) != 2):
         raise ValueError("Неверная относительная пара в контрольной точке")
+    # Persisted documents remain builtin-only even when constructors accept NumPy.
+    for name in ("dt", "restitution", "rtol", "position_atol", "velocity_atol"):
+        _number(document["settings"][name])
     settings = Settings(**dict(document["settings"],figures=tuple(figures),relative_pair=tuple(pair) if pair is not None else None))
     suffix = ("-prescribed-q2" if prescribed(figures) else "-fixed-j2") if figures else ""
     if document["model"] != settings.physics+"-"+settings.integrator+suffix:

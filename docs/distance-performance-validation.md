@@ -102,7 +102,7 @@ runtime, данные, native и научные стенды после него
 потребовался. Это также не решение о переносе контроллера DOP853.
 Принятая portable 0.3.0 сохранена; эта правка в неё не включалась.
 
-[Метод расстояния](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/vector3.py:53),
+[Метод расстояния](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/vector3.py:54),
 [крайние масштабы](C:/Users/Admin/Desktop/Solar-simulator/tests/test_vector3.py:246),
 [переполнение разности](C:/Users/Admin/Desktop/Solar-simulator/tests/test_vector3.py:252),
 [изменённые неконечные поля](C:/Users/Admin/Desktop/Solar-simulator/tests/test_vector3.py:258),

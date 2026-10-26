@@ -5,9 +5,11 @@ import subprocess
 
 from .simulation import Body
 from .vector3 import Vector3
+from ._numbers import finite_number
 
 
 def evolve(bodies: list[Body], dt: float, steps: int, executable: Path | None = None) -> list[Body]:
+    dt = finite_number(dt, "Шаг")
     if type(steps) is not int or steps < 0:
         raise ValueError("steps должен быть неотрицательным целым числом")
     if executable is None:
@@ -39,6 +41,7 @@ def evolve(bodies: list[Body], dt: float, steps: int, executable: Path | None = 
 def run_until_contact(bodies: list[Body], dt: float, steps: int):
     """Одна пакетная остановка при контакте, весь цикл и детектор в Rust."""
     from .contacts import Contact, RunResult
+    dt = finite_number(dt, "Шаг")
     if type(steps) is not int or steps < 0:
         raise ValueError("steps должен быть неотрицательным целым числом")
     try:
@@ -58,6 +61,7 @@ def run_until_contact(bodies: list[Body], dt: float, steps: int):
 def resolve_contact(bodies: list[Body], first: int, second: int, restitution: float):
     """Нативный центральный импульс. Публичная проверка пары — в impacts.py."""
     from .impacts import ImpactResult
+    restitution = finite_number(restitution, "Коэффициент восстановления")
     try:
         import solar_native
     except ModuleNotFoundError as error:
@@ -75,6 +79,8 @@ def simulate_collisions(bodies, dt, steps, restitution, max_events):
     """Вся серия повторных ударов одним вызовом без Python внутри цикла."""
     from .contacts import Contact
     from .collisions import CollisionResult
+    dt = finite_number(dt, "Шаг")
+    restitution = finite_number(restitution, "Коэффициент восстановления")
     try:
         import solar_native
     except ModuleNotFoundError as error:

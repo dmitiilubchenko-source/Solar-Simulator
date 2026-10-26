@@ -201,11 +201,11 @@ GUI загружает/продолжает/сбрасывает состоян�
 пока выполняется CLI/Python. Rust ускоряет только монопольные силы;
 вращательные силы/момент и DOP853 здесь Python.
 
-- [Состояние и проверки](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:20),
-  [поле/реакция](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:66),
-  [интегратор](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:139),
-  [общие инварианты](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:220).
-- [Продвижение Experiment](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:139),
+- [Состояние и проверки](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:21),
+  [поле/реакция](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:69),
+  [интегратор](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:142),
+  [общие инварианты](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:231).
+- [Продвижение Experiment](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:142),
   [checkpoint](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/storage.py:84),
   [CLI](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/cli.py:79).
 - [Независимый эталон](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_nbody_rotation.py:22),

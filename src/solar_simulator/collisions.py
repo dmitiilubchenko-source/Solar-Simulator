@@ -5,6 +5,7 @@ from math import isfinite
 from .contacts import Contact, first_contact
 from .impacts import resolve_contact
 from .simulation import Body, step
+from ._numbers import finite_number
 
 
 @dataclass(frozen=True)
@@ -23,7 +24,9 @@ def simulate_collisions(bodies: list[Body], dt: float, steps: int, *,
     Неподдерживаемые покоящиеся/одновременные контакты вызывают ошибку.
     Ограничение событий защищает от неупругого коллапса (накопления ударов).
     """
-    if (not isfinite(dt) or dt <= 0 or type(steps) is not int or steps < 0
+    dt = finite_number(dt, "Шаг")
+    restitution = finite_number(restitution, "Коэффициент восстановления")
+    if (dt <= 0 or type(steps) is not int or steps < 0
             or not isfinite(dt*steps)):
         raise ValueError("Нужны конечное время, положительный dt и целое steps >= 0")
     if not isfinite(restitution) or not 0 <= restitution <= 1:

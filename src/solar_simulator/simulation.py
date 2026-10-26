@@ -3,6 +3,7 @@ from dataclasses import dataclass, field
 from math import isfinite, pi, sqrt
 
 from .vector3 import Vector3
+from ._numbers import finite_number
 
 G = 6.67430e-11
 AU = 1.495978707e11
@@ -21,8 +22,10 @@ class Body:
 
     def __post_init__(self):
         for vector in (self.position,self.velocity,self.spin):
-            if not isinstance(vector,Vector3) or not all(isfinite(v) for v in (vector.x,vector.y,vector.z)):
+            if not isinstance(vector,Vector3) or not all(type(v) in (int,float) and isfinite(v) for v in (vector.x,vector.y,vector.z)):
                 raise ValueError("Положение, скорость и spin должны быть конечными Vector3")
+        object.__setattr__(self, "mass", finite_number(self.mass, "Масса"))
+        object.__setattr__(self, "radius", finite_number(self.radius, "Радиус"))
         if not isfinite(self.mass) or self.mass <= 0:
             raise ValueError("Масса должна быть положительной и конечной")
         if not isfinite(self.radius) or self.radius < 0:
@@ -54,7 +57,8 @@ def step(bodies: list[Body], dt: float) -> list[Body]:
     Положение обновляется со старым ускорением, скорость — со средним
     старым и новым ускорением. Без смягчения и модели столкновений.
     """
-    if not isfinite(dt) or dt <= 0:
+    dt = finite_number(dt, "Шаг")
+    if dt <= 0:
         raise ValueError("Шаг должен быть положительным и конечным")
     old = accelerations(bodies)
     moved = [Body(body.name, body.mass,
@@ -101,7 +105,8 @@ def sun_earth(eccentricity: float = 0.0) -> tuple[list[Body], float]:
     Это учебные начальные условия, а не эфемериды на конкретную дату.
     Возвращает тела и аналитический период относительной орбиты.
     """
-    if not isfinite(eccentricity) or not 0 <= eccentricity < 1:
+    eccentricity = finite_number(eccentricity, "Эксцентриситет")
+    if not 0 <= eccentricity < 1:
         raise ValueError("Для эллипса требуется 0 <= eccentricity < 1")
     mass = SUN_MASS + EARTH_MASS
     distance = AU * (1 - eccentricity)

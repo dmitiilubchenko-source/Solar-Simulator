@@ -9,6 +9,7 @@ from math import isfinite
 import numpy as np
 
 from .simulation import Body, accelerations, step
+from ._numbers import finite_number
 
 
 @dataclass(frozen=True)
@@ -30,7 +31,8 @@ def first_contact(bodies: list[Body], dt: float, *, incoming_only: bool = False)
 
     Обычный режим по-прежнему регистрирует касание и начальное перекрытие.
     """
-    if not isfinite(dt) or dt <= 0:
+    dt = finite_number(dt, "Шаг")
+    if dt <= 0:
         raise ValueError("Шаг должен быть положительным и конечным")
     # Начальный контакт проверяется до силы: совпадение центров сфер допустимо
     # как событие, но не как аргумент гравитационного расчёта.
@@ -95,7 +97,8 @@ def first_contact(bodies: list[Body], dt: float, *, incoming_only: bool = False)
 
 def run_until_contact(bodies: list[Body], dt: float, steps: int, *, backend: str = "python") -> RunResult:
     """Проверочная Python-реализация: остановка, без слияния и отскока."""
-    if not isfinite(dt) or dt <= 0 or type(steps) is not int or steps < 0:
+    dt = finite_number(dt, "Шаг")
+    if dt <= 0 or type(steps) is not int or steps < 0:
         raise ValueError("Нужны положительный dt и неотрицательное целое steps")
     if backend == "rust":
         from .rust_backend import run_until_contact as native_run

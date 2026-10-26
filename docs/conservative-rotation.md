@@ -132,10 +132,10 @@ Q2-момента не прошёл на 40 радиусах (0.00473219). На 
 
 ## Код и воспроизведение
 
-- [Инерция](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:23),
-  [поле и момент](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:69),
-  [инварианты](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:103),
-  [решатель](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:116).
+- [Инерция](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:34),
+  [поле и момент](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:82),
+  [инварианты](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:117),
+  [решатель](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/rotation.py:130).
 - [Независимая матричная реализация](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_rotation.py:30),
   [исходные задачи](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_rotation.py:103),
   [аудит](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_rotation.py:121).

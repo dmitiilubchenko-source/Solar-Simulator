@@ -1,14 +1,13 @@
 from __future__ import annotations
 
 from math import hypot, acos, cos, sin, isfinite
+from ._numbers import finite_number
 
 class Vector3:
     def __init__(self, x: float, y: float, z: float) -> None:
-        if not all(isfinite(value) for value in (x, y, z)):
-            raise ValueError("Координаты должны быть конечными числами")
-        self.x = x
-        self.y = y
-        self.z = z
+        self.x = finite_number(x, "Координата x")
+        self.y = finite_number(y, "Координата y")
+        self.z = finite_number(z, "Координата z")
 
     def add(self, other: "Vector3") -> "Vector3":
         return Vector3(
@@ -25,6 +24,7 @@ class Vector3:
         )
 
     def multiply(self, scalar: float) -> "Vector3":
+        scalar = finite_number(scalar, "Множитель")
         return Vector3(
             self.x * scalar,
             self.y * scalar,
@@ -32,6 +32,7 @@ class Vector3:
         )
 
     def divide(self, scalar: float) -> "Vector3":
+        scalar = finite_number(scalar, "Делитель")
         if scalar == 0.0:
             raise ZeroDivisionError("Нельзя делить на ноль")
         return Vector3(
@@ -93,6 +94,7 @@ class Vector3:
         return direction.multiply(self.dot(direction))
 
     def rotate_2d(self, angle: float) -> Vector3:
+        angle = finite_number(angle, "Угол")
         cos_angle = cos(angle)
         sin_angle = sin(angle)
 
@@ -107,8 +109,9 @@ class Vector3:
         angular_speed: float,
         time: float,
         ) -> "Vector3":
-        if not all(isfinite(value) for value in (radius, angular_speed, time)):
-            raise ValueError("Параметры окружности должны быть конечными")
+        radius = finite_number(radius, "Радиус")
+        angular_speed = finite_number(angular_speed, "Угловая скорость")
+        time = finite_number(time, "Время")
         if radius < 0:
             raise ValueError("Радиус не может быть отрицательным")
         angle = angular_speed * time

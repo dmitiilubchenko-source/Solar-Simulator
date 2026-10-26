@@ -120,7 +120,7 @@ Settings рабочего солнечного профиля и научные 
 - [app._restore_parent](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:599)
 - [cli.main](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/cli.py:79)
 - [commands.main](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/commands.py:13)
-- [contacts.run_until_contact](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/contacts.py:96)
+- [contacts.run_until_contact](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/contacts.py:98)
 - [assess_nominal_jpl.verify_frozen_sources](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_nominal_jpl.py:34)
 - [assess_nominal_jpl.validate_frozen](C:/Users/Admin/Desktop/Solar-simulator/scripts/assess_nominal_jpl.py:181)
 - [test_review_regressions.branch_file](C:/Users/Admin/Desktop/Solar-simulator/tests/test_review_regressions.py:22)

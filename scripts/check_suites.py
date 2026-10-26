@@ -10,6 +10,7 @@ ROOT=Path(__file__).resolve().parents[1]
 SUITES={
     'python':[
         'tests/test_vector3.py','tests/test_simulation.py','tests/test_storage.py',
+        'tests/test_numeric_validation.py','tests/test_numeric_history.py',
         'tests/test_environment_check.py','tests/test_gui_process_encoding.py','tests/test_project_links.py',
         'tests/test_documentation_navigation.py',
         'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
@@ -22,6 +23,7 @@ SUITES={
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[sun-earth-rust]',
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[spheres-rust]'],
     'desktop':[
+        'tests/test_numeric_native.py',
         'tests/test_app_workflows.py','tests/test_experiment_transition_gui.py',
         'tests/test_controlled_stop.py','tests/test_recovery_journey.py',
         'tests/test_sandbox_acceptance.py',

@@ -11,6 +11,7 @@ from .ephemerides import EphemerisOrigin
 from .oblateness import FixedJ2, PrescribedQuadrupole, validate_figures, validate_orientation_origin
 from .coordinates import prepare_pair, validate_pair_option
 from .error_control import validate_error_control
+from ._numbers import finite_number
 
 
 @dataclass(frozen=True)
@@ -29,6 +30,8 @@ class Settings:
     error_control: str = "per-body"
 
     def __post_init__(self):
+        for name in ("dt", "restitution", "rtol", "position_atol", "velocity_atol"):
+            object.__setattr__(self, name, finite_number(getattr(self, name), name))
         validate_error_control(self.error_control)
         validate_pair_option(self.relative_pair)
         if self.relative_pair is not None and self.integrator != "dop853":

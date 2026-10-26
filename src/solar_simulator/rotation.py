@@ -10,10 +10,21 @@ import numpy as np
 from scipy.integrate import solve_ivp
 
 from .simulation import G
+from ._numbers import finite_number
 
 
 def _vector(value, size, name):
-    result = np.array(value, dtype=float, copy=True)
+    # Inspect before float coercion erases bool/string/complex element types.
+    if isinstance(value, np.ndarray) and value.dtype.kind not in "iufO":
+        raise ValueError(f"{name}: требуется действительный численный вектор")
+    if (isinstance(value, np.ndarray) and value.dtype.kind in "iuf"
+            and value.dtype.itemsize <= 8):
+        result = np.array(value, dtype=float, copy=True)
+    else:
+        raw = np.asarray(value, dtype=object)
+        if raw.shape != (size,):
+            raise ValueError(f"{name}: требуется {size} конечных чисел")
+        result = np.array([finite_number(item, name) for item in raw], dtype=float)
     if result.shape != (size,) or not np.all(np.isfinite(result)):
         raise ValueError(f"{name}: требуется {size} конечных чисел")
     return result
@@ -26,6 +37,8 @@ class RigidFigure:
     bounding_radius: float
 
     def __post_init__(self):
+        object.__setattr__(self, "mass", finite_number(self.mass, "Масса"))
+        object.__setattr__(self, "bounding_radius", finite_number(self.bounding_radius, "Ограничивающий радиус"))
         inertia = _vector(self.moments, 3, "Инерция")
         if (not np.isfinite(self.mass) or self.mass <= 0
                 or not np.isfinite(self.bounding_radius) or self.bounding_radius <= 0
@@ -68,7 +81,8 @@ def quaternion_rate(quaternion, omega):
 
 def pair_field(figure, point_mass, displacement, quaternion):
     """Return U [J], force on point [N], torque on figure [N m]."""
-    if not np.isfinite(point_mass) or point_mass <= 0:
+    point_mass = finite_number(point_mass, "Масса точки")
+    if point_mass <= 0:
         raise ValueError("Масса точки должна быть положительной")
     r = _vector(displacement, 3, "r")
     distance = np.linalg.norm(r)
@@ -120,7 +134,22 @@ def integrate(figure, initial, times, *, point_mass=None, rtol=1e-11,
     Raw quaternion norm is retained for audit; only the field's rotation
     matrix uses its normalized representation. This is not symplectic.
     """
+    if point_mass is not None:
+        point_mass = finite_number(point_mass, "Масса точки")
+    rtol = finite_number(rtol, "rtol")
+    if np.ndim(atol) == 0:
+        atol = finite_number(atol.item() if isinstance(atol, np.ndarray) else atol, "atol")
+    else:
+        atol = _vector(atol, np.size(atol), "atol")
+    if isinstance(max_step, np.floating) and max_step.dtype.itemsize <= 8:
+        max_step = float(max_step)
+    if not (type(max_step) is float and max_step == np.inf):
+        max_step = finite_number(max_step, "max_step")
     initial = _vector(initial, 7 if point_mass is None else 13, "Состояние")
+    raw_times = np.asarray(times, dtype=object)
+    if raw_times.ndim != 1:
+        raise ValueError("Нужна одномерная сетка времени")
+    times = _vector(times, len(raw_times), "Время")
     times = np.asarray(times, dtype=float)
     if (times.ndim != 1 or len(times) < 2 or not np.all(np.isfinite(times))
             or np.any(np.diff(times) <= 0)):

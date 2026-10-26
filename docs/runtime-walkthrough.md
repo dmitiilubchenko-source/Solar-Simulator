@@ -38,15 +38,15 @@ Verlet и собственные силы, REBOUND/Tudat не подключен
 
 [_submit](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:424)
 
-[advance](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:139)
+[advance](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:142)
 
 [evolve_accurate](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/accuracy.py:17)
 
-[integrate](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:139)
+[integrate](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/nbody_rotation.py:142)
 
 [_poll](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:436)
 
-[save](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/storage.py:300)
+[save](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/storage.py:303)
 
 Луна сейчас жёсткая ньютоновская mean-solid аппроксимация. Приливы, ядро
 и полное PN-вращение ещё не реализованы; их отсутствие не исправляется

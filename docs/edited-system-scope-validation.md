@@ -184,5 +184,5 @@ accuracy/native и аналитику Decimal oracle. Новых отказов 
 - [test_cli_extract_export_preserve_child_scope](C:/Users/Admin/Desktop/Solar-simulator/tests/test_edited_scope.py:132)
 - [branch_experiment](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/sandbox.py:54)
 - [to_branch_document](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/sandbox.py:84)
-- [validate_start](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:125)
+- [validate_start](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/experiment.py:128)
 - [export_state](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/state_export.py:13)

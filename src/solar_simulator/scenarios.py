@@ -3,6 +3,7 @@ from math import pi, sqrt
 
 from .simulation import AU, EARTH_MASS, SUN_MASS, G, Body
 from .vector3 import Vector3
+from ._numbers import finite_number
 
 MOON_MASS = 7.342e22
 MOON_DISTANCE = 384400e3
@@ -10,6 +11,9 @@ MOON_DISTANCE = 384400e3
 
 def circular_pair(name1, mass1, name2, mass2, distance):
     """Две массы на круговой орбите вокруг центра масс; тела и период."""
+    mass1 = finite_number(mass1, "Первая масса")
+    mass2 = finite_number(mass2, "Вторая масса")
+    distance = finite_number(distance, "Расстояние")
     mass = mass1 + mass2
     speed = sqrt(G * mass / distance)
     return [

@@ -14,6 +14,7 @@ from .coordinates import prepare_pair
 from .rotation import RigidFigure, angular_velocity, quaternion_rate, rotation_matrix, _vector
 from .simulation import Body, G
 from .vector3 import Vector3
+from ._numbers import finite_number
 
 
 @dataclass(frozen=True)
@@ -27,6 +28,8 @@ class RotationState:
     provenance: str = "user-specified rigid Q2"
 
     def __post_init__(self):
+        for name in ("quaternion_atol", "momentum_atol"):
+            object.__setattr__(self, name, finite_number(getattr(self, name), name))
         if not isinstance(self.figure, RigidFigure) or type(self.body) is not str or not self.body.strip():
             raise ValueError("Нужны имя и инерция вращающегося тела")
         q = _vector(self.quaternion, 4, "q")
@@ -139,6 +142,14 @@ class RotationDOP853(DOP853):
 def integrate(bodies, rotations, times, *, rtol=1e-11, position_atol=1e-4,
               velocity_atol=1e-10, relative_pair=None, backend="python", max_step=np.inf):
     """Return snapshots (bodies, rotation tuple); retain raw q norm for audit."""
+    if isinstance(max_step, np.floating) and max_step.dtype.itemsize <= 8:
+        max_step = float(max_step)
+    if not (type(max_step) is float and max_step == np.inf):
+        max_step = finite_number(max_step, "max_step")
+    raw_times = np.asarray(times, dtype=object)
+    if raw_times.ndim != 1:
+        raise ValueError("Нужна одномерная сетка эпох")
+    times = _vector(times, len(raw_times), "Время")
     source = validate(bodies, rotations)
     state = rotations[0]
     if backend not in ("python", "rust"):

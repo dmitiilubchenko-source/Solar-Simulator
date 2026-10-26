@@ -33,30 +33,37 @@ SOURCE_FILE_SNAPSHOTS = {
 }
 
 
-def verify_frozen_sources(bindings):
+def verify_frozen_sources(bindings, *, root=None):
     """Verify executed historical bytes, never qualify the current runtime.
 
     The pinned trajectory includes old UI/CLI sources. Their later development
     does not change that trajectory. Only exact archived bytes can satisfy an
     old source binding; input and installed-dependency checks remain separate.
     """
+    from pathlib import Path as FilesystemPath
+    root = FilesystemPath(ROOT if root is None else root).resolve()
+    from scripts.release_history import NUMERIC_ARCHIVE, NUMERIC_FILES, ui_historical_sha
     archived = None
     for name, expected in bindings.items():
         normalized = name.replace('\\', '/')
-        path = (ROOT/normalized).resolve()
-        if not path.is_relative_to(ROOT.resolve()):
+        path = (root/normalized).resolve()
+        if not path.is_relative_to(root):
             raise ValueError('Receipt path outside project: '+name)
         if path.is_file() and digest(path.read_bytes()) == expected:
             continue
+        if (path.is_file() and normalized in NUMERIC_FILES
+                and (root/NUMERIC_ARCHIVE).is_file()
+                and ui_historical_sha(root, normalized, expected) == expected):
+            continue
         frozen = SOURCE_FILE_SNAPSHOTS.get(normalized)
         if frozen is not None and frozen[1] == expected:
-            source = (ROOT/frozen[0]).resolve()
-            if (not source.is_relative_to(ROOT.resolve()) or not source.is_file()
+            source = (root/frozen[0]).resolve()
+            if (not source.is_relative_to(root) or not source.is_file()
                     or digest(source.read_bytes()) != expected):
                 raise ValueError('Frozen source SHA mismatch: '+name)
             continue
         if archived is None:
-            raw = (ROOT/SOURCE_SNAPSHOT).read_bytes()
+            raw = (root/SOURCE_SNAPSHOT).read_bytes()
             if digest(raw) != SOURCE_SNAPSHOT_SHA256:
                 raise ValueError('Historical source archive SHA mismatch')
             with ZipFile(BytesIO(raw)) as snapshot:
@@ -103,7 +110,7 @@ def validate_probe(files):
     probe = json.loads(files['probe229.json'])
     if not probe['complete'] or not probe['checks_passed']:
         raise ValueError('Time probe did not qualify')
-    verify(probe['source_sha256'])
+    verify(probe['source_sha256'], historical=True)
     arrays, comparisons = {}, {}
     times = [0, 72000, 144000, 216000]
     index = 0
@@ -142,7 +149,7 @@ def validate_data(files, seed, prior_times):
             or [b['name'] for b in reference['bodies']] != list(NAMES)
             or [b['id'] for b in reference['bodies']] != list(RESOLVED_IDS)):
         raise ValueError('Reference model/time/lineage/body mismatch')
-    verify(reference['source_sha256'])
+    verify(reference['source_sha256'], historical=True)
     old = json.loads((ROOT/'docs/qualification-grid-reference.json').read_bytes())
     _, a, b = shared_epochs(times, prior_times)
     matrices = []
