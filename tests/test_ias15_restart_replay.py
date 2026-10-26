@@ -7,12 +7,12 @@ import pytest
 
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_restart import RECEIPT, replay
-
+from scripts.release_history import UI_ARCHIVE
 
 @pytest.fixture
 def portable(tmp_path):
     report = json.loads((ROOT/RECEIPT).read_text())
-    names = {RECEIPT, report['sample_archive'], *report['source_sha256'], *report['input_sha256']}
+    names = {UI_ARCHIVE, RECEIPT, report['sample_archive'], *report['source_sha256'], *report['input_sha256']}
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)

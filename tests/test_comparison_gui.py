@@ -30,8 +30,8 @@ def _check_comparison_window_and_export(tmp_path):
     app = Laboratory(root)
     created = []
     from solar_simulator.comparison_view import ComparisonViewer
-    def open_view(*args):
-        view = ComparisonViewer(*args)
+    def open_view(*args,**kwargs):
+        view = ComparisonViewer(*args,**kwargs)
         view.window.withdraw()
         created.append(view)
         return view
@@ -44,7 +44,9 @@ def _check_comparison_window_and_export(tmp_path):
              patch('solar_simulator.comparison_view.ComparisonViewer', side_effect=open_view), \
              patch('solar_simulator.trajectory.advance_towards', side_effect=forbidden), \
              patch('solar_simulator.experiment.advance', side_effect=forbidden):
-            app._open_comparison()
+            loader=app._open_comparison()
+            loader.future.result(timeout=10)
+            loader._poll()
             assert len(created) == 1
             viewer = created[0]
             viewer.canvas.draw()
@@ -95,9 +97,12 @@ def _check_invalid_pair_and_cancel_leave_no_window(tmp_path):
     app = Laboratory(root)
     try:
         with patch('solar_simulator.app.filedialog.askdirectory', side_effect=[str(tmp_path/'parent'), str(tmp_path/'parent')]), \
-             patch('solar_simulator.app.messagebox.askyesnocancel', return_value=False):
-            with pytest.raises(ValueError, match='bundle'):
-                app._open_comparison()
+             patch('solar_simulator.app.messagebox.askyesnocancel', return_value=False), \
+             patch('solar_simulator.trajectory_loader.messagebox.showerror') as error:
+            loader=app._open_comparison()
+            with pytest.raises(ValueError,match='bundle'):loader.future.result(timeout=10)
+            loader._poll()
+            assert error.call_count==1 and 'bundle' in error.call_args.args[1]
         assert not any(isinstance(w, tk.Toplevel) for w in root.winfo_children())
         with patch('solar_simulator.app.filedialog.askdirectory', side_effect=[str(tmp_path/'parent'), str(tmp_path/'child')]), \
              patch('solar_simulator.app.messagebox.askyesnocancel', return_value=None):

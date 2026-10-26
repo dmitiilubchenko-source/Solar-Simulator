@@ -14,6 +14,7 @@ from scripts.ias15_full_state import parse, numeric_fields, sha, PREFIX, BUFFERS
 from scripts.ias15_restart import restore, bits
 from scripts.kepler_transport import ROOT
 from solar_simulator.simulation import G
+from scripts.release_history import ui_historical_sha
 
 REPORT = 'docs/ias15-full-suite-validation.json'
 ARRAYS = 'docs/ias15-full-suite-samples.npz'
@@ -80,7 +81,7 @@ def replay(root=ROOT, report_path=REPORT, arrays_path=ARRAYS):
     report = json.loads((root/report_path).read_bytes())
     aggregate = validate_report(report)
     for name, digest in (report['source_sha256'] | report['input_sha256']).items():
-        if sha((root/name).read_bytes()) != digest:
+        if ui_historical_sha(root,name,digest) != digest:
             raise ValueError('Changed full-suite source/input: '+name)
     if sha((root/arrays_path).read_bytes()) != report['array_archive_sha256']:
         raise ValueError('Full-suite arrays SHA mismatch')

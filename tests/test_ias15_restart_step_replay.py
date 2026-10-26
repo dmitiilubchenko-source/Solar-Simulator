@@ -7,11 +7,11 @@ import pytest
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_restart import RECEIPT as BASELINE
 from scripts.replay_ias15_restart_step import RECEIPT, replay
-
+from scripts.release_history import UI_ARCHIVE
 
 @pytest.fixture
 def portable(tmp_path):
-    names = set()
+    names = {UI_ARCHIVE}
     for name in (BASELINE, RECEIPT):
         report = json.loads((ROOT/name).read_text())
         names.update((name, report['sample_archive'], *report['source_sha256'], *report['input_sha256']))

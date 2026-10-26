@@ -6,7 +6,7 @@ import pytest
 
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_native_newton_year import RECEIPT, replay
-from scripts.release_history import ARCHIVE, MANIFEST
+from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE
 
 @pytest.fixture
 def portable(tmp_path):
@@ -16,7 +16,7 @@ def portable(tmp_path):
     # Cache qualification also reports all historical bindings, including protocol171.
     history = json.loads((ROOT/'docs/newton-year-validation.json').read_text(encoding='utf-8'))
     names.update(history['year']['source_sha256'])
-    names.update((ARCHIVE, MANIFEST))
+    names.update((ARCHIVE, MANIFEST, UI_ARCHIVE))
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)

@@ -1,9 +1,9 @@
-# Solar Simulator 0.3.1
+# Solar Simulator 0.3.2
 
-Принятый выпуск — v0.3.1 в main; текущая разработка идёт в dev.
-23 октября 2026 исходники/native и настоящая portable0.3.1 прошли приёмку.
-[Состав 0.3.1](docs/releases/v0.3.1.md) и
-[фактическая приёмка исходников и portable](docs/release-031-validation.md).
+Принятый выпуск — v0.3.2 в main; текущая разработка идёт в dev.
+25 октября 2026 опубликован проверенный maintenance-выпуск.
+[Состав 0.3.2](docs/releases/v0.3.2.md) и
+[фактическая приёмка исходников и portable](docs/release-032-validation.md).
 Исправлены сохранность при смене опыта, диагностика среды и загрузка
 траекторий; [результаты и ограничения](docs/review-followup-validation.md).
 [CI ветки dev](https://github.com/dmitiilubchenko-source/Solar-Simulator/actions?query=branch%3Adev).
@@ -16,8 +16,8 @@
 [Документация: пользователю, разработчику, проверки, архив](docs/README.md).
 [Короткая карта проекта](docs/project-map.md).
 
-В dev подготовлен [проверенный кандидат 0.3.2](docs/release-032-validation.md);
-принятая в main версия пока 0.3.1. Состав и SHA конкретного ZIP указаны в отчёте.
+В dev развивается [фоновое открытие сравнения](docs/trajectory-comparison.md).
+Это изменение после 0.3.2; оно ещё не включено в принятую portable.
 
 [Приёмка песочницы: код, команды, входные данные и ограничения](scripts/sandbox_checks/README.md).
 

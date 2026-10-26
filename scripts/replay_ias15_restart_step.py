@@ -13,7 +13,7 @@ from scripts.ias15_reference import EPSILONS
 from scripts.ias15_restart import bits, restore
 from scripts.kepler_transport import sha, public_path
 from scripts.replay_ias15_restart import replay as replay_baseline, RECEIPT as BASELINE
-
+from scripts.release_history import ui_historical_sha
 RECEIPT = 'docs/ias15-restart-step-validation.json'
 
 
@@ -27,7 +27,7 @@ def replay(root=ROOT):
             or report['baseline_integrity'] != baseline_summary):
         raise ValueError('Require complete step research receipt and faithful baseline')
     for name, expected in {**report['source_sha256'], **report['input_sha256']}.items():
-        if sha(public_path(root, name)) != expected:
+        if ui_historical_sha(root,name,expected) != expected:
             raise ValueError('Changed step source/input: '+name)
     archive = public_path(root, report['sample_archive'])
     if sha(archive) != report['npz_sha256']:

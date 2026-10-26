@@ -12,7 +12,7 @@ from scripts.assess_kepler_phase import ROOT, differences, maximum
 from scripts.ias15_reference import EPSILONS, packet_end
 from scripts.ias15_restart import MODES, bits, restore
 from scripts.kepler_transport import public_path, sha
-
+from scripts.release_history import ui_historical_sha
 RECEIPT = 'docs/ias15-restart-validation.json'
 
 
@@ -27,7 +27,7 @@ def replay(root=ROOT):
             or report.get('production_eligible') is not False):
         raise ValueError('Require complete research-only restart receipt')
     for name, expected in {**report['source_sha256'], **report['input_sha256']}.items():
-        if sha(public_path(root, name)) != expected:
+        if ui_historical_sha(root,name,expected) != expected:
             raise ValueError('Changed restart source/input: '+name)
     archive = public_path(root, report['sample_archive'])
     if sha(archive) != report['npz_sha256']:

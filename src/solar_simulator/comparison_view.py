@@ -5,12 +5,8 @@ from tkinter import filedialog, messagebox, ttk
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
 
-from .comparison import Comparison
-from .trajectory import Trajectory
-
-
 class ComparisonViewer:
-    def __init__(self, window, comparison):
+    def __init__(self, window, comparison, *, samples=None):
         self.window = window
         self.comparison = comparison
         self.index = 0
@@ -53,7 +49,10 @@ class ComparisonViewer:
         NavigationToolbar2Tk(self.canvas, window)
         self.closed = False
         window.protocol('WM_DELETE_WINDOW', self.close)
-        self._reload()
+        if samples is None:self._reload()
+        else:
+            self.samples=samples
+            self._draw()
 
     def _reload(self):
         reference = self.references[self.reference.current()]
@@ -136,7 +135,7 @@ class ComparisonViewer:
 
 
 def launch(parent_directory, child_directory, *, event_side):
-    comparison = Comparison(Trajectory(parent_directory), Trajectory(child_directory), event_side=event_side)
+    from .comparison_loader import ComparisonLoader
     root = tk.Tk()
-    ComparisonViewer(root, comparison)
+    ComparisonLoader(root,parent_directory,child_directory,event_side=event_side)
     root.mainloop()

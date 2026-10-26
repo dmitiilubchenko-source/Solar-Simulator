@@ -101,7 +101,7 @@ Python CI теперь также запускает общую проверку
 выпуска0.3.1 ещё нужны версия-кандидат, новый portableZIP и его приёмка.
 Публикация вmain/новые теги/релизы не выполнялись.
 
-[safe transition](../src/solar_simulator/app.py:806).
+[safe transition](../src/solar_simulator/app.py:803).
 
 [background reader](../src/solar_simulator/trajectory_loader.py:17).
 

@@ -15,6 +15,7 @@
 | [ephemerides.py](ephemerides.py), [perturbers.py](perturbers.py) | Начальные астрономические данные и добавления к ним |
 | [commands.py](commands.py), [cli.py](cli.py) | Команды песочницы и прежние команды диагностики |
 | [app.py](app.py), [orbit_view.py](orbit_view.py) | Окно, управление рабочим потоком и представление результатов |
+| [trajectory_loader.py](trajectory_loader.py), [comparison_loader.py](comparison_loader.py) | Фоновая проверка записей, подготовка просмотра/сравнения и отмена; рабочий поток не владеет Tk-объектами |
 
 Численные величины runtime — SI; преобразования ввода и координат должны
 быть явными. Физические функции работают без окна. Вид/проекция не должны

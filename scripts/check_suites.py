@@ -13,7 +13,7 @@ SUITES={
         'tests/test_environment_check.py','tests/test_gui_process_encoding.py','tests/test_project_links.py',
         'tests/test_documentation_navigation.py',
         'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
-        'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_ias15_archive_source.py',
+        'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_release_ui_history.py','tests/test_ias15_archive_source.py',
         'tests/test_ias15_full_state.py',
         'tests/test_ias15_full_suite.py',
         '--deselect=tests/test_ias15_full_suite.py::test_public_full_suite_replays_all_cases_and_preserves_failures',
@@ -26,6 +26,7 @@ SUITES={
         'tests/test_controlled_stop.py','tests/test_recovery_journey.py',
         'tests/test_sandbox_acceptance.py',
         'tests/test_trajectory.py','tests/test_trajectory_gui.py','tests/test_trajectory_loading.py',
+        'tests/test_comparison_loading.py','tests/test_comparison_gui.py','tests/test_comparison.py',
         'tests/test_plot_artists.py','tests/test_body_units_gui.py','tests/test_required_native.py'],
     'adaptive':[
         'tests/test_rust_adaptive_audit.py','tests/test_rust_adaptive_diagnosis.py',

@@ -169,7 +169,7 @@ Noether/sourcevisibility/PN×J2/приливы/Kuiper ограничения о�
 - [app.py:_update_status](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:477)
 - [app.py:_stop_and_save](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:684)
 - [app.py:_record_trajectory](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:738)
-- [app.py:_open_trajectory](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:771)
+- [app.py:_open_trajectory](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:768)
 - [commands.py:main](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/commands.py:13)
 - [test_trajectory.py:test_recorded_endpoints_match_independent_free_motion](C:/Users/Admin/Desktop/Solar-simulator/tests/test_trajectory.py:19)
 - [test_trajectory.py:test_packets_equal_direct_continuation_with_full_state](C:/Users/Admin/Desktop/Solar-simulator/tests/test_trajectory.py:33)

@@ -12,6 +12,7 @@ from scripts.assess_ias15_restart import load_cases
 from scripts.ias15_full_state import parse, numeric_fields, sha, PREFIX, BUFFERS, DP7, SCALARS, FullSnapshot
 from scripts.ias15_restart import bits, restore
 from scripts.kepler_transport import ROOT
+from scripts.release_history import ui_historical_sha
 
 REPORT = 'docs/ias15-full-state-validation.json'
 ARRAYS = 'docs/ias15-full-state-samples.npz'
@@ -25,7 +26,7 @@ def replay(root=ROOT):
             or report['case'] != 'holdout_circular'):
         raise ValueError('Not a completed basic circular pilot')
     for name, digest in (report['source_sha256'] | report['input_sha256']).items():
-        if sha((root/name).read_bytes()) != digest:
+        if ui_historical_sha(root,name,digest) != digest:
             raise ValueError('Changed full-state source/input: '+name)
     if sha((root/ARRAYS).read_bytes()) != report['array_archive_sha256']:
         raise ValueError('Full-state array archive SHA mismatch')

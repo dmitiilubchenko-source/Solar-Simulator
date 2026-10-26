@@ -11,6 +11,7 @@ from scripts.assess_ias15_process import measured
 from scripts.ias15_process import (ROOT, POINTS, verify_files, context, validate_context, validate_child,
                                   signature, sha, validate_identity)
 from scripts.ias15_restart import bits
+from scripts.release_history import ui_historical_sha
 
 REPORT = 'docs/ias15-process-validation.json'
 ARRAYS = 'docs/ias15-process-samples.npz'
@@ -26,7 +27,8 @@ def replay(root=ROOT, report_path=REPORT, arrays_path=ARRAYS):
             or report['production_eligible'] or report['protocol'] != 'docs/ias15-process-protocol.md'
             or list(report['results']) != expected_jobs):
         raise ValueError('Incomplete/unqualified process matrix')
-    verify_files(report['source_sha256'] | report['input_sha256'])
+    for name,expected in (report['source_sha256'] | report['input_sha256']).items():
+        if ui_historical_sha(root,name,expected)!=expected:raise ValueError('File binding SHA mismatch: '+name)
     if sha((root/arrays_path).read_bytes()) != report['array_archive_sha256']:
         raise ValueError('Process array SHA mismatch')
     negatives = report['negatives']

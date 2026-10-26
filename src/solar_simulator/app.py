@@ -762,11 +762,8 @@ class Laboratory:
             'Сравнивать после события?\nДа — after (после). Нет — before (до).\n'
             'Недостающие эпохи не интерполируются.',parent=self.root)
         if after is None:return
-        from .comparison import Comparison
-        from .comparison_view import ComparisonViewer
-        from .trajectory import Trajectory
-        comparison=Comparison(Trajectory(parent),Trajectory(child),event_side='after' if after else 'before')
-        ComparisonViewer(tk.Toplevel(self.root),comparison)
+        from .comparison_loader import ComparisonLoader
+        return ComparisonLoader(tk.Toplevel(self.root),parent,child,event_side='after' if after else 'before')
 
     def _open_trajectory(self):
         from .trajectory_loader import TrajectoryLoader

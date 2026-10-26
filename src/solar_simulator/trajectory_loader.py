@@ -29,10 +29,16 @@ def prepare_trajectory(directory,stop_requested,progress):
 
 class TrajectoryLoader:
     def __init__(self,window,directory):
+        self._start(window,partial(prepare_trajectory,directory),
+                    'Solar — открытие траектории','Траектория не открыта')
+
+    def _start(self,window,prepare,title,error_title):
+        """Shared lifecycle for the two read-only recording loaders."""
         self.window=window;self.viewer=None;self.closed=False;self._timer=None
+        self.error_title=error_title
         self.stop=Event();self.messages=Queue(maxsize=1)
         self.pool=ThreadPoolExecutor(max_workers=1,thread_name_prefix='solar-trajectory-reader')
-        window.title('Solar — открытие траектории')
+        window.title(title)
         self.status=tk.StringVar(master=window,value='Проверка записи…')
         ttk.Label(window,textvariable=self.status,wraplength=540).pack(padx=16,pady=12)
         self.progress=ttk.Progressbar(window,length=440,maximum=1)
@@ -41,7 +47,7 @@ class TrajectoryLoader:
         window.protocol('WM_DELETE_WINDOW',self.close)
         window.bind('<Destroy>',self._destroyed,add='+')
         # The worker owns only an Event/Queue, never a bound Tk controller.
-        self.future=self.pool.submit(prepare_trajectory,directory,self.stop.is_set,partial(_report,self.messages))
+        self.future=self.pool.submit(prepare,self.stop.is_set,partial(_report,self.messages))
         self._timer=window.after(40,self._poll)
 
     def _poll(self):
@@ -54,15 +60,22 @@ class TrajectoryLoader:
         except Empty:pass
         if not self.future.done():
             self._timer=self.window.after(40,self._poll);return
-        try:track,frames=self.future.result()
+        try:result=self.future.result()
         except CancelledError:self.close();return
         except Exception as error:
             detail=str(error);error.__traceback__=None
-            try:messagebox.showerror('Траектория не открыта',detail,parent=self.window)
+            try:messagebox.showerror(self.error_title,detail,parent=self.window)
             finally:self.close()
             return
         self._release()
         for widget in self.window.winfo_children():widget.destroy()
+        try:self._show(result)
+        except Exception as error:
+            try:messagebox.showerror(self.error_title,str(error),parent=self.window)
+            finally:self.window.destroy()
+
+    def _show(self,result):
+        track,frames=result
         from .trajectory_view import TrajectoryViewer
         self.viewer=TrajectoryViewer(self.window,track,frames=frames)
 

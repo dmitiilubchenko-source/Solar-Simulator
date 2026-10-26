@@ -82,7 +82,7 @@ settings и продолжение сравниваются с тем же ис�
 - [recovery.py:recovery_directory](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/recovery.py:22)
 - [recovery.py:list_recoveries](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/recovery.py:27)
 - [app.py:_restore_recovery](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:731)
-- [app.py:_show_recoveries](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:780)
+- [app.py:_show_recoveries](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:777)
 - [build_portable.py:build](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:116)
 - [build_portable.py:prepare_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:296)
 - [build_portable.py:copy_public_rotation_documents](C:/Users/Admin/Desktop/Solar-simulator/scripts/build_portable.py:356)

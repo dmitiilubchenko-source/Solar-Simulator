@@ -8,7 +8,7 @@ from scripts.replay_ias15_native_newton import RECEIPT as COUPLING
 from scripts.replay_ias15_native_session import RECEIPT, replay
 from scripts.replay_ias15_restart import RECEIPT as RESTART
 from scripts.replay_ias15_session import FROZEN_SESSION, RECEIPT as OWNED
-from scripts.release_history import ARCHIVE, MANIFEST
+from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE
 
 @pytest.fixture
 def portable(tmp_path):
@@ -17,7 +17,7 @@ def portable(tmp_path):
         report = json.loads((ROOT/name).read_text(encoding='utf-8'))
         names.update((name, report['sample_archive'], *report['source_sha256'], *report['input_sha256'],
                       *report.get('cargo_lf_sha256', {})))
-    names.update((ARCHIVE, MANIFEST))
+    names.update((ARCHIVE, MANIFEST, UI_ARCHIVE))
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)

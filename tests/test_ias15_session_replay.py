@@ -7,11 +7,11 @@ import pytest
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_restart import RECEIPT as BASELINE
 from scripts.replay_ias15_session import FROZEN_SESSION, RECEIPT, replay
-
+from scripts.release_history import UI_ARCHIVE
 
 @pytest.fixture
 def portable(tmp_path):
-    names = {FROZEN_SESSION}
+    names = {FROZEN_SESSION, UI_ARCHIVE}
     for name in (BASELINE, RECEIPT):
         row = json.loads((ROOT/name).read_text())
         names.update((name, row['sample_archive'], *row['source_sha256'], *row['input_sha256']))

@@ -114,7 +114,7 @@ Settings рабочего солнечного профиля и научные 
 - [branch_io.save_experiment](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/branch_io.py:24)
 - [sandbox.to_branch_document](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/sandbox.py:84)
 - [sandbox.from_branch_document](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/sandbox.py:111)
-- [app.launch](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:809)
+- [app.launch](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:806)
 - [app.__init__](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:22)
 - [app._save](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:318)
 - [app._restore_parent](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:599)

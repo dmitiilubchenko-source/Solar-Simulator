@@ -12,10 +12,17 @@ from .sandbox import ExperimentBranch, _canonical, _digest
 from .storage import _write_document, to_document
 
 
-def _selected(states, times, side):
+def _check_cancel(stop_requested):
+    if stop_requested is not None and stop_requested():
+        from concurrent.futures import CancelledError
+        raise CancelledError()
+
+
+def _selected(states, times, side, stop_requested=None):
     """One saved side per epoch; an unavailable pre-event state stays missing."""
     selected = {}
     for index, state in enumerate(states):
+        _check_cancel(stop_requested)
         time = times[index]
         post_event = any(event.time == time for event in state.events)
         if side == 'before':
@@ -37,16 +44,27 @@ def _vector(body, attribute, reference):
 
 
 class Comparison:
-    def __init__(self, parent, child, *, event_side):
+    def __init__(self, parent, child, *, event_side, stop_requested=None, progress=None):
         if event_side not in ('before', 'after'):
             raise ValueError('Выберите сторону события: before или after')
-        parent_states = [parent.frame(i)[0] for i in range(len(parent.times))]
-        child_states = [child.frame(i)[0] for i in range(len(child.times))]
+        def states(track,phase):
+            result=[]
+            for i in range(len(track.times)):
+                _check_cancel(stop_requested)
+                result.append(track.frame(i)[0])
+                if progress is not None:progress(phase,i+1,len(track.times))
+            _check_cancel(stop_requested)
+            return result
+        parent_states = states(parent,'Состояния родителя')
+        child_states = states(child,'Состояния ветки')
         _, snapshot = child.frame(0)
         if snapshot is None:
             raise ValueError('Дочерняя траектория должна содержать снимок родителя (bundle)')
-        anchors = [i for i, state in enumerate(parent_states)
-                   if _canonical(to_document(state)) == snapshot]
+        anchors = []
+        for i,state in enumerate(parent_states):
+            _check_cancel(stop_requested)
+            if _canonical(to_document(state)) == snapshot:anchors.append(i)
+            if progress is not None:progress('Поиск родителя',i+1,len(parent_states))
         if not anchors:
             raise ValueError('Снимок родителя ветки не найден в родительской траектории')
         self.parent = parent
@@ -57,17 +75,22 @@ class Comparison:
         self.parent_sha256 = _digest(snapshot)
         anchor = Fraction(self.anchor_time)
         selected_parent = {time-anchor: index for time, index in
-                           _selected(parent_states, parent.times, event_side).items()}
-        selected_child = _selected(child_states, child.times, event_side)
+                           _selected(parent_states, parent.times, event_side,stop_requested).items()}
+        selected_child = _selected(child_states, child.times, event_side,stop_requested)
         shared = sorted(selected_parent.keys() & selected_child.keys())
         if not shared:
             raise ValueError('Нет совпадающих сохранённых эпох для выбранной стороны события')
         self.pairs = tuple((selected_parent[time], selected_child[time]) for time in shared)
         self.times = tuple(child.times[j] for _, j in self.pairs)
         self.origin = parent_states[self.anchor_index].origin
-        self.body_names = tuple(sorted({name for i, j in self.pairs for name in
-                                       ({b.name for b in parent_states[i].bodies} &
-                                        {b.name for b in child_states[j].bodies})}))
+        names=set()
+        for index,(i,j) in enumerate(self.pairs):
+            _check_cancel(stop_requested)
+            names.update({b.name for b in parent_states[i].bodies} &
+                         {b.name for b in child_states[j].bodies})
+            if progress is not None:progress('Общие эпохи',index+1,len(self.pairs))
+        self.body_names=tuple(sorted(names))
+        _check_cancel(stop_requested)
 
     def sample(self, index, *, reference=None):
         """Signed 3D differences child-parent, after translating EACH system."""

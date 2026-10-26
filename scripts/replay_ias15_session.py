@@ -12,7 +12,7 @@ from scripts.ias15_reference import EPSILONS
 from scripts.ias15_restart import bits, restore
 from scripts.kepler_transport import public_path, sha
 from scripts.replay_ias15_restart import RECEIPT as BASELINE, replay as replay_baseline
-
+from scripts.release_history import UI_FILES,ui_historical_sha
 RECEIPT = 'docs/ias15-session-validation.json'
 FROZEN_SESSION = 'scripts/validation/ias15_session_356.py'
 FROZEN_SHA = '1058c0f065edc4dfef26df9f153c4c2dbb071342f7cdd122e9e1c76d15fe17c2'
@@ -40,7 +40,9 @@ def replay(root=ROOT):
             or report['baseline_integrity'] != baseline_summary):
         raise ValueError('Require complete owned-session research receipt and faithful baseline')
     for name, expected in {**report['source_sha256'], **report['input_sha256']}.items():
-        source_path(root, name, expected)
+        if name in UI_FILES:
+            if ui_historical_sha(root,name,expected)!=expected:raise ValueError('Changed session source/input: '+name)
+        else:source_path(root, name, expected)
     archive = public_path(root, report['sample_archive'])
     if sha(archive) != report['npz_sha256']:
         raise ValueError('Session archive SHA mismatch')

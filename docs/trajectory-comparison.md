@@ -161,15 +161,15 @@ JD2461321.5TDB/SSB/EclipticJ2000/DE441, GM гигантов системные �
 
 ## Код и проверяемые места
 
-- [comparison.py:_selected](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:15)
-- [comparison.py:Comparison](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:39)
-- [comparison.py:sample](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:72)
-- [comparison.py:report](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:109)
-- [comparison.py:save_report](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:129)
-- [comparison_view.py:ComparisonViewer](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:12)
-- [comparison_view.py:_reload](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:58)
-- [comparison_view.py:_draw](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:71)
-- [comparison_view.py:launch](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:138)
+- [comparison.py:_selected](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:21)
+- [comparison.py:Comparison](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:46)
+- [comparison.py:sample](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:95)
+- [comparison.py:report](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:132)
+- [comparison.py:save_report](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison.py:152)
+- [comparison_view.py:ComparisonViewer](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:8)
+- [comparison_view.py:_reload](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:57)
+- [comparison_view.py:_draw](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:70)
+- [comparison_view.py:launch](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/comparison_view.py:137)
 - [app.py:_open_comparison](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/app.py:756)
 - [commands.py:main](C:/Users/Admin/Desktop/Solar-simulator/src/solar_simulator/commands.py:13)
 - [test_comparison.py:test_exact_nonzero_anchor_and_independent_ballistic_vectors](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison.py:29)
@@ -181,8 +181,8 @@ JD2461321.5TDB/SSB/EclipticJ2000/DE441, GM гигантов системные �
 - [test_comparison.py:test_reference_disappearing_after_merge_leaves_a_gap](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison.py:194)
 - [test_comparison.py:test_comparison_never_calls_solver_or_modifies_recordings](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison.py:142)
 - [test_comparison_gui.py:_check_comparison_window_and_export](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison_gui.py:20)
-- [test_comparison_gui.py:_check_invalid_pair_and_cancel_leave_no_window](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison_gui.py:88)
-- [test_comparison_gui.py:test_real_comparison_journey](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison_gui.py:111)
+- [test_comparison_gui.py:_check_invalid_pair_and_cancel_leave_no_window](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison_gui.py:90)
+- [test_comparison_gui.py:test_real_comparison_journey](C:/Users/Admin/Desktop/Solar-simulator/tests/test_comparison_gui.py:116)
 
 
 ## Итог полной приёмки317
@@ -204,3 +204,84 @@ SHA исходников/данных/установленного PyO3 до/п�
 Годовой JPL повторно не рассчитывался, новых заявлений о physical accuracy нет.
 Это исходный проект; проверенная portable315/LATEST/ZIP/SHA прежние.
 GitHub/коммиты/push не выполнялись. Личные документы и рабочие отчёты локальны.
+
+
+## Фоновое открытие в dev после 0.3.2 (изменение 372)
+
+Чтение обеих записей, проверка родителя, сопоставление точных эпох и подготовка
+начальных разностей выполняются одним рабочим потоком. Tk показывает прогресс
+и кнопку отмены. Закрытие окна загрузки или главного окна отменяет подготовку;
+после отмены окно сравнения не появляется. Ошибка входа показывается в окне,
+загрузчик закрывается, текущий опыт лаборатории и исходные записи сохраняются.
+CLI view-comparison использует тот же загрузчик.
+
+[prepare_comparison](../src/solar_simulator/comparison_loader.py:10) готовит
+результат без Tk; [ComparisonLoader](../src/solar_simulator/comparison_loader.py:26)
+использует существующий жизненный цикл загрузки траекторий. Общий контроллер
+не создаёт отдельного потока для каждого кадра; worker получает только пути,
+Event и ограниченную Queue прогресса. Окно и графики создаются в основном потоке.
+Первые samples передаются готовыми, без повторной подготовки в конструкторе GUI.
+
+Отмена кооперативная: между файлами/кадрами и этапами сопоставления/разностей.
+Она не прерывает уже выполняющийся системный read или разбор отдельного JSON.
+Сортировка эпох и отрисовка Matplotlib также не стали прерываемыми. Все кадры
+по-прежнему в памяти; смена опорного тела и экспорт после открытия пока синхронны.
+Индекс записи не изменён. Новая физическая точность или ускорение solver не заявляются.
+
+[Проверки загрузки](../tests/test_comparison_loading.py) проверяют все семь фаз
+отмены, точное совпадение отчётов с архивной реализацией032, Tk heartbeat,
+закрытие родительского окна, отсутствие позднего viewer и общую точку входа CLI.
+Существующие аналитические и событийные проверки сравнения сохраняются.
+Тесты чтения используют одну неизменяемую пару записей вместо повторной
+дорогой подготовки окружения для каждого варианта отмены.
+
+Перед изменением сохранены точные прежние исходники в публичном архиве
+scripts/validation/release032-ui-sources.zip; SHA256
+1e78f034414bf6ddeacd7b19c2151eedb60a0816fff407a228e3a343310aa10f.
+Старые IAS15 offline replayers дополнительно проверяют эти точные байты,
+поскольку прежние отчёты закрепляли весь runtime, включая GUI. Старые scientific
+JSON/NPZ/SHA не изменены. Live process verify_files остаётся строгим: исторический
+архив не разрешает новый запуск C с изменёнными исходниками. Неизвестные источники,
+изменённый архив и численные входы этим исключением не покрываются.
+
+
+### Проверки и стоимость изменения 372
+
+26 октября 2026. Полный check_project --require-native: **2569 Python PASS**
+за 510.33 с, **19 Rust**, обе проверки форматирования, **0 пропусков**.
+Полное время команды — 513.013 с. Исходники, данные и native-модуль за время
+проверки не менялись; контрольные суммы до и после совпали. Отдельно прошли
+62 проверки затронутых исторических стендов и 256 быстрых CI-тестов.
+Четыре намеренно deselected относятся только к быстрому CI-поднабору.
+Новой принятой portable с этим изменением пока нет; ZIP 0.3.2 сохранён.
+
+На контрольной паре из 126 кадров добавлена задержка чтения по 0.15 с для
+каждой записи. Обработчик открытия до изменения занимал 0.900602 с, после —
+0.005906 с. До готовности результата Tk обработал 0 и 99 событий таймера
+соответственно. Все 126 начальных samples совпали с прежней реализацией.
+Полная подготовка заняла 0.900595 и 1.152243 с: улучшена отзывчивость окна,
+ускорение всей подготовки не установлено. Это разовый контроль с искусственной
+задержкой, выполненный параллельно полному набору. Заглушка viewer исключает
+отрисовку из замера; реальные графики проверены отдельными GUI-тестами.
+Предельный размер записи и RSS этим опытом не измерялись.
+
+Первые отказы сохранены вместе с исправлениями. Быстрый CI сначала дал
+1 FAIL / 237 PASS: старый IAS15 replay требовал прежний SHA файла окна.
+Первый целевой набор дал 1 FAIL / 34 PASS из-за импорта тестового helper
+в отдельном GUI-процессе; исправлен импорт с префиксом tests. После этого
+26 целевых проверок прошли за 21.44 с. Общая неизменяемая пара записей
+переиспользуется в тестах чтения, сохраняя все варианты отмены.
+
+Первый полный прогон дал 9 FAIL / 2556 PASS за 1096.14 с. Ещё три старых
+restart/step/session replayers напрямую проверяли файл окна; их зависимые
+native-проверки отказали по той же причине. Исправлена историческая проверка
+точных архивных источников, шесть переносимых test fixtures включают архив.
+Уточняющий прогон дал 60 PASS / 1 FAIL: один прежний fixture сам оказался
+закреплён в научном отчёте. Его точные байты, сохранённые до правки, сверены
+с тегом 0.3.2 и добавлены в архив. Повторные 62 проверки прошли за 74.56 с,
+после чего выполнен указанный выше успешный полный прогон.
+
+Первый служебный timing-probe оставил свой Tk after callback при закрытии.
+В финальной пробе таймеры явно отменены. Ошибка относилась к пробе; исходники
+приложения для неё не менялись. Прежние численные критерии и сохранённые
+научные FAIL остаются в истории.
