@@ -7,12 +7,13 @@ import pytest
 
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_restart import RECEIPT, replay
-from scripts.release_history import UI_ARCHIVE
+from scripts.release_history import UI_ARCHIVE, HISTORICAL_ARCHIVES
 
 @pytest.fixture
 def portable(tmp_path):
     report = json.loads((ROOT/RECEIPT).read_text())
     names = {UI_ARCHIVE, RECEIPT, report['sample_archive'], *report['source_sha256'], *report['input_sha256']}
+    names.update(HISTORICAL_ARCHIVES)
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -40,6 +41,8 @@ def test_all_metrics_and_6786_checkpoints_replay_without_raw_library_or_network(
 @pytest.mark.parametrize('damage', ['source', 'archive', 'partial', 'aggregate', 'metric'])
 def test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass(portable, damage):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     if damage == 'source':
         victim = root/'scripts/ias15_restart.py'
         victim.write_bytes(victim.read_bytes()+b'\n')
@@ -54,13 +57,16 @@ def test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass(po
         case = next(iter(report['results'].values()))
         next(iter(case['modes'].values()))['metrics']['position_metres'] = 123.
     write_report(root, report)
-    with pytest.raises(ValueError):
+    expected_error = {'source': 'Changed restart source/input', 'archive': 'Restart archive SHA mismatch', 'partial': 'complete research-only restart', 'aggregate': 'Aggregate scientific gate', 'metric': 'Published actual metrics'}[damage]
+    with pytest.raises(ValueError, match=expected_error):
         replay(root)
 
 
 @pytest.mark.parametrize('field', ['packet_states', 'checkpoint_json'])
 def test_inner_physical_corruption_is_detected_even_after_outer_archive_rehash(portable, field):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     path = root/report['sample_archive']
     with np.load(path, allow_pickle=False) as saved:
         data = {key:saved[key].copy() for key in saved.files}

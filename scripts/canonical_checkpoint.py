@@ -24,7 +24,9 @@ KIND = 'solar-simulator-research-canonical-checkpoint'
 MODEL = 'finite-adm-1pn-lo-so-newton-one-rigid-q2-v1'
 CORE_SOURCES = ('scripts/canonical_checkpoint.py', 'scripts/canonical_initial.py',
     'scripts/rigid_pn_model.py', 'scripts/nbody_pn_spin.py',
-    'src/solar_simulator/rotation.py', 'src/solar_simulator/nbody_rotation.py')
+    'src/solar_simulator/rotation.py', 'src/solar_simulator/nbody_rotation.py',
+    'src/solar_simulator/_numbers.py', 'src/solar_simulator/simulation.py',
+    'src/solar_simulator/vector3.py', 'src/solar_simulator/coordinates.py')
 RUNNING_ROOT = Path(__file__).resolve().parents[1]
 LOADED_CORE_SHA = {p: hashlib.sha256((RUNNING_ROOT/p).read_bytes()).hexdigest() for p in CORE_SOURCES}
 

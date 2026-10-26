@@ -7,7 +7,7 @@ from zipfile import ZipFile
 
 import pytest
 
-from scripts.release_history import ARCHIVE, MANIFEST, historical_sha
+from scripts.release_history import ARCHIVE, MANIFEST, HISTORICAL_ARCHIVES, historical_sha
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 @pytest.fixture
 def history(tmp_path):
     manifest = json.loads((ROOT/MANIFEST).read_bytes())
-    for name in (ARCHIVE, MANIFEST, *manifest['files']):
+    for name in (ARCHIVE, MANIFEST, *HISTORICAL_ARCHIVES, *manifest['files']):
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT/name, target)

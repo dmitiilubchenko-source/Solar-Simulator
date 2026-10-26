@@ -99,6 +99,7 @@
       "docs/desktop-render-benchmark.json",
       "docs/desktop-render-benchmark.md",
       "docs/development/README.md",
+      "docs/development/historical-checkpoints.md",
       "docs/development/maintenance-032.md",
       "docs/development/numeric-validation.md",
       "docs/distance-performance-validation.json",
@@ -489,6 +490,7 @@
     "frozen_validation": [
       "scripts/validation/de441-header.441",
       "scripts/validation/eih_scalar.rs",
+      "scripts/validation/history-before374.zip",
       "scripts/validation/ias15_session_356.py",
       "scripts/validation/kuiper-ring-experiment-20261011.py.txt",
       "scripts/validation/kuiper_absolute_assessment.py",

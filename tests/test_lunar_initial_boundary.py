@@ -1,4 +1,5 @@
 """A pinned conditional input cannot silently become a physical PN migration."""
+from scripts.release_history import verify_checkpoint_history
 from dataclasses import replace
 import hashlib
 from pathlib import Path
@@ -24,7 +25,7 @@ INPUT_SHA = '02ee4efa985402898568d13e41050bfad6da5717e0148ab08a3f6a4e1af20623'
 def inputs():
     path = ROOT/'.tools/rotation63/initial.json'
     assert hashlib.sha256(path.read_bytes()).hexdigest()==INPUT_SHA
-    cp = load(path);verify_sources(cp,ROOT)
+    cp = load(path);verify_checkpoint_history(cp,ROOT)
     units = SIUnits(**{k:v for k,v in cp.metadata['units'].items() if k!='kind'})
     y = to_cartesian(cp.initial,cp.pair);v,w = kinematics(y,cp.parameters)
     return dict(positions=y[:30].reshape(10,3),velocities=v,parameters=cp.parameters,

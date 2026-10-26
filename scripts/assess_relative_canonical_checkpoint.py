@@ -12,6 +12,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT));sys.path.insert(0,str(ROOT/'src'))
+from scripts.release_history import ui_historical_sha, verify_checkpoint_history
 from scripts.assess_canonical_solar import initial_checkpoint
 from scripts.assess_relative_canonical import differences
 from scripts.assess_rigid_pn import attitudes,convert_reference
@@ -33,7 +34,9 @@ def verified_parent(policy):
     for section in ['code_and_input_sha256','trajectory_archives']:
         for p,h in report[section].items():
             path = (ROOT/p).resolve()
-            if not path.is_relative_to(ROOT) or sha(p)!=h:raise ValueError('Changed parent source/array: '+p)
+            if (not path.is_relative_to(ROOT) or
+                    (ui_historical_sha(ROOT,p,h) if section=='code_and_input_sha256' else sha(p))!=h):
+                raise ValueError('Changed parent source/array: '+p)
     arrays = {}
     for name in ['production','tighter','reference-0','reference-1']:
         path = '.tools/rotation62/'+name+'.npz'
@@ -72,6 +75,34 @@ def initial_relative(policy, parent):
     for path,h in extra.items():
         if path not in recorded:meta['provenance']['sources'].append(dict(path=path,sha256=h))
     cp = replace(cp,metadata_json=canonical_text(meta));verify_sources(cp,ROOT)
+    return cp,units,names
+
+
+def historical_initial_relative(policy, parent):
+    """Read checkpoint63 unchanged; no rebinding or current-solver conversion."""
+    path = ROOT/'.tools/rotation63/initial.json'
+    if hashlib.sha256(path.read_bytes()).hexdigest() != '02ee4efa985402898568d13e41050bfad6da5717e0148ab08a3f6a4e1af20623':
+        raise ValueError('Changed immutable historical relative initial')
+    cp = load(path);verify_checkpoint_history(cp,ROOT)
+    old_policy = json.loads((ROOT/parent['policy']['input_policy']).read_text(encoding='utf-8'))
+    old,units,names = initial_checkpoint(old_policy)
+    from scripts.relative_canonical import from_cartesian
+    if (policy['physical_lunar_mapping_certified'] is not False or policy['physical_accuracy_claimed'] is not False
+            or policy['duration_seconds']!=parent['policy']['duration_seconds'] or policy['samples']!=parent['policy']['samples']
+            or vars(units)!=parent['units_SI'] or cp.parameters!=old.parameters
+            or cp.body_names!=tuple(names) or (cp.pair.first,cp.pair.second)!=tuple(parent['policy']['pair'])
+            or not np.array_equal(np.array(old.initial).view(np.uint64),np.array(parent['initial_cartesian_state']).view(np.uint64))
+            or not np.array_equal(np.array(cp.initial).view(np.uint64),np.array(parent['initial_state']).view(np.uint64))
+            or not np.array_equal(from_cartesian(old.initial,cp.pair).view(np.uint64),np.array(cp.initial).view(np.uint64))):
+        raise ValueError('Incompatible historical initial/units/physical contract')
+    control = old.metadata['integration'];count = len(names);pair = cp.pair;p = parent['policy']
+    ma,md = pair.masses[pair.first],pair.masses[pair.second];atol = np.array(control['atol'])
+    atol[:3*count] = p['position_atol_m']/units.length_m
+    atol[3*count+3*pair.first:3*count+3*pair.first+3] = (ma+md)*p['momentum_atol_equivalent_velocity_m_s']/units.velocity_m_s
+    atol[3*count+3*pair.second:3*count+3*pair.second+3] = ma*md/(ma+md)*p['momentum_atol_equivalent_velocity_m_s']/units.velocity_m_s
+    control.update(rtol=p['production_rtol'],atol=atol.tolist(),max_step=p['max_step_seconds']/units.time_s)
+    if cp.metadata['integration']!=control:
+        raise ValueError('Changed historical relative solver controls')
     return cp,units,names
 
 

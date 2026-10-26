@@ -10,11 +10,11 @@ def policy():return json.loads((ROOT/'scripts/rotation-time-policy.json').read_t
 
 
 def test_lunar_input_is_source_bound_and_physical_mapping_unqualified():
-    p = policy();cp = bound_lunar_initial(p)
+    p = policy();cp = bound_lunar_initial(p,historical=True)
     assert cp.time==0 and cp.body_names[4]=='Moon'
     assert cp.metadata['provenance']['physical_mapping_certified'] is False
-    with pytest.raises(ValueError,match='immutable'):bound_lunar_initial(dict(p,lunar_initial_checkpoint_sha256='0'*64))
-    with pytest.raises(ValueError,match='physical'):bound_lunar_initial(dict(p,physical_lunar_mapping_certified=True))
+    with pytest.raises(ValueError,match='immutable'):bound_lunar_initial(dict(p,lunar_initial_checkpoint_sha256='0'*64),historical=True)
+    with pytest.raises(ValueError,match='physical'):bound_lunar_initial(dict(p,physical_lunar_mapping_certified=True),historical=True)
 
 
 def test_audit_rejects_incomplete_nonfinite_and_failed_negative_controls():
@@ -27,3 +27,8 @@ def test_audit_rejects_incomplete_nonfinite_and_failed_negative_controls():
     for bad in [{},dict(metrics,flow_scaling_relative=float('nan')),dict(metrics,flow_scaling_relative=-1.)]:
         with pytest.raises(ValueError):evaluate(p,bad,yes)
     with pytest.raises(ValueError):evaluate(dict(p,physical_lunar_mapping_certified=True),metrics,yes)
+
+
+def test_default_lunar_audit_cannot_execute_historical_checkpoint():
+    with pytest.raises(ValueError,match='source hashes missing'):
+        bound_lunar_initial(policy())

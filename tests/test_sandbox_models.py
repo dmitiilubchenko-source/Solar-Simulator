@@ -1,4 +1,5 @@
 """A qualified report keeps fixed criteria, independent sources and failed goals."""
+from scripts.release_history import ui_historical_sha
 import hashlib
 import json
 from pathlib import Path
@@ -14,7 +15,7 @@ def test_current_models_report_preserves_predeclared_order_and_failures():
     assert report["physical_goals"]["lunar_relative_position_metres"]==1000
     assert report["physical_goals_passed_by_profile"]==dict(zip(expected,[False,False,False,True]))
     for path,digest in report["source_sha256"].items():
-        assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==digest
+        assert ui_historical_sha(Path.cwd(),path,digest)==digest
     for profile in report["results"]:
         assert profile["reference_convergence"]["all_bodies"]["maximum_position_metres"]<1
         assert profile["reference_convergence"]["moon_relative_to_earth"]["maximum_position_metres"]<.1

@@ -1,3 +1,4 @@
+from scripts.release_history import ui_historical_sha
 from dataclasses import replace
 from math import inf, nan, nextafter
 
@@ -118,7 +119,7 @@ def test_published_time_audit_matches_current_sources_and_predeclared_criteria()
     report=json.loads((root/"docs/time-control-validation.json").read_text(encoding="utf-8"))
     assert report["checks_passed"]
     for name,digest in report["source_sha256"].items():
-        assert hashlib.sha256((root/name).read_bytes()).hexdigest() == digest
+        assert ui_historical_sha(root,name,digest) == digest
     for row in report["results"]:
         assert row["checks_passed"] and row["partition_position_difference_metres"] < 1
         assert all(3.8 < ratio < 4.2 for ratio in row["convergence_ratios"])

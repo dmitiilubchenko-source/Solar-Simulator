@@ -30,7 +30,7 @@ def historical_sha(root, name, expected, *, cargo=False):
     row = manifest['files'].get(name)
     if (manifest['schema'] != 1 or manifest['archive'] != ARCHIVE or row is None
             or row['canonical_cargo'] is not cargo or row['old_sha256'] != expected
-            or row['current_sha256'] != actual):
+            or (actual if cargo else ui_historical_sha(root,name,row['current_sha256'])) != row['current_sha256']):
         raise ValueError('Changed historical source or Cargo content: '+name)
     archive = root/ARCHIVE
     if digest(archive.read_bytes()) != manifest['archive_sha256']:
@@ -72,18 +72,70 @@ def ui_historical_sha(root,name,expected):
     root=Path(root).resolve();path=(root/name).resolve()
     if Path(name).is_absolute() or not path.is_relative_to(root):
         raise ValueError('Historical source escapes checkout')
-    actual=digest(path.read_bytes())
+    actual=digest(path.read_bytes()) if path.is_file() else None
     if actual==expected:return actual
     from io import BytesIO
     for archive_name, archive_sha, names in (
-            (UI_ARCHIVE, UI_ARCHIVE_SHA, UI_FILES),
-            (NUMERIC_ARCHIVE, NUMERIC_ARCHIVE_SHA, NUMERIC_FILES)):
+            (HISTORY_ARCHIVE, HISTORY_ARCHIVE_SHA, HISTORY_FILES),
+            (NUMERIC_ARCHIVE, NUMERIC_ARCHIVE_SHA, NUMERIC_FILES),
+            (UI_ARCHIVE, UI_ARCHIVE_SHA, UI_FILES)):
         if name not in names:continue
         path=root/archive_name
-        if archive_name==NUMERIC_ARCHIVE and not path.is_file():continue
+        if not path.is_file():continue
         raw=path.read_bytes()
         if digest(raw)!=archive_sha:raise ValueError('Changed historical source archive')
         with ZipFile(BytesIO(raw)) as archive:
             old=digest(archive.read(name))
         if old==expected:return old
     return actual
+
+
+# Exact pre374 bytes; old receipts and their recorded SHA are never rewritten.
+HISTORY_ARCHIVE = 'scripts/validation/history-before374.zip'
+HISTORY_ARCHIVE_SHA = '9d55542c89dcb741264adea38f6b060821833edfcbcb4531ca4aa66d1455b7fd'
+HISTORY_FILES = ('scripts/assess_nominal_jpl.py',
+ 'scripts/assess_relative_canonical_checkpoint.py',
+ 'scripts/assess_rotation_time.py',
+ 'scripts/canonical_checkpoint.py',
+ 'scripts/newton_year_cache.py',
+ 'scripts/release_history.py',
+ 'scripts/replay_ias15_session.py',
+ 'scripts/replay_native_newton_year.py',
+ 'tests/test_canonical_checkpoint.py',
+ 'tests/test_canonical_solar.py',
+ 'tests/test_ias15_native_newton_replay.py',
+ 'tests/test_ias15_native_session_replay.py',
+ 'tests/test_ias15_restart_replay.py',
+ 'tests/test_ias15_restart_step_replay.py',
+ 'tests/test_ias15_session_replay.py',
+ 'tests/test_lunar_initial_boundary.py',
+ 'tests/test_native_newton_year.py',
+ 'tests/test_native_newton_year_replay.py',
+ 'tests/test_relative_canonical_checkpoint_audit.py',
+ 'tests/test_release_history.py',
+ 'tests/test_release_ui_history.py',
+ 'tests/test_rotation_time_audit.py',
+ 'tests/test_sandbox_demo.py',
+ 'tests/test_sandbox_models.py',
+ 'tests/test_time_control.py')
+HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES)
+HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE)
+
+
+def verify_checkpoint_history(checkpoint, root):
+    """Check declared historical bytes only. Never authorize evolve/conversion.
+
+    Old records predate today's dependency closure; this proves their declared
+    provenance, not the complete old environment or current numerical fitness.
+    """
+    required = {'scripts/canonical_checkpoint.py', 'scripts/canonical_initial.py',
+        'scripts/rigid_pn_model.py', 'scripts/nbody_pn_spin.py',
+        'src/solar_simulator/rotation.py', 'src/solar_simulator/nbody_rotation.py'}
+    if hasattr(checkpoint, 'pair'):
+        required |= {'scripts/relative_canonical.py', 'scripts/relative_canonical_checkpoint.py'}
+    records = {s['path']:s['sha256'] for s in checkpoint.metadata['provenance']['sources']}
+    if not required <= records.keys():
+        raise ValueError('Required historical checkpoint source hashes missing')
+    for name, expected in records.items():
+        if ui_historical_sha(root, name, expected) != expected:
+            raise ValueError('Historical checkpoint source SHA256 mismatch: '+name)

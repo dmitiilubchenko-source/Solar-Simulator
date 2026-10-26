@@ -176,3 +176,71 @@ def test_source_verified_continuation_and_wrong_frame_grid_rejections(tmp_path):
     outside['provenance']['sources'].append(dict(path='../private.json', sha256='b'*64))
     with pytest.raises(ValueError, match='outside-root'):
         verify_sources(replace(cp, metadata_json=canonical_text(outside)), RUNNING_ROOT)
+
+
+@pytest.mark.parametrize('relative', [False, True])
+def test_numbers_only_edit_in_fresh_runtime_rejected_before_solver(tmp_path, relative):
+    """Actual copied dependency is edited before importing a fresh runtime."""
+    import subprocess
+    import sys
+    from scripts import relative_canonical_checkpoint as rel
+    from test_relative_canonical_checkpoint import fixture_checkpoint as relative_fixture
+    cp = relative_fixture() if relative else fixture_checkpoint()
+    module = rel if relative else __import__('scripts.canonical_checkpoint', fromlist=['evolve'])
+    if not relative:
+        meta = cp.metadata
+        meta['provenance']['sources'] = [dict(path=p, sha256=h) for p,h in module.LOADED_CORE_SHA.items()]
+        cp = replace(cp, metadata_json=canonical_text(meta))
+    for name in module.CORE_SOURCES:
+        path = tmp_path/name;path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes((RUNNING_ROOT/name).read_bytes())
+    (tmp_path/'src/solar_simulator/__init__.py').write_bytes((RUNNING_ROOT/'src/solar_simulator/__init__.py').read_bytes())
+    document = (rel.to_document if relative else to_document)(cp)
+    (tmp_path/'checkpoint.json').write_text(json.dumps(document), encoding='utf-8')
+    runner = """
+import sys
+from pathlib import Path
+root=Path.cwd();sys.path[:0]=[str(root),str(root/'src')]
+from scripts import MODULE as core
+cp=core.load(root/'checkpoint.json')
+def forbidden(*args,**kwargs):raise AssertionError('rejected state reached solver')
+core.solve_ivp=forbidden
+core.verify_sources(cp,root)
+print('control source verified',flush=True)
+try:
+    core.evolve(cp,[0.,.001],source_root=root)
+except ValueError as error:
+    assert 'loaded' in str(error),str(error)
+    print('dependency rejected before solver',flush=True)
+else:raise AssertionError('dependency mismatch accepted')
+""".replace('MODULE','relative_canonical_checkpoint' if relative else 'canonical_checkpoint')
+    # Positive control verifies every byte before one factor changes.
+    module.verify_sources(cp, tmp_path)
+    dependency = tmp_path/'src/solar_simulator/_numbers.py'
+    dependency.write_bytes(dependency.read_bytes()+b'\n# single-factor dependency mutation\n')
+    # In the child, verify_sources must fail; evolve must independently reject LOADED SHA.
+    runner=runner.replace("core.verify_sources(cp,root)\nprint('control source verified',flush=True)",
+        "try:core.verify_sources(cp,root)\nexcept ValueError as error:assert '_numbers.py' in str(error),str(error)\nelse:raise AssertionError('disk mismatch accepted')")
+    result=subprocess.run([sys.executable,'-X','utf8','-B','-c',runner],cwd=tmp_path,
+        capture_output=True,text=True,check=True)
+    assert 'dependency rejected before solver' in result.stdout
+
+
+def test_import_time_local_dependency_closure_is_mandatory():
+    import ast
+    from scripts.relative_canonical_checkpoint import CORE_SOURCES as relative_sources
+    # Check top-level imports, including transitive module imports. Lazy unrelated
+    # Newton/native/profile helpers in nbody_rotation are not used by canonical evolve.
+    for name in relative_sources:
+        tree=ast.parse((RUNNING_ROOT/name).read_bytes())
+        for node in tree.body:
+            if not isinstance(node,ast.ImportFrom):continue
+            module=node.module or ''
+            if node.level:
+                dependency=str(__import__('pathlib').PurePosixPath(name).parent/(module+'.py'))
+            elif module.startswith('scripts.'):
+                dependency=module.replace('.','/')+'.py'
+            elif module.startswith('solar_simulator.'):
+                dependency='src/'+module.replace('.','/')+'.py'
+            else:continue
+            assert dependency in relative_sources,(name,dependency)

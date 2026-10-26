@@ -7,7 +7,7 @@ import pytest
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_restart import RECEIPT as BASELINE
 from scripts.replay_ias15_restart_step import RECEIPT, replay
-from scripts.release_history import UI_ARCHIVE
+from scripts.release_history import UI_ARCHIVE, HISTORICAL_ARCHIVES
 
 @pytest.fixture
 def portable(tmp_path):
@@ -15,6 +15,7 @@ def portable(tmp_path):
     for name in (BASELINE, RECEIPT):
         report = json.loads((ROOT/name).read_text())
         names.update((name, report['sample_archive'], *report['source_sha256'], *report['input_sha256']))
+    names.update(HISTORICAL_ARCHIVES)
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -36,6 +37,8 @@ def test_all_36_step_cases_replay_without_raw_library(portable):
 @pytest.mark.parametrize('damage', ['used-dt', 'gate', 'source'])
 def test_changed_recipe_gate_or_source_is_rejected(portable, damage):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     if damage == 'used-dt':
         path = root/report['sample_archive']
         with np.load(path, allow_pickle=False) as saved:
@@ -50,5 +53,6 @@ def test_changed_recipe_gate_or_source_is_rejected(portable, damage):
         path = root/'scripts/assess_ias15_restart_step.py'
         path.write_bytes(path.read_bytes()+b'changed')
     (root/RECEIPT).write_text(json.dumps(report), encoding='utf-8')
-    with pytest.raises(ValueError):
+    expected_error = {'used-dt': 'Used restart dt', 'gate': 'experimental gate', 'source': 'Changed step source/input'}[damage]
+    with pytest.raises(ValueError, match=expected_error):
         replay(root)

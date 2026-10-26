@@ -7,7 +7,7 @@ import pytest
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_restart import RECEIPT as BASELINE
 from scripts.replay_ias15_session import FROZEN_SESSION, RECEIPT, replay
-from scripts.release_history import UI_ARCHIVE
+from scripts.release_history import UI_ARCHIVE, HISTORICAL_ARCHIVES
 
 @pytest.fixture
 def portable(tmp_path):
@@ -15,6 +15,7 @@ def portable(tmp_path):
     for name in (BASELINE, RECEIPT):
         row = json.loads((ROOT/name).read_text())
         names.update((name, row['sample_archive'], *row['source_sha256'], *row['input_sha256']))
+    names.update(HISTORICAL_ARCHIVES)
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -44,6 +45,8 @@ def test_historical_receipt_uses_exact_frozen_source_without_qualifying_live_ext
 @pytest.mark.parametrize('damage', ['physical', 'lifecycle', 'source', 'partial'])
 def test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected(portable, damage):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     if damage == 'physical':
         path = root/report['sample_archive']
         with np.load(path, allow_pickle=False) as saved:
@@ -60,5 +63,6 @@ def test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejecte
     else:
         report['complete'] = False
     (root/RECEIPT).write_text(json.dumps(report), encoding='utf-8')
-    with pytest.raises(ValueError):
+    expected_error = {'physical': 'Session physical arrays', 'lifecycle': 'Session counters, lifecycle', 'source': 'Changed session source/input', 'partial': 'complete owned-session'}[damage]
+    with pytest.raises(ValueError, match=expected_error):
         replay(root)

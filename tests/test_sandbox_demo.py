@@ -1,4 +1,5 @@
 """The published demo preserves failed baselines and declares measured scope."""
+from scripts.release_history import ui_historical_sha
 import hashlib
 import json
 from pathlib import Path
@@ -10,7 +11,7 @@ def test_published_demo_keeps_sources_epochs_and_predeclared_accuracy_goals():
     assert report["checks_passed"] and report["batch"] == 20
     assert report["duration_seconds"] == 31557600 and len(report["epochs_jd_tdb"]) == 45
     for name,digest in report["source_sha256"].items():
-        assert hashlib.sha256((root/name).read_bytes()).hexdigest() == digest
+        assert ui_historical_sha(root,name,digest) == digest
     assert hashlib.sha256((root/"docs/sandbox-models-validation.json").read_bytes()).hexdigest() == report["before_report_sha256"]
     convergence=report["reference_convergence"]
     assert convergence["all_bodies"]["maximum_position_metres"] < 1

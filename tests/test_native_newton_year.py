@@ -8,7 +8,7 @@ from scripts.assess_sandbox_planets import states
 from scripts.ias15_restart import bits
 from scripts.native_newton_year import force_metrics, trajectory
 from scripts.newton_year import DAY, errors, ias_trajectory, inputs
-from scripts.newton_year_cache import load
+from scripts.newton_year_cache import load, current_source_changes
 from solar_simulator.native_forces import prepare
 from test_newton_year import library, triangle
 
@@ -87,12 +87,14 @@ def test_double_gravity_is_rejected_before_integrating(library, monkeypatch):
 
 
 def test_cached_reference_has_exact_inputs_narrow_bindings_and_retains_wide_mismatch():
-    seed, profiles, qualifications, _ = load()
+    seed, profiles, qualifications, receipt = load()
     assert len(profiles['pilot']['times']) == 61 and len(profiles['year']['times']) == 125
     assert bits(states(seed.bodies)) == bits(profiles['year']['initial'])
     for row in qualifications.values():
         assert row['reference_passed'] and not row['historical_runtime_requalified']
-        assert len(row['historical_wide_source_changes']) == 8
+        assert 'historical_wide_source_changes' not in row
+    changes = current_source_changes(receipt)
+    assert all('src/solar_simulator/simulation.py' in names for names in changes.values())
 
 
 def test_missing_native_and_unsupported_model_are_explicit(library, monkeypatch):

@@ -50,3 +50,7 @@ ZIP-приёмки: [результаты и SHA](../release-032-validation.md).
 [Rust adaptive prototype](../rust-adaptive-prototype-validation.md) сохраняет
 непройденные численные критерии. Старые cold/Standard/continuous/PN/rotation/
 Kuiper ограничения не отменяются новыми организационными изменениями.
+
+[Границы исторической проверки после 374](../development/historical-checkpoints.md):
+архивный replay не квалифицирует сегодняшний runtime; обязательные отказы
+годовых receipts сохраняются до отдельного доказательства.

@@ -1,4 +1,5 @@
 """Ten-body immutable initial data and non-diluted internal orbit comparison."""
+from scripts.release_history import verify_checkpoint_history
 import json
 
 import numpy as np
@@ -16,7 +17,7 @@ def policy():return json.loads((ROOT/'scripts/canonical-solar-policy.json').read
 def test_ten_body_state_bitwise_and_independent_initial_kinematics():
     cp,units,names=initial_checkpoint(policy());old=load(ROOT/policy()['input_checkpoint'])
     assert np.array_equal(np.array(cp.state).view(np.uint64),np.array(old.state).view(np.uint64))
-    verify_sources(cp,ROOT);p=cp.parameters;b=np.array(cp.state[:-4]).reshape(3,10,3)
+    verify_checkpoint_history(cp,ROOT);p=cp.parameters;b=np.array(cp.state[:-4]).reshape(3,10,3)
     r=Rotation.from_quat(np.roll(cp.state[-4:],-1)).as_matrix()
     g,_=gradients(b.ravel(),r,p.orbital.masses,p.orbital.c,p.figure.moments,p.index)
     expected=np.array([b['velocity'] for b in json.loads((ROOT/'src/solar_simulator/data/solar-system-moon-20261008.json').read_text(encoding='utf-8'))['bodies']])

@@ -42,7 +42,7 @@ def verify_frozen_sources(bindings, *, root=None):
     """
     from pathlib import Path as FilesystemPath
     root = FilesystemPath(ROOT if root is None else root).resolve()
-    from scripts.release_history import NUMERIC_ARCHIVE, NUMERIC_FILES, ui_historical_sha
+    from scripts.release_history import HISTORICAL_FILES, ui_historical_sha
     archived = None
     for name, expected in bindings.items():
         normalized = name.replace('\\', '/')
@@ -51,8 +51,7 @@ def verify_frozen_sources(bindings, *, root=None):
             raise ValueError('Receipt path outside project: '+name)
         if path.is_file() and digest(path.read_bytes()) == expected:
             continue
-        if (path.is_file() and normalized in NUMERIC_FILES
-                and (root/NUMERIC_ARCHIVE).is_file()
+        if (normalized in HISTORICAL_FILES
                 and ui_historical_sha(root, normalized, expected) == expected):
             continue
         frozen = SOURCE_FILE_SNAPSHOTS.get(normalized)

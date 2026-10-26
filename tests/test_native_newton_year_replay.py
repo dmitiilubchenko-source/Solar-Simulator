@@ -6,7 +6,7 @@ import pytest
 
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_native_newton_year import RECEIPT, replay
-from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE
+from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE, HISTORICAL_ARCHIVES
 
 @pytest.fixture
 def portable(tmp_path):
@@ -17,6 +17,7 @@ def portable(tmp_path):
     history = json.loads((ROOT/'docs/newton-year-validation.json').read_text(encoding='utf-8'))
     names.update(history['year']['source_sha256'])
     names.update((ARCHIVE, MANIFEST, UI_ARCHIVE))
+    names.update(HISTORICAL_ARCHIVES)
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -45,6 +46,8 @@ def test_all_eight_variants_and_reference_levels_replay_without_numerical_backen
 @pytest.mark.parametrize('damage', ['physical', 'clock', 'reference', 'force', 'metric', 'source', 'partial', 'gate'])
 def test_corruption_is_rejected_even_with_outer_npz_rehash(portable, damage):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     if damage in ('physical', 'clock', 'reference'):
         path = root/report['sample_archive']
         with np.load(path, allow_pickle=False) as saved:
@@ -69,12 +72,15 @@ def test_corruption_is_rejected_even_with_outer_npz_rehash(portable, damage):
     else:
         report['all_checks_passed'] = False
     (root/RECEIPT).write_text(json.dumps(report), encoding='utf-8')
-    with pytest.raises(ValueError):
+    expected_error = {'physical': 'Output differs from its exact N-body packet state', 'clock': 'Invalid N-body IC/shape/clock', 'reference': 'Regenerated RK45 reference', 'force': 'Independent N-body force', 'metric': 'N-body per-body/relative/invariant', 'source': 'Changed historical source or Cargo content', 'partial': 'complete, qualified N-body', 'gate': 'aggregate gate'}[damage]
+    with pytest.raises(ValueError, match=expected_error):
         replay(root)
 
 
 def test_original_reference_corruption_cannot_be_accepted_by_outer_rehash(portable):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     name = 'docs/native-newton-year-reference.npz'
     path = root/name
     path.write_bytes(path.read_bytes()+b'changed')

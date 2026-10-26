@@ -78,3 +78,7 @@ git log -- scripts/sandbox_checks scripts/accept_sandbox.py
 
 Описание текущего поведения находится здесь, история правок — в Git,
 история выпусков — в [описаниях версий](../../docs/releases).
+
+После числовой валидации 373 текущие source SHA отличаются от годовых
+receipts. `check_receipts` намеренно сохраняет отказ; historical replay не
+делает текущую квалификацию успешной. [Границы и следующий этап](../../docs/development/historical-checkpoints.md).

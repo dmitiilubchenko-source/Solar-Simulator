@@ -8,7 +8,7 @@ from scripts.replay_ias15_native_newton import RECEIPT as COUPLING
 from scripts.replay_ias15_native_session import RECEIPT, replay
 from scripts.replay_ias15_restart import RECEIPT as RESTART
 from scripts.replay_ias15_session import FROZEN_SESSION, RECEIPT as OWNED
-from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE
+from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE, HISTORICAL_ARCHIVES
 
 @pytest.fixture
 def portable(tmp_path):
@@ -18,6 +18,7 @@ def portable(tmp_path):
         names.update((name, report['sample_archive'], *report['source_sha256'], *report['input_sha256'],
                       *report.get('cargo_lf_sha256', {})))
     names.update((ARCHIVE, MANIFEST, UI_ARCHIVE))
+    names.update(HISTORICAL_ARCHIVES)
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -44,6 +45,8 @@ def test_new_session_replays_all_modes_without_native_library_raw_or_network(por
 @pytest.mark.parametrize('damage', ['live-source', 'historical-source', 'lifecycle', 'metrics', 'gate', 'cargo', 'partial'])
 def test_changed_live_history_or_receipt_cannot_reuse_old_pass(portable, damage):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     row = next(iter(report['results'].values()))['1e-09__native']
     if damage in ('live-source', 'historical-source'):
         path = root/('scripts/ias15_session.py' if damage == 'live-source' else FROZEN_SESSION)
@@ -59,5 +62,6 @@ def test_changed_live_history_or_receipt_cannot_reuse_old_pass(portable, damage)
     else:
         report['complete'] = False
     (root/RECEIPT).write_text(json.dumps(report), encoding='utf-8')
-    with pytest.raises(ValueError):
+    expected_error = {'live-source': 'Changed historical source or Cargo content', 'historical-source': 'Changed session source/input', 'lifecycle': 'Native-session metrics', 'metrics': 'Native-session metrics', 'gate': 'aggregate gate', 'cargo': 'array reuse or pinned input', 'partial': 'complete native-session'}[damage]
+    with pytest.raises(ValueError, match=expected_error):
         replay(root)

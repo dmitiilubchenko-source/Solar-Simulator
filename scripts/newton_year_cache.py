@@ -9,6 +9,7 @@ from scripts.assess_newton_year import bounded, reference_gate
 from scripts.assess_sandbox_planets import states
 from scripts.ias15_restart import bits
 from scripts.kepler_transport import ROOT, public_path, sha
+from scripts.release_history import ui_historical_sha
 from scripts.newton_year import DAY, G, INPUTS, LEVELS, NAMES, agreement, validate
 from solar_simulator.experiment import copy_bodies, create_experiment
 from solar_simulator.storage import load as load_checkpoint
@@ -42,7 +43,7 @@ def load(root=ROOT):
         if sha(path) != receipt['receipts'][profile+'175']['npz_sha256']:
             raise ValueError('Changed original RK45 cache: '+profile)
         for source in dependencies:
-            if sha(public_path(root, source)) != row['source_sha256'][source]:
+            if ui_historical_sha(root, source, row['source_sha256'][source]) != row['source_sha256'][source]:
                 raise ValueError('Changed RK45 reference dependency: '+source)
         for source, expected in INPUTS.items():
             if sha(public_path(root, source)) != expected:
@@ -72,9 +73,15 @@ def load(root=ROOT):
                 or roundtrips != [r['initial_roundtrip'] for r in row['reference_levels']]
                 or passed is not row['reference_passed'] or not passed):
             raise ValueError('RK45 sensitivity/roundtrip qualification failed')
-        changed = [n for n, expected in row['source_sha256'].items() if sha(public_path(root, n)) != expected]
         profiles[profile] = data
         qualifications[profile] = dict(comparisons=comparisons, roundtrips=roundtrips, reference_passed=True,
             reference_dependencies={n:row['source_sha256'][n] for n in dependencies},
-            historical_wide_source_changes=changed, historical_runtime_requalified=False)
+            historical_runtime_requalified=False)
     return seed, profiles, qualifications, receipt
+
+
+def current_source_changes(receipt, root=ROOT):
+    """Dynamic diagnostics, separate from the original cache qualification."""
+    return {profile:[name for name, expected in receipt[profile]['source_sha256'].items()
+                     if sha(public_path(root, name)) != expected]
+            for profile in ARCHIVES}

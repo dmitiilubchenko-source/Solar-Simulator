@@ -7,7 +7,7 @@ import pytest
 from scripts.kepler_transport import ROOT, sha
 from scripts.replay_ias15_native_newton import RECEIPT, replay
 from scripts.replay_ias15_restart import RECEIPT as BASELINE
-from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE
+from scripts.release_history import ARCHIVE, MANIFEST, UI_ARCHIVE, HISTORICAL_ARCHIVES
 
 @pytest.fixture
 def portable(tmp_path):
@@ -17,6 +17,7 @@ def portable(tmp_path):
         names.update((name, report['sample_archive'], *report['source_sha256'], *report['input_sha256'],
                       *report.get('cargo_lf_sha256', {})))
     names.update((ARCHIVE, MANIFEST, UI_ARCHIVE))
+    names.update(HISTORICAL_ARCHIVES)
     for name in names:
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
@@ -57,6 +58,8 @@ def test_cargo_checkout_eol_change_preserves_replay_but_content_change_does_not(
 @pytest.mark.parametrize('damage', ['physical', 'force', 'model', 'gate', 'source', 'partial'])
 def test_corruption_is_rejected_even_with_outer_archive_rehash(portable, damage):
     root, report = portable
+    control = replay(root)
+    assert control['metrics_reproduced'] and control['arrays'] > 0
     name = next(iter(report['results']))
     if damage == 'physical':
         path = root/report['sample_archive']
@@ -77,5 +80,6 @@ def test_corruption_is_rejected_even_with_outer_archive_rehash(portable, damage)
     else:
         report['complete'] = False
     (root/RECEIPT).write_text(json.dumps(report), encoding='utf-8')
-    with pytest.raises(ValueError):
+    expected_error = {'physical': 'Newton output', 'force': 'Independent initial force', 'model': 'Newton coupling settings', 'gate': 'aggregate gate', 'source': 'Changed historical source or Cargo content', 'partial': 'complete research-only Newton'}[damage]
+    with pytest.raises(ValueError, match=expected_error):
         replay(root)

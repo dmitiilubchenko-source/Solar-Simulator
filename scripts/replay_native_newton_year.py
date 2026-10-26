@@ -27,10 +27,17 @@ def replay(root=ROOT):
     seed, profiles, qualified, historical = load(root)
     report = json.loads((root/RECEIPT).read_text(encoding='utf-8'))
     previous = json.loads((root/NATIVE_RECEIPT).read_text(encoding='utf-8'))
+    for profile, row in report['cache_qualification'].items():
+        recorded_changes = [name for name, expected in historical[profile]['source_sha256'].items()
+            if report['source_sha256'].get(name, expected) != expected]
+        if row['historical_wide_source_changes'] != recorded_changes:
+            raise ValueError('Changed historical RK45 source-change inventory')
     flags = ('complete', 'source_unchanged', 'input_unchanged', 'library_unchanged',
              'native_unchanged', 'cargo_unchanged', 'all_c_control175_bitexact')
     if (report.get('protocol') != PROTOCOL or report.get('solver') != 'IAS15 C/native Newton N-body research'
-            or not all(report.get(k) is True for k in flags) or report['cache_qualification'] != qualified
+            or not all(report.get(k) is True for k in flags)
+            or {p:{k:v for k,v in row.items() if k != 'historical_wide_source_changes'}
+                for p,row in report['cache_qualification'].items()} != qualified
             or report.get('runtime_modified') is not False or report.get('production_eligible') is not False
             or report['origin'] != asdict(seed.origin) or report['names'] != list(NAMES)
             or bits(report['masses_kg']) != bits([b.mass for b in seed.bodies])):

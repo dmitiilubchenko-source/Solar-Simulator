@@ -16,6 +16,7 @@ from scripts.rotation_time import (L_B,UniformTimeScaling,rotation_boundary,
     local_rate,global_acceleration)
 from scripts.canonical_checkpoint import CanonicalDOP853
 from scripts.relative_canonical_checkpoint import load,verify_sources
+from scripts.release_history import verify_checkpoint_history
 from scripts.rigid_pn_model import Parameters,fields,rhs,invariants,hamiltonian
 from scripts.nbody_pn_spin import Parameters as PointParameters
 from scripts.independent_rigid_pn import scalar_hamiltonian,gradients,hat
@@ -35,11 +36,13 @@ def synthetic(policy):
     return parameters,np.r_[initial_state(p),q],p['nominal_period']
 
 
-def bound_lunar_initial(policy):
+def bound_lunar_initial(policy, *, historical=False):
     path = policy['lunar_initial_checkpoint']
     if sha(path)!=policy['lunar_initial_checkpoint_sha256']:
         raise ValueError('Changed immutable lunar initial checkpoint')
-    cp = load(ROOT/path);verify_sources(cp,ROOT)
+    cp = load(ROOT/path)
+    if historical:verify_checkpoint_history(cp,ROOT)
+    else:verify_sources(cp,ROOT)
     if (cp.time!=0 or cp.metadata['provenance']['physical_mapping_certified'] is not False
             or policy['physical_lunar_mapping_certified'] is not False):
         raise ValueError('Unsupported physical initial-data claim')
