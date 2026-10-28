@@ -1,0 +1,474 @@
+{
+  "stage": 380,
+  "complete": true,
+  "failure": null,
+  "rows": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "coarse",
+      "CPU_seconds": 1.703125,
+      "wall_seconds": 1.6884143999996013,
+      "energy_drift": 2.0707453512866342e-14,
+      "angular_drift": 1.971279815993182e-15,
+      "linear_drift": 2.2368036922893037e-16,
+      "quaternion_norm": 1.2212453270876722e-15,
+      "reference_difference": {
+        "position": 1.1015831549342566e-15,
+        "velocity": 2.804760990304917e-15,
+        "orientation": 6.076423097233236e-13,
+        "spin": 2.363195727464508e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "standard",
+      "CPU_seconds": 1.984375,
+      "wall_seconds": 2.022051100000681,
+      "energy_drift": 3.232746339778415e-14,
+      "angular_drift": 3.02582136313113e-15,
+      "linear_drift": 2.3156683839480015e-16,
+      "quaternion_norm": 7.771561172376096e-16,
+      "reference_difference": {
+        "position": 1.5187822121145586e-15,
+        "velocity": 3.384065866211289e-15,
+        "orientation": 6.077571000526475e-13,
+        "spin": 2.4406762173013497e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "fine",
+      "CPU_seconds": 2.15625,
+      "wall_seconds": 2.2197339000049396,
+      "energy_drift": 3.8733366283059344e-14,
+      "angular_drift": 3.0334286974410377e-15,
+      "linear_drift": 2.3155794665907066e-16,
+      "quaternion_norm": 7.771561172376096e-16,
+      "reference_difference": {
+        "position": 2.239230711587649e-15,
+        "velocity": 3.3218235176195512e-15,
+        "orientation": 6.075331442812161e-13,
+        "spin": 2.37488333972503e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "level": "coarse",
+      "CPU_seconds": 1.5625,
+      "wall_seconds": 1.591889399998763,
+      "energy_drift": 1.4748474084703366e-14,
+      "angular_drift": 1.6138629247858967e-15,
+      "linear_drift": 1.9897604638988962e-16,
+      "quaternion_norm": 1.3322676295501878e-15,
+      "reference_difference": {
+        "position": 1.1692500736096851e-15,
+        "velocity": 3.0369641400098024e-15,
+        "orientation": 6.075353199046641e-13,
+        "spin": 2.3632813753491766e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "level": "standard",
+      "CPU_seconds": 1.796875,
+      "wall_seconds": 1.8068992999978946,
+      "energy_drift": 4.215977945425306e-14,
+      "angular_drift": 3.55755803702882e-15,
+      "linear_drift": 2.8732893249153673e-16,
+      "quaternion_norm": 7.771561172376096e-16,
+      "reference_difference": {
+        "position": 1.7469271138437375e-15,
+        "velocity": 4.517680927479758e-15,
+        "orientation": 6.07603161336929e-13,
+        "spin": 2.3693067699662504e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "level": "fine",
+      "CPU_seconds": 2.0625,
+      "wall_seconds": 2.113089899998158,
+      "energy_drift": 2.905002471229451e-14,
+      "angular_drift": 2.3171046787271493e-15,
+      "linear_drift": 2.529227699754161e-16,
+      "quaternion_norm": 6.661338147750939e-16,
+      "reference_difference": {
+        "position": 1.2156535087383656e-15,
+        "velocity": 2.2145253802485903e-15,
+        "orientation": 6.080864666250633e-13,
+        "spin": 2.3650148474331622e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "level": "coarse",
+      "CPU_seconds": 1.609375,
+      "wall_seconds": 1.6588381999972626,
+      "energy_drift": 8.356580219201559e-14,
+      "angular_drift": 6.246199692976011e-15,
+      "linear_drift": 4.1400867131917693e-16,
+      "quaternion_norm": 7.771561172376096e-16,
+      "reference_difference": {
+        "position": 3.3227171122996646e-15,
+        "velocity": 9.54797332248898e-15,
+        "orientation": 6.548682031691728e-13,
+        "spin": 2.7304612420731584e-14
+      },
+      "reference_uncertainty": {
+        "position": 2.899227886878248e-14,
+        "velocity": 3.2921594066868564e-13,
+        "orientation": 6.778488043859376e-11,
+        "spin": 2.8175542176964797e-12
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "level": "standard",
+      "CPU_seconds": 1.859375,
+      "wall_seconds": 1.8748397000017576,
+      "energy_drift": 8.14766571372152e-14,
+      "angular_drift": 5.892068779899062e-15,
+      "linear_drift": 3.154975020324835e-16,
+      "quaternion_norm": 6.661338147750939e-16,
+      "reference_difference": {
+        "position": 2.982370864480752e-15,
+        "velocity": 9.023436217318058e-15,
+        "orientation": 6.551550504203303e-13,
+        "spin": 2.830113740246411e-14
+      },
+      "reference_uncertainty": {
+        "position": 2.899227886878248e-14,
+        "velocity": 3.2921594066868564e-13,
+        "orientation": 6.778488043859376e-11,
+        "spin": 2.8175542176964797e-12
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "level": "fine",
+      "CPU_seconds": 2.0,
+      "wall_seconds": 2.0560680000053253,
+      "energy_drift": 9.256519627423266e-14,
+      "angular_drift": 6.604524556550677e-15,
+      "linear_drift": 3.8223640196380624e-16,
+      "quaternion_norm": 1.2212453270876722e-15,
+      "reference_difference": {
+        "position": 3.423799604306599e-15,
+        "velocity": 9.705599101844062e-15,
+        "orientation": 6.552825831055264e-13,
+        "spin": 2.797739769319404e-14
+      },
+      "reference_uncertainty": {
+        "position": 2.899227886878248e-14,
+        "velocity": 3.2921594066868564e-13,
+        "orientation": 6.778488043859376e-11,
+        "spin": 2.8175542176964797e-12
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "level": "coarse",
+      "CPU_seconds": 1.546875,
+      "wall_seconds": 1.5695059000063338,
+      "energy_drift": 9.417223093177142e-14,
+      "angular_drift": 7.13370545220942e-15,
+      "linear_drift": 3.6471483110922415e-16,
+      "quaternion_norm": 8.881784197001252e-16,
+      "reference_difference": {
+        "position": 3.263929050361191e-15,
+        "velocity": 1.04149564660455e-14,
+        "orientation": 6.553250140822696e-13,
+        "spin": 2.7385559212160236e-14
+      },
+      "reference_uncertainty": {
+        "position": 2.899227886878248e-14,
+        "velocity": 3.2921594066868564e-13,
+        "orientation": 6.778488043859376e-11,
+        "spin": 2.8175542176964797e-12
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "level": "standard",
+      "CPU_seconds": 1.875,
+      "wall_seconds": 1.9017571000003954,
+      "energy_drift": 1.0124318342494197e-13,
+      "angular_drift": 8.022975817886496e-15,
+      "linear_drift": 6.159228167690501e-16,
+      "quaternion_norm": 1.2212453270876722e-15,
+      "reference_difference": {
+        "position": 3.3395927972410933e-15,
+        "velocity": 1.1764690302788142e-14,
+        "orientation": 6.554402025305238e-13,
+        "spin": 2.7269896914831036e-14
+      },
+      "reference_uncertainty": {
+        "position": 2.899227886878248e-14,
+        "velocity": 3.2921594066868564e-13,
+        "orientation": 6.778488043859376e-11,
+        "spin": 2.8175542176964797e-12
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "level": "fine",
+      "CPU_seconds": 2.046875,
+      "wall_seconds": 2.1171026999945752,
+      "energy_drift": 7.81018843563838e-14,
+      "angular_drift": 5.886305651840715e-15,
+      "linear_drift": 6.997496665605474e-16,
+      "quaternion_norm": 1.1102230246251565e-15,
+      "reference_difference": {
+        "position": 2.396236381557638e-15,
+        "velocity": 9.713857518297133e-15,
+        "orientation": 6.55360451689068e-13,
+        "spin": 2.7271218635580352e-14
+      },
+      "reference_uncertainty": {
+        "position": 2.899227886878248e-14,
+        "velocity": 3.2921594066868564e-13,
+        "orientation": 6.778488043859376e-11,
+        "spin": 2.8175542176964797e-12
+      }
+    }
+  ],
+  "failed_criteria": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    }
+  ],
+  "packet_convergence": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "coarse_fine": {
+        "position": 1.2884856575671391e-15,
+        "velocity": 8.744658911635815e-16,
+        "orientation": 4.3210537632440276e-15,
+        "spin": 9.635060437746044e-16
+      },
+      "standard_fine": {
+        "position": 1.072896002834618e-15,
+        "velocity": 1.5383104457250624e-15,
+        "orientation": 7.086768132709826e-15,
+        "spin": 1.109034478101512e-15
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "coarse_fine": {
+        "position": 7.617255265822019e-16,
+        "velocity": 1.140617051206525e-15,
+        "orientation": 7.341808831039677e-15,
+        "spin": 1.0343193921498145e-15
+      },
+      "standard_fine": {
+        "position": 1.2617375364035284e-15,
+        "velocity": 2.3708415098327865e-15,
+        "orientation": 9.633424121268789e-15,
+        "spin": 1.2554296514778775e-15
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "coarse_fine": {
+        "position": 6.713200282137146e-16,
+        "velocity": 1.2907017485205952e-15,
+        "orientation": 5.625282158101942e-15,
+        "spin": 1.2051408820539332e-15
+      },
+      "standard_fine": {
+        "position": 8.922244745623803e-16,
+        "velocity": 1.423950676917073e-15,
+        "orientation": 6.215018178946092e-15,
+        "spin": 1.6711273620235993e-15
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "coarse_fine": {
+        "position": 1.1220537419558497e-15,
+        "velocity": 1.9279772581121662e-15,
+        "orientation": 1.0018532557700625e-14,
+        "spin": 1.3951836694328807e-15
+      },
+      "standard_fine": {
+        "position": 1.2401808563199674e-15,
+        "velocity": 2.0529168351282775e-15,
+        "orientation": 3.2225167587052165e-15,
+        "spin": 7.914673091894377e-16
+      }
+    }
+  ],
+  "continuous_convergence": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "coarse_fine": {
+        "position": 3.6300789202529417e-13,
+        "velocity": 8.021174552286085e-13,
+        "orientation": 9.352658538342102e-10,
+        "spin": 1.352761447099934e-11
+      },
+      "standard_fine": {
+        "position": 4.010475083495411e-15,
+        "velocity": 8.338655771787592e-15,
+        "orientation": 1.1979569402525142e-11,
+        "spin": 2.3679580442355235e-13
+      },
+      "reference_differences": [
+        {
+          "position": 3.631312268696806e-13,
+          "velocity": 8.018694864238039e-13,
+          "orientation": 9.353188230554248e-10,
+          "spin": 1.3528559522854874e-11
+        },
+        {
+          "position": 4.071117767191139e-15,
+          "velocity": 8.154087092360603e-15,
+          "orientation": 1.1948597599148065e-11,
+          "spin": 2.4714431156790256e-13
+        },
+        {
+          "position": 9.50086540080493e-16,
+          "velocity": 2.298819100462469e-15,
+          "orientation": 6.087487218846521e-13,
+          "spin": 2.4159325773583733e-14
+        }
+      ]
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "coarse_fine": {
+        "position": 1.251571906034232e-13,
+        "velocity": 8.052975697370366e-13,
+        "orientation": 9.41591207878758e-10,
+        "spin": 1.3524365207172551e-11
+      },
+      "standard_fine": {
+        "position": 1.0544226563594008e-15,
+        "velocity": 9.852520890423812e-15,
+        "orientation": 1.0189926677934103e-11,
+        "spin": 2.2022006922260203e-13
+      },
+      "reference_differences": [
+        {
+          "position": 1.2500955816444014e-13,
+          "velocity": 8.046544164713867e-13,
+          "orientation": 9.416446319113206e-10,
+          "spin": 1.3520346712226594e-11
+        },
+        {
+          "position": 1.1581051842786716e-15,
+          "velocity": 9.227004578621128e-15,
+          "orientation": 1.039219127710136e-11,
+          "spin": 2.2671959973465712e-13
+        },
+        {
+          "position": 6.985680862254051e-16,
+          "velocity": 4.421547271798013e-15,
+          "orientation": 6.562465533596377e-13,
+          "spin": 2.7568013411253666e-14
+        }
+      ]
+    }
+  ],
+  "plan_SHA256": "b93c534e6b38aedc82df70768f1c471963093645f700e20c741ec87fa6fffb13",
+  "arrays_SHA256": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+  "CPU_seconds": 19.625,
+  "wall_seconds": 19.992107900005067,
+  "files": {
+    "states.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    "three-bodies-reference0.json": "44946d5677c867972a2a5e712c469a858f9ba269feec8a434ede2ed23499b659",
+    "three-bodies-reference1.json": "9974ed20ac717e512ecc48c859667942a1684c54e4bf546a18f37e7c1412ee51",
+    "three-bodies__continuous-convergence.json": "9bc80685ae59c5ac8a3e4a55cffeaad712e182fdc9522140203390a44679bf8e",
+    "three-bodies__python-convergence.json": "874d71b10b2091b18ee086dc65ef1f559a8580c3e22de402ffb20509b3331c78",
+    "three-bodies__python__coarse.json": "5af9dd0fc5673567eb6d2e7a863cb30ec69d616d2a0e4e2744d3a4b50f28dda4",
+    "three-bodies__python__coarse.jsonl": "66de032cf10f6c8b79ca8ca1d50c92edafa360b5b3aeceb51c6a2b99f2203139",
+    "three-bodies__python__fine.json": "baed11a28f90355d7e20f23b30630b74a17747d1dfb8e30076eef3b288a614c4",
+    "three-bodies__python__fine.jsonl": "53625f4fc1e2834916267c14d7caa5b4fda6566f639328abb05e932703951461",
+    "three-bodies__python__standard.json": "6a700e50d4b4edc64da01e09e743dc16145731c392c56c3267d48f88e4cf177a",
+    "three-bodies__python__standard.jsonl": "efbdb6277cdcbe8e481aa7b33354063a37d9f03fd90eb02a5fbf87343e10dea6",
+    "three-bodies__rust-convergence.json": "1e9cd5cf5e63cf5dc751e2d38e8063f8658a655f5334322d3625d9978bdafb75",
+    "three-bodies__rust__coarse.json": "8e03e5373186b8de2aa33ca72e41ec3591b7f8a6110eef714ccf9600f3fd6265",
+    "three-bodies__rust__coarse.jsonl": "25897723f38abe8c2553138fa9a1cc4790d0dcf335ceab51688dd8659e870c07",
+    "three-bodies__rust__fine.json": "3b2b119abb79ebdb25616b448d75c67cf67cb50dc0d5056d097f38e3846166c4",
+    "three-bodies__rust__fine.jsonl": "a8af8ea3304a13eafb4f4edf089e886623f45b193616282093256cac24ed4b20",
+    "three-bodies__rust__standard.json": "8ef1aa9855144f9674308a38147e574d481eb4f090c78b9babe4871c990b2072",
+    "three-bodies__rust__standard.jsonl": "d8e49511b10f9c367611a391f9ca343bd539809ef45f31080210b22f6764025f",
+    "two-bodies__continuous-convergence.json": "2ced6288177bb55f32cb93598504ec10d73d6416060c0f83ed473d1b32ca3734",
+    "two-bodies__python-convergence.json": "4738acf39e0e8a7d3d60dc89e586c76193ceda9712e0f63b6dfe85cb4f45605c",
+    "two-bodies__rust-convergence.json": "c14ad273aed93a4ada871dd542d16284478545fa146f91f1f4928676793c1167",
+    "two-bodies__rust__coarse.json": "75567035086c284bfa7b35fa1ec3c9cbf43ff30f8f76787fef1a0f5dfc8979b1",
+    "two-bodies__rust__coarse.jsonl": "8db3bd3cc2d9356ab735f2ac406fab4acf6182a21882bc87eb9629e78e53911d",
+    "two-bodies__rust__fine.json": "0067ea533fbdd9b250fe02d7efe215be73aea928e562d13ae407816eede94884",
+    "two-bodies__rust__fine.jsonl": "f1ae5f80c8841000343db5d0611b7b8b52ea9ce6f3ddc82cedcd540d373b2db7",
+    "two-bodies__rust__standard.json": "412562b4c6dcea817d5b6661bce7760511834e88661155404cf45a854820b954",
+    "two-bodies__rust__standard.jsonl": "02960d4880f600b0e3b404ae9ee9416492fe7d5fba2041e86b710ca289a15daa"
+  },
+  "current_runtime_qualified": false
+}

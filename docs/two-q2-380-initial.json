@@ -1,0 +1,97 @@
+{
+  "stage": 380,
+  "complete": false,
+  "failure": {
+    "type": "ArithmeticError",
+    "message": "Tolerance convergence not established",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\validate_two_q2_380.py\", line 126, in run\n    if max(convergence['standard_fine'].values())>=max(convergence['coarse_fine'].values()):raise ArithmeticError('Tolerance convergence not established')\n                                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nArithmeticError: Tolerance convergence not established\n"
+  },
+  "rows": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "coarse",
+      "CPU_seconds": 1.703125,
+      "wall_seconds": 1.6884143999996013,
+      "energy_drift": 2.0707453512866342e-14,
+      "angular_drift": 1.971279815993182e-15,
+      "linear_drift": 2.2368036922893037e-16,
+      "quaternion_norm": 1.2212453270876722e-15,
+      "reference_difference": {
+        "position": 1.1015831549342566e-15,
+        "velocity": 2.804760990304917e-15,
+        "orientation": 6.076423097233236e-13,
+        "spin": 2.363195727464508e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "standard",
+      "CPU_seconds": 1.984375,
+      "wall_seconds": 2.022051100000681,
+      "energy_drift": 3.232746339778415e-14,
+      "angular_drift": 3.02582136313113e-15,
+      "linear_drift": 2.3156683839480015e-16,
+      "quaternion_norm": 7.771561172376096e-16,
+      "reference_difference": {
+        "position": 1.5187822121145586e-15,
+        "velocity": 3.384065866211289e-15,
+        "orientation": 6.077571000526475e-13,
+        "spin": 2.4406762173013497e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "fine",
+      "CPU_seconds": 2.15625,
+      "wall_seconds": 2.2197339000049396,
+      "energy_drift": 3.8733366283059344e-14,
+      "angular_drift": 3.0334286974410377e-15,
+      "linear_drift": 2.3155794665907066e-16,
+      "quaternion_norm": 7.771561172376096e-16,
+      "reference_difference": {
+        "position": 2.239230711587649e-15,
+        "velocity": 3.3218235176195512e-15,
+        "orientation": 6.075331442812161e-13,
+        "spin": 2.37488333972503e-14
+      },
+      "reference_uncertainty": {
+        "position": 7.744166852695493e-14,
+        "velocity": 3.042647888631918e-13,
+        "orientation": 6.255679007211014e-11,
+        "spin": 2.877031995290653e-12
+      }
+    }
+  ],
+  "plan_SHA256": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+  "arrays_SHA256": "b562f8935059735160a7b8f0c5428af90f84be3e31c5bd57005c357363ef1257",
+  "CPU_seconds": 7.453125,
+  "wall_seconds": 7.5930014999976265,
+  "files": {
+    "states.npz": "b562f8935059735160a7b8f0c5428af90f84be3e31c5bd57005c357363ef1257",
+    "two-bodies-reference0.json": "e65ddf20a05e50903b967110c5aaa39ea80a590d121596440b3d151027c850ee",
+    "two-bodies-reference1.json": "f6c6623cc5ebc605f27a6c7e241fd2d565940abd6c443fe45aaf47ff431249b6",
+    "two-bodies__python-convergence.json": "4738acf39e0e8a7d3d60dc89e586c76193ceda9712e0f63b6dfe85cb4f45605c",
+    "two-bodies__python__coarse.json": "253eef5bc06e259c6b7df4bc61be988ea27dbec964d0a7f6156687af1634eb8e",
+    "two-bodies__python__coarse.jsonl": "34ab0df0da4f037c39dd484b8dbdff881805504521d5e06b54e3481950d04c5e",
+    "two-bodies__python__fine.json": "23cd30eede1a357c0c95d193473cdd01ab2e6f1e465263505aec9d2adbcedd28",
+    "two-bodies__python__fine.jsonl": "dafc239a142f3d58a1fe3dc1544181148cfd5c61d15f7181581e4684ed93ecd2",
+    "two-bodies__python__standard.json": "22d883d6cfe668472da37665eefa24a4d82cae8eec83828bfde9080b3f7e1281",
+    "two-bodies__python__standard.jsonl": "f292800693f1381b93fe37011aa25864a1dfdb9116a3bb4c3e4969cc808344c6"
+  },
+  "current_runtime_qualified": false
+}

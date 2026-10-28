@@ -114,7 +114,7 @@ def create_experiment(bodies: list[Body], settings: Settings, *, origin: Ephemer
         from .nbody_rotation import validate
         import numpy as np
         validate(bodies, rotations, settings)
-        if abs(np.linalg.norm(rotations[0].quaternion)-1) > 1e-12:
+        if any(abs(np.linalg.norm(s.quaternion)-1)>1e-12 for s in rotations):
             raise ValueError("Начальный q должен быть единичным")
     return Experiment(copy_bodies(bodies),copy_bodies(bodies),settings,origin=origin,
                       initial_rotations=rotations, rotations=rotations)

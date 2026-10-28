@@ -278,8 +278,8 @@ def _rotation_document(rotation):
 def _rotations(values):
     from .nbody_rotation import RotationState
     from .rotation import RigidFigure
-    if type(values) is not list or len(values) != 1:
-        raise ValueError("Схема 10 требует одну динамическую фигуру")
+    if type(values) is not list or len(values) not in (1,2):
+        raise ValueError("Схема 10 требует одну или две динамические фигуры")
     result = []
     for value in values:
         _keys(value,("body","figure","quaternion","angular_momentum","quaternion_atol","momentum_atol","provenance"))

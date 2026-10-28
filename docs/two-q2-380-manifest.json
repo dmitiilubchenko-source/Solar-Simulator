@@ -1,0 +1,27 @@
+{
+  "stage": 380,
+  "base_commit": "576a2fa0fbe77580da532659cd0843b5f03b2f6d",
+  "model": "Newton monopoles plus total-degree-two M-Q per figure; no Q-Q/tides/EIH/contacts",
+  "G_SI": 6.6743e-11,
+  "source_bound_plan": "scripts\\two-q2-380-completion-plan.json",
+  "artifacts": {
+    "scripts/two-q2-380-plan.json": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+    "scripts/two-q2-380-completion-plan.json": "b93c534e6b38aedc82df70768f1c471963093645f700e20c741ec87fa6fffb13",
+    "docs/two-q2-380-initial.json": "a6044603119a9e61824ce2c68c116cd1c2743d5e89a558b687546b917e029e38",
+    "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+    "docs/two-q2-380-resources.json": "abd47a995bd7563e2232a9b9e60818dd2721050013ca2aac30894c48a44dd0cb",
+    "scripts/validation/rotation-before380.zip": "222461071aed44c49fcf72a573db52d9e29fbfd94d5da7f0fe749eb080b26147",
+    "scripts/validation/two-q2-380-compatibility.zip": "92746b403f4c576740f2d72bab06c1f56a11303016fd7196a0d29d21ab194e1b",
+    "scripts/validation/two-q2-380-initial-scripts.zip": "3ceef815f41508b7eda78d34cd750e8041b3260db8ae4bc9c52a38c4e24d46bd",
+    "scripts/validation/two-q2-380-initial.npz": "b562f8935059735160a7b8f0c5428af90f84be3e31c5bd57005c357363ef1257",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    "scripts/assess_two_q2_380.py": "0b5ea98c572a2163fafc36debcb40cae7acdbd8516a87df9cae5aae2fbdec7f0",
+    "scripts/check_two_q2_compatibility380.py": "65084a570a6a4b1aac383f5cbcbc0fef14d5ded63f1d819985c5007442a3b5c2"
+  },
+  "native_unchanged_SHA256": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+  "current375_qualification": false,
+  "numerical_acquisition_complete": true,
+  "original_packet_convergence_failures": 3,
+  "continuous_supplement_convergence_cases": 2,
+  "scope": "Synthetic Newton degree2 headless extension only; no new planetary accuracy claim. IC/epochs/tolerances/source/environment in frozen plans."
+}

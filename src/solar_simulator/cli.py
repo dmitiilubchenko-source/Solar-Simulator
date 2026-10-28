@@ -37,6 +37,8 @@ def report(experiment):
         scope += "; energy budget subtracts integral of explicit orientation power; orientation is not integrated self-consistently"
     if experiment.rotations:
         scope = "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH"
+        if len(experiment.rotations)==2:
+            scope = "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts"
     power = 0.
     if prescribed(figures):
         import numpy as np
@@ -44,6 +46,7 @@ def report(experiment):
         power = orientation_power(p, np.array([b.mass for b in experiment.bodies]), prepare(experiment.bodies, figures), experiment.time)
     figure_torque = orbital_torque(experiment.bodies, figures, experiment.time) if figures else None
     spin_torque = None
+    spin_torques_by_body = None
     if experiment.rotations:
         import numpy as np
         from .nbody_rotation import correction, validate
@@ -51,11 +54,17 @@ def report(experiment):
         index = validate(experiment.bodies, experiment.rotations)
         rotation = experiment.rotations[0]
         p = np.array([[b.position.x,b.position.y,b.position.z] for b in experiment.bodies])
-        _, torque, _ = correction(p, np.array([b.mass for b in experiment.bodies]), index,
-            rotation.figure, rotation.quaternion)
+        if len(experiment.rotations)==1:
+            _, torque, _ = correction(p, np.array([b.mass for b in experiment.bodies]), index,
+                rotation.figure, rotation.quaternion)
+        else:
+            from .nbody_rotation import corrections
+            _,torques,_=corrections(p,np.array([b.mass for b in experiment.bodies]),index,experiment.rotations)
+            torque=np.sum(torques,axis=0)
+            spin_torques_by_body=[dict(body=s.body,torque=vector(Vector3(*map(float,t)))) for s,t in zip(experiment.rotations,torques)]
         spin_torque = Vector3(*map(float,torque))
         figure_torque = spin_torque.multiply(-1)
-    return dict(origin=asdict(experiment.origin) if experiment.origin else None,
+    result = dict(origin=asdict(experiment.origin) if experiment.origin else None,
         epoch_jd_tdb=experiment.origin.epoch_jd_tdb+experiment.time/86400 if experiment.origin else None,
         physics=physics,integrator=experiment.settings.integrator,backend=experiment.settings.backend,
         error_control=experiment.settings.error_control,
@@ -74,6 +83,8 @@ def report(experiment):
         momentum=vector(momentum),
         angular_momentum=vector(angular),
         center_of_mass=vector(center_of_mass(experiment.bodies)))
+    if spin_torques_by_body is not None:result['dynamic_spin_torques_by_body']=spin_torques_by_body
+    return result
 
 
 def main(argv=None):

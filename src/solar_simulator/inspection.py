@@ -86,6 +86,9 @@ def report(experiment):
         energy_basis='Орбитальная + rigid-spin энергия и потенциал одной динамической Q2-фигуры.'
         energy_status='conservative_total'
         angular_status='conservative_orbit_plus_dynamic_spin'
+        if len(experiment.rotations)==2:
+            description='Ньютоновское движение с двумя динамическими rigid Q2-фигурами, только M-Q члены.'
+            energy_basis='Орбитальная + rigid-spin энергия обеих фигур и сумма M-Q потенциалов; Q2-Q2 не включено.'
     elif pn:
         model='eih-1pn'
         description='Монопольная гравитация с EIH-поправками первого постньютоновского порядка.'
@@ -113,6 +116,8 @@ def report(experiment):
         if figures:limitations.append('Смешанные figure/c² члены не реализованы; это ограничение модели, не только интегратора.')
     if dynamic:
         limitations.append('Одна динамическая Q2-фигура; без EIH, приливов и контактов. Орбитальный L отдельно не сохраняется.')
+        if len(experiment.rotations)==2:
+            limitations[-1]='Две непересекающиеся фигуры, суммарный порядок разложения2; без Q2-Q2/высших моментов/EIH/приливов/контактов. Орбитальный L отдельно не сохраняется.'
     else:
         limitations.append('Stored passive spin не означает интегрирования ориентации или rigid-spin энергии.')
         if contacts:limitations.append('Контакты/отскоки/слияния: механическая энергия может меняться; нужны dissipated_energy и model_energy_offset.')

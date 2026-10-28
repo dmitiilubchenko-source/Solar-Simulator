@@ -87,11 +87,13 @@ def compare_tolerances(experiment, steps: int) -> dict:
     if experiment.rotations:
         import numpy as np
         from .rotation import rotation_matrix
-        rotation_comparison = dict(body=experiment.rotations[0].body,
-            attitude_frobenius=[float(np.linalg.norm(rotation_matrix(a.rotations[0].quaternion)-rotation_matrix(b.rotations[0].quaternion)))
+        def comparison(k):
+            return dict(body=experiment.rotations[k].body,
+            attitude_frobenius=[float(np.linalg.norm(rotation_matrix(a.rotations[k].quaternion)-rotation_matrix(b.rotations[k].quaternion)))
                 for a, b in zip(states, states[1:])],
-            angular_momentum_differences_kg_m2_s=[float(np.linalg.norm(np.array(a.rotations[0].angular_momentum)-b.rotations[0].angular_momentum))
+            angular_momentum_differences_kg_m2_s=[float(np.linalg.norm(np.array(a.rotations[k].angular_momentum)-b.rotations[k].angular_momentum))
                 for a, b in zip(states, states[1:])])
+        rotation_comparison=comparison(0) if len(experiment.rotations)==1 else dict(per_body=[comparison(k) for k in range(len(experiment.rotations))])
     relative = None
     if base.relative_pair:
         def relative_difference(a,b,field):

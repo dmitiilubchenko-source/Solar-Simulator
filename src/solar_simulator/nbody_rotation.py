@@ -1,8 +1,8 @@
-"""Conservative Newtonian N-body with ONE dynamical rigid Q2 figure.
+"""Conservative Newtonian N-body with one or two dynamical rigid Q2 figures.
 
 SI; q=(w,x,y,z) body→inertial, S inertial. Point forces are computed once;
 the figure correction, reaction and torque follow one common potential.
-No prescribed axes, tides, EIH, contacts or figure–figure terms.
+Total-degree-two monopole/quadrupole expansion: no Q2–Q2, tides/EIH/contacts.
 """
 from dataclasses import dataclass, replace
 from math import fsum, isfinite
@@ -46,15 +46,15 @@ class RotationState:
 
 
 def validate(bodies, rotations, settings=None):
-    """Unsupported combinations fail before integration/serialization."""
-    if type(rotations) is not tuple or len(rotations) != 1 or not isinstance(rotations[0], RotationState):
-        raise ValueError("Этот режим поддерживает ровно одну динамическую фигуру")
+    """Validate; retain the legacy int index for one figure, tuple for two."""
+    if type(rotations) is not tuple or len(rotations) not in (1,2) or any(not isinstance(s,RotationState) for s in rotations):
+        raise ValueError("Этот режим поддерживает одну или две динамические фигуры")
     names = [b.name for b in bodies]
-    state = rotations[0]
-    if not bodies or len(set(names)) != len(names) or state.body not in names:
+    if (not bodies or len(set(names)) != len(names) or len({s.body for s in rotations})!=len(rotations)
+            or any(s.body not in names for s in rotations)):
         raise ValueError("Нужны уникальные тела и существующая вращающаяся фигура")
-    index = names.index(state.body)
-    if state.figure.mass != bodies[index].mass:
+    sources=tuple(names.index(s.body) for s in rotations)
+    if any(s.figure.mass!=bodies[i].mass for s,i in zip(rotations,sources)):
         raise ValueError("Масса инерции не совпадает с массой тела")
     if any(b.radius != 0 or b.spin.magnitude() != 0 for b in bodies):
         raise ValueError("Динамическое Q2 требует нулевых контактных радиусов и passive spin")
@@ -62,8 +62,8 @@ def validate(bodies, rotations, settings=None):
             or settings.figures or settings.error_control != "per-body"):
         raise ValueError("Вращение требует Newton/DOP853/per-body без заданных фигур")
     p = np.array([[b.position.x, b.position.y, b.position.z] for b in bodies])
-    correction(p, np.array([b.mass for b in bodies]), index, state.figure, state.quaternion)
-    return index
+    corrections(p,np.array([b.mass for b in bodies]),sources,rotations)
+    return sources[0] if len(sources)==1 else sources
 
 
 def correction(positions, masses, source, figure, quaternion, pair_displacement=None):
@@ -101,13 +101,39 @@ def correction(positions, masses, source, figure, quaternion, pair_displacement=
     return acceleration, torque, potential
 
 
+def corrections(positions,masses,sources,rotations,quaternions=None,pair_displacement=None):
+    """Sum M-Q terms only, once per figure; return one torque per figure.
+
+    Each figure also interacts with the OTHER figure's monopole. This is not
+    Q-Q coupling. Nonoverlapping bounding spheres are required for two figures.
+    Raw stage quaternions are allowed, just as in the one-figure field.
+    """
+    if len(sources)!=len(rotations) or len(sources) not in (1,2) or len(set(sources))!=len(sources):
+        raise ValueError("Нужны разные индексы одной или двух фигур")
+    if quaternions is None:quaternions=tuple(s.quaternion for s in rotations)
+    if len(quaternions)!=len(rotations):raise ValueError("Нужна ориентация каждой фигуры")
+    additional=None;torques=[];potential=0.
+    for source,state,q in zip(sources,rotations,quaternions):
+        a,torque,u=correction(positions,masses,source,state.figure,q,pair_displacement)
+        additional=a if additional is None else additional+a
+        torques.append(torque);potential+=u
+    if len(sources)==2:
+        relative=np.asarray(positions)[sources[1]]-np.asarray(positions)[sources[0]]
+        if pair_displacement is not None and set(sources)==set(pair_displacement[:2]):relative=pair_displacement[2]
+        if np.linalg.norm(relative)<=sum(s.figure.bounding_radius for s in rotations):
+            raise ValueError("Ограничивающие сферы двух фигур не должны пересекаться")
+    return additional,tuple(torques),potential
+
+
 def validate_experiment(experiment):
     validate(experiment.initial, experiment.initial_rotations, experiment.settings)
     validate(experiment.bodies, experiment.rotations, experiment.settings)
-    first, current = experiment.initial_rotations[0], experiment.rotations[0]
-    if (first.body, first.figure, first.quaternion_atol, first.momentum_atol, first.provenance) != (current.body, current.figure, current.quaternion_atol, current.momentum_atol, current.provenance):
+    if len(experiment.initial_rotations)!=len(experiment.rotations):
+        raise ValueError("Число вращающихся тел изменено в checkpoint")
+    metadata=lambda s:(s.body,s.figure,s.quaternion_atol,s.momentum_atol,s.provenance)
+    if any(metadata(a)!=metadata(b) for a,b in zip(experiment.initial_rotations,experiment.rotations)):
         raise ValueError("Инерция/допуски/происхождение вращения изменены в checkpoint")
-    if abs(np.linalg.norm(first.quaternion)-1) > 1e-12:
+    if any(abs(np.linalg.norm(s.quaternion)-1)>1e-12 for s in experiment.initial_rotations):
         raise ValueError("Начальный q должен быть единичным")
     if experiment.time == 0 and experiment.initial_rotations != experiment.rotations:
         raise ValueError("При t=0 вращение должно совпадать с исходным")
@@ -117,11 +143,14 @@ def validate_experiment(experiment):
 
 class RotationDOP853(DOP853):
     """Worst local 5(3) estimate over each r/v vector and separate q/S blocks."""
-    def __init__(self, fun, t0, y0, t_bound, *, body_count, **kwargs):
-        if type(body_count) is not int or body_count < 1 or np.size(y0) != 6*body_count+7:
-            raise ValueError("Нужна раскладка 6N + q[4] + S[3]")
+    def __init__(self, fun, t0, y0, t_bound, *, body_count, rotation_count=1, **kwargs):
+        if (type(body_count) is not int or body_count<1 or type(rotation_count) is not int
+                or rotation_count not in (1,2) or np.size(y0)!=6*body_count+7*rotation_count):
+            raise ValueError("Нужна раскладка 6N + K*(q[4]+S[3]), K=1 или 2")
         self.blocks = [slice(k, k+3) for k in range(0, 6*body_count, 3)]
-        self.blocks += [slice(6*body_count, 6*body_count+4), slice(6*body_count+4, 6*body_count+7)]
+        for k in range(rotation_count):
+            start=6*body_count+7*k
+            self.blocks += [slice(start,start+4),slice(start+4,start+7)]
         super().__init__(fun, t0, y0, t_bound, **kwargs)
 
     def _estimate_error_norm(self, K, h, scale):
@@ -150,8 +179,8 @@ def integrate(bodies, rotations, times, *, rtol=1e-11, position_atol=1e-4,
     if raw_times.ndim != 1:
         raise ValueError("Нужна одномерная сетка эпох")
     times = _vector(times, len(raw_times), "Время")
-    source = validate(bodies, rotations)
-    state = rotations[0]
+    source=validate(bodies,rotations)
+    sources=(source,) if len(rotations)==1 else source
     if backend not in ("python", "rust"):
         raise ValueError("Неизвестное ядро сил")
     if type(rtol) not in (int, float) or not isfinite(rtol) or not 3e-14 <= rtol <= 1e-2:
@@ -172,9 +201,9 @@ def integrate(bodies, rotations, times, *, rtol=1e-11, position_atol=1e-4,
     p0 = pair.encode(p, offset=center) if pair else p-center
     v0 = pair.encode(v, offset=drift) if pair else v-drift
     count = len(bodies); orbit_size = 6*count
-    initial = np.concatenate((p0.ravel(), v0.ravel(), state.quaternion, state.angular_momentum))
+    initial=np.concatenate((p0.ravel(),v0.ravel(),*(v for s in rotations for v in (s.quaternion,s.angular_momentum))))
     atol = np.array([position_atol]*(3*count)+[velocity_atol]*(3*count)
-                    +[state.quaternion_atol]*4+[state.momentum_atol]*3)
+                    +[v for s in rotations for v in ([s.quaternion_atol]*4+[s.momentum_atol]*3)])
     native = None
     if backend == "rust":
         from .native_forces import prepare
@@ -201,19 +230,21 @@ def integrate(bodies, rotations, times, *, rtol=1e-11, position_atol=1e-4,
             acceleration = np.zeros_like(positions)
             np.add.at(acceleration, pairs[0], field*masses[pairs[1], None])
             np.add.at(acceleration, pairs[1], -field*masses[pairs[0], None])
-        q, spin = y[orbit_size:orbit_size+4], y[orbit_size+4:]
-        additional, torque, _ = correction(positions, masses, source, state.figure, q, pair_r)
+        spin_states=[(y[orbit_size+7*k:orbit_size+7*k+4],y[orbit_size+7*k+4:orbit_size+7*k+7]) for k in range(len(rotations))]
+        additional,torques,_=corrections(positions,masses,sources,rotations,
+            quaternions=tuple(q for q,spin in spin_states),pair_displacement=pair_r)
         acceleration += additional
         if pair:
             acceleration = pair.encode(acceleration)
-        result = np.concatenate((solver_velocity.ravel(), acceleration.ravel(),
-            quaternion_rate(q, angular_velocity(state.figure, q, spin)), torque))
+        result=np.concatenate((solver_velocity.ravel(),acceleration.ravel(),*(v
+            for state,(q,spin),torque in zip(rotations,spin_states,torques)
+            for v in (quaternion_rate(q,angular_velocity(state.figure,q,spin)),torque))))
         if not np.all(np.isfinite(result)):
             raise ValueError("Неконечная производная вращательного N-body")
         return result
 
     result = solve_ivp(rhs, (times[0], times[-1]), initial, t_eval=times,
-        method=RotationDOP853, body_count=count, rtol=rtol, atol=atol, max_step=max_step)
+        method=RotationDOP853, body_count=count, rotation_count=len(rotations),rtol=rtol, atol=atol, max_step=max_step)
     if not result.success or not np.all(np.isfinite(result.y)):
         raise ValueError(f"Расчёт вращения не завершён: {result.message}")
     snapshots = []
@@ -223,22 +254,25 @@ def integrate(bodies, rotations, times, *, rtol=1e-11, position_atol=1e-4,
             positions, velocities = pair.decode(positions), pair.decode(velocities)
         positions = positions+center+drift*(time-times[0]); velocities = velocities+drift
         output = [Body(b.name, b.mass, Vector3(*map(float, pos)), Vector3(*map(float, vel))) for b, pos, vel in zip(bodies, positions, velocities)]
-        rotation = replace(state, quaternion=tuple(y[orbit_size:orbit_size+4]), angular_momentum=tuple(y[orbit_size+4:]))
-        snapshots.append((output, (rotation,)))
+        result_rotations=tuple(replace(state,quaternion=tuple(y[orbit_size+7*k:orbit_size+7*k+4]),
+            angular_momentum=tuple(y[orbit_size+7*k+4:orbit_size+7*k+7])) for k,state in enumerate(rotations))
+        snapshots.append((output,result_rotations))
     return snapshots
 
 
 def invariants(bodies, rotations):
     """Full Newtonian orbital+spin energy, linear momentum and total L."""
-    source = validate(bodies, rotations)
+    source=validate(bodies,rotations)
+    sources=(source,) if len(rotations)==1 else source
     from .simulation import total_energy, total_momentum
     from .diagnostics import angular_momentum
-    state = rotations[0]
     p = np.array([[b.position.x, b.position.y, b.position.z] for b in bodies])
-    _, _, potential = correction(p, np.array([b.mass for b in bodies]), source, state.figure, state.quaternion)
-    energy = total_energy(bodies)+potential+.5*np.dot(state.angular_momentum,
-        angular_velocity(state.figure, state.quaternion, state.angular_momentum))
-    return float(energy), total_momentum(bodies), angular_momentum(bodies).add(Vector3(*state.angular_momentum))
+    _,_,potential=corrections(p,np.array([b.mass for b in bodies]),sources,rotations)
+    energy=total_energy(bodies)+potential;angular=angular_momentum(bodies)
+    for state in rotations:
+        energy+=.5*np.dot(state.angular_momentum,angular_velocity(state.figure,state.quaternion,state.angular_momentum))
+        angular=angular.add(Vector3(*state.angular_momentum))
+    return float(energy),total_momentum(bodies),angular
 
 
 def lunar_initial(bodies, origin):

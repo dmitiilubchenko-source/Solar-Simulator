@@ -15,6 +15,7 @@ SUITES={
         'tests/test_documentation_navigation.py','tests/test_inspect_reliability.py',
         'tests/test_inspection_history.py','tests/test_recipe_reliability.py','tests/test_dynamic_step379.py',
         'tests/test_runtime_step379_evidence.py',
+        'tests/test_two_q2.py','tests/test_two_q2_evidence.py',
         'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
         'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_release_ui_history.py','tests/test_ias15_archive_source.py',
         'tests/test_ias15_full_state.py',
@@ -27,6 +28,7 @@ SUITES={
     'desktop':[
         'tests/test_numeric_native.py',
         'tests/test_app_workflows.py','tests/test_experiment_transition_gui.py',
+        'tests/test_two_q2.py','tests/test_two_q2_gui.py',
         'tests/test_controlled_stop.py','tests/test_recovery_journey.py',
         'tests/test_sandbox_acceptance.py',
         'tests/test_current_runtime_qualification.py',

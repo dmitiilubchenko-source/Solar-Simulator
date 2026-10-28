@@ -1,0 +1,107 @@
+{
+  "CPU_seconds": 34.609375,
+  "wall_seconds": 30.524477900005877,
+  "peak_worker_private_sampled": 126840832,
+  "parent_private_final": 15106048,
+  "artifact_bytes": 13381543,
+  "initial_guard": {
+    "guard": {
+      "exit_code": 1,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 8.796875,
+        "parent_cpu": 2.0625,
+        "private_tree": 121999360,
+        "rss_tree": 104775680,
+        "disk": 9109121,
+        "elapsed": 8.994847399997525
+      },
+      "samples": 143,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 8.859375,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 2.078125,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 121999360,
+      "processes": [
+        {
+          "pid": 25048,
+          "creation_time": 1793224472.0016851,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 14688,
+          "creation_time": 1793224472.0060976,
+          "CPU_seconds": 8.84375,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 105123840,
+      "wall_seconds": 9.052301999996416,
+      "disk_bytes": 9109121,
+      "complete": false,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    },
+    "total_CPU_seconds": 10.953125,
+    "wall_seconds": 9.056369700003415,
+    "peak_worker_private_sampled": 121999360,
+    "parent_private_final": 15106048,
+    "disk_bytes": 9110244,
+    "plan_SHA256": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+    "complete": false,
+    "limitations": "50ms sampling; Windows retained handles final CPU. Unseen memory spikes possible. Parent CPU included; parent private is final, worker private is sampled peak. No OS hard CPU quota; early margin below120/300.",
+    "within_hard_limits": true
+  },
+  "completion_guard": {
+    "guard": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 21.03125,
+        "parent_cpu": 2.59375,
+        "private_tree": 118050816,
+        "rss_tree": 102481920,
+        "disk": 4270175,
+        "elapsed": 21.393052100000205
+      },
+      "samples": 372,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 21.0625,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 2.59375,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 126840832,
+      "processes": [
+        {
+          "pid": 8980,
+          "creation_time": 1793224607.4249818,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 13160,
+          "creation_time": 1793224607.4291475,
+          "CPU_seconds": 21.046875,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 111050752,
+      "wall_seconds": 21.446287899998424,
+      "disk_bytes": 4270175,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    },
+    "total_CPU_seconds": 23.65625,
+    "wall_seconds": 21.46810820000246,
+    "peak_worker_private_sampled": 126840832,
+    "parent_private_final": 15077376,
+    "disk_bytes": 4271299,
+    "plan_SHA256": "b93c534e6b38aedc82df70768f1c471963093645f700e20c741ec87fa6fffb13",
+    "complete": true,
+    "limitations": "50ms sampling; Windows retained handles final CPU. Unseen memory spikes possible. Parent CPU included; parent private is final, worker private is sampled peak. No OS hard CPU quota; early margin below120/300.",
+    "within_hard_limits": true
+  }
+}

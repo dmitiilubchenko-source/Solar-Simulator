@@ -58,3 +58,8 @@ file/process продолжение. Численная диагностика �
 [Ограниченный max_step379](runtime-step-379-validation.md): один d32 для
 обычного high-e DOP853; peri-start лучше, apo-start position хуже. NO-GO
 для production, никакого изменения сил/интегратора/пользовательских настроек.
+
+[Две динамические Q2-фигуры380](two-q2-380.md): существующий RotationDOP853,
+усечённый M-Q Hamiltonian без Q2-Q2, два q/S, schema10 save/resume, независимые
+градиенты/матричный RK45. Старые0/1 сохраняются. Три packet convergence FAIL
+сохранены; непрерывный контроль сходится. Current375 gate новому коду отказывает.

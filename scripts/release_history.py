@@ -71,6 +71,12 @@ INSPECTION_ARCHIVE_SHA = 'b744a773848c458326eb6ad58b13571b6da2862a0c0c9611e0e6ce
 INSPECTION_FILES = ('src/solar_simulator/commands.py', 'scripts/release_history.py',
                     'scripts/assess_runtime_reliability376.py')
 
+ROTATION_ARCHIVE = 'scripts/validation/rotation-before380.zip'
+ROTATION_ARCHIVE_SHA = '222461071aed44c49fcf72a573db52d9e29fbfd94d5da7f0fe749eb080b26147'
+ROTATION_FILES = ('src/solar_simulator/nbody_rotation.py','src/solar_simulator/experiment.py',
+    'src/solar_simulator/storage.py','src/solar_simulator/cli.py','src/solar_simulator/inspection.py',
+    'src/solar_simulator/convergence.py','scripts/release_history.py','tests/test_sandbox_acceptance.py')
+
 
 def ui_historical_sha(root,name,expected):
     """Exact historical evidence only; never authorize a live worker."""
@@ -81,6 +87,7 @@ def ui_historical_sha(root,name,expected):
     if actual==expected:return actual
     from io import BytesIO
     for archive_name, archive_sha, names in (
+            (ROTATION_ARCHIVE, ROTATION_ARCHIVE_SHA, ROTATION_FILES),
             (INSPECTION_ARCHIVE, INSPECTION_ARCHIVE_SHA, INSPECTION_FILES),
             (HISTORY_ARCHIVE, HISTORY_ARCHIVE_SHA, HISTORY_FILES),
             (NUMERIC_ARCHIVE, NUMERIC_ARCHIVE_SHA, NUMERIC_FILES),
@@ -124,8 +131,8 @@ HISTORY_FILES = ('scripts/assess_nominal_jpl.py',
  'tests/test_sandbox_demo.py',
  'tests/test_sandbox_models.py',
  'tests/test_time_control.py')
-HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES) | set(INSPECTION_FILES)
-HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE, INSPECTION_ARCHIVE)
+HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES) | set(INSPECTION_FILES) | set(ROTATION_FILES)
+HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE, INSPECTION_ARCHIVE, ROTATION_ARCHIVE)
 
 
 def verify_checkpoint_history(checkpoint, root):
