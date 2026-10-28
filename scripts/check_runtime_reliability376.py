@@ -1,0 +1,201 @@
+"""Bounded product DOP853 checks; no Research/REBOUND dependency or new physics."""
+import argparse
+from dataclasses import replace
+from decimal import Decimal as D, localcontext
+from fractions import Fraction as F
+import hashlib
+import json
+from math import pi
+from pathlib import Path
+from time import perf_counter, process_time
+import traceback
+
+import numpy as np
+
+from scripts.assess_kepler_holdout import holdout_fixture
+from scripts.assess_kepler_phase import decimal_relative, fingerprints
+from scripts.assess_sandbox_planets import states
+from scripts.kepler_reference import propagate
+from solar_simulator.experiment import advance, create_experiment
+from solar_simulator.simulation import Body, G
+from solar_simulator.storage import save, load, to_document
+from solar_simulator.vector3 import Vector3
+
+ROOT = Path(__file__).resolve().parents[1]
+PROTOCOL = ROOT/'scripts/runtime-reliability-376-protocol-v2.json'
+
+
+def sha(path): return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def read(path): return json.loads(Path(path).read_text(encoding='utf8'))
+def write(path,value):
+    with Path(path).open('x',encoding='utf8',newline='\n') as f:
+        json.dump(value,f,indent=2,allow_nan=False);f.write('\n')
+def norm(v):return sum(x*x for x in v).sqrt()
+
+
+def prepare():
+    cases=[]
+    for name,e,phase in [('moderate',.5,0.),('high95',.95,0.),('high99-peri',.99,0.),('high99-apo',.99,pi)]:
+        seed,old_times=holdout_fixture(e,phase,False);period=float(old_times[-1]/2)
+        fractions=np.unique(np.concatenate((np.linspace(0,1,33),np.array([
+            .00001,.0001,.001,.01,.49,.499,.4999,.49999,.5,.50001,.5001,.501,.51,.99,.999,.9999,.99999]))))
+        requested=fractions*period
+        # Fixed binary lattice: <2**45 integer ticks, so subtraction/addition
+        # of these epochs is exact. No simulation result enters this rule.
+        epochs=np.rint(requested*2**20)/2**20
+        if len(np.unique(epochs))!=len(epochs) or any(float(a)+float(b-a)!=float(b) for a,b in zip(epochs,epochs[1:])):
+            raise ArithmeticError('Preflight packet clock not exactly representable')
+        cases.append(dict(id=name,e_nominal=e,initial_eccentric_anomaly_nominal=phase,
+            initial=states(seed.bodies).tolist(),names=[b.name for b in seed.bodies],masses=[b.mass for b in seed.bodies],
+            period_nominal_seconds=period,requested_epochs=requested.tolist(),epochs=epochs.tolist(),
+            epoch_quantization_seconds=float(np.max(np.abs(epochs-requested))),epoch_hex=[float(t).hex() for t in epochs]))
+    jobs=[dict(id=f"{c['id']}__{backend}__{profile}__{coordinates}",case=c['id'],backend=backend,
+               rtol=rtol,profile=profile,coordinates=coordinates,schedule='grid')
+          for c in cases for backend in ('python','rust') for profile,rtol in [('standard',1e-13),('strict',3e-14)]
+          for coordinates in ('absolute','relative')]
+    jobs += [dict(id=f"{c['id']}__{backend}__strict__relative__onepacket",case=c['id'],backend=backend,
+                 rtol=3e-14,profile='strict',coordinates='relative',schedule='onepacket')
+             for c in cases if c['id'].startswith('high99') for backend in ('python','rust')]
+    source=fingerprints()
+    for name in ('scripts/check_runtime_reliability376.py','scripts/assess_kepler_holdout.py',
+                 'scripts/assess_sandbox_planets.py','scripts/assess_accuracy.py'):
+        source[name]=sha(ROOT/name)
+    for directory in ('rust/solar_core','rust/solar_native'):
+        for file in ('Cargo.toml','Cargo.lock'):
+            p=ROOT/directory/file
+            if p.exists():source[p.relative_to(ROOT).as_posix()]=sha(p)
+    protocol=dict(schema=1,stage=376,base_commit='83899827c70104299a4e5311d44b870017af8f62',
+        units='SI; inertial tilted axes; initial COM offset (3e9,-2e9,1e9)m and drift (75,-50,25)m/s; elapsed model seconds from zero',
+        physics='Newton point masses only, mutual 3D; no JPL/PN/J2/contact/spin',cases=cases,jobs=jobs,
+        clock_revision=dict(original_protocol_SHA256=sha(ROOT/'scripts/runtime-reliability-376-protocol.json'),
+            original_source_path='scripts/validation/runtime376-before-grid.py.txt',
+            original_source_SHA256=sha(ROOT/'scripts/validation/runtime376-before-grid.py.txt'),
+            reason='Original sampling grid failed exact target representability before any numerical accuracy result; higher-level runtime already rejects this interval',
+            rule='round each requested epoch to nearest 2**-20 seconds, ties to even; keep all 49 points; exact preflight each target and duration',
+            phase_fit=False,criteria_changed=False),
+        settings=dict(integrator='dop853',error_control='per-body',position_atol=1e-3,velocity_atol=1e-9),
+        reference='Existing Decimal Kepler f/g from exact binary64 IC differences and exact(G)*(exact(m1)+exact(m2)); 70/100 digits',
+        reference_checks=dict(position_metres=1e-6,velocity_m_s=1e-12,exact_initial=True),
+        numerical_checks=dict(moderate_only=dict(position_metres=100,velocity_m_s=1e-3,energy_drift=1e-10),
+            high_e='Report all errors and contrasts without a new runtime accuracy gate; no IAS15 thresholds',
+            invariants='Decimal E,L,P; dE/abs(E0), norm(dL)/norm(L0), norm(dP)/(M*Vstar), COM identity',
+            restart='strict relative grid jobs: file roundtrip and identical remaining packet sequence must match canonical documents exactly',
+            packet_control='high99 both phases and backends strict relative single packet; compare endpoint with grid, not an identity requirement'),
+        budget=dict(CPU_seconds=180,wall_seconds=360,private_bytes=1024**3,artifact_bytes=64*1024**2),
+        estimate='36 short one-orbit trajectories + 8 half-orbit suffixes, 4 shared analytic references; estimated 20..120 CPU s, capped at180; no full-year/JPL/research matrix',
+        scope='Sparse packet endpoints, not continuous maxima; output grid also fixes runtime packet boundaries; no controller serialization',
+        source_SHA256=source)
+    write(PROTOCOL,protocol)
+    print('Prepared',len(jobs),'jobs;',len(cases[0]['epochs']),'epochs; SHA256',sha(PROTOCOL))
+
+
+def seed_from(case,job):
+    seed,_=holdout_fixture(case['e_nominal'],case['initial_eccentric_anomaly_nominal'],False)
+    bodies=[Body(n,m,Vector3(*row[:3]),Vector3(*row[3:])) for n,m,row in zip(case['names'],case['masses'],case['initial'])]
+    setting=replace(seed.settings,backend=job['backend'],rtol=job['rtol'],position_atol=1e-3,velocity_atol=1e-9,
+        relative_pair=('A','B') if job['coordinates']=='relative' else None,error_control='per-body')
+    return create_experiment(bodies,setting)
+
+
+def invariants(array,masses):
+    s=[[D.from_float(float(x)) for x in row] for row in array];m=list(map(D.from_float,masses));g=D.from_float(G);M=sum(m)
+    rho=[s[1][j]-s[0][j] for j in range(3)];vel=[s[1][j+3]-s[0][j+3] for j in range(3)];R=norm(rho)
+    p=[[mass*x for x in row[3:]] for mass,row in zip(m,s)];P=[sum(row[j] for row in p) for j in range(3)]
+    E=sum(mass*sum(v*v for v in row[3:])/2 for mass,row in zip(m,s))-g*m[0]*m[1]/R
+    L=[sum(s[b][(j+1)%3]*p[b][(j+2)%3]-s[b][(j+2)%3]*p[b][(j+1)%3] for b in range(2)) for j in range(3)]
+    eps=sum(v*v for v in vel)/2-g*M/R
+    return dict(E=E,L=L,P=P,eps=eps,mu=g*M,M=M,COM_identity=E-m[0]*m[1]/M*eps-sum(v*v for v in P)/(2*M))
+
+
+def metrics(values,expected,masses):
+    values=np.asarray(values)
+    if values.ndim!=3 or values.shape[1:]!=(2,6) or len(values)!=len(expected) or not len(values) or not np.isfinite(values).all():
+        raise ValueError('Matching finite (epochs,2,6) states and references required')
+    with localcontext() as context:
+        context.prec=130;initial=invariants(values[0],masses)
+        if initial['eps']>=0 or norm(initial['L'])==0 or initial['E']==0:
+            raise ValueError('Observer requires a bound nonradial ellipse and nonzero initial energy')
+        a=-initial['mu']/(2*initial['eps']);V=(initial['mu']/a).sqrt()
+        result=dict(r=D(0),v=D(0),E=D(0),L=D(0),P=D(0),COM=D(0));per_epoch=[]
+        for array,ref in zip(values,expected):
+            rel=decimal_relative(array);r=norm([x-y for x,y in zip(rel[:3],ref[0])]);v=norm([x-y for x,y in zip(rel[3:],ref[1])])
+            inv=invariants(array,masses)
+            row=dict(r=r,v=v,E=abs((inv['E']-initial['E'])/initial['E']),
+                L=norm([x-y for x,y in zip(inv['L'],initial['L'])])/norm(initial['L']),
+                P=norm([x-y for x,y in zip(inv['P'],initial['P'])])/(initial['M']*V),COM=abs(inv['COM_identity']/initial['E']))
+            for k in result:result[k]=max(result[k],row[k])
+            per_epoch.append({k:float(v) for k,v in row.items()})
+        return {k:float(v) for k,v in result.items()},per_epoch
+
+
+def verify_source(protocol):
+    for name,digest in protocol['source_SHA256'].items():
+        if sha(ROOT/name)!=digest:raise ValueError('Frozen source changed: '+name)
+
+
+def run(output):
+    p=read(PROTOCOL);verify_source(p);protocol_SHA=sha(PROTOCOL)
+    output.mkdir(exist_ok=False,parents=True);start=perf_counter();cpu=process_time();rows=[];references={};failure=None
+    def budget():
+        if process_time()-cpu>p['budget']['CPU_seconds'] or perf_counter()-start>p['budget']['wall_seconds']:
+            raise TimeoutError('Predeclared runtime376 resource cap')
+    try:
+        with localcontext() as ctx:
+            ctx.prec=130
+            for case in p['cases']:
+                initial=np.array(case['initial']);rel=decimal_relative(initial);mu=D.from_float(G)*sum(map(D.from_float,case['masses']))
+                expected=[];gap_r=gap_v=D(0)
+                for time in case['epochs']:
+                    low=propagate(rel[:3],rel[3:],mu,D.from_float(time),precision=70)
+                    high=propagate(rel[:3],rel[3:],mu,D.from_float(time),precision=100)
+                    gap_r=max(gap_r,norm([a-b for a,b in zip(low[0],high[0])]))
+                    gap_v=max(gap_v,norm([a-b for a,b in zip(low[1],high[1])]))
+                    expected.append(high);budget()
+                if expected[0]!=(rel[:3],rel[3:]) or gap_r>=D('1e-6') or gap_v>=D('1e-12'):raise ArithmeticError('Reference unresolved')
+                references[case['id']]=expected
+                write(output/(case['id']+'-reference.json'),dict(relative=rel and list(map(str,rel)),mu=str(mu),
+                    epochs=case['epochs'],values=[[list(map(str,g)) for g in row] for row in expected],
+                    maximum_precision_r=str(gap_r),maximum_precision_v=str(gap_v)))
+        for job in p['jobs']:
+            case=next(c for c in p['cases'] if c['id']==job['case']);current=seed_from(case,job)
+            epochs=case['epochs'] if job['schedule']=='grid' else [0.,case['epochs'][-1]]
+            values=[states(current.bodies)];mid=len(epochs)//2;checkpoint=None;restored=None;exact_restart=None
+            clock=F(0);job_cpu=process_time();job_wall=perf_counter()
+            for i,target in enumerate(epochs[1:],1):
+                duration=target-current.time;clock+=F(duration)
+                current=advance(replace(current,settings=replace(current.settings,dt=duration)),1)
+                if current.time!=target:raise ArithmeticError('Runtime did not reach declared packet boundary')
+                values.append(states(current.bodies));budget()
+                if job['schedule']=='grid' and job['profile']=='strict' and job['coordinates']=='relative':
+                    if i==mid:
+                        checkpoint=output/(job['id']+'-checkpoint.json');save(current,checkpoint);restored=load(checkpoint)
+                        if to_document(restored)!=to_document(current):raise ArithmeticError('Checkpoint roundtrip mismatch')
+                    elif i>mid:
+                        restored=advance(replace(restored,settings=replace(restored.settings,dt=duration)),1)
+                        if to_document(restored)!=to_document(current):raise ArithmeticError('Identical packet continuation changed')
+                        exact_restart=True
+            expected=references[case['id']] if job['schedule']=='grid' else [references[case['id']][0],references[case['id']][-1]]
+            maximum,per_epoch=metrics(values,expected,case['masses'])
+            passed=None if case['id']!='moderate' else maximum['r']<100 and maximum['v']<1e-3 and maximum['E']<1e-10
+            detail=dict(job=job,maxima=maximum,per_epoch=per_epoch,epochs=epochs,moderate_existing_criterion_PASS=passed,
+                exact_file_restart=exact_restart,clock_elapsed_minus_label_seconds_exact_fraction=str(clock-F(epochs[-1])),
+                CPU_seconds=process_time()-job_cpu,wall_seconds=perf_counter()-job_wall)
+            np.savez_compressed(output/(job['id']+'.npz'),states=np.array(values),epochs=np.array(epochs))
+            detail['array_SHA256']=sha(output/(job['id']+'.npz'));write(output/(job['id']+'.json'),detail);rows.append(detail)
+            print(job['id'],maximum,'restart',exact_restart,flush=True);budget()
+    except BaseException as exc:failure=dict(type=type(exc).__name__,message=str(exc),traceback=traceback.format_exc())
+    finally:
+        verify_source(p)
+        write(output/'receipt.json',dict(complete=failure is None and len(rows)==len(p['jobs']),failure=failure,jobs=rows,
+            CPU_seconds=process_time()-cpu,wall_seconds=perf_counter()-start,protocol_SHA256=protocol_SHA,
+            source_unchanged=True,runtime_changed=False,physics='Newton two-body; not JPL residuals',
+            files={v.name:sha(v) for v in output.iterdir() if v.is_file()}))
+    if failure:raise RuntimeError(failure['message'])
+
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('mode',choices=('prepare','run'));parser.add_argument('--output',type=Path)
+    args=parser.parse_args()
+    if args.mode=='prepare':prepare()
+    elif args.output is None:parser.error('--output required')
+    else:run(args.output)

@@ -58,3 +58,9 @@ Kuiper ограничения не отменяются новыми орган�
 [Текущая квалификация375](../current-runtime-375-validation.md) содержит свежие
 Strict/holdout/sandbox расчёты и отдельное сравнение с0.3.2. Historical replay
 и current qualification по-прежнему различаются.
+
+[Прицельная проверка рабочего DOP853376](../runtime-reliability-376.md):
+обычные пакеты Python/Rust, e=.5/.95/.99 и два начала; аналитический
+Decimal-эталон, независимый Fraction observer, точный file/process restart.
+Все36 коротких cases сохранены; high-e ошибки не скрыты малым дрейфом энергии.
+Наблюдения IAS15 не считаются дефектами рабочего DOP853.

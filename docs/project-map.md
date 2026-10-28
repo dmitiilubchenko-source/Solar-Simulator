@@ -42,3 +42,7 @@ recovery, пользовательские записи и build/dist — раз
 
 [Квалификация текущего ядра375](current-runtime-375-validation.md): фиксированный
 протокол, реальные Python/Rust jobs, независимый reference и source-bound gate.
+
+[Рабочий DOP853 и надёжность376](runtime-reliability-376.md): путь вычисления,
+границы применимости Research,36 коротких Newton cases, high-e ошибки и точное
+file/process продолжение. Численная диагностика не заменяет JPL qualification.
