@@ -54,3 +54,7 @@ file/process продолжение. Численная диагностика �
 `check-recipe DIRECTORY --reliability` в том же helper показывает проверенный
 пакетный префикс записи, endpoints fingerprints и отдельно текущую совместимость;
 точность траектории и фактический replay из этих сведений не следуют.
+
+[Ограниченный max_step379](runtime-step-379-validation.md): один d32 для
+обычного high-e DOP853; peri-start лучше, apo-start position хуже. NO-GO
+для production, никакого изменения сил/интегратора/пользовательских настроек.
