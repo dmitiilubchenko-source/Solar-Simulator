@@ -1139,6 +1139,7 @@
       "tests/test_real_spin_scales.py",
       "tests/test_recipe.py",
       "tests/test_recipe_gui.py",
+      "tests/test_recipe_reliability.py",
       "tests/test_recovery_journey.py",
       "tests/test_relative_canonical.py",
       "tests/test_relative_canonical_audit.py",

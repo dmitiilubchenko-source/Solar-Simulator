@@ -34,6 +34,7 @@ def main(argv=None):
     view.add_argument('input')
     audit=commands.add_parser('check-recipe',help='Проверить происхождение записи и совместимость окружения')
     audit.add_argument('input')
+    audit.add_argument('--reliability',action='store_true',help='Opt-in: показать проверенную историю пакетов и границы научных утверждений')
     replay=commands.add_parser('replay-trajectory',help='Повторить те же пакеты в новый каталог и сравнить все кадры')
     replay.add_argument('input');replay.add_argument('output')
     compare=commands.add_parser('compare-trajectories',help='Сравнить parent/child на точных общих эпохах (JSON)')
@@ -65,7 +66,11 @@ def main(argv=None):
         if args.command=='check-recipe':
             from .recipe import audit_recipe
             from .trajectory import Trajectory
-            result=audit_recipe(Trajectory(args.input))
+            track=Trajectory(args.input)
+            if args.reliability:
+                from .inspection import recipe_report
+                result=recipe_report(track)
+            else:result=audit_recipe(track)
             print(json.dumps(result,ensure_ascii=False,allow_nan=False))
             return 0 if result['compatible'] else 1
         if args.command=='replay-trajectory':

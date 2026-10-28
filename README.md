@@ -19,6 +19,7 @@ ZIP прошёл локальную приёмку; опубликованный
 
 [Понятная диагностика состояния и границ точности](docs/inspect-reliability.md):
 `inspect FILE --reliability`, без интегрирования и изменения checkpoint.
+История записанных пакетов доступна через `check-recipe DIRECTORY --reliability`.
 
 В dev развивается [фоновое открытие сравнения](docs/trajectory-comparison.md).
 Это изменение после 0.3.2; оно ещё не включено в принятую portable.

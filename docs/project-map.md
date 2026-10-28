@@ -50,3 +50,7 @@ file/process продолжение. Численная диагностика �
 [Понятный отчёт о надёжности](inspect-reliability.md): opt-in расширение
 `inspect` в commands.py и presentation helper inspection.py. Старый cli.report,
 физические diagnostics, recipe, storage и интеграторы сохраняют прежние байты.
+
+`check-recipe DIRECTORY --reliability` в том же helper показывает проверенный
+пакетный префикс записи, endpoints fingerprints и отдельно текущую совместимость;
+точность траектории и фактический replay из этих сведений не следуют.

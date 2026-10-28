@@ -46,6 +46,31 @@ def _qualification(experiment):
             scope='376: 4 фиксированных Newton двухтельных IC, e=.5/.95/.99 с peri/apo, 1 период, 49 эпох; Python/Rust, два rtol и координатных представления. High-e ошибка измерена, универсального допуска нет.')])
 
 
+def _execution(experiment,*,include_native=True):
+    """Explain settings without computing forces, invariants or a trajectory."""
+    settings=experiment.settings
+    dynamic=bool(experiment.rotations)
+    dop=settings.integrator=='dop853'
+    norm=('RotationDOP853: orbit/quaternion/angular-momentum blocks' if dynamic else
+          'PerBodyDOP853' if settings.error_control=='per-body' else 'SciPy global RMS') if dop else None
+    integrator='RotationDOP853 (SciPy)' if dynamic else 'DOP853 (SciPy)' if dop else 'Velocity Verlet'
+    backend_path=('Rust point forces; интегрирование SciPy, модели фигур/вращения Python' if dop and settings.backend=='rust' else
+                  'Python/SciPy' if dop else 'Rust/PyO3 Verlet' if settings.backend=='rust' else 'Python Verlet')
+    adaptive=None
+    if dop:
+        adaptive=dict(rtol=settings.rtol,position_atol_metres=settings.position_atol,
+            velocity_atol_m_per_s=settings.velocity_atol,error_control=settings.error_control,
+            effective_error_norm=norm,relative_pair=list(settings.relative_pair) if settings.relative_pair else None,
+            interpretation='Допуски управляют локальной оценкой solver, не глобальной ошибкой орбиты.')
+        if dynamic:adaptive['rotation_tolerances']=[dict(body=r.body,quaternion_atol=r.quaternion_atol,
+            momentum_atol_kg_m2_s=r.momentum_atol) for r in experiment.rotations]
+    result=dict(integrator=integrator,configured_backend=settings.backend,implementation=backend_path,
+        source='settings for ordinary advance; not attestation of previous calls',past_execution_verified=False)
+    if include_native:result['native']=_native_status(experiment)
+    result['adaptive_controls']=adaptive
+    return result
+
+
 def report(experiment):
     """Return legacy report plus versioned, explicitly requested explanation."""
     result=cli.report(experiment)
@@ -93,26 +118,11 @@ def report(experiment):
         if contacts:limitations.append('Контакты/отскоки/слияния: механическая энергия может меняться; нужны dissipated_energy и model_energy_offset.')
     if not pn:limitations.append('В выбранной ньютоновской модели нет EIH-поправок и приливов; это не полная физическая модель реальных тел.')
     dop=settings.integrator=='dop853'
-    norm=('RotationDOP853: orbit/quaternion/angular-momentum blocks' if dynamic else
-          'PerBodyDOP853' if settings.error_control=='per-body' else 'SciPy global RMS') if dop else None
-    integrator='RotationDOP853 (SciPy)' if dynamic else 'DOP853 (SciPy)' if dop else 'Velocity Verlet'
-    backend_path=('Rust point forces; интегрирование SciPy, модели фигур/вращения Python' if dop and settings.backend=='rust' else
-                  'Python/SciPy' if dop else 'Rust/PyO3 Verlet' if settings.backend=='rust' else 'Python Verlet')
-    adaptive=None
-    if dop:
-        adaptive=dict(rtol=settings.rtol,position_atol_metres=settings.position_atol,
-            velocity_atol_m_per_s=settings.velocity_atol,error_control=settings.error_control,
-            effective_error_norm=norm,relative_pair=list(settings.relative_pair) if settings.relative_pair else None,
-            interpretation='Допуски управляют локальной оценкой solver, не глобальной ошибкой орбиты.')
-        if dynamic:adaptive['rotation_tolerances']=[dict(body=r.body,quaternion_atol=r.quaternion_atol,
-            momentum_atol_kg_m2_s=r.momentum_atol) for r in experiment.rotations]
     detail=dict(schema=1,units=dict(mass='kg',position='m',velocity='m/s',time='s',energy='J',
         momentum='kg*m/s',angular_momentum='kg*m^2/s'),
         model=dict(id=model,description=description,physics=settings.physics,energy_basis=energy_basis,limitations=limitations,
             conservation_scope=result['conservation_scope']),
-        execution=dict(integrator=integrator,configured_backend=settings.backend,implementation=backend_path,
-            source='settings for ordinary advance; not attestation of previous calls',past_execution_verified=False,
-            native=_native_status(experiment),adaptive_controls=adaptive),
+        execution=_execution(experiment),
         time_and_packets=dict(state_time_seconds=experiment.time,configured_dt_seconds=settings.dt,
             dt_role='Базовый интервал пакета: duration=dt*steps; не внутренний шаг solver.' if dop else 'Номинальный шаг Verlet; конечный шаг до заданного времени может быть короче.',
             configured_physical_step_seconds=None if dop else settings.dt,
@@ -133,4 +143,54 @@ def report(experiment):
             status='not_measured_for_this_checkpoint',
             explanation='Дрейф инвариантов не равен ошибке координат/скоростей. Численная ошибка требует независимого эталона или обоснованной процедуры; JPL residual — отдельное сравнение согласованных эпох, осей, шкал времени и моделей.'))
     result['numerical_reliability']=detail
+    return result
+
+
+def recipe_report(trajectory):
+    """Explain a verified recording; never attach history to a loose checkpoint.
+
+    Trajectory owns the verified frame-byte snapshot. read_recipe/audit_recipe
+    retain their existing strict checks; environment mismatch is not corruption.
+    """
+    from .recipe import audit_recipe,read_recipe
+    payload=read_recipe(trajectory)
+    unavailable=None
+    try:result=audit_recipe(trajectory)
+    except (ImportError,RuntimeError) as error:
+        # read_recipe has already verified stored evidence. Its validation
+        # errors (ValueError/OSError) are NOT downgraded to environment failures.
+        unavailable=type(error).__name__
+        result=dict(compatible=False,differences=['current-environment-unavailable'],
+            samples=len(trajectory.times),stable=payload['stable'],
+            unverified_dependencies=None,physical_accuracy_claim=False)
+    first,_=trajectory.frame(0)
+    metadata=trajectory.metadata
+    comparison_differences=None if unavailable else [key for key in result['differences']
+        if key not in ('recording-environment-changed','dependency-inventory-unverified')]
+    result['recording_reliability']=dict(schema=1,units='SI',
+        manifest_status=metadata['status'],confirmed_frame_count=len(trajectory.times),
+        completed_packet_count=len(payload['packet_boundaries_seconds']),
+        packet_boundaries_seconds=payload['packet_boundaries_seconds'],
+        configured_packet_steps=metadata['packet_steps'],
+        start_time_seconds=trajectory.times[0],last_confirmed_time_seconds=trajectory.times[-1],
+        requested_target_seconds=metadata['requested_target_seconds'],
+        requested_target_reached=trajectory.times[-1]==metadata['requested_target_seconds'],
+        time_basis='Секунды от начала опыта, не Unix time. Пакеты — опубликованные пары кадров, включая возможный контакт на той же эпохе.',
+        initial_frame=dict(file=metadata['frames'][0]['file'],sha256=metadata['frames'][0]['sha256'],
+            configured_dt_seconds=first.settings.dt,physics=first.settings.physics,
+            execution=_execution(first,include_native=False)),
+        integrity=dict(status='verified_against_stored_hashes',recipe_schema_version=payload['schema_version'],
+            manifest_sha256=payload['manifest_sha256'],verified_frames=metadata['frames'],
+            scope='Проверены recipe envelope SHA, связь с manifest и SHA/схемы всех загруженных кадров. Это snapshot, не подпись автора и не аттестация исполнения.'),
+        recording_environment=dict(endpoint_fingerprints_equal=payload['stable'],continuous_monitoring_verified=False,
+            scope='Сравнены fingerprints начала и конца записи; изменения с возвратом между ними не исключаются.'),
+        current_environment=dict(status='unavailable' if unavailable else 'compared',failure_type=unavailable,
+            recorded_start_fields_match=None if unavailable else not comparison_differences,
+            fingerprint_differences=comparison_differences,unverified_dependencies=result['unverified_dependencies'],
+            scope='Сравнение с fingerprint_start записи. Изменение кода/среды означает несовместимость строгого replay, а не повреждение кадров.'),
+        reproducibility=dict(strict_replay_preconditions_met=result['compatible'],replay_performed=False,
+            reproduced_prefix=None,message='Проверка условий не заменяет фактическое воспроизведение. Орбиты не интегрировались.'),
+        accuracy=dict(physical_accuracy_claim=False,numerical_accuracy_assessed=False,
+            message='Целостность, совпадение fingerprints и даже успешный replay не доказывают физическую/численную точность.'),
+        unrecorded=dict(internal_steps_seconds=None,rejected_attempts=None,controller_state=None))
     return result
