@@ -46,3 +46,7 @@ recovery, пользовательские записи и build/dist — раз
 [Рабочий DOP853 и надёжность376](runtime-reliability-376.md): путь вычисления,
 границы применимости Research,36 коротких Newton cases, high-e ошибки и точное
 file/process продолжение. Численная диагностика не заменяет JPL qualification.
+
+[Понятный отчёт о надёжности](inspect-reliability.md): opt-in расширение
+`inspect` в commands.py и presentation helper inspection.py. Старый cli.report,
+физические diagnostics, recipe, storage и интеграторы сохраняют прежние байты.

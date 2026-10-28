@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-10-28T15:11:00.444996+00:00",
+  "refs": {
+    "refs/heads/dev": "08d60d92c53ba349ce959c2233297199b759d6ae",
+    "refs/heads/main": "cf653c9ca4b60649e70658b002a5e70669411266",
+    "refs/tags/v0.3.1": "814f359ca8cb399b82ebd52e344cf9c6adca483a",
+    "refs/tags/v0.3.1^{}": "e74d73ed71276771d3177fad207e2dd17ca8894f",
+    "refs/tags/v0.3.2": "fabc702958cfb7ec6f8e3f0fcbd1c3a51a57d816",
+    "refs/tags/v0.3.2^{}": "cf653c9ca4b60649e70658b002a5e70669411266"
+  },
+  "main": {
+    "commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+    "project_version": "0.3.2",
+    "core_version": "0.3.2",
+    "native_version": "0.3.2",
+    "README_heading": "# Solar Simulator 0.3.1",
+    "README_SHA256": "7e9bdc822c7ef3197f7863b2c50863428b88ab4c27577bca47e9dbae337285a6",
+    "docs_README_SHA256": "46e38655df94f92386747b1a9e4a48ff0e9810141aed9b5206aa3584e3365cb5"
+  },
+  "release_evidence": {
+    "path": "docs/release-032-validation.json",
+    "SHA256": "f43c820ab2b883dafdfdaf6353a9e42c3c22b45f0176afb75902979b34678799",
+    "product_acceptance_passed": true,
+    "historical_publication_status": "prepared-in-dev; main/tag require user approval",
+    "artifact": {
+      "filename": "SolarSimulator-0.3.2-20261025-121729.zip",
+      "sha256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49",
+      "bytes": 112312650,
+      "build_seconds": 43.964042399980826,
+      "relocation_seconds": 209.25192199999583,
+      "CRC_passed": true,
+      "package_files_byteexact": 79,
+      "public_archives_byteexact": 4,
+      "private_excluded": true,
+      "research_dependencies_absent": true,
+      "caller_profile_preserved": true,
+      "isolated_runtime_passed": true
+    },
+    "local_artifact_found": true,
+    "local_artifact_SHA256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49"
+  },
+  "github_published_releases": {
+    "endpoint": "https://api.github.com/repos/dmitiilubchenko-source/Solar-Simulator/releases?per_page=100",
+    "tags": [
+      "v0.2.0"
+    ],
+    "drafts_checked": false
+  },
+  "conclusion": "Main and annotated tag v0.3.2 identify accepted 0.3.2 sources; README in that tree is stale. Public GitHub Release v0.3.2 is not listed. Historical prepublication report is unchanged."
+}

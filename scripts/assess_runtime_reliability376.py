@@ -56,11 +56,21 @@ def close_metric(actual,stored,key):
         raise ValueError('Independent raw metric disagreement: '+key)
 
 
-def verify(report_path=REPORT,arrays_path=ARRAYS):
-    proof=read(report_path);protocol=read(PROTOCOL);verify_source(protocol)
+def verify(report_path=REPORT,arrays_path=ARRAYS,*,historical=False):
+    """Current-source check by default; historical replay is explicit and non-qualifying."""
+    if type(historical) is not bool:raise ValueError('historical must be an explicit bool')
+    proof=read(report_path);protocol=read(PROTOCOL)
+    if historical:
+        from scripts.release_history import ui_historical_sha
+        for name,expected in protocol['source_SHA256'].items():
+            if ui_historical_sha(ROOT,name,expected)!=expected:raise ValueError('Historical source changed: '+name)
+        analysis_SHA=ui_historical_sha(ROOT,'scripts/assess_runtime_reliability376.py',proof['analysis_source_SHA256'])
+    else:
+        verify_source(protocol)
+        analysis_SHA=sha(Path(__file__))
     if sha(PROTOCOL)!=proof['protocol_SHA256'] or sha(arrays_path)!=proof['arrays_SHA256']:
         raise ValueError('Protocol/array SHA mismatch')
-    if sha(Path(__file__))!=proof['analysis_source_SHA256']:raise ValueError('Assessment source changed')
+    if analysis_SHA!=proof['analysis_source_SHA256']:raise ValueError('Assessment source changed')
     if [r['job'] for r in proof['runs']]!=protocol['jobs']:raise ValueError('Wrong/missing job list')
     counted=0;maxima=[]
     with np.load(arrays_path,allow_pickle=False) as data:
@@ -79,6 +89,8 @@ def verify(report_path=REPORT,arrays_path=ARRAYS):
                 for k in ('r','v','E','L','P'):close_metric(actual[k],stored[k],f"{job['id']}/{i}/{k}")
             maxima.append(maximum);counted+=len(times)
     return dict(jobs=len(maxima),state_observations=counted,independent_r_v_E_L_P=True,
+        source_mode='historical_replay_only' if historical else 'current_sources',current_runtime_qualified=False,
+        reader_SHA256=sha(Path(__file__)),
         shared_assumptions='Newton/IC/G and stored analytic reference; different Fraction arithmetic, not a second numerical IVP',
         COM_not_ulp_compared='different Decimal120/130 cancellation floors; both identities independently evaluated')
 
@@ -112,6 +124,8 @@ def build(work):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('mode',choices=('build','verify'));parser.add_argument('--work',type=Path)
+    parser.add_argument('--historical',action='store_true',help='Verify archived source provenance and saved arrays only; never qualify current runtime')
     args=parser.parse_args()
+    if args.historical and args.mode!='verify':parser.error('--historical is only valid for saved-data verify')
     if args.mode=='build':build(args.work or ROOT/'.tools/runtime376')
-    else:print(json.dumps(verify()))
+    else:print(json.dumps(verify(historical=args.historical)))

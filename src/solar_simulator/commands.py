@@ -13,12 +13,15 @@ from .branch_io import open_experiment, parent_experiment, save_experiment
 def main(argv=None):
     argv=list(sys.argv[1:] if argv is None else argv)
     names={"run-until","solar-sandbox","branch","export-state","record-trajectory","view-trajectory",
-           "compare-trajectories","view-comparison","check-recipe","replay-trajectory"}
+           "compare-trajectories","view-comparison","check-recipe","replay-trajectory","inspect"}
     if argv and argv[0] not in names and argv[0] not in ("--help","-h"):
         return cli.main(argv)
     parser=argparse.ArgumentParser(description="Solar Simulator — песочница (SI)",
         epilog="Прежние команды: new, run, inspect, converge, gui, fit-orbit; COMMAND --help для параметров.")
     commands=parser.add_subparsers(dest="command",required=True)
+    inspect=commands.add_parser('inspect',help='Диагностика checkpoint; --reliability объясняет модель и ограничения точности')
+    inspect.add_argument('input')
+    inspect.add_argument('--reliability',action='store_true',help='Opt-in: добавить numerical_reliability без интегрирования и оценки глобальной ошибки')
     run=commands.add_parser("run-until",help="Рассчитать вперёд до секунд от начала")
     run.add_argument("input");run.add_argument("output")
     run.add_argument("--time",type=float,required=True)
@@ -51,6 +54,14 @@ def main(argv=None):
     export.add_argument("input");export.add_argument("output")
     args=parser.parse_args(argv)
     try:
+        if args.command=='inspect':
+            experiment,_=open_experiment(args.input)
+            if args.reliability:
+                from .inspection import report
+                values=report(experiment)
+            else:values=cli.report(experiment)
+            print(json.dumps(values,ensure_ascii=False,allow_nan=False,indent=2))
+            return 0
         if args.command=='check-recipe':
             from .recipe import audit_recipe
             from .trajectory import Trajectory
