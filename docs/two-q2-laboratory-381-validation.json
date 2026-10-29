@@ -1,0 +1,282 @@
+{
+  "stage": 381,
+  "base_commit": "638ccf0759aa989d45d0e63d99210023662a5596",
+  "plan_SHA256": "af2fbb1917881af53e3248dc719e7cb142c178ecbd77a883ed3eb2fb0a97e021",
+  "demo_data_SHA256": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+  "exact_initial380_document": true,
+  "source_SHA256": {
+    "src/solar_simulator/app.py": "fa74ec7809fdc2442b6b6ad9de63d4e61e358e0ad67883432cecba8deb3b62fe",
+    "src/solar_simulator/application_profiles.py": "7989d9d633db285313ceb1ed280cd6aa773d92a053a0d327ec211e8e578c7e07",
+    "src/solar_simulator/inspection_view.py": "0c75a57abbe31ee6a7656838327aac3f0b62bdd21a4a6517fe572b4a048d23f1",
+    "src/solar_simulator/data/two-q2-demo380.json": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+    "tests/test_laboratory_rotation.py": "8c77ab0d83183a4f25e7994a7bd2a260980f5763f91e8bc254277da8f5c78464",
+    "tests/test_laboratory_rotation_gui.py": "c501ec78ef86ea976451862b05707600c6b1702ac76accd13216702f231d54e3"
+  },
+  "protected_SHA256": {
+    "src/solar_simulator/nbody_rotation.py": "7cdbf09b398aa467ec5badabcf4428c88dfc62ac81f49b73c988ae8c81c9ce7c",
+    "src/solar_simulator/rotation.py": "245087dc0b1f5cc64e8c3fbbd1c34fe9e8f80266069ceafb8081906f8dfd4f80",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/storage.py": "1fa867fd29f780f7453c8357b5b72ee0c930b5dec671e144c20fabb056a20f1a",
+    "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+    "docs/two-q2-380-initial.json": "a6044603119a9e61824ce2c68c116cd1c2743d5e89a558b687546b917e029e38",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601"
+  },
+  "versions": {
+    "python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.0"
+  },
+  "final_guarded_command": [
+    "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "-p",
+    "scripts.native_audit",
+    "tests/test_laboratory_rotation_gui.py::test_demo_start_pause_stop_save_restore_scenarios_and_read_only_views",
+    "--basetemp=C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\laboratory381-final\\demo-temp",
+    "--junitxml=C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\laboratory381-final\\demo.xml"
+  ],
+  "final_resource_result": {
+    "guard": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 2.015625,
+        "parent_cpu": 0.234375,
+        "private_tree": 114462720,
+        "rss_tree": 60170240,
+        "disk": 159086,
+        "elapsed": 2.0996399000000565
+      },
+      "samples": 38,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 2.09375,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.25,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 346320896,
+      "processes": [
+        {
+          "pid": 25740,
+          "creation_time": 1793262495.3090963,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 4084,
+          "creation_time": 1793262495.3131769,
+          "CPU_seconds": 0.453125,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 3136,
+          "creation_time": 1793262495.696513,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 27268,
+          "creation_time": 1793262495.7003453,
+          "CPU_seconds": 1.625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 217731072,
+      "wall_seconds": 2.152946300000167,
+      "disk_bytes": 159507,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    },
+    "CPU_seconds": 2.34375,
+    "wall_seconds": 2.1568434999999226,
+    "worker_private_peak_sampled": 346320896,
+    "parent_private_final": 12771328,
+    "disk_bytes": 160912,
+    "limitations": "Existing50ms polling, retained Windows handles final CPU; private memory sampled, parent final. No OS hard quota; transient peaks possible.",
+    "complete": true,
+    "plan_SHA256": "af2fbb1917881af53e3248dc719e7cb142c178ecbd77a883ed3eb2fb0a97e021",
+    "within_budget": true
+  },
+  "previous_resource_result": {
+    "guard": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 1.953125,
+        "parent_cpu": 0.21875,
+        "private_tree": 114434048,
+        "rss_tree": 59564032,
+        "disk": 183619,
+        "elapsed": 2.051994999999806
+      },
+      "samples": 37,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 2.046875,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 0.21875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 343547904,
+      "processes": [
+        {
+          "pid": 19140,
+          "creation_time": 1793262362.4246395,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 17736,
+          "creation_time": 1793262362.429885,
+          "CPU_seconds": 0.40625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 27456,
+          "creation_time": 1793262362.807586,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 22636,
+          "creation_time": 1793262362.811164,
+          "CPU_seconds": 1.609375,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 219013120,
+      "wall_seconds": 2.1095252999998593,
+      "disk_bytes": 184040,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    },
+    "CPU_seconds": 2.28125,
+    "wall_seconds": 2.1118695999998636,
+    "worker_private_peak_sampled": 343547904,
+    "parent_private_final": 13422592,
+    "disk_bytes": 185460,
+    "limitations": "Existing50ms polling, retained Windows handles final CPU; private memory sampled, parent final. No OS hard quota; transient peaks possible.",
+    "complete": true,
+    "plan_SHA256": "af2fbb1917881af53e3248dc719e7cb142c178ecbd77a883ed3eb2fb0a97e021",
+    "within_budget": true
+  },
+  "sum_guarded_CPU_seconds": 4.625,
+  "sum_guarded_wall_seconds": 4.268713099999786,
+  "sum_guarded_artifact_bytes": 346372,
+  "independent_initial_angular_velocity": [
+    {
+      "body": "A",
+      "omega_rad_per_second": [
+        -9.153243203947896e-05,
+        -0.0007899349138338282,
+        0.0018486818671126953
+      ],
+      "independent_inertia_solve_rad_per_second": [
+        -9.153243203947898e-05,
+        -0.0007899349138338281,
+        0.001848681867112695
+      ],
+      "maximum_absolute_difference": 2.168404344971009e-19,
+      "raw_q_unchanged": true,
+      "raw_S_unchanged": true
+    },
+    {
+      "body": "B",
+      "omega_rad_per_second": [
+        0.0011204601606449145,
+        -6.116792106798708e-05,
+        0.0012652381253502414
+      ],
+      "independent_inertia_solve_rad_per_second": [
+        0.001120460160644914,
+        -6.116792106798705e-05,
+        0.0012652381253502414
+      ],
+      "maximum_absolute_difference": 4.336808689942018e-19,
+      "raw_q_unchanged": true,
+      "raw_S_unchanged": true
+    }
+  ],
+  "original380_FAIL": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    }
+  ],
+  "compatibility": {
+    "cases": 8,
+    "snapshots": 24,
+    "byte_exact": true,
+    "command": "python -B -m scripts.check_two_q2_compatibility380"
+  },
+  "accuracy": {
+    "physics_unchanged": true,
+    "integrator_unchanged": true,
+    "global_error_not_measured": true,
+    "current375_gate_unchanged": true,
+    "current375_qualification": false
+  },
+  "failures_retained": [
+    "Initial GUI inherited batch20 and advanced1000s instead of50; new demo explicitly batch1,target200.",
+    "New snapshot capture originally created Toplevel before codec failure; red test preserved; validate detached document before window creation."
+  ],
+  "scope": "Functional GUI/read-only SI demo. No scientific matrix, annual JPL or qualified-native rebuild. Regression tests and own SI cross-check are not external peer review.",
+  "regressions": {
+    "python_suite": {
+      "passed": 659,
+      "deselected": 4,
+      "seconds": 12.5
+    },
+    "desktop_native_suite": {
+      "passed": 164,
+      "skipped": 0,
+      "seconds": 154.69
+    },
+    "rust_core": {
+      "passed": 19
+    },
+    "cargo_fmt_core_native": "passed",
+    "related_view_gui_inspect": {
+      "passed": 44,
+      "seconds": 11.01
+    },
+    "related_history": {
+      "passed": 25,
+      "seconds": 8.46
+    },
+    "documentation": {
+      "passed": 19,
+      "seconds": 0.96
+    },
+    "full_check_project": "not_run",
+    "new_portable_acceptance": "not_run",
+    "new_annual_JPL": "not_run"
+  },
+  "local_test_log_SHA256": {
+    ".tools/laboratory381/first-failing.xml": "63d69a8a7964737c8f91fc9cc8f09a4bc096dcff2e83c7a98ec1b51ed79068f8",
+    ".tools/laboratory381/gui-initial.xml": "8cb66468e3a9e5e1996ddf56e88a19e1f1507aad160bef0d550776afaa0e905d",
+    ".tools/laboratory381/snapshot-failing.xml": "3d336fa2d5ed96835bff326f430619bf1e524f88c5cb67ff3c50b291a0a61175",
+    ".tools/laboratory381/snapshot-fixed.xml": "8c77ff2cd53f0e68fadfcec1e7c2a6f7d2393d2fc032aecec541b5e7a476ae1c",
+    ".tools/laboratory381/python-suite.log": "ba4788f186ed4261712f68cdb87609828132dd9cfb165e7d30c2840d04c00bcd",
+    ".tools/laboratory381/desktop-suite.log": "3663cbd4a7f15235cd10c5c16c71753c7e4876e9c1224a68c2dc2fdbb0d9b453"
+  }
+}

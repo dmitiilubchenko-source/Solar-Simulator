@@ -1,0 +1,39 @@
+{
+  "stage": 381,
+  "base_commit": "638ccf0759aa989d45d0e63d99210023662a5596",
+  "source_plan": "scripts/two-q2-380-plan.json",
+  "source_plan_SHA256": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+  "data": "src/solar_simulator/data/two-q2-demo380.json",
+  "data_SHA256": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+  "contract": [
+    "Exact380 two-body initial document, backend selection only; no script imports in application",
+    "Existing GUI load/start/pause/stop/save/restore/reset and scenario switch; cancel without state/settings/q/S writes",
+    "Read-only physical snapshot: scalar-first body-to-inertial q, inertial S kg*m^2/s, inertial omega rad/s",
+    "Reuse inspection.report numerical_reliability without integration or error oracle; independent snapshot copied via storage codec",
+    "Projected principal axes with bounding-radius-length red/green/blue I1/I2/I3, no shape inference or new3D",
+    "Zero/one/two-spin compatibility; missing-native/cancel/read errors explicit;3historicFAIL380 retained"
+  ],
+  "demo": {
+    "backend": "python",
+    "duration_seconds": 200,
+    "packet_dt_seconds": 50,
+    "packets": 4,
+    "start_pause": "one pending packet, pause waits; same serialized states before and after viewer actions"
+  },
+  "budget": {
+    "CPU_seconds": 60,
+    "wall_seconds": 120,
+    "private_bytes": 1073741824,
+    "artifact_bytes": 33554432
+  },
+  "unchanged_SHA256": {
+    "src/solar_simulator/nbody_rotation.py": "7cdbf09b398aa467ec5badabcf4428c88dfc62ac81f49b73c988ae8c81c9ce7c",
+    "src/solar_simulator/rotation.py": "245087dc0b1f5cc64e8c3fbbd1c34fe9e8f80266069ceafb8081906f8dfd4f80",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/storage.py": "1fa867fd29f780f7453c8357b5b72ee0c930b5dec671e144c20fabb056a20f1a",
+    "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+    "docs/two-q2-380-initial.json": "a6044603119a9e61824ce2c68c116cd1c2743d5e89a558b687546b917e029e38",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601"
+  }
+}

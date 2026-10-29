@@ -63,3 +63,8 @@ file/process продолжение. Численная диагностика �
 усечённый M-Q Hamiltonian без Q2-Q2, два q/S, schema10 save/resume, независимые
 градиенты/матричный RK45. Старые0/1 сохраняются. Три packet convergence FAIL
 сохранены; непрерывный контроль сходится. Current375 gate новому коду отказывает.
+
+[Laboratory381](two-q2-laboratory.md): package resource точных synthetic380 IC,
+готовый профиль, оси на существующих2Dпроекциях, read-only q/S/ω и доступ к
+inspection.report через существующий async-loader lifecycle. Физика/CLI/schema
+не менялись; PRESETS остаются базовыми сценариями, demo — отдельная кнопка.

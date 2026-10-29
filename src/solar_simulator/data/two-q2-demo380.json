@@ -1,0 +1,221 @@
+{
+  "schema_version": 10,
+  "units": "SI",
+  "model": "newtonian-dop853-dynamic-q2",
+  "settings": {
+    "dt": 50.0,
+    "backend": "python",
+    "contact_mode": "stop",
+    "restitution": 1.0,
+    "integrator": "dop853",
+    "rtol": 1e-11,
+    "position_atol": 1e-07,
+    "velocity_atol": 1e-11,
+    "physics": "newtonian",
+    "figures": [],
+    "relative_pair": [
+      "A",
+      "B"
+    ],
+    "error_control": "per-body"
+  },
+  "initial": [
+    {
+      "name": "A",
+      "mass": 1000000000000000.0,
+      "radius": 0.0,
+      "position": [
+        -1900.0,
+        -200.0,
+        50.0
+      ],
+      "velocity": [
+        0.02,
+        -0.43499999999999994,
+        -0.028333333333333332
+      ],
+      "spin": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "B",
+      "mass": 200000000000000.0,
+      "radius": 0.0,
+      "position": [
+        10100.0,
+        -200.0,
+        50.0
+      ],
+      "velocity": [
+        0.02,
+        2.115,
+        0.1716666666666667
+      ],
+      "spin": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "bodies": [
+    {
+      "name": "A",
+      "mass": 1000000000000000.0,
+      "radius": 0.0,
+      "position": [
+        -1900.0,
+        -200.0,
+        50.0
+      ],
+      "velocity": [
+        0.02,
+        -0.43499999999999994,
+        -0.028333333333333332
+      ],
+      "spin": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "B",
+      "mass": 200000000000000.0,
+      "radius": 0.0,
+      "position": [
+        10100.0,
+        -200.0,
+        50.0
+      ],
+      "velocity": [
+        0.02,
+        2.115,
+        0.1716666666666667
+      ],
+      "spin": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "time": 0.0,
+  "dissipated_energy": 0.0,
+  "halted": false,
+  "model_energy_offset": 0.0,
+  "orientation_work": 0.0,
+  "events": [],
+  "origin": null,
+  "initial_rotations": [
+    {
+      "body": "A",
+      "figure": {
+        "mass": 1000000000000000.0,
+        "moments": [
+          2e+20,
+          2.5e+20,
+          3e+20
+        ],
+        "bounding_radius": 1000.0
+      },
+      "quaternion": [
+        0.9639684818261637,
+        0.148194058982302,
+        -0.09879603932153468,
+        0.19759207864306935
+      ],
+      "angular_momentum": [
+        -4.0585934316258856e+16,
+        -2.317171873231913e+17,
+        5.545808570755985e+17
+      ],
+      "quaternion_atol": 1e-13,
+      "momentum_atol": 60241.18192731614,
+      "provenance": "synthetic rigid Q2 validation380:A"
+    },
+    {
+      "body": "B",
+      "figure": {
+        "mass": 200000000000000.0,
+        "moments": [
+          3e+19,
+          4e+19,
+          5e+19
+        ],
+        "bounding_radius": 900.0
+      },
+      "quaternion": [
+        0.9757238626644188,
+        -0.12398684771443423,
+        0.1735815868002079,
+        0.04959473908577369
+      ],
+      "angular_momentum": [
+        4.4106046920778936e+16,
+        1118425702209694.2,
+        6.635062734421343e+16
+      ],
+      "quaternion_atol": 1e-13,
+      "momentum_atol": 7968.061244744546,
+      "provenance": "synthetic rigid Q2 validation380:B"
+    }
+  ],
+  "rotations": [
+    {
+      "body": "A",
+      "figure": {
+        "mass": 1000000000000000.0,
+        "moments": [
+          2e+20,
+          2.5e+20,
+          3e+20
+        ],
+        "bounding_radius": 1000.0
+      },
+      "quaternion": [
+        0.9639684818261637,
+        0.148194058982302,
+        -0.09879603932153468,
+        0.19759207864306935
+      ],
+      "angular_momentum": [
+        -4.0585934316258856e+16,
+        -2.317171873231913e+17,
+        5.545808570755985e+17
+      ],
+      "quaternion_atol": 1e-13,
+      "momentum_atol": 60241.18192731614,
+      "provenance": "synthetic rigid Q2 validation380:A"
+    },
+    {
+      "body": "B",
+      "figure": {
+        "mass": 200000000000000.0,
+        "moments": [
+          3e+19,
+          4e+19,
+          5e+19
+        ],
+        "bounding_radius": 900.0
+      },
+      "quaternion": [
+        0.9757238626644188,
+        -0.12398684771443423,
+        0.1735815868002079,
+        0.04959473908577369
+      ],
+      "angular_momentum": [
+        4.4106046920778936e+16,
+        1118425702209694.2,
+        6.635062734421343e+16
+      ],
+      "quaternion_atol": 1e-13,
+      "momentum_atol": 7968.061244744546,
+      "provenance": "synthetic rigid Q2 validation380:B"
+    }
+  ]
+}

@@ -14,7 +14,8 @@ def qualified_checkout(tmp_path):
     """Reconstruct the EXACT qualified375 sources, never qualify changed ROOT."""
     import hashlib
     from zipfile import ZipFile
-    from scripts.release_history import ROTATION_ARCHIVE,ROTATION_ARCHIVE_SHA,ROTATION_FILES
+    from scripts.release_history import (ROTATION_ARCHIVE,ROTATION_ARCHIVE_SHA,ROTATION_FILES,
+        LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES)
     current = json.loads((ROOT/CURRENT_RECEIPT).read_bytes())
     paths = {CURRENT_RECEIPT,current['protocol'],current['array_archive'],
              *current['source_sha256'],*current['input_sha256']}
@@ -23,11 +24,14 @@ def qualified_checkout(tmp_path):
         destination.parent.mkdir(parents=True,exist_ok=True)
         expected=current['source_sha256'].get(name)
         if expected is not None and hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
-            raw=(ROOT/ROTATION_ARCHIVE).read_bytes()
-            assert name in ROTATION_FILES and hashlib.sha256(raw).hexdigest()==ROTATION_ARCHIVE_SHA
-            with ZipFile(ROOT/ROTATION_ARCHIVE) as archive:old=archive.read(name)
-            assert hashlib.sha256(old).hexdigest()==expected
-            destination.write_bytes(old)
+            for archive_name,digest,names in ((LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES),
+                    (ROTATION_ARCHIVE,ROTATION_ARCHIVE_SHA,ROTATION_FILES)):
+                if name not in names:continue
+                raw=(ROOT/archive_name).read_bytes();assert hashlib.sha256(raw).hexdigest()==digest
+                with ZipFile(ROOT/archive_name) as archive:old=archive.read(name)
+                if hashlib.sha256(old).hexdigest()==expected:
+                    destination.write_bytes(old);break
+            else:raise AssertionError('Exact qualified375 source unavailable:'+name)
         else:shutil.copy2(ROOT/name,destination)
     return tmp_path
 

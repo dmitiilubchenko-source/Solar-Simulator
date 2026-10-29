@@ -83,3 +83,7 @@ high99 условия376, uncapped exact controls, независимые ана
 независимые производные потенциала и scaled matrix/body-Pi RK45, synthetic
 2/3body, старые0/1byte-exact. Сохранены3FAIL пакетной сходимости и отдельный
 непрерывный контроль. Новые SHA не наследуют current375 annual qualification.
+
+[Практическая демонстрация381](../two-q2-laboratory.md): GUI lifecycle0/1/2фигуры,
+точные380IC, SI/omega solve, проекции, неизменность состояния при просмотре и
+отмене, bounded200s demo. Это функциональная проверка, не новая аттестация физики.

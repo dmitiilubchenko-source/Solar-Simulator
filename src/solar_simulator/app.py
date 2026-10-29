@@ -112,6 +112,8 @@ class Laboratory:
         self.scenario_info_widget.pack(fill="x",padx=12,pady=3)
         quick=ControlRow(self.root); quick.pack(fill="x",padx=8)
         self._button(quick,"Луна: свободное вращение",self._open_lunar_rotation)
+        self._button(quick,"Две Q2-фигуры — учебный",self._open_two_q2)
+        self._button(quick,"Вращение и надёжность…",self._show_inspection)
         self._combo(quick,'Солн. профиль',self.solar_profile,('standard','strict'),width=9)
         self._button(quick,"Солнечная система: EIH + J2",self._open_solar_sandbox)
         self.settings_button=self._button(quick,"Настройки расчёта",self._toggle_settings)
@@ -305,6 +307,17 @@ class Laboratory:
         self._replace_experiment(prepared)
         self.scenario.set("solar-system-moon")
 
+    def _open_two_q2(self):
+        from .application_profiles import two_q2_demo
+        self._replace_experiment(two_q2_demo(backend=self.backend.get()))
+        self.batch.set('1');self.target.set('200')
+
+    def _show_inspection(self):
+        from .storage import to_document
+        from .inspection_view import InspectionLoader
+        document=to_document(self.experiment)
+        return InspectionLoader(tk.Toplevel(self.root),document)
+
     def _reset(self):
         self._replace_experiment(reset(self.experiment),parent_snapshot=self.parent_snapshot)
 
@@ -372,6 +385,10 @@ class Laboratory:
         from .solar_profiles import profile_text
         text=profile_text(self.experiment)
         self.model_info.set(self.origin_info+(' '+text if text else ''))
+        if self.experiment.rotations:
+            from .inspection_view import ROTATION_SCOPE,AXES_DESCRIPTION
+            self.model_info.set(self.model_info.get()+f' Динамических фигур: {len(self.experiment.rotations)}. '
+                +ROTATION_SCOPE+' '+AXES_DESCRIPTION)
 
     def _record(self):
         self.frames.append({b.name:(b.position.x,b.position.y,b.position.z) for b in self.experiment.bodies})
@@ -508,6 +525,20 @@ class Laboratory:
         if not hasattr(self,"_plot_artists"):
             self._plot_artists=PlotArtists(self.orbit,self.energy)
         self._plot_artists.update(self.frames,names,reference_name,(x,y),self.energies)
+        if self.experiment.rotations:
+            from matplotlib.collections import LineCollection
+            from .inspection_view import projected_axes
+            if not hasattr(self,'_principal_axes'):
+                self._principal_axes=LineCollection([],linewidths=1.4,zorder=4)
+                self.orbit.add_collection(self._principal_axes)
+            segments=projected_axes(self.experiment,names,reference_name,(x,y))
+            self._principal_axes.set_segments(segments)
+            self._principal_axes.set_color(['#c43c39','#2c8a4b','#376bc2']*(len(segments)//3))
+            if segments:
+                self.orbit.update_datalim([point for segment in segments for point in segment])
+                self.orbit.autoscale_view()
+        elif hasattr(self,'_principal_axes'):
+            self._principal_axes.remove();del self._principal_axes
         self.orbit.set_xlabel(f"{'XYZ'[x]}, м"); self.orbit.set_ylabel(f"{'XYZ'[y]}, м")
         self.orbit.set_aspect("equal",adjustable="datalim")
         self.orbit.grid(alpha=.25)
