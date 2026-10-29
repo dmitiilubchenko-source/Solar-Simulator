@@ -1,5 +1,4 @@
 """Independent observations of saved new runs; never manufacture a qualification."""
-from copy import deepcopy
 import hashlib
 import json
 from math import dist
@@ -9,8 +8,8 @@ import re
 import numpy as np
 import pytest
 
-from scripts.sandbox_checks.accept_sandbox import ROOT, CURRENT_RECEIPT, CURRENT_RECEIPT_SHA, check_receipts
-from test_sandbox_acceptance import qualified_checkout
+from scripts.sandbox_checks.accept_sandbox import ROOT, CURRENT_RECEIPT, CURRENT_RECEIPT_SHA, check_receipts,audit_receipt_inputs
+from test_sandbox_acceptance import historical_checkout
 
 
 def evidence():
@@ -101,23 +100,34 @@ def test_compute_and_assessment_dependencies_are_bound():
 
 @pytest.mark.parametrize('target',[CURRENT_RECEIPT,'scripts/current-runtime-375-protocol.json',
     'scripts/validation/current-runtime-375.npz','src/solar_simulator/_numbers.py'])
-def test_single_evidence_or_dependency_corruption_rejected(qualified_checkout,target):
-    assert check_receipts(qualified_checkout)['current_qualification_passed']
-    path=qualified_checkout/target
+def test_single_evidence_or_dependency_corruption_rejected(historical_checkout,target):
+    assert audit_receipt_inputs(historical_checkout)['source_inputs_intact']
+    path=historical_checkout/target
     path.write_bytes(path.read_bytes()+b'changed')
     with pytest.raises(ValueError,match='changed: '+re.escape(target)):
-        check_receipts(qualified_checkout)
+        check_receipts(historical_checkout)
 
 
-def test_changed_native_environment_cannot_reuse_qualification(qualified_checkout,monkeypatch):
-    import solar_simulator.recipe as recipe
-    assert check_receipts(qualified_checkout)['current_qualification_passed']
-    original=recipe.runtime_fingerprint
-    def altered(backend):
-        value=deepcopy(original(backend))
-        first=next(iter(value['native']['files']))
-        value['native']['files'][first]='0'*64
-        return value
-    monkeypatch.setattr(recipe,'runtime_fingerprint',altered)
+def test_changed_real_environment_cannot_reuse_qualification(historical_checkout,monkeypatch):
+    receipt=audit_receipt_inputs(historical_checkout)['historical_receipt']
+    recorded=receipt['environment']['numerical_environment']['OMP_NUM_THREADS']
+    monkeypatch.setenv('OMP_NUM_THREADS','2' if recorded!='2' else '3')
     with pytest.raises(ValueError,match='environment/native changed'):
-        check_receipts(qualified_checkout)
+        check_receipts(historical_checkout)
+
+
+def test_strict_gate_accepts_only_an_actual_matching_environment(historical_checkout):
+    from solar_simulator.recipe import runtime_fingerprint
+    receipt=audit_receipt_inputs(historical_checkout)['historical_receipt']
+    actual=runtime_fingerprint('rust');actual.pop('package_files')
+    if actual==receipt['environment']:
+        assert check_receipts(historical_checkout)['current_qualification_passed']
+    else:
+        with pytest.raises(ValueError,match='environment/native changed'):check_receipts(historical_checkout)
+
+
+def test_missing_native_cannot_produce_qualification(historical_checkout,monkeypatch):
+    import solar_simulator.recipe as recipe
+    def absent(*a):raise ImportError('controlled missing native')
+    monkeypatch.setattr(recipe,'_native',absent)
+    with pytest.raises(ImportError,match='missing native'):check_receipts(historical_checkout)

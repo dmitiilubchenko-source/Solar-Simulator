@@ -506,6 +506,7 @@
       "examples/sun_earth.py"
     ],
     "frozen_validation": [
+      "scripts/validation/ci-before382.zip",
       "scripts/validation/current-runtime-375.npz",
       "scripts/validation/de441-header.441",
       "scripts/validation/eih_scalar.rs",
@@ -1020,6 +1021,7 @@
       "tests/test_canonical_solar.py",
       "tests/test_catalog_figures.py",
       "tests/test_chart_current.py",
+      "tests/test_ci_portability.py",
       "tests/test_cli.py",
       "tests/test_collisions.py",
       "tests/test_comparison.py",

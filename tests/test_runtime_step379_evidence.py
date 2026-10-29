@@ -8,6 +8,7 @@ from pathlib import Path
 
 import numpy as np
 import pytest
+from scripts.release_history import evidence_path
 
 ROOT=Path(__file__).resolve().parents[1]
 REPORT=ROOT/'docs/runtime-step-379-validation.json'
@@ -21,7 +22,7 @@ def verify_saved(report,path=ARRAYS):
     if digest(plan_path)!=report['plan_SHA256']:raise ValueError('Plan SHA mismatch')
     plan=json.loads(plan_path.read_bytes())
     for name,sha in plan['input_SHA256'].items():
-        if digest(ROOT/name)!=sha:raise ValueError('Historical input SHA mismatch')
+        if digest(evidence_path(ROOT,name))!=sha:raise ValueError('Historical input SHA mismatch')
     reference=json.loads((ROOT/'docs/runtime-reliability-376-validation.json').read_bytes())['references']
     if [(r['job'],r['variant']) for r in report['runs']]!=[(j,v) for v in plan['variants'] for j in plan['jobs']]:
         raise ValueError('Missing or duplicate rows')

@@ -3,6 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 import numpy as np
+from scripts.release_history import evidence_path
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -30,7 +31,7 @@ def audit(root=ROOT):
     assert r['plan_SHA256']==digest(root/'scripts/two-q2-380-completion-plan.json')
     assert first['plan_SHA256']==digest(root/'scripts/two-q2-380-plan.json')
     for name in ('result','arrays','original_plan'):
-        assert digest(root/continuation[name])==continuation[name+'_SHA256']
+        assert digest(evidence_path(root,continuation[name]))==continuation[name+'_SHA256']
     assert r['arrays_SHA256']==digest(root/'scripts/validation/two-q2-380.npz')
     assert first['arrays_SHA256']==digest(root/'scripts/validation/two-q2-380-initial.npz')
     assert r['failure'] is None and len(r['rows'])==12 and len(r['continuous_convergence'])==2

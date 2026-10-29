@@ -1,7 +1,7 @@
 """Explicit 0.3.0 evidence mapping; historical replay never certifies the current product."""
 import hashlib
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 from zipfile import ZipFile
 
 MANIFEST = 'scripts/validation/release032-history.json'
@@ -11,6 +11,17 @@ ARCHIVE = 'scripts/validation/release030-sources.zip'
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
+
+
+def evidence_path(root,name):
+    """Resolve an internal recorded path on either OS without changing its bytes."""
+    if not isinstance(name,str):raise ValueError('Expected internal evidence path')
+    win=PureWindowsPath(name);relative=PurePosixPath(name.replace('\\','/'))
+    if not name or win.drive or win.root or relative.is_absolute() or '..' in relative.parts:
+        raise ValueError('Evidence path escapes checkout: '+name)
+    root=Path(root).resolve();source=root.joinpath(*relative.parts).resolve()
+    if not source.is_relative_to(root):raise ValueError('Evidence path escapes checkout: '+name)
+    return source
 
 
 def historical_sha(root, name, expected, *, cargo=False):
@@ -82,6 +93,12 @@ LABORATORY_ARCHIVE_SHA = 'b840ba94506142266f71eb8b6fa62825eb94a28bc754ac941978af
 LABORATORY_FILES = ('src/solar_simulator/app.py','src/solar_simulator/application_profiles.py',
     'scripts/release_history.py','tests/test_sandbox_acceptance.py')
 
+CI_ARCHIVE = 'scripts/validation/ci-before382.zip'
+CI_ARCHIVE_SHA = 'a2b6a165f1c333a903fd7be4c5a3d2da2e8bf92b95ca9de7f24e1e065f89d078'
+CI_FILES = ('scripts/release_history.py','scripts/sandbox_checks/accept_sandbox.py',
+    'scripts/assess_two_q2_380.py','tests/test_runtime_step379_evidence.py',
+    'tests/test_current_runtime_qualification.py','tests/test_sandbox_acceptance.py')
+
 
 def ui_historical_sha(root,name,expected):
     """Exact historical evidence only; never authorize a live worker."""
@@ -92,6 +109,7 @@ def ui_historical_sha(root,name,expected):
     if actual==expected:return actual
     from io import BytesIO
     for archive_name, archive_sha, names in (
+            (CI_ARCHIVE, CI_ARCHIVE_SHA, CI_FILES),
             (LABORATORY_ARCHIVE, LABORATORY_ARCHIVE_SHA, LABORATORY_FILES),
             (ROTATION_ARCHIVE, ROTATION_ARCHIVE_SHA, ROTATION_FILES),
             (INSPECTION_ARCHIVE, INSPECTION_ARCHIVE_SHA, INSPECTION_FILES),
@@ -137,8 +155,8 @@ HISTORY_FILES = ('scripts/assess_nominal_jpl.py',
  'tests/test_sandbox_demo.py',
  'tests/test_sandbox_models.py',
  'tests/test_time_control.py')
-HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES) | set(INSPECTION_FILES) | set(ROTATION_FILES) | set(LABORATORY_FILES)
-HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE, INSPECTION_ARCHIVE, ROTATION_ARCHIVE, LABORATORY_ARCHIVE)
+HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES) | set(INSPECTION_FILES) | set(ROTATION_FILES) | set(LABORATORY_FILES) | set(CI_FILES)
+HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE, INSPECTION_ARCHIVE, ROTATION_ARCHIVE, LABORATORY_ARCHIVE, CI_ARCHIVE)
 
 
 def verify_checkpoint_history(checkpoint, root):

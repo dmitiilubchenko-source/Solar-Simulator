@@ -17,6 +17,7 @@ SUITES={
         'tests/test_runtime_step379_evidence.py',
         'tests/test_two_q2.py','tests/test_two_q2_evidence.py',
         'tests/test_laboratory_rotation.py',
+        'tests/test_ci_portability.py',
         'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
         'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_release_ui_history.py','tests/test_ias15_archive_source.py',
         'tests/test_ias15_full_state.py',

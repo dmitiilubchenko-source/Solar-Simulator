@@ -22,8 +22,8 @@ CURRENT_RECEIPT = "docs/current-runtime-375-validation.json"
 CURRENT_RECEIPT_SHA = "e7d8d97f0a17a142cb4cc1203792fd8cc174fe0bc61a403538de9a524a42f9d6"
 
 
-def check_receipts(root=ROOT):
-    """Require new measured evidence and exact current sources/environment.
+def audit_receipt_inputs(root=ROOT):
+    """Verify historical source/data integrity; never qualify this environment.
 
     Historical grid/Strict reports are immutable inputs, not today's source
     authorization. No historical source resolver is used here.
@@ -45,16 +45,27 @@ def check_receipts(root=ROOT):
             or receipt["solver_executed"] is not True or receipt["failed_criteria"]
             or not receipt["gates"] or any(type(v) is not bool or not v for v in receipt["gates"].values())):
         raise ValueError("Current qualification failed")
-    from solar_simulator.recipe import runtime_fingerprint
-    environment = runtime_fingerprint("rust")
-    environment.pop("package_files")  # Executed modules/data are checked above against root.
-    if environment != receipt["environment"]:
-        raise ValueError("Qualified numerical environment/native changed")
     failed = json.loads((root/"docs/qualification-grid-validation.json").read_bytes())
     strict = json.loads((root/"docs/strict-profile-validation.json").read_bytes())
     if (failed["checks_passed"] is not False or strict["checks_passed"] is not True
             or receipt["original_failure_retained"] is not True):
         raise ValueError("Original failure or historical Strict qualification changed")
+    return dict(source_inputs_intact=True,current_environment_checked=False,
+        current_qualification_passed=False,historical_receipt=receipt)
+
+
+def check_receipts(root=ROOT):
+    """Strict gate: exact sources/data AND the real qualified environment.
+
+    The source-only audit above cannot authorize any current runtime. No
+    historical resolver, permissive switch or substituted fingerprint is used.
+    """
+    receipt=audit_receipt_inputs(root)['historical_receipt']
+    from solar_simulator.recipe import runtime_fingerprint
+    environment = runtime_fingerprint("rust")
+    environment.pop("package_files")
+    if environment != receipt["environment"]:
+        raise ValueError("Qualified numerical environment/native changed")
     return dict(current_qualification_passed=True, original_failure_retained=True,
         new_jpl_epochs_checked=receipt["jpl_new_epochs_checked"],
         reports=[CURRENT_RECEIPT,"docs/qualification-grid-validation.json",
