@@ -68,3 +68,7 @@ file/process продолжение. Численная диагностика �
 готовый профиль, оси на существующих2Dпроекциях, read-only q/S/ω и доступ к
 inspection.report через существующий async-loader lifecycle. Физика/CLI/schema
 не менялись; PRESETS остаются базовыми сценариями, demo — отдельная кнопка.
+
+[Аудит382](integrity-ci-382.md) и [план квалификации0.3.3](qualification-033-plan.md):
+сохранность после документального отката, CI portability/source integrity,
+отдельный строгий source/environment-bound gate и ещё не выполненный release plan.

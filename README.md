@@ -10,6 +10,10 @@ ZIP прошёл локальную приёмку; опубликованный
 [CI ветки dev](https://github.com/dmitiilubchenko-source/Solar-Simulator/actions?query=branch%3Adev).
 Экспериментальные IAS15 и Rust DOP853 не заменяют рабочий SciPy runtime.
 
+[Аудит сохранности и CI382](docs/integrity-ci-382.md): source CI проверяет
+переносимость и отказ на чужом окружении; его успех не заменяет строгую
+source/environment-bound научную квалификацию. [План0.3.3](docs/qualification-033-plan.md).
+
 Настольная гравитационная лаборатория на Python и Rust:
 взаимное движение N тел в 3D, проекции XY/XZ/YZ, траектории,
 диагностика, контакты сфер, отскоки, слияния и контрольные точки.

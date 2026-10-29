@@ -1,0 +1,130 @@
+{
+  "date": "2026-10-29",
+  "scope": "Solar-Simulator only; initial A read-only before CI fixes",
+  "initial_local_HEAD": "9d00a5c5b9507ab246e6a565d46a3dea6cf777bc",
+  "after_fetch_origin_dev": "4dc6320038fe300032d9390cbcb9d9e31f7ddefc",
+  "base_trees_identical": "664ee5fa573537b051a25480222b6b30faf54b5d",
+  "initial_actual_tracked_blobs_checked": 1217,
+  "initial_actual_tracked_blob_mismatches": 0,
+  "initial_worktrees": 1,
+  "initial_staged_unstaged_untracked": [],
+  "initial_unpublished_local_commits": [],
+  "suspicious_commits": {
+    "243845845a7c888dd7ed93c3492580fc3423bf72": {
+      "README.md": "+1",
+      "docs/solar-research-status-20261029.md": "+55"
+    },
+    "4dc6320038fe300032d9390cbcb9d9e31f7ddefc": "Exact inverse; both commits retained"
+  },
+  "ignored_inventory_files": 193642,
+  "ignored_recent_changes_after_2026_10_29_15_35_Moscow": 0,
+  "ignored_limit": "Metadata inventory only; no complete old hash manifest, no deletion or arbitrary external-device proof",
+  "external_current_directory": "Separate unborn Git with9old untracked review/notes entries; left unchanged",
+  "protected_before_after_SHA256": {
+    "src/solar_simulator/app.py": "fa74ec7809fdc2442b6b6ad9de63d4e61e358e0ad67883432cecba8deb3b62fe",
+    "src/solar_simulator/application_profiles.py": "7989d9d633db285313ceb1ed280cd6aa773d92a053a0d327ec211e8e578c7e07",
+    "src/solar_simulator/inspection_view.py": "0c75a57abbe31ee6a7656838327aac3f0b62bdd21a4a6517fe572b4a048d23f1",
+    "src/solar_simulator/data/two-q2-demo380.json": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+    "tests/test_laboratory_rotation.py": "8c77ab0d83183a4f25e7994a7bd2a260980f5763f91e8bc254277da8f5c78464",
+    "tests/test_laboratory_rotation_gui.py": "c501ec78ef86ea976451862b05707600c6b1702ac76accd13216702f231d54e3",
+    "src/solar_simulator/nbody_rotation.py": "7cdbf09b398aa467ec5badabcf4428c88dfc62ac81f49b73c988ae8c81c9ce7c",
+    "src/solar_simulator/rotation.py": "245087dc0b1f5cc64e8c3fbbd1c34fe9e8f80266069ceafb8081906f8dfd4f80",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/storage.py": "1fa867fd29f780f7453c8357b5b72ee0c930b5dec671e144c20fabb056a20f1a",
+    "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+    "docs/two-q2-380-initial.json": "a6044603119a9e61824ce2c68c116cd1c2743d5e89a558b687546b917e029e38",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601"
+  },
+  "demo_SHA256": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+  "native_SHA256": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+  "accepted032_ZIP_SHA256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49",
+  "initial_short_tests_passed": 59,
+  "old_compatibility": {
+    "cases": 8,
+    "snapshots": 24,
+    "byte_exact": true
+  },
+  "old380_FAIL": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    }
+  ],
+  "CI_before": {
+    "run": 40875987286,
+    "head": "4dc6320038fe300032d9390cbcb9d9e31f7ddefc",
+    "linux": {
+      "failed": 3,
+      "passed": 655,
+      "skipped": 1,
+      "deselected": 4
+    },
+    "desktop": {
+      "failed": 8,
+      "passed": 156
+    },
+    "root_causes": [
+      "Windows separators in internal historical input paths",
+      "Tests incorrectly requiring historical375 real environment on fresh runner"
+    ]
+  },
+  "CI_fix_commit": "bc75156cb01ea2818a6df78fc55582d27f676dc3",
+  "local_after": {
+    "affected_tests": 32,
+    "foreign_real_OMP_environment_tests": 14,
+    "python_source_suite": {
+      "passed": 670,
+      "deselected": 4,
+      "seconds": 14.09
+    },
+    "desktop_native_suite": {
+      "passed": 166,
+      "skipped": 0,
+      "seconds": 172.91
+    },
+    "rust_core_passed": 19,
+    "fmt_both": true,
+    "independent_AST_preserved_rejection_conditions": 5
+  },
+  "immutable_evidence_and_physics_changed": false,
+  "actual_current375_qualified": false,
+  "full_release_or_new_scientific_series_executed": false,
+  "new_remote_CI": [
+    {
+      "id": 40929366178,
+      "head_sha": "bc75156cb01ea2818a6df78fc55582d27f676dc3",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/actions/runs/40929366178",
+      "jobs": {
+        "python": "success",
+        "desktop-native": "success",
+        "adaptive-research": "not requested"
+      }
+    }
+  ],
+  "backup_status": "CLOUD_UNVERIFIED until independent readback; no claim of prior queue completion",
+  "local_log_SHA256": {
+    ".tools/stabilization382/ci-after-desktop.log": "3e42bebdbb3e267c912076fe8dc1416a6f1594e1efa303043f52fe61d69ee20a",
+    ".tools/stabilization382/ci-after-python.log": "451598a160c1bda9121106190eeca23b85a14a97e326d821d9406945b72aa914",
+    ".tools/stabilization382/ci-before-desktop.log": "b8c920c89d8891a3aaa35253729405693ed7305fb9903b66a03f306a3dff271b",
+    ".tools/stabilization382/ci-before-python.log": "6d317d6aed5d29d861bd34c18f7e05f6be275e98f748ab49b0ad3af2f3d56136",
+    ".tools/stabilization382/desktop-after.log": "752f217dc035cb8c25d435897f44804c610a6e487a20a3ea6064049ea0c4a581",
+    ".tools/stabilization382/foreign-environment-after.log": "4533a55a5dca32d3488266ae65cf41f722e2151a918f74a4f734062534bdd6fa",
+    ".tools/stabilization382/foreign-environment-before.log": "0559173f7c99935a5c28cc8f37cfc32d6a4dd907d83968e3fa51aff7c591fe89",
+    ".tools/stabilization382/path-contract-before.log": "690a4445762175a03cefc154671bc4775c1decc7aec4d3232dfc37cb99d86909",
+    ".tools/stabilization382/python-after.log": "bdcd5bdfeca8c958ddff0937c5212cad72f43b919808d2164216dd73f0a6408c"
+  }
+}

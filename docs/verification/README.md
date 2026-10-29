@@ -87,3 +87,7 @@ high99 условия376, uncapped exact controls, независимые ана
 [Практическая демонстрация381](../two-q2-laboratory.md): GUI lifecycle0/1/2фигуры,
 точные380IC, SI/omega solve, проекции, неизменность состояния при просмотре и
 отмене, bounded200s demo. Это функциональная проверка, не новая аттестация физики.
+
+[Целостность и CI382](../integrity-ci-382.md): документальный revert проверен
+tree/actual blobs/SHA; portable evidence paths и CI integrity отделены от
+строгого scientific gate. [План0.3.3](../qualification-033-plan.md) пока не исполнен.
