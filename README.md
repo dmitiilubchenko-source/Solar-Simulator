@@ -8,7 +8,6 @@ ZIP прошёл локальную приёмку; опубликованный
 Исправлены сохранность при смене опыта, диагностика среды и загрузка
 траекторий; [результаты и ограничения](docs/review-followup-validation.md).
 [CI ветки dev](https://github.com/dmitiilubchenko-source/Solar-Simulator/actions?query=branch%3Adev).
-[Solar-Research: состояние научного исследования и технического пилота на 29.10.2026](docs/solar-research-status-20261029.md).
 Экспериментальные IAS15 и Rust DOP853 не заменяют рабочий SciPy runtime.
 
 Настольная гравитационная лаборатория на Python и Rust:
