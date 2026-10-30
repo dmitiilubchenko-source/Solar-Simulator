@@ -2623,9 +2623,11 @@
   ],
   "unit_tests": {
     "native_required": 70,
-    "python_CI": 689,
+    "python_CI": 687,
     "new_skips": 0,
-    "existing_deselected": 4
+    "existing_deselected": 4,
+    "python_CI_before_partition": 689,
+    "post_partition_native_contract": 19
   },
   "integrity": {
     "protected_SHA256": {
@@ -2651,12 +2653,12 @@
     "scientific_inputs_unchanged": true
   },
   "resources": {
-    "worker_CPU_seconds": 70.59375,
-    "supervision_CPU_seconds": 36.609375,
-    "total_measured_CPU_seconds": 107.203125,
-    "active_wall_seconds": 71.42096590001893,
+    "worker_CPU_seconds": 89.90625,
+    "supervision_CPU_seconds": 52.25,
+    "total_measured_CPU_seconds": 142.15625,
+    "active_wall_seconds": 92.17648380002356,
     "peak_worker_tree_private_sampled": 560496640,
-    "artifact_bytes": 229560470,
+    "artifact_bytes": 229626275,
     "limits": {
       "CPU_seconds": 180,
       "active_wall_seconds": 360,
@@ -2692,6 +2694,11 @@
     {
       "stage": "candidate_build3",
       "reason": "PATH did not fix sysconfig lookup; copied actual SHA-verified maturin.exe"
+    },
+    {
+      "stage": "remote_Linux_CI41084797957",
+      "result": "2FAIL686PASS1oldSkip4oldDeselect",
+      "reason": "Two native-required contract tests erroneously assigned to Python-only job; moved unchanged into mandatory desktop-native suite, no new skip/xfail; real native negative/positive checks retained"
     }
   ],
   "remaining": [

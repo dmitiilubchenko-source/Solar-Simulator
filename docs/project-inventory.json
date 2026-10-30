@@ -1180,6 +1180,7 @@
       "tests/test_project_links.py",
       "tests/test_public_test_inputs.py",
       "tests/test_qualification383.py",
+      "tests/test_qualification383_native.py",
       "tests/test_real_spin_scales.py",
       "tests/test_recipe.py",
       "tests/test_recipe_gui.py",

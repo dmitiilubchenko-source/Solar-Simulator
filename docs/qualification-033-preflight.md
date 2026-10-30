@@ -56,7 +56,7 @@ rustc1.99.0 GNU, maturin1.15.0/PyO3.29.3 release. Native заново собра
 Python/native wheel versions и Cargo/lock metadata согласованы.
 Подробные SHA/наблюдения: [машинный отчёт](qualification-033-preflight.json).
 
-70 targeted tests с обязательным native,0skip; source Python CI689PASS,
+70 targeted tests с обязательным native,0skip; source Python CI687PASS после разделения native-контракта,
 4 прежних deselect,0skip. Прежние8cases/24canonical snapshots byte-exact
 в исходной среде; offline380 независимо воспроизводит3FAIL. AST семи
 численных helpers совпадает с сохранёнными исходниками. Src/Rust physics,
@@ -78,9 +78,9 @@ SHA-совпадающий maturin.exe только в candidate. Build-only set
 wheel0.48.0 получены по PyPI metadata/SHA, установлены только в candidate.
 Полный frozen recipe и logs локальны в .tools/qualification383 и резервном ZIP.
 
-Суммарно по всем запускам, включая неуспехи:107.203125 измеренных CPU s,
-71.420966 active wall s; sampled worker-tree peak560496640B (~534.5MiB),
-новые файлы229557415B (~218.9MiB) до compact report/archive.
+Суммарно по всем запускам, включая неуспехи:142.156250 измеренных CPU s,
+92.176484 active wall s; sampled worker-tree peak560496640B (~534.5MiB),
+новые файлы229626275B (~219.0MiB) до compact report/archive.
 Supervision CPU включён. RAM пиков supervisor и исчерпывающего inventory
 временных файлов вне stage нет; короткие процессы/пики между выборками могут
 быть пропущены. 50ms — пауза monitor, не гарантированный фактический интервал
@@ -101,3 +101,11 @@ freeze, явно решить два scope-вопроса, затем запус
 portable jobs, main/tag/release/LATEST не было. Проверка новой portable может
 потребовать именно нового связанного с ней исполнения: версия сама по себе
 не доказывает идентичность native SHA.
+
+
+Удалённый Linux CI41084797957 сохранил2FAIL/686PASS/1прежнийnativeSkip/4deselect:
+два новых test_380 контракта требовали настоящий native в Python-only job.
+Это ошибка назначения новых тестов, не отказ runtime. Они перенесены без
+ослабления в обязательный desktop-native subset отдельным файлом; новых
+skip/xfail нет. Локально19 контрактных проверок после разделения проходят
+с native audit; Python subset заново687PASS/4прежнихdeselect.

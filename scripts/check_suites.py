@@ -29,7 +29,7 @@ SUITES={
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[sun-earth-rust]',
         '--deselect=tests/test_storage.py::test_checkpoint_resume_matches_uninterrupted[spheres-rust]'],
     'desktop':[
-        'tests/test_numeric_native.py',
+        'tests/test_numeric_native.py','tests/test_qualification383_native.py',
         'tests/test_app_workflows.py','tests/test_experiment_transition_gui.py',
         'tests/test_two_q2.py','tests/test_two_q2_gui.py',
         'tests/test_laboratory_rotation_gui.py',
