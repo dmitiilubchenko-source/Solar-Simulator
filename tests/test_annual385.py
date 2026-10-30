@@ -13,6 +13,29 @@ from solar_simulator.simulation import Body, G
 from solar_simulator.vector3 import Vector3
 
 
+def test_verification_runs_after_real_driver_activation_and_restores_on_failure():
+    from contextlib import contextmanager
+    from types import SimpleNamespace
+    from scripts.qualify_annual385 import verified_activation
+    events=[]
+    original=lambda runtime:events.append(('original_guard',runtime))
+    driver=SimpleNamespace(activate=original)
+    def check():
+        assert events==[('original_guard','candidate')]
+        events.append('verified')
+    @contextmanager
+    def observed():
+        events.append('observe_enter')
+        try:yield
+        finally:events.append('observe_exit')
+    with pytest.raises(RuntimeError,match='fault'):
+        with verified_activation(driver,check,observed):
+            driver.activate('candidate')
+            raise RuntimeError('fault')
+    assert events==[('original_guard','candidate'),'verified','observe_enter','observe_exit']
+    assert driver.activate is original
+
+
 def digest(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 

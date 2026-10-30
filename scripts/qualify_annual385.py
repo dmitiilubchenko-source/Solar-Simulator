@@ -1,6 +1,6 @@
 """Observe immutable candidate's unchanged375 driver; no force/solver replacement."""
 import argparse
-from contextlib import contextmanager
+from contextlib import contextmanager, ExitStack
 from dataclasses import replace
 import importlib.util
 import json
@@ -20,6 +20,23 @@ def module_at(name, path):
 def freeze_check(candidate, freeze, protocol):
     module = module_at('_freeze384', TOOL_ROOT/'scripts/qualify_newton384.py')
     return module.verify_freeze(candidate, freeze, protocol)
+
+
+@contextmanager
+def verified_activation(driver, check, observe_after=None):
+    """Preserve375's first-import guard; verify only after its real activation."""
+    original = driver.activate
+    with ExitStack() as stack:
+        def activate(runtime):
+            original(runtime)
+            check()
+            if observe_after is not None:
+                stack.enter_context(observe_after())
+        driver.activate = activate
+        try:
+            yield
+        finally:
+            driver.activate = original
 
 
 @contextmanager
@@ -97,21 +114,30 @@ def main():
     from scripts import qualify_current_runtime375 as driver
     if driver.ROOT.resolve() != args.candidate.resolve():
         raise ValueError('Driver must come from unchanged candidate checkout')
-    frozen = freeze_check(args.candidate, args.freeze, args.protocol)
+    # Reading the seal does not import any physical module. Actual verification
+    # runs inside the driver's original guarded activation, before propagation.
+    frozen = json.loads(args.freeze.read_bytes())
     driver.verify_inputs(driver.protocol(args.protocol, frozen['protocol_SHA256']))
     options = dict(work=args.work, protocol_path=args.protocol, expected_sha=frozen['protocol_SHA256'])
     trace = args.work/(args.job+'-trace.json')
     if trace.exists() or (args.work/('run-'+args.job)).exists():
         raise FileExistsError('Preserve complete or partial annual output')
     rows, failure, unchanged = {}, None, False
+    @contextmanager
+    def observed():
+        nonlocal rows
+        with observe(args.work) as value:
+            rows = value
+            yield
     try:
-        if args.job == 'current':
-            with observe(args.work) as rows:
+        check = lambda: freeze_check(args.candidate, args.freeze, args.protocol)
+        with verified_activation(driver, check, observed if args.job=='current' else None):
+            if args.job == 'current':
                 driver.runtime_job('current', **options)
-            if len(rows) != 8 or any(r['nfev'] <= 0 for r in rows.values()):
-                raise ValueError('Missing annual/holdout production solves')
-        else:
-            driver.reference_job(**options)
+                if len(rows) != 8 or any(r['nfev'] <= 0 for r in rows.values()):
+                    raise ValueError('Missing annual/holdout production solves')
+            else:
+                driver.reference_job(**options)
     except BaseException as error:
         failure = dict(type=type(error).__name__, message=str(error))
         raise
