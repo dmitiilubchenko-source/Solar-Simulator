@@ -100,3 +100,6 @@ scientific qualification. Основной запуск пока NO-GO по ук
 1576states и независимый saved-data replay через scripts.assess_newton384.
 Новая source/environment qualification ограничена указанной моделью/сеткой;
 полная0.3.3приёмка ещё не выполнена.
+
+Кандидат033: [ограниченная годовая квалификация385](../annual-385-protocol.md)
+использует отдельный freeze и сохраняет исторические375 gates.

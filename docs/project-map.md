@@ -79,3 +79,7 @@ inspection.report через существующий async-loader lifecycle. Ф
 
 [Newton384](newton-384-validation.md): отдельный Git-кандидат033, свежие36jobs,
 независимый raw-state audit, scope375/380 и сохранённые ограничения выпуска.
+
+Годовой successor375 кандидата033: [протокол385](annual-385-protocol.md),
+[scripts/qualify_annual385.py](../scripts/qualify_annual385.py),
+[scripts/assess_annual385.py](../scripts/assess_annual385.py); без изменения runtime.
