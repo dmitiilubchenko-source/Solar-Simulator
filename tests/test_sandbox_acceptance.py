@@ -15,7 +15,8 @@ def historical_checkout(tmp_path):
     import hashlib
     from zipfile import ZipFile
     from scripts.release_history import (ROTATION_ARCHIVE,ROTATION_ARCHIVE_SHA,ROTATION_FILES,
-        LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES)
+        LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES,
+        QUALIFICATION_ARCHIVE,QUALIFICATION_ARCHIVE_SHA,QUALIFICATION_FILES)
     current = json.loads((ROOT/CURRENT_RECEIPT).read_bytes())
     paths = {CURRENT_RECEIPT,current['protocol'],current['array_archive'],
              *current['source_sha256'],*current['input_sha256']}
@@ -24,7 +25,8 @@ def historical_checkout(tmp_path):
         destination.parent.mkdir(parents=True,exist_ok=True)
         expected=current['source_sha256'].get(name)
         if expected is not None and hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
-            for archive_name,digest,names in ((LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES),
+            for archive_name,digest,names in ((QUALIFICATION_ARCHIVE,QUALIFICATION_ARCHIVE_SHA,QUALIFICATION_FILES),
+                    (LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES),
                     (ROTATION_ARCHIVE,ROTATION_ARCHIVE_SHA,ROTATION_FILES)):
                 if name not in names:continue
                 raw=(ROOT/archive_name).read_bytes();assert hashlib.sha256(raw).hexdigest()==digest

@@ -133,8 +133,22 @@ def verify_source(protocol):
         if sha(ROOT/name)!=digest:raise ValueError('Frozen source changed: '+name)
 
 
-def run(output):
-    p=read(PROTOCOL);verify_source(p);protocol_SHA=sha(PROTOCOL)
+def run(output, *, protocol_path=PROTOCOL, expected_sha=None):
+    protocol_path=Path(protocol_path)
+    if protocol_path.resolve()!=PROTOCOL.resolve() and expected_sha is None:
+        raise ValueError('Explicit protocol SHA256 required')
+    if expected_sha is not None and sha(protocol_path)!=expected_sha:raise ValueError('Protocol SHA256 mismatch')
+    p=read(protocol_path)
+    original=read(PROTOCOL)
+    mutable={'source_SHA256','base_commit','environment'}
+    if {k:v for k,v in p.items() if k not in mutable}!={k:v for k,v in original.items() if k not in mutable}:
+        raise ValueError('Changed scientific contract376')
+    required={name for name in original['source_SHA256'] if not name.startswith('.venv/')}
+    if not required<=set(p['source_SHA256']):raise ValueError('Missing frozen sources376')
+    verify_source(p);protocol_SHA=sha(protocol_path)
+    if 'environment' in p:
+        from solar_simulator.recipe import runtime_fingerprint
+        if runtime_fingerprint('rust')!=p['environment']:raise ValueError('Scientific environment changed')
     output.mkdir(exist_ok=False,parents=True);start=perf_counter();cpu=process_time();rows=[];references={};failure=None
     def budget():
         if process_time()-cpu>p['budget']['CPU_seconds'] or perf_counter()-start>p['budget']['wall_seconds']:
@@ -186,6 +200,7 @@ def run(output):
     except BaseException as exc:failure=dict(type=type(exc).__name__,message=str(exc),traceback=traceback.format_exc())
     finally:
         verify_source(p)
+        if 'environment' in p and runtime_fingerprint('rust')!=p['environment']:raise ValueError('Scientific environment changed')
         write(output/'receipt.json',dict(complete=failure is None and len(rows)==len(p['jobs']),failure=failure,jobs=rows,
             CPU_seconds=process_time()-cpu,wall_seconds=perf_counter()-start,protocol_SHA256=protocol_SHA,
             source_unchanged=True,runtime_changed=False,physics='Newton two-body; not JPL residuals',
@@ -195,7 +210,10 @@ def run(output):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('mode',choices=('prepare','run'));parser.add_argument('--output',type=Path)
+    parser.add_argument('--protocol',type=Path,default=PROTOCOL);parser.add_argument('--protocol-sha256')
     args=parser.parse_args()
-    if args.mode=='prepare':prepare()
+    if args.mode=='prepare':
+        if args.protocol!=PROTOCOL:parser.error('New runs use a sealed copy of the existing scientific protocol')
+        prepare()
     elif args.output is None:parser.error('--output required')
-    else:run(args.output)
+    else:run(args.output,protocol_path=args.protocol,expected_sha=args.protocol_sha256)

@@ -72,3 +72,7 @@ inspection.report через существующий async-loader lifecycle. Ф
 [Аудит382](integrity-ci-382.md) и [план квалификации0.3.3](qualification-033-plan.md):
 сохранность после документального отката, CI portability/source integrity,
 отдельный строгий source/environment-bound gate и ещё не выполненный release plan.
+
+[Подготовка кандидата383](qualification-033-preflight.md): отдельный staging export,
+явный metadata overlay, новые sealed планы и output существующих drivers.
+Технический preflight не является научной квалификацией или выпуском.

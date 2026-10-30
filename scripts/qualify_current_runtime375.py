@@ -27,10 +27,33 @@ def write_json(path, value):
         stream.write(json.dumps(value, indent=2, ensure_ascii=False, allow_nan=False)+'\n')
 
 
-def protocol():
+def protocol(path=None, expected_sha=None):
+    path = Path(path) if path is not None else ROOT/PROTOCOL
+    if path.resolve() != (ROOT/PROTOCOL).resolve() and expected_sha is None:
+        raise ValueError('Explicit protocol SHA256 required')
     if sha(ROOT/PROTOCOL) != PROTOCOL_SHA:
         raise ValueError('Changed preregistered protocol375')
-    return json.loads((ROOT/PROTOCOL).read_bytes())
+    original = json.loads((ROOT/PROTOCOL).read_bytes())
+    if sha(path) != (expected_sha or PROTOCOL_SHA):
+        raise ValueError('Changed protocol SHA256')
+    value = json.loads(path.read_bytes())
+    # Only new execution provenance may vary. No new scientific protocol.
+    mutable = {'runtime_commit', 'candidate_native', 'candidate_environment'}
+    if {k:v for k,v in value.items() if k not in mutable} != {k:v for k,v in original.items() if k not in mutable}:
+        raise ValueError('Changed scientific contract375')
+    return value
+
+
+def verify_inputs(p, root=ROOT):
+    for name, expected in {**p['input_sha256'], **p['raw_jpl_sha256']}.items():
+        if sha(Path(root)/name) != expected:
+            raise ValueError('Changed qualification input: '+name)
+
+
+def job_folder(work, version):
+    folder = Path(work)/('run-'+version)
+    folder.mkdir(parents=True, exist_ok=False)
+    return folder
 
 
 def activate(runtime):
@@ -151,14 +174,14 @@ def propagate(times, backend, rtol, packet, label, folder, arrays, resume=False)
         initial_document=initial_document)
 
 
-def sandbox_jobs(folder, arrays, native_calls):
+def sandbox_jobs(folder, arrays, native_calls, p=None):
     import scripts.assess_sandbox_limits as limits
     from solar_simulator.sandbox import save_branch, load_branch, to_branch_document
     from solar_simulator.storage import save, load, to_document
     original = limits.advance_towards
     results = []
     for backend in ('python','rust'):
-        for name in protocol()['jobs']['sandbox']:
+        for name in (p or protocol())['jobs']['sandbox']:
             label = backend+'_'+name
             trace, clocks, last = [], [], []
             def recorded(state, target, *args):
@@ -200,11 +223,11 @@ def sandbox_jobs(folder, arrays, native_calls):
     return results
 
 
-def runtime_job(version):
-    p = protocol()
-    runtime = ROOT if version == 'current' else WORK/'accepted032'
-    folder = WORK/('run-'+version)
-    folder.mkdir(exist_ok=False)
+def runtime_job(version, *, work=WORK, protocol_path=None, expected_sha=None):
+    p = protocol(protocol_path, expected_sha)
+    verify_inputs(p)
+    runtime = ROOT if version == 'current' else Path(work)/'accepted032'
+    folder = job_folder(work, version)
     activate(runtime)
     from solar_simulator import native_forces
     from solar_simulator.ephemerides import solar_system
@@ -216,8 +239,11 @@ def runtime_job(version):
     env = environment()
     import solar_native
     compiled = getattr(solar_native,'solar_native',solar_native)
-    if sha(compiled.__file__) != p['native032']['sha256']:
+    native = p.get('candidate_native', p['native032']) if version == 'current' else p['native032']
+    if sha(compiled.__file__) != native['sha256']:
         raise ValueError('Native binary differs from accepted032 comparison binary')
+    if version == 'current' and 'candidate_environment' in p and env != p['candidate_environment']:
+        raise ValueError('Candidate environment changed')
     initial,origin,_,_,_ = load_inputs()
     if asdict(origin) != p['origin']:
         raise ValueError('Origin differs from protocol')
@@ -257,7 +283,7 @@ def runtime_job(version):
         jobs[key]['native_force_calls'] = native_calls[0]-count
         if (backend=='rust') != (jobs[key]['native_force_calls']>0):
             raise ValueError('Holdout backend force execution differs')
-    edited = sandbox_jobs(folder,arrays,native_calls)
+    edited = sandbox_jobs(folder,arrays,native_calls,p)
     if environment() != env:
         raise RuntimeError('Numerical environment changed during job')
     unchanged(before)
@@ -265,17 +291,17 @@ def runtime_job(version):
         np.savez_compressed(stream,**arrays)
     write_json(folder/'receipt.json',dict(version=version,
         runtime_commit=p['runtime_commit'] if version=='current' else p['accepted_commit'],
-        driver_sha256=sha(__file__),protocol_sha256=PROTOCOL_SHA,
+        driver_sha256=sha(__file__),protocol_sha256=sha(protocol_path or ROOT/PROTOCOL),
         runtime_source_root=str(runtime.relative_to(ROOT)) if runtime!=ROOT else '.',
         solver_executed=True,environment=env,source_sha256=sources(runtime),
         outputs_sha256=sha(folder/'outputs.npz'),jobs=jobs,sandbox=edited,
         total_native_force_calls=native_calls[0]))
 
 
-def reference_job():
-    p = protocol()
-    folder = WORK/'run-reference'
-    folder.mkdir(exist_ok=False)
+def reference_job(*, work=WORK, protocol_path=None, expected_sha=None):
+    p = protocol(protocol_path, expected_sha)
+    verify_inputs(p)
+    folder = job_folder(work, 'reference')
     activate(ROOT)
     before = snapshot(ROOT)
     from scripts.assess_sandbox_models import load_inputs,figure_reference
@@ -296,7 +322,9 @@ def reference_job():
     data,rows = {},{}
     for name,times in [('annual',(np.asarray(p['epochs_jd_tdb'])-origin.epoch_jd_tdb)*86400),
                        ('holdout',np.asarray(p['holdout_times_seconds']))]:
-        cache = 'qualification375/run-reference/'+name
+        # independent_reference prefixes .tools; an absolute target overrides it.
+        # The new run-reference directory is exclusive, so no old cache is reused.
+        cache = str((folder/name).resolve())
         start = perf_counter()
         value,convergence = independent_reference(initial,strict_seed('python').settings.figures,
             times,levels=tuple(map(tuple,p['independent_reference']['levels'])),
@@ -305,7 +333,7 @@ def reference_job():
         rows[name] = dict(convergence=convergence,seconds=perf_counter()-start,
             output_sha256=sha(ROOT/'.tools'/(cache+'.npz')))
     unchanged(before)
-    write_json(folder/'receipt.json',dict(solver_executed=True,protocol_sha256=PROTOCOL_SHA,
+    write_json(folder/'receipt.json',dict(solver_executed=True,protocol_sha256=sha(protocol_path or ROOT/PROTOCOL),
         oracle_source_sha256=oracle.source_sha256,oracle_binary_sha256=sha(library),
         oracle_compiler=oracle.compiler_version,loader_sha256=sha(script),
         source_sha256=sources(ROOT),results=rows,environment=environment()))
@@ -314,11 +342,15 @@ def reference_job():
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('job',choices=('current','accepted032','reference'))
+    parser.add_argument('--work', type=Path, default=WORK)
+    parser.add_argument('--protocol', type=Path)
+    parser.add_argument('--protocol-sha256')
     args = parser.parse_args()
+    options = dict(work=args.work.resolve(), protocol_path=args.protocol, expected_sha=args.protocol_sha256)
     if args.job == 'reference':
-        reference_job()
+        reference_job(**options)
     else:
-        runtime_job(args.job)
+        runtime_job(args.job, **options)
 
 
 if __name__ == '__main__':

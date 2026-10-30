@@ -86,6 +86,7 @@ def test_accepted032_recomputed_regression_and_old_failure_retained():
 
 
 def test_compute_and_assessment_dependencies_are_bound():
+    from scripts.release_history import ui_historical_sha
     report,_=evidence()
     required={'src/solar_simulator/_numbers.py','src/solar_simulator/accuracy.py',
         'src/solar_simulator/oblateness.py','src/solar_simulator/coordinates.py',
@@ -95,7 +96,8 @@ def test_compute_and_assessment_dependencies_are_bound():
         'scripts/independent_figure_vector.py','rust/solar_native/src/lib.rs'}
     assert required<=report['source_sha256'].keys()
     for name in required:
-        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==report['source_sha256'][name]
+        # This test audits the saved375 result, not permission for a live job.
+        assert ui_historical_sha(ROOT,name,report['source_sha256'][name])==report['source_sha256'][name]
 
 
 @pytest.mark.parametrize('target',[CURRENT_RECEIPT,'scripts/current-runtime-375-protocol.json',

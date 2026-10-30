@@ -1,4 +1,5 @@
 """Assess actual qualification375 jobs against preregistered independent criteria."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -60,10 +61,10 @@ def packet_grid(times,size):
     return np.asarray(result)
 
 
-def load_job(version,p):
-    directory = WORK/('run-'+version)
+def load_job(version,p,*,work=WORK,protocol_sha=PROTOCOL_SHA):
+    directory = Path(work)/('run-'+version)
     row=json.loads((directory/'receipt.json').read_bytes())
-    if (row['protocol_sha256']!=PROTOCOL_SHA or not row['solver_executed'] or
+    if (row['protocol_sha256']!=protocol_sha or not row['solver_executed'] or
             row['driver_sha256']!=sha(ROOT/'scripts/qualify_current_runtime375.py')):
         raise ValueError('Changed or unexecuted scientific job375: '+version)
     if version!='reference':
@@ -78,7 +79,7 @@ def load_job(version,p):
         for name,expected in row['source_sha256'].items():
             if name.startswith(('src/solar_simulator/','rust/solar_core/','rust/solar_native/')):
                 raw=subprocess.check_output(['git','show',expected_commit+':'+name],cwd=ROOT)
-                checkout=ROOT if version=='current' or name.startswith('rust/') else WORK/'accepted032'
+                checkout=ROOT if version=='current' or name.startswith('rust/') else Path(work)/'accepted032'
                 working=(checkout/name).read_bytes()
                 if hashlib.sha256(working).hexdigest()!=expected:
                     raise ValueError('Job source changed after execution: '+name)
@@ -94,16 +95,18 @@ def load_job(version,p):
     return row,{}
 
 
-def assess():
-    p=protocol();c=p['criteria']
-    if (ROOT/REPORT).exists() or (ROOT/ARRAYS).exists():
+def assess(*, work=WORK, protocol_path=None, expected_sha=None, report=REPORT, arrays_path=ARRAYS):
+    work=Path(work);report=Path(report);arrays_path=Path(arrays_path)
+    p=protocol(protocol_path,expected_sha);c=p['criteria']
+    protocol_sha=sha(protocol_path or ROOT/PROTOCOL)
+    if (ROOT/report).exists() or (ROOT/arrays_path).exists():
         raise FileExistsError('Preserve qualification375 evidence')
     for name,expected in {**p['input_sha256'],**p['raw_jpl_sha256']}.items():
         if sha(ROOT/name)!=expected:
             raise ValueError('Changed preregistered scientific input: '+name)
-    current,a=load_job('current',p);old,b=load_job('accepted032',p)
-    ref=json.loads((WORK/'run-reference/receipt.json').read_bytes())
-    if not ref['solver_executed'] or ref['protocol_sha256']!=PROTOCOL_SHA:
+    current,a=load_job('current',p,work=work,protocol_sha=protocol_sha);old,b=load_job('accepted032',p,work=work,protocol_sha=protocol_sha)
+    ref=json.loads((work/'run-reference/receipt.json').read_bytes())
+    if not ref['solver_executed'] or ref['protocol_sha256']!=protocol_sha:
         raise ValueError('Missing fresh independent references375')
     from scripts.assess_sandbox_models import load_inputs
     from solar_simulator.ephemerides import RESOLVED_IDS
@@ -121,7 +124,7 @@ def assess():
     for version,arrays in [('current',a),('accepted032',b)]:
         data.update({version+'_'+key:value for key,value in arrays.items()})
     for key,grid in [('annual',times),('holdout',holdout)]:
-        file=WORK/'run-reference'/(key+'.npz')
+        file=work/'run-reference'/(key+'.npz')
         if sha(file)!=ref['results'][key]['output_sha256']:
             raise ValueError('Changed independent reference375')
         with np.load(file,allow_pickle=False) as saved:
@@ -192,7 +195,7 @@ def assess():
         old_row=next(x for x in old['sandbox'] if (x['name'],x['backend'])==(row['name'],row['backend']))
         exact=bits(a['sandbox_'+key+'_states'],b['sandbox_'+key+'_states']) and bits(a['sandbox_'+key+'_times'],b['sandbox_'+key+'_times'])
         branch_name=key+'-branch.json'
-        branch_exact=(WORK/'run-current'/branch_name).read_bytes()==(WORK/'run-accepted032'/branch_name).read_bytes()
+        branch_exact=(work/'run-current'/branch_name).read_bytes()==(work/'run-accepted032'/branch_name).read_bytes()
         edited.append(dict(**row,accepted032_trace_bitwise=exact,accepted032_branch_exact=branch_exact,
             accepted032_checks_passed=old_row['checks_passed']))
         gates['sandbox_'+key]=bool(row['checks_passed'] and row['file_continue_exact'] and
@@ -207,16 +210,16 @@ def assess():
         sources[name]=sha(ROOT/name)
     if any(sha(ROOT/name)!=expected for name,expected in sources.items()):
         raise ValueError('Scientific source changed after execution375')
-    with (ROOT/ARRAYS).open('xb') as stream:
+    with (ROOT/arrays_path).open('xb') as stream:
         np.savez_compressed(stream,**data)
-    output=dict(stage=375,protocol=PROTOCOL,protocol_sha256=PROTOCOL_SHA,
+    output=dict(stage=375,protocol=str(protocol_path or PROTOCOL),protocol_sha256=protocol_sha,
         runtime_commit=p['runtime_commit'],accepted_commit=p['accepted_commit'],units='SI',origin=p['origin'],
         settings=p['settings'],epochs_jd_tdb=p['epochs_jd_tdb'],holdout_times_seconds=p['holdout_times_seconds'],
         source_sha256=sources,environment=current['environment'],
         input_sha256={name:expected for name,expected in p['input_sha256'].items() if not name.startswith('.tools/')},
         historical_cache_sha256={name:expected for name,expected in p['input_sha256'].items() if name.startswith('.tools/')},
         raw_jpl_sha256=p['raw_jpl_sha256'],raw_jpl_responses_verified=40,initial_jpl_overlap=overlap,
-        array_archive=ARRAYS,array_sha256=sha(ROOT/ARRAYS),results=results,sensitivity=sensitivity_rows,
+        array_archive=str(arrays_path),array_sha256=sha(ROOT/arrays_path),results=results,sensitivity=sensitivity_rows,
         regression=regression,stored141=stored,sandbox=edited,reference=ref,
         executed_jobs=current['jobs'],accepted032_jobs=old['jobs'],gates=gates,
         solver_executed=True,current_runtime_qualified=all(gates.values()),
@@ -225,11 +228,19 @@ def assess():
         historical_reports_unchanged=True,physical_model_changed=False,
         timings_note='Jobs overlapped on one host; includes diagnostics/recording/checkpoint controls; not a performance comparison.',
         limitations=p['limitations'])
-    write_json(ROOT/REPORT,output)
+    write_json(ROOT/report,output)
     print(json.dumps(dict(qualified=output['current_runtime_qualified'],failed=output['failed_criteria'],
         earth_moon={k:v['earth_moon'] for k,v in results.items()},sensitivity=sensitivity_rows),indent=2),flush=True)
     return output['current_runtime_qualified']
 
 
 if __name__=='__main__':
-    sys.exit(0 if assess() else 1)
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--work',type=Path,default=WORK)
+    parser.add_argument('--protocol',type=Path)
+    parser.add_argument('--protocol-sha256')
+    parser.add_argument('--report',type=Path,default=Path(REPORT))
+    parser.add_argument('--arrays',type=Path,default=Path(ARRAYS))
+    args=parser.parse_args()
+    sys.exit(0 if assess(work=args.work,protocol_path=args.protocol,expected_sha=args.protocol_sha256,
+        report=args.report,arrays_path=args.arrays) else 1)

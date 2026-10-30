@@ -56,10 +56,10 @@ def close_metric(actual,stored,key):
         raise ValueError('Independent raw metric disagreement: '+key)
 
 
-def verify(report_path=REPORT,arrays_path=ARRAYS,*,historical=False):
+def verify(report_path=REPORT,arrays_path=ARRAYS,*,historical=False,protocol_path=PROTOCOL):
     """Current-source check by default; historical replay is explicit and non-qualifying."""
     if type(historical) is not bool:raise ValueError('historical must be an explicit bool')
-    proof=read(report_path);protocol=read(PROTOCOL)
+    proof=read(report_path);protocol=read(protocol_path)
     if historical:
         from scripts.release_history import ui_historical_sha
         for name,expected in protocol['source_SHA256'].items():
@@ -68,7 +68,7 @@ def verify(report_path=REPORT,arrays_path=ARRAYS,*,historical=False):
     else:
         verify_source(protocol)
         analysis_SHA=sha(Path(__file__))
-    if sha(PROTOCOL)!=proof['protocol_SHA256'] or sha(arrays_path)!=proof['arrays_SHA256']:
+    if sha(protocol_path)!=proof['protocol_SHA256'] or sha(arrays_path)!=proof['arrays_SHA256']:
         raise ValueError('Protocol/array SHA mismatch')
     if analysis_SHA!=proof['analysis_source_SHA256']:raise ValueError('Assessment source changed')
     if [r['job'] for r in proof['runs']]!=protocol['jobs']:raise ValueError('Wrong/missing job list')
@@ -95,37 +95,48 @@ def verify(report_path=REPORT,arrays_path=ARRAYS,*,historical=False):
         COM_not_ulp_compared='different Decimal120/130 cancellation floors; both identities independently evaluated')
 
 
-def build(work):
+def build(work,*,protocol_path=PROTOCOL,report_path=REPORT,arrays_path=ARRAYS,run_directory=None,guard_files=()):
+    # Old defaults retain the historical two-attempt accounting. A new run
+    # supplies its own paths/guards; it must not inherit old failures or CPU.
+    REPORT,ARRAYS=Path(report_path),Path(arrays_path)
+    directory=Path(run_directory) if run_directory is not None else work/'data-02'
     if REPORT.exists() or ARRAYS.exists():raise FileExistsError('Preserve prior validation')
-    receipt=read(work/'data-02/receipt.json');p=read(PROTOCOL);verify_source(p)
-    if not receipt['complete'] or receipt['protocol_SHA256']!=sha(PROTOCOL):raise ValueError('Incomplete/changed run')
+    receipt=read(directory/'receipt.json');p=read(protocol_path);verify_source(p)
+    if (not receipt['complete'] or receipt['failure'] is not None or receipt['protocol_SHA256']!=sha(protocol_path)
+            or [r['job'] for r in receipt['jobs']]!=p['jobs']):raise ValueError('Incomplete/changed run')
     for name,h in receipt['files'].items():
-        if sha(work/'data-02'/name)!=h:raise ValueError('Changed saved output: '+name)
+        if sha(directory/name)!=h:raise ValueError('Changed saved output: '+name)
     arrays={};references={}
-    for case in p['cases']:references[case['id']]=read(work/'data-02'/(case['id']+'-reference.json'))
+    for case in p['cases']:references[case['id']]=read(directory/(case['id']+'-reference.json'))
     for row in receipt['jobs']:
-        job=row['job'];path=work/'data-02'/(job['id']+'.npz')
+        job=row['job'];path=directory/(job['id']+'.npz')
         if sha(path)!=row['array_SHA256']:raise ValueError('Changed raw array')
         with np.load(path,allow_pickle=False) as data:
             for key in ('states','epochs'):arrays[job['id']+'__'+key]=data[key].copy()
-    np.savez_compressed(ARRAYS,**arrays)
-    guards=[read(work/name/'supervisor.json') for name in ('guard','guard-02')]
-    proof=dict(stage=376,protocol_SHA256=sha(PROTOCOL),arrays_SHA256=sha(ARRAYS),analysis_source_SHA256=sha(Path(__file__)),
+    with ARRAYS.open('xb') as stream:np.savez_compressed(stream,**arrays)
+    guards=[read(path) for path in guard_files] if run_directory is not None else [read(work/name/'supervisor.json') for name in ('guard','guard-02')]
+    proof=dict(stage=376,protocol_SHA256=sha(protocol_path),arrays_SHA256=sha(ARRAYS),analysis_source_SHA256=sha(Path(__file__)),
         environment=dict(python=platform.python_version(),scipy=scipy.__version__,numpy=np.__version__),
         runs=receipt['jobs'],references=references,source_SHA256=p['source_SHA256'],
-        prior_preflight_failure=read(work/'grid-mre.json'),original_run_status=read(work/'data/receipt.json')['failure']['message'],
-        preparation_test_failure='17 PASS /1 FAIL: normalized test velocity used with SI G; corrected before main protocol, not a runtime bug',
+        prior_preflight_failure=read(work/'grid-mre.json') if run_directory is None else None,
+        original_run_status=read(work/'data/receipt.json')['failure']['message'] if run_directory is None else None,
+        preparation_test_failure='17 PASS /1 FAIL: normalized test velocity used with SI G; corrected before main protocol, not a runtime bug' if run_directory is None else None,
         resources=dict(guards=guards,total_CPU_seconds=sum(v['worker_CPU_seconds']+v['parent_supervision_CPU_seconds'] for v in guards),
-                       active_wall_seconds=sum(v['wall_seconds'] for v in guards),peak_private=max(v['peak_private_tree_sampled'] for v in guards)),
+                       active_wall_seconds=sum(v['wall_seconds'] for v in guards),peak_private=max((v['peak_private_tree_sampled'] for v in guards),default=None),
+                       measurement_available=bool(guards)),
         scope=p['scope'],runtime_modified=False,release_qualification_changed=False)
     write(REPORT,proof)
-    result=verify();write(work/'independent-observer.json',result);print(json.dumps(result))
+    result=verify(REPORT,ARRAYS,protocol_path=protocol_path);write(work/'independent-observer.json',result);print(json.dumps(result))
 
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('mode',choices=('build','verify'));parser.add_argument('--work',type=Path)
     parser.add_argument('--historical',action='store_true',help='Verify archived source provenance and saved arrays only; never qualify current runtime')
+    parser.add_argument('--protocol',type=Path,default=PROTOCOL)
+    parser.add_argument('--report',type=Path,default=REPORT);parser.add_argument('--arrays',type=Path,default=ARRAYS)
+    parser.add_argument('--run-directory',type=Path);parser.add_argument('--guard-file',type=Path,action='append',default=[])
     args=parser.parse_args()
     if args.historical and args.mode!='verify':parser.error('--historical is only valid for saved-data verify')
-    if args.mode=='build':build(args.work or ROOT/'.tools/runtime376')
-    else:print(json.dumps(verify(historical=args.historical)))
+    if args.mode=='build':build(args.work or ROOT/'.tools/runtime376',protocol_path=args.protocol,
+        report_path=args.report,arrays_path=args.arrays,run_directory=args.run_directory,guard_files=args.guard_file)
+    else:print(json.dumps(verify(args.report,args.arrays,historical=args.historical,protocol_path=args.protocol)))

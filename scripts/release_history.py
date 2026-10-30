@@ -99,6 +99,13 @@ CI_FILES = ('scripts/release_history.py','scripts/sandbox_checks/accept_sandbox.
     'scripts/assess_two_q2_380.py','tests/test_runtime_step379_evidence.py',
     'tests/test_current_runtime_qualification.py','tests/test_sandbox_acceptance.py')
 
+QUALIFICATION_ARCHIVE = 'scripts/validation/qualification-before383.zip'
+QUALIFICATION_ARCHIVE_SHA = '7f8d676cb6f6cd0d3010d8a563d4b3ee8453f65aa5d774a86ee70a9485b66819'
+QUALIFICATION_FILES = ('scripts/qualify_current_runtime375.py',
+    'scripts/check_runtime_reliability376.py','scripts/validate_two_q2_380.py',
+    'scripts/assess_current_runtime375.py','scripts/assess_runtime_reliability376.py',
+    'tests/test_sandbox_acceptance.py','scripts/release_history.py','tests/test_current_runtime_qualification.py')
+
 
 def ui_historical_sha(root,name,expected):
     """Exact historical evidence only; never authorize a live worker."""
@@ -109,6 +116,7 @@ def ui_historical_sha(root,name,expected):
     if actual==expected:return actual
     from io import BytesIO
     for archive_name, archive_sha, names in (
+            (QUALIFICATION_ARCHIVE, QUALIFICATION_ARCHIVE_SHA, QUALIFICATION_FILES),
             (CI_ARCHIVE, CI_ARCHIVE_SHA, CI_FILES),
             (LABORATORY_ARCHIVE, LABORATORY_ARCHIVE_SHA, LABORATORY_FILES),
             (ROTATION_ARCHIVE, ROTATION_ARCHIVE_SHA, ROTATION_FILES),
@@ -155,8 +163,8 @@ HISTORY_FILES = ('scripts/assess_nominal_jpl.py',
  'tests/test_sandbox_demo.py',
  'tests/test_sandbox_models.py',
  'tests/test_time_control.py')
-HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES) | set(INSPECTION_FILES) | set(ROTATION_FILES) | set(LABORATORY_FILES) | set(CI_FILES)
-HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE, INSPECTION_ARCHIVE, ROTATION_ARCHIVE, LABORATORY_ARCHIVE, CI_ARCHIVE)
+HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES) | set(INSPECTION_FILES) | set(ROTATION_FILES) | set(LABORATORY_FILES) | set(CI_FILES) | set(QUALIFICATION_FILES)
+HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE, INSPECTION_ARCHIVE, ROTATION_ARCHIVE, LABORATORY_ARCHIVE, CI_ARCHIVE, QUALIFICATION_ARCHIVE)
 
 
 def verify_checkpoint_history(checkpoint, root):

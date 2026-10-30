@@ -59,8 +59,18 @@ def prepare(template=None):
     write(PLAN,plan);print('Frozen two-Q2 plan',sha(PLAN))
 
 
-def verify():
-    p=read(PLAN)
+def verify(plan_path=None, expected_sha=None):
+    plan_path=Path(plan_path) if plan_path is not None else PLAN
+    if plan_path.resolve()!=PLAN.resolve() and expected_sha is None:raise ValueError('Explicit plan SHA256 required')
+    if expected_sha is not None and sha(plan_path)!=expected_sha:raise ValueError('Plan SHA256 mismatch')
+    p=read(plan_path)
+    if plan_path.resolve()!=PLAN.resolve():
+        original=read(PLAN)
+        for key in ('cases','levels','backends','reference_rtol','criteria','units','model'):
+            if p[key]!=original[key]:raise ValueError('Changed scientific contract380: '+key)
+        required={name for name in original['source_SHA256'] if not name.startswith('.venv/')}
+        if not required<=set(p['source_SHA256']):
+            raise ValueError('Missing frozen sources380')
     for name,digest in p['source_SHA256'].items():
         if sha(ROOT/name)!=digest:raise ValueError('Frozen source changed:'+name)
     if runtime_fingerprint('rust')!=p['environment']:raise ValueError('Scientific environment changed')
@@ -86,8 +96,9 @@ def difference(a,b,document):
         spin=float(np.max(np.linalg.norm(a['spins']-b['spins'],axis=2)/spin)))
 
 
-def run(output):
-    p=verify();output.mkdir(parents=True,exist_ok=False);cpu0=process_time();wall0=perf_counter();rows=[];arrays={};failure=None;comparisons=[];continuous=[]
+def run(output, *, plan_path=None, expected_sha=None):
+    plan_path=Path(plan_path) if plan_path is not None else PLAN
+    p=verify(plan_path,expected_sha);output.mkdir(parents=True,exist_ok=False);cpu0=process_time();wall0=perf_counter();rows=[];arrays={};failure=None;comparisons=[];continuous=[]
     prior=[]
     if 'continuation' in p:
         continuation=p['continuation']
@@ -153,7 +164,7 @@ def run(output):
                 convergence=dict(case=case['id'],backend=backend,coarse_fine=difference(solutions[0],solutions[2],doc),standard_fine=difference(solutions[1],solutions[2],doc))
                 write(output/(case['id']+'__'+backend+'-convergence.json'),convergence)
                 comparisons.append(convergence)
-            if 'continuation' in p:
+            if 'continuation' in p or p.get('continuous_control',False):
                 from solar_simulator.nbody_rotation import integrate
                 values=[]
                 for level in p['levels']:
@@ -173,10 +184,10 @@ def run(output):
         failed += [dict(case=r['case'],backend='python',criterion='continuous_tolerance_convergence') for r in continuous if max(r['standard_fine'].values())>=max(r['coarse_fine'].values())]
     except BaseException as exc:failure=dict(type=type(exc).__name__,message=str(exc),traceback=traceback.format_exc())
     finally:
-        verify();np.savez_compressed(output/'states.npz',**arrays)
+        verify(plan_path,expected_sha);np.savez_compressed(output/'states.npz',**arrays)
         write(output/'result.json',dict(stage=380,complete=failure is None and len(rows)==12,failure=failure,rows=rows,
             failed_criteria=failed if failure is None else None,packet_convergence=comparisons,continuous_convergence=continuous,
-            plan_SHA256=sha(PLAN),arrays_SHA256=sha(output/'states.npz'),CPU_seconds=process_time()-cpu0,wall_seconds=perf_counter()-wall0,
+            plan_SHA256=sha(plan_path),arrays_SHA256=sha(output/'states.npz'),CPU_seconds=process_time()-cpu0,wall_seconds=perf_counter()-wall0,
             files={f.name:sha(f) for f in output.iterdir() if f.is_file()},current_runtime_qualified=False))
     if failure:raise RuntimeError(failure['message'])
 
@@ -184,8 +195,10 @@ def run(output):
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('mode',choices=('prepare','run'));parser.add_argument('--output',type=Path)
     parser.add_argument('--plan',type=Path,default=PLAN);parser.add_argument('--continue-from',type=Path)
+    parser.add_argument('--plan-sha256')
     args=parser.parse_args()
-    PLAN=args.plan.resolve()
-    if args.mode=='prepare':prepare(args.continue_from.resolve() if args.continue_from else None)
+    if args.mode=='prepare':
+        PLAN=args.plan.resolve()
+        prepare(args.continue_from.resolve() if args.continue_from else None)
     elif args.output is None:parser.error('--output required')
-    else:run(args.output)
+    else:run(args.output,plan_path=args.plan,expected_sha=args.plan_sha256)
