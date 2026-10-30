@@ -14,3 +14,6 @@ scripts/validation/*.txt -text whitespace=blank-at-eol,blank-at-eof,space-before
 rust/solar_adaptive/Cargo.toml -text
 rust/solar_adaptive/Cargo.lock -text
 rust/solar_adaptive/LICENSE-SCIPY.txt -text
+
+# Frozen384 CSV bytes, including their recorded line endings.
+scripts/validation/newton384/*.csv -text
