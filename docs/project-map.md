@@ -83,3 +83,6 @@ inspection.report через существующий async-loader lifecycle. Ф
 Годовой successor375 кандидата033: [протокол385](annual-385-protocol.md),
 [scripts/qualify_annual385.py](../scripts/qualify_annual385.py),
 [scripts/assess_annual385.py](../scripts/assess_annual385.py); без изменения runtime.
+
+Результат385: [годовая EIH+J2 квалификация](annual-385-validation.md);
+Strict PASS, Standard Rust diagnostic FAIL, compatibility отдельно UNRESOLVED.

@@ -17,3 +17,5 @@ rust/solar_adaptive/LICENSE-SCIPY.txt -text
 
 # Frozen384 CSV bytes, including their recorded line endings.
 scripts/validation/newton384/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+scripts/validation/annual385/* -text

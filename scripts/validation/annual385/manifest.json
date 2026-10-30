@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "stage": 385,
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "tool_commit": "c51c99ba34c90dc8e18c90781c9770f4c25baa83",
+  "assets": {
+    "activation-failure.json": "586c9d4ea9c0e37e3d2ce1db9e5a2a353fa8eeda85014e0984e226619ce5b6ff",
+    "all8.csv": "19f174cc8456fb40d4586cd48d9e28e74d81bb6538520c8e74f6f3660a4a7326",
+    "assessment.json": "bd2124a0465eb29a995567cb48f0c6ad2d425b74f328117e7acde7c67af84599",
+    "current-receipt.json": "bd55716016c9b145bb2e994a5b3e4521233cd139a422ccebf685f2ad74a11d11",
+    "current-trace.json": "2e0b64a80ef868eead7872fa730a559ce6e32a6be56ecdda20f86e33109ed492",
+    "environment.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "first-attempt-resources.json": "26a8f08402d4781feaa745ed052663506621dae15c42e6c5d1622ea2aa023e75",
+    "first-attempt-trace.json": "9a52ea2b2b91144a32465b4f0d0880d4aac8c8aa4b35f939303c3b235b3f2fd0",
+    "freeze.json": "5ea5278e2f45181aaf6450475a419f8db58998f23b826ffdeff86d764a7e29a2",
+    "launch-binding.json": "d368a05b5d8bd0932a141753a4f7e352c8f36bdfde12844e065167bfcf4ebbad",
+    "preflight-results.json": "b6129a1486bab99cfd8937340d0d9e2e43a60e100eb01978c8eff216197440f0",
+    "protocol.json": "b868729f227d0fd25677211450245bb9b18d8d88e7d04f293a9be2ed801e198e",
+    "reference-receipt.json": "aab34c35117c376ce0224d95cc3d9501e84f78772da87e90de4eb1ee9e98b39c",
+    "reference-trace.json": "11214196c4b6d03f3a82f911975c8503e57bc864412cbb2df62a947394c454b5",
+    "resource-summary.json": "649edecac08725a223422849e3041233d75548065ad8518002641d4bae7d7f11",
+    "states.npz": "0814afd7d34498267789948d7791320536cbc7e096d66324f702623e8e50aebf",
+    "toolchain-postcheck.json": "9e14ac3f16480c15507c22caae00ba1333572fb6a5cbbb0ea02dde04774ebd92"
+  },
+  "names": [
+    "Sun",
+    "Mercury",
+    "Venus",
+    "Earth",
+    "Moon",
+    "Mars",
+    "Jupiter",
+    "Saturn",
+    "Uranus",
+    "Neptune"
+  ],
+  "G_hex": "0x1.2589effed8accp-34",
+  "C_m_s": 299792458.0,
+  "annual_scientific_qualified": true,
+  "compatibility_status": "UNRESOLVED",
+  "complete_release_qualified": false,
+  "current_runtime_qualified_by_replay": false,
+  "raw_journal": {
+    "source": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification385\\retry\\packets.jsonl",
+    "size": 6786516,
+    "sha256": "80f757d22b6610092162c5d759e604becbc46424cc7a0072f59c62d340c5aa0b"
+  },
+  "scope": "Recorded candidate annual375 successor only;125/9 sampled epochs, shared force model/constants/IC; no continuous error bound. Current environment not qualified by saved replay.",
+  "failed_start": "Preserved original empty acquisition. New freeze follows guarded activation fix. CPU carried forward; wall includes delay and5s conservative margin from first execution-binding file timestamp. No budget reset."
+}

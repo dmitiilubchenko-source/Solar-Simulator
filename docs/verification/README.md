@@ -103,3 +103,6 @@ scientific qualification. Основной запуск пока NO-GO по ук
 
 Кандидат033: [ограниченная годовая квалификация385](../annual-385-protocol.md)
 использует отдельный freeze и сохраняет исторические375 gates.
+
+[Годовая квалификация385](../annual-385-validation.md): новый candidate033
+Strict25gates PASS; historical375/current receipt не изменены, compatibility UNRESOLVED.

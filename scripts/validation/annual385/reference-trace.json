@@ -1,0 +1,9 @@
+{
+  "job": "reference",
+  "rows": {},
+  "failure": null,
+  "complete": true,
+  "source_environment_unchanged": true,
+  "freeze_SHA256": "5ea5278e2f45181aaf6450475a419f8db58998f23b826ffdeff86d764a7e29a2",
+  "protocol_SHA256": "b868729f227d0fd25677211450245bb9b18d8d88e7d04f293a9be2ed801e198e"
+}

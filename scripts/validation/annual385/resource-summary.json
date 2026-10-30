@@ -1,0 +1,382 @@
+{
+  "guards": [
+    {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 113.890625,
+        "parent_cpu": 20.9375,
+        "private_tree": 136151040,
+        "rss_tree": 122802176,
+        "disk": 12983424,
+        "elapsed": 115.37575169999036
+      },
+      "samples": 1873,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 113.953125,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 20.953125,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 152473600,
+      "processes": [
+        {
+          "pid": 24516,
+          "creation_time": 1793396507.9663744,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 20564,
+          "creation_time": 1793396507.97044,
+          "CPU_seconds": 113.9375,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 23692,
+          "creation_time": 1793396509.3078492,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 7372,
+          "creation_time": 1793396509.3143232,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 139710464,
+      "wall_seconds": 115.44060899998294,
+      "disk_bytes": 12983424,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    },
+    {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 56.015625,
+        "parent_cpu": 13.28125,
+        "private_tree": 128311296,
+        "rss_tree": 114946048,
+        "disk": 18479110,
+        "elapsed": 57.453032099991105
+      },
+      "samples": 872,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 56.09375,
+      "root_final_CPU_seconds": 0.03125,
+      "parent_supervision_CPU_seconds": 13.296875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 281440256,
+      "processes": [
+        {
+          "pid": 17520,
+          "creation_time": 1793396623.4104302,
+          "CPU_seconds": 0.03125,
+          "role": "launcher"
+        },
+        {
+          "pid": 6232,
+          "creation_time": 1793396623.4173255,
+          "CPU_seconds": 55.578125,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 11616,
+          "creation_time": 1793396625.9709399,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 26988,
+          "creation_time": 1793396625.982856,
+          "CPU_seconds": 0.40625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 19092,
+          "creation_time": 1793396626.8036666,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 7796,
+          "creation_time": 1793396626.819794,
+          "CPU_seconds": 0.046875,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 211845120,
+      "wall_seconds": 57.51375680000638,
+      "disk_bytes": 18479110,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    },
+    {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 4.375,
+        "parent_cpu": 1.34375,
+        "private_tree": 122449920,
+        "rss_tree": 109084672,
+        "disk": 18662085,
+        "elapsed": 5.5592261999845505
+      },
+      "samples": 85,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 4.671875,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 1.375,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 134463488,
+      "processes": [
+        {
+          "pid": 19960,
+          "creation_time": 1793396680.925312,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 9852,
+          "creation_time": 1793396680.9313762,
+          "CPU_seconds": 4.203125,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 14792,
+          "creation_time": 1793396682.4387293,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 15372,
+          "creation_time": 1793396683.222715,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 19064,
+          "creation_time": 1793396683.2297387,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 14460,
+          "creation_time": 1793396683.3535025,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 21416,
+          "creation_time": 1793396683.360834,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 28892,
+          "creation_time": 1793396683.431624,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 27924,
+          "creation_time": 1793396683.4806397,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 24568,
+          "creation_time": 1793396683.4872313,
+          "CPU_seconds": 0.03125,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 3344,
+          "creation_time": 1793396683.5559008,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 29060,
+          "creation_time": 1793396683.5629847,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 12584,
+          "creation_time": 1793396683.629491,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 14612,
+          "creation_time": 1793396683.680096,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 19276,
+          "creation_time": 1793396683.6870215,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 29364,
+          "creation_time": 1793396683.7551897,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 31452,
+          "creation_time": 1793396683.7622218,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 26688,
+          "creation_time": 1793396683.877293,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 27312,
+          "creation_time": 1793396683.8840053,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 23628,
+          "creation_time": 1793396683.9542122,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 2116,
+          "creation_time": 1793396683.9964516,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 25640,
+          "creation_time": 1793396684.0031974,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 28604,
+          "creation_time": 1793396684.0712461,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 7564,
+          "creation_time": 1793396684.145042,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 13668,
+          "creation_time": 1793396684.151748,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 18664,
+          "creation_time": 1793396684.2187676,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 16348,
+          "creation_time": 1793396684.2701316,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 20856,
+          "creation_time": 1793396684.2772264,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 10856,
+          "creation_time": 1793396684.3465152,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 26252,
+          "creation_time": 1793396684.354254,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 26472,
+          "creation_time": 1793396684.4210072,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 24188,
+          "creation_time": 1793396684.4701192,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 25684,
+          "creation_time": 1793396684.4765992,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 12016,
+          "creation_time": 1793396684.543846,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 28988,
+          "creation_time": 1793396684.5506637,
+          "CPU_seconds": 0.03125,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 14204,
+          "creation_time": 1793396685.6588595,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 13540,
+          "creation_time": 1793396685.6656947,
+          "CPU_seconds": 0.046875,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 135254016,
+      "wall_seconds": 5.627536799991503,
+      "disk_bytes": 18662085,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    }
+  ],
+  "failure": null,
+  "prior_attempt_CPU_seconds": 3.234375,
+  "elapsed_before_retry_including_debug_and5s_margin": 129.90086579322815,
+  "total_CPU_seconds": 213.609375,
+  "worker_CPU_seconds": 174.71875,
+  "supervision_CPU_seconds": 35.65625,
+  "wall_seconds": 308.48991979321,
+  "worker_private_peak_sampled": 281440256,
+  "supervisor_private_peak_OS": 37691392,
+  "conservative_sum_private_peaks": 319131648,
+  "combined_private_peak_sampled": 303247360,
+  "artifact_bytes": 18668458,
+  "complete": true,
+  "limitations": "50ms sampled tree/RAM; retained discovered Windows process handles for final CPU; short unseen children/spikes possible; not OS hardquota. Preparation/tests excluded from scientific phase.",
+  "within_measured_caps": true
+}

@@ -1,0 +1,893 @@
+{
+  "stage": 385,
+  "kind": "successor375-science-with-separate-compatibility",
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "tool_commit": "c51c99ba34c90dc8e18c90781c9770f4c25baa83",
+  "source_SHA256": {
+    "pyproject.toml": "f2ca791ae5b51b1f811f84dea21221333b6220b0776cb10614969689577405c5",
+    "rust/solar_core/Cargo.lock": "853161d9d0557ad5e2189c9f29f654827eb3dadfe5601ecf5ba5eb57e99f2860",
+    "rust/solar_core/Cargo.toml": "17af82fa9ed164f3c330ae83d6af29c7d9444d269a85f5ef13f061e82264f136",
+    "rust/solar_core/src/collisions.rs": "dba247071f1fa924157cc8b8e125665731adfe8954f913464af2912cd6520abd",
+    "rust/solar_core/src/contacts.rs": "0caae19f427120ec73cde2fc79edd4f3da56ddf7c4a4541c14dc9b89da885863",
+    "rust/solar_core/src/impacts.rs": "3a9230536702f203d8a079e8d9b51b952e11ac59da1a36cb460272630700d374",
+    "rust/solar_core/src/lib.rs": "6df5a41ccdcd9ea2317d4e25db82a5074c1029cb2099142029a88d93781608ad",
+    "rust/solar_core/src/main.rs": "1365b6e5edcdb80ee82e1a188e3d8a2d1a17d86732dee1c2c65dd5dce2b5f1d4",
+    "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+    "rust/solar_native/Cargo.lock": "45378a525e8c554723b068609f3cd08197a32f5231be07f4de33ced380ec28e9",
+    "rust/solar_native/Cargo.toml": "27e51625e381c884f24f9d7e902881d65f07d6c358879f59da1319b0e7e00689",
+    "rust/solar_native/pyproject.toml": "fa22135799f1473c149630444fe4b26356e970d851f68e4794d8e2ed1b54ea31",
+    "rust/solar_native/src/lib.rs": "3a38d0d17585c41fe58a97a4673988cbbdf5bcb7444987a908ec6dcf950c3ad6",
+    "scripts/accept_sandbox.py": "a387832a7d94261489beb68f40b112e741023b5fbed7b69617a1b3bd3bdefe8b",
+    "scripts/assess_accuracy.py": "e2a546699dc603f4af10dfbe806959508a04a72cc2504ffd93a276d53e56f0e4",
+    "scripts/assess_asteroid_catalog.py": "b91075e5d8761792334750cb1c13bc7acd2b6a9c5e3e8a33542107e1837ec755",
+    "scripts/assess_asteroids.py": "6ce94c9d3682d27f09be336aa69628eb8445b1d9dda3d747c7efa9b799b2c1e0",
+    "scripts/assess_asteroids_catalog.py": "8c3a9ff747b1b1ed3da1bc007d2605aa2bea0f0e6f01ecd7bf42b3f24a357a09",
+    "scripts/assess_bound_body.py": "89506852cb4db4e27189b0fb72ef5c2a365f7052c997fcf40cc2334dbbcb84f6",
+    "scripts/assess_boundary_cloud.py": "870585b4894669527843f72dde9994fd329658b6488200832997cf60c62a0e86",
+    "scripts/assess_canonical_checkpoint.py": "156702a2f86db859352161e16972af0d3c03f8e6e66ef0555e37155583eed530",
+    "scripts/assess_canonical_initial.py": "e6075fc148ffe903e77ffd44d8f2704accbbf344b00a0d8fd0e13bdc728c7510",
+    "scripts/assess_canonical_solar.py": "ef09f154ccbcedccff4dc5235c789db3fce6db0a686f0ec23b8b647f023dce6d",
+    "scripts/assess_chart_current.py": "11275a89bc2a6d7ece6dc72a9bc98b70eab5edc60486bdd2b5b20fd54ee0b076",
+    "scripts/assess_continuous.py": "9cb3f746825ff4327d99b04f83c2a47dbe99ca3869111a56a4cbf94fca2d9823",
+    "scripts/assess_continuum_conventions.py": "27c58fa7f248b17cb9d2479127eba80d47ad953063a9409385276d7c786866a1",
+    "scripts/assess_continuum_stress.py": "df45442ae01ad7ef48c06249d1aef5e3c9bafb5ad005ced7c92cad5b6b7239d5",
+    "scripts/assess_core.py": "573e66dc0e611b4c85b9d5634ee8c675395f2daef3e44fed4c7c1e239601a27c",
+    "scripts/assess_current_runtime375.py": "5f2e7f2d317c525173fd9df7eb785fb19c05b588a211904c7e2bc8931d746e6e",
+    "scripts/assess_de441_acceleration.py": "d0366cbcec9238d9d7a2fa0e36bdc7c4bbcd8f1510a7f67ac653708990f379cb",
+    "scripts/assess_de441_reader.py": "4996d087ac20270520ed1ca4c29fe7896f45c6a609bfd0072a052a3f5d0de30e",
+    "scripts/assess_decimal_noether.py": "034ba7419547e4925f1956e9c4f3dec1b019833077ce5035337a56502447a0f3",
+    "scripts/assess_dense_jpl.py": "601558a9bc71c22c7b51f533002d91eaa41ff85c2454c011f08f0f0bdb60ebb7",
+    "scripts/assess_edited_j2.py": "eaa50b017a67aef52f3ec85b635ad151cd5bd26355a87b0f490cf220cb34a0ea",
+    "scripts/assess_edited_scope.py": "1801d88bcffec9485137d537d2a1e9135bbdb2428f4c0b2d5fd2e13392e94dbf",
+    "scripts/assess_edited_solar.py": "13cad662ee8b1d16e981571d604073b5dfb3a3a19a324a93727e0c8d32d4bd9f",
+    "scripts/assess_edited_solar_month.py": "55d017f6d09c8f9ac4dfe073b68035ad0cb57e925fb12e50ec03d697fd3e8917",
+    "scripts/assess_edited_solar_packet20.py": "e081c049e1b253ee0854a918e79418f02fbdf1b6d861b8ef2c6a6022083edfdd",
+    "scripts/assess_edited_solar_prefix.py": "6f335d3e91df63d71cd036cf88d7caa8fdc4691f9e48d4e6a36504a4abfc4e6a",
+    "scripts/assess_edited_solar_quarter.py": "f3afab92faf3c73f17818e5ce560b49728bc0e7c179c24de8962a48a5a2a96b1",
+    "scripts/assess_edited_solar_year.py": "1e1eaa7823a576fa0743ffcb050e18243bbfbe793560b7994d449724e0282a33",
+    "scripts/assess_eih_year.py": "56670beb739413496c403ad63a5dd0e696e02f407bfa57fe7530f7b9fc4bf7e3",
+    "scripts/assess_error_control.py": "53da2d769b865366424ca60e544c16fc972f9910746924cd752754f3ae1f8a93",
+    "scripts/assess_fixed_j2_cost.py": "647eff33c7efe52e266c82cb1702f4868d3e5d1f285f2c4a552be642c598e96e",
+    "scripts/assess_fixed_j2_ias.py": "514c3c11f4586e02ba8cff8ff45a5c79c5d44b438f82319b0159c8eb4f2772bc",
+    "scripts/assess_fixed_j2_year.py": "0cf0fec739e9c48f6af0978f01caa115271f7c5be50916ea328b8f4078fea6a0",
+    "scripts/assess_fluid_spin.py": "c2184e0a976d198fa1ec195258980e736885aa2d2c8f1e9eeac3705fb3b6fefd",
+    "scripts/assess_free_lunar_months.py": "ff7ce393df7887a2a55db5118a6a7598bf577b0f9f5d69b4a8687119b2809ee5",
+    "scripts/assess_free_lunar_rotation.py": "8dfe3b011cad1504fd436234d846556caace45826809cd29248a4992a4ca6178",
+    "scripts/assess_free_lunar_year.py": "1f0a80a532f20737e9ef4644949506b7c6be1adbcd03017fca0a332ab1a7a154",
+    "scripts/assess_harmonic_sphere.py": "423b2765061265ec9136c8b4f9ed2c97282b000ace2354d7cd663f3907ffc19c",
+    "scripts/assess_hybrid_rotation.py": "a35777d81f3f0db9c88c07c988ffc875bf3d4e6fede046ac9ec90e0264a1d1db",
+    "scripts/assess_ias15.py": "2c007ffc29ed96af0718807cf82f0877090474cdd5733a83ab6d9b7e35d7ec3a",
+    "scripts/assess_ias15_eih.py": "257e5a069820df37e0c0ed7b1f87581228bce0ff9ecd223382e5b04a9b7f7908",
+    "scripts/assess_ias15_full_state.py": "96fa8fc32fabfe5645942434819cae84592f3246b8b22bce81d0a4b0353212fd",
+    "scripts/assess_ias15_full_suite.py": "912cba5edab07900d8268f8458cc0465548806e9c9050804ff5048b481626d9c",
+    "scripts/assess_ias15_native_newton.py": "ea6c3a0dd9e2dd2c28ba0e263706e48454d4d9c3883ccc5ea7942275d012b0ea",
+    "scripts/assess_ias15_native_session.py": "32e970065f3a11ee2aaf29233d8461c92bc33b55958ad01081bb84866aef039f",
+    "scripts/assess_ias15_original_grid.py": "fd8f49bee51e053ecfb31fb7d55da623c4ecde6416f94ef58423edddcf9434a3",
+    "scripts/assess_ias15_process.py": "6ef7a8fe2cbdc68fe179162d1bd1edd57e437c94f6ca072419a1cac2de5e0237",
+    "scripts/assess_ias15_restart.py": "427caf96275139f5e2ac6f373c51be54b6c28509619f7cc0286679092e1f6ba6",
+    "scripts/assess_ias15_restart_step.py": "0a94bb51638e8675e65e0941e22d96c3ce49418a0b35482203e8af016b8e0231",
+    "scripts/assess_ias15_session.py": "2c41377358452fecf75bd4e4b3890de72b118ac5d97240c1202acc8f70229cd4",
+    "scripts/assess_kepler_dynamic_step.py": "43e01637b382d0d6ac5dd1b48f821c08b4aaf2a14e25eccdf6f7985e687096da",
+    "scripts/assess_kepler_force_rounding.py": "538ab11757e24a9f250b28cedc1766a149570f3a3ea6cdce169c1efda04b3600",
+    "scripts/assess_kepler_holdout.py": "d3082ee6eec7164b505530f06dd28412d9d74985d49256bea9542e8a22b5ad50",
+    "scripts/assess_kepler_phase.py": "f0b2f6bece3a7653efd883f7041e1ee2d5fb2fcf13d91331fb70b406d24d3677",
+    "scripts/assess_kepler_roundoff.py": "73923167ecee4e643adada6cfc2ce7e8e92921009843a1714a8a288206af8f13",
+    "scripts/assess_kepler_shadow.py": "678d4099df73d857dd0d49addf43cc3a89a780e35f6a4b27abda1b91e1f1aeb5",
+    "scripts/assess_kepler_steps.py": "255087375d0d9447d708648761de84fab23068b25fdc610fa43a7a565ef8eae2",
+    "scripts/assess_kuiper.py": "45ac43de0b86ddaf4a593440930a65e8aec2dffc69cee5ce564b8b6944851cb8",
+    "scripts/assess_kuiper_ring.py": "408901afa599806e1ffb22091fa7027f830d061f16fc7a5eac72de6df5994f51",
+    "scripts/assess_literal_shadow.py": "742df8bc52d16b779d962c2f3a9f45a354542fc2963180498730151138c4e6b6",
+    "scripts/assess_local_rotation.py": "1a7906b39cf1e3a19bfc826513bb9d43ea590e699dcd1716cb6b1593a6dcf6ca",
+    "scripts/assess_lunar_canonical.py": "c4f7233927b0131c7d743ba6fa9a18ddcae98e488cb1d462844c199be7260b70",
+    "scripts/assess_lunar_coupling.py": "5ce0d6a2ca0390316e75e48bf3b782af96203604550297584ce249581995f16a",
+    "scripts/assess_lunar_inertia_field.py": "35f088c71d75ebbdc6bf4726d1d261a71d419451f8a21e590153020aa14a53c5",
+    "scripts/assess_lunar_research.py": "f6f477352c5e3e5c0c1599e450a3091af1c2010ae33dc63c8a26cc13525259b3",
+    "scripts/assess_lunar_source.py": "1cb2828e2ad93676b01cd1e2df31bfb7ad0b1e8d8688eb32391c1164924310e6",
+    "scripts/assess_lunar_spin.py": "5caeb3571ac6540b987bfea99ccae38857e5bbda76acd2461231b1c4cd4f37d1",
+    "scripts/assess_metric_spin.py": "1d60a48fac14b5ace9afca007ca7ec104fa21bc1b9000c47fd384f9fd2db44b6",
+    "scripts/assess_native_eih.py": "daab4d0a8f1915e6bf46f2d862ca6b78de2cf6dbe478324222dea408d65c7df3",
+    "scripts/assess_native_newton_year.py": "965f0ed3519f188e62db7bbe49f8672d8802b234e1673c8d2174dcd974a99861",
+    "scripts/assess_nbody_pn_spin.py": "643c1ad14f2ab28b7796e8bacf7508152810812a2e3a3119dc901285c4fe9661",
+    "scripts/assess_nbody_pn_spin_control.py": "c1b909e2fb06db6d53430673976178b7f2e07d8df2598e7bbb9761ca0f74ccd6",
+    "scripts/assess_nbody_rotation.py": "4fcbf1c9ad95584d8f0935ee2ff292e026de3e96293fbefe155fadf036dbb6b9",
+    "scripts/assess_newton_year.py": "316ff48cd201f76f99b166e3836ff6afb37478812906df9d6be185150b717c81",
+    "scripts/assess_noether_identities.py": "eca23fb8d1658e6c0851372ad5cca6995cdcfd89bdc00734fbb04370416ef83a",
+    "scripts/assess_nominal_jpl.py": "4f9446e378002e70ac7cce229c5dd64019c617a7dca8ea017b7bddc7e956439c",
+    "scripts/assess_nominal_solar_packets.py": "3d3e7eee99f9527cd0db45eab9006cc977ba9d3a20497c5a82223d4fb1c4b2ff",
+    "scripts/assess_oblateness.py": "304ff7b1ff651c24ebe67d2b3bc9ad029c9dff12777a076b0a474abdcc9912cc",
+    "scripts/assess_orbit_cohort.py": "5874ecdc21a9cf529863c3c95421e32d9b4f24211e5f831b87f5ef7df1934807",
+    "scripts/assess_orbit_observations.py": "d9792cc92e1a02039c5ce02450c2aacec7ac9e6d3bccfdc2c9d43371b3b5c4dd",
+    "scripts/assess_orientation.py": "f01b698a08c3cd15c5236113a9d89d02d8514671f24a96e21b181c9988722460",
+    "scripts/assess_pluto.py": "07338d7c6ca4ba991d6e13692de8f3225a6098f90c5a3d02549e5dc72fc95d40",
+    "scripts/assess_pn_spin.py": "21e068aa493040f499fd87d712207495466393c4ae681dc5d6a088ffb74e64f5",
+    "scripts/assess_prescribed_lunar.py": "2e61e5bb9740cd41063faa632af51e6175b965ec51656b5371bcdd57ce0e941a",
+    "scripts/assess_qualification_grid.py": "239675256d692f2683209c7a82573a0542c55bf46a67eb2a95a6387ad4fc1a42",
+    "scripts/assess_real_spin_scales.py": "8ce8763dcaf8753cab15fc750c667b885511c7ff2813110e8e71230d68900f02",
+    "scripts/assess_relative_canonical.py": "36dff1776a02e35085829812e959872d8cabc76247f3925c92c1f0b509d2841e",
+    "scripts/assess_relative_canonical_checkpoint.py": "92e5898aa46df2c726cfbcefd6b3d1f363593824c3383ceb6a60a3d373548011",
+    "scripts/assess_relative_coordinates.py": "e126956c4b7cabe84388f508d826fade0e87d0992b95a39af55d17eb27838ea7",
+    "scripts/assess_relativity.py": "f7d0fd7f2650c2b006e35e0abf068f56a8709a36613644e253211de5d8d82351",
+    "scripts/assess_resolved_moon.py": "7b633b17c41fa5509c4ea074235e088fdba76cff3680ea73d28c996bb1d41df5",
+    "scripts/assess_rigid_pn.py": "356d225964703ebd1f8b14cd04c7a1b2b27af8156e1d5f2d8e42df4463d5cab7",
+    "scripts/assess_ring_resolution.py": "3bc2ec35886d971feaf5119c26405bfcb3dddb3630b86f7299214dec8c0a1471",
+    "scripts/assess_rotation.py": "22b66e67589cb611c599e40a694c89a6c99c29554acc69f6424a44bc5c3c9360",
+    "scripts/assess_rotation_solar_system.py": "b9e475688dd86fffdee3cfcab0367254d48e5e5b68690a213fad7b51303333cc",
+    "scripts/assess_rotation_time.py": "7a41cd1a2fa62b9a02d9de9cbcf2f2f6e06b5c6d7a7f01dd3878a982d1528987",
+    "scripts/assess_rotation_year.py": "0ed376210450408c27b2ff811cbb6b8b96b1aeecfdabc18ff1e07b7b8d9afd27",
+    "scripts/assess_runtime_reliability376.py": "40a548ef91a1b09bf04ac0e4804242ba6c22b34781899f386f1e3471798e94eb",
+    "scripts/assess_runtime_step379.py": "034ec1b39e4dede351fa5fc0281f381ebbd23f9a1c58249569c6975f8c0d6306",
+    "scripts/assess_rust_adaptive.py": "de7beb6a14652d13c6f808dc07590f5abf67c50b8f3e3c599875d9d6cdaf0ba6",
+    "scripts/assess_rust_local_error.py": "dbb8778a5abeeb88190b3826eba29d915f504a401cfaa84175f0961a0f16e341",
+    "scripts/assess_rust_trace.py": "8941130b155ac36834ac586dcbbbaf20e91fc43887c05a73d247a1dcb99e6f68",
+    "scripts/assess_rust_transport.py": "ddbb8fde5cd4a7fa8c5f87132529a67888cf7a4878da97f1733db2dbfad53e16",
+    "scripts/assess_sandbox_branch.py": "b329f8c3867e30b13d8f38e274054047f7f18584672545e23192ad1cf55dc2c1",
+    "scripts/assess_sandbox_demo.py": "d3c9dd5714df34f2cf57d6e9053bb7ccb0c40400e45f94fbe4ded899395c6523",
+    "scripts/assess_sandbox_limits.py": "1711a95f9e461e6a10d2ab503d78a79a6205bdf57ddde41100c6160d614fabee",
+    "scripts/assess_sandbox_models.py": "39f3414626175c94c6205e472dc8d81b63284a22113d20c68993c998c614c54d",
+    "scripts/assess_sandbox_planets.py": "9bf9de2004dee139842bcd2dfbe4d25195f93c2823d0fb407b354b994d1e8fd8",
+    "scripts/assess_shadow_refinement.py": "d199cc06724ceff1f93a5ce6472615dbf136458dc7ef8bd4ff3a8725141643c1",
+    "scripts/assess_solar_defect.py": "b21105b1ca27680b2d109ecd7efa5056a2f662b9e6112d4aea0adfd4752a6f8b",
+    "scripts/assess_solar_j2.py": "718a02d5ddb6f9ac1a142a14d66707f842c7ee3afcb3a912355a413a6607ceac",
+    "scripts/assess_solar_noether.py": "2464031dc85017e11f0d7bc0888a615de7313936134b6c4a7953ee2bc32ec9a6",
+    "scripts/assess_solar_system.py": "e61195be6e072013687ff18a1672fb6e12603d43a70afebcf70b9c3993e7c052",
+    "scripts/assess_time_control.py": "d1d018d932b6fa6c1811672ce6b97188b4cc975c115ba4cbbfb95a6b510e8323",
+    "scripts/assess_transport_order.py": "4d96bda3f785e87f991974121b9f0c4f629b59bd232481c8e639d20862145ca1",
+    "scripts/assess_transport_split.py": "1daf34beeebea5e5dc7a6b8fdc530718c59734929630f7de8aeb18705864617b",
+    "scripts/assess_two_q2_380.py": "55d0864ae69c3c048c9a9a145741f3636e9487c6d339c50963f48e1334756ba9",
+    "scripts/audit_dop853_coefficients.py": "57bb8f675da2436552cc777c8a82a846f92a83d8508c72f5369e6d6be27a7182",
+    "scripts/audit_ias15_archive_source.py": "d73af7b4d42bbb676cb1ab9f28b97ba800f6bb452814fc709e040cb37330a1cc",
+    "scripts/audit_perturbers.py": "bb52f9ffd2e6d68e41aa53e45f4dab2dedca6861736dbf8268a4e4135ca29b96",
+    "scripts/bound_body.py": "50395f7b1bee554e4d0ee30bd6dde0386f27a70675a734ed34cb4f119d370d6d",
+    "scripts/bridge_noether_sources.py": "0bec4d44af5c55e88f3d476654c4f20e8613e0331a10bd380ae0e6aa1d92be4c",
+    "scripts/build_asteroid_catalog_dataset.py": "34d770d9672ab3dfe406d612393645a396103f1cda036279c483012504c8fd88",
+    "scripts/build_kuiper_dataset.py": "2f4a3831dd52fabf237120546c56934993a11544856b2db3056775dcf878f303",
+    "scripts/build_kuiper_ring.py": "2cc64746a85971c1d023fa0dc62a316a5effcac30cd6bbfbc8bf028e0fae49fb",
+    "scripts/build_lunar_spin.py": "b80e35fff9b390b3bffaea89ff6fcfa2b576c74ba46caf9b3ad26c818411085a",
+    "scripts/build_native.py": "9b71894de23b4b896c57bf3c9fdb1e9614eabb73524e6c65b2833f9399504a56",
+    "scripts/build_portable.py": "cb174123f8518bb56e4756ba10ba23c984f56f9cced72731ff3d3a348a0531f9",
+    "scripts/canonical_checkpoint.py": "e38a99dc52b1742f3e2465565af0ed918d2e258ce7b39cb8fbaf2f907620fa5c",
+    "scripts/canonical_initial.py": "45f69e015712f403edd17693723b06cb3b9f6044d42bf8ef64f4183ebeac2de5",
+    "scripts/chart_current.py": "944a10f8fa9607e3f6b604bf4787c26773fe2abe4142fcdcf55d52fec1ad4159",
+    "scripts/check_app.py": "ad274b2edb92b91dc5d56afd85b945c24f6e672a90aa80360e3dc01a30397303",
+    "scripts/check_asteroid_catalog.py": "4aafe778bbb57b9eec8f918d376bf69b0fa829cb73994d57a54ee82eadd29b44",
+    "scripts/check_asteroid_source.py": "f89c672f7313e1b414bc870d35f24263d7b44d83fc42cf4eae0d0f40bbdb1957",
+    "scripts/check_environment.py": "19f995c9ec4343c80ae87449b0ae72f7cfd1ae9e2daafae183751136e2f2dbb3",
+    "scripts/check_kuiper_data.py": "744cd57ac29d33de47a2f80fdb4a3d637bf18962191cc3ee7e82ce7d4ecdbb01",
+    "scripts/check_orientation_spice.py": "0b3a70854c2ae9aedd9440d1849e8e422f790ee93b5707f85af5a0e1b593264d",
+    "scripts/check_pluto_source.py": "94de3d6250e85ddae474e9a7e3183aa29b94b47fbf38f16a7ad0d6ff4c23e09d",
+    "scripts/check_portable.py": "497bd6313c98e0727b5a4ccca0328ce8a9a2de5792b22e44407f70fe3496ed97",
+    "scripts/check_project.py": "2189db76feb20fb2a6c6e43f717719e31eb976924838236213c157428befe9aa",
+    "scripts/check_relative_checkpoint.py": "83e85be3988c4e0d2698514f15eb7eb53fdaf96e6308b58b7a36e39b25654033",
+    "scripts/check_ring_field.py": "258e210280e061cf1c856add694a885c67bc6330e10749dacf11ded0da501bfc",
+    "scripts/check_ring_kbo_orbits.py": "b91f70ea0e10cc158858f06bce29f684b1721f4ab30b8d47e33e8f0cab300b47",
+    "scripts/check_runtime_reliability376.py": "5f43233d67fef5cdada628c1aead2b7172d3fbc650d921e9e150500cca2ef957",
+    "scripts/check_runtime_step379.py": "153491dfaaef6f971b3ab7591b1c2f97a4e57c945728e9716e0e4944d0a5f47f",
+    "scripts/check_solar_pole.py": "a7e0b597632a2779c9ad7607a366bed4fba88deaec03bddc976f474519d2eaee",
+    "scripts/check_suites.py": "ccfe039fecad7eb30b84d51fe016d170c70abfeb0fe6747807d935e96636f474",
+    "scripts/check_two_q2_compatibility380.py": "65084a570a6a4b1aac383f5cbcbc0fef14d5ded63f1d819985c5007442a3b5c2",
+    "scripts/continuum_conventions.py": "2a6d08e7905648678115622e9f5bd63564306342e2493cb35034a9f3771be250",
+    "scripts/continuum_sphere.py": "b1546b2c756107e64b0409bb81b2e8578c2209b5750a6ca93991ecb957ed2144",
+    "scripts/continuum_stress.py": "e159bd5e381a6ad7e9b8f196acb768cbbf7b54ec79f522d7e42af3dfa73caf04",
+    "scripts/de441_decimal.py": "7464d84e5906e4dfeabe7e1704ef2a205624af1e17370498bbe3cd7dc4ce06b4",
+    "scripts/de441_power.py": "1ce21d11b0e664848059e9fff4c5a8030babd09b8e836e68dafc74db1e0e33d3",
+    "scripts/de441_reader.py": "26b71cb0b755f9fa025288b588d5b5c3184d6fac9fad416056bc22f9da1e4ab9",
+    "scripts/decimal_hybrid_rotation.py": "3844ff4c92bf053e7243fe102c875f8caf981e8641296ff653ae3c39b9964566",
+    "scripts/decimal_noether.py": "4924b56dc5d2bbb38d5ced004879d1b953ddb348daf957144e68aa03d03ba0c8",
+    "scripts/decimal_real_response.py": "cb697fe70f8a68fe89113b7996efe3012bad009672b733a0c0ae007c8d6662ad",
+    "scripts/density_moments.py": "61ef05d60187e1620ef33d40b60d5d3df1cfaa76153cbf0db56d50ef59313141",
+    "scripts/diagnose_rotation_limits.py": "47e0d5e8c431aad119a4ca583581ed9045d49f5afda1e7a13ab108e3248f5ab7",
+    "scripts/diagnose_rotation_reference.py": "7899b12903f29782669bfbced5fbfd886d3b014b7b2e7afcfcb706d4399f0cad",
+    "scripts/diagnose_rust_adaptive.py": "23fa0ec1a52349b5de0ba2a3ba004ebab6a737fd65aec3f2be384aa887946de2",
+    "scripts/dynamic_step379.py": "72d8c1c112599ed4417bf912006393137a15cf6503290504db3047f955dbb1bc",
+    "scripts/edited_j2.py": "31418782c1585c87fb3cb9b8dd6dc141055372679f3efdffddaffbb2d2d7244e",
+    "scripts/edited_j2_three.py": "163bfdb7629fbcf4eb3603339cc360601843d73b16730cef4b38b1d469fe70be",
+    "scripts/edited_solar_interval.py": "bdd2215d2d178382fb7523a2b1933abddcd0df1cb91312697c23de1f10ec800f",
+    "scripts/eih_year.py": "a9bcbac8897b42601627ff81ef03cba7ee0fc29b2a431cd4a35b37b89cf16bb1",
+    "scripts/export_jpl_bundle.py": "780794832cdff8ca8dc375651f3d43b72a37570738adae2e7795196a4c6a82ff",
+    "scripts/external_metric.py": "3ab81738bdf2f9bec0e19643384c2b0e15ac9260524806c706eaa3f08926a25a",
+    "scripts/fetch_asteroid_catalog.py": "8792c91727b561f47a5a12846b69ad6527bb181b1fc5ef6a9ce44cf4b08bffad",
+    "scripts/fetch_asteroid_data.py": "8fd64f88a3751f40bf1f799e4f66c254b851ffeb8a6729ba9bee2aced53ae454",
+    "scripts/fetch_dense_jpl.py": "e019283878b98001cbcbab0473e786d5f711344494f3120ec9bdea48e818f2ac",
+    "scripts/fetch_ephemerides.py": "719d31998368f4c200a60f1460abd4530a04c4063a9c8e60f6b2d2988a8dc232",
+    "scripts/fetch_figure_profile.py": "e7c293dcbf51dc80c2731eec20b03d874bbd1b2e08be85f9ca5ec748b0bba6cd",
+    "scripts/fetch_kuiper_data.py": "c461ba2e7698fead601daf41c7ecc272689a076af5ef8c0454f9d05ba6ef748c",
+    "scripts/fetch_nominal_jpl.py": "8b402c37b622fe1ac968a989dc6a412bdf273054a617330e9511bfbf03be8df7",
+    "scripts/fetch_orbit_cohort.py": "7a2b5c6c42c547a5c45998e79e0d75f9eedef56114e068b7649acd14714c7a06",
+    "scripts/fetch_orbit_observations.py": "d4938989612b5ac18ad7ec21e960ca68312b3801c3cf7779217143f9ad37a37d",
+    "scripts/fetch_orientation_data.py": "b28f1a43e5a180a65ecc8aeadf8b90898ef50f697c87035efca019321820b313",
+    "scripts/fetch_pluto_data.py": "5ec397bdabde3f4a727ae807b1d133d2d3a5ea87169ac4e7380c4cacdd2a552b",
+    "scripts/fetch_qualification_grid.py": "e8c79ddfca723e8572ba9b89f6dd73a192ee00cbbc1178d7007a5b87d039807f",
+    "scripts/fetch_resolved_moon.py": "789f960632345307f8a7b2f3c53128ec19b7aa4314aaf25f33410a12522f08f3",
+    "scripts/fetch_solar_profile.py": "b40e14630517640c7544d4b1c8a56ec4ae7dabe77d98d2ad1b6d4c08ad8c6320",
+    "scripts/fixed_j2_ias.py": "fd77c72ce6742fedc479064947de863b4632e3aee9f48a793005f861c0d96df5",
+    "scripts/fixed_j2_year.py": "7f8a48dc9ae3c9e9fe035a1ee73bdec33f9ab35d50fec57b39e364bed3d9f587",
+    "scripts/fluid_spin.py": "3a9ef4940de96b049d8f41528946e6b24134f343378951955eb55eae9eb02326",
+    "scripts/free_lunar_diagnostics.py": "8aa31e0b3ca9e398b64e4b2fcbda752fbc62ec57cb03a7d67cb7a90e3483f20a",
+    "scripts/free_lunar_rotation.py": "62e0984c2c0bb384ded4a9630d96d47a61198ff0f923cf7e4c57b863b25ff07d",
+    "scripts/harmonic_sphere.py": "2854385934a5b0481936e0b0bdd1265a07c54aa709d5c54481d82bb4d935492f",
+    "scripts/hybrid_rotation.py": "b943891710d422492e2370463d5cbb9dcbdd0498ce35d28b63663040c048f4bf",
+    "scripts/ias15_eih.py": "875b60b3faee02239948f667ca5fb62def073336b1197d582e09affe1f6623de",
+    "scripts/ias15_full_state.py": "50f2a04f1f1062368041b2c693ec84e857b61e92992cc5c78b093fc7e9954e23",
+    "scripts/ias15_native_newton.py": "6a4d54be762c557e5c13dcb1420dcd98fdc7fa6b0bd560794564446fda2e68ea",
+    "scripts/ias15_native_session.py": "e92651a535cfe978913e18624d1618c11bdf6ff65833f16bc9a4a34555a236c0",
+    "scripts/ias15_process.py": "af3ab6b541de2b097fbe11b912d0d50f899d6e9e6f5db71dcf2d3685dcb864b9",
+    "scripts/ias15_process_worker.py": "33a42761bd91bbed466aca612e740b430c5e03ce2f5206c120923b337b883444",
+    "scripts/ias15_reference.py": "b27e1e9b4aaddfd3b7dd2f14fb7f4d3b048106bfc0bc6cabed7d4762697b43be",
+    "scripts/ias15_restart.py": "7d186c798926024512f982d90590e4202b07eff74a87dd373626f6b02e93aef6",
+    "scripts/ias15_session.py": "3c7e834f21a3f3df98bf41a5e5230e3c292932d17540e4d7e38f3c6910a14ae2",
+    "scripts/independent_anchored_reference.py": "5f7ca98203e18ca6e2a40ff8b2d5660fe6f1a96b85b37abadd8a7cc71b13e581",
+    "scripts/independent_bound_reference.py": "a418a2c95cf16da583d89292be1ecbcd8ec75386c5b8790a6f67a3c915e4bd88",
+    "scripts/independent_conventions_reference.py": "c2cac2d7bf0ae6ddac32984c83ab49fbb1a37283f9fdc6f6d12859cfd40c46c8",
+    "scripts/independent_current_reference.py": "b85cd21b2bb0c2988b6fb14f99aabc78b268f5b776e86e0e8f17c2ace85944ce",
+    "scripts/independent_eih_rust.py": "1a6fb7ed7cbacefa7a26486eb105a34187850ad9caf6baf8fabe0accf520664a",
+    "scripts/independent_figure_vector.py": "0d39825bf63a0d652d9807d94cab5ba81020168f10c89448194d6316b5744060",
+    "scripts/independent_fluid_reference.py": "f9d4b4c2e714719149129e0de7ef500d99f5ed66feb4b70cd1ef97bc18b908da",
+    "scripts/independent_free_lunar.py": "5f2e3283f2ff21157a03b085979e8669b9bd5126375bb749d880211e6951ee56",
+    "scripts/independent_harmonic_reference.py": "be6821be5e77ae10246b899342041bc58ad54ca9c24d70179c3b1babbbe26d76",
+    "scripts/independent_hybrid_rotation.py": "8cfce08f7ffea4058341e908ec5675ca88a7f74c2c56aea9255ec141327b4ddf",
+    "scripts/independent_local_multipole.py": "5c341ccc95cdc46b02f4ab8302d5b686f9fc6d76b4df9e9612ccb95a3edda8c7",
+    "scripts/independent_lunar_coupling.py": "62398d7e88f6200332853cda0d56b5a409eba309f4182cb759e847c1387b5040",
+    "scripts/independent_nbody_pn_spin.py": "8d0b6070bced7acef5fc6c88aad0122f7e4b6a0d555cc86c152837e16251114c",
+    "scripts/independent_pn_spin.py": "b33ed5bf64c54fa1b2e1a18f82d024dd4b275096265a3986294832aa0d7f524a",
+    "scripts/independent_real_spin.py": "b6f7210e79c524e4e8be6592aeeaa80387419ac00d10e6fef7d2d9b8fd3c555d",
+    "scripts/independent_relative_canonical.py": "9d53a3eb2ed1f814d83fc70c1a2a33bc3ed428f448bb607e689c918653d865a1",
+    "scripts/independent_rigid_pn.py": "06a64e7b296cdcd22b317bed375303ac4462b530c800fd00a40db68c104dcfec",
+    "scripts/independent_schwarzschild_spin.py": "63ca372b4c4b24d5a4fcf6302088436d0bc9d5c765e6437fa2f9ae3368532167",
+    "scripts/independent_sr_reference.py": "6a9491555412ed4d14a799c2e4fd94434fde55ce49ae154fa47f7f520a0ff16e",
+    "scripts/independent_stress_reference.py": "a5fba47ab712d3e351a7724509922e647ac8a806064cc0954d41534f51118509",
+    "scripts/kepler_cache.py": "1c8810430fd5e289c22070af112f5cd590057bda39563ec0ea118d916d33d195",
+    "scripts/kepler_reference.py": "abc7f6f010049d489c71d5331e7942c786600432097b72d94204ff26cc9c14a2",
+    "scripts/kepler_roundoff.py": "c72737322df2a1f0ba73ce5b2f37e1e1b52495eae593f26e0da158fc199d652f",
+    "scripts/kepler_shadow.py": "3a69e39e2f5b3cb2cf6fb8c7bb4f7a0c38d7110efcc12d57993aa3801b549941",
+    "scripts/kepler_transport.py": "bfc2af2debeeec0b86bc0632848c1570cdca460054702cf2a744d3c8bc8d1ee0",
+    "scripts/local_event_map.py": "f89a3aeb5dbb0c5f48a66c6f73a8b69d0ede14e0c085a6819ed6ee2fa2466272",
+    "scripts/local_multipole.py": "760e947532a4ac64dcc9adfab1b1e31491b0614b6bcfb5ef06dbacac48eee98b",
+    "scripts/local_rotation_transfer.py": "414d49f8a9c191f2dfc14557fe3f2d687fd5d4fe1c3f9763c5c3135210988786",
+    "scripts/lunar_canonical_diagnostic.py": "4552ffbcc1db6989724ad76ce888a30aa77d30cb5ebd50639b1ad63f8204240b",
+    "scripts/lunar_initial_boundary.py": "2591ae7718a1b9a927ce1a34fd1643fa699e9a3cb4bc14f9297514c1c42fecc7",
+    "scripts/lunar_initial_receipt.py": "919741524e03fb2bcc76367e395105d7a5af0abcc1cde7bb22f6a2f820227342",
+    "scripts/lunar_research.py": "eed1b0087c8b2888887aff4db9941dd16d50d63757ff5a726a3d15e66254ccdb",
+    "scripts/measure_playback.py": "2b94b9afeba9e9890aaa49a3311f617758b614ebee63e1b8515d19fc20d7932a",
+    "scripts/metric_spin_transport.py": "5437c9c567fad6f6ab5d4e85fd8bf305d8c7184e201ae7c9a7f0bf5734c9a666",
+    "scripts/native_audit.py": "5a79118ed6057740b68af747435f444e484628dacb2de001584bd355f4eca97e",
+    "scripts/native_newton_year.py": "57dfa1cc6e6f313d892cc37f338b9097f390ddb6687c2b76b7412ca97a16fca9",
+    "scripts/nbody_pn_spin.py": "b76ff65e9de4ee3194cd560ec424565c572c2651ff3f0da9e4acbb194c1a492d",
+    "scripts/newton_year.py": "b5a4bb2be7a1f31d67b85639a7f2509962010f8f3eb920ac2350a99c210f8726",
+    "scripts/newton_year_cache.py": "cd2aab17fada6f45f4c35be2512af8475cfcd4cde653402abf9272c09b935ecb",
+    "scripts/noether_identities.py": "b62ef4f0b8e742f34ebe2c6e08d178a1b8d772104af8e79e9a29df42b3c42720",
+    "scripts/nominal_jpl.py": "c73072be9f2eb4c02c345707d84256a966849ba097d03528ce74fae22c0c8937",
+    "scripts/pinned_lunar_initial.py": "fc4f71a605ae1f1aa97c61b0937304242ef404929f3cf6bc9a568ab6c68536b2",
+    "scripts/plot_asteroids_catalog.py": "bef3cf8e2e2f5b6d3bfb6c8c1c2db704c1f19ee77c1a62830ed05105e07106d9",
+    "scripts/plot_error_control.py": "84594357a354f815195d743a7484aef01b0fb9a2f5a5470274f60bcc39c284d3",
+    "scripts/plot_kuiper.py": "8b7361dac77ff6baff28ad737005ef583edc7206b733cf7e43b454cd9384b76c",
+    "scripts/plot_kuiper_ring.py": "7b29bd4fcc8fe9de4db4c417a91362053e9a08846bcfad149080c574941fe68e",
+    "scripts/plot_orbit_cohort.py": "af9b96358089a18eb67a296af7e7316bc182f1195f3d34c5c3a2fed40f62e583",
+    "scripts/plot_orbit_observations.py": "d6f74b3d1474abd900604a232d5194843bff0c51a1e51190fa543e260cfe5d24",
+    "scripts/pn_spin_model.py": "5dc2df3223fb5e8fc21045698e120b6197a0965a6cd6a6289030c2f2f62b9235",
+    "scripts/portable_patch_workflows.py": "dba6974faac81fc079051b0b9d76b69d633356a6578005415fb078c2d0a4f65b",
+    "scripts/portable_workflows.py": "05cc021291b068b268206ad89899f0ecbe6b3abef1490c744d8a1d5f210bf62a",
+    "scripts/prefetch_physics_sources.py": "e90e6c66240c04a5f9be9793c33193f970bf976ffe8986de4f8e377ebc1809e8",
+    "scripts/prepare_qualification383.py": "e4975e783a62d8dc7f84b9e30a98328601584d4c45641ae15cbad07ca5ae1398",
+    "scripts/prepare_test_inputs.py": "62e3a84e39ba150d1a8c7d6c29921737e36a9847d38340fd2a1a47e2505034b3",
+    "scripts/prescribed_lunar_control.py": "bf291548bf24c3e913e203c2ca61e7f6209e5d528cfbacdee69c00031a58b61d",
+    "scripts/profile_catalog.py": "a3894200d350d9d2c1323e7b28474e4903b3c0700e55f707ff8e16fc991e3fcc",
+    "scripts/profile_distance.py": "c1a280cb558e834b9ac402668299332a639eec8f2a134009a133050317e07f6a",
+    "scripts/profile_runtime.py": "f0f2f0fd927e0d14e68fada67d7c0a2923313ff4dc6895e310198ec52094e2f1",
+    "scripts/project_inventory.py": "d0265600fcbdfb160348787a9b189846f1ae0ce6b62d4db2fed6926d1a3d5971",
+    "scripts/qualify_current_runtime375.py": "036185c9803f0df586e80c5e16e0e9416af1698eec701fda7cf8f7c9322af296",
+    "scripts/qualify_strict_profile.py": "684d6678fbdc1d7a2745e01c187a83c3e3b70cf8d16d1f17f463899acc45c8ea",
+    "scripts/real_spin_scales.py": "ce8e770ef620af3b594ccdfcd56628e3cecdbc217558f72b4d0212dd0d3bb5b9",
+    "scripts/recompute_jpl.py": "34dd9d3a60b26f27db11a2442db08e847ad2e41cb6392524fc29f07a41babb0b",
+    "scripts/refine_edited_j2.py": "47ed0652a2e9c222a92cd71246b516053409d78dd4ea5bdc8128af8c4df5eac1",
+    "scripts/refine_rotation_year_reference.py": "b9f8cd549ba094ad2528cf8a577153495002bbbf01d8f9615aec066b61cddfe7",
+    "scripts/relative_canonical.py": "3d44dfdbeeffc41e3ce037fe78fb282df010eee27c0b6d88b4afda1370fb80e7",
+    "scripts/relative_canonical_checkpoint.py": "a92bd4a7ae4bd131a76fc840187e64626eaab8445b34ee99acfaa8fc059a7919",
+    "scripts/release_history.py": "c5f9ffd9ad1aeea614b6f1146beff444666f2eba0a6f7e71bd716f71da1aabf7",
+    "scripts/replay_ias15_full_state.py": "53139211f85f2c533a56f3d58f906ca047f22e42504894f25cdf76a9005dec3e",
+    "scripts/replay_ias15_full_suite.py": "b07186076d129200df5339886ae4353b3f80094a4db5cad15b202ed45023871a",
+    "scripts/replay_ias15_native_newton.py": "794ba8a2d654603b7e62e3881125aaca89ac772e0429aea70fa989025523d5a1",
+    "scripts/replay_ias15_native_session.py": "cf106c12137a8dd369466c2cbd4258e8bc4c94c12906ab1e3d2442ab552f5422",
+    "scripts/replay_ias15_process.py": "4901acdaed3bbc9a62ccaf727c6049e3df232eb1f5f6b288523769b20c70cc09",
+    "scripts/replay_ias15_restart.py": "1ba4a10e88062be93aeb85b549b3cc395447e46cf3dbcbb49825a0c3d3c49c2a",
+    "scripts/replay_ias15_restart_step.py": "530410d195aaa175745f993bfd9058282887d0d92c5c7512f58b291532290221",
+    "scripts/replay_ias15_session.py": "bc0c4add6e10c8246421b0908c9214a12788feb5526d51a84c49d30e10eba95a",
+    "scripts/replay_jpl.py": "631070503036ba5c6d0aeb92adc146698ee71385e7eccfa02dea9a35c4663d8a",
+    "scripts/replay_native_newton_year.py": "0bb04638c65c7702d2eb5983dd741513d2b33dd0425443af57ca11b3983be3d0",
+    "scripts/resume_relative_canonical.py": "72c7947f9bb5a246ba115f0846ea490ba81f116d14e92eec988288c2ffd7b0dd",
+    "scripts/rigid_pn_model.py": "bd1b7126e7d29a4c899e20b5b27b6f42b316a58724f968ce8e054f5d749afbf1",
+    "scripts/rotation_time.py": "0d88272ade5c6cad2aef50dbe45bef4869e4766d479b8f5bc9b36fa4cc4bfca0",
+    "scripts/run_lunar_research.py": "3f4f3ae7ed318b789cdf8da9659a305fafce656a24eea0e5ca4b76ad6cd88ebb",
+    "scripts/sandbox_checks/__main__.py": "236250d165b14e86cab6c32271f6d191733d782f0ec73755193e1114e4741665",
+    "scripts/sandbox_checks/accept_sandbox.py": "8b4f6477ea5c68e1c5b8a4f4b2db506119949654d4195c48c1f88fda3776b120",
+    "scripts/schwarzschild_metric.py": "561960a22313995c0a2098138d5e7b73bcd31f006de853d00b4291f850e24fe6",
+    "scripts/setup_gnu_tools.py": "e85c285e029f4e5cc4b8f887cf0e715baf7d9ca5730ab27f59703f936c435101",
+    "scripts/sr_cloud.py": "bdc3d8220a30a7af9040dcab936cb76c189f107ebebf8da30254e0e0c30171f3",
+    "scripts/two_q2_fixture380.py": "bf00e1f0cc52e11f3ab23081637c721a74098dd43cdb4fe9667ec1a5295f368b",
+    "scripts/two_q2_reference380.py": "174c6529d010bc652f6ec5e5b6dd8aed5202a98b4cbc1c18d4b27d2b5fbbf78a",
+    "scripts/validate_two_q2_380.py": "637a7b01a50c7944846539712f2c242f0b676cb4837ea18f3c021cc0b807df98",
+    "scripts/validation/eih_scalar.rs": "47ffd86634e23c9b76f8a9f9b39da39136c9f10e70a7a331410e4ef2415073ca",
+    "scripts/validation/ias15_session_356.py": "1058c0f065edc4dfef26df9f153c4c2dbb071342f7cdd122e9e1c76d15fe17c2",
+    "scripts/validation/kuiper_absolute_assessment.py": "d09ba117e5c1f9113d97d8847c59efdfb1e98d6d0d4c741b8c79e9747710215b",
+    "scripts/validation/plot_artists_before344.py": "7ae14fff4f9a97b6869a921c3c4c97b420c2c2d40efae9e5188be5fdd11d0661",
+    "scripts/validation/vector3_before331.py": "479d6b17e8bb1de29f9b18340203b8de71fe4a03feecbc72ef5b0aa23a02c8d2",
+    "scripts/verify_edited_solar_cli.py": "e3431f13d342cf91545c2546b7c5ab788be8202b0569876729ee09df7c17689a",
+    "scripts/verify_edited_solar_packets.py": "141a86fd3e169eb8de0f8f084bbd422777f1a5208a5f90f876774758a9533be0",
+    "scripts/verify_nominal_solar_packets.py": "6f3cc6358b11cbcfcfc772deec042a939a76de6f51f1e1c0bf9c23aed2e82536",
+    "src/solar_simulator/README.md": "c97e0c8cfe0e3a659cd2ee38b4a56ec592e4ee233cfa01173934a60f2ec79fe8",
+    "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+    "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+    "src/solar_simulator/_numbers.py": "9eb1222d384d39fc47e74c660d9b497c1daf715293efc0f737855459c64d8688",
+    "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+    "src/solar_simulator/app.py": "fa74ec7809fdc2442b6b6ad9de63d4e61e358e0ad67883432cecba8deb3b62fe",
+    "src/solar_simulator/application_profiles.py": "7989d9d633db285313ceb1ed280cd6aa773d92a053a0d327ec211e8e578c7e07",
+    "src/solar_simulator/body_fields.py": "57cf09e0f959609e72f973dbea4b3ca3b25ec0d472458aee3ab12cadff56e6a3",
+    "src/solar_simulator/branch_io.py": "ac7e55d5217d529ca3aff63f834cbc83817be09c6df1aff333507ac34f1c58c4",
+    "src/solar_simulator/cli.py": "aec860c8fd5793bda20d177e469318026b7d5333bf577a243cff4e5e39239f79",
+    "src/solar_simulator/collisions.py": "888fc2be6f62a6b404c916fe389d75f76c4b3b70b58d572629d10cb53a79eca7",
+    "src/solar_simulator/commands.py": "c750cae35815d76f6b8704bb536d11d92b7769800878cd54d41f5dc8d5e97814",
+    "src/solar_simulator/comparison.py": "93c8e0cb6706ff7a12d36c26ee665607a984268d6c843ee79894c7dc48fb4d38",
+    "src/solar_simulator/comparison_loader.py": "5b41429b384d4be57b86b390fed12c149ee3b7d229293388af1d8d165ea70811",
+    "src/solar_simulator/comparison_view.py": "bedc3b72709e10aa2b3172d528806127df843b7588081ba505c27ee916bd1dab",
+    "src/solar_simulator/contacts.py": "8270efc59abb0d665a0dabbd76f50b1945be05bb584749569bcd3041e486d68f",
+    "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+    "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+    "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+    "src/solar_simulator/convergence.py": "494794fa10b187692cacc1b6079ec6aa61876979961cbaafde4ffd7139915247",
+    "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+    "src/solar_simulator/data/ERFA-LICENSE.txt": "c72781d8712dad739d5a173c4c7da23c206e19929e9ea271bff4c2e2ea225018",
+    "src/solar_simulator/data/__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+    "src/solar_simulator/data/asteroids-20261008.json": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+    "src/solar_simulator/data/asteroids-catalog-20261008.json": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+    "src/solar_simulator/data/asteroids-full-20261008.json": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+    "src/solar_simulator/data/earth-j2-20261008.json": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+    "src/solar_simulator/data/kuiper-20261010.json": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+    "src/solar_simulator/data/kuiper-ring-036-0-20261011.json": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+    "src/solar_simulator/data/kuiper-ring-036-1-20261011.json": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+    "src/solar_simulator/data/kuiper-ring-072-0-20261011.json": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+    "src/solar_simulator/data/kuiper-ring-072-1-20261011.json": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+    "src/solar_simulator/data/kuiper-ring-144-0-20261011.json": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+    "src/solar_simulator/data/kuiper-ring-144-1-20261011.json": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+    "src/solar_simulator/data/kuiper-ring-manifest.json": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461",
+    "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+    "src/solar_simulator/data/orbit-cohort-13270.json": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+    "src/solar_simulator/data/orbit-cohort-13271.json": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+    "src/solar_simulator/data/orbit-observations-13270.json": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+    "src/solar_simulator/data/orientation-de441-20261008.json": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+    "src/solar_simulator/data/pluto-system-20261008.json": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+    "src/solar_simulator/data/solar-j2-20261008.json": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+    "src/solar_simulator/data/solar-system-20261008.json": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+    "src/solar_simulator/data/solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+    "src/solar_simulator/data/two-q2-demo380.json": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+    "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+    "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+    "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+    "src/solar_simulator/experiment.py": "9fa67811531b1e904eec2df40ba8d12dc5e4d4ea99963a32b2adb397c8efbb6d",
+    "src/solar_simulator/impacts.py": "0f6017b3d6db7f9283dc231802af431c03f69e1bb469bfc1af37655290619f7a",
+    "src/solar_simulator/input_units.py": "f774ea2af4453a94be178d06d002dfc8c136102aa51c5682c0adb5375963e1ab",
+    "src/solar_simulator/inspection.py": "aacbd64c7c33d0555aa3f17b9e1b24e4b11f34ce29056b9766cf73202597238c",
+    "src/solar_simulator/inspection_view.py": "0c75a57abbe31ee6a7656838327aac3f0b62bdd21a4a6517fe572b4a048d23f1",
+    "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+    "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+    "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+    "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+    "src/solar_simulator/nbody_rotation.py": "7cdbf09b398aa467ec5badabcf4428c88dfc62ac81f49b73c988ae8c81c9ce7c",
+    "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+    "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+    "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+    "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+    "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+    "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+    "src/solar_simulator/playback.py": "5961af2bfeafb7eb8bc019b9c38c61dea70b2d2551075e693f235633163be987",
+    "src/solar_simulator/plot_artists.py": "822a9dff2572460bca88c00395f00cefaaa10c451288d2f65f1e36d21d220b76",
+    "src/solar_simulator/recipe.py": "776ef2e2ceb1a6f7985178c006dba828d86b55c1884336e21df90b2cb6f71af1",
+    "src/solar_simulator/recovery.py": "b66d4772555da6cdc86fd6b3efa8c2645f58623bd98c283ff4d1b45c18d5a7ee",
+    "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+    "src/solar_simulator/rotation.py": "245087dc0b1f5cc64e8c3fbbd1c34fe9e8f80266069ceafb8081906f8dfd4f80",
+    "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+    "src/solar_simulator/rust_backend.py": "fd85ac27cdc4716b031de3f23bfb3485b22234d97c8830228104fe1b8250175c",
+    "src/solar_simulator/sandbox.py": "46120a00ac7434d107b9e9b5aa653d3401c225adc7ad9fce33b2b274b6851806",
+    "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+    "src/solar_simulator/scenarios.py": "985ee4ec9e5cc4052a1dadddaf9f7ff1291195f06f6d66601ce12c382181a359",
+    "src/solar_simulator/simulation.py": "eb1d18898ed5412ea5b813b03e52472d206be1c204a0de41d3c8c0a0095cd53d",
+    "src/solar_simulator/solar_profiles.py": "b626b64a5dacd9eef5cd768d9de91ae909f697eef7d07759a2a62ba350146134",
+    "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+    "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+    "src/solar_simulator/storage.py": "1fa867fd29f780f7453c8357b5b72ee0c930b5dec671e144c20fabb056a20f1a",
+    "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+    "src/solar_simulator/trajectory.py": "59c3b5b6a1e58a2387fee2ae12c945eeff7256be045834da7adc2257b6e86a68",
+    "src/solar_simulator/trajectory_loader.py": "9d91555919d24ac2316fe689a5673750bd768f787000235b96ea83716ab3b336",
+    "src/solar_simulator/trajectory_view.py": "b004b251c6cdbb63d5c826de44f7f9a875c807fce89c29724623803d7d85a20d",
+    "src/solar_simulator/vector3.py": "d9f0f2875614da470a226738a771d88f031c081d4a5d178c23437bc1c0e53032"
+  },
+  "tool_SHA256": {
+    "scripts/qualify_annual385.py": "b350bad54b82bcad3b4fcd9196b4271e9d56fe0f6dded1345436f44e019511df",
+    "scripts/assess_annual385.py": "326f909a12bdd2c5ff38d4d977738a97c2a38cd962c6272b630b298b9f4511fd",
+    "scripts/qualify_newton384.py": "483516c59a0306ad8c4037cb67e290d5729bf1fad55c370f3bb2aea79d8126d6",
+    ".tools/qualification385/prepare.py": "4169392648765271d2836f6869b83a8fa129cc909176134ef8a5a57bc70ab086",
+    ".tools/qualification385/run_stage.py": "a3e71674727d80780e92efe5c7dedff90e8729c232589023f264d38e5cb052e1",
+    ".tools/qualification385/offline_monitor.py": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508",
+    ".tools/qualification385/retry/run_stage.py": "0c67ae4381335ddbc93fc670323367076a0d0b6ba02f8a2f907d60cd7e7683fc",
+    ".tools/qualification385/retry/launch.py": "650630bc2842340ee9d7a3cf414382f062ce4ddf851507f41a05d1c82f7dc06d",
+    ".tools/qualification385/retry/offline_monitor.py": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508"
+  },
+  "protocol_SHA256": "b868729f227d0fd25677211450245bb9b18d8d88e7d04f293a9be2ed801e198e",
+  "environment_file": "environment.json",
+  "environment_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+  "G_hex": "0x1.2589effed8accp-34",
+  "native_probe": {
+    "native_probe_passed": true,
+    "extension": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd"
+  },
+  "initial_document": {
+    "schema_version": 9,
+    "units": "SI",
+    "model": "eih-1pn-dop853-fixed-j2",
+    "settings": {
+      "dt": 3600,
+      "backend": "rust",
+      "contact_mode": "stop",
+      "restitution": 1.0,
+      "integrator": "dop853",
+      "rtol": 3e-14,
+      "position_atol": 0.001,
+      "velocity_atol": 1e-09,
+      "physics": "eih-1pn",
+      "figures": [
+        {
+          "body": "Sun",
+          "coefficient": 2.1961391516529825e-07,
+          "reference_radius": 696000000.0,
+          "axis": [
+            0.12235349347232782,
+            -0.0310378702450671,
+            0.9920011457885356
+          ],
+          "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+        },
+        {
+          "body": "Earth",
+          "coefficient": 0.00108262539,
+          "reference_radius": 6378136.6,
+          "axis": [
+            0.0026020959422886785,
+            0.39776866017225926,
+            0.9174820554547499
+          ],
+          "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+        }
+      ],
+      "relative_pair": [
+        "Earth",
+        "Moon"
+      ],
+      "error_control": "per-body"
+    },
+    "initial": [
+      {
+        "name": "Sun",
+        "mass": 1.988409871316534e+30,
+        "radius": 0.0,
+        "position": [
+          -179975380.99863088,
+          -766335220.5591803,
+          14025803.55911574
+        ],
+        "velocity": [
+          10.452225179469629,
+          4.432621459961725,
+          -0.2236386786017347
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Mercury",
+        "mass": 3.301000636980658e+23,
+        "radius": 0.0,
+        "position": [
+          19750262520.49684,
+          -64849727710.94375,
+          -7051061714.338418
+        ],
+        "velocity": [
+          36761.36442022774,
+          16944.1827517093,
+          -1986.498900879239
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Venus",
+        "mass": 4.867305814842006e+24,
+        "radius": 0.0,
+        "position": [
+          107942330028.1021,
+          7964804959.6180315,
+          -6104485494.468367
+        ],
+        "velocity": [
+          -2948.978893695799,
+          34752.141100765075,
+          647.9783958798944
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Earth",
+        "mass": 5.972168399787584e+24,
+        "radius": 0.0,
+        "position": [
+          144650899686.84598,
+          36316866220.35821,
+          10986666.35056399
+        ],
+        "velocity": [
+          -7857.880626198839,
+          28762.01732400517,
+          -0.8206446406369139
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Moon",
+        "mass": 7.345789248996225e+22,
+        "radius": 0.0,
+        "position": [
+          144291740650.0716,
+          36436297810.50089,
+          3384733.587212861
+        ],
+        "velocity": [
+          -8214.871315810784,
+          27788.63301669028,
+          -92.33042087229926
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Mars",
+        "mass": 6.416909011545196e+23,
+        "radius": 0.0,
+        "position": [
+          4780743054.340674,
+          233523948897.7288,
+          4802254659.718901
+        ],
+        "velocity": [
+          -23295.6143768072,
+          2574.9295149077698,
+          625.111385296453
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Jupiter",
+        "mass": 1.898517658780696e+27,
+        "radius": 0.0,
+        "position": [
+          -528366874511.79407,
+          592328001924.1398,
+          9367779212.084352
+        ],
+        "velocity": [
+          -9907.110287659596,
+          -8082.550564878298,
+          255.2667167467182
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Saturn",
+        "mass": 5.684578883448452e+26,
+        "radius": 0.0,
+        "position": [
+          1383539033514.758,
+          269250103698.49258,
+          -59768935463.698006
+        ],
+        "velocity": [
+          -2375.270473847368,
+          9460.641551996632,
+          -69.96436832777597
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Uranus",
+        "mass": 8.68189383156286e+25,
+        "radius": 0.0,
+        "position": [
+          1332143452240.549,
+          2584265697250.453,
+          -7660518114.861965
+        ],
+        "velocity": [
+          -6103.296563491293,
+          2802.851488540411,
+          89.4729803201535
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Neptune",
+        "mass": 1.0243062344486162e+26,
+        "radius": 0.0,
+        "position": [
+          4463276149566.129,
+          209002293454.8559,
+          -107164802072.88881
+        ],
+        "velocity": [
+          -289.9722364835866,
+          5461.557076099574,
+          -105.789329339196
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "bodies": [
+      {
+        "name": "Sun",
+        "mass": 1.988409871316534e+30,
+        "radius": 0.0,
+        "position": [
+          -179975380.99863088,
+          -766335220.5591803,
+          14025803.55911574
+        ],
+        "velocity": [
+          10.452225179469629,
+          4.432621459961725,
+          -0.2236386786017347
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Mercury",
+        "mass": 3.301000636980658e+23,
+        "radius": 0.0,
+        "position": [
+          19750262520.49684,
+          -64849727710.94375,
+          -7051061714.338418
+        ],
+        "velocity": [
+          36761.36442022774,
+          16944.1827517093,
+          -1986.498900879239
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Venus",
+        "mass": 4.867305814842006e+24,
+        "radius": 0.0,
+        "position": [
+          107942330028.1021,
+          7964804959.6180315,
+          -6104485494.468367
+        ],
+        "velocity": [
+          -2948.978893695799,
+          34752.141100765075,
+          647.9783958798944
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Earth",
+        "mass": 5.972168399787584e+24,
+        "radius": 0.0,
+        "position": [
+          144650899686.84598,
+          36316866220.35821,
+          10986666.35056399
+        ],
+        "velocity": [
+          -7857.880626198839,
+          28762.01732400517,
+          -0.8206446406369139
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Moon",
+        "mass": 7.345789248996225e+22,
+        "radius": 0.0,
+        "position": [
+          144291740650.0716,
+          36436297810.50089,
+          3384733.587212861
+        ],
+        "velocity": [
+          -8214.871315810784,
+          27788.63301669028,
+          -92.33042087229926
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Mars",
+        "mass": 6.416909011545196e+23,
+        "radius": 0.0,
+        "position": [
+          4780743054.340674,
+          233523948897.7288,
+          4802254659.718901
+        ],
+        "velocity": [
+          -23295.6143768072,
+          2574.9295149077698,
+          625.111385296453
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Jupiter",
+        "mass": 1.898517658780696e+27,
+        "radius": 0.0,
+        "position": [
+          -528366874511.79407,
+          592328001924.1398,
+          9367779212.084352
+        ],
+        "velocity": [
+          -9907.110287659596,
+          -8082.550564878298,
+          255.2667167467182
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Saturn",
+        "mass": 5.684578883448452e+26,
+        "radius": 0.0,
+        "position": [
+          1383539033514.758,
+          269250103698.49258,
+          -59768935463.698006
+        ],
+        "velocity": [
+          -2375.270473847368,
+          9460.641551996632,
+          -69.96436832777597
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Uranus",
+        "mass": 8.68189383156286e+25,
+        "radius": 0.0,
+        "position": [
+          1332143452240.549,
+          2584265697250.453,
+          -7660518114.861965
+        ],
+        "velocity": [
+          -6103.296563491293,
+          2802.851488540411,
+          89.4729803201535
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Neptune",
+        "mass": 1.0243062344486162e+26,
+        "radius": 0.0,
+        "position": [
+          4463276149566.129,
+          209002293454.8559,
+          -107164802072.88881
+        ],
+        "velocity": [
+          -289.9722364835866,
+          5461.557076099574,
+          -105.789329339196
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "time": 0.0,
+    "dissipated_energy": 0.0,
+    "halted": false,
+    "model_energy_offset": 0.0,
+    "orientation_work": 0.0,
+    "events": [],
+    "origin": {
+      "epoch_jd_tdb": 2461321.5,
+      "frame": "Ecliptic J2000",
+      "center": "Solar System Barycenter",
+      "ephemeris": "DE441",
+      "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+      "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+    }
+  },
+  "scientific_contract_original_SHA256": "d50dbc891ca79c7f9783e316234248f2fd856866fd8923a7a5888fc23f924dfb",
+  "resources": {
+    "CPU_seconds": 1200,
+    "wall_seconds": 1800,
+    "private_tree_bytes": 2147483648,
+    "artifact_bytes": 536870912
+  },
+  "retry_of_freeze_SHA256": "7f544316265602be192e19973d05404ffe5befd9abf81361884ca9256bc807e1",
+  "budget_not_reset": true
+}

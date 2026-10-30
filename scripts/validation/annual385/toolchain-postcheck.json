@@ -1,0 +1,10 @@
+{
+  "unchanged": true,
+  "after": {
+    "shim_sha256": "6d5b5709addc0122c916d8c810da8d8a7b086a5d64fa805ef404d506392aadc8",
+    "compiler_path": "C:\\Users\\Admin\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\rustc.exe",
+    "compiler_sha256": "cbd682cf84ccc20bfde002443274f9768f777b68afef63da4462abb490c0a4ff",
+    "version_verbose": "rustc 1.99.0 (b940084d7 2026-09-28)\nbinary: rustc\ncommit-hash: b940084d7eb6a299eb4bfeb8e34901bc051e7ac4\ncommit-date: 2026-09-28\nhost: x86_64-pc-windows-gnu\nrelease: 1.99.0\nLLVM version: 23.1.1"
+  },
+  "stage_exit_code": 0
+}

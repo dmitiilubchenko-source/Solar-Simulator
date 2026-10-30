@@ -1,0 +1,66 @@
+{
+  "job": "current",
+  "rows": {
+    "python_strict20": {
+      "solver_calls": 936,
+      "nfev": 103536,
+      "packets": 936,
+      "rtol": 3e-14,
+      "internal_accepted_rejected_steps_known": false
+    },
+    "python_standard20": {
+      "solver_calls": 499,
+      "nfev": 54287,
+      "packets": 499,
+      "rtol": 1e-13,
+      "internal_accepted_rejected_steps_known": false
+    },
+    "python_strict10": {
+      "solver_calls": 948,
+      "nfev": 94860,
+      "packets": 948,
+      "rtol": 3e-14,
+      "internal_accepted_rejected_steps_known": false
+    },
+    "python_holdout20": {
+      "solver_calls": 43,
+      "nfev": 4751,
+      "packets": 43,
+      "rtol": 3e-14,
+      "internal_accepted_rejected_steps_known": false
+    },
+    "rust_strict20": {
+      "solver_calls": 936,
+      "nfev": 103344,
+      "packets": 936,
+      "rtol": 3e-14,
+      "internal_accepted_rejected_steps_known": false
+    },
+    "rust_standard20": {
+      "solver_calls": 499,
+      "nfev": 54359,
+      "packets": 499,
+      "rtol": 1e-13,
+      "internal_accepted_rejected_steps_known": false
+    },
+    "rust_strict10": {
+      "solver_calls": 948,
+      "nfev": 94908,
+      "packets": 948,
+      "rtol": 3e-14,
+      "internal_accepted_rejected_steps_known": false
+    },
+    "rust_holdout20": {
+      "solver_calls": 43,
+      "nfev": 4763,
+      "packets": 43,
+      "rtol": 3e-14,
+      "internal_accepted_rejected_steps_known": false
+    }
+  },
+  "failure": null,
+  "complete": true,
+  "source_environment_unchanged": true,
+  "freeze_SHA256": "5ea5278e2f45181aaf6450475a419f8db58998f23b826ffdeff86d764a7e29a2",
+  "protocol_SHA256": "b868729f227d0fd25677211450245bb9b18d8d88e7d04f293a9be2ed801e198e"
+}

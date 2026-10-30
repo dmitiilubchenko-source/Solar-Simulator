@@ -1,0 +1,62 @@
+{
+  "guards": [
+    {
+      "exit_code": 1,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 2.734375,
+        "parent_cpu": 0.453125,
+        "private_tree": 80797696,
+        "rss_tree": 101593088,
+        "disk": 2636790,
+        "elapsed": 2.885699900012696
+      },
+      "samples": 49,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 2.78125,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 0.453125,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 112205824,
+      "processes": [
+        {
+          "pid": 9828,
+          "creation_time": 1793396383.0668087,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 9780,
+          "creation_time": 1793396383.0707824,
+          "CPU_seconds": 2.765625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 23908,
+          "creation_time": 1793396384.4473696,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 125874176,
+      "wall_seconds": 2.940484300022945,
+      "disk_bytes": 2636790,
+      "complete": false,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    }
+  ],
+  "failure": null,
+  "total_CPU_seconds": 3.234375,
+  "worker_CPU_seconds": 2.78125,
+  "supervision_CPU_seconds": 0.453125,
+  "wall_seconds": 2.942651499994099,
+  "worker_private_peak_sampled": 112205824,
+  "supervisor_private_peak_OS": 37605376,
+  "conservative_sum_private_peaks": 149811200,
+  "combined_private_peak_sampled": 149176320,
+  "artifact_bytes": 2638058,
+  "complete": false,
+  "limitations": "50ms sampled tree/RAM; retained discovered Windows process handles for final CPU; short unseen children/spikes possible; not OS hardquota. Preparation/tests excluded from scientific phase.",
+  "within_measured_caps": true
+}

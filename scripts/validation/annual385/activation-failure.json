@@ -1,0 +1,10 @@
+{
+  "type": "activation_order_error",
+  "scientific_jobs_started": false,
+  "rows": {},
+  "cause": "Wrapper imported physical modules through freeze/observer before unchanged375activate runtime guard",
+  "first_binding_write_time": 1793396383.0641701,
+  "now": 1793396463.042939,
+  "original_cpu_used": 3.234375,
+  "preserved": "all original plan/freeze/trace/emptyoutput/journal/resource/source files retained"
+}

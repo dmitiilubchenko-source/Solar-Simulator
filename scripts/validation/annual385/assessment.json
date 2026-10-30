@@ -1,0 +1,6136 @@
+{
+  "stage": 385,
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "freeze_SHA256": "5ea5278e2f45181aaf6450475a419f8db58998f23b826ffdeff86d764a7e29a2",
+  "protocol_SHA256": "b868729f227d0fd25677211450245bb9b18d8d88e7d04f293a9be2ed801e198e",
+  "source_environment_unchanged": true,
+  "results": {
+    "python_strict20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 4.411540063876701e-06,
+          "velocity_m_per_s": 2.2419871804846727e-13
+        },
+        "Mercury": {
+          "position_metres": 0.0265448053658958,
+          "velocity_m_per_s": 2.5014127689814198e-08
+        },
+        "Venus": {
+          "position_metres": 0.028273175715742272,
+          "velocity_m_per_s": 9.072448671475607e-09
+        },
+        "Earth": {
+          "position_metres": 0.013440414799314002,
+          "velocity_m_per_s": 4.082218895672492e-09
+        },
+        "Moon": {
+          "position_metres": 0.060650572964213105,
+          "velocity_m_per_s": 1.4171035406077321e-07
+        },
+        "Mars": {
+          "position_metres": 0.025979961284512118,
+          "velocity_m_per_s": 2.715746306108738e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.009422821154186085,
+          "velocity_m_per_s": 9.06077722239233e-11
+        },
+        "Saturn": {
+          "position_metres": 0.018996979432655138,
+          "velocity_m_per_s": 6.966029302532935e-11
+        },
+        "Uranus": {
+          "position_metres": 0.062183092293735136,
+          "velocity_m_per_s": 1.1308567812773167e-10
+        },
+        "Neptune": {
+          "position_metres": 0.021533568372677926,
+          "velocity_m_per_s": 3.096996513436045e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.05816420187289725,
+        "velocity_m_per_s": 1.407290150172046e-07
+      },
+      "checks_passed": true,
+      "energy_residual": 2.812683280997931e-14,
+      "independent_energy_residual": 2.812683280997931e-14,
+      "independent_P_scaled": 1.552036913800286e-15,
+      "orbital_L_change": 3.2673847306578544e-14,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 7.450816638405115e-16,
+      "energy_check_passed": true,
+      "jpl": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.80482019790082,
+            "velocity_m_per_s": 1.378227173494262e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.70101303534582,
+            "velocity_m_per_s": 2.6755962346060707e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4696228072777,
+            "velocity_m_per_s": 2.33016560348567e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 174.54912076636273,
+            "velocity_m_per_s": 4.142260922875747e-05,
+            "worst_epoch_jd_tdb": 2461573.5,
+            "position_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 747.7441323901377,
+            "velocity_m_per_s": 0.001966300998482843,
+            "worst_epoch_jd_tdb": 2461671.5,
+            "position_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3398364663159,
+            "velocity_m_per_s": 4.372379003147353e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.2665577768808,
+            "velocity_m_per_s": 1.88702451703497e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.081396174375413,
+            "velocity_m_per_s": 1.9113087159323785e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.166708982685652,
+            "velocity_m_per_s": 1.082335785825447e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 64.72221777500712,
+            "velocity_m_per_s": 4.11351696012872e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 718.8114916118286,
+          "velocity_m_per_s": 0.0019775732905538096,
+          "position_goal_passed": true
+        },
+        "physical_goals_passed": true
+      }
+    },
+    "python_strict10": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 3.7289412729442814e-06,
+          "velocity_m_per_s": 1.28858015145939e-13
+        },
+        "Mercury": {
+          "position_metres": 0.024722882064066105,
+          "velocity_m_per_s": 2.202044658688318e-08
+        },
+        "Venus": {
+          "position_metres": 0.043230748218381444,
+          "velocity_m_per_s": 1.374712081800353e-08
+        },
+        "Earth": {
+          "position_metres": 0.0046147743047506105,
+          "velocity_m_per_s": 1.8353342263334902e-09
+        },
+        "Moon": {
+          "position_metres": 0.041026746202870557,
+          "velocity_m_per_s": 1.0719718717288645e-07
+        },
+        "Mars": {
+          "position_metres": 0.027343420642440223,
+          "velocity_m_per_s": 3.0683561504223853e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.03736359952560758,
+          "velocity_m_per_s": 2.5157717042706077e-10
+        },
+        "Saturn": {
+          "position_metres": 0.07273283275604048,
+          "velocity_m_per_s": 8.103315908685275e-11
+        },
+        "Uranus": {
+          "position_metres": 0.08873469101450823,
+          "velocity_m_per_s": 9.376779076644616e-11
+        },
+        "Neptune": {
+          "position_metres": 0.4355827819773037,
+          "velocity_m_per_s": 5.5223361310121314e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.03911376568188701,
+        "velocity_m_per_s": 1.0901663550586849e-07
+      },
+      "checks_passed": true,
+      "energy_residual": 7.339054388829039e-14,
+      "independent_energy_residual": 7.301800305637012e-14,
+      "independent_P_scaled": 3.9034204028309305e-15,
+      "orbital_L_change": 3.892198979047889e-14,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 5.588112478803836e-16,
+      "energy_check_passed": true,
+      "jpl": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.8048250661995,
+            "velocity_m_per_s": 1.3782272006684017e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.70203953465472,
+            "velocity_m_per_s": 2.6752982607334384e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4812916756127,
+            "velocity_m_per_s": 2.3304925449508333e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 174.55855101960054,
+            "velocity_m_per_s": 4.14264043377013e-05,
+            "worst_epoch_jd_tdb": 2461573.5,
+            "position_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 747.8261456001911,
+            "velocity_m_per_s": 0.0019665494331528592,
+            "worst_epoch_jd_tdb": 2461671.5,
+            "position_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3528458338859,
+            "velocity_m_per_s": 4.372952674957404e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.3065268586908,
+            "velocity_m_per_s": 1.8870530180590105e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.148900746907923,
+            "velocity_m_per_s": 1.911387300206991e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.092808357703568,
+            "velocity_m_per_s": 1.0823512888220166e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 65.15270983612545,
+            "velocity_m_per_s": 4.1135419879717285e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 718.8985291760738,
+          "velocity_m_per_s": 0.001977822621303994,
+          "position_goal_passed": true
+        },
+        "physical_goals_passed": true
+      }
+    },
+    "python_standard20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 4.174905430402009e-06,
+          "velocity_m_per_s": 2.02302850936185e-13
+        },
+        "Mercury": {
+          "position_metres": 0.02648004895939912,
+          "velocity_m_per_s": 2.281642312434759e-08
+        },
+        "Venus": {
+          "position_metres": 0.01561560665824029,
+          "velocity_m_per_s": 4.8769685951088094e-09
+        },
+        "Earth": {
+          "position_metres": 0.02460745754513752,
+          "velocity_m_per_s": 4.921123057398975e-09
+        },
+        "Moon": {
+          "position_metres": 0.02524223807951389,
+          "velocity_m_per_s": 4.5001589931646e-08
+        },
+        "Mars": {
+          "position_metres": 0.02183793079150085,
+          "velocity_m_per_s": 2.3176492879702606e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.008193371438360256,
+          "velocity_m_per_s": 6.373648027786341e-11
+        },
+        "Saturn": {
+          "position_metres": 0.025177764881018787,
+          "velocity_m_per_s": 7.134977220966296e-11
+        },
+        "Uranus": {
+          "position_metres": 0.07268055956509131,
+          "velocity_m_per_s": 8.278026822303697e-11
+        },
+        "Neptune": {
+          "position_metres": 0.021512711867611337,
+          "velocity_m_per_s": 3.82265995762131e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.02050139356111213,
+        "velocity_m_per_s": 4.635653695671474e-08
+      },
+      "checks_passed": true,
+      "energy_residual": 2.3097531579055857e-14,
+      "independent_energy_residual": 2.3283801995015983e-14,
+      "independent_P_scaled": 2.7753484667512356e-15,
+      "orbital_L_change": 3.219997750482244e-14,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 7.450816638405115e-16,
+      "energy_check_passed": true,
+      "jpl": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.8048217714798,
+            "velocity_m_per_s": 1.3782271755596885e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.70130707366334,
+            "velocity_m_per_s": 2.675377497004513e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4604365364406,
+            "velocity_m_per_s": 2.329878307318318e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 174.5483034470357,
+            "velocity_m_per_s": 4.1423990143708316e-05,
+            "worst_epoch_jd_tdb": 2461573.5,
+            "position_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 747.8048185804354,
+            "velocity_m_per_s": 0.001966460855060257,
+            "worst_epoch_jd_tdb": 2461671.5,
+            "position_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3407838464044,
+            "velocity_m_per_s": 4.3724191910728794e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.2673979640275,
+            "velocity_m_per_s": 1.8870242164141496e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.07762373154914,
+            "velocity_m_per_s": 1.911260602576519e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.172861230361445,
+            "velocity_m_per_s": 1.0823612392981678e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 64.72591066824349,
+            "velocity_m_per_s": 4.11352126908119e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 718.8720071528617,
+          "velocity_m_per_s": 0.001977737025046704,
+          "position_goal_passed": true
+        },
+        "physical_goals_passed": true
+      }
+    },
+    "python_holdout20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 9.764400890067044e-07,
+          "velocity_m_per_s": 4.170680466436832e-14
+        },
+        "Mercury": {
+          "position_metres": 8.649042676552321e-05,
+          "velocity_m_per_s": 1.3256333778003177e-10
+        },
+        "Venus": {
+          "position_metres": 0.0004374278607242521,
+          "velocity_m_per_s": 8.304619230253217e-11
+        },
+        "Earth": {
+          "position_metres": 9.187007582696759e-05,
+          "velocity_m_per_s": 1.0347503020324669e-10
+        },
+        "Moon": {
+          "position_metres": 0.0005007403297642136,
+          "velocity_m_per_s": 1.4123974210023616e-09
+        },
+        "Mars": {
+          "position_metres": 0.000611798984177924,
+          "velocity_m_per_s": 9.784494526200058e-11
+        },
+        "Jupiter": {
+          "position_metres": 0.0009083225956138686,
+          "velocity_m_per_s": 2.6858019155077774e-11
+        },
+        "Saturn": {
+          "position_metres": 0.007195166258356101,
+          "velocity_m_per_s": 9.096681575800684e-12
+        },
+        "Uranus": {
+          "position_metres": 0.0093573102928597,
+          "velocity_m_per_s": 4.919029421817041e-12
+        },
+        "Neptune": {
+          "position_metres": 0.010749608424312914,
+          "velocity_m_per_s": 6.366859408286928e-12
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.0005129189481634528,
+        "velocity_m_per_s": 1.4285448464903448e-09
+      },
+      "checks_passed": true,
+      "energy_residual": 1.3038929117208952e-15,
+      "independent_energy_residual": 1.1176224957607672e-15,
+      "independent_P_scaled": 8.676455557616064e-16,
+      "orbital_L_change": 3.141728641193403e-15,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 5.588112478803836e-16,
+      "energy_check_passed": true
+    },
+    "python_tolerance": {
+      "all_bodies": {
+        "position_metres": 0.06072551468930372,
+        "velocity_m_per_s": 1.5994954049739013e-07
+      },
+      "earth_moon": {
+        "position_metres": 0.06053295306616006,
+        "velocity_m_per_s": 1.6386238512140974e-07
+      },
+      "checks_passed": true
+    },
+    "python_packet": {
+      "all_bodies": {
+        "position_metres": 0.4414444462213505,
+        "velocity_m_per_s": 2.4879892932766584e-07
+      },
+      "earth_moon": {
+        "position_metres": 0.09494768819146278,
+        "velocity_m_per_s": 2.49638569849029e-07
+      },
+      "checks_passed": true
+    },
+    "rust_strict20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 7.4170258537464e-06,
+          "velocity_m_per_s": 1.6138977490152815e-13
+        },
+        "Mercury": {
+          "position_metres": 0.037174070425481036,
+          "velocity_m_per_s": 3.3504843371852534e-08
+        },
+        "Venus": {
+          "position_metres": 0.024214628757443103,
+          "velocity_m_per_s": 7.674297552319821e-09
+        },
+        "Earth": {
+          "position_metres": 0.011098083392876752,
+          "velocity_m_per_s": 3.2484625967291804e-09
+        },
+        "Moon": {
+          "position_metres": 0.04502267919139796,
+          "velocity_m_per_s": 1.0368658882632852e-07
+        },
+        "Mars": {
+          "position_metres": 0.02532481412792297,
+          "velocity_m_per_s": 2.597293886102943e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.009709974510492611,
+          "velocity_m_per_s": 6.769490961943111e-11
+        },
+        "Saturn": {
+          "position_metres": 0.02325600145449864,
+          "velocity_m_per_s": 9.04244312412507e-11
+        },
+        "Uranus": {
+          "position_metres": 0.06288983496624542,
+          "velocity_m_per_s": 7.611153361717961e-11
+        },
+        "Neptune": {
+          "position_metres": 0.028425481792852557,
+          "velocity_m_per_s": 4.3760499073903156e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.043817848236669,
+        "velocity_m_per_s": 1.0418056705910198e-07
+      },
+      "checks_passed": true,
+      "energy_residual": 2.514650615461726e-14,
+      "independent_energy_residual": 2.4960235738657135e-14,
+      "independent_P_scaled": 2.17185573632929e-15,
+      "orbital_L_change": 3.1717214357902475e-14,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 5.588112478803836e-16,
+      "energy_check_passed": true,
+      "jpl": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.80481648173037,
+            "velocity_m_per_s": 1.3782271765462503e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.69144051820356,
+            "velocity_m_per_s": 2.6764437360386104e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4676708106836,
+            "velocity_m_per_s": 2.3301007064953958e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 174.54953987985328,
+            "velocity_m_per_s": 4.14231002297057e-05,
+            "worst_epoch_jd_tdb": 2461573.5,
+            "position_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 747.7552833229641,
+            "velocity_m_per_s": 0.0019663389696992005,
+            "worst_epoch_jd_tdb": 2461671.5,
+            "position_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3407868132052,
+            "velocity_m_per_s": 4.3723911297535495e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.266259585045,
+            "velocity_m_per_s": 1.8870241624998703e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.079502796184933,
+            "velocity_m_per_s": 1.9113130591174613e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.16537133926731,
+            "velocity_m_per_s": 1.0823689129771043e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 64.70129994663056,
+            "velocity_m_per_s": 4.113520765396303e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 718.8247845205743,
+          "velocity_m_per_s": 0.0019776112363984583,
+          "position_goal_passed": true
+        },
+        "physical_goals_passed": true
+      }
+    },
+    "rust_strict10": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 6.91670748251851e-06,
+          "velocity_m_per_s": 1.2834525104672675e-13
+        },
+        "Mercury": {
+          "position_metres": 0.032335414131273194,
+          "velocity_m_per_s": 2.9133655525278602e-08
+        },
+        "Venus": {
+          "position_metres": 0.047181365856732466,
+          "velocity_m_per_s": 1.4643717496230054e-08
+        },
+        "Earth": {
+          "position_metres": 0.006357630706945048,
+          "velocity_m_per_s": 1.9346630703484794e-09
+        },
+        "Moon": {
+          "position_metres": 0.030902052238951226,
+          "velocity_m_per_s": 8.275154651784609e-08
+        },
+        "Mars": {
+          "position_metres": 0.006487788425536098,
+          "velocity_m_per_s": 8.707039182150919e-10
+        },
+        "Jupiter": {
+          "position_metres": 0.03674737025618366,
+          "velocity_m_per_s": 2.6805283687653267e-10
+        },
+        "Saturn": {
+          "position_metres": 0.06837845306183654,
+          "velocity_m_per_s": 1.021192652658254e-10
+        },
+        "Uranus": {
+          "position_metres": 0.09306255687229364,
+          "velocity_m_per_s": 8.025002403625735e-11
+        },
+        "Neptune": {
+          "position_metres": 0.45608249866426653,
+          "velocity_m_per_s": 3.594671023519307e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.03072497640090261,
+        "velocity_m_per_s": 8.467189675417832e-08
+      },
+      "checks_passed": true,
+      "energy_residual": 5.625366561995862e-14,
+      "independent_energy_residual": 5.625366561995862e-14,
+      "independent_P_scaled": 2.4486203475784028e-15,
+      "orbital_L_change": 3.4561992782330406e-14,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 7.450816638405115e-16,
+      "energy_check_passed": true,
+      "jpl": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.80481854351,
+            "velocity_m_per_s": 1.3782271987429848e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.6950096216652,
+            "velocity_m_per_s": 2.6760075456875358e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4841449434114,
+            "velocity_m_per_s": 2.330551135981837e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 174.55846532549663,
+            "velocity_m_per_s": 4.142598477058664e-05,
+            "worst_epoch_jd_tdb": 2461573.5,
+            "position_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 747.8163114251953,
+            "velocity_m_per_s": 0.0019665249546479864,
+            "worst_epoch_jd_tdb": 2461671.5,
+            "position_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3485429518637,
+            "velocity_m_per_s": 4.372728637213477e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.30584963433904,
+            "velocity_m_per_s": 1.8870535234312624e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.1467617832835,
+            "velocity_m_per_s": 1.9114045971245732e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.098391502559245,
+            "velocity_m_per_s": 1.0823706806819883e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 65.17045997045702,
+            "velocity_m_per_s": 4.113539502669116e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 718.8901243810844,
+          "velocity_m_per_s": 0.0019777982543048474,
+          "position_goal_passed": true
+        },
+        "physical_goals_passed": true
+      }
+    },
+    "rust_standard20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 7.2097986882063596e-06,
+          "velocity_m_per_s": 1.8340746806500345e-13
+        },
+        "Mercury": {
+          "position_metres": 0.013963532990682873,
+          "velocity_m_per_s": 1.1831863819149598e-08
+        },
+        "Venus": {
+          "position_metres": 0.016492094034407885,
+          "velocity_m_per_s": 5.181884878356579e-09
+        },
+        "Earth": {
+          "position_metres": 0.016367053188837705,
+          "velocity_m_per_s": 5.749166635209173e-09
+        },
+        "Moon": {
+          "position_metres": 0.11521495845898097,
+          "velocity_m_per_s": 2.8769632494100836e-07
+        },
+        "Mars": {
+          "position_metres": 0.0249714782861758,
+          "velocity_m_per_s": 2.580838757044772e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.009085838748058721,
+          "velocity_m_per_s": 7.153118100437051e-11
+        },
+        "Saturn": {
+          "position_metres": 0.02626752672914402,
+          "velocity_m_per_s": 7.066957354402316e-11
+        },
+        "Uranus": {
+          "position_metres": 0.08133806831363011,
+          "velocity_m_per_s": 6.281443575654777e-11
+        },
+        "Neptune": {
+          "position_metres": 0.03323660242721043,
+          "velocity_m_per_s": 4.4603442873971424e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.11335267863404799,
+        "velocity_m_per_s": 2.8821361821985614e-07
+      },
+      "checks_passed": false,
+      "energy_residual": 2.4028883658856494e-14,
+      "independent_energy_residual": 2.4028883658856494e-14,
+      "independent_P_scaled": 3.724666900109461e-15,
+      "orbital_L_change": 3.2380126896097255e-14,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 7.450816638405115e-16,
+      "energy_check_passed": true,
+      "jpl": {
+        "jpl_residuals": {
+          "Sun": {
+            "position_metres": 218.80481627448157,
+            "velocity_m_per_s": 1.3782271779070338e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Mercury": {
+            "position_metres": 207.7120234106587,
+            "velocity_m_per_s": 2.6742814683240474e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Venus": {
+            "position_metres": 257.4609686772718,
+            "velocity_m_per_s": 2.3298941181801853e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Earth": {
+            "position_metres": 174.5501856309439,
+            "velocity_m_per_s": 4.142101771031377e-05,
+            "worst_epoch_jd_tdb": 2461573.5,
+            "position_goal_passed": true
+          },
+          "Moon": {
+            "position_metres": 747.6991104581004,
+            "velocity_m_per_s": 0.0019661552602323,
+            "worst_epoch_jd_tdb": 2461671.5,
+            "position_goal_passed": true
+          },
+          "Mars": {
+            "position_metres": 571.3407362084731,
+            "velocity_m_per_s": 4.372392553162853e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Jupiter": {
+            "position_metres": 273.2672796675662,
+            "velocity_m_per_s": 1.8870237389954923e-05,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Saturn": {
+            "position_metres": 31.075154507318086,
+            "velocity_m_per_s": 1.911268079567917e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Uranus": {
+            "position_metres": 17.181503906345526,
+            "velocity_m_per_s": 1.0823852172255901e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          },
+          "Neptune": {
+            "position_metres": 64.72581016400996,
+            "velocity_m_per_s": 4.113517003481197e-06,
+            "worst_epoch_jd_tdb": 2461686.75,
+            "position_goal_passed": true
+          }
+        },
+        "moon_relative_jpl": {
+          "position_metres": 718.7588270317757,
+          "velocity_m_per_s": 0.001977426004895103,
+          "position_goal_passed": true
+        },
+        "physical_goals_passed": true
+      }
+    },
+    "rust_holdout20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 1.4746127681635038e-06,
+          "velocity_m_per_s": 3.370456128990803e-14
+        },
+        "Mercury": {
+          "position_metres": 0.00013701416036050805,
+          "velocity_m_per_s": 2.273245574240172e-10
+        },
+        "Venus": {
+          "position_metres": 0.0005059042251617555,
+          "velocity_m_per_s": 9.38951423862987e-11
+        },
+        "Earth": {
+          "position_metres": 0.0001527785064731889,
+          "velocity_m_per_s": 1.0594273271546166e-10
+        },
+        "Moon": {
+          "position_metres": 0.0008005054180754371,
+          "velocity_m_per_s": 2.094483708736794e-09
+        },
+        "Mars": {
+          "position_metres": 0.0005242685231139619,
+          "velocity_m_per_s": 1.0034890585733604e-10
+        },
+        "Jupiter": {
+          "position_metres": 0.0009946343071125649,
+          "velocity_m_per_s": 4.785082409766527e-11
+        },
+        "Saturn": {
+          "position_metres": 0.009132614706498359,
+          "velocity_m_per_s": 1.4805789227396937e-11
+        },
+        "Uranus": {
+          "position_metres": 0.009777825574078016,
+          "velocity_m_per_s": 5.698410984871111e-12
+        },
+        "Neptune": {
+          "position_metres": 0.004888555010969686,
+          "velocity_m_per_s": 1.274763571316095e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.0007369105573050064,
+        "velocity_m_per_s": 2.118740039260012e-09
+      },
+      "checks_passed": true,
+      "energy_residual": 3.911678735162685e-15,
+      "independent_energy_residual": 3.911678735162685e-15,
+      "independent_P_scaled": 1.7508540076268957e-15,
+      "orbital_L_change": 3.28830778764216e-15,
+      "L_conservation_expected": false,
+      "scalar_vs_runtime_energy_discrepancy": 3.7254083192025575e-16,
+      "energy_check_passed": true
+    },
+    "rust_tolerance": {
+      "all_bodies": {
+        "position_metres": 0.07019827783580077,
+        "velocity_m_per_s": 1.8403457424363893e-07
+      },
+      "earth_moon": {
+        "position_metres": 0.06954393564245671,
+        "velocity_m_per_s": 1.8549365894302262e-07
+      },
+      "checks_passed": true
+    },
+    "rust_packet": {
+      "all_bodies": {
+        "position_metres": 0.4814789172238777,
+        "velocity_m_per_s": 1.863974209112666e-07
+      },
+      "earth_moon": {
+        "position_metres": 0.07352185691379452,
+        "velocity_m_per_s": 1.8738244254553863e-07
+      },
+      "checks_passed": true
+    }
+  },
+  "reference": {
+    "annual": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 5.310180163490674e-06,
+          "velocity_m_per_s": 1.1761203038545391e-13
+        },
+        "Mercury": {
+          "position_metres": 0.017982499929208837,
+          "velocity_m_per_s": 1.8868314962277714e-08
+        },
+        "Venus": {
+          "position_metres": 0.008365121105410829,
+          "velocity_m_per_s": 2.3929108075266566e-09
+        },
+        "Earth": {
+          "position_metres": 0.020250620803703157,
+          "velocity_m_per_s": 3.660437062302197e-09
+        },
+        "Moon": {
+          "position_metres": 0.02205813816057676,
+          "velocity_m_per_s": 1.17065977490751e-08
+        },
+        "Mars": {
+          "position_metres": 0.019536936968565503,
+          "velocity_m_per_s": 2.164061419396943e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.01060049958838538,
+          "velocity_m_per_s": 1.5236192122123982e-10
+        },
+        "Saturn": {
+          "position_metres": 0.016848510356248684,
+          "velocity_m_per_s": 9.80694309184396e-11
+        },
+        "Uranus": {
+          "position_metres": 0.02865924254522168,
+          "velocity_m_per_s": 1.0583035989664202e-10
+        },
+        "Neptune": {
+          "position_metres": 0.09872258699162842,
+          "velocity_m_per_s": 5.228195660171593e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.00304042118898842,
+        "velocity_m_per_s": 8.395268988113313e-09
+      },
+      "checks_passed": true,
+      "all_bodies_independent": {
+        "position_metres": 0.09872258699162842,
+        "velocity_m_per_s": 1.8868314962277714e-08
+      },
+      "earth_moon_independent": {
+        "position_metres": 0.00304042118898842,
+        "velocity_m_per_s": 8.395268988113313e-09
+      }
+    },
+    "holdout": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 1.438294976551007e-06,
+          "velocity_m_per_s": 5.1516770916705135e-14
+        },
+        "Mercury": {
+          "position_metres": 0.0003617811630057839,
+          "velocity_m_per_s": 4.305436871569287e-10
+        },
+        "Venus": {
+          "position_metres": 0.0003836047507110055,
+          "velocity_m_per_s": 5.174349980797669e-11
+        },
+        "Earth": {
+          "position_metres": 0.0005463413634224536,
+          "velocity_m_per_s": 5.3714130835025206e-11
+        },
+        "Moon": {
+          "position_metres": 0.0005629232055780926,
+          "velocity_m_per_s": 7.282340019753455e-11
+        },
+        "Mars": {
+          "position_metres": 0.0005035481669030084,
+          "velocity_m_per_s": 8.371260259089483e-11
+        },
+        "Jupiter": {
+          "position_metres": 0.0014198580456814315,
+          "velocity_m_per_s": 3.888659073644319e-11
+        },
+        "Saturn": {
+          "position_metres": 0.00881320234384611,
+          "velocity_m_per_s": 8.829882300626452e-12
+        },
+        "Uranus": {
+          "position_metres": 0.00880261624518092,
+          "velocity_m_per_s": 2.0963053114706146e-11
+        },
+        "Neptune": {
+          "position_metres": 0.006842899183618058,
+          "velocity_m_per_s": 1.8217074192655644e-12
+        }
+      },
+      "earth_moon": {
+        "position_metres": 3.412019801728688e-05,
+        "velocity_m_per_s": 3.614654370184978e-11
+      },
+      "checks_passed": true,
+      "all_bodies_independent": {
+        "position_metres": 0.00881320234384611,
+        "velocity_m_per_s": 4.305436871569287e-10
+      },
+      "earth_moon_independent": {
+        "position_metres": 3.412019801728688e-05,
+        "velocity_m_per_s": 3.614654370184978e-11
+      }
+    }
+  },
+  "independent_saved_array_audit": {
+    "python_strict20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 4.411540063876701e-06,
+          "velocity_m_per_s": 2.2419871804846727e-13
+        },
+        "Mercury": {
+          "position_metres": 0.0265448053658958,
+          "velocity_m_per_s": 2.5014127689814198e-08
+        },
+        "Venus": {
+          "position_metres": 0.028273175715742272,
+          "velocity_m_per_s": 9.072448671475607e-09
+        },
+        "Earth": {
+          "position_metres": 0.013440414799314002,
+          "velocity_m_per_s": 4.082218895672492e-09
+        },
+        "Moon": {
+          "position_metres": 0.060650572964213105,
+          "velocity_m_per_s": 1.4171035406077321e-07
+        },
+        "Mars": {
+          "position_metres": 0.025979961284512118,
+          "velocity_m_per_s": 2.715746306108738e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.009422821154186085,
+          "velocity_m_per_s": 9.06077722239233e-11
+        },
+        "Saturn": {
+          "position_metres": 0.018996979432655138,
+          "velocity_m_per_s": 6.966029302532935e-11
+        },
+        "Uranus": {
+          "position_metres": 0.062183092293735136,
+          "velocity_m_per_s": 1.1308567812773167e-10
+        },
+        "Neptune": {
+          "position_metres": 0.021533568372677926,
+          "velocity_m_per_s": 3.096996513436045e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.05816420187289725,
+        "velocity_m_per_s": 1.407290150172046e-07
+      },
+      "jpl_per_body": {
+        "Sun": {
+          "position_metres": 218.80482019790082,
+          "velocity_m_per_s": 1.3782271734942618e-05
+        },
+        "Mercury": {
+          "position_metres": 207.70101303534582,
+          "velocity_m_per_s": 2.6755962346060707e-05
+        },
+        "Venus": {
+          "position_metres": 257.4696228072777,
+          "velocity_m_per_s": 2.3301656034856697e-05
+        },
+        "Earth": {
+          "position_metres": 174.54912076636273,
+          "velocity_m_per_s": 4.142260922875747e-05
+        },
+        "Moon": {
+          "position_metres": 747.7441323901377,
+          "velocity_m_per_s": 0.001966300998482843
+        },
+        "Mars": {
+          "position_metres": 571.3398364663159,
+          "velocity_m_per_s": 4.372379003147354e-05
+        },
+        "Jupiter": {
+          "position_metres": 273.2665577768808,
+          "velocity_m_per_s": 1.88702451703497e-05
+        },
+        "Saturn": {
+          "position_metres": 31.081396174375413,
+          "velocity_m_per_s": 1.9113087159323785e-06
+        },
+        "Uranus": {
+          "position_metres": 17.166708982685652,
+          "velocity_m_per_s": 1.082335785825447e-06
+        },
+        "Neptune": {
+          "position_metres": 64.72221777500712,
+          "velocity_m_per_s": 4.11351696012872e-06
+        }
+      },
+      "jpl_earth_moon": {
+        "position_metres": 718.8114916118286,
+        "velocity_m_per_s": 0.0019775732905538096
+      }
+    },
+    "python_strict10": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 3.7289412729442814e-06,
+          "velocity_m_per_s": 1.28858015145939e-13
+        },
+        "Mercury": {
+          "position_metres": 0.024722882064066105,
+          "velocity_m_per_s": 2.202044658688318e-08
+        },
+        "Venus": {
+          "position_metres": 0.043230748218381444,
+          "velocity_m_per_s": 1.374712081800353e-08
+        },
+        "Earth": {
+          "position_metres": 0.0046147743047506105,
+          "velocity_m_per_s": 1.8353342263334902e-09
+        },
+        "Moon": {
+          "position_metres": 0.041026746202870557,
+          "velocity_m_per_s": 1.0719718717288645e-07
+        },
+        "Mars": {
+          "position_metres": 0.027343420642440223,
+          "velocity_m_per_s": 3.0683561504223853e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.03736359952560758,
+          "velocity_m_per_s": 2.5157717042706077e-10
+        },
+        "Saturn": {
+          "position_metres": 0.07273283275604048,
+          "velocity_m_per_s": 8.103315908685275e-11
+        },
+        "Uranus": {
+          "position_metres": 0.08873469101450823,
+          "velocity_m_per_s": 9.376779076644616e-11
+        },
+        "Neptune": {
+          "position_metres": 0.4355827819773037,
+          "velocity_m_per_s": 5.5223361310121314e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.03911376568188701,
+        "velocity_m_per_s": 1.0901663550586849e-07
+      },
+      "jpl_per_body": {
+        "Sun": {
+          "position_metres": 218.8048250661995,
+          "velocity_m_per_s": 1.3782272006684017e-05
+        },
+        "Mercury": {
+          "position_metres": 207.70203953465472,
+          "velocity_m_per_s": 2.6752982607334384e-05
+        },
+        "Venus": {
+          "position_metres": 257.4812916756127,
+          "velocity_m_per_s": 2.3304925449508333e-05
+        },
+        "Earth": {
+          "position_metres": 174.55855101960054,
+          "velocity_m_per_s": 4.14264043377013e-05
+        },
+        "Moon": {
+          "position_metres": 747.8261456001911,
+          "velocity_m_per_s": 0.0019665494331528592
+        },
+        "Mars": {
+          "position_metres": 571.3528458338859,
+          "velocity_m_per_s": 4.372952674957404e-05
+        },
+        "Jupiter": {
+          "position_metres": 273.3065268586908,
+          "velocity_m_per_s": 1.8870530180590105e-05
+        },
+        "Saturn": {
+          "position_metres": 31.148900746907923,
+          "velocity_m_per_s": 1.911387300206991e-06
+        },
+        "Uranus": {
+          "position_metres": 17.092808357703568,
+          "velocity_m_per_s": 1.0823512888220166e-06
+        },
+        "Neptune": {
+          "position_metres": 65.15270983612545,
+          "velocity_m_per_s": 4.1135419879717285e-06
+        }
+      },
+      "jpl_earth_moon": {
+        "position_metres": 718.8985291760738,
+        "velocity_m_per_s": 0.001977822621303994
+      }
+    },
+    "python_standard20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 4.174905430402009e-06,
+          "velocity_m_per_s": 2.02302850936185e-13
+        },
+        "Mercury": {
+          "position_metres": 0.02648004895939912,
+          "velocity_m_per_s": 2.281642312434759e-08
+        },
+        "Venus": {
+          "position_metres": 0.01561560665824029,
+          "velocity_m_per_s": 4.8769685951088094e-09
+        },
+        "Earth": {
+          "position_metres": 0.02460745754513752,
+          "velocity_m_per_s": 4.921123057398975e-09
+        },
+        "Moon": {
+          "position_metres": 0.02524223807951389,
+          "velocity_m_per_s": 4.5001589931646e-08
+        },
+        "Mars": {
+          "position_metres": 0.02183793079150085,
+          "velocity_m_per_s": 2.3176492879702606e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.008193371438360256,
+          "velocity_m_per_s": 6.373648027786341e-11
+        },
+        "Saturn": {
+          "position_metres": 0.025177764881018787,
+          "velocity_m_per_s": 7.134977220966296e-11
+        },
+        "Uranus": {
+          "position_metres": 0.07268055956509131,
+          "velocity_m_per_s": 8.278026822303697e-11
+        },
+        "Neptune": {
+          "position_metres": 0.021512711867611337,
+          "velocity_m_per_s": 3.82265995762131e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.02050139356111213,
+        "velocity_m_per_s": 4.635653695671474e-08
+      },
+      "jpl_per_body": {
+        "Sun": {
+          "position_metres": 218.8048217714798,
+          "velocity_m_per_s": 1.3782271755596883e-05
+        },
+        "Mercury": {
+          "position_metres": 207.70130707366334,
+          "velocity_m_per_s": 2.675377497004513e-05
+        },
+        "Venus": {
+          "position_metres": 257.4604365364406,
+          "velocity_m_per_s": 2.329878307318318e-05
+        },
+        "Earth": {
+          "position_metres": 174.5483034470357,
+          "velocity_m_per_s": 4.1423990143708316e-05
+        },
+        "Moon": {
+          "position_metres": 747.8048185804354,
+          "velocity_m_per_s": 0.0019664608550602567
+        },
+        "Mars": {
+          "position_metres": 571.3407838464045,
+          "velocity_m_per_s": 4.3724191910728794e-05
+        },
+        "Jupiter": {
+          "position_metres": 273.2673979640275,
+          "velocity_m_per_s": 1.8870242164141496e-05
+        },
+        "Saturn": {
+          "position_metres": 31.07762373154914,
+          "velocity_m_per_s": 1.911260602576519e-06
+        },
+        "Uranus": {
+          "position_metres": 17.172861230361445,
+          "velocity_m_per_s": 1.0823612392981678e-06
+        },
+        "Neptune": {
+          "position_metres": 64.72591066824349,
+          "velocity_m_per_s": 4.11352126908119e-06
+        }
+      },
+      "jpl_earth_moon": {
+        "position_metres": 718.8720071528617,
+        "velocity_m_per_s": 0.001977737025046704
+      }
+    },
+    "python_holdout20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 9.764400890067044e-07,
+          "velocity_m_per_s": 4.170680466436832e-14
+        },
+        "Mercury": {
+          "position_metres": 8.649042676552321e-05,
+          "velocity_m_per_s": 1.3256333778003177e-10
+        },
+        "Venus": {
+          "position_metres": 0.0004374278607242521,
+          "velocity_m_per_s": 8.304619230253217e-11
+        },
+        "Earth": {
+          "position_metres": 9.187007582696759e-05,
+          "velocity_m_per_s": 1.0347503020324669e-10
+        },
+        "Moon": {
+          "position_metres": 0.0005007403297642136,
+          "velocity_m_per_s": 1.4123974210023616e-09
+        },
+        "Mars": {
+          "position_metres": 0.000611798984177924,
+          "velocity_m_per_s": 9.784494526200058e-11
+        },
+        "Jupiter": {
+          "position_metres": 0.0009083225956138686,
+          "velocity_m_per_s": 2.6858019155077774e-11
+        },
+        "Saturn": {
+          "position_metres": 0.007195166258356101,
+          "velocity_m_per_s": 9.096681575800684e-12
+        },
+        "Uranus": {
+          "position_metres": 0.0093573102928597,
+          "velocity_m_per_s": 4.919029421817041e-12
+        },
+        "Neptune": {
+          "position_metres": 0.010749608424312914,
+          "velocity_m_per_s": 6.366859408286928e-12
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.0005129189481634528,
+        "velocity_m_per_s": 1.4285448464903448e-09
+      }
+    },
+    "rust_strict20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 7.4170258537464e-06,
+          "velocity_m_per_s": 1.6138977490152815e-13
+        },
+        "Mercury": {
+          "position_metres": 0.037174070425481036,
+          "velocity_m_per_s": 3.3504843371852534e-08
+        },
+        "Venus": {
+          "position_metres": 0.024214628757443103,
+          "velocity_m_per_s": 7.674297552319821e-09
+        },
+        "Earth": {
+          "position_metres": 0.011098083392876752,
+          "velocity_m_per_s": 3.2484625967291804e-09
+        },
+        "Moon": {
+          "position_metres": 0.04502267919139796,
+          "velocity_m_per_s": 1.0368658882632852e-07
+        },
+        "Mars": {
+          "position_metres": 0.02532481412792297,
+          "velocity_m_per_s": 2.597293886102943e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.009709974510492611,
+          "velocity_m_per_s": 6.769490961943111e-11
+        },
+        "Saturn": {
+          "position_metres": 0.02325600145449864,
+          "velocity_m_per_s": 9.04244312412507e-11
+        },
+        "Uranus": {
+          "position_metres": 0.06288983496624542,
+          "velocity_m_per_s": 7.611153361717961e-11
+        },
+        "Neptune": {
+          "position_metres": 0.028425481792852557,
+          "velocity_m_per_s": 4.3760499073903156e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.043817848236669,
+        "velocity_m_per_s": 1.0418056705910198e-07
+      },
+      "jpl_per_body": {
+        "Sun": {
+          "position_metres": 218.80481648173037,
+          "velocity_m_per_s": 1.3782271765462503e-05
+        },
+        "Mercury": {
+          "position_metres": 207.69144051820356,
+          "velocity_m_per_s": 2.6764437360386104e-05
+        },
+        "Venus": {
+          "position_metres": 257.4676708106836,
+          "velocity_m_per_s": 2.3301007064953958e-05
+        },
+        "Earth": {
+          "position_metres": 174.54953987985328,
+          "velocity_m_per_s": 4.14231002297057e-05
+        },
+        "Moon": {
+          "position_metres": 747.7552833229641,
+          "velocity_m_per_s": 0.0019663389696992005
+        },
+        "Mars": {
+          "position_metres": 571.3407868132052,
+          "velocity_m_per_s": 4.3723911297535495e-05
+        },
+        "Jupiter": {
+          "position_metres": 273.266259585045,
+          "velocity_m_per_s": 1.8870241624998703e-05
+        },
+        "Saturn": {
+          "position_metres": 31.079502796184933,
+          "velocity_m_per_s": 1.9113130591174613e-06
+        },
+        "Uranus": {
+          "position_metres": 17.16537133926731,
+          "velocity_m_per_s": 1.0823689129771043e-06
+        },
+        "Neptune": {
+          "position_metres": 64.70129994663056,
+          "velocity_m_per_s": 4.113520765396303e-06
+        }
+      },
+      "jpl_earth_moon": {
+        "position_metres": 718.8247845205744,
+        "velocity_m_per_s": 0.0019776112363984583
+      }
+    },
+    "rust_strict10": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 6.91670748251851e-06,
+          "velocity_m_per_s": 1.2834525104672675e-13
+        },
+        "Mercury": {
+          "position_metres": 0.032335414131273194,
+          "velocity_m_per_s": 2.9133655525278602e-08
+        },
+        "Venus": {
+          "position_metres": 0.047181365856732466,
+          "velocity_m_per_s": 1.4643717496230054e-08
+        },
+        "Earth": {
+          "position_metres": 0.006357630706945048,
+          "velocity_m_per_s": 1.9346630703484794e-09
+        },
+        "Moon": {
+          "position_metres": 0.030902052238951226,
+          "velocity_m_per_s": 8.275154651784609e-08
+        },
+        "Mars": {
+          "position_metres": 0.006487788425536098,
+          "velocity_m_per_s": 8.707039182150919e-10
+        },
+        "Jupiter": {
+          "position_metres": 0.03674737025618366,
+          "velocity_m_per_s": 2.6805283687653267e-10
+        },
+        "Saturn": {
+          "position_metres": 0.06837845306183654,
+          "velocity_m_per_s": 1.021192652658254e-10
+        },
+        "Uranus": {
+          "position_metres": 0.09306255687229364,
+          "velocity_m_per_s": 8.025002403625735e-11
+        },
+        "Neptune": {
+          "position_metres": 0.45608249866426653,
+          "velocity_m_per_s": 3.594671023519307e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.03072497640090261,
+        "velocity_m_per_s": 8.467189675417832e-08
+      },
+      "jpl_per_body": {
+        "Sun": {
+          "position_metres": 218.80481854351,
+          "velocity_m_per_s": 1.3782271987429848e-05
+        },
+        "Mercury": {
+          "position_metres": 207.6950096216652,
+          "velocity_m_per_s": 2.6760075456875358e-05
+        },
+        "Venus": {
+          "position_metres": 257.4841449434114,
+          "velocity_m_per_s": 2.330551135981837e-05
+        },
+        "Earth": {
+          "position_metres": 174.55846532549663,
+          "velocity_m_per_s": 4.142598477058664e-05
+        },
+        "Moon": {
+          "position_metres": 747.8163114251953,
+          "velocity_m_per_s": 0.001966524954647987
+        },
+        "Mars": {
+          "position_metres": 571.3485429518637,
+          "velocity_m_per_s": 4.3727286372134776e-05
+        },
+        "Jupiter": {
+          "position_metres": 273.30584963433904,
+          "velocity_m_per_s": 1.8870535234312624e-05
+        },
+        "Saturn": {
+          "position_metres": 31.1467617832835,
+          "velocity_m_per_s": 1.9114045971245732e-06
+        },
+        "Uranus": {
+          "position_metres": 17.098391502559245,
+          "velocity_m_per_s": 1.0823706806819883e-06
+        },
+        "Neptune": {
+          "position_metres": 65.17045997045702,
+          "velocity_m_per_s": 4.113539502669116e-06
+        }
+      },
+      "jpl_earth_moon": {
+        "position_metres": 718.8901243810844,
+        "velocity_m_per_s": 0.0019777982543048474
+      }
+    },
+    "rust_standard20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 7.2097986882063596e-06,
+          "velocity_m_per_s": 1.8340746806500345e-13
+        },
+        "Mercury": {
+          "position_metres": 0.013963532990682873,
+          "velocity_m_per_s": 1.1831863819149598e-08
+        },
+        "Venus": {
+          "position_metres": 0.016492094034407885,
+          "velocity_m_per_s": 5.181884878356579e-09
+        },
+        "Earth": {
+          "position_metres": 0.016367053188837705,
+          "velocity_m_per_s": 5.749166635209173e-09
+        },
+        "Moon": {
+          "position_metres": 0.11521495845898097,
+          "velocity_m_per_s": 2.8769632494100836e-07
+        },
+        "Mars": {
+          "position_metres": 0.0249714782861758,
+          "velocity_m_per_s": 2.580838757044772e-09
+        },
+        "Jupiter": {
+          "position_metres": 0.009085838748058721,
+          "velocity_m_per_s": 7.153118100437051e-11
+        },
+        "Saturn": {
+          "position_metres": 0.02626752672914402,
+          "velocity_m_per_s": 7.066957354402316e-11
+        },
+        "Uranus": {
+          "position_metres": 0.08133806831363011,
+          "velocity_m_per_s": 6.281443575654777e-11
+        },
+        "Neptune": {
+          "position_metres": 0.03323660242721043,
+          "velocity_m_per_s": 4.4603442873971424e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.11335267863404799,
+        "velocity_m_per_s": 2.8821361821985614e-07
+      },
+      "jpl_per_body": {
+        "Sun": {
+          "position_metres": 218.80481627448157,
+          "velocity_m_per_s": 1.3782271779070336e-05
+        },
+        "Mercury": {
+          "position_metres": 207.7120234106587,
+          "velocity_m_per_s": 2.6742814683240474e-05
+        },
+        "Venus": {
+          "position_metres": 257.4609686772718,
+          "velocity_m_per_s": 2.3298941181801853e-05
+        },
+        "Earth": {
+          "position_metres": 174.5501856309439,
+          "velocity_m_per_s": 4.142101771031377e-05
+        },
+        "Moon": {
+          "position_metres": 747.6991104581004,
+          "velocity_m_per_s": 0.0019661552602323004
+        },
+        "Mars": {
+          "position_metres": 571.3407362084731,
+          "velocity_m_per_s": 4.372392553162854e-05
+        },
+        "Jupiter": {
+          "position_metres": 273.2672796675662,
+          "velocity_m_per_s": 1.8870237389954923e-05
+        },
+        "Saturn": {
+          "position_metres": 31.075154507318086,
+          "velocity_m_per_s": 1.9112680795679167e-06
+        },
+        "Uranus": {
+          "position_metres": 17.181503906345526,
+          "velocity_m_per_s": 1.0823852172255901e-06
+        },
+        "Neptune": {
+          "position_metres": 64.72581016400996,
+          "velocity_m_per_s": 4.113517003481197e-06
+        }
+      },
+      "jpl_earth_moon": {
+        "position_metres": 718.7588270317757,
+        "velocity_m_per_s": 0.001977426004895103
+      }
+    },
+    "rust_holdout20": {
+      "per_body": {
+        "Sun": {
+          "position_metres": 1.4746127681635038e-06,
+          "velocity_m_per_s": 3.370456128990803e-14
+        },
+        "Mercury": {
+          "position_metres": 0.00013701416036050805,
+          "velocity_m_per_s": 2.273245574240172e-10
+        },
+        "Venus": {
+          "position_metres": 0.0005059042251617555,
+          "velocity_m_per_s": 9.38951423862987e-11
+        },
+        "Earth": {
+          "position_metres": 0.0001527785064731889,
+          "velocity_m_per_s": 1.0594273271546166e-10
+        },
+        "Moon": {
+          "position_metres": 0.0008005054180754371,
+          "velocity_m_per_s": 2.094483708736794e-09
+        },
+        "Mars": {
+          "position_metres": 0.0005242685231139619,
+          "velocity_m_per_s": 1.0034890585733604e-10
+        },
+        "Jupiter": {
+          "position_metres": 0.0009946343071125649,
+          "velocity_m_per_s": 4.785082409766527e-11
+        },
+        "Saturn": {
+          "position_metres": 0.009132614706498359,
+          "velocity_m_per_s": 1.4805789227396937e-11
+        },
+        "Uranus": {
+          "position_metres": 0.009777825574078016,
+          "velocity_m_per_s": 5.698410984871111e-12
+        },
+        "Neptune": {
+          "position_metres": 0.004888555010969686,
+          "velocity_m_per_s": 1.274763571316095e-11
+        }
+      },
+      "earth_moon": {
+        "position_metres": 0.0007369105573050064,
+        "velocity_m_per_s": 2.118740039260012e-09
+      }
+    }
+  },
+  "gates": {
+    "reference_annual": true,
+    "reference_holdout": true,
+    "python_strict20": true,
+    "python_strict10": true,
+    "python_holdout20": true,
+    "python_tolerance": true,
+    "python_packet": true,
+    "rust_strict20": true,
+    "rust_strict10": true,
+    "rust_holdout20": true,
+    "rust_tolerance": true,
+    "rust_packet": true,
+    "same_packet_restart": true,
+    "sandbox_python_mass-double": true,
+    "sandbox_python_slow-velocity": true,
+    "sandbox_python_escape-velocity": true,
+    "sandbox_python_eccentric-095": true,
+    "sandbox_python_add-companion": true,
+    "sandbox_python_remove-primary": true,
+    "sandbox_rust_mass-double": true,
+    "sandbox_rust_slow-velocity": true,
+    "sandbox_rust_escape-velocity": true,
+    "sandbox_rust_eccentric-095": true,
+    "sandbox_rust_add-companion": true,
+    "sandbox_rust_remove-primary": true
+  },
+  "failed_criteria": [],
+  "annual_scientific_qualified": true,
+  "compatibility": {
+    "status": "UNRESOLVED",
+    "original_accepted032_environment_reexecuted": false,
+    "byte_exact_gate_satisfied": false,
+    "reason": "Original375 environment had unset numerical thread variables. New stage deliberately freezes1; accepted032 was not rerun in a substituted environment."
+  },
+  "raw_JPL_responses_verified": 40,
+  "initial_JPL_overlap": {
+    "position_metres": 0.0,
+    "velocity_m_per_s": 0.0
+  },
+  "executed_jobs": {
+    "python_strict20": {
+      "seconds": 25.628542899998138,
+      "packets": 499,
+      "rtol": 3e-14,
+      "packet_max_steps": 20,
+      "settings": {
+        "dt": 3600,
+        "backend": "python",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 2.812683280997931e-14,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "python",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 0
+    },
+    "python_standard20": {
+      "seconds": 13.47814870000002,
+      "packets": 499,
+      "rtol": 1e-13,
+      "packet_max_steps": 20,
+      "settings": {
+        "dt": 3600,
+        "backend": "python",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 1e-13,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 2.3097531579055857e-14,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": null,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "python",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 1e-13,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 0
+    },
+    "python_strict10": {
+      "seconds": 23.551752600003965,
+      "packets": 948,
+      "rtol": 3e-14,
+      "packet_max_steps": 10,
+      "settings": {
+        "dt": 3600,
+        "backend": "python",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 7.339054388829039e-14,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": null,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "python",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 0
+    },
+    "python_holdout20": {
+      "seconds": 1.198952000006102,
+      "packets": 43,
+      "rtol": 3e-14,
+      "packet_max_steps": 20,
+      "settings": {
+        "dt": 3600,
+        "backend": "python",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 1.3038929117208952e-15,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": null,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "python",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 0
+    },
+    "rust_strict20": {
+      "seconds": 15.228220499993768,
+      "packets": 499,
+      "rtol": 3e-14,
+      "packet_max_steps": 20,
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 2.514650615461726e-14,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "rust",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 103344
+    },
+    "rust_standard20": {
+      "seconds": 8.028549599985126,
+      "packets": 499,
+      "rtol": 1e-13,
+      "packet_max_steps": 20,
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 1e-13,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 2.4028883658856494e-14,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": null,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "rust",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 1e-13,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 54359
+    },
+    "rust_strict10": {
+      "seconds": 14.74596610001754,
+      "packets": 948,
+      "rtol": 3e-14,
+      "packet_max_steps": 10,
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 5.625366561995862e-14,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": null,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "rust",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 94908
+    },
+    "rust_holdout20": {
+      "seconds": 1.0711009000078775,
+      "packets": 43,
+      "rtol": 3e-14,
+      "packet_max_steps": 20,
+      "settings": {
+        "dt": 3600,
+        "backend": "rust",
+        "contact_mode": "stop",
+        "restitution": 1.0,
+        "integrator": "dop853",
+        "rtol": 3e-14,
+        "position_atol": 0.001,
+        "velocity_atol": 1e-09,
+        "physics": "eih-1pn",
+        "figures": [
+          {
+            "body": "Sun",
+            "coefficient": 2.1961391516529825e-07,
+            "reference_radius": 696000000.0,
+            "axis": [
+              0.12235349347232782,
+              -0.0310378702450671,
+              0.9920011457885356
+            ],
+            "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+          },
+          {
+            "body": "Earth",
+            "coefficient": 0.00108262539,
+            "reference_radius": 6378136.6,
+            "axis": [
+              0.0026020959422886785,
+              0.39776866017225926,
+              0.9174820554547499
+            ],
+            "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+          }
+        ],
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "error_control": "per-body"
+      },
+      "relative_energy_residual": 3.911678735162685e-15,
+      "exact_times": true,
+      "settings_preserved": true,
+      "initial_parent_preserved": true,
+      "checkpoint_continue_exact": null,
+      "initial_document": {
+        "schema_version": 9,
+        "units": "SI",
+        "model": "eih-1pn-dop853-fixed-j2",
+        "settings": {
+          "dt": 3600,
+          "backend": "rust",
+          "contact_mode": "stop",
+          "restitution": 1.0,
+          "integrator": "dop853",
+          "rtol": 3e-14,
+          "position_atol": 0.001,
+          "velocity_atol": 1e-09,
+          "physics": "eih-1pn",
+          "figures": [
+            {
+              "body": "Sun",
+              "coefficient": 2.1961391516529825e-07,
+              "reference_radius": 696000000.0,
+              "axis": [
+                0.12235349347232782,
+                -0.0310378702450671,
+                0.9920011457885356
+              ],
+              "provenance": "DE441 J2SUN/ASUN (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); NAIF pck00011 solar pole (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); fixed Ecliptic J2000 axis; unnormalized J2"
+            },
+            {
+              "body": "Earth",
+              "coefficient": 0.00108262539,
+              "reference_radius": 6378136.6,
+              "axis": [
+                0.0026020959422886785,
+                0.39776866017225926,
+                0.9174820554547499
+              ],
+              "provenance": "DE441 nominal J2E/RE (376cd6f6766356ba0f4c25dc5a7ff8130ea2826f3c34149e33c1e6ac970d6e7c); IAU Earth pole pck00011 (3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1); frozen JD 2461321.5 TDB; Horizons obliquity 84381.448 arcsec"
+            }
+          ],
+          "relative_pair": [
+            "Earth",
+            "Moon"
+          ],
+          "error_control": "per-body"
+        },
+        "initial": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "bodies": [
+          {
+            "name": "Sun",
+            "mass": 1.988409871316534e+30,
+            "radius": 0.0,
+            "position": [
+              -179975380.99863088,
+              -766335220.5591803,
+              14025803.55911574
+            ],
+            "velocity": [
+              10.452225179469629,
+              4.432621459961725,
+              -0.2236386786017347
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mercury",
+            "mass": 3.301000636980658e+23,
+            "radius": 0.0,
+            "position": [
+              19750262520.49684,
+              -64849727710.94375,
+              -7051061714.338418
+            ],
+            "velocity": [
+              36761.36442022774,
+              16944.1827517093,
+              -1986.498900879239
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Venus",
+            "mass": 4.867305814842006e+24,
+            "radius": 0.0,
+            "position": [
+              107942330028.1021,
+              7964804959.6180315,
+              -6104485494.468367
+            ],
+            "velocity": [
+              -2948.978893695799,
+              34752.141100765075,
+              647.9783958798944
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Earth",
+            "mass": 5.972168399787584e+24,
+            "radius": 0.0,
+            "position": [
+              144650899686.84598,
+              36316866220.35821,
+              10986666.35056399
+            ],
+            "velocity": [
+              -7857.880626198839,
+              28762.01732400517,
+              -0.8206446406369139
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Moon",
+            "mass": 7.345789248996225e+22,
+            "radius": 0.0,
+            "position": [
+              144291740650.0716,
+              36436297810.50089,
+              3384733.587212861
+            ],
+            "velocity": [
+              -8214.871315810784,
+              27788.63301669028,
+              -92.33042087229926
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Mars",
+            "mass": 6.416909011545196e+23,
+            "radius": 0.0,
+            "position": [
+              4780743054.340674,
+              233523948897.7288,
+              4802254659.718901
+            ],
+            "velocity": [
+              -23295.6143768072,
+              2574.9295149077698,
+              625.111385296453
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Jupiter",
+            "mass": 1.898517658780696e+27,
+            "radius": 0.0,
+            "position": [
+              -528366874511.79407,
+              592328001924.1398,
+              9367779212.084352
+            ],
+            "velocity": [
+              -9907.110287659596,
+              -8082.550564878298,
+              255.2667167467182
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Saturn",
+            "mass": 5.684578883448452e+26,
+            "radius": 0.0,
+            "position": [
+              1383539033514.758,
+              269250103698.49258,
+              -59768935463.698006
+            ],
+            "velocity": [
+              -2375.270473847368,
+              9460.641551996632,
+              -69.96436832777597
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Uranus",
+            "mass": 8.68189383156286e+25,
+            "radius": 0.0,
+            "position": [
+              1332143452240.549,
+              2584265697250.453,
+              -7660518114.861965
+            ],
+            "velocity": [
+              -6103.296563491293,
+              2802.851488540411,
+              89.4729803201535
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "name": "Neptune",
+            "mass": 1.0243062344486162e+26,
+            "radius": 0.0,
+            "position": [
+              4463276149566.129,
+              209002293454.8559,
+              -107164802072.88881
+            ],
+            "velocity": [
+              -289.9722364835866,
+              5461.557076099574,
+              -105.789329339196
+            ],
+            "spin": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "time": 0.0,
+        "dissipated_energy": 0.0,
+        "halted": false,
+        "model_energy_offset": 0.0,
+        "orientation_work": 0.0,
+        "events": [],
+        "origin": {
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "center": "Solar System Barycenter",
+          "ephemeris": "DE441",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        }
+      },
+      "native_force_calls": 4763
+    }
+  },
+  "sandbox": [
+    {
+      "name": "mass-double",
+      "backend": "python",
+      "duration_seconds": 12108756.587054621,
+      "samples": 33,
+      "eccentricity": 0.42553191489361675,
+      "unbound": false,
+      "position_metres": 0.0016030627004795142,
+      "velocity_m_per_s": 3.785771013325922e-10,
+      "center_of_mass_error_metres": 0.0001308717130315859,
+      "relative_energy_drift": 3.1848108359213154e-15,
+      "scaled_momentum_drift": 2.0333459184698115e-15,
+      "relative_angular_momentum_drift": 1.4363041760485645e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.9240106000215746,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 0
+    },
+    {
+      "name": "slow-velocity",
+      "backend": "python",
+      "duration_seconds": 14654351.086874394,
+      "samples": 33,
+      "eccentricity": 0.5100000000000002,
+      "unbound": false,
+      "position_metres": 0.001261865132607189,
+      "velocity_m_per_s": 1.238845616413307e-09,
+      "center_of_mass_error_metres": 0.00010059173421018466,
+      "relative_energy_drift": 6.5606275846547494e-15,
+      "scaled_momentum_drift": 1.5739515984924939e-15,
+      "relative_angular_momentum_drift": 2.344022033171922e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 1.0774835999764036,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 0
+    },
+    {
+      "name": "escape-velocity",
+      "backend": "python",
+      "duration_seconds": 1000000.0,
+      "samples": 33,
+      "eccentricity": null,
+      "unbound": true,
+      "position_metres": 0.00046282198755197453,
+      "velocity_m_per_s": 1.164170981702219e-10,
+      "center_of_mass_error_metres": 2.442598051999225e-05,
+      "relative_energy_drift": 3.1448977624477237e-15,
+      "scaled_momentum_drift": 6.252311788532837e-16,
+      "relative_angular_momentum_drift": 5.828651677229898e-16,
+      "reference_uncertainty": {
+        "position_metres": 0.00028961567529452983,
+        "velocity_m_per_s": 1.8930712202279567e-10
+      },
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.3701907999929972,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 0
+    },
+    {
+      "name": "eccentric-095",
+      "backend": "python",
+      "duration_seconds": 9985736.36491088,
+      "samples": 33,
+      "eccentricity": 0.9500000000000002,
+      "unbound": false,
+      "position_metres": 0.060405766564602247,
+      "velocity_m_per_s": 4.577626922335429e-08,
+      "center_of_mass_error_metres": 8.080994100800273e-05,
+      "relative_energy_drift": 1.3537760382002648e-12,
+      "scaled_momentum_drift": 4.065609385050326e-15,
+      "relative_angular_momentum_drift": 1.6830733013841028e-14,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.7462124000012409,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 0
+    },
+    {
+      "name": "add-companion",
+      "backend": "python",
+      "duration_seconds": 27191427.824614603,
+      "samples": 33,
+      "eccentricity": 0.0,
+      "unbound": false,
+      "position_metres": 0.0012528758359525202,
+      "velocity_m_per_s": 2.844741831307375e-10,
+      "center_of_mass_error_metres": 0.00021471115378166297,
+      "relative_energy_drift": 3.3963440087127486e-15,
+      "scaled_momentum_drift": 2.0680352635298035e-15,
+      "relative_angular_momentum_drift": 1.7177782565141045e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 1.4618709000060335,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 0
+    },
+    {
+      "name": "remove-primary",
+      "backend": "python",
+      "position_metres": 3.814697265625e-06,
+      "velocity_m_per_s": 0.0,
+      "checks_passed": true,
+      "parent_preserved": true,
+      "duration_seconds": 1000000.0,
+      "wall_seconds": 0.0709101999818813,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 0
+    },
+    {
+      "name": "mass-double",
+      "backend": "rust",
+      "duration_seconds": 12108756.587054621,
+      "samples": 33,
+      "eccentricity": 0.42553191489361675,
+      "unbound": false,
+      "position_metres": 0.0013845879762948534,
+      "velocity_m_per_s": 1.089831802323318e-09,
+      "center_of_mass_error_metres": 0.00015154670530819243,
+      "relative_energy_drift": 7.077357413158479e-15,
+      "scaled_momentum_drift": 2.4138378598839043e-15,
+      "relative_angular_momentum_drift": 3.1479635415646253e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.4207374000106938,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 19412
+    },
+    {
+      "name": "slow-velocity",
+      "backend": "rust",
+      "duration_seconds": 14654351.086874394,
+      "samples": 33,
+      "eccentricity": 0.5100000000000002,
+      "unbound": false,
+      "position_metres": 0.0018481765363837198,
+      "velocity_m_per_s": 4.1442630822090706e-10,
+      "center_of_mass_error_metres": 0.00012345616995172194,
+      "relative_energy_drift": 3.9363765507928495e-15,
+      "scaled_momentum_drift": 1.56413610720781e-15,
+      "relative_angular_momentum_drift": 2.593896931455373e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.5036264999944251,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 22632
+    },
+    {
+      "name": "escape-velocity",
+      "backend": "rust",
+      "duration_seconds": 1000000.0,
+      "samples": 33,
+      "eccentricity": null,
+      "unbound": true,
+      "position_metres": 0.00039029405402919503,
+      "velocity_m_per_s": 8.732333294612664e-11,
+      "center_of_mass_error_metres": 3.438521647895803e-05,
+      "relative_energy_drift": 2.6483349578507146e-15,
+      "scaled_momentum_drift": 5.01009312764429e-16,
+      "relative_angular_momentum_drift": 5.525802543002946e-16,
+      "reference_uncertainty": {
+        "position_metres": 0.00028961567529452983,
+        "velocity_m_per_s": 1.8930712202279567e-10
+      },
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.3198606999940239,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 3240
+    },
+    {
+      "name": "eccentric-095",
+      "backend": "rust",
+      "duration_seconds": 9985736.36491088,
+      "samples": 33,
+      "eccentricity": 0.9500000000000002,
+      "unbound": false,
+      "position_metres": 0.06725314385108919,
+      "velocity_m_per_s": 9.423390069863335e-08,
+      "center_of_mass_error_metres": 8.424827155273387e-05,
+      "relative_energy_drift": 1.3359356868268854e-12,
+      "scaled_momentum_drift": 3.859297528654432e-15,
+      "relative_angular_momentum_drift": 2.4282743659174394e-14,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.4101111000054516,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 18208
+    },
+    {
+      "name": "add-companion",
+      "backend": "rust",
+      "duration_seconds": 27191427.824614603,
+      "samples": 33,
+      "eccentricity": 0.0,
+      "unbound": false,
+      "position_metres": 0.007354514953914548,
+      "velocity_m_per_s": 1.62066163481021e-09,
+      "center_of_mass_error_metres": 0.00025288999794249227,
+      "relative_energy_drift": 8.85475402271538e-15,
+      "scaled_momentum_drift": 1.802925734607416e-15,
+      "relative_angular_momentum_drift": 4.493347824382544e-15,
+      "reference_uncertainty": null,
+      "parent_preserved": true,
+      "checkpoint_continue_exact": true,
+      "checks_passed": true,
+      "wall_seconds": 0.8453339000116102,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 38900
+    },
+    {
+      "name": "remove-primary",
+      "backend": "rust",
+      "position_metres": 3.814697265625e-06,
+      "velocity_m_per_s": 0.0,
+      "checks_passed": true,
+      "parent_preserved": true,
+      "duration_seconds": 1000000.0,
+      "wall_seconds": 0.03883020000648685,
+      "file_branch_roundtrip": true,
+      "file_continue_exact": true,
+      "parent_file_preserved": true,
+      "native_force_calls": 2360
+    }
+  ],
+  "limitations": [
+    "Fixed-axis Newtonian J2 plus point-mass EIH1PN; omitted mixed PN-figure terms/tides/asteroids/other resolved moons",
+    "SSB planet-system barycentres except resolved Earth/Moon; no double count of EMB mass",
+    "Shared initial data/constants and SciPy/float64 constrain independence; JPL is a physical-model comparison, not solver truncation error",
+    "125 observed epochs and9 holdout, no continuous error bound or arbitrary edited-system qualification",
+    "This is source desktop qualification, not a new portable/release",
+    "Same environment regression does not reconstruct the historical OS/toolchain; record exact contemporary binaries and versions",
+    "Scalar audit shares equations/constants and binary64; not external review. FixedJ2 orbital L is not conserved; mixedPN-figure and higher PN terms omitted. Complete release not qualified."
+  ]
+}

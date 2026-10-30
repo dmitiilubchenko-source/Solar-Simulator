@@ -1,0 +1,65 @@
+{
+  "faults": [
+    {
+      "fault": "protocol",
+      "rejected": true,
+      "message": "Frozen protocol SHA256 mismatch"
+    },
+    {
+      "fault": "source",
+      "rejected": true,
+      "message": "Candidate source changed: src/solar_simulator/simulation.py"
+    },
+    {
+      "fault": "environment",
+      "rejected": true,
+      "message": "Actual candidate environment changed"
+    },
+    {
+      "fault": "native",
+      "rejected": true,
+      "message": "Actual candidate environment changed"
+    },
+    {
+      "fault": "tool",
+      "rejected": true,
+      "message": "Observer tool changed: scripts/qualify_annual385.py"
+    },
+    {
+      "fault": "candidate",
+      "rejected": true,
+      "message": "Candidate Git commit/tree changed"
+    }
+  ],
+  "noninterference": [
+    {
+      "backend": "python",
+      "all_arrays_and_final_document_bitwise": true,
+      "counts": {
+        "python": {
+          "solver_calls": 1,
+          "nfev": 89,
+          "packets": 1,
+          "rtol": 3e-14,
+          "internal_accepted_rejected_steps_known": false
+        }
+      }
+    },
+    {
+      "backend": "rust",
+      "all_arrays_and_final_document_bitwise": true,
+      "counts": {
+        "rust": {
+          "solver_calls": 1,
+          "nfev": 89,
+          "packets": 1,
+          "rtol": 3e-14,
+          "internal_accepted_rejected_steps_known": false
+        }
+      }
+    }
+  ],
+  "CPU_seconds": 4.1875,
+  "wall_seconds": 4.620069600001443,
+  "scope": "Two1h technical probes per backend; not annual qualification. Expected input corruptions only; no runtime/source/native file altered."
+}

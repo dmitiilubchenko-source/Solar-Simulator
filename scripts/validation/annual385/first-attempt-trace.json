@@ -1,0 +1,12 @@
+{
+  "job": "current",
+  "rows": {},
+  "failure": {
+    "type": "RuntimeError",
+    "message": "Select runtime before importing any physical modules"
+  },
+  "complete": false,
+  "source_environment_unchanged": true,
+  "freeze_SHA256": "7f544316265602be192e19973d05404ffe5befd9abf81361884ca9256bc807e1",
+  "protocol_SHA256": "b868729f227d0fd25677211450245bb9b18d8d88e7d04f293a9be2ed801e198e"
+}
