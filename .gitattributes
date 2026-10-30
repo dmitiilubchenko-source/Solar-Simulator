@@ -22,3 +22,4 @@ rust/solar_native/Cargo.toml -text
 rust/solar_native/pyproject.toml -text
 rust/solar_core/Cargo.lock -text
 rust/solar_native/Cargo.lock -text
+src/solar_simulator/data/ERFA-LICENSE.txt -text
