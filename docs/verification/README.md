@@ -91,3 +91,7 @@ high99 условия376, uncapped exact controls, независимые ана
 [Целостность и CI382](../integrity-ci-382.md): документальный revert проверен
 tree/actual blobs/SHA; portable evidence paths и CI integrity отделены от
 строгого scientific gate. [План0.3.3](../qualification-033-plan.md) пока не исполнен.
+
+[Подготовка383](../qualification-033-preflight.md): staged0.3.3/native, новые
+sealed output существующих375/376/380; bounded preflight не является новой
+scientific qualification. Основной запуск пока NO-GO по указанным блокерам.

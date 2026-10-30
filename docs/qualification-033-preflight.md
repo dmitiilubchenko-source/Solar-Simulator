@@ -45,5 +45,59 @@ wheels/native build и короткая synthetic two-Q2 save/resume probe; вр
 Выбор корректного нового comparison scope — отдельное решение до annual jobs.
 Технически параметризованный driver не означает одобрение такого решения.
 
-Фактические результаты текущего ограниченного исполнения добавляются после
-измерений; до этого план не считается выполненным.
+## Фактически выполнено
+
+Source commit9065c77ce1197aefd0315d0dc1b7c4b5d967d2e6 плюс шесть явных
+metadata overlays0.3.3. Разработческий dev/установка остаются0.3.2.
+Новый native0.3.3 SHA651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091;
+Python3.14.2t/cp314t-win_amd64, NumPy2.5.1, SciPy1.18.1, Matplotlib3.11.0;
+rustc1.99.0 GNU, maturin1.15.0/PyO3.29.3 release. Native заново собран
+в отдельном target с копией warm cache; старый установленный бинарник не тронут.
+Python/native wheel versions и Cargo/lock metadata согласованы.
+Подробные SHA/наблюдения: [машинный отчёт](qualification-033-preflight.json).
+
+70 targeted tests с обязательным native,0skip; source Python CI689PASS,
+4 прежних deselect,0skip. Прежние8cases/24canonical snapshots byte-exact
+в исходной среде; offline380 независимо воспроизводит3FAIL. AST семи
+численных helpers совпадает с сохранёнными исходниками. Src/Rust physics,
+старые protocol/receipt/arrays/native/LATEST не менялись.
+
+В отдельной candidate venv, включая запуск wheel package через -I, оба
+backend прошли synthetic two-Q2 .125s prefix и .125s suffix, точные file
+roundtrip/continue, неизменность seed/settings при read-only report.
+Реальные375/376/380 sealed планы проверены без интегрирования: valid plan
+доходит до отказа reuse output; bad SHA и изменённое реальное OMP окружение
+отклоняются до создания output. SI/DE441/JD2461321.5TDB/рамка/atol и все
+закреплённые входы375 проверены; математические блоки новых планов равны старым.
+
+Сохранены все preparation FAIL:11 red tests;7 setup errors исторической fixture
+до добавления точного нового архива; отсутствие setuptools.build_meta;
+затем отсутствие maturin script. Попытка добавить PATH не помогла: прочитанный
+maturin.__main__ ищет sysconfig Scripts, поэтому скопирован настоящий
+SHA-совпадающий maturin.exe только в candidate. Build-only setuptools84.2.1 и
+wheel0.48.0 получены по PyPI metadata/SHA, установлены только в candidate.
+Полный frozen recipe и logs локальны в .tools/qualification383 и резервном ZIP.
+
+Суммарно по всем запускам, включая неуспехи:107.203125 измеренных CPU s,
+71.420966 active wall s; sampled worker-tree peak560496640B (~534.5MiB),
+новые файлы229557415B (~218.9MiB) до compact report/archive.
+Supervision CPU включён. RAM пиков supervisor и исчерпывающего inventory
+временных файлов вне stage нет; короткие процессы/пики между выборками могут
+быть пропущены. 50ms — пауза monitor, не гарантированный фактический интервал
+при обходе файлов. Это измерение с ограничениями, не доказанный OS hard bound.
+
+## Решение и следующий шаг
+
+GO техническая подготовка; Newton376 технически исполним после отдельного
+старта его бюджета. **NO-GO основной квалификации0.3.3 сейчас**: не согласованы
+новый comparison scope375 и packet-monotonicity scope380; нет финального
+clean candidate commit/portable isolation. Старое375 environment отличается
+application_version/native и thread settings, а не повреждением данных.
+Не заменять старый receipt, не объявлять сравнение одинаковой средой.
+
+Перед дальнейшей scientific qualification выбрать final source+metadata+native
+freeze, явно решить два scope-вопроса, затем запускать отдельные фазы по
+плану382. Сейчас работа останавливается; годовых/full380/full check_project/
+portable jobs, main/tag/release/LATEST не было. Проверка новой portable может
+потребовать именно нового связанного с ней исполнения: версия сама по себе
+не доказывает идентичность native SHA.
