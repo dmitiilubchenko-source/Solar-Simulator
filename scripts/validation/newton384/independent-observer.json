@@ -1,0 +1,10 @@
+{
+  "jobs": 36,
+  "state_observations": 1576,
+  "independent_r_v_E_L_P": true,
+  "source_mode": "current_sources",
+  "current_runtime_qualified": false,
+  "reader_SHA256": "40a548ef91a1b09bf04ac0e4804242ba6c22b34781899f386f1e3471798e94eb",
+  "shared_assumptions": "Newton/IC/G and stored analytic reference; different Fraction arithmetic, not a second numerical IVP",
+  "COM_not_ulp_compared": "different Decimal120/130 cancellation floors; both identities independently evaluated"
+}

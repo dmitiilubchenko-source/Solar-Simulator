@@ -1,0 +1,626 @@
+{
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "freeze_SHA256": "b53d39028e20f1b107dcd68702ce085883db698bd9e7056ebecd04a319558bb6",
+  "protocol_SHA256": "0ef90a75b8acb8158bb114e31687d54326ef7c3624a3fdbacaa0b245d347b240",
+  "jobs": {
+    "moderate__python__standard__absolute": {
+      "job": {
+        "id": "moderate__python__standard__absolute",
+        "case": "moderate",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 5400,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "moderate__python__standard__relative": {
+      "job": {
+        "id": "moderate__python__standard__relative",
+        "case": "moderate",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 5412,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "moderate__python__strict__absolute": {
+      "job": {
+        "id": "moderate__python__strict__absolute",
+        "case": "moderate",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 5532,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "moderate__python__strict__relative": {
+      "job": {
+        "id": "moderate__python__strict__relative",
+        "case": "moderate",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 8256,
+      "native_force_calls": 0,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "moderate__rust__standard__absolute": {
+      "job": {
+        "id": "moderate__rust__standard__absolute",
+        "case": "moderate",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 5412,
+      "native_force_calls": 5412,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "moderate__rust__standard__relative": {
+      "job": {
+        "id": "moderate__rust__standard__relative",
+        "case": "moderate",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 5412,
+      "native_force_calls": 5412,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "moderate__rust__strict__absolute": {
+      "job": {
+        "id": "moderate__rust__strict__absolute",
+        "case": "moderate",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 5508,
+      "native_force_calls": 5508,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "moderate__rust__strict__relative": {
+      "job": {
+        "id": "moderate__rust__strict__relative",
+        "case": "moderate",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 8316,
+      "native_force_calls": 8316,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__python__standard__absolute": {
+      "job": {
+        "id": "high95__python__standard__absolute",
+        "case": "high95",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 6744,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__python__standard__relative": {
+      "job": {
+        "id": "high95__python__standard__relative",
+        "case": "high95",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 6732,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__python__strict__absolute": {
+      "job": {
+        "id": "high95__python__strict__absolute",
+        "case": "high95",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 6972,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__python__strict__relative": {
+      "job": {
+        "id": "high95__python__strict__relative",
+        "case": "high95",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 10404,
+      "native_force_calls": 0,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__rust__standard__absolute": {
+      "job": {
+        "id": "high95__rust__standard__absolute",
+        "case": "high95",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 6756,
+      "native_force_calls": 6756,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__rust__standard__relative": {
+      "job": {
+        "id": "high95__rust__standard__relative",
+        "case": "high95",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 6756,
+      "native_force_calls": 6756,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__rust__strict__absolute": {
+      "job": {
+        "id": "high95__rust__strict__absolute",
+        "case": "high95",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 6936,
+      "native_force_calls": 6936,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high95__rust__strict__relative": {
+      "job": {
+        "id": "high95__rust__strict__relative",
+        "case": "high95",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 10416,
+      "native_force_calls": 10416,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__python__standard__absolute": {
+      "job": {
+        "id": "high99-peri__python__standard__absolute",
+        "case": "high99-peri",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7548,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__python__standard__relative": {
+      "job": {
+        "id": "high99-peri__python__standard__relative",
+        "case": "high99-peri",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7536,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__python__strict__absolute": {
+      "job": {
+        "id": "high99-peri__python__strict__absolute",
+        "case": "high99-peri",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7884,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__python__strict__relative": {
+      "job": {
+        "id": "high99-peri__python__strict__relative",
+        "case": "high99-peri",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 11760,
+      "native_force_calls": 0,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__rust__standard__absolute": {
+      "job": {
+        "id": "high99-peri__rust__standard__absolute",
+        "case": "high99-peri",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7560,
+      "native_force_calls": 7560,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__rust__standard__relative": {
+      "job": {
+        "id": "high99-peri__rust__standard__relative",
+        "case": "high99-peri",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7560,
+      "native_force_calls": 7560,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__rust__strict__absolute": {
+      "job": {
+        "id": "high99-peri__rust__strict__absolute",
+        "case": "high99-peri",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7908,
+      "native_force_calls": 7908,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__rust__strict__relative": {
+      "job": {
+        "id": "high99-peri__rust__strict__relative",
+        "case": "high99-peri",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 11748,
+      "native_force_calls": 11748,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__python__standard__absolute": {
+      "job": {
+        "id": "high99-apo__python__standard__absolute",
+        "case": "high99-apo",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7536,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__python__standard__relative": {
+      "job": {
+        "id": "high99-apo__python__standard__relative",
+        "case": "high99-apo",
+        "backend": "python",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7572,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__python__strict__absolute": {
+      "job": {
+        "id": "high99-apo__python__strict__absolute",
+        "case": "high99-apo",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7860,
+      "native_force_calls": 0,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__python__strict__relative": {
+      "job": {
+        "id": "high99-apo__python__strict__relative",
+        "case": "high99-apo",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 11808,
+      "native_force_calls": 0,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__rust__standard__absolute": {
+      "job": {
+        "id": "high99-apo__rust__standard__absolute",
+        "case": "high99-apo",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7548,
+      "native_force_calls": 7548,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__rust__standard__relative": {
+      "job": {
+        "id": "high99-apo__rust__standard__relative",
+        "case": "high99-apo",
+        "backend": "rust",
+        "rtol": 1e-13,
+        "profile": "standard",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7560,
+      "native_force_calls": 7560,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__rust__strict__absolute": {
+      "job": {
+        "id": "high99-apo__rust__strict__absolute",
+        "case": "high99-apo",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "absolute",
+        "schedule": "grid"
+      },
+      "solver_calls": 48,
+      "nfev": 7860,
+      "native_force_calls": 7860,
+      "advance_calls": 48,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__rust__strict__relative": {
+      "job": {
+        "id": "high99-apo__rust__strict__relative",
+        "case": "high99-apo",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "grid"
+      },
+      "solver_calls": 72,
+      "nfev": 11808,
+      "native_force_calls": 11808,
+      "advance_calls": 72,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__python__strict__relative__onepacket": {
+      "job": {
+        "id": "high99-peri__python__strict__relative__onepacket",
+        "case": "high99-peri",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "onepacket"
+      },
+      "solver_calls": 1,
+      "nfev": 3737,
+      "native_force_calls": 0,
+      "advance_calls": 1,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-peri__rust__strict__relative__onepacket": {
+      "job": {
+        "id": "high99-peri__rust__strict__relative__onepacket",
+        "case": "high99-peri",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "onepacket"
+      },
+      "solver_calls": 1,
+      "nfev": 3725,
+      "native_force_calls": 3725,
+      "advance_calls": 1,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__python__strict__relative__onepacket": {
+      "job": {
+        "id": "high99-apo__python__strict__relative__onepacket",
+        "case": "high99-apo",
+        "backend": "python",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "onepacket"
+      },
+      "solver_calls": 1,
+      "nfev": 3773,
+      "native_force_calls": 0,
+      "advance_calls": 1,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    },
+    "high99-apo__rust__strict__relative__onepacket": {
+      "job": {
+        "id": "high99-apo__rust__strict__relative__onepacket",
+        "case": "high99-apo",
+        "backend": "rust",
+        "rtol": 3e-14,
+        "profile": "strict",
+        "coordinates": "relative",
+        "schedule": "onepacket"
+      },
+      "solver_calls": 1,
+      "nfev": 3773,
+      "native_force_calls": 3773,
+      "advance_calls": 1,
+      "method": "solar_simulator.error_control.PerBodyDOP853",
+      "internal_steps_known": false
+    }
+  },
+  "solver_executed": true,
+  "complete": true,
+  "source_environment_unchanged": true,
+  "failure": null,
+  "journal_SHA256": "f04102a6a92e97f6b623b230d7590bc90d1c4eb06fd3f2f16a79abd214619688",
+  "counts_include_same_packet_restart": true,
+  "current_runtime_qualified": false
+}

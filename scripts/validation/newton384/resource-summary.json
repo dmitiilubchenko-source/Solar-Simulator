@@ -1,0 +1,112 @@
+{
+  "guards": [
+    {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 32.578125,
+        "parent_cpu": 6.484375,
+        "private_tree": 118284288,
+        "rss_tree": 106725376,
+        "disk": 4971822,
+        "elapsed": 33.73326099998667
+      },
+      "samples": 542,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 32.65625,
+      "root_final_CPU_seconds": 0.03125,
+      "parent_supervision_CPU_seconds": 6.5,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 139526144,
+      "processes": [
+        {
+          "pid": 4752,
+          "creation_time": 1793379099.0187154,
+          "CPU_seconds": 0.03125,
+          "role": "launcher"
+        },
+        {
+          "pid": 9072,
+          "creation_time": 1793379099.0234616,
+          "CPU_seconds": 32.578125,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 13152,
+          "creation_time": 1793379100.8943384,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 3584,
+          "creation_time": 1793379100.9030666,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 23056,
+          "creation_time": 1793379131.7655747,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 138846208,
+      "wall_seconds": 33.79440679999243,
+      "disk_bytes": 4971822,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    },
+    {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 2.375,
+        "parent_cpu": 0.625,
+        "private_tree": 80498688,
+        "rss_tree": 102207488,
+        "disk": 5799170,
+        "elapsed": 2.453250799997477
+      },
+      "samples": 36,
+      "poll_seconds": 0.05,
+      "worker_CPU_seconds": 2.421875,
+      "root_final_CPU_seconds": 0.03125,
+      "parent_supervision_CPU_seconds": 0.640625,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 111267840,
+      "processes": [
+        {
+          "pid": 22920,
+          "creation_time": 1793379132.8160512,
+          "CPU_seconds": 0.03125,
+          "role": "launcher"
+        },
+        {
+          "pid": 32124,
+          "creation_time": 1793379132.820808,
+          "CPU_seconds": 2.390625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 123830272,
+      "wall_seconds": 2.514897999993991,
+      "disk_bytes": 5799170,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+    }
+  ],
+  "total_CPU_seconds": 42.25,
+  "worker_CPU_seconds": 35.078125,
+  "supervision_CPU_seconds": 7.171875,
+  "wall_seconds": 36.31443039998703,
+  "worker_peak_private_sampled": 139526144,
+  "supervisor_private_peak_OS": 37814272,
+  "combined_private_peak_sampled": 176631808,
+  "conservative_sum_of_worker_sampled_and_supervisor_OS_peaks": 177340416,
+  "artifact_bytes": 5800284,
+  "complete": true,
+  "limitations": "Private worker peaks/tree discovery sampled; parent OS peak includes its entire process lifetime. Retained Windows handles final CPU for discovered processes; very short unseen children possible. Preparation/reconstructible environment are separate from Newton phase.",
+  "within_measured_caps": true
+}

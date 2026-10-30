@@ -95,3 +95,8 @@ tree/actual blobs/SHA; portable evidence paths и CI integrity отделены 
 [Подготовка383](../qualification-033-preflight.md): staged0.3.3/native, новые
 sealed output существующих375/376/380; bounded preflight не является новой
 scientific qualification. Основной запуск пока NO-GO по указанным блокерам.
+
+[Первая Newton-квалификация384](../newton-384-validation.md):36свежихcase,
+1576states и независимый saved-data replay через scripts.assess_newton384.
+Новая source/environment qualification ограничена указанной моделью/сеткой;
+полная0.3.3приёмка ещё не выполнена.

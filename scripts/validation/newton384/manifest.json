@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "stage": 384,
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "tool_commit": "7f393378e445e3d54a32d8b6b9366c7dbb3d859f",
+  "assets": {
+    "all36.csv": "b5e7d5d99e8380760c45bccedd2ce3ece8d265ec1f1337163c718c653a455c81",
+    "environment.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "execution-trace.json": "1a8210fafb79e8e91367f8084ab6b88f706af9c76c9523bd8667d2ac2c5a7c3a",
+    "freeze.json": "b53d39028e20f1b107dcd68702ce085883db698bd9e7056ebecd04a319558bb6",
+    "independent-observer.json": "cb3a2aa54b0d448612b1a9e5e60e83b6df755758bb12083124af9d8a9c21d841",
+    "proof.json": "bae7fcee074e47742f63822a0661bd5c45598a033e97187616d32544c24aceff",
+    "protocol.json": "0ef90a75b8acb8158bb114e31687d54326ef7c3624a3fdbacaa0b245d347b240",
+    "resource-summary.json": "02a3003c381f478e63d3538bdd1683968184c5c313ebc7763ef37bf82b046b6f",
+    "source-manifest.json": "9a4f0158b3ff16b23b6c29e9478864fbd47b7d2876a160f587420825a63fc250",
+    "summary.npz": "544bd020f5d36030ab75b4cd0cfb14f2eb44043c53baaf0fe34035b80e871b77"
+  },
+  "conclusion": "All36fresh runs and existing independent1576state audit complete;8originalmoderate gates PASS; high-e diagnostic only;8exact same-packet restarts; not complete0.3.3qualification",
+  "optional_extended_audit": "Not launched: additional planned post-audit preflight saw332.616s since phase start and refused early320s window. Required independent audit was already completed within36.314s. No reset/reintegration or use of reserve beyond wall limits.",
+  "current_runtime_qualified": false,
+  "source_mode": "recorded candidate provenance, not current checkout authorization"
+}

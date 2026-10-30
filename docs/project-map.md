@@ -76,3 +76,6 @@ inspection.report через существующий async-loader lifecycle. Ф
 [Подготовка кандидата383](qualification-033-preflight.md): отдельный staging export,
 явный metadata overlay, новые sealed планы и output существующих drivers.
 Технический preflight не является научной квалификацией или выпуском.
+
+[Newton384](newton-384-validation.md): отдельный Git-кандидат033, свежие36jobs,
+независимый raw-state audit, scope375/380 и сохранённые ограничения выпуска.
