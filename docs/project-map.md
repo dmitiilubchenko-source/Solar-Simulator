@@ -89,3 +89,8 @@ Strict PASS, Standard Rust diagnostic FAIL, compatibility отдельно UNRES
 
 Две Q2: [область/политика386](two-q2-scope-386.md),
 [отдельный прикладной draft](two-q2-application-protocol.md); waiver/B_app требуют владельца.
+
+Совместимость032/033: [контракт387](compatibility-387-plan.md),
+[частичный результат387](compatibility-387-validation.md),
+[read-only verifier/observer](../scripts/check_compatibility387.py).
+Acquisition остановлен по памяти до IC; A/B/C ещё не квалифицированы.

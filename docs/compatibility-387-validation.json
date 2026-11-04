@@ -1,0 +1,95 @@
+{
+  "stage": 387,
+  "status": "PARTIAL_RESOURCE_STOP",
+  "A": "UNRESOLVED",
+  "B": "NOT_RUN",
+  "C": "UNRESOLVED",
+  "release_compatibility_gate": "NO-GO",
+  "source_dev": "e2d96647df941218458d9d928afd965f98c47867",
+  "accepted_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+  "candidate": {
+    "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+    "source_and_environment_freeze_verified": true,
+    "source_file_count": 394,
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "environment_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "package": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\src\\solar_simulator\\__init__.py",
+    "prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+    "new_integrations": 0
+  },
+  "portable": {
+    "archive_SHA256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49",
+    "archive_bytes": 112312650,
+    "verified_member_count": 5979,
+    "verified_member_total_bytes": 318154662,
+    "excluded_cache_files": 0,
+    "main_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+    "main_package_file_count": 80,
+    "main_package_mismatches": [
+      "README.md"
+    ],
+    "native": {
+      "runtime/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601"
+    },
+    "python_executable_SHA256": "410c1771d8d7d3d5ca672b335f4402e73fb1d6b9b4b12f73984e19d5e9ce5f8f",
+    "build_info_SHA256": "2bf8126bce71da6de3fed8f0b8b3ac72d0fad7088179ca062d3117ef170bd55c",
+    "portable_member_manifest_SHA256": "d238d47ec73fd93bd3a89e5f604de694fac2e03928fef7ab7d4c85bc7d288a19",
+    "scientific_IC_created": false,
+    "scientific_plan_created": false,
+    "stopped_before_input_creation": true,
+    "startup_stop": {
+      "worker_private_MiB": 1018.8046875,
+      "rss_MiB": 71.25,
+      "early_private_limit_MiB": 900,
+      "requested_upper_MiB": 1024,
+      "exit_code": 15,
+      "limit_reason": "private-memory"
+    },
+    "uncertainty": "Exact import at stop and historical launch-time numerical environment are unknown. Clearing thread overrides was an unproven preparation assumption, not attested historical equivalence."
+  },
+  "resources": {
+    "aggregate_accounted_CPU_seconds": 11.015625,
+    "aggregate_active_wall_seconds": 12.847939300001599,
+    "complete_acquisition": false,
+    "stop": "PARTIAL_RESOURCE_STOP",
+    "postflight_complete": true,
+    "artifact_bytes": 1090088,
+    "initial_launcher_CPU": "unmeasured; exit before monitor import, tool wall0.1887s",
+    "historical_thread_environment": "unknown; attempted clearing not proved equivalent",
+    "hard_memory_safety": "early stop900MiB; sampled worker1018.8MiB, individual peak below1024MiB; simultaneous combined peak unknown; no retry or cap increase"
+  },
+  "synthetic_tests": {
+    "passed": 10,
+    "failed": 0,
+    "skipped": 0,
+    "pytest_seconds": 0.22
+  },
+  "numerical_cases_executed": 0,
+  "initial_states_frozen": false,
+  "scientific_integrations": 0,
+  "production_changes": false,
+  "protected_evidence_unchanged": true,
+  "tools": {
+    "scripts/check_compatibility387.py": "2c66e427ad618bcea5c5e6626b2529618cb9271599cafd7ee536539630ee7b33",
+    "tests/test_compatibility387.py": "a0dc6f0bfc41b551e9cb4c30cfb2ea57ee19211c119a2a53d411c4922866ad78",
+    "docs/compatibility-387-plan.md": "d64fd4cc9a0d6ab07892cfb24a717cb2bd4e01821c22622f36f107e1a45beb6b"
+  },
+  "raw_binding_SHA256": {
+    "candidate-postflight.json": "efe23f80ea207893affdfaae0599acb59d7204cfc6e77d69be0f68a9324c37fd",
+    "execution-binding.json": "8fb82f2bfa3b505e7d174d2a1e0f3faf5fa9417d9e979e2ecd218baf854831ca",
+    "final-resources.json": "57f335ac2990d1ffd28ccaae8acd098926dc721fcc2ee682b86b9c2f4ef8d1e0",
+    "portable-verification.json": "d238d47ec73fd93bd3a89e5f604de694fac2e03928fef7ab7d4c85bc7d288a19",
+    "postflight-binding.json": "2427addcdccf59a3f1e90176dbffd98d1d2b17c25b19c1b6163053fa8f86d81a",
+    "postflight-resources.json": "8061e1ae1b4d9511bb6630ad2c5871d4fe4f3a865b92e8ee0ade3e3463e20c41",
+    "protected-postflight.json": "41e4fcd3027155c630f4af9bff624ff5845c7b196e239b794e985901883f6d78",
+    "resource-summary.json": "6f36518060188ba7cd94a3cae31076256eafd713132f986bc45db4da8af96dd1",
+    "static-audit.json": "da64a3bf0a2d0b9b939ed67f38c99c93f1551130272ff01d457da3fab3abc62d"
+  },
+  "limitations": [
+    "Historical numerical thread variables unknown; attempted clearing was an unproven assumption",
+    "Early900MiB guard stopped worker at1018.8046875MiB, individual sampled peak under1024MiB; no retry",
+    "No numerical difference table or cross-version save/recovery/GUI proof exists",
+    "Initial launcher failed before monitoring; CPU unmeasured,0.1887s tool wall",
+    "Software checker tests do not establish physical correctness"
+  ]
+}
