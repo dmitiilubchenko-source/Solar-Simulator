@@ -118,3 +118,7 @@ provenance032 и freeze033 PASS; PARTIAL_RESOURCE_STOP до IC, A/B/C UNRESOLVED
 
 [Compatibility389](../compatibility-389-validation.md):8actualcases EXACT;
 A testedformats PASS/B restrictedPASS/C PARTIAL, не release gatePASS.
+
+[390negativecheck](../compatibility-390-validation.md) и
+[итог387–390](../compatibility-387-390-assessment.md):restrictedA/B/C GO;
+историческиеFAIL/STOP не изменены,release033ещёотдельно.

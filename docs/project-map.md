@@ -102,3 +102,7 @@ Acquisition остановлен по памяти до IC; A/B/C ещё не к
 [Реальное сравнение389](compatibility-389-validation.md):8shortcases exact,
 legacy/recovery/GUI checks; fullgate остаётся PARTIAL до oldtwo-Q2 negativecheck.
 [План389](compatibility-389-plan.md) и [harness/observer](../scripts/check_compatibility389.py).
+
+[Контроль390](compatibility-390-validation.md) завершил oldtwo-Q2negative безорбит;
+[assessment387–390](compatibility-387-390-assessment.md) закрывает только restricted
+compatibility A/B/C, не release033/scientificaccuracy gate.

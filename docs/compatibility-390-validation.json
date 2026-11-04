@@ -1,0 +1,294 @@
+{
+  "stage": 390,
+  "status": "PASS remainingnegative check; GO restrictedcompatibility387-390",
+  "source_dev": "fcca77646ff5a261cbf46749026403c13d60e9f9",
+  "accepted_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "input_binding": {
+    "source_dev": "fcca77646ff5a261cbf46749026403c13d60e9f9",
+    "inputs": {
+      "two-q2.json": {
+        "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification389\\two-q2.json",
+        "size": 4382,
+        "SHA256": "a56269a82892b6dc740b309e77db2a085dca7ad3ed563e40e1964e3e66461055"
+      },
+      "accepted/one-q2-dop853-python/frame-1.json": {
+        "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification389\\accepted\\one-q2-dop853-python\\frame-1.json",
+        "size": 3221,
+        "SHA256": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc"
+      },
+      "execution-binding.json": {
+        "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification389\\execution-binding.json",
+        "size": 8688,
+        "SHA256": "e581b09c59ea4c24688eb3d95c48c9538e805ba74333673900c35233cbef9f8f"
+      },
+      "independent-comparison.json": {
+        "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification389\\independent-comparison.json",
+        "size": 28398,
+        "SHA256": "e3c7059bd80eead02523a44cc47f8177755412aacbe1719f83b126b697585fe5"
+      },
+      "resource-summary.json": {
+        "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification389\\resource-summary.json",
+        "size": 455,
+        "SHA256": "afcd2072a441a5587874a11d3a57f85af44503af15fb117bcf022822b523704c"
+      },
+      "remaining-resources.json": {
+        "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification389\\remaining-resources.json",
+        "size": 363,
+        "SHA256": "5cda82a8ea3fbecafd6ec4cbddfce59a81b752aa8a65470527cf718c2f475cdc"
+      },
+      "guard-worker-candidate/stdout.log": {
+        "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification389\\guard-worker-candidate\\stdout.log",
+        "size": 1468,
+        "SHA256": "5f50ad64c2a08c0decc5b5846988917a702ccc79a394e4f0db506a478956d056"
+      }
+    },
+    "source389_report_SHA256": "b0cd16d7deccf26edf95bb50a7349eac96a42d8abba264168633b4ebb0548a98",
+    "archive389_SHA256": "fced37db7decb52f3475196effeaaced3702c0f75206851a0961b9d2138d3e5c",
+    "acceptedZIP_SHA256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49",
+    "critical_installed_files_verified": 87,
+    "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+    "candidate_source_files_verified": 394,
+    "protected_SHA_unchanged": 13,
+    "original_TypeError_preserved": true,
+    "original_CPUSTOP_preserved": true,
+    "new_integrations": 0
+  },
+  "candidate_validation": {
+    "valid_schema": 10,
+    "figures": 2,
+    "both_initial_current_qS_preserved": true,
+    "input_SHA256": "a56269a82892b6dc740b309e77db2a085dca7ad3ed563e40e1964e3e66461055",
+    "document_canonical_SHA256": "df4d79c068c055c5b4ebb3e3009fc967a2349fdbb2f1f79fe92797e5b590dbf2",
+    "integration_calls": 0
+  },
+  "accepted_negative": {
+    "rejected": true,
+    "direct_error": "Схема 10 требует одну динамическую фигуру",
+    "GUI_error": [
+      [
+        "Расчёт не выполнен",
+        "Схема 10 требует одну динамическую фигуру"
+      ]
+    ],
+    "state_identity_preserved": true,
+    "settings_parent_preserved": true,
+    "document_unchanged": true,
+    "qS_bits_preserved": true,
+    "recovery_unchanged_during_refusal": true,
+    "post_error_save_valid": true,
+    "post_error_recovery_valid": true,
+    "recovery_path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification390\\user\\SolarSimulator\\recovery\\solar-stopped-20261104-212833-3daded7d65174c2eb4ddc4ebdf85b3ca\\checkpoint.json",
+    "input_SHA256": "a56269a82892b6dc740b309e77db2a085dca7ad3ed563e40e1964e3e66461055",
+    "baseline_SHA256": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc",
+    "integration_calls": 0
+  },
+  "independent": {
+    "before_after_file_SHA256": "9dfc5f3f376a32f3bf480a81460294305e921e4d8b1c69bf80feaa7846cb3ebb",
+    "qS_hex_before": [
+      [
+        "initial_rotations",
+        "figure",
+        [
+          "0x1.ed8d46dfa2e3bp-1",
+          "0x1.2f805de652e85p-3",
+          "-0x1.94ab27ddc3e07p-4",
+          "0x1.94ab27ddc3e07p-3",
+          "-0x1.2061626b988c5p+55",
+          "-0x1.9b9cc6ef60300p+57",
+          "0x1.ec91167a4e413p+58"
+        ]
+      ],
+      [
+        "rotations",
+        "figure",
+        [
+          "0x1.e76d34c382ff4p-1",
+          "0x1.2c0f8112749e2p-3",
+          "-0x1.c3f2e44ee6436p-4",
+          "0x1.f5d8516b064a3p-3",
+          "-0x1.206196f587ff4p+55",
+          "-0x1.9b933c4ef215cp+57",
+          "0x1.ec8d2b1247d97p+58"
+        ]
+      ]
+    ],
+    "qS_hex_after": [
+      [
+        "initial_rotations",
+        "figure",
+        [
+          "0x1.ed8d46dfa2e3bp-1",
+          "0x1.2f805de652e85p-3",
+          "-0x1.94ab27ddc3e07p-4",
+          "0x1.94ab27ddc3e07p-3",
+          "-0x1.2061626b988c5p+55",
+          "-0x1.9b9cc6ef60300p+57",
+          "0x1.ec91167a4e413p+58"
+        ]
+      ],
+      [
+        "rotations",
+        "figure",
+        [
+          "0x1.e76d34c382ff4p-1",
+          "0x1.2c0f8112749e2p-3",
+          "-0x1.c3f2e44ee6436p-4",
+          "0x1.f5d8516b064a3p-3",
+          "-0x1.206196f587ff4p+55",
+          "-0x1.9b933c4ef215cp+57",
+          "0x1.ec8d2b1247d97p+58"
+        ]
+      ]
+    ],
+    "input_baseline_unchanged": true,
+    "post_error_save_and_recovery_valid": true,
+    "expected_error_route_verified": true,
+    "all_integration_calls": 0
+  },
+  "runtime": {
+    "candidate": {
+      "binding": {
+        "prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+        "executable": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Scripts\\python.exe",
+        "package": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\src\\solar_simulator\\__init__.py",
+        "native_path": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+        "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+        "numpy": "2.5.1",
+        "scipy": "1.18.1"
+      },
+      "environment_file_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a"
+    },
+    "accepted": {
+      "binding": {
+        "prefix": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime",
+        "executable": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\python.exe",
+        "package": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\Lib\\site-packages\\solar_simulator\\__init__.py",
+        "native_path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+        "native_SHA256": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+        "numpy": "2.5.1",
+        "scipy": "1.18.1"
+      },
+      "environment_file_SHA256": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335"
+    }
+  },
+  "assessment": {
+    "A": "PASS testedlegacy1-10/data/recovery/pointbranch",
+    "B": "PASS8selectedshortcasesEXACT/16exactrestars from389, notrerun",
+    "C": "PASS testedGUI/native/errors plus390newformat rejection",
+    "gate": "GO restrictedcompatibility in documentedCURRENTall1 environment",
+    "release": "NO-GO: ownerQ2policy/B_app/fullreleaseacceptance/portable stillopen"
+  },
+  "historical_failures_retained": {
+    "TypeError389": {
+      "phase": "candidate replaynegative",
+      "type": "TypeError",
+      "cause": "Trajectory supplied instead of directorypath",
+      "preserved_log": ".tools/qualification389/guard-worker-candidate/stdout.log",
+      "corrected_in_functional_tail": true,
+      "scientific_cases_repeated": 0
+    },
+    "resource_STOP389": {
+      "complete": false,
+      "cumulative_CPU_seconds": 176.359375,
+      "cumulative_active_wall_seconds": 138.31021349999355,
+      "artifact_bytes": 6709692,
+      "original_user_CPU_limit": 180,
+      "initial_attempt_retained": true,
+      "scientific_cases_repeated": 0,
+      "limits_unchanged": "User180CPU/360wall/1GiB/128MiB and early900MiB retained; prior158.359375CPU counted."
+    },
+    "scope": "389 report remainsPARTIAL at its originaldate; completion established separately by390, notbackdated"
+  },
+  "unit_tests": {
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "initial_resources": {
+    "complete": true,
+    "commands_executed": 4,
+    "CPU_seconds": 22.390625,
+    "active_wall_seconds": 21.67650970001705,
+    "worker_private_peak_sampled": 180408320,
+    "supervisor_peak_commit_OS": 37855232,
+    "artifact_bytes": 956013,
+    "limits": "New390 only:30CPU/90wall/512MiB/16MiB; early25/75/450MiB/14MiB unchanged",
+    "limitations": "50ms external+10ms self sampled privatecommit, discovered Windows finalCPU handles. Controller included; no hard OSquota. No389budget reuse; Git/docs/network/backup separately."
+  },
+  "raw_SHA256": {
+    "audit.py": "2d841dc1fd5184fc47a8fe774ed73cfcd4b7dd6754f811d7bf9e60d9e3dc8442",
+    "bind_sources.py": "1749b24154eeb06a789132ecda1c36c15b5c6a1161ec043648a492e4d694bdb9",
+    "execution-binding.json": "279a240460467e35b4e47c59f88f983b9cdb661df347cee8e2c30673e9c8a3b4",
+    "resource-summary.json": "eb9b52f55ee04602014c9e24f0a8fedec13532c9ed0dffef8bab53b8d8143258",
+    "run.py": "70b4f29888c8d5760c0c499be9a706b59481bbc2b0f614bcd99973a37e524ac0",
+    "run_audit.py": "180afc7c1fc43b2e715111bf6e3360582b68d32882b2fc7a7973684b246948c2",
+    "source-binding.json": "5a492ce2a3b72ff8aa30b84735730f7679f7d07032f257ea2ab9b3867e97182a",
+    "tests.xml": "76b7a12dddf24de131e062c47eebe9c93cc1b89b8653b5bbba914c82884be29b",
+    "accepted/after.json": "9dfc5f3f376a32f3bf480a81460294305e921e4d8b1c69bf80feaa7846cb3ebb",
+    "accepted/before.json": "9dfc5f3f376a32f3bf480a81460294305e921e4d8b1c69bf80feaa7846cb3ebb",
+    "accepted/BLAS.json": "8299e951f00feeff68396b6216415ca42bb16dbccaad13d8346fe2af9d961e13",
+    "accepted/environment-end.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "accepted/environment-start.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "accepted/post-error-save.json": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc",
+    "accepted/result.json": "6ad5de60b246697b4a5c708a9504897c2bc41d4bc37e0366691c54710cfdb086",
+    "accepted/runtime.json": "30e09c5eaf1fa16e59150d7f67faa735d9e8c106e1970a906888afddc751cbbb",
+    "accepted/self-memory.json": "c3dab61b80f1dd9fcfeaf3ac785f13f59f363a149b3b03dede6241826bd4afec",
+    "candidate/environment.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "candidate/result.json": "71a3344955a1745adb6f1ea31b4397d2f33c12b7ebcb66f8893269e8fc732a5e",
+    "candidate/runtime.json": "e451200713b5de282a7e29b4f1b506ed5c5ceab7dbd79bb2c849ee6b99d13e56",
+    "candidate/self-memory.json": "37e66aee68d261102553664bf79d6ec56d42113c707a4c919caac144b60388c1",
+    "guard-accepted/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-accepted/supervisor.json": "613649831a8673878035a6aaa21aaf1369594b4d04eb75cd834c666d3458bf59",
+    "guard-audit/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-candidate/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-candidate/supervisor.json": "6cbcbd0a5b1103cf0f0067d3517b81dec437292e9366f4264ddf5c20389eebc2",
+    "guard-source-binding/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-source-binding/supervisor.json": "2d2b92127830167c08d255ec82b96b64691585fc234d7ee72884dcfd466e27d2",
+    "guard-tests/stdout.log": "9575bb54666382b4187e69a627fe4579d1d0d7f2cd481f6537ebe6871e49ea25",
+    "guard-tests/supervisor.json": "03e53fb958c4826b3249cf9417da6a00a7247269e7987be6ff080fdc39635958",
+    "user/SolarSimulator/recovery/solar-stopped-20261104-212833-3daded7d65174c2eb4ddc4ebdf85b3ca/checkpoint.json": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc"
+  },
+  "limitations": [
+    "Not fullphysicalaccuracy/universalversionnativeequivalence/historicalOSreproduction",
+    "No8cases/16restarts/year/matrix/portableacceptance repeated",
+    "Fingerprint hashes files, not hermeticloadedcodeOSattestation; integration functions blocked temporarily during rejection only"
+  ],
+  "final_resources": {
+    "complete": true,
+    "CPU_seconds": 22.546875,
+    "active_wall_seconds": 21.847292300022673,
+    "worker_private_peak_sampled": 180408320,
+    "supervisor_peak_commit_OS": 37855232,
+    "artifact_bytes": 963812,
+    "new_independent390budget": true,
+    "upper": "30CPU/90wall/512MiB/16MiB",
+    "early": "25CPU/75wall/450MiB/14MiB",
+    "limits_unchanged": true,
+    "new_integrations": 0
+  },
+  "self_memory": {
+    "candidate": {
+      "peak_private_bytes": 177598464,
+      "samples": 380,
+      "limit_private_bytes": 471859200,
+      "poll_seconds": 0.01
+    },
+    "accepted": {
+      "peak_private_bytes": 178450432,
+      "samples": 783,
+      "limit_private_bytes": 471859200,
+      "poll_seconds": 0.01
+    }
+  },
+  "environment_files_SHA256": {
+    "candidate": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "accepted": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335"
+  },
+  "universal_physical_accuracy_claim": false,
+  "historical_reports_modified": false,
+  "known_other_scientific_limitations": {
+    "two_Q2_380": "3packetconvergenceFAIL retained; ownerpolicy/B_app unresolved",
+    "annual385": "RustStandard20diagnosticFAIL0.113353m>0.1m retained; outsideMandatoryStrictgate, no newStandardqualification"
+  }
+}
