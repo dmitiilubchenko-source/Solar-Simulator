@@ -112,3 +112,6 @@ Strict25gates PASS; historical375/current receipt не изменены, compati
 
 [Межверсионная совместимость387](../compatibility-387-validation.md):
 provenance032 и freeze033 PASS; PARTIAL_RESOURCE_STOP до IC, A/B/C UNRESOLVED.
+
+[Startup388](../startup-memory-388-validation.md): guarded import diagnostics,
+не научная qualification; [новый preflight plan](../compatibility-387-continuation-388-plan.md).

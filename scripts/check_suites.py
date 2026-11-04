@@ -24,6 +24,7 @@ SUITES={
         'tests/test_annual385.py',
         'tests/test_q2_scope386.py',
         'tests/test_compatibility387.py',
+        'tests/test_startup_memory388.py',
         'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
         'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_release_ui_history.py','tests/test_ias15_archive_source.py',
         'tests/test_ias15_full_state.py',

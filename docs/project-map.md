@@ -94,3 +94,7 @@ Strict PASS, Standard Rust diagnostic FAIL, compatibility отдельно UNRES
 [частичный результат387](compatibility-387-validation.md),
 [read-only verifier/observer](../scripts/check_compatibility387.py).
 Acquisition остановлен по памяти до IC; A/B/C ещё не квалифицированы.
+
+[Startup-memory388](startup-memory-388-validation.md): privatecommit проверен
+прямым Win32 API, controlled BLAS profiles, originalSTOP сохранён;
+[план продолжения387](compatibility-387-continuation-388-plan.md) без выполнения орбит.

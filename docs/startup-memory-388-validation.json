@@ -1,0 +1,267 @@
+{
+  "stage": 388,
+  "status": "DIAGNOSIS_COMPLETE_WITH_RETAINED_RESOURCE_STOP",
+  "source_verification": {
+    "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+    "candidate_source_count": 394,
+    "candidate_environment_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "protected_SHA_unchanged": 13,
+    "accepted_original_ZIP_SHA256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49",
+    "accepted_files_verified": 5979,
+    "historical": [
+      {
+        "source": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\portable relocated 20261025-121813\\SolarSimulator-0.3.2-20261025-121729\\acceptance workflows\\python\\parent\\recipe.json",
+        "recipe_SHA256": "4ae33233cda1adc6227bbe4dab2bae6fc011f1281d341314bdbaf0909cacb40e",
+        "manifest_SHA256": "ec92e8609772b57388f601c4018f0ddecbee8d198e46b14e6c21e0b2b2208668",
+        "frames_verified": 4,
+        "version": "0.3.2",
+        "numerical_environment": {
+          "OMP_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "VECLIB_MAXIMUM_THREADS": null,
+          "NUMEXPR_NUM_THREADS": null,
+          "PYTHONHASHSEED": null
+        },
+        "package_files_exact": 79,
+        "native": null,
+        "python": {
+          "version": "3.14.2",
+          "implementation": "cpython",
+          "cache_tag": "cpython-314",
+          "soabi": "cp314t-win_amd64",
+          "free_threaded_build": true,
+          "optimize": 0,
+          "pointer_bits": 64,
+          "byteorder": "little",
+          "executable_sha256": "410c1771d8d7d3d5ca672b335f4402e73fb1d6b9b4b12f73984e19d5e9ce5f8f",
+          "shared_library_sha256": "575f65899bc16405d7edec2ba8f393d99753aca4cbb2915e17ee5699f84a0bf1"
+        },
+        "qualification": "Preserved acceptance-workflow recipe; self/SHA+manifest/frame+actualpackage match. Not a complete OS image or proof of all historical launches."
+      },
+      {
+        "source": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\portable relocated 20261025-121813\\SolarSimulator-0.3.2-20261025-121729\\acceptance workflows\\rust\\parent\\recipe.json",
+        "recipe_SHA256": "1c96a8a635c03b1a827501d5f10170e98b6124b3c31155e8170d96550b7bb631",
+        "manifest_SHA256": "aa466e2f99d8ebca2c50d69efd41141d26034ee5432c149eef15f18d069d76c3",
+        "frames_verified": 4,
+        "version": "0.3.2",
+        "numerical_environment": {
+          "OMP_NUM_THREADS": null,
+          "OPENBLAS_NUM_THREADS": null,
+          "MKL_NUM_THREADS": null,
+          "VECLIB_MAXIMUM_THREADS": null,
+          "NUMEXPR_NUM_THREADS": null,
+          "PYTHONHASHSEED": null
+        },
+        "package_files_exact": 79,
+        "native": {
+          "version": "0.3.2",
+          "files": {
+            "solar_native.cp314t-win_amd64.pyd": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+            "__init__.py": "469910900d47a77ca0d3464dbf88c6edf9484ac99e9495506a08b3494c18c912"
+          }
+        },
+        "python": {
+          "version": "3.14.2",
+          "implementation": "cpython",
+          "cache_tag": "cpython-314",
+          "soabi": "cp314t-win_amd64",
+          "free_threaded_build": true,
+          "optimize": 0,
+          "pointer_bits": 64,
+          "byteorder": "little",
+          "executable_sha256": "410c1771d8d7d3d5ca672b335f4402e73fb1d6b9b4b12f73984e19d5e9ce5f8f",
+          "shared_library_sha256": "575f65899bc16405d7edec2ba8f393d99753aca4cbb2915e17ee5699f84a0bf1"
+        },
+        "qualification": "Preserved acceptance-workflow recipe; self/SHA+manifest/frame+actualpackage match. Not a complete OS image or proof of all historical launches."
+      }
+    ],
+    "new_integrations": 0
+  },
+  "resources": {
+    "status": "PARTIAL_RESOURCE_STOP_OR_FAILURE",
+    "CPU_seconds": 42.703125,
+    "wall_seconds": 46.42459899999085,
+    "completed_processes": 5,
+    "worker_private_peak_sampled": 578011136,
+    "supervisor_peak_commit_OS": 37740544,
+    "artifact_bytes": 1768154,
+    "limits": {
+      "CPU_seconds": 60,
+      "wall_seconds": 120,
+      "private_bytes": 1073741824,
+      "artifact_bytes": 33554432,
+      "early_private_bytes": 943718400
+    },
+    "limitations": "50ms sampled private/tree; direct Win32 independent binding, USS only at new stages. Extra instrumentation changes startup timing/footprint. No integrations; no hard OS quota."
+  },
+  "synthetic_tests": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "pytest_seconds": 0.56
+  },
+  "conclusion": "PrivateUsage is real private commit. Explicit OPENBLAS_NUM_THREADS=1 suffices for this observed startup; exact native allocation site unresolved. No production defect demonstrated.",
+  "continuation": {
+    "worker_SHA256": "09c049203be1b71353826a9b08c1d7ff04955041d05f6b5a332b4e0c38ce44e0",
+    "original_worker_SHA256": "2102fba85c7a25c147ebc6fda2af8d0b1c995409c236ca9f116df076901e138f",
+    "profile": "all1-current",
+    "GO": "New separately bounded387 preflight in documented CURRENT environment only; not historical bit replay, not8orbits authorization",
+    "ABC_contract_changed": false,
+    "IC_created": false,
+    "orbits_executed": 0
+  },
+  "limitations": [
+    "Only one process per named profile; instrumented startup differs in timing/footprint",
+    "External50ms missed self1019.7MiB burst; combined peak at that instant not measured; do not claim hardquota compliance",
+    "Exact native allocator and SciPy pool size at instant of stop unresolved",
+    "Historical specificrecipes showunsetvariables; not allhistorical launches/OS reproducibility",
+    "Readonlymanualsummary inspections ~1.67s tool wall outside monitor, CPU unmeasured;3CPU reserve counted for remaining stage guard"
+  ],
+  "profiles": [
+    {
+      "profile": "blas1-only",
+      "pid": 4724,
+      "thread_variables": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "PYTHONHASHSEED": null
+      },
+      "root_CPU_seconds": 4.84375,
+      "wall_seconds": 9.32826519999071,
+      "exit_code": 0,
+      "external_limit_reason": null,
+      "self_stop": null,
+      "self_private_peak_bytes": 156016640,
+      "external_private_peak_bytes": 178704384,
+      "external_RSS_peak_bytes": 152494080,
+      "USS_checkpoint_peak_bytes": 120213504,
+      "OS_thread_counts": [
+        4,
+        7,
+        8
+      ],
+      "private_API_bracket_matches": 98
+    },
+    {
+      "profile": "all1-current",
+      "pid": 28692,
+      "thread_variables": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "PYTHONHASHSEED": null
+      },
+      "root_CPU_seconds": 3.859375,
+      "wall_seconds": 7.329678099980811,
+      "exit_code": 0,
+      "external_limit_reason": null,
+      "self_stop": null,
+      "self_private_peak_bytes": 143032320,
+      "external_private_peak_bytes": 145100800,
+      "external_RSS_peak_bytes": 145952768,
+      "USS_checkpoint_peak_bytes": 112295936,
+      "OS_thread_counts": [
+        4,
+        7
+      ],
+      "private_API_bracket_matches": 80
+    },
+    {
+      "profile": "cleared387",
+      "pid": 14228,
+      "thread_variables": {
+        "OMP_NUM_THREADS": null,
+        "OPENBLAS_NUM_THREADS": null,
+        "MKL_NUM_THREADS": null,
+        "VECLIB_MAXIMUM_THREADS": null,
+        "NUMEXPR_NUM_THREADS": null,
+        "PYTHONHASHSEED": null
+      },
+      "root_CPU_seconds": 1.546875,
+      "wall_seconds": 2.986881999997422,
+      "exit_code": 90,
+      "external_limit_reason": null,
+      "self_stop": "private-memory-self",
+      "self_private_peak_bytes": 1069268992,
+      "external_private_peak_bytes": 578011136,
+      "external_RSS_peak_bytes": 75370496,
+      "USS_checkpoint_peak_bytes": 43937792,
+      "OS_thread_counts": [
+        1,
+        4,
+        19,
+        22
+      ],
+      "private_API_bracket_matches": 31
+    }
+  ],
+  "raw_SHA256": {
+    "analysis.json": "7732e338c7438af4b0fea0419185fb1def7d1a72a59899f75330237b1efc3e09",
+    "analyze.py": "cd3d0737ca22bf04281dbf21ec02a4f8e1946aea7e00fa6e3bb08a868ba48589",
+    "continuation-worker.py": "09c049203be1b71353826a9b08c1d7ff04955041d05f6b5a332b4e0c38ce44e0",
+    "execution-binding.json": "eef117ff8ee94e682a08e1279e32f61552b6d53e0faef35c0a652c0e2e495ef2",
+    "portable-verification.json": "0cb01119a58ec3d00b0e48cc00364ec37af9aa8e38874042bb8a36d9e430afdd",
+    "resource-summary.json": "ef786fc1e253438e0fb014b59dbd654ab5e67157d807180accd0e20bfe9428a6",
+    "run.py": "1e34eff53a927b8517cf69723dc41731293e8da61dae7d5f6d69e06a2649e4dd",
+    "run_analysis.py": "1e80fbb2961e81ddc65536d80588af74638cbcd0b82ac4bd2cf52311cc1e365d",
+    "source-verification.json": "aee66c9a0670605866dcfb1b880ec67bb9909c43464f75f686fe98440744f994",
+    "telemetry-all1-current.jsonl": "53834e2fb73980b21978b1f6378f1ce5506ba4c5ab9171f7a5a1319186f51b18",
+    "telemetry-blas1-only.jsonl": "e12dae90f56a79bca0e931095794ae1631e8bea7c33ebe8f94f2a9e91092a829",
+    "telemetry-cleared387.jsonl": "d23ee9834863c1abcba1a5942f79008e801cb15f5eaaa02f19aabba58d9bcb39",
+    "telemetry-tests.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "telemetry-verify.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests.xml": "2d1eefde7e41bcd19d773e40f74782df0c17f45d58c0a3fd242afeb60fd13468",
+    "verify_inputs.py": "711ee0852e2e66f08f8b328139f39a055f536c288d81fab571f651a8e3b16915",
+    "guard-all1-current\\stdout.log": "217d0a528c24f2f99489642aba59c245def8d857c5832fef3902890f829fffa8",
+    "guard-all1-current\\supervisor.json": "bfb51d6898c49533f0dde7bbc545b297519b0dc64ab83735ec371fefb3640b2a",
+    "guard-blas1-only\\stdout.log": "0657a67e0b99f9717bf562832b7cc03fb0a25cfe11285ce6e31ae3b93e6b6843",
+    "guard-blas1-only\\supervisor.json": "07116eafd7b9b36bf33b0efbe9d9c7adcc48a7df64aa6567275871ad0adcb138",
+    "guard-cleared387\\stdout.log": "d01738ecadffdd2871fcc97799b166f39e8906c68223dfb37b4beb2cdaed8308",
+    "guard-cleared387\\supervisor.json": "49549ee34c7ef4f6d82a46f74f919b3d0d61ffced85a45e13f8371eddc4a2fec",
+    "guard-offline-analysis\\stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-tests\\stdout.log": "047df8a9c8cd469a145a705ea41a68416a95342b120b2ace90370efb7bcd3715",
+    "guard-tests\\supervisor.json": "d977f442c100b80764520d79e4c2b5baaeab7bab46b86ccb73740ad453f102a5",
+    "guard-verify\\stdout.log": "4913e29f04dabc53233da4a79170f9915ad62387c760450af8ced558290f44d4",
+    "guard-verify\\supervisor.json": "65574e006fd17fd12492db6a397141f9df7e0d1a16892adef9aec12a2f9409e4"
+  },
+  "post_analysis_resources": {
+    "controlled_CPU_seconds": 42.875,
+    "controlled_active_wall_seconds": 46.63113319998956,
+    "unmeasured_inspection_reserve_CPU_seconds": 3.0,
+    "observed_inspection_tool_wall_seconds": 1.67,
+    "post_analysis_complete": true,
+    "artifact_bytes": 1852322,
+    "self_private_peak_bytes": 1069268992,
+    "external_private_peak_bytes": 578011136,
+    "stop_retained": "cleared387 exit90 private-memory-self; original387 unchanged; no new orbits"
+  },
+  "continuation_revision": {
+    "initial_draft_SHA256": "09c049203be1b71353826a9b08c1d7ff04955041d05f6b5a332b4e0c38ce44e0",
+    "revised_draft_SHA256": "3c2e67c7ed53b149d26e801113dcf5a85886d4f859d1e1379ab3cd11c298e01a",
+    "reason": "Self-review: moving old scripts worker into .tools changes __file__.parents[1]; require explicit --developer-root for source-bound verifier. No integration or physics change.",
+    "qualification": "AST checked; actual acquisition not executed"
+  },
+  "final_technical_resources": {
+    "controlled_CPU_seconds": 43.828125,
+    "controlled_active_wall_seconds": 47.71911019997788,
+    "manual_inspection_CPU_reserve": 3.0,
+    "public_tests_complete": true,
+    "artifact_bytes": 1880509,
+    "preserved_original_API_test_SHA256": "7cccf0882da825634e2a732820b168135610922259a84877bdc974db0baca0bb",
+    "note": "6original WindowsAPI tests passed before cleared387 STOP;6public stdlib-only contracts checked separately after CI portability review. No further portable startup or orbit."
+  },
+  "public_portable_tests": {
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "pytest_seconds": 0.35,
+    "source_SHA256": "d42415595bc414ef9286731e691c3f006a7c0535fdd22b1dd7fdc041c40acbc0"
+  },
+  "preserved_original_API_test_SHA256": "7cccf0882da825634e2a732820b168135610922259a84877bdc974db0baca0bb"
+}
