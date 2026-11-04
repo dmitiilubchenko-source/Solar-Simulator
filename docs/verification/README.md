@@ -115,3 +115,6 @@ provenance032 и freeze033 PASS; PARTIAL_RESOURCE_STOP до IC, A/B/C UNRESOLVED
 
 [Startup388](../startup-memory-388-validation.md): guarded import diagnostics,
 не научная qualification; [новый preflight plan](../compatibility-387-continuation-388-plan.md).
+
+[Compatibility389](../compatibility-389-validation.md):8actualcases EXACT;
+A testedformats PASS/B restrictedPASS/C PARTIAL, не release gatePASS.

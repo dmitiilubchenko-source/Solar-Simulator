@@ -1,0 +1,1742 @@
+{
+  "stage": 389,
+  "status": "PARTIAL: numerical8cases EXACT; mandatoryold-two-Q2negative notexecuted",
+  "accepted_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "source_dev": "ce277f4fea3b079a9a075542579fd9b311f6fd1c",
+  "launch_scope": "Current explicit OMP/OPENBLAS/MKL1,others3unset; nothistoricalunsetreplay",
+  "A": {
+    "status": "PASS within testedformats",
+    "legacy_schemas": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "old_advanced_frames_loaded_by_candidate": 8,
+    "same_packet_resume_exact": 16,
+    "branch_scope": "Point-mass parent/child only; dynamicQ2 branching notsupported by existingcontract"
+  },
+  "B": {
+    "status": "PASS selected8shortcases only",
+    "comparison": {
+      "cases": [
+        {
+          "id": "sun-earth-verlet-python",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        },
+        {
+          "id": "sun-earth-dop853-python",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  -536870912.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  -536870912.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  1610612736.0,
+                  -35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  1610612736.0,
+                  -35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": -2.6491725992765057e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921965e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.6491725992765057e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921965e+40
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        },
+        {
+          "id": "sun-earth-moon-dop853-python",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": -2.6817790295564705e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  25563645345792.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.6817790295564705e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  25563645345792.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": -2.681779029556472e+33,
+                "P_kg_m_s": [
+                  226492416.0,
+                  -62397284876288.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659936e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.681779029556472e+33,
+                "P_kg_m_s": [
+                  226492416.0,
+                  -62397284876288.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659936e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": -2.6817790295564717e+33,
+                "P_kg_m_s": [
+                  -603979776.0,
+                  -44530220924928.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.693822721765994e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.6817790295564717e+33,
+                "P_kg_m_s": [
+                  -603979776.0,
+                  -44530220924928.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.693822721765994e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": -2.6817790295564705e+33,
+                "P_kg_m_s": [
+                  -2281701376.0,
+                  9345848836096.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.6817790295564705e+33,
+                "P_kg_m_s": [
+                  -2281701376.0,
+                  9345848836096.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        },
+        {
+          "id": "one-q2-dop853-python",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": 143404961524583.56,
+                "P_kg_m_s": [
+                  0.0,
+                  509999999999999.94,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  -4.0585934316258856e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075597e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524583.56,
+                "P_kg_m_s": [
+                  0.0,
+                  509999999999999.94,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  -4.0585934316258856e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075597e+18
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": 143404961524584.0,
+                "P_kg_m_s": [
+                  -0.0009765625,
+                  510000000000000.0,
+                  2.384185791015625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075599e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524584.0,
+                "P_kg_m_s": [
+                  -0.0009765625,
+                  510000000000000.0,
+                  2.384185791015625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075599e+18
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": 143404961524584.1,
+                "P_kg_m_s": [
+                  0.001953125,
+                  510000000000000.0,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075601e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524584.1,
+                "P_kg_m_s": [
+                  0.001953125,
+                  510000000000000.0,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075601e+18
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": 143404961524584.4,
+                "P_kg_m_s": [
+                  0.005859375,
+                  510000000000000.06,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075604e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524584.4,
+                "P_kg_m_s": [
+                  0.005859375,
+                  510000000000000.06,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075604e+18
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [
+            {
+              "time_seconds": 0.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            },
+            {
+              "time_seconds": 50.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            },
+            {
+              "time_seconds": 100.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            },
+            {
+              "time_seconds": 150.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            }
+          ],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        },
+        {
+          "id": "sun-earth-verlet-rust",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  268435456.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  268435456.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  1073741824.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  1073741824.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  1073741824.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  1073741824.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        },
+        {
+          "id": "sun-earth-dop853-rust",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  -1342177280.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276508e+33,
+                "P_kg_m_s": [
+                  -1342177280.0,
+                  0.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.660734175292195e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  -35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.649172599276507e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  -35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921955e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": -2.6491725992765057e+33,
+                "P_kg_m_s": [
+                  1073741824.0,
+                  35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921965e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.6491725992765057e+33,
+                "P_kg_m_s": [
+                  1073741824.0,
+                  35184372088832.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6607341752921965e+40
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        },
+        {
+          "id": "sun-earth-moon-dop853-rust",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": -2.6817790295564705e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  25563645345792.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.6817790295564705e+33,
+                "P_kg_m_s": [
+                  0.0,
+                  25563645345792.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": -2.68177902955647e+33,
+                "P_kg_m_s": [
+                  1468006400.0,
+                  -27487790694400.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.68177902955647e+33,
+                "P_kg_m_s": [
+                  1468006400.0,
+                  -27487790694400.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": -2.681779029556471e+33,
+                "P_kg_m_s": [
+                  33554432.0,
+                  -9620726743040.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.681779029556471e+33,
+                "P_kg_m_s": [
+                  33554432.0,
+                  -9620726743040.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.6938227217659945e+40
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": -2.6817790295564693e+33,
+                "P_kg_m_s": [
+                  2281701376.0,
+                  -26388279066624.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.693822721765995e+40
+                ]
+              },
+              "candidate": {
+                "E_J": -2.6817790295564693e+33,
+                "P_kg_m_s": [
+                  2281701376.0,
+                  -26388279066624.0,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  0.0,
+                  0.0,
+                  2.693822721765995e+40
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        },
+        {
+          "id": "one-q2-dop853-rust",
+          "settings_exact": true,
+          "initial_exact": true,
+          "state_bits_exact": true,
+          "documents_exact": true,
+          "max_position_difference_m": 0.0,
+          "max_velocity_difference_m_s": 0.0,
+          "invariants": [
+            {
+              "time_seconds": 0.0,
+              "accepted": {
+                "E_J": 143404961524583.56,
+                "P_kg_m_s": [
+                  0.0,
+                  509999999999999.94,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  -4.0585934316258856e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075597e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524583.56,
+                "P_kg_m_s": [
+                  0.0,
+                  509999999999999.94,
+                  0.0
+                ],
+                "L_kg_m2_s": [
+                  -4.0585934316258856e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075597e+18
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 50.0,
+              "accepted": {
+                "E_J": 143404961524584.0,
+                "P_kg_m_s": [
+                  -0.0029296875,
+                  510000000000000.0,
+                  2.384185791015625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075599e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524584.0,
+                "P_kg_m_s": [
+                  -0.0029296875,
+                  510000000000000.0,
+                  2.384185791015625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075599e+18
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 100.0,
+              "accepted": {
+                "E_J": 143404961524584.1,
+                "P_kg_m_s": [
+                  -0.0078125,
+                  510000000000000.0,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075601e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524584.1,
+                "P_kg_m_s": [
+                  -0.0078125,
+                  510000000000000.0,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075601e+18
+                ]
+              },
+              "equal": true
+            },
+            {
+              "time_seconds": 150.0,
+              "accepted": {
+                "E_J": 143404961524584.4,
+                "P_kg_m_s": [
+                  -0.009765625,
+                  510000000000000.06,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075604e+18
+                ]
+              },
+              "candidate": {
+                "E_J": 143404961524584.4,
+                "P_kg_m_s": [
+                  -0.009765625,
+                  510000000000000.06,
+                  -9.5367431640625e-07
+                ],
+                "L_kg_m2_s": [
+                  -4.058593431625885e+16,
+                  -2.317171873231913e+17,
+                  6.674580857075604e+18
+                ]
+              },
+              "equal": true
+            }
+          ],
+          "status": "EXACT",
+          "max_delta_E_J": 0.0,
+          "max_delta_P_kg_m_s": 0.0,
+          "max_delta_L_kg_m2_s": 0.0,
+          "rotations": [
+            {
+              "time_seconds": 0.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            },
+            {
+              "time_seconds": 50.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            },
+            {
+              "time_seconds": 100.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            },
+            {
+              "time_seconds": 150.0,
+              "body": "figure",
+              "raw_q_difference": 0.0,
+              "S_difference_kg_m2_s": 0.0
+            }
+          ],
+          "restart_bits": {
+            "accepted": true,
+            "candidate": true
+          }
+        }
+      ],
+      "inputs_unchanged": true,
+      "physical_accuracy_claim": false,
+      "reference": "Other genuine version on identical short cases, not analytical/JPL accuracy reference"
+    }
+  },
+  "C": {
+    "status": "PARTIAL",
+    "accepted": {
+      "cancel_load_save": true,
+      "reject_corrupt_unsupported": true,
+      "start_pause_open_continue_save_restore": true
+    },
+    "candidate": {
+      "initial_harness_failure_reproduced": "argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'Trajectory'",
+      "replay_path_rejection": "\u041e\u043a\u0440\u0443\u0436\u0435\u043d\u0438\u0435/\u043a\u043e\u0434 \u043d\u0435\u0441\u043e\u0432\u043c\u0435\u0441\u0442\u0438\u043c\u044b \u0441 recipe: application_version, package_files",
+      "replay_no_integration": true,
+      "old_legacy_schemas_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "native_rejections": {
+        "missing_entrypoint": "\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u0435 Rust-\u043c\u043e\u0434\u0443\u043b\u044c: python scripts/build_native.py",
+        "noncompiled": "\u0414\u043b\u044f Rust \u0442\u0440\u0435\u0431\u0443\u0435\u0442\u0441\u044f \u043d\u0430\u0441\u0442\u043e\u044f\u0449\u0438\u0439 compiled solar_native"
+      },
+      "gui": {
+        "cancel": true,
+        "corrupt_and_schema_rejected": true,
+        "old_load_start_pause_save_recovery": true
+      },
+      "new_scientific_cases": 0,
+      "auxiliary_GUI_packets": 1
+    },
+    "old_two_Q2_negative": "NOT_EXECUTED: cumulativeearlyCPUstop before teststarted; do not inferPASSfromsource"
+  },
+  "runtime_profiles": {
+    "accepted": {
+      "runtime": {
+        "prefix": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime",
+        "executable": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\python.exe",
+        "package": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\Lib\\site-packages\\solar_simulator\\__init__.py",
+        "numpy": "2.5.1",
+        "scipy": "1.18.1",
+        "matplotlib": "3.11.0",
+        "python": {
+          "version": "3.14.2",
+          "implementation": "cpython",
+          "cache_tag": "cpython-314",
+          "soabi": "cp314t-win_amd64",
+          "free_threaded_build": true,
+          "optimize": 0,
+          "pointer_bits": 64,
+          "byteorder": "little",
+          "executable_sha256": "410c1771d8d7d3d5ca672b335f4402e73fb1d6b9b4b12f73984e19d5e9ce5f8f",
+          "shared_library_sha256": "575f65899bc16405d7edec2ba8f393d99753aca4cbb2915e17ee5699f84a0bf1"
+        },
+        "native_path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+        "native_SHA256": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+        "BLAS": [
+          {
+            "package": "numpy",
+            "dll": "libscipy_openblas64_-b788215d9d47792bcba3a2e2a7114320.dll",
+            "symbol": "scipy_openblas_get_num_threads64_",
+            "threads": 1,
+            "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-b788215d9d47792bcba3a2e2a7114320.dll",
+            "SHA256": "b788215d9d47792bcba3a2e2a71143205a57282828a483f1fb071ca2c159f616"
+          },
+          {
+            "package": "scipy",
+            "dll": "libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+            "symbol": "scipy_openblas_get_num_threads",
+            "threads": 1,
+            "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\dist\\SolarSimulator-0.3.2-20261025-121729\\runtime\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+            "SHA256": "197ee2fc9b4d071f7e048078cac741151a6585d871061cf5f88c0c73e31963a5"
+          }
+        ]
+      },
+      "environment_file_SHA256": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+      "environment_stability": {
+        "stable": true,
+        "canonical_fingerprint_SHA256": "384bfc30be543d42c9beb1671a63eab9a4f566c9e7487ca07710f96a0aa82f30"
+      },
+      "backend_calls": {
+        "cases": {
+          "sun-earth-verlet-python": {
+            "advance": 5,
+            "Python_Verlet": 5
+          },
+          "sun-earth-dop853-python": {
+            "advance": 5,
+            "Python_RHS": 337
+          },
+          "sun-earth-moon-dop853-python": {
+            "advance": 5,
+            "Python_RHS": 397
+          },
+          "one-q2-dop853-python": {
+            "advance": 5,
+            "Python_RHS": 280
+          },
+          "sun-earth-verlet-rust": {
+            "advance": 5,
+            "native_evolve": 5
+          },
+          "sun-earth-dop853-rust": {
+            "advance": 5,
+            "Python_RHS": 337,
+            "native_point_acceleration": 337
+          },
+          "sun-earth-moon-dop853-rust": {
+            "advance": 5,
+            "Python_RHS": 397,
+            "native_point_acceleration": 397
+          },
+          "one-q2-dop853-rust": {
+            "advance": 5,
+            "Python_RHS": 280,
+            "native_point_acceleration": 280
+          }
+        },
+        "array_file_opens": [],
+        "method": "Python profile events and actual PyO3 c_call; no numerical function replacement"
+      }
+    },
+    "candidate": {
+      "runtime": {
+        "prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+        "executable": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Scripts\\python.exe",
+        "package": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\src\\solar_simulator\\__init__.py",
+        "numpy": "2.5.1",
+        "scipy": "1.18.1",
+        "matplotlib": "3.11.0",
+        "python": {
+          "version": "3.14.2",
+          "implementation": "cpython",
+          "cache_tag": "cpython-314",
+          "soabi": "cp314t-win_amd64",
+          "free_threaded_build": true,
+          "optimize": 0,
+          "pointer_bits": 64,
+          "byteorder": "little",
+          "executable_sha256": "410c1771d8d7d3d5ca672b335f4402e73fb1d6b9b4b12f73984e19d5e9ce5f8f",
+          "shared_library_sha256": "575f65899bc16405d7edec2ba8f393d99753aca4cbb2915e17ee5699f84a0bf1"
+        },
+        "native_path": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+        "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+        "BLAS": [
+          {
+            "package": "numpy",
+            "dll": "libscipy_openblas64_-b788215d9d47792bcba3a2e2a7114320.dll",
+            "symbol": "scipy_openblas_get_num_threads64_",
+            "threads": 1,
+            "path": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\numpy.libs\\libscipy_openblas64_-b788215d9d47792bcba3a2e2a7114320.dll",
+            "SHA256": "b788215d9d47792bcba3a2e2a71143205a57282828a483f1fb071ca2c159f616"
+          },
+          {
+            "package": "scipy",
+            "dll": "libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+            "symbol": "scipy_openblas_get_num_threads",
+            "threads": 1,
+            "path": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\scipy.libs\\libscipy_openblas-197ee2fc9b4d071f7e048078cac74115.dll",
+            "SHA256": "197ee2fc9b4d071f7e048078cac741151a6585d871061cf5f88c0c73e31963a5"
+          }
+        ]
+      },
+      "environment_file_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+      "environment_stability": {
+        "stable": true,
+        "canonical_fingerprint_SHA256": "302a37b7524bd7443899680b17328ef9a8636773d3fc951b62d017fd842d0464"
+      },
+      "backend_calls": {
+        "cases": {
+          "sun-earth-verlet-python": {
+            "advance": 5,
+            "Python_Verlet": 5
+          },
+          "sun-earth-dop853-python": {
+            "advance": 5,
+            "Python_RHS": 337
+          },
+          "sun-earth-moon-dop853-python": {
+            "advance": 5,
+            "Python_RHS": 397
+          },
+          "one-q2-dop853-python": {
+            "advance": 5,
+            "Python_RHS": 280
+          },
+          "sun-earth-verlet-rust": {
+            "advance": 5,
+            "native_evolve": 5
+          },
+          "sun-earth-dop853-rust": {
+            "advance": 5,
+            "Python_RHS": 337,
+            "native_point_acceleration": 337
+          },
+          "sun-earth-moon-dop853-rust": {
+            "advance": 5,
+            "Python_RHS": 397,
+            "native_point_acceleration": 397
+          },
+          "one-q2-dop853-rust": {
+            "advance": 5,
+            "Python_RHS": 280,
+            "native_point_acceleration": 280
+          }
+        },
+        "array_file_opens": [],
+        "method": "Python profile events and actual PyO3 c_call; no numerical function replacement"
+      }
+    }
+  },
+  "expected_metadata_difference_keys": [
+    "application_version",
+    "package_files",
+    "native"
+  ],
+  "initial_harness_failure": {
+    "phase": "candidate replaynegative",
+    "type": "TypeError",
+    "cause": "Trajectory supplied instead of directorypath",
+    "preserved_log": ".tools/qualification389/guard-worker-candidate/stdout.log",
+    "corrected_in_functional_tail": true,
+    "scientific_cases_repeated": 0
+  },
+  "resource_stop": {
+    "complete": false,
+    "cumulative_CPU_seconds": 176.359375,
+    "cumulative_active_wall_seconds": 138.31021349999355,
+    "artifact_bytes": 6709692,
+    "original_user_CPU_limit": 180,
+    "initial_attempt_retained": true,
+    "scientific_cases_repeated": 0,
+    "limits_unchanged": "User180CPU/360wall/1GiB/128MiB and early900MiB retained; prior158.359375CPU counted."
+  },
+  "resources": {
+    "controlled_cumulative_CPU_seconds": 176.78125,
+    "controlled_cumulative_active_wall_seconds": 138.70492789999116,
+    "offline_observer_complete": true,
+    "artifact_bytes": 6766315,
+    "initial_failure_retained": true,
+    "old_two_negative": "NOT_EXECUTED: remaining runtime job stopped at stageCPU; no further runtime retries",
+    "original_user_CPU_ceiling": 180,
+    "scientific_cases_repeated": 0,
+    "scope": "8cases + incomplete functional contract; no full compatibility PASS"
+  },
+  "unit_tests": {
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0
+  },
+  "source_verification": {
+    "accepted_ZIP_SHA256": "7c578220ec77e792aa9589f32a30352e88277d0d096bff0ad3ca5aae9c014c49",
+    "verified_members": 5979,
+    "original_SHA256": "2102fba85c7a25c147ebc6fda2af8d0b1c995409c236ca9f116df076901e138f",
+    "draft_SHA256": "3c2e67c7ed53b149d26e801113dcf5a85886d4f859d1e1379ab3cd11c298e01a",
+    "worker_SHA256": "c2d358c1847c24baa53dbedd32344af373ca3a92598177ad22317f4c45aa09b5",
+    "protected_SHA_unchanged": 13
+  },
+  "input_binding": {
+    "plan_SHA256": "8992a0f8a7629eb44ec998aa331bee707aa357e41396c339ab806b064c4d520a",
+    "inputs_SHA256": {
+      "corrupt.json": "2f6af8e37fc05d859a7b9931e41f5a1377e3e4d62e1bc1fdbce56873c9aabb55",
+      "legacy-1.json": "fada107fb7aa61c7e6454d7bfcf758d24d5c4c8899dba748d7946185aa4dfe67",
+      "legacy-2.json": "1fbb75875f965364d2bf94b4cebf44c4bda6585fe5ea202fd25c5c840e34b2d7",
+      "legacy-3.json": "adaa2b7015923548fb43f2812956b630959e118b93b305a82a4259d34273b9e2",
+      "legacy-4.json": "a002b1e84e982d16f404b612bffa9b0b7efc26cb961e7a4d461ffc64c90a8566",
+      "legacy-5.json": "7b3529dbf472469112fd196c068df997ec192fe6f7ed5e87452da10992dc5f14",
+      "legacy-6.json": "eaf62aa7454348cdb993a85a93d2b0691cf60fe53475c7c40c07cd5a9cc5d0d4",
+      "legacy-7.json": "99c51f97d4aa0d3076afb95cf8650c890d73b8cea313f1c57239244029dec37c",
+      "legacy-8.json": "c8e721e0f14b90e6c628f5029a93e362cf108119174b313c3ac4db90f55854d6",
+      "legacy-9.json": "0c2ae46ec5938dfebd8db18ab26f802a6f88ced45852e75b20815d7eee035ac2",
+      "one-q2-dop853-python.json": "fc4f834c0cc3f1694fbb69937f9220a473dca57710641dd68d2c3fd5d1274b8f",
+      "one-q2-dop853-rust.json": "214725c9480851cebcff5c26ae8e6efc7619cc5bd33eb598339346c4d2f44646",
+      "sun-earth-dop853-python.json": "d74bdbed3fa4549edf94138a1f693254502b416a92a2df5520b12bb40f253552",
+      "sun-earth-dop853-rust.json": "416d92d0addb02683a80d3f85436d78e766df1049583b220e8145de13ea5dcb7",
+      "sun-earth-moon-dop853-python.json": "9d2b9a2c1d1bdd4bd471360500c1923a90530be8a628d180d0d64b6c489bfd83",
+      "sun-earth-moon-dop853-rust.json": "695d093d5d68fcacfd9ba2af3c180ca085c1e65aecea36088a2425a266ada1c6",
+      "sun-earth-verlet-python.json": "3fe612411f88bd7c6bec19358c5d5a2232baabc3e7218fedc20bbf35fe4e3fc2",
+      "sun-earth-verlet-rust.json": "9f8bb112bcfaaeb3ef30b68ab60bff7a04b4e104cd400422da150482b745b373",
+      "unsupported.json": "6468906ecc3306c6fc80c07330de5534d7ab1f463ac26cc56fb7d43425fe7693"
+    }
+  },
+  "raw_SHA256": {
+    "388-to389.diff": "e94cc2045eb1f137c22f0fd3a3f0e8a50385901e77b2d51dce884310c6b1cb61",
+    "accepted/branch.json": "6f27aa8960e503abc0623bb289a31744e538eea44339dce36c5473bd602e43ba",
+    "accepted/environment.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "accepted/gui.json": "7f5074db9630b2542fc46afc69249f06cdc864202b3e7a8d924cbd9da173246a",
+    "accepted/legacy-1-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-2-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-3-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-4-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-5-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-6-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-7-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-8-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "accepted/legacy-9-loaded.json": "3a1fdf33a342f8e3b2c0054a9c79d1caa879918bb718f4366fe28cad71e9b4cf",
+    "accepted/legacy-result.json": "6439fa8b67c726e58878d621b7a30bac1178ea759f677b6ec9dd2cbbdb54f5e6",
+    "accepted/one-q2-dop853-python/frame-1.json": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc",
+    "accepted/one-q2-dop853-python/frame-2.json": "7dfdf92d33ec7ca6b4da3afd826ba9cd0bc31d69dab96488d8ff68b364108f00",
+    "accepted/one-q2-dop853-python/frame-3.json": "7aac2b0b522e170de5fd29b19f398774467090203ba5a61a2365045704746e98",
+    "accepted/one-q2-dop853-python/frames.json": "a0d709c0e150371fe8811be39be56a8bd5bb6fd42599752aa18d9fd69416352f",
+    "accepted/one-q2-dop853-python/resume.json": "7aac2b0b522e170de5fd29b19f398774467090203ba5a61a2365045704746e98",
+    "accepted/one-q2-dop853-rust/frame-1.json": "053ae04ece2baea8880c1012ee970a48b10032f1359e2d67cb700ca6bed38dd8",
+    "accepted/one-q2-dop853-rust/frame-2.json": "0fac1acd9376c3eb1aba6a15d1f90c764adc3de160efe036b80bfcc2d47670eb",
+    "accepted/one-q2-dop853-rust/frame-3.json": "1b3bcfed122a8159881a56379c0b5c25e465dc0a8646ccd5fe736576cff251c9",
+    "accepted/one-q2-dop853-rust/frames.json": "3e2d66ac827b9cc4ec7f5514bb7a57d62425d564141884b7c6901fe40a8664ed",
+    "accepted/one-q2-dop853-rust/resume.json": "1b3bcfed122a8159881a56379c0b5c25e465dc0a8646ccd5fe736576cff251c9",
+    "accepted/progress-000.json": "0f8a1bb656f459d2cd28ad80433ee21dcb3bd3a6431ec2b434b231bfaaa6177e",
+    "accepted/progress-001.json": "c8ed6cfba71b690f923f4370dfd5808486245a0e4d32d2b789e3c3dec0ac6fa3",
+    "accepted/progress-002.json": "935896088aa209287cee7fd0ad5aace5832dbe004b3e0664e3900a3c03c526da",
+    "accepted/progress-003.json": "6f812e8dae7cb86f1eceebe998847f972892cb940fc54b09d6f9367bbc498b3f",
+    "accepted/progress-004.json": "85e5aaaab64f4ebc63ecbd6307954cb3eb9403b4d958bdb8719c5e0fe42ca43e",
+    "accepted/progress-005.json": "7c7825f9e693d44f34854fbaad580d17b57a7977ee35de873e4a165a1acb97f0",
+    "accepted/progress-006.json": "763f40475e285b2c43d313395449c4c3b87c0cf02e8c4e93e3d0fae60e242ddf",
+    "accepted/progress-007.json": "124c3a59578fc59255b5dd7a571fb1b898cd198a9f1cc47e710d1f2379fcea8e",
+    "accepted/progress-008.json": "2ac4dd5c5e26028aabd5a103e54b1b91e346f43646d74258cbcaae0417629929",
+    "accepted/recording/frame-000000.json": "9fbe472658fc1884cfa4bc7f9714fdbc60664dad5ceaca2fed7426382db2f424",
+    "accepted/recording/frame-000001.json": "d066e11ed8711f88f952b4678c90bda99c9543012890051d3b704911d5c052a8",
+    "accepted/recording/frame-000002.json": "4d82cbfafd93a3301f568cbda1fe74bd10aea37eeb56b2dd33b484ca8653fc45",
+    "accepted/recording/manifest.json": "7944dfa5b7debec3fcbbe869514ed68197452935f7afddcf775e0674e2d1d4e1",
+    "accepted/recording/recipe.json": "69234601b9163a3fdc0c342e01ab183dbb2e4065d8bb8a92bf12fa423540af26",
+    "accepted/result.json": "e60c98c589dbd19b0a9644d0700674ec81ded5ecc9bb86727ac533414c8a1206",
+    "accepted/sun-earth-dop853-python/frame-1.json": "8679896d3b2c6288070c05d67ec39f8b50999060ad0a8af990f15305a9fe9622",
+    "accepted/sun-earth-dop853-python/frame-2.json": "1a3384518d21a52751bd72eadc7c30c570307af1048d53f0308e85798e8b9ccc",
+    "accepted/sun-earth-dop853-python/frame-3.json": "5c0f79b4383d2656fd2b9f560aafbf5d6b584feb8319925c03d0a3d986495bb8",
+    "accepted/sun-earth-dop853-python/frames.json": "430be94d9b3ab2e93d1140cf4d463a57e7be75b38810369018e50ec729261580",
+    "accepted/sun-earth-dop853-python/resume.json": "5c0f79b4383d2656fd2b9f560aafbf5d6b584feb8319925c03d0a3d986495bb8",
+    "accepted/sun-earth-dop853-rust/frame-1.json": "e934567b0d8485eba96ed5c23cc3b86135a5cb532ee0b0cf920aa638ae08066a",
+    "accepted/sun-earth-dop853-rust/frame-2.json": "fd085f57018e32df490515ea93c07f80aa1c79e72052fe75a76f1c9513b53b32",
+    "accepted/sun-earth-dop853-rust/frame-3.json": "2f29d4242f9266b456b060f7e5317714d4ae115085896b69e95ddc5d449b6a34",
+    "accepted/sun-earth-dop853-rust/frames.json": "718527e143d3769f2a743fcec7a79d2bc8423c868391579a5f199ee25029fc38",
+    "accepted/sun-earth-dop853-rust/resume.json": "2f29d4242f9266b456b060f7e5317714d4ae115085896b69e95ddc5d449b6a34",
+    "accepted/sun-earth-moon-dop853-python/frame-1.json": "e08ce25adae7210888a9fa65bc7c1ded0db3b90dd72d357d000f066fed534188",
+    "accepted/sun-earth-moon-dop853-python/frame-2.json": "438de3859c29865ccb0923203c4d6fe2e738b44e2823d5bdd55b26d29123b89a",
+    "accepted/sun-earth-moon-dop853-python/frame-3.json": "033a18f1da0e6890d74d24c9f84fba0461969bc72d6e2651a7360d752778eb01",
+    "accepted/sun-earth-moon-dop853-python/frames.json": "2f106252f0d2247d210ba8b514d4fb867c54596436214f2543f0de897bddd350",
+    "accepted/sun-earth-moon-dop853-python/resume.json": "033a18f1da0e6890d74d24c9f84fba0461969bc72d6e2651a7360d752778eb01",
+    "accepted/sun-earth-moon-dop853-rust/frame-1.json": "4cd48a1a591a897a8014c25e9ae3b047d562c30e8dfebc24f8730f49030bc049",
+    "accepted/sun-earth-moon-dop853-rust/frame-2.json": "3240efd229ded8c50e3a65cd0de1263af7bd51772caa2ca7378252c99552c910",
+    "accepted/sun-earth-moon-dop853-rust/frame-3.json": "413d313c8f8c480f25d615dc17aded39d56e34d8f3465d6ca065594a56aecb75",
+    "accepted/sun-earth-moon-dop853-rust/frames.json": "7daab630f863806ea7d9aa5775c495b53fe4c5f0815078f62ec336fe82c15550",
+    "accepted/sun-earth-moon-dop853-rust/resume.json": "413d313c8f8c480f25d615dc17aded39d56e34d8f3465d6ca065594a56aecb75",
+    "accepted/sun-earth-verlet-python/frame-1.json": "d066e11ed8711f88f952b4678c90bda99c9543012890051d3b704911d5c052a8",
+    "accepted/sun-earth-verlet-python/frame-2.json": "4d82cbfafd93a3301f568cbda1fe74bd10aea37eeb56b2dd33b484ca8653fc45",
+    "accepted/sun-earth-verlet-python/frame-3.json": "48c109a5f1a053e3f11f8da26d38d7ae08aa7e07c56de649e5503e1d43b95f74",
+    "accepted/sun-earth-verlet-python/frames.json": "f0766934b61494d8d4375ce7f3b8717185b91404ee9c01a94e08a575ee35da8c",
+    "accepted/sun-earth-verlet-python/resume.json": "48c109a5f1a053e3f11f8da26d38d7ae08aa7e07c56de649e5503e1d43b95f74",
+    "accepted/sun-earth-verlet-rust/frame-1.json": "91750f39e5e1cc5d1683ddbb295c5c4dc6a4592b2fa987c01c16c90453aafa85",
+    "accepted/sun-earth-verlet-rust/frame-2.json": "6186fc076f68687e0f7988a5e6a12df872eab03921e34aa6b7332ab1dc1d8000",
+    "accepted/sun-earth-verlet-rust/frame-3.json": "8b7c2f15ec5991b5a398f21398b16896a528e6d3f5e58e839c1169c8bb848efe",
+    "accepted/sun-earth-verlet-rust/frames.json": "21ab0a4610e667a3fbbd6c3a48430724e1c8d5876abc2e2f39455dc507fbd6b3",
+    "accepted/sun-earth-verlet-rust/resume.json": "8b7c2f15ec5991b5a398f21398b16896a528e6d3f5e58e839c1169c8bb848efe",
+    "candidate/branch.json": "6f27aa8960e503abc0623bb289a31744e538eea44339dce36c5473bd602e43ba",
+    "candidate/environment.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "candidate/legacy-1-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-2-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-3-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-4-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-5-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-6-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-7-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-8-loaded.json": "b91fbadef620247204a3497c3bdda5de6543c2425bb99ed1ecdeeb63e2fa0ea7",
+    "candidate/legacy-9-loaded.json": "3a1fdf33a342f8e3b2c0054a9c79d1caa879918bb718f4366fe28cad71e9b4cf",
+    "candidate/legacy-result.json": "6439fa8b67c726e58878d621b7a30bac1178ea759f677b6ec9dd2cbbdb54f5e6",
+    "candidate/one-q2-dop853-python/frame-1.json": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc",
+    "candidate/one-q2-dop853-python/frame-2.json": "7dfdf92d33ec7ca6b4da3afd826ba9cd0bc31d69dab96488d8ff68b364108f00",
+    "candidate/one-q2-dop853-python/frame-3.json": "7aac2b0b522e170de5fd29b19f398774467090203ba5a61a2365045704746e98",
+    "candidate/one-q2-dop853-python/frames.json": "a0d709c0e150371fe8811be39be56a8bd5bb6fd42599752aa18d9fd69416352f",
+    "candidate/one-q2-dop853-python/old-loaded-frame-1.json": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc",
+    "candidate/one-q2-dop853-python/resume.json": "7aac2b0b522e170de5fd29b19f398774467090203ba5a61a2365045704746e98",
+    "candidate/one-q2-dop853-rust/frame-1.json": "053ae04ece2baea8880c1012ee970a48b10032f1359e2d67cb700ca6bed38dd8",
+    "candidate/one-q2-dop853-rust/frame-2.json": "0fac1acd9376c3eb1aba6a15d1f90c764adc3de160efe036b80bfcc2d47670eb",
+    "candidate/one-q2-dop853-rust/frame-3.json": "1b3bcfed122a8159881a56379c0b5c25e465dc0a8646ccd5fe736576cff251c9",
+    "candidate/one-q2-dop853-rust/frames.json": "3e2d66ac827b9cc4ec7f5514bb7a57d62425d564141884b7c6901fe40a8664ed",
+    "candidate/one-q2-dop853-rust/old-loaded-frame-1.json": "053ae04ece2baea8880c1012ee970a48b10032f1359e2d67cb700ca6bed38dd8",
+    "candidate/one-q2-dop853-rust/resume.json": "1b3bcfed122a8159881a56379c0b5c25e465dc0a8646ccd5fe736576cff251c9",
+    "candidate/progress-000.json": "4863f168fc0fed232acdf49dc48ac3284b29abf198adabc43b590cf606525ee7",
+    "candidate/progress-001.json": "e493d659a91effab7de687a6a95b0287a4a27f4e360680f9e3fa5b854d1f5747",
+    "candidate/progress-002.json": "f2fb4b072727fd5b24ab61bd436e650506d04e974c5904edfb12c9dff1f4c586",
+    "candidate/progress-003.json": "4abc2bf80a8cf937abceb21b51102cd2e835c69bdfede8a00d395c3b695fad66",
+    "candidate/progress-004.json": "ade59684540d7a6b035cf8f2412cd82cc81e7c8bc2f818f7ffbb2736e47bcffa",
+    "candidate/progress-005.json": "ce77eb291f4294e7b57a9a124c9c98447077a8bfe7bd529eea01c80f1b548cbf",
+    "candidate/progress-006.json": "586ab22276eb75cc235032708d409fca46efd95e38dd87f3ae631d625e5ca23a",
+    "candidate/progress-007.json": "7e0a6ca02555ad34a0468def2558afa548971f4b95cc5e975150adffa217eb95",
+    "candidate/progress-008.json": "4022a1c8c9a15b210231b1f8e40bd3ccf21c4629b9174d34d16bd40acd64b2dc",
+    "candidate/recording/frame-000000.json": "9fbe472658fc1884cfa4bc7f9714fdbc60664dad5ceaca2fed7426382db2f424",
+    "candidate/recording/frame-000001.json": "d066e11ed8711f88f952b4678c90bda99c9543012890051d3b704911d5c052a8",
+    "candidate/recording/frame-000002.json": "4d82cbfafd93a3301f568cbda1fe74bd10aea37eeb56b2dd33b484ca8653fc45",
+    "candidate/recording/manifest.json": "7944dfa5b7debec3fcbbe869514ed68197452935f7afddcf775e0674e2d1d4e1",
+    "candidate/recording/recipe.json": "864f1030dcd71c609f693b6cba3c3429237545cf8de02ed969c376605b43350d",
+    "candidate/sun-earth-dop853-python/frame-1.json": "8679896d3b2c6288070c05d67ec39f8b50999060ad0a8af990f15305a9fe9622",
+    "candidate/sun-earth-dop853-python/frame-2.json": "1a3384518d21a52751bd72eadc7c30c570307af1048d53f0308e85798e8b9ccc",
+    "candidate/sun-earth-dop853-python/frame-3.json": "5c0f79b4383d2656fd2b9f560aafbf5d6b584feb8319925c03d0a3d986495bb8",
+    "candidate/sun-earth-dop853-python/frames.json": "430be94d9b3ab2e93d1140cf4d463a57e7be75b38810369018e50ec729261580",
+    "candidate/sun-earth-dop853-python/old-loaded-frame-1.json": "8679896d3b2c6288070c05d67ec39f8b50999060ad0a8af990f15305a9fe9622",
+    "candidate/sun-earth-dop853-python/resume.json": "5c0f79b4383d2656fd2b9f560aafbf5d6b584feb8319925c03d0a3d986495bb8",
+    "candidate/sun-earth-dop853-rust/frame-1.json": "e934567b0d8485eba96ed5c23cc3b86135a5cb532ee0b0cf920aa638ae08066a",
+    "candidate/sun-earth-dop853-rust/frame-2.json": "fd085f57018e32df490515ea93c07f80aa1c79e72052fe75a76f1c9513b53b32",
+    "candidate/sun-earth-dop853-rust/frame-3.json": "2f29d4242f9266b456b060f7e5317714d4ae115085896b69e95ddc5d449b6a34",
+    "candidate/sun-earth-dop853-rust/frames.json": "718527e143d3769f2a743fcec7a79d2bc8423c868391579a5f199ee25029fc38",
+    "candidate/sun-earth-dop853-rust/old-loaded-frame-1.json": "e934567b0d8485eba96ed5c23cc3b86135a5cb532ee0b0cf920aa638ae08066a",
+    "candidate/sun-earth-dop853-rust/resume.json": "2f29d4242f9266b456b060f7e5317714d4ae115085896b69e95ddc5d449b6a34",
+    "candidate/sun-earth-moon-dop853-python/frame-1.json": "e08ce25adae7210888a9fa65bc7c1ded0db3b90dd72d357d000f066fed534188",
+    "candidate/sun-earth-moon-dop853-python/frame-2.json": "438de3859c29865ccb0923203c4d6fe2e738b44e2823d5bdd55b26d29123b89a",
+    "candidate/sun-earth-moon-dop853-python/frame-3.json": "033a18f1da0e6890d74d24c9f84fba0461969bc72d6e2651a7360d752778eb01",
+    "candidate/sun-earth-moon-dop853-python/frames.json": "2f106252f0d2247d210ba8b514d4fb867c54596436214f2543f0de897bddd350",
+    "candidate/sun-earth-moon-dop853-python/old-loaded-frame-1.json": "e08ce25adae7210888a9fa65bc7c1ded0db3b90dd72d357d000f066fed534188",
+    "candidate/sun-earth-moon-dop853-python/resume.json": "033a18f1da0e6890d74d24c9f84fba0461969bc72d6e2651a7360d752778eb01",
+    "candidate/sun-earth-moon-dop853-rust/frame-1.json": "4cd48a1a591a897a8014c25e9ae3b047d562c30e8dfebc24f8730f49030bc049",
+    "candidate/sun-earth-moon-dop853-rust/frame-2.json": "3240efd229ded8c50e3a65cd0de1263af7bd51772caa2ca7378252c99552c910",
+    "candidate/sun-earth-moon-dop853-rust/frame-3.json": "413d313c8f8c480f25d615dc17aded39d56e34d8f3465d6ca065594a56aecb75",
+    "candidate/sun-earth-moon-dop853-rust/frames.json": "7daab630f863806ea7d9aa5775c495b53fe4c5f0815078f62ec336fe82c15550",
+    "candidate/sun-earth-moon-dop853-rust/old-loaded-frame-1.json": "4cd48a1a591a897a8014c25e9ae3b047d562c30e8dfebc24f8730f49030bc049",
+    "candidate/sun-earth-moon-dop853-rust/resume.json": "413d313c8f8c480f25d615dc17aded39d56e34d8f3465d6ca065594a56aecb75",
+    "candidate/sun-earth-verlet-python/frame-1.json": "d066e11ed8711f88f952b4678c90bda99c9543012890051d3b704911d5c052a8",
+    "candidate/sun-earth-verlet-python/frame-2.json": "4d82cbfafd93a3301f568cbda1fe74bd10aea37eeb56b2dd33b484ca8653fc45",
+    "candidate/sun-earth-verlet-python/frame-3.json": "48c109a5f1a053e3f11f8da26d38d7ae08aa7e07c56de649e5503e1d43b95f74",
+    "candidate/sun-earth-verlet-python/frames.json": "f0766934b61494d8d4375ce7f3b8717185b91404ee9c01a94e08a575ee35da8c",
+    "candidate/sun-earth-verlet-python/old-loaded-frame-1.json": "d066e11ed8711f88f952b4678c90bda99c9543012890051d3b704911d5c052a8",
+    "candidate/sun-earth-verlet-python/resume.json": "48c109a5f1a053e3f11f8da26d38d7ae08aa7e07c56de649e5503e1d43b95f74",
+    "candidate/sun-earth-verlet-rust/frame-1.json": "91750f39e5e1cc5d1683ddbb295c5c4dc6a4592b2fa987c01c16c90453aafa85",
+    "candidate/sun-earth-verlet-rust/frame-2.json": "6186fc076f68687e0f7988a5e6a12df872eab03921e34aa6b7332ab1dc1d8000",
+    "candidate/sun-earth-verlet-rust/frame-3.json": "8b7c2f15ec5991b5a398f21398b16896a528e6d3f5e58e839c1169c8bb848efe",
+    "candidate/sun-earth-verlet-rust/frames.json": "21ab0a4610e667a3fbbd6c3a48430724e1c8d5876abc2e2f39455dc507fbd6b3",
+    "candidate/sun-earth-verlet-rust/old-loaded-frame-1.json": "91750f39e5e1cc5d1683ddbb295c5c4dc6a4592b2fa987c01c16c90453aafa85",
+    "candidate/sun-earth-verlet-rust/resume.json": "8b7c2f15ec5991b5a398f21398b16896a528e6d3f5e58e839c1169c8bb848efe",
+    "comparison.json": "b45ef409ee6039a0790f3e4fe6029ea4005d3f79d7536c437cabedf209b225b6",
+    "execution-binding.json": "e581b09c59ea4c24688eb3d95c48c9538e805ba74333673900c35233cbef9f8f",
+    "final-resources.json": "c9136b64ffa295a658ff218eec5f22755a6adda76f59fe174aece2786a098c31",
+    "functional-tail/environment-end.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "functional-tail/environment-start.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "functional-tail/gui.json": "7f5074db9630b2542fc46afc69249f06cdc864202b3e7a8d924cbd9da173246a",
+    "functional-tail/result.json": "f4847de2d2be14e7995af78c1facc6dfe289011064b40a05a5a1ff760ee3eb12",
+    "functional-tail/self-memory.json": "87ddab7c4e843b9f545b0da509f91aacfeaf299274698241ca16c2e51d0e8187",
+    "functional_tail.py": "c375da02dcd22cab2f06f153dd76b5948f88a8722f20e06f818c779519c9156b",
+    "guard-offline-postmortem/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-offline-postmortem/supervisor.json": "54a835ed9b5a3b03016f7b9e16add7c2140744c22440e735fc0a33b81f1b37d8",
+    "guard-prepare/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-prepare/supervisor.json": "b5061ad6daf358676d6f561920229fd124becc72e1e000e01082c68ebd04b60d",
+    "guard-remaining-functional-tail/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-remaining-functional-tail/supervisor.json": "4a6e86fd668f1170a85a7abcf3a872d389945ca3df743c531630dbacf373bb86",
+    "guard-remaining-old-two/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-remaining-old-two/supervisor.json": "4b9cf7a20490f62fa9256cf3cbde783f8e3ff6c2118286ee7c15ebdf97438102",
+    "guard-source-audit/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-source-audit/supervisor.json": "91494c38d91df900344f0183ceec7ded92e8c0135760f2d7d59b0a0c77900db2",
+    "guard-startup-accepted/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-startup-accepted/supervisor.json": "d856e9ea9b374079e3a70e599351911a525905d1fcbf580613320b8a76da2565",
+    "guard-startup-candidate/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-startup-candidate/supervisor.json": "57f3de4d822b5311f3099468b2805f16cc6dddebb427a86a09179e42277b1385",
+    "guard-tests/stdout.log": "60f075bb8c20dbf0fff240ae4d636f557340c026223f0d050fd1a5b2a0e6ecb1",
+    "guard-tests/supervisor.json": "0454399ae2ed87fe8c4fda444c956ac7f029287adcfaafb2c8fdab94080e783f",
+    "guard-worker-accepted/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "guard-worker-accepted/supervisor.json": "396b58ce166f1de63158182c8d77fb46b4d2aca20f1a11487e8fcee6167518cf",
+    "guard-worker-candidate/stdout.log": "5f50ad64c2a08c0decc5b5846988917a702ccc79a394e4f0db506a478956d056",
+    "guard-worker-candidate/supervisor.json": "42c2c903708d921fe2f5e0263cfa222764fd17abc1a6752060f350638fe24b39",
+    "harness-prepare-accepted/backend-calls.json": "cc48a559928987b169e599ed73b7d47f562f919e4d794b53983422d45c4ba7d1",
+    "harness-prepare-accepted/environment-end.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "harness-prepare-accepted/environment-stability.json": "3254ca694a346360a7876075918faea008563340b6e33def449fda1617c041b5",
+    "harness-prepare-accepted/environment-start.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "harness-prepare-accepted/runtime-binding.json": "b2d61a429e05a7088983e20bf360101a96993033ddce8a6b78bffb56a8f2e2cd",
+    "harness-prepare-accepted/self-memory.json": "94ee2e9d396580cc9144f840ba1797a55917f911cb192617d753e548999ccfb9",
+    "harness-startup-accepted/backend-calls.json": "cc48a559928987b169e599ed73b7d47f562f919e4d794b53983422d45c4ba7d1",
+    "harness-startup-accepted/environment-end.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "harness-startup-accepted/environment-stability.json": "3254ca694a346360a7876075918faea008563340b6e33def449fda1617c041b5",
+    "harness-startup-accepted/environment-start.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "harness-startup-accepted/runtime-binding.json": "b2d61a429e05a7088983e20bf360101a96993033ddce8a6b78bffb56a8f2e2cd",
+    "harness-startup-accepted/self-memory.json": "7c9f4a89e90dcca5028fe6388fddf69d86e356038afd7fe3b1ef00362f70b560",
+    "harness-startup-candidate/backend-calls.json": "cc48a559928987b169e599ed73b7d47f562f919e4d794b53983422d45c4ba7d1",
+    "harness-startup-candidate/environment-end.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "harness-startup-candidate/environment-stability.json": "9d3a104cf08af4cd301a41d8c238c6d407ee939735d620d7c92c6119a2155faf",
+    "harness-startup-candidate/environment-start.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "harness-startup-candidate/runtime-binding.json": "a125bcc4551887037353da55af91b3d64d01c06f6e9e1d2ed24409d78924d7cf",
+    "harness-startup-candidate/self-memory.json": "5325f2726871a2f58d7328fb5c8f01b79be21e6e22c7b7c518912b6ab1e8ba60",
+    "harness-worker-accepted/backend-calls.json": "1aaab8186cc2d9bf125bb6fff179a42dcd803414a0c8d08d0796e32619f2e164",
+    "harness-worker-accepted/environment-end.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "harness-worker-accepted/environment-stability.json": "3254ca694a346360a7876075918faea008563340b6e33def449fda1617c041b5",
+    "harness-worker-accepted/environment-start.json": "4d8838ca01dc6f9f00f74b97c5142bb2dcaa82b8f7ce355192c735bac0b7f335",
+    "harness-worker-accepted/runtime-binding.json": "b2d61a429e05a7088983e20bf360101a96993033ddce8a6b78bffb56a8f2e2cd",
+    "harness-worker-accepted/self-memory.json": "d8e27dbfd39a93656caf2bb252748d74184a08ed6f86210bf4613c9b68c72b87",
+    "harness-worker-candidate/backend-calls.json": "1aaab8186cc2d9bf125bb6fff179a42dcd803414a0c8d08d0796e32619f2e164",
+    "harness-worker-candidate/environment-end.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "harness-worker-candidate/environment-stability.json": "9d3a104cf08af4cd301a41d8c238c6d407ee939735d620d7c92c6119a2155faf",
+    "harness-worker-candidate/environment-start.json": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "harness-worker-candidate/runtime-binding.json": "a125bcc4551887037353da55af91b3d64d01c06f6e9e1d2ed24409d78924d7cf",
+    "harness-worker-candidate/self-memory.json": "5626e3dee6e099cf01f4813dfa61a9f20b24a6753749d581d35685016b5047f8",
+    "ic-binding.json": "226b04d81564199a6f47155c6a1e51364128a6caf0040f6b32104b32534259cf",
+    "independent-comparison.json": "e3c7059bd80eead02523a44cc47f8177755412aacbe1719f83b126b697585fe5",
+    "inputs/corrupt.json": "2f6af8e37fc05d859a7b9931e41f5a1377e3e4d62e1bc1fdbce56873c9aabb55",
+    "inputs/legacy-1.json": "fada107fb7aa61c7e6454d7bfcf758d24d5c4c8899dba748d7946185aa4dfe67",
+    "inputs/legacy-2.json": "1fbb75875f965364d2bf94b4cebf44c4bda6585fe5ea202fd25c5c840e34b2d7",
+    "inputs/legacy-3.json": "adaa2b7015923548fb43f2812956b630959e118b93b305a82a4259d34273b9e2",
+    "inputs/legacy-4.json": "a002b1e84e982d16f404b612bffa9b0b7efc26cb961e7a4d461ffc64c90a8566",
+    "inputs/legacy-5.json": "7b3529dbf472469112fd196c068df997ec192fe6f7ed5e87452da10992dc5f14",
+    "inputs/legacy-6.json": "eaf62aa7454348cdb993a85a93d2b0691cf60fe53475c7c40c07cd5a9cc5d0d4",
+    "inputs/legacy-7.json": "99c51f97d4aa0d3076afb95cf8650c890d73b8cea313f1c57239244029dec37c",
+    "inputs/legacy-8.json": "c8e721e0f14b90e6c628f5029a93e362cf108119174b313c3ac4db90f55854d6",
+    "inputs/legacy-9.json": "0c2ae46ec5938dfebd8db18ab26f802a6f88ced45852e75b20815d7eee035ac2",
+    "inputs/one-q2-dop853-python.json": "fc4f834c0cc3f1694fbb69937f9220a473dca57710641dd68d2c3fd5d1274b8f",
+    "inputs/one-q2-dop853-rust.json": "214725c9480851cebcff5c26ae8e6efc7619cc5bd33eb598339346c4d2f44646",
+    "inputs/sun-earth-dop853-python.json": "d74bdbed3fa4549edf94138a1f693254502b416a92a2df5520b12bb40f253552",
+    "inputs/sun-earth-dop853-rust.json": "416d92d0addb02683a80d3f85436d78e766df1049583b220e8145de13ea5dcb7",
+    "inputs/sun-earth-moon-dop853-python.json": "9d2b9a2c1d1bdd4bd471360500c1923a90530be8a628d180d0d64b6c489bfd83",
+    "inputs/sun-earth-moon-dop853-rust.json": "695d093d5d68fcacfd9ba2af3c180ca085c1e65aecea36088a2425a266ada1c6",
+    "inputs/sun-earth-verlet-python.json": "3fe612411f88bd7c6bec19358c5d5a2232baabc3e7218fedc20bbf35fe4e3fc2",
+    "inputs/sun-earth-verlet-rust.json": "9f8bb112bcfaaeb3ef30b68ab60bff7a04b4e104cd400422da150482b745b373",
+    "inputs/unsupported.json": "6468906ecc3306c6fc80c07330de5534d7ab1f463ac26cc56fb7d43425fe7693",
+    "offline-postmortem-binding.json": "a1b648675538f9cc16f2589693480672d65c5db90d1359a3ca3c109d3d1b5879",
+    "offline_postmortem.py": "28bed081ecddf3fd284b6785bd0d2f18f3ded0845020a13523faa43126cae40f",
+    "old_two.py": "189e40130043ca3aacd8f8ff1d9145485a746cd544611771d070aed9fadd0144",
+    "original-to388.diff": "3b5cb12de791110a7acd41bf557754bcb0c25a6112ad9259bb44ca7f9d275321",
+    "plan.json": "8992a0f8a7629eb44ec998aa331bee707aa357e41396c339ab806b064c4d520a",
+    "portable-verification.json": "0cb01119a58ec3d00b0e48cc00364ec37af9aa8e38874042bb8a36d9e430afdd",
+    "remaining-binding.json": "84ce224ecd99aa8b58e99fdfc348c3b1313773367d6fd441cd3bd176018d9fbb",
+    "remaining-plan.json": "37511912936145741e7275c63222f7085d3e8c7480b5eac207bba4abd606158c",
+    "remaining-resources.json": "5cda82a8ea3fbecafd6ec4cbddfce59a81b752aa8a65470527cf718c2f475cdc",
+    "resource-summary.json": "afcd2072a441a5587874a11d3a57f85af44503af15fb117bcf022822b523704c",
+    "run.py": "3616412a0b1f2ef5fc796bd7ea98284778c91e591c651db67f6691dad55b1eb8",
+    "run_remaining.py": "230c6cf44ca18066eff2865c38bf3498853448d7e88d47d740dbf8ba47258041",
+    "source-verification.json": "f83ac27d9e14e2a6f3f2c235f83917150263f8368535a91ff798107505b4390a",
+    "tests.xml": "38c9d2ac454e69a991f0df50d7fef6cdd6102ef90414e315cb637b44d07a4665",
+    "two-q2.json": "a56269a82892b6dc740b309e77db2a085dca7ad3ed563e40e1964e3e66461055",
+    "verify_sources.py": "165d7018377803134d3d792098c9f94b503a2141d14e35eaeceed858a0d305de",
+    "worker-fixed-future.py": "0c1939417b31e06259d49a784d94f92b81d31928c6a216011a15685c64b00b4c",
+    "worker.py": "c2d358c1847c24baa53dbedd32344af373ca3a92598177ad22317f4c45aa09b5"
+  },
+  "release_compatibility_gate": "NO-GO until pendingold-two check completed",
+  "physical_accuracy_claim": false,
+  "limitations": [
+    "No long-term/contact/EIH+J2/two-Q2 orbit or universalaccuracy qualification",
+    "InitialearlyCPU160left20CPUuserreserve; explicitremainingplanused original180total with176earlytechnicalstop, originalbinding/FAILunchanged",
+    "AfterremainingCPUstop no further runtime retries; only mandatory offline saved-state reduction within original180total",
+    "No finalportable033/fullacceptance or ownerwaiver386"
+  ]
+}
