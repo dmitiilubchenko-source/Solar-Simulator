@@ -86,3 +86,6 @@ inspection.report через существующий async-loader lifecycle. Ф
 
 Результат385: [годовая EIH+J2 квалификация](annual-385-validation.md);
 Strict PASS, Standard Rust diagnostic FAIL, compatibility отдельно UNRESOLVED.
+
+Две Q2: [область/политика386](two-q2-scope-386.md),
+[отдельный прикладной draft](two-q2-application-protocol.md); waiver/B_app требуют владельца.

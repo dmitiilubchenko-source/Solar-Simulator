@@ -106,3 +106,6 @@ scientific qualification. Основной запуск пока NO-GO по ук
 
 [Годовая квалификация385](../annual-385-validation.md): новый candidate033
 Strict25gates PASS; historical375/current receipt не изменены, compatibility UNRESOLVED.
+
+[Две Q2,scope386](../two-q2-scope-386.md):3historicalFAIL сохранены,
+[прикладной протокол](../two-q2-application-protocol.md) DRAFT_OWNER_REQUIRED,не новыйPASS.

@@ -1,0 +1,151 @@
+{
+  "stage": 386,
+  "date": "2026-11-04",
+  "source_commit": "8570f192d2fdcdc8fec4aed29d2f6563e3ee7c28",
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "runtime_binding": {
+    "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+    "environment_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "source_environment_unchanged": true,
+    "pytest_exit_code": 0,
+    "runtime_file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\src\\solar_simulator\\__init__.py",
+    "note": "Short static/functional tests and archived-data replay; no new380scientificmatrix/year385 or current-runtime qualification by replay."
+  },
+  "artifacts_sha256": {
+    "scripts/two-q2-380-plan.json": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+    "scripts/two-q2-380-completion-plan.json": "b93c534e6b38aedc82df70768f1c471963093645f700e20c741ec87fa6fffb13",
+    "docs/two-q2-380-initial.json": "a6044603119a9e61824ce2c68c116cd1c2743d5e89a558b687546b917e029e38",
+    "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+    "docs/two-q2-380-resources.json": "abd47a995bd7563e2232a9b9e60818dd2721050013ca2aac30894c48a44dd0cb",
+    "scripts/validation/rotation-before380.zip": "222461071aed44c49fcf72a573db52d9e29fbfd94d5da7f0fe749eb080b26147",
+    "scripts/validation/two-q2-380-compatibility.zip": "92746b403f4c576740f2d72bab06c1f56a11303016fd7196a0d29d21ab194e1b",
+    "scripts/validation/two-q2-380-initial-scripts.zip": "3ceef815f41508b7eda78d34cd750e8041b3260db8ae4bc9c52a38c4e24d46bd",
+    "scripts/validation/two-q2-380-initial.npz": "b562f8935059735160a7b8f0c5428af90f84be3e31c5bd57005c357363ef1257",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    "scripts/assess_two_q2_380.py": "0b5ea98c572a2163fafc36debcb40cae7acdbd8516a87df9cae5aae2fbdec7f0",
+    "scripts/check_two_q2_compatibility380.py": "65084a570a6a4b1aac383f5cbcbc0fef14d5ded63f1d819985c5007442a3b5c2",
+    "docs/two-q2-380-manifest.json": "42ec1d1a160a1f4845fe65fadf30266a17c6736925eb9ed5751a8466e30ad607",
+    "src/solar_simulator/data/two-q2-demo380.json": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+    "docs/qualification-033-scope-384.md": "19def248e911f9149e6590f8adc0c7a55e7e5b7cd257676cd544b026deb4e3ec",
+    "docs/annual-385-validation.md": "20d440cfaf0afd4475a4a007b2f2968edec0966a006ec163a296e7957fb95dc2"
+  },
+  "packet_convergence": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "coarse_fine_max": 4.3210537632440276e-15,
+      "standard_fine_max": 7.086768132709826e-15,
+      "status": "FAIL",
+      "meaning": "max of original normalized position/velocity/orientation/spin metrics; original strict inequality unchanged"
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "coarse_fine_max": 7.341808831039677e-15,
+      "standard_fine_max": 9.633424121268789e-15,
+      "status": "FAIL",
+      "meaning": "max of original normalized position/velocity/orientation/spin metrics; original strict inequality unchanged"
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "coarse_fine_max": 5.625282158101942e-15,
+      "standard_fine_max": 6.215018178946092e-15,
+      "status": "FAIL",
+      "meaning": "max of original normalized position/velocity/orientation/spin metrics; original strict inequality unchanged"
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "coarse_fine_max": 1.0018532557700625e-14,
+      "standard_fine_max": 3.2225167587052165e-15,
+      "status": "PASS",
+      "meaning": "max of original normalized position/velocity/orientation/spin metrics; original strict inequality unchanged"
+    }
+  ],
+  "retained_failed_criteria": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    }
+  ],
+  "historical_evaluator_path_change": [
+    {
+      "path": "scripts/assess_two_q2_380.py",
+      "historical_SHA256": "0b5ea98c572a2163fafc36debcb40cae7acdbd8516a87df9cae5aae2fbdec7f0",
+      "current_SHA256": "55d0864ae69c3c048c9a9a145741f3636e9487c6d339c50963f48e1334756ba9",
+      "historical_commit": "638ccf0759aa989d45d0e63d99210023662a5596",
+      "change_commit": "bc75156",
+      "reason": "Inspected diff only imports evidence_path and uses it for continuation path normalization; numerical reductions/criteria unchanged. Historical manifest not rewritten."
+    }
+  ],
+  "initial_arrays_bitwise_preserved": 23,
+  "offline_replay_rows": 12,
+  "continuous_convergence_cases": 2,
+  "functional_tests": {
+    "tests": 43,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 7.645
+  },
+  "old_environment_compatibility": {
+    "cases": 8,
+    "snapshots": 24,
+    "byte_exact": true,
+    "scope": "Developer032 installed native0cbc in original380thread settings; not cross-version032-vs033 qualification"
+  },
+  "resources": {
+    "complete": true,
+    "CPU_seconds": 13.953125,
+    "wall_seconds": 14.882322399993427,
+    "worker_private_peak_sampled": 431435776,
+    "supervisor_private_peak_OS": 37720064,
+    "conservative_sum_private_peaks": 469155840,
+    "artifact_bytes": 31015,
+    "limitations": "50ms sampled process/RAM tracking; discoveredWindows processes have retained finalCPU handles. Short unseen children/spikes possible; not OS hardquota. Public cache restoration/preparation/CI/backup separate."
+  },
+  "prior_cloud_readback": [
+    {
+      "stage": 384,
+      "size": 939521,
+      "sha256": "01e0a5b2e90bbb57b82073f2f6dbd79cce4780cfb49af66edff51c51e68b057d",
+      "status": "CLOUD_VERIFIED_SHA256",
+      "verified_date": "2026-11-04",
+      "method": "Fresh connector reference, independent HTTPS streamed download/SHA; no local-file substitution."
+    },
+    {
+      "stage": 385,
+      "size": 6766451,
+      "sha256": "6cdf50ff18be3ec9d320e6eedb3ec63fc48d7eb3ebcae4f54b551b7a084ad3a7",
+      "status": "CLOUD_VERIFIED_SHA256",
+      "verified_date": "2026-11-04",
+      "method": "Fresh connector reference, independent HTTPS streamed download/SHA; no local-file substitution."
+    }
+  ],
+  "application_accuracy_budget": {
+    "status": "OWNER_REQUIRED",
+    "numeric_thresholds": null,
+    "proposal": "Each B_app component <=one tenth of externally specified minimum meaningful observable effect; not chosen from380errors."
+  },
+  "release_policy": {
+    "recommended": "A",
+    "owner_approved": false,
+    "release_waiver": false
+  },
+  "new_application_qualification": "NO_GO_UNTIL_OWNER_SCOPE_AND_NUMERIC_BUDGET",
+  "new_scientific_matrix_executed": false,
+  "physical_code_changed": false
+}
