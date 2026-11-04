@@ -1,0 +1,444 @@
+{
+  "stage": 391,
+  "date": "2026-11-05",
+  "status": "PROPOSAL_READY_OWNER_REQUIRED",
+  "release_status": "NO-GO",
+  "base_commit": "0a2c744742d1c3f2788fb78f8cb81eb5981cd701",
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "accepted032_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+  "environment_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+  "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "candidate_source_count": 394,
+  "candidate_source_and_environment_verified": true,
+  "developer_version": "0.3.2",
+  "candidate_version": "0.3.3",
+  "base_CI": {
+    "run_id": 41918068269,
+    "python": "success",
+    "desktop_native": "success",
+    "adaptive_research": "existing configured skip"
+  },
+  "protected_SHA256": {
+    "docs/two-q2-380.md": "1cd9b9868ad369bee2088b418afa6922043e9a2d5465bb7b64ffb146efce350c",
+    "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+    "docs/two-q2-380-manifest.json": "42ec1d1a160a1f4845fe65fadf30266a17c6736925eb9ed5751a8466e30ad607",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    "docs/two-q2-scope-386.md": "2e2f5533ab9faf54490b19cad6678d753f6fb9a3f0dd40f80fa45a05039e4d3a",
+    "docs/two-q2-scope-386-audit.json": "cd28f5141c548b4c9e9b84e79b95ae7eb7dede3b688d8272ebce40cfd49d2961",
+    "docs/two-q2-application-protocol.md": "97a444a5448540b641d1c96db62b739c927283599d8fee955c8a2cfc1ad43aaf",
+    "docs/newton-384-validation.md": "77905f02f7c1a2a4bcd75143af7bfa07e580c2c70cb1a59a2019c86fd01c670b",
+    "docs/annual-385-validation.md": "20d440cfaf0afd4475a4a007b2f2968edec0966a006ec163a296e7957fb95dc2",
+    "scripts/validation/annual385/current-receipt.json": "bd55716016c9b145bb2e994a5b3e4521233cd139a422ccebf685f2ad74a11d11",
+    "docs/compatibility-390-validation.json": "7e1736309b2ff38acffc0968c6e444da201291788b3033a59c93ef74326aa559",
+    "docs/compatibility-387-390-assessment.md": "dda10fb6dc59d5014ed8457cdb2cb14b52866cba1013dd6fc30d031542bf9546",
+    "docs/qualification-033-plan.md": "fb59f10b162604a26afd885bbd67536d8bbab0ac62ccc843c338b5b5cbb43fa2",
+    "dist/LATEST.txt": "838c34175ca7191bac03cd1190542d6811b223ac6a3dabb9e615ea2817ed5313"
+  },
+  "proposed_policy": "A",
+  "owner_approved_policy": null,
+  "release_waiver": false,
+  "approved_B_app": null,
+  "policies": {
+    "A": "Experimental synthetic educational scope only, application acceptance distinct from scientific380 FAIL.",
+    "B": "Exclude two-Q2 functionality at all runtime entry points, not only hide demo button; separate validation/compatibility candidate required."
+  },
+  "owner_decisions": [
+    "A/B and explicit scope exclusion for retained380FAIL",
+    "D1/D2/other educational effects and budgets",
+    "reference/projection uncertainty interpretation",
+    "operational sensitivity versus unmeasured global runtime roundoff",
+    "delta qualification and limited application execution plan",
+    "later main/tag/release/LATEST approval"
+  ],
+  "proposed_application": {
+    "status": "DRAFT_OWNER_REQUIRED",
+    "profile": "D1",
+    "IC_SHA256": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+    "elapsed_seconds": [
+      0,
+      50,
+      100,
+      150,
+      200
+    ],
+    "units": "SI",
+    "backends": [
+      "python",
+      "rust"
+    ],
+    "dt_seconds": 50,
+    "packet_steps": 1,
+    "packet_count": 4,
+    "rtol": 1e-11,
+    "position_atol_m": 1e-07,
+    "velocity_atol_m_s": 1e-11,
+    "quaternion_atol": 1e-13,
+    "spin_atol": "norm(initial_S_i)*1e-13",
+    "tolerance_controls": "all unchanged coarse/standard/fine380 levels",
+    "core_runtime_jobs": 16,
+    "baseline_repeat_jobs": 2,
+    "same_packet_suffix_jobs": 2,
+    "independent_reference_jobs": 2,
+    "budgets": [
+      {
+        "id": "r_A",
+        "unit": "m",
+        "Delta_proposed": 10.0,
+        "B_app_proposed": 1.0,
+        "U_ref_proposed_max": 0.1,
+        "N_sens_proposed_max": 0.1
+      },
+      {
+        "id": "r_B",
+        "unit": "m",
+        "Delta_proposed": 10.0,
+        "B_app_proposed": 1.0,
+        "U_ref_proposed_max": 0.1,
+        "N_sens_proposed_max": 0.1
+      },
+      {
+        "id": "relative_position_vector",
+        "unit": "m",
+        "Delta_proposed": 10.0,
+        "B_app_proposed": 1.0,
+        "U_ref_proposed_max": 0.1,
+        "N_sens_proposed_max": 0.1
+      },
+      {
+        "id": "relative_distance",
+        "unit": "m",
+        "Delta_proposed": 10.0,
+        "B_app_proposed": 1.0,
+        "U_ref_proposed_max": 0.1,
+        "N_sens_proposed_max": 0.1
+      },
+      {
+        "id": "v_A",
+        "unit": "m/s",
+        "Delta_proposed": 0.01,
+        "B_app_proposed": 0.001,
+        "U_ref_proposed_max": 0.0001,
+        "N_sens_proposed_max": 0.0001
+      },
+      {
+        "id": "v_B",
+        "unit": "m/s",
+        "Delta_proposed": 0.01,
+        "B_app_proposed": 0.001,
+        "U_ref_proposed_max": 0.0001,
+        "N_sens_proposed_max": 0.0001
+      },
+      {
+        "id": "relative_velocity_vector",
+        "unit": "m/s",
+        "Delta_proposed": 0.01,
+        "B_app_proposed": 0.001,
+        "U_ref_proposed_max": 0.0001,
+        "N_sens_proposed_max": 0.0001
+      },
+      {
+        "id": "theta_A",
+        "unit": "rad",
+        "Delta_proposed": 0.01,
+        "B_app_proposed": 0.001,
+        "U_ref_proposed_max": 0.0001,
+        "N_sens_proposed_max": 0.0001
+      },
+      {
+        "id": "theta_B",
+        "unit": "rad",
+        "Delta_proposed": 0.01,
+        "B_app_proposed": 0.001,
+        "U_ref_proposed_max": 0.0001,
+        "N_sens_proposed_max": 0.0001
+      },
+      {
+        "id": "S_A",
+        "unit": "kg*m^2/s",
+        "initial_norm": 6.024118192731613e+17,
+        "Delta_proposed": 60241181927316.14,
+        "B_app_proposed": 6024118192731.614,
+        "U_ref_proposed_max": 602411819273.1614,
+        "N_sens_proposed_max": 602411819273.1614,
+        "definition": "1e-4/1e-5 of frozen initial norm; not current-time spin"
+      },
+      {
+        "id": "S_B",
+        "unit": "kg*m^2/s",
+        "initial_norm": 7.968061244744546e+16,
+        "Delta_proposed": 7968061244744.546,
+        "B_app_proposed": 796806124474.4546,
+        "U_ref_proposed_max": 79680612447.44547,
+        "N_sens_proposed_max": 79680612447.44547,
+        "definition": "1e-4/1e-5 of frozen initial norm; not current-time spin"
+      }
+    ],
+    "alternative_D2": "All proposed D1 Delta/B values divided by10, not authorized.",
+    "numerical_rule": "U<=B/10 and N<=B/10 and e+U+N<B; all observables separately on five fixed epochs.",
+    "N_definition": "Envelope of all level pairwise, cold/continuous, repeat and independent saved-observer arithmetic contrasts; empirical robustness, not absolute roundoff bound.",
+    "orientation_uncertainty": "angle(polar(R1),polar(R2)) plus sum(Frobenius projection defects)/sqrt(2); second term is proposed local angular surrogate, not rigorous bound. Invalid/large defects => UNRESOLVED.",
+    "invariants": "unchanged applicable380 gradient/reaction/E/P/L/qnorm gates; exact same-packet restart",
+    "limits": "no arbitrary/edited systems, no t>200s, no real Earth-Moon claim, no guarantee between output epochs",
+    "purpose": "Bulk orbital motion, principal-axis orientation, small inertial spin exchange; does NOT require resolution of orbit-level Q2-minus-monopole effect."
+  },
+  "initial_physical_scales": {
+    "separation_m": 12000.0,
+    "relative_speed_m_s": 2.557831112485733,
+    "surface_gap_m": 10100,
+    "figures": [
+      {
+        "body": "A",
+        "S_norm_kg_m2_s": 6.024118192731613e+17,
+        "proposed_Delta_S": 60241181927316.14,
+        "proposed_B_S": 6024118192731.614,
+        "omega_rad_per_s": [
+          -9.153243203947901e-05,
+          -0.0007899349138338284,
+          0.0018486818671126957
+        ],
+        "omega_norm_rad_per_s": 0.0020124611797498115,
+        "frozen_omega_times_200_rad": 0.4024922359499623,
+        "initial_torque_N_m": [
+          0.0,
+          403550228471.27386,
+          -318073227968.458
+        ],
+        "initial_torque_norm_N_m": 513832039921.11273,
+        "frozen_torque_200_fraction_S": 0.0001705916197132638,
+        "Decimal80_120_relative_difference": "3.551395030391855921576531905E-81"
+      },
+      {
+        "body": "B",
+        "S_norm_kg_m2_s": 7.968061244744546e+16,
+        "proposed_Delta_S": 7968061244744.546,
+        "proposed_B_S": 796806124474.4546,
+        "omega_rad_per_s": [
+          0.0011204601606449145,
+          -6.116792106798696e-05,
+          0.0012652381253502412
+        ],
+        "omega_norm_rad_per_s": 0.0016911534525287763,
+        "frozen_omega_times_200_rad": 0.33823069050575527,
+        "initial_torque_N_m": [
+          0.0,
+          -724071549700.8904,
+          39823257996.64723
+        ],
+        "initial_torque_norm_N_m": 725165843765.2152,
+        "frozen_torque_200_fraction_S": 0.0018201814004467126,
+        "Decimal80_120_relative_difference": "5.325058975232367655408537518E-81"
+      }
+    ],
+    "interpretation": "Initial dimensional estimates only, not integrated changes or error bounds."
+  },
+  "presentation_diff_proposed": {
+    "applied": false,
+    "files": [
+      "src/solar_simulator/app.py",
+      "src/solar_simulator/inspection.py",
+      "src/solar_simulator/inspection_view.py"
+    ],
+    "content": "Explicit experimental label, truncation/exclusions, retained380FAIL, unknown arbitrary global accuracy, exact scope/recipe, unlimited Start vs target.",
+    "source_fingerprint_will_change": true,
+    "numerical_kernel_change_permitted": false
+  },
+  "delta_qualification": {
+    "approved": false,
+    "old_receipts_immutable": true,
+    "requirements": [
+      "exact numerical sources/native/data/dependency bytes",
+      "review all changed presentation callers",
+      "full new source/environment fingerprint",
+      "targeted GUI/state/reliability/recovery checks",
+      "negative changed numerical input rejects delta-only route",
+      "separate receipt with exact old/new provenance"
+    ],
+    "old384385": "Remain source-bound old measurements; no claim of new scientific execution.",
+    "unexpected_diff": "STOP; separately plan relevant384/385 qualification without assuming scope can be reduced."
+  },
+  "release_phases": [
+    {
+      "id": 2,
+      "title": "presentation candidate C1 and delta preflight",
+      "CPU_cap_s": 180,
+      "wall_cap_s": 360,
+      "private_cap_bytes": 1073741824,
+      "artifact_cap_bytes": 268435456,
+      "status": "NOT_EXECUTED_NOT_AUTHORIZED_BY_STAGE391"
+    },
+    {
+      "id": 3,
+      "title": "A application 20 runtime jobs plus 2 references",
+      "CPU_cap_s": 60,
+      "wall_cap_s": 120,
+      "private_cap_bytes": 1073741824,
+      "artifact_cap_bytes": 33554432,
+      "status": "NOT_EXECUTED_NOT_AUTHORIZED_BY_STAGE391"
+    },
+    {
+      "id": 4,
+      "title": "final exact C1 freeze",
+      "CPU_cap_s": 30,
+      "wall_cap_s": 90,
+      "private_cap_bytes": 536870912,
+      "artifact_cap_bytes": 16777216,
+      "status": "NOT_EXECUTED_NOT_AUTHORIZED_BY_STAGE391"
+    },
+    {
+      "id": 5,
+      "title": "full source/native/desktop/GUI/recovery",
+      "CPU_cap_s": 2400,
+      "wall_cap_s": 2700,
+      "private_cap_bytes": 3221225472,
+      "artifact_cap_bytes": 2147483648,
+      "status": "NOT_EXECUTED_NOT_AUTHORIZED_BY_STAGE391"
+    },
+    {
+      "id": 6,
+      "title": "isolated portable build",
+      "CPU_cap_s": 300,
+      "wall_cap_s": 600,
+      "private_cap_bytes": 2147483648,
+      "artifact_cap_bytes": 1073741824,
+      "status": "NOT_EXECUTED_NOT_AUTHORIZED_BY_STAGE391"
+    },
+    {
+      "id": 7,
+      "title": "relocated portable acceptance with actual year probes",
+      "CPU_cap_s": 900,
+      "wall_cap_s": 1200,
+      "private_cap_bytes": 2147483648,
+      "artifact_cap_bytes": 2147483648,
+      "status": "NOT_EXECUTED_NOT_AUTHORIZED_BY_STAGE391"
+    },
+    {
+      "id": 8,
+      "title": "final review and separate owner publication decision",
+      "CPU_cap_s": 30,
+      "wall_cap_s": 90,
+      "private_cap_bytes": 536870912,
+      "artifact_cap_bytes": 16777216,
+      "status": "NOT_EXECUTED_NOT_AUTHORIZED_BY_STAGE391"
+    }
+  ],
+  "free_disk_preflight_min_bytes": 8589934592,
+  "measured_basis": {
+    "source032_wall_s": 868.577,
+    "science384_CPU_s": 42.25,
+    "science385_CPU_s": 213.609375,
+    "application_CPU_s": null,
+    "application_forecast_CPU_s": [
+      5,
+      20
+    ],
+    "forecast_uncertain": true
+  },
+  "retained_failures": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "criterion": "packet_tolerance_convergence"
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "criterion": "packet_tolerance_convergence"
+    }
+  ],
+  "other_limitations": [
+    "Rust Standard20 annual385 diagnosticFAIL0.113353m>0.1m",
+    "source/wheel ERFA license fingerprint difference",
+    "reference levels share model/IC/binary64/SciPy assumptions",
+    "global runtime roundoff unresolved",
+    "not external scientific peer review"
+  ],
+  "preparation_failures": [
+    {
+      "kind": "missing psutil in developer monitor launcher",
+      "worker_started": false,
+      "CPU_sampled": false,
+      "conservative_allowance_s": 1
+    },
+    {
+      "kind": "strict wheel/source environment mismatch",
+      "changed_field": "package_files/data/ERFA-LICENSE.txt",
+      "expected": "c72781d8712dad739d5a173c4c7da23c206e19929e9ea271bff4c2e2ea225018",
+      "actual": "18e2c04c5328fe190fd5487da86ea538068c219174f65c6df71288e48fd60047",
+      "resolution": "Explicit source activation as385/390; no file or expected SHA edits."
+    }
+  ],
+  "independent_checks": {
+    "Fraction_norms": true,
+    "Decimal100": true,
+    "scalar_vs_numpy_rotation_and_torque": true,
+    "old380_fail_cases": [
+      [
+        "two-bodies",
+        "python"
+      ],
+      [
+        "two-bodies",
+        "rust"
+      ],
+      [
+        "three-bodies",
+        "python"
+      ]
+    ],
+    "protected_SHA256_unchanged": 14,
+    "scope": "Initial arithmetic and saved criterion replay only; shares equations/IC, no independent new trajectory.",
+    "numerical_integrations": 0
+  },
+  "resources_before_document_checks": {
+    "CPU_accounted_seconds": 11.140625,
+    "active_wall_accounted_seconds": 11.384771200013347,
+    "complete": true,
+    "initial_setup_allowance_seconds": 1.0
+  },
+  "offline_evidence_SHA256": {
+    "offline-audit.json": "5464dd0bca56a28b10a654f0bcf9e34c2994b1ac8dd8cc466775eb84b41c9124",
+    "independent-check.json": "dc1ea16c96940b5a45d8896445bd695cd6356fb68af1bb11f42332d593fb5823",
+    "preflight-plan.json": "0d863d7fb69c677c2263607075c2eb3f34ab7d9ad15d0e6697d563c163fa0c0c"
+  },
+  "runtime_changes": [],
+  "historical_evidence_changes": [],
+  "new_numerical_integrations": 0,
+  "validation": {
+    "document_links_and_line_numbers": true,
+    "inventory": true,
+    "proposal_contract": true,
+    "all_new_report_targets_exist": true,
+    "historical_SHA_preserved": true,
+    "runtime_and_Rust_diff_empty": true,
+    "numerical_integrations": 0,
+    "new_physical_tests": "Not run or added: documentary-only stage with no runtime contract changes."
+  },
+  "next_step": "Owner reviews concrete A+D1/sensitivity/delta proposal, then separately authorizes presentation/application stage. STOP after391.",
+  "resources": {
+    "CPU_measured_seconds": 11.5625,
+    "CPU_accounted_seconds": 12.5625,
+    "active_wall_accounted_seconds": 12.809596200007945,
+    "initial_setup_CPU_wall_allowance_seconds": 1.0,
+    "peak_worker_private_sampled": 144809984,
+    "complete": true,
+    "guarded_artifact_bytes": 42496,
+    "limits": "60CPU/180activewall/512MiB/32MiB; early50/150/450MiB/28MiB unchanged",
+    "limitations": "Initial missing-psutil setup CPU/RAM unavailable (one second allowance, not measured); monitor parent-interjob/import startup excluded. RAM/descendants sampled50ms, no hard OS quota. Editing/Git/CI/backup separate.",
+    "supervisor_private_peak": "NOT_MEASURED; worker peak is not combined whole-stage memory guarantee"
+  },
+  "self_review": {
+    "numeric_requirements_are_proposals_only": true,
+    "three380FAIL_preserved": true,
+    "Q2_degree_order_not_complete_real_body_physics": true,
+    "exact_source_environment_vs_installed_wheel_distinguished": true,
+    "orientation_projection_is_empirical_surrogate_not_error_bound": true,
+    "N_sens_not_absolute_roundoff_bound": true,
+    "no_new384385_qualification_claim": true,
+    "no_owner_approval_inferred": true
+  }
+}

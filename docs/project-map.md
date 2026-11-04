@@ -106,3 +106,7 @@ legacy/recovery/GUI checks; fullgate остаётся PARTIAL до oldtwo-Q2 neg
 [Контроль390](compatibility-390-validation.md) завершил oldtwo-Q2negative безорбит;
 [assessment387–390](compatibility-387-390-assessment.md) закрывает только restricted
 compatibility A/B/C, не release033/scientificaccuracy gate.
+
+[Состав релиза391](release-scope-391.md): конкретное предложение A/B,
+учебные бюджеты D1/D2, маркировка и порядок оставшейся приёмки.
+Решение владельца ещё требуется; runtime и замороженный кандидат не менялись.

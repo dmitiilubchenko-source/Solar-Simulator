@@ -122,3 +122,7 @@ A testedformats PASS/B restrictedPASS/C PARTIAL, не release gatePASS.
 [390negativecheck](../compatibility-390-validation.md) и
 [итог387–390](../compatibility-387-390-assessment.md):restrictedA/B/C GO;
 историческиеFAIL/STOP не изменены,release033ещёотдельно.
+
+[Политика и приёмка391](../release-scope-391.md): предложения по Q2,
+численным учебным бюджетам и delta qualification. Это не принятые критерии
+и не разрешение запуска; прежние source-bound evidence сохраняют свои области.
