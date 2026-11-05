@@ -110,3 +110,8 @@ compatibility A/B/C, не release033/scientificaccuracy gate.
 [Состав релиза391](release-scope-391.md): конкретное предложение A/B,
 учебные бюджеты D1/D2, маркировка и порядок оставшейся приёмки.
 Решение владельца ещё требуется; runtime и замороженный кандидат не менялись.
+
+[Расследование Q2-392](q2-numerical-investigation-392.md): независимые сохранённые
+метрики, ограниченные standard cold/continuous traces и профиль RHS.
+Причинный вклад reset/roundoff не разделён; три FAIL380 остаются FAIL.
+Offline CLI: scripts/q2_saved_metrics392.py, без интегрирования/текущей аттестации.

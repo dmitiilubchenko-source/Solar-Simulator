@@ -126,3 +126,7 @@ A testedformats PASS/B restrictedPASS/C PARTIAL, не release gatePASS.
 [Политика и приёмка391](../release-scope-391.md): предложения по Q2,
 численным учебным бюджетам и delta qualification. Это не принятые критерии
 и не разрешение запуска; прежние source-bound evidence сохраняют свои области.
+
+[Численная диагностика Q2-392](../q2-numerical-investigation-392.md): повторяемый
+saved-data audit и малый frozen standard subset, без изменения production.
+Старые три FAIL сохранены, единственная причина остаётся UNRESOLVED.

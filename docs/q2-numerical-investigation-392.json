@@ -1,0 +1,3811 @@
+{
+  "stage": 392,
+  "date": "2026-11-05",
+  "status": "BOUNDED_DIAGNOSTIC_STAGE_DONE_CAUSAL_INVESTIGATION_UNRESOLVED",
+  "causal_investigation_complete": false,
+  "source_commit": "399909c9e6ccfdc1c850845bd357f1dda30a0ff3",
+  "candidate_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "candidate_environment_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+  "candidate_native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "historical_artifact_SHA256": {
+    "scripts/two-q2-380-plan.json": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+    "scripts/two-q2-380-completion-plan.json": "b93c534e6b38aedc82df70768f1c471963093645f700e20c741ec87fa6fffb13",
+    "docs/two-q2-380-initial.json": "a6044603119a9e61824ce2c68c116cd1c2743d5e89a558b687546b917e029e38",
+    "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+    "docs/two-q2-380-resources.json": "abd47a995bd7563e2232a9b9e60818dd2721050013ca2aac30894c48a44dd0cb",
+    "scripts/validation/rotation-before380.zip": "222461071aed44c49fcf72a573db52d9e29fbfd94d5da7f0fe749eb080b26147",
+    "scripts/validation/two-q2-380-compatibility.zip": "92746b403f4c576740f2d72bab06c1f56a11303016fd7196a0d29d21ab194e1b",
+    "scripts/validation/two-q2-380-initial-scripts.zip": "3ceef815f41508b7eda78d34cd750e8041b3260db8ae4bc9c52a38c4e24d46bd",
+    "scripts/validation/two-q2-380-initial.npz": "b562f8935059735160a7b8f0c5428af90f84be3e31c5bd57005c357363ef1257",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    "scripts/assess_two_q2_380.py": "55d0864ae69c3c048c9a9a145741f3636e9487c6d339c50963f48e1334756ba9",
+    "scripts/check_two_q2_compatibility380.py": "65084a570a6a4b1aac383f5cbcbc0fef14d5ded63f1d819985c5007442a3b5c2"
+  },
+  "historical_tools": [
+    {
+      "name": "scripts/assess_two_q2_380.py",
+      "expected": "0b5ea98c572a2163fafc36debcb40cae7acdbd8516a87df9cae5aae2fbdec7f0",
+      "current": "55d0864ae69c3c048c9a9a145741f3636e9487c6d339c50963f48e1334756ba9",
+      "historical_exact_Git": "638ccf0759aa989d45d0e63d99210023662a5596",
+      "interpretation": "Known382 path-only change; oldSHA retained."
+    }
+  ],
+  "historical_source_differences": [
+    "src/solar_simulator/app.py",
+    "src/solar_simulator/application_profiles.py",
+    "scripts/validate_two_q2_380.py"
+  ],
+  "metric_source_transition": {
+    "acquisition_SHA256": "1082df27ce85ec4512465dec27ff983b96a9ae636154660884b801ab7a4862fb",
+    "current_SHA256": "23e2c07b264834df91d3996378d43137d19d84c873f082f10af1f3b3061da012",
+    "old_helper_recovered_exactly_and_SHA_verified": true,
+    "all_metric_function_AST_unchanged": true,
+    "change": "Only standalone pinned-data CLI/imports added after acquisitions ended. No scientific result rewritten."
+  },
+  "model": "Autonomous Newton total-degree2 monopoles+both M-Q terms; no Q-Q/higher multipoles/tides/EIH/contacts.",
+  "paths": {
+    "runtime": "Experiment.advance -> validate_experiment -> nbody_rotation.integrate -> RotationDOP853/SciPy -> rawqS snapshots",
+    "forces": "Rust only point masses; Q2 corrections/torques/quaternion evolution Python for both backends.",
+    "historical_observer": "SciPy Rotation.from_quat(rawq) -> R; max normalized r/v/R/S. Rawq not part of old aggregate.",
+    "reference": "Scaled Cartesian/R/body-Pi RK45, independent scalar principal-I forces/torques; common model/IC/binary64/SciPy."
+  },
+  "cases": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "historical_result": "FAIL_RETAINED",
+      "unique_root_cause": "UNRESOLVED",
+      "coarse_fine": {
+        "position": {
+          "maximum": {
+            "value": 1.2884856575671391e-15,
+            "raw_SI_or_dimensionless": 1.546182789080567e-11,
+            "scale": 12000.0,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 0,
+            "delta": [
+              -1.3642420526593924e-11,
+              7.275957614183426e-12,
+              -1.1368683772161603e-13
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.4084467412705994e-16,
+              "scale": 12000.0,
+              "body": "A",
+              "index": 17,
+              "time_seconds": 1062.5
+            },
+            {
+              "value": 1.2884856575671391e-15,
+              "scale": 12000.0,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 8.744658911635815e-16,
+            "raw_SI_or_dimensionless": 2.2367360632257714e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 62,
+            "time_seconds": 3875.0,
+            "largest_component": 1,
+            "delta": [
+              2.220446049250313e-16,
+              -2.220446049250313e-15,
+              1.5265566588595902e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.7599804528656534e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 63,
+              "time_seconds": 3937.5
+            },
+            {
+              "value": 8.744658911635815e-16,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 62,
+              "time_seconds": 3875.0
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 4.3210537632440276e-15,
+            "raw_SI_or_dimensionless": 4.3210537632440276e-15,
+            "scale": 1.0,
+            "body": "A",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 4,
+            "delta": [
+              1.7763568394002505e-15,
+              -1.3322676295501878e-15,
+              -1.8041124150158794e-15,
+              1.3322676295501878e-15,
+              2.4424906541753444e-15,
+              -9.43689570931383e-16,
+              1.6653345369377348e-16,
+              -1.27675647831893e-15,
+              -4.440892098500626e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 4.3210537632440276e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 64,
+              "time_seconds": 4000.0
+            },
+            {
+              "value": 4.2506828117683975e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 49,
+              "time_seconds": 3062.5
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 9.635060437746044e-16,
+            "raw_SI_or_dimensionless": 580.4274287109457,
+            "scale": 6.024118192731613e+17,
+            "body": "A",
+            "index": 61,
+            "time_seconds": 3812.5,
+            "largest_component": 2,
+            "delta": [
+              -32.0,
+              -64.0,
+              -576.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 9.635060437746044e-16,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 61,
+              "time_seconds": 3812.5
+            },
+            {
+              "value": 8.637162546953602e-16,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 60,
+              "time_seconds": 3750.0
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 1.728049298710083e-15,
+            "raw_SI_or_dimensionless": 1.728049298710083e-15,
+            "scale": 1.0,
+            "body": "A",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 0,
+            "delta": [
+              -1.4432899320127035e-15,
+              3.191891195797325e-16,
+              8.881784197001252e-16,
+              -1.1102230246251565e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.728049298710083e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 64,
+              "time_seconds": 4000.0
+            },
+            {
+              "value": 1.6462333851269848e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 49,
+              "time_seconds": 3062.5
+            }
+          ]
+        },
+        "historical_aggregate": 4.3210537632440276e-15,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 64,
+            "time_seconds": 4000.0,
+            "body": "A",
+            "stored_R_F": 4.3210537632440276e-15,
+            "matrix_frobenius_from_q": 4.250441687466957e-15,
+            "angle_rad": 3.0055161402458776e-15,
+            "normalised_q_chord": 1.5027580701229388e-15,
+            "representation_defects": [
+              2.307087819166237e-16,
+              1.6126602427377986e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 64,
+            "time_seconds": 4000.0,
+            "body": "A",
+            "stored_R_F": 4.3210537632440276e-15,
+            "matrix_frobenius_from_q": 4.250441687466957e-15,
+            "angle_rad": 3.0055161402458776e-15,
+            "normalised_q_chord": 1.5027580701229388e-15,
+            "representation_defects": [
+              2.307087819166237e-16,
+              1.6126602427377986e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 7.083804832805334e-16,
+          "naive_trace_acos_max_rad": 2.9802322387695312e-08,
+          "naive_nonzero_count": 21,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "standard_fine": {
+        "position": {
+          "maximum": {
+            "value": 1.072896002834618e-15,
+            "raw_SI_or_dimensionless": 1.2874752034015415e-11,
+            "scale": 12000.0,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 0,
+            "delta": [
+              -9.094947017729282e-12,
+              9.094947017729282e-12,
+              -5.684341886080801e-13
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.160512135557006e-16,
+              "scale": 12000.0,
+              "body": "A",
+              "index": 47,
+              "time_seconds": 2937.5
+            },
+            {
+              "value": 1.072896002834618e-15,
+              "scale": 12000.0,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 1.5383104457250624e-15,
+            "raw_SI_or_dimensionless": 3.93473831873736e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 35,
+            "time_seconds": 2187.5,
+            "largest_component": 1,
+            "delta": [
+              1.1102230246251565e-15,
+              3.774758283725532e-15,
+              2.7755575615628914e-17
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.985594311486346e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 35,
+              "time_seconds": 2187.5
+            },
+            {
+              "value": 1.5383104457250624e-15,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 35,
+              "time_seconds": 2187.5
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 7.086768132709826e-15,
+            "raw_SI_or_dimensionless": 7.086768132709826e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 3,
+            "delta": [
+              1.1102230246251565e-15,
+              3.5388358909926865e-15,
+              -1.4432899320127035e-15,
+              -4.773959005888173e-15,
+              1.3322676295501878e-15,
+              -7.216449660063518e-16,
+              -9.992007221626409e-16,
+              -2.609024107869118e-15,
+              1.2212453270876722e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 3.7338616214294996e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 47,
+              "time_seconds": 2937.5
+            },
+            {
+              "value": 7.086768132709826e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 1.109034478101512e-15,
+            "raw_SI_or_dimensionless": 88.3685464404615,
+            "scale": 7.968061244744546e+16,
+            "body": "B",
+            "index": 43,
+            "time_seconds": 2687.5,
+            "largest_component": 2,
+            "delta": [
+              8.0,
+              1.0,
+              -88.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 7.634528748334668e-16,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 61,
+              "time_seconds": 3812.5
+            },
+            {
+              "value": 1.109034478101512e-15,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 43,
+              "time_seconds": 2687.5
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 2.5957121307442616e-15,
+            "raw_SI_or_dimensionless": 2.5957121307442616e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 3,
+            "delta": [
+              -9.992007221626409e-16,
+              5.551115123125783e-16,
+              1.6653345369377348e-16,
+              2.3245294578089215e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.394717674685353e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 46,
+              "time_seconds": 2875.0
+            },
+            {
+              "value": 2.5957121307442616e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "historical_aggregate": 7.086768132709826e-15,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 64,
+            "time_seconds": 4000.0,
+            "body": "B",
+            "stored_R_F": 7.086768132709826e-15,
+            "matrix_frobenius_from_q": 7.151558003794733e-15,
+            "angle_rad": 5.0569151605321855e-15,
+            "normalised_q_chord": 2.5284575802660928e-15,
+            "representation_defects": [
+              3.5463682156242443e-16,
+              1.331755520475558e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 64,
+            "time_seconds": 4000.0,
+            "body": "B",
+            "stored_R_F": 7.086768132709826e-15,
+            "matrix_frobenius_from_q": 7.151558003794733e-15,
+            "angle_rad": 5.0569151605321855e-15,
+            "normalised_q_chord": 2.5284575802660928e-15,
+            "representation_defects": [
+              3.5463682156242443e-16,
+              1.331755520475558e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 6.47145178374302e-16,
+          "naive_trace_acos_max_rad": 2.9802322387695312e-08,
+          "naive_nonzero_count": 16,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "confirmed": "Real differences of saved normalized quaternion orientations persist; not merely Frobenius reduction/reference error.",
+      "not_established": "Unique proportion from integration truncation, roundoff, cold controller or recentering."
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "historical_result": "FAIL_RETAINED",
+      "unique_root_cause": "UNRESOLVED",
+      "coarse_fine": {
+        "position": {
+          "maximum": {
+            "value": 7.617255265822019e-16,
+            "raw_SI_or_dimensionless": 9.140706318986423e-12,
+            "scale": 12000.0,
+            "body": "B",
+            "index": 19,
+            "time_seconds": 1187.5,
+            "largest_component": 0,
+            "delta": [
+              9.094947017729282e-12,
+              9.094947017729282e-13,
+              -8.526512829121202e-14
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.3298443170412103e-16,
+              "scale": 12000.0,
+              "body": "A",
+              "index": 17,
+              "time_seconds": 1062.5
+            },
+            {
+              "value": 7.617255265822019e-16,
+              "scale": 12000.0,
+              "body": "B",
+              "index": 19,
+              "time_seconds": 1187.5
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 1.140617051206525e-15,
+            "raw_SI_or_dimensionless": 2.917505781007782e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 63,
+            "time_seconds": 3937.5,
+            "largest_component": 0,
+            "delta": [
+              2.886579864025407e-15,
+              -2.220446049250313e-16,
+              3.608224830031759e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.3207343070916521e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 44,
+              "time_seconds": 2750.0
+            },
+            {
+              "value": 1.140617051206525e-15,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 63,
+              "time_seconds": 3937.5
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 7.341808831039677e-15,
+            "raw_SI_or_dimensionless": 7.341808831039677e-15,
+            "scale": 1.0,
+            "body": "A",
+            "index": 58,
+            "time_seconds": 3625.0,
+            "largest_component": 0,
+            "delta": [
+              -4.884981308350689e-15,
+              -8.881784197001252e-16,
+              -1.1102230246251565e-15,
+              1.1102230246251565e-15,
+              -3.885780586188048e-15,
+              1.1102230246251565e-15,
+              -5.551115123125783e-16,
+              -3.1363800445660672e-15,
+              5.551115123125783e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 7.341808831039677e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 58,
+              "time_seconds": 3625.0
+            },
+            {
+              "value": 3.4782066555428905e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 57,
+              "time_seconds": 3562.5
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 1.0343193921498145e-15,
+            "raw_SI_or_dimensionless": 82.41520263276674,
+            "scale": 7.968061244744546e+16,
+            "body": "B",
+            "index": 61,
+            "time_seconds": 3812.5,
+            "largest_component": 0,
+            "delta": [
+              72.0,
+              2.875,
+              -40.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 9.737927147544804e-16,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 30,
+              "time_seconds": 1875.0
+            },
+            {
+              "value": 1.0343193921498145e-15,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 61,
+              "time_seconds": 3812.5
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 2.911293956174702e-15,
+            "raw_SI_or_dimensionless": 2.911293956174702e-15,
+            "scale": 1.0,
+            "body": "A",
+            "index": 58,
+            "time_seconds": 3625.0,
+            "largest_component": 3,
+            "delta": [
+              4.440892098500626e-16,
+              9.159339953157541e-16,
+              5.828670879282072e-16,
+              -2.6645352591003757e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.911293956174702e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 58,
+              "time_seconds": 3625.0
+            },
+            {
+              "value": 2.0267866504968263e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 50,
+              "time_seconds": 3125.0
+            }
+          ]
+        },
+        "historical_aggregate": 7.341808831039677e-15,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 58,
+            "time_seconds": 3625.0,
+            "body": "A",
+            "stored_R_F": 7.341808831039677e-15,
+            "matrix_frobenius_from_q": 7.346600864413249e-15,
+            "angle_rad": 5.19483128989756e-15,
+            "normalised_q_chord": 2.59741564494878e-15,
+            "representation_defects": [
+              1.3405316841811826e-16,
+              1.3641080452931469e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 58,
+            "time_seconds": 3625.0,
+            "body": "A",
+            "stored_R_F": 7.341808831039677e-15,
+            "matrix_frobenius_from_q": 7.346600864413249e-15,
+            "angle_rad": 5.19483128989756e-15,
+            "normalised_q_chord": 2.59741564494878e-15,
+            "representation_defects": [
+              1.3405316841811826e-16,
+              1.3641080452931469e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 7.29627981838114e-16,
+          "naive_trace_acos_max_rad": 2.9802322387695312e-08,
+          "naive_nonzero_count": 22,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "standard_fine": {
+        "position": {
+          "maximum": {
+            "value": 1.2617375364035284e-15,
+            "raw_SI_or_dimensionless": 1.5140850436842342e-11,
+            "scale": 12000.0,
+            "body": "B",
+            "index": 36,
+            "time_seconds": 2250.0,
+            "largest_component": 0,
+            "delta": [
+              1.2732925824820995e-11,
+              8.185452315956354e-12,
+              3.410605131648481e-13
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.6328527506950993e-16,
+              "scale": 12000.0,
+              "body": "A",
+              "index": 38,
+              "time_seconds": 2375.0
+            },
+            {
+              "value": 1.2617375364035284e-15,
+              "scale": 12000.0,
+              "body": "B",
+              "index": 36,
+              "time_seconds": 2250.0
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 2.3708415098327865e-15,
+            "raw_SI_or_dimensionless": 6.0642121766229515e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 1,
+            "delta": [
+              2.886579864025407e-15,
+              5.329070518200751e-15,
+              2.0816681711721685e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 3.647107160081702e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 64,
+              "time_seconds": 4000.0
+            },
+            {
+              "value": 2.3708415098327865e-15,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 9.633424121268789e-15,
+            "raw_SI_or_dimensionless": 9.633424121268789e-15,
+            "scale": 1.0,
+            "body": "A",
+            "index": 57,
+            "time_seconds": 3562.5,
+            "largest_component": 0,
+            "delta": [
+              -6.328271240363392e-15,
+              -1.4432899320127035e-15,
+              9.43689570931383e-16,
+              2.3314683517128287e-15,
+              -5.773159728050814e-15,
+              1.942890293094024e-15,
+              -1.2212453270876722e-15,
+              -2.3037127760972e-15,
+              6.661338147750939e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 9.633424121268789e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 57,
+              "time_seconds": 3562.5
+            },
+            {
+              "value": 4.889710083594006e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 1.2554296514778775e-15,
+            "raw_SI_or_dimensionless": 756.285660316259,
+            "scale": 6.024118192731613e+17,
+            "body": "A",
+            "index": 61,
+            "time_seconds": 3812.5,
+            "largest_component": 1,
+            "delta": [
+              40.0,
+              608.0,
+              448.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.2554296514778775e-15,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 61,
+              "time_seconds": 3812.5
+            },
+            {
+              "value": 1.1746421659327084e-15,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 62,
+              "time_seconds": 3875.0
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 3.4365393085170044e-15,
+            "raw_SI_or_dimensionless": 3.4365393085170044e-15,
+            "scale": 1.0,
+            "body": "A",
+            "index": 57,
+            "time_seconds": 3562.5,
+            "largest_component": 3,
+            "delta": [
+              1.4432899320127035e-15,
+              8.049116928532385e-16,
+              -3.0531133177191805e-16,
+              -2.9976021664879227e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 3.4365393085170044e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 57,
+              "time_seconds": 3562.5
+            },
+            {
+              "value": 1.9565220053615725e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 63,
+              "time_seconds": 3937.5
+            }
+          ]
+        },
+        "historical_aggregate": 9.633424121268789e-15,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 57,
+            "time_seconds": 3562.5,
+            "body": "A",
+            "stored_R_F": 9.633424121268789e-15,
+            "matrix_frobenius_from_q": 9.620462628606953e-15,
+            "angle_rad": 6.8026943628397345e-15,
+            "normalised_q_chord": 3.4013471814198672e-15,
+            "representation_defects": [
+              9.376825613126301e-17,
+              2.7741732560114294e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 57,
+            "time_seconds": 3562.5,
+            "body": "A",
+            "stored_R_F": 9.633424121268789e-15,
+            "matrix_frobenius_from_q": 9.620462628606953e-15,
+            "angle_rad": 6.8026943628397345e-15,
+            "normalised_q_chord": 3.4013471814198672e-15,
+            "representation_defects": [
+              9.376825613126301e-17,
+              2.7741732560114294e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 5.987554473572113e-16,
+          "naive_trace_acos_max_rad": 2.9802322387695312e-08,
+          "naive_nonzero_count": 13,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "confirmed": "Real differences of saved normalized quaternion orientations persist; not merely Frobenius reduction/reference error.",
+      "not_established": "Unique proportion from integration truncation, roundoff, cold controller or recentering."
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "historical_result": "FAIL_RETAINED",
+      "unique_root_cause": "UNRESOLVED",
+      "coarse_fine": {
+        "position": {
+          "maximum": {
+            "value": 6.713200282137146e-16,
+            "raw_SI_or_dimensionless": 2.2737367544323206e-11,
+            "scale": 33869.63979731701,
+            "body": "C",
+            "index": 34,
+            "time_seconds": 2125.0,
+            "largest_component": 0,
+            "delta": [
+              -2.1827872842550278e-11,
+              0.0,
+              6.366462912410498e-12
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.2011154763655792e-16,
+              "scale": 33869.63979731701,
+              "body": "A",
+              "index": 61,
+              "time_seconds": 3812.5
+            },
+            {
+              "value": 5.095209558614028e-16,
+              "scale": 33869.63979731701,
+              "body": "B",
+              "index": 27,
+              "time_seconds": 1687.5
+            },
+            {
+              "value": 6.713200282137146e-16,
+              "scale": 33869.63979731701,
+              "body": "C",
+              "index": 34,
+              "time_seconds": 2125.0
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 1.2907017485205952e-15,
+            "raw_SI_or_dimensionless": 3.3013970893057145e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 46,
+            "time_seconds": 2875.0,
+            "largest_component": 1,
+            "delta": [
+              -1.1102230246251565e-15,
+              3.1086244689504383e-15,
+              5.551115123125783e-17
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.393770736222376e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 46,
+              "time_seconds": 2875.0
+            },
+            {
+              "value": 1.2907017485205952e-15,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 46,
+              "time_seconds": 2875.0
+            },
+            {
+              "value": 1.1512848067828298e-16,
+              "scale": 2.557831112485733,
+              "body": "C",
+              "index": 45,
+              "time_seconds": 2812.5
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 5.625282158101942e-15,
+            "raw_SI_or_dimensionless": 5.625282158101942e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 54,
+            "time_seconds": 3375.0,
+            "largest_component": 2,
+            "delta": [
+              -1.1102230246251565e-15,
+              1.6653345369377348e-15,
+              -3.1086244689504383e-15,
+              -2.3314683517128287e-15,
+              -2.1094237467877974e-15,
+              6.661338147750939e-16,
+              2.4424906541753444e-15,
+              9.43689570931383e-16,
+              8.881784197001252e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 5.029889275267248e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 46,
+              "time_seconds": 2875.0
+            },
+            {
+              "value": 5.625282158101942e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 54,
+              "time_seconds": 3375.0
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 1.2051408820539332e-15,
+            "raw_SI_or_dimensionless": 96.02636356751202,
+            "scale": 7.968061244744546e+16,
+            "body": "B",
+            "index": 36,
+            "time_seconds": 2250.0,
+            "largest_component": 0,
+            "delta": [
+              -96.0,
+              2.25,
+              0.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 7.735500752574683e-16,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 28,
+              "time_seconds": 1750.0
+            },
+            {
+              "value": 1.2051408820539332e-15,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 36,
+              "time_seconds": 2250.0
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 2.046820805059777e-15,
+            "raw_SI_or_dimensionless": 2.046820805059777e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 54,
+            "time_seconds": 3375.0,
+            "largest_component": 2,
+            "delta": [
+              0.0,
+              -1.5265566588595902e-16,
+              1.4432899320127035e-15,
+              1.4432899320127035e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.7954714805344514e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 46,
+              "time_seconds": 2875.0
+            },
+            {
+              "value": 2.046820805059777e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 54,
+              "time_seconds": 3375.0
+            }
+          ]
+        },
+        "historical_aggregate": 5.625282158101942e-15,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 54,
+            "time_seconds": 3375.0,
+            "body": "B",
+            "stored_R_F": 5.625282158101942e-15,
+            "matrix_frobenius_from_q": 5.700479882798984e-15,
+            "angle_rad": 4.030847981144658e-15,
+            "normalised_q_chord": 2.015423990572329e-15,
+            "representation_defects": [
+              1.2018760700445506e-16,
+              1.0590899229784583e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 54,
+            "time_seconds": 3375.0,
+            "body": "B",
+            "stored_R_F": 5.625282158101942e-15,
+            "matrix_frobenius_from_q": 5.700479882798984e-15,
+            "angle_rad": 4.030847981144658e-15,
+            "normalised_q_chord": 2.015423990572329e-15,
+            "representation_defects": [
+              1.2018760700445506e-16,
+              1.0590899229784583e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 6.218551317024927e-16,
+          "naive_trace_acos_max_rad": 2.9802322387695312e-08,
+          "naive_nonzero_count": 10,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "standard_fine": {
+        "position": {
+          "maximum": {
+            "value": 8.922244745623803e-16,
+            "raw_SI_or_dimensionless": 3.0219321571778255e-11,
+            "scale": 33869.63979731701,
+            "body": "C",
+            "index": 39,
+            "time_seconds": 2437.5,
+            "largest_component": 0,
+            "delta": [
+              -2.9103830456733704e-11,
+              7.275957614183426e-12,
+              3.637978807091713e-12
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.7570928103081476e-16,
+              "scale": 33869.63979731701,
+              "body": "A",
+              "index": 60,
+              "time_seconds": 3750.0
+            },
+            {
+              "value": 6.451050151687363e-16,
+              "scale": 33869.63979731701,
+              "body": "B",
+              "index": 52,
+              "time_seconds": 3250.0
+            },
+            {
+              "value": 8.922244745623803e-16,
+              "scale": 33869.63979731701,
+              "body": "C",
+              "index": 39,
+              "time_seconds": 2437.5
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 1.423950676917073e-15,
+            "raw_SI_or_dimensionless": 3.6422253440636096e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 46,
+            "time_seconds": 2875.0,
+            "largest_component": 1,
+            "delta": [
+              -2.220446049250313e-15,
+              2.886579864025407e-15,
+              5.551115123125783e-17
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.626555894311541e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 46,
+              "time_seconds": 2875.0
+            },
+            {
+              "value": 1.423950676917073e-15,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 46,
+              "time_seconds": 2875.0
+            },
+            {
+              "value": 9.960322384178725e-17,
+              "scale": 2.557831112485733,
+              "body": "C",
+              "index": 54,
+              "time_seconds": 3375.0
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 6.215018178946092e-15,
+            "raw_SI_or_dimensionless": 6.215018178946092e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 63,
+            "time_seconds": 3937.5,
+            "largest_component": 3,
+            "delta": [
+              -6.661338147750939e-16,
+              -1.942890293094024e-15,
+              1.887379141862766e-15,
+              4.107825191113079e-15,
+              -8.881784197001252e-16,
+              -8.326672684688674e-16,
+              -1.1102230246251565e-16,
+              3.0531133177191805e-15,
+              -1.7763568394002505e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 3.0042766336301894e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 28,
+              "time_seconds": 1750.0
+            },
+            {
+              "value": 6.215018178946092e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 63,
+              "time_seconds": 3937.5
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 1.6711273620235993e-15,
+            "raw_SI_or_dimensionless": 133.1564516837243,
+            "scale": 7.968061244744546e+16,
+            "body": "B",
+            "index": 63,
+            "time_seconds": 3937.5,
+            "largest_component": 0,
+            "delta": [
+              112.0,
+              -1.625,
+              72.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 5.35331976588776e-16,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 29,
+              "time_seconds": 1812.5
+            },
+            {
+              "value": 1.6711273620235993e-15,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 63,
+              "time_seconds": 3937.5
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 2.1907682601456508e-15,
+            "raw_SI_or_dimensionless": 2.1907682601456508e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 63,
+            "time_seconds": 3937.5,
+            "largest_component": 3,
+            "delta": [
+              6.661338147750939e-16,
+              -1.1102230246251565e-15,
+              -6.106226635438361e-16,
+              -1.6583956430338276e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.2008547301493613e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 43,
+              "time_seconds": 2687.5
+            },
+            {
+              "value": 2.1907682601456508e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 63,
+              "time_seconds": 3937.5
+            }
+          ]
+        },
+        "historical_aggregate": 6.215018178946092e-15,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 63,
+            "time_seconds": 3937.5,
+            "body": "B",
+            "stored_R_F": 6.215018178946092e-15,
+            "matrix_frobenius_from_q": 6.184573678632693e-15,
+            "angle_rad": 4.373153986909009e-15,
+            "normalised_q_chord": 2.1865769934545046e-15,
+            "representation_defects": [
+              3.895826483833661e-16,
+              1.6146354553020154e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 63,
+            "time_seconds": 3937.5,
+            "body": "B",
+            "stored_R_F": 6.215018178946092e-15,
+            "matrix_frobenius_from_q": 6.184573678632693e-15,
+            "angle_rad": 4.373153986909009e-15,
+            "normalised_q_chord": 2.1865769934545046e-15,
+            "representation_defects": [
+              3.895826483833661e-16,
+              1.6146354553020154e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 6.218551317024927e-16,
+          "naive_trace_acos_max_rad": 2.1073424255447017e-08,
+          "naive_nonzero_count": 11,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "confirmed": "Real differences of saved normalized quaternion orientations persist; not merely Frobenius reduction/reference error.",
+      "not_established": "Unique proportion from integration truncation, roundoff, cold controller or recentering."
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "historical_result": "PASS_CONTROL",
+      "unique_root_cause": "UNRESOLVED",
+      "coarse_fine": {
+        "position": {
+          "maximum": {
+            "value": 1.1220537419558497e-15,
+            "raw_SI_or_dimensionless": 3.800355607327632e-11,
+            "scale": 33869.63979731701,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 0,
+            "delta": [
+              3.54702933691442e-11,
+              -1.3642420526593924e-11,
+              -1.1368683772161603e-13
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.143372717133495e-16,
+              "scale": 33869.63979731701,
+              "body": "A",
+              "index": 63,
+              "time_seconds": 3937.5
+            },
+            {
+              "value": 1.1220537419558497e-15,
+              "scale": 33869.63979731701,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            },
+            {
+              "value": 7.983911752701505e-16,
+              "scale": 33869.63979731701,
+              "body": "C",
+              "index": 44,
+              "time_seconds": 2750.0
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 1.9279772581121662e-15,
+            "raw_SI_or_dimensionless": 4.931440214964236e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 19,
+            "time_seconds": 1187.5,
+            "largest_component": 1,
+            "delta": [
+              6.661338147750939e-16,
+              -4.884981308350689e-15,
+              -1.1102230246251565e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 4.818797875739721e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 63,
+              "time_seconds": 3937.5
+            },
+            {
+              "value": 1.9279772581121662e-15,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 19,
+              "time_seconds": 1187.5
+            },
+            {
+              "value": 2.0016006794070762e-16,
+              "scale": 2.557831112485733,
+              "body": "C",
+              "index": 60,
+              "time_seconds": 3750.0
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 1.0018532557700625e-14,
+            "raw_SI_or_dimensionless": 1.0018532557700625e-14,
+            "scale": 1.0,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 3,
+            "delta": [
+              1.9984014443252818e-15,
+              5.689893001203927e-15,
+              -2.886579864025407e-15,
+              -6.439293542825908e-15,
+              6.661338147750939e-16,
+              -2.831068712794149e-15,
+              -4.440892098500626e-16,
+              -1.942890293094024e-15,
+              1.3322676295501878e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.791885325532555e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 63,
+              "time_seconds": 3937.5
+            },
+            {
+              "value": 1.0018532557700625e-14,
+              "scale": 1.0,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 1.3951836694328807e-15,
+            "raw_SI_or_dimensionless": 111.16908925708621,
+            "scale": 7.968061244744546e+16,
+            "body": "B",
+            "index": 39,
+            "time_seconds": 2437.5,
+            "largest_component": 2,
+            "delta": [
+              -56.0,
+              2.5625,
+              -96.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 5.313640505362209e-16,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 61,
+              "time_seconds": 3812.5
+            },
+            {
+              "value": 1.3951836694328807e-15,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 39,
+              "time_seconds": 2437.5
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 3.5215211287394005e-15,
+            "raw_SI_or_dimensionless": 3.5215211287394005e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 64,
+            "time_seconds": 4000.0,
+            "largest_component": 3,
+            "delta": [
+              -6.661338147750939e-16,
+              -1.6653345369377348e-16,
+              7.771561172376096e-16,
+              3.3653635433950058e-15
+            ]
+          },
+          "per_body": [
+            {
+              "value": 1.0004527935380291e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 28,
+              "time_seconds": 1750.0
+            },
+            {
+              "value": 3.5215211287394005e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            }
+          ]
+        },
+        "historical_aggregate": 1.0018532557700625e-14,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 64,
+            "time_seconds": 4000.0,
+            "body": "B",
+            "stored_R_F": 1.0018532557700625e-14,
+            "matrix_frobenius_from_q": 9.94416607389373e-15,
+            "angle_rad": 7.031587264095463e-15,
+            "normalised_q_chord": 3.5157936320477315e-15,
+            "representation_defects": [
+              1.8157906213513976e-16,
+              1.7062671401681965e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 64,
+            "time_seconds": 4000.0,
+            "body": "B",
+            "stored_R_F": 1.0018532557700625e-14,
+            "matrix_frobenius_from_q": 9.94416607389373e-15,
+            "angle_rad": 7.031587264095463e-15,
+            "normalised_q_chord": 3.5157936320477315e-15,
+            "representation_defects": [
+              1.8157906213513976e-16,
+              1.7062671401681965e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 5.152385524801111e-16,
+          "naive_trace_acos_max_rad": 2.9802322387695312e-08,
+          "naive_nonzero_count": 7,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "standard_fine": {
+        "position": {
+          "maximum": {
+            "value": 1.2401808563199674e-15,
+            "raw_SI_or_dimensionless": 4.2004478887085456e-11,
+            "scale": 33869.63979731701,
+            "body": "C",
+            "index": 63,
+            "time_seconds": 3937.5,
+            "largest_component": 0,
+            "delta": [
+              4.001776687800884e-11,
+              1.2732925824820995e-11,
+              -9.094947017729282e-13
+            ]
+          },
+          "per_body": [
+            {
+              "value": 9.774769766671738e-17,
+              "scale": 33869.63979731701,
+              "body": "A",
+              "index": 62,
+              "time_seconds": 3875.0
+            },
+            {
+              "value": 1.0065323961360504e-15,
+              "scale": 33869.63979731701,
+              "body": "B",
+              "index": 64,
+              "time_seconds": 4000.0
+            },
+            {
+              "value": 1.2401808563199674e-15,
+              "scale": 33869.63979731701,
+              "body": "C",
+              "index": 63,
+              "time_seconds": 3937.5
+            }
+          ]
+        },
+        "velocity": {
+          "maximum": {
+            "value": 2.0529168351282775e-15,
+            "raw_SI_or_dimensionless": 5.2510145522368515e-15,
+            "scale": 2.557831112485733,
+            "body": "B",
+            "index": 63,
+            "time_seconds": 3937.5,
+            "largest_component": 1,
+            "delta": [
+              3.1086244689504383e-15,
+              4.218847493575595e-15,
+              3.3306690738754696e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 5.188835602372411e-16,
+              "scale": 2.557831112485733,
+              "body": "A",
+              "index": 62,
+              "time_seconds": 3875.0
+            },
+            {
+              "value": 2.0529168351282775e-15,
+              "scale": 2.557831112485733,
+              "body": "B",
+              "index": 63,
+              "time_seconds": 3937.5
+            },
+            {
+              "value": 3.277893275968736e-16,
+              "scale": 2.557831112485733,
+              "body": "C",
+              "index": 61,
+              "time_seconds": 3812.5
+            }
+          ]
+        },
+        "orientation": {
+          "maximum": {
+            "value": 3.2225167587052165e-15,
+            "raw_SI_or_dimensionless": 3.2225167587052165e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 61,
+            "time_seconds": 3812.5,
+            "largest_component": 5,
+            "delta": [
+              5.551115123125783e-16,
+              7.771561172376096e-16,
+              -9.992007221626409e-16,
+              2.220446049250313e-16,
+              -8.881784197001252e-16,
+              -1.942890293094024e-15,
+              5.551115123125783e-16,
+              1.8318679906315083e-15,
+              -4.440892098500626e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 2.4307926833401567e-15,
+              "scale": 1.0,
+              "body": "A",
+              "index": 39,
+              "time_seconds": 2437.5
+            },
+            {
+              "value": 3.2225167587052165e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 61,
+              "time_seconds": 3812.5
+            }
+          ]
+        },
+        "spin": {
+          "maximum": {
+            "value": 7.914673091894377e-16,
+            "raw_SI_or_dimensionless": 476.78926162404287,
+            "scale": 6.024118192731613e+17,
+            "body": "A",
+            "index": 53,
+            "time_seconds": 3312.5,
+            "largest_component": 2,
+            "delta": [
+              -32.0,
+              160.0,
+              -448.0
+            ]
+          },
+          "per_body": [
+            {
+              "value": 7.914673091894377e-16,
+              "scale": 6.024118192731613e+17,
+              "body": "A",
+              "index": 53,
+              "time_seconds": 3312.5
+            },
+            {
+              "value": 5.729229161254628e-16,
+              "scale": 7.968061244744546e+16,
+              "body": "B",
+              "index": 46,
+              "time_seconds": 2875.0
+            }
+          ]
+        },
+        "quaternion_raw": {
+          "maximum": {
+            "value": 1.3240202353551368e-15,
+            "raw_SI_or_dimensionless": 1.3240202353551368e-15,
+            "scale": 1.0,
+            "body": "B",
+            "index": 63,
+            "time_seconds": 3937.5,
+            "largest_component": 1,
+            "delta": [
+              -5.551115123125783e-16,
+              -1.1934897514720433e-15,
+              5.551115123125783e-17,
+              1.3183898417423734e-16
+            ]
+          },
+          "per_body": [
+            {
+              "value": 9.323004992834188e-16,
+              "scale": 1.0,
+              "body": "A",
+              "index": 39,
+              "time_seconds": 2437.5
+            },
+            {
+              "value": 1.3240202353551368e-15,
+              "scale": 1.0,
+              "body": "B",
+              "index": 63,
+              "time_seconds": 3937.5
+            }
+          ]
+        },
+        "historical_aggregate": 3.2225167587052165e-15,
+        "orientation_precision": {
+          "physical_angle_max": {
+            "index": 61,
+            "time_seconds": 3812.5,
+            "body": "B",
+            "stored_R_F": 3.2225167587052165e-15,
+            "matrix_frobenius_from_q": 3.1353976467122597e-15,
+            "angle_rad": 2.2170609377065818e-15,
+            "normalised_q_chord": 1.1085304688532909e-15,
+            "representation_defects": [
+              3.3304404993032874e-16,
+              2.2548525653538415e-16
+            ]
+          },
+          "matrix_from_exact_q_max": {
+            "index": 61,
+            "time_seconds": 3812.5,
+            "body": "B",
+            "stored_R_F": 3.2225167587052165e-15,
+            "matrix_frobenius_from_q": 3.1353976467122597e-15,
+            "angle_rad": 2.2170609377065818e-15,
+            "normalised_q_chord": 1.1085304688532909e-15,
+            "representation_defects": [
+              3.3304404993032874e-16,
+              2.2548525653538415e-16
+            ]
+          },
+          "stored_R_exact_reduction_max_relative_difference": 0.0,
+          "q_Decimal70_100_max_absolute_difference": 0.0,
+          "representation_defect_max_F": 6.265377682548478e-16,
+          "naive_trace_acos_max_rad": 2.1073424255447017e-08,
+          "naive_nonzero_count": 13,
+          "scope": "Saved quaternion orientations only, not global trajectory error."
+        }
+      },
+      "confirmed": "Real differences of saved normalized quaternion orientations persist; not merely Frobenius reduction/reference error.",
+      "not_established": "Unique proportion from integration truncation, roundoff, cold controller or recentering."
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "status": "NO_CONFIRMED_IMPLEMENTATION_DEFECT; not globally disproven",
+      "sign": "Force/attitude gradients, reaction/angular balance, coordinate covariance and spherical limit; qS/file state exact.",
+      "evidence": "22 saved states at IC and historical comparison maxima, unchanged380 gates; targeted tests; candidate and arithmetic bindings.",
+      "falsifier": "Reproducible force/torque sign or finite-gradient mismatch, changed qS/settings on identical recipe.",
+      "unknown": "Finite samples do not prove correctness at all possible states."
+    },
+    {
+      "id": "H2",
+      "status": "RESET/MESH/REENCODING_CONFIRMED; contribution to individualFAIL UNRESOLVED",
+      "sign": "Cold builds new solver per62.5s packet and moving COM/relative encoding; continuous retains one solver/frame.",
+      "evidence": "318-320 accepted cold vs30continuous, different initialh/dt/nfev; raw qS unchanged; samepacket resume exact.",
+      "falsifier": "If fixed-IC/recipe controls shared identical internal path and no representational differences, reset explanation would fail.",
+      "unknown": "Controller reset, truncation and coordinate-arithmetic effects not separated by existing control."
+    },
+    {
+      "id": "H3",
+      "status": "COMPATIBLE_WITH_ARITHMETIC_SENSITIVITY; not sole-cause proof",
+      "sign": "Saved q differences1e-15; operation ordering/precision can affect adaptive mesh and accumulated error.",
+      "evidence": "Exact normalized quaternion comparison retains all3FAIL, projection/reduction separated, qnorm drift1e-15.",
+      "falsifier": "Independent high-precision endpoint/accepted-edge comparison isolates a much larger method/implementation defect.",
+      "unknown": "No higher-precision integration or exact full coupled solution; roundoff contribution not bounded."
+    },
+    {
+      "id": "H4",
+      "status": "FROBENIUS_REDUCTION_AND_R_CONSTRUCTION_NOT_SOLE_CAUSE; naive angle observer demonstrably unsuitable",
+      "sign": "Repeat norm with exact rational saved inputs and compare exact-normalized quaternion rotations.",
+      "evidence": "Scalar/Fraction norms give same rounded binary64 results; Decimal70/100 retains3FAIL; traceacos produces0/~1e-8 for true saved differences~1e-15.",
+      "falsifier": "Reversed inequality under sufficiently resolved exact-saved-q orientation would implicate metric representation as sole cause.",
+      "unknown": "Historical max combines different bodies/epochs; it is a strict engineering test, not guaranteed asymptotic convergence theorem."
+    },
+    {
+      "id": "H5",
+      "status": "EXCLUDED_AS_COMPUTATIONAL_CAUSE_OF_ORIGINAL_INEQUALITY; limits_absolute_error_interpretation",
+      "sign": "Original coarse-fine/standard-fine uses DOP outputs only, no external reference.",
+      "evidence": "Criterion source and independent replay; reference level R gap6.26/6.78e-11 and fine orthogonality defect~1e-12.",
+      "falsifier": "A dependency of that inequality on independent RK45 values would contradict this classification.",
+      "unknown": "External reference not resolved enough to infer absolute1e-15 global orientation error."
+    }
+  ],
+  "continuous": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "coarse_fine": {
+        "position": {
+          "value": 3.6300789202529417e-13,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 24,
+          "time_seconds": 1500.0
+        },
+        "velocity": {
+          "value": 8.021174552286085e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 9.352658538342102e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "spin": {
+          "value": 1.352761447099934e-11,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 53,
+          "time_seconds": 3312.5
+        },
+        "quaternion_raw": {
+          "value": 3.309331174861676e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "historical_aggregate": 9.352658538342102e-10,
+        "angle_from_saved_q_rad": 6.613328126919229e-10,
+        "exact_q_R_F": 9.35265832951263e-10
+      },
+      "standard_fine": {
+        "position": {
+          "value": 4.010475083495411e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "velocity": {
+          "value": 8.338655771787592e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 15,
+          "time_seconds": 937.5
+        },
+        "orientation": {
+          "value": 1.1979569402525142e-11,
+          "scale": 1.0,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "spin": {
+          "value": 2.3679580442355235e-13,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "quaternion_raw": {
+          "value": 4.695585851517341e-12,
+          "scale": 1.0,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 1.1979569402525142e-11,
+        "angle_from_saved_q_rad": 8.47081059948911e-12,
+        "exact_q_R_F": 1.1979535234091265e-11
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "coarse_fine": {
+        "position": {
+          "value": 1.251571906034232e-13,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 24,
+          "time_seconds": 1500.0
+        },
+        "velocity": {
+          "value": 8.052975697370366e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 9.41591207878758e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "spin": {
+          "value": 1.3524365207172551e-11,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 53,
+          "time_seconds": 3312.5
+        },
+        "quaternion_raw": {
+          "value": 3.33178358939717e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "historical_aggregate": 9.41591207878758e-10,
+        "angle_from_saved_q_rad": 6.658055773661505e-10,
+        "exact_q_R_F": 9.41591277414859e-10
+      },
+      "standard_fine": {
+        "position": {
+          "value": 1.0544226563594008e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 29,
+          "time_seconds": 1812.5
+        },
+        "velocity": {
+          "value": 9.852520890423812e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 1.0189926677934103e-11,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "spin": {
+          "value": 2.2022006922260203e-13,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 40,
+          "time_seconds": 2500.0
+        },
+        "quaternion_raw": {
+          "value": 3.908140973526293e-12,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "historical_aggregate": 1.0189926677934103e-11,
+        "angle_from_saved_q_rad": 7.2053974924256155e-12,
+        "exact_q_R_F": 1.0189970856077396e-11
+      }
+    }
+  ],
+  "cold_continuous_reference": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "coarse",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 3.6353012319216864e-13,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 24,
+          "time_seconds": 1500.0
+        },
+        "velocity": {
+          "value": 8.022143060315462e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 9.353175521647677e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "spin": {
+          "value": 1.3528017284225937e-11,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 53,
+          "time_seconds": 3312.5
+        },
+        "quaternion_raw": {
+          "value": 3.309514348878714e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "historical_aggregate": 9.353175521647677e-10
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 1.1015831549342566e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 2.804760990304917e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.076423097233236e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.363195727464508e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 6.076423097233236e-13
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "standard",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 3.4940862269184315e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 13,
+          "time_seconds": 812.5
+        },
+        "velocity": {
+          "value": 8.600606285206828e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 15,
+          "time_seconds": 937.5
+        },
+        "orientation": {
+          "value": 1.196726858507792e-11,
+          "scale": 1.0,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "spin": {
+          "value": 2.3615279999726174e-13,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "quaternion_raw": {
+          "value": 4.6912910035898525e-12,
+          "scale": 1.0,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 1.196726858507792e-11
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 1.5187822121145586e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 52,
+          "time_seconds": 3250.0
+        },
+        "velocity": {
+          "value": 3.384065866211289e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.077571000526475e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.4406762173013497e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 6.077571000526475e-13
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "level": "fine",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 1.809589901253547e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 2.0012256198936174e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 3.46583769354109e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "spin": {
+          "value": 6.111546663367842e-15,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 40,
+          "time_seconds": 2500.0
+        },
+        "quaternion_raw": {
+          "value": 1.3288460691619235e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "historical_aggregate": 3.46583769354109e-13
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 2.239230711587649e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 3.3218235176195512e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.075331442812161e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.37488333972503e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 6.075331442812161e-13
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "level": "coarse",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 3.6353012319216864e-13,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 24,
+          "time_seconds": 1500.0
+        },
+        "velocity": {
+          "value": 8.023589447960116e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 9.353165564591304e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "spin": {
+          "value": 1.3528019330572668e-11,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 53,
+          "time_seconds": 3312.5
+        },
+        "quaternion_raw": {
+          "value": 3.3095109541524125e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "historical_aggregate": 9.353165564591304e-10
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 1.1692500736096851e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 3.0369641400098024e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.075353199046641e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.3632813753491766e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 6.075353199046641e-13
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "level": "standard",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 3.7871446415436274e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 13,
+          "time_seconds": 812.5
+        },
+        "velocity": {
+          "value": 8.456821936953888e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 15,
+          "time_seconds": 937.5
+        },
+        "orientation": {
+          "value": 1.1968464793394311e-11,
+          "scale": 1.0,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "spin": {
+          "value": 2.366470841273406e-13,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "quaternion_raw": {
+          "value": 4.691517893883301e-12,
+          "scale": 1.0,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 1.1968464793394311e-11
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 1.7469271138437375e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 57,
+          "time_seconds": 3562.5
+        },
+        "velocity": {
+          "value": 4.517680927479758e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.07603161336929e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.3693067699662504e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 6.07603161336929e-13
+      }
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "level": "fine",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 1.2013940213150402e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 1.2064384667676961e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 3.4657639860894415e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "spin": {
+          "value": 6.473105640215556e-15,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 40,
+          "time_seconds": 2500.0
+        },
+        "quaternion_raw": {
+          "value": 1.3293950760408863e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "historical_aggregate": 3.4657639860894415e-13
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 1.2156535087383656e-15,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 56,
+          "time_seconds": 3500.0
+        },
+        "velocity": {
+          "value": 2.2145253802485903e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.080864666250633e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.3650148474331622e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 41,
+          "time_seconds": 2562.5
+        },
+        "historical_aggregate": 6.080864666250633e-13
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "level": "coarse",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 1.2606939510966217e-13,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 24,
+          "time_seconds": 1500.0
+        },
+        "velocity": {
+          "value": 8.05089788439367e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 9.416371059089597e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "spin": {
+          "value": 1.3525201724693519e-11,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 53,
+          "time_seconds": 3312.5
+        },
+        "quaternion_raw": {
+          "value": 3.3319458906680625e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "historical_aggregate": 9.416371059089597e-10
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 3.3227171122996646e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 9.54797332248898e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.548682031691728e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.7304612420731584e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 39,
+          "time_seconds": 2437.5
+        },
+        "historical_aggregate": 6.548682031691728e-13
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "level": "standard",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 2.330324331700802e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 62,
+          "time_seconds": 3875.0
+        },
+        "velocity": {
+          "value": 9.764532104528263e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 1.0391135074005998e-11,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "spin": {
+          "value": 2.259515699919626e-13,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 40,
+          "time_seconds": 2500.0
+        },
+        "quaternion_raw": {
+          "value": 3.984660650895874e-12,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "historical_aggregate": 1.0391135074005998e-11
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 2.982370864480752e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 63,
+          "time_seconds": 3937.5
+        },
+        "velocity": {
+          "value": 9.023436217318058e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.551550504203303e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.830113740246411e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 39,
+          "time_seconds": 2437.5
+        },
+        "historical_aggregate": 6.551550504203303e-13
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "level": "fine",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 2.768267318735015e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 63,
+          "time_seconds": 3937.5
+        },
+        "velocity": {
+          "value": 5.364411534979142e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 3.741831967109681e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "spin": {
+          "value": 5.995443952265212e-15,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 38,
+          "time_seconds": 2375.0
+        },
+        "quaternion_raw": {
+          "value": 1.4436025820556263e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "historical_aggregate": 3.741831967109681e-13
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 3.423799604306599e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 63,
+          "time_seconds": 3937.5
+        },
+        "velocity": {
+          "value": 9.705599101844062e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.552825831055264e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.797739769319404e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 39,
+          "time_seconds": 2437.5
+        },
+        "historical_aggregate": 6.552825831055264e-13
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "level": "coarse",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 1.2606935801012427e-13,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 24,
+          "time_seconds": 1500.0
+        },
+        "velocity": {
+          "value": 8.05337720154363e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 9.416353540953502e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "spin": {
+          "value": 1.3525190826542717e-11,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 53,
+          "time_seconds": 3312.5
+        },
+        "quaternion_raw": {
+          "value": 3.3319400117023066e-10,
+          "scale": 1.0,
+          "body": "B",
+          "index": 55,
+          "time_seconds": 3437.5
+        },
+        "historical_aggregate": 9.416353540953502e-10
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 3.263929050361191e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 63,
+          "time_seconds": 3937.5
+        },
+        "velocity": {
+          "value": 1.04149564660455e-14,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.553250140822696e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.7385559212160236e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 39,
+          "time_seconds": 2437.5
+        },
+        "historical_aggregate": 6.553250140822696e-13
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "level": "standard",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 2.740441500353241e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 62,
+          "time_seconds": 3875.0
+        },
+        "velocity": {
+          "value": 1.022774658942002e-14,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "orientation": {
+          "value": 1.0390676244860706e-11,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "spin": {
+          "value": 2.2641628129775174e-13,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 40,
+          "time_seconds": 2500.0
+        },
+        "quaternion_raw": {
+          "value": 3.984413662024584e-12,
+          "scale": 1.0,
+          "body": "B",
+          "index": 16,
+          "time_seconds": 1000.0
+        },
+        "historical_aggregate": 1.0390676244860706e-11
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 3.3395927972410933e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 63,
+          "time_seconds": 3937.5
+        },
+        "velocity": {
+          "value": 1.1764690302788142e-14,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.554402025305238e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.7269896914831036e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 39,
+          "time_seconds": 2437.5
+        },
+        "historical_aggregate": 6.554402025305238e-13
+      }
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "level": "fine",
+      "cold_vs_continuous": {
+        "position": {
+          "value": 1.797646627094415e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 63,
+          "time_seconds": 3937.5
+        },
+        "velocity": {
+          "value": 5.498667894358409e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 3.738230075427606e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "spin": {
+          "value": 7.067591817310723e-15,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 38,
+          "time_seconds": 2375.0
+        },
+        "quaternion_raw": {
+          "value": 1.4404660353531709e-13,
+          "scale": 1.0,
+          "body": "B",
+          "index": 18,
+          "time_seconds": 1125.0
+        },
+        "historical_aggregate": 3.738230075427606e-13
+      },
+      "cold_vs_fine_RK45": {
+        "position": {
+          "value": 2.396236381557638e-15,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 63,
+          "time_seconds": 3937.5
+        },
+        "velocity": {
+          "value": 9.713857518297133e-15,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.55360451689068e-13,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.7271218635580352e-14,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 39,
+          "time_seconds": 2437.5
+        },
+        "historical_aggregate": 6.55360451689068e-13
+      }
+    }
+  ],
+  "reference_sensitivity": [
+    {
+      "case": "two-bodies",
+      "level_difference": {
+        "position": {
+          "value": 7.744166852695493e-14,
+          "scale": 12000.0,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 3.042647888631918e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.255679007211014e-11,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.877031995290653e-12,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 40,
+          "time_seconds": 2500.0
+        },
+        "historical_aggregate": 6.255679007211014e-11
+      },
+      "matrix_defects": [
+        {
+          "reference_level": 0,
+          "orthogonality_F_max": 1.2616576864814828e-10,
+          "polar_projection_F_max": 6.308321755935603e-11,
+          "determinant_defect_max": 8.921274829987169e-11
+        },
+        {
+          "reference_level": 1,
+          "orthogonality_F_max": 1.2148111606945909e-12,
+          "polar_projection_F_max": 6.07510546723239e-13,
+          "determinant_defect_max": 8.58424442640171e-13
+        }
+      ]
+    },
+    {
+      "case": "three-bodies",
+      "level_difference": {
+        "position": {
+          "value": 2.899227886878248e-14,
+          "scale": 33869.63979731701,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "velocity": {
+          "value": 3.2921594066868564e-13,
+          "scale": 2.557831112485733,
+          "body": "B",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "orientation": {
+          "value": 6.778488043859376e-11,
+          "scale": 1.0,
+          "body": "A",
+          "index": 64,
+          "time_seconds": 4000.0
+        },
+        "spin": {
+          "value": 2.8175542176964797e-12,
+          "scale": 7.968061244744546e+16,
+          "body": "B",
+          "index": 39,
+          "time_seconds": 2437.5
+        },
+        "historical_aggregate": 6.778488043859376e-11
+      },
+      "matrix_defects": [
+        {
+          "reference_level": 0,
+          "orthogonality_F_max": 1.366980477779221e-10,
+          "polar_projection_F_max": 6.834882466588998e-11,
+          "determinant_defect_max": 9.665956923754493e-11
+        },
+        {
+          "reference_level": 1,
+          "orthogonality_F_max": 1.3099669491899387e-12,
+          "polar_projection_F_max": 6.552070190009921e-13,
+          "determinant_defect_max": 9.25592935629993e-13
+        }
+      ]
+    }
+  ],
+  "raw_journals": {
+    "count": 12,
+    "frames_verified": 768,
+    "qS_vs_arrays_exact": true
+  },
+  "new_experiment": {
+    "plan_SHA256": "022fb08abdbfbc202301ecfd3b1134c7ffcb050cb3604c60a4988ad4d91a6550",
+    "supplement_SHA256": "1520a6d328a4afbac319ac7fc505a54b30e0e336fad9ca7941f0982aa458cd82",
+    "selection": "Standard only, both historicalcases/backends (includesPASScontrol), 4cold+2continuous primary trajectories; no tolerance or phase search.",
+    "smokes": [
+      {
+        "backend": "python",
+        "exact_document": true,
+        "nfev": 68
+      },
+      {
+        "backend": "rust",
+        "exact_document": true,
+        "nfev": 68
+      }
+    ],
+    "primary_scientific_trajectories": 6,
+    "same_packet_suffix_trajectories": 4,
+    "observer_noninterference": {
+      "arrays": [
+        {
+          "name": "two-bodies__python__positions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "b6646fb51a4051154bf0a89bf6d475fbf635adfad02e757c6e9e72945556c621"
+        },
+        {
+          "name": "two-bodies__python__velocities",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "82332dddd6e6bc420ef2d266c28025a769b5cd9d4293e429ed11c8b192d9f2ee"
+        },
+        {
+          "name": "two-bodies__python__orientation",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3,
+            3
+          ],
+          "SHA256": "41cfda13bc2e15cdf4141c4ed832afa66e73ce4bef60e619cfa0287e12656a42"
+        },
+        {
+          "name": "two-bodies__python__quaternions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            4
+          ],
+          "SHA256": "2ed4484a886a142ca21b0e79429651d8db15b98c548b1a3893970e6fadf5d917"
+        },
+        {
+          "name": "two-bodies__python__spins",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "945dde2dc8becdb4607832399357fa85bb8911fb3f3502634fec32bd3e9e0ae9"
+        },
+        {
+          "name": "two-bodies__rust__positions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "67a7d5e28f55d03be00acc499d287d9849bcc67ebe038130ed95353376dda4f5"
+        },
+        {
+          "name": "two-bodies__rust__velocities",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "94c746063986584b309c94fd3efc441ab763c4fc9a3a9071ad34b47735e41bbe"
+        },
+        {
+          "name": "two-bodies__rust__orientation",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3,
+            3
+          ],
+          "SHA256": "eb4896588b0ccedca9d354cb2b64b2316a0e0359bbf64996d6bbd639e75e7d71"
+        },
+        {
+          "name": "two-bodies__rust__quaternions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            4
+          ],
+          "SHA256": "1a91f8e9576810962344cda9a516d6686ede3a9a5651e96ae10d1df960051062"
+        },
+        {
+          "name": "two-bodies__rust__spins",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "b48ca8c6ecb86dd15bfbab560363e30e8227e008fe35dbe62ef607ae6e783622"
+        },
+        {
+          "name": "two-bodies__continuous__positions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "1937132ac3ead0be60cc383a9780a0c98dbdcf6f8c10609ee50e735b3102f50e"
+        },
+        {
+          "name": "two-bodies__continuous__velocities",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "8c2a11731df9961ade425ea24c6645d0b1f6f90cc53486781aed5480834997e5"
+        },
+        {
+          "name": "two-bodies__continuous__orientation",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3,
+            3
+          ],
+          "SHA256": "a5b310f3a94b3fd1e7faec099b476e4a1a63969d7548047ae59e28e5dac8062e"
+        },
+        {
+          "name": "two-bodies__continuous__quaternions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            4
+          ],
+          "SHA256": "4e5a549017f4e55257d682ff2c59f591cd229bd94d22b848585b1e32b83e9f93"
+        },
+        {
+          "name": "two-bodies__continuous__spins",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "eafd7899399a6b8bc7e799dffa15055c845d89720daded45b56573190f3dbd7c"
+        },
+        {
+          "name": "three-bodies__python__positions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            3,
+            3
+          ],
+          "SHA256": "7210ad34a75015eb619b149b7865f66ba83c1338f71335300568f2aa9f3c3e85"
+        },
+        {
+          "name": "three-bodies__python__velocities",
+          "dtype": "float64",
+          "shape": [
+            65,
+            3,
+            3
+          ],
+          "SHA256": "ff0d500a166396ff15da0a1f39701e5eb4fe6433f66f9ba1549d2d9c6ef419ec"
+        },
+        {
+          "name": "three-bodies__python__orientation",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3,
+            3
+          ],
+          "SHA256": "ada89fbce27663031fe6e740b4b222c9fa66de30f09f78356f5dc5e742cee226"
+        },
+        {
+          "name": "three-bodies__python__quaternions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            4
+          ],
+          "SHA256": "82b3b609c1d5d59312302a619263e07f02c49aad683d3db5bd1433e15780fb78"
+        },
+        {
+          "name": "three-bodies__python__spins",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "ee0cd7434b9a2a84929255341a8c744330405fb14095ca06b62a4558639192ee"
+        },
+        {
+          "name": "three-bodies__rust__positions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            3,
+            3
+          ],
+          "SHA256": "49e55bd7a8f36f4c7ba0ed6516d7df15f85d9c97df8fc70951bfee15642e5486"
+        },
+        {
+          "name": "three-bodies__rust__velocities",
+          "dtype": "float64",
+          "shape": [
+            65,
+            3,
+            3
+          ],
+          "SHA256": "d0eeada230a5fce243d7c53a89f5f0b5522021c55ec96b9b322b7f0a5f0565de"
+        },
+        {
+          "name": "three-bodies__rust__orientation",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3,
+            3
+          ],
+          "SHA256": "0979df65cae6751181725986f9abe4552e7505265abc27807bdef650e01207df"
+        },
+        {
+          "name": "three-bodies__rust__quaternions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            4
+          ],
+          "SHA256": "ee1e116ae9dd3b037ebdb36ef9674770b54b585d693fca2cd8c5dad621c4217e"
+        },
+        {
+          "name": "three-bodies__rust__spins",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "a0bf67a4f8fce7195335cfb5847d1eb843cb4fed212669b5b670d6064604aafd"
+        },
+        {
+          "name": "three-bodies__continuous__positions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            3,
+            3
+          ],
+          "SHA256": "235cae88c8f28efe0fa600d11741e3d3b7709350f5c48ec491110c83a82346ba"
+        },
+        {
+          "name": "three-bodies__continuous__velocities",
+          "dtype": "float64",
+          "shape": [
+            65,
+            3,
+            3
+          ],
+          "SHA256": "46894988be7ee4bb7637e014e8dd59d44e02f94e07683840f812ba0a2dbeaf81"
+        },
+        {
+          "name": "three-bodies__continuous__orientation",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3,
+            3
+          ],
+          "SHA256": "c18acc85623fcf498e9138fcdd772952b922dfc781f03cb41f75a4f653a9708c"
+        },
+        {
+          "name": "three-bodies__continuous__quaternions",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            4
+          ],
+          "SHA256": "1716ed15d1a01b9c585b1c5c36df0a3b2ce50db62595798c85105ff4eb6460d0"
+        },
+        {
+          "name": "three-bodies__continuous__spins",
+          "dtype": "float64",
+          "shape": [
+            65,
+            2,
+            3
+          ],
+          "SHA256": "43254c96bb97f5dc6cec7919fb15989caa2c5d2549a9e33a4984884b2d35614a"
+        }
+      ],
+      "new_old_all_bytes_exact": true,
+      "initial_arrays_bytes_preserved": true,
+      "midpoint_saved_numbers_bytes_exact": true,
+      "suffix_final_fields_nonzero": true,
+      "note": "Endpoint document equality plus nonzero finite binary64 fields excludes signed-zero ambiguity. Smoke originally used document equality, not raw byte hash."
+    },
+    "step_statistics": [
+      {
+        "case": "two-bodies",
+        "backend": "python",
+        "recipe": "cold64",
+        "RHS_calls": 4352,
+        "native_calls": 0,
+        "accepted_steps": 320,
+        "attempts": 320,
+        "rejected_attempts": 0,
+        "max_estimated_error_norm": 9.55208576011383e-05,
+        "internal_dt_range": [
+          0.04058168248341607,
+          49.26265613482417
+        ],
+        "packet_initial_h_range": [
+          0.04058168248341607,
+          0.059473833345950466
+        ],
+        "packets_with_not5steps": [],
+        "primary_CPU_seconds": 1.6875,
+        "primary_wall_seconds": 1.6777273999759927,
+        "raw_rhs_wall_seconds": 1.5329372981213965
+      },
+      {
+        "case": "two-bodies",
+        "backend": "rust",
+        "recipe": "cold64",
+        "RHS_calls": 4352,
+        "native_calls": 4352,
+        "accepted_steps": 320,
+        "attempts": 320,
+        "rejected_attempts": 0,
+        "max_estimated_error_norm": 0.00019602447410982846,
+        "internal_dt_range": [
+          0.04058168248341624,
+          46.799688436767084
+        ],
+        "packet_initial_h_range": [
+          0.04058168248341624,
+          0.059473833345950466
+        ],
+        "packets_with_not5steps": [],
+        "primary_CPU_seconds": 1.59375,
+        "primary_wall_seconds": 1.6112228000420146,
+        "raw_rhs_wall_seconds": 1.4702641988988034
+      },
+      {
+        "case": "two-bodies",
+        "backend": "python",
+        "recipe": "continuous",
+        "RHS_calls": 443,
+        "native_calls": 0,
+        "accepted_steps": 30,
+        "attempts": 30,
+        "rejected_attempts": 0,
+        "max_estimated_error_norm": 0.984521378659496,
+        "internal_dt_range": [
+          0.04925057170261823,
+          174.0521577095144
+        ],
+        "packet_initial_h_range": [
+          0.04925057170261823,
+          0.04925057170261823
+        ],
+        "packets_with_not5steps": [],
+        "primary_CPU_seconds": 0.15625,
+        "primary_wall_seconds": 0.16969010001048446,
+        "raw_rhs_wall_seconds": 0.15464339969912544
+      },
+      {
+        "case": "three-bodies",
+        "backend": "python",
+        "recipe": "cold64",
+        "RHS_calls": 4328,
+        "native_calls": 0,
+        "accepted_steps": 318,
+        "attempts": 318,
+        "rejected_attempts": 0,
+        "max_estimated_error_norm": 0.00012362390004019098,
+        "internal_dt_range": [
+          0.04111106947038273,
+          56.11736716314806
+        ],
+        "packet_initial_h_range": [
+          0.04111106947038273,
+          0.060171521237628436
+        ],
+        "packets_with_not5steps": [
+          {
+            "index": 12,
+            "steps": 4
+          },
+          {
+            "index": 37,
+            "steps": 4
+          }
+        ],
+        "primary_CPU_seconds": 1.671875,
+        "primary_wall_seconds": 1.6710182999959216,
+        "raw_rhs_wall_seconds": 1.52802769880509
+      },
+      {
+        "case": "three-bodies",
+        "backend": "rust",
+        "recipe": "cold64",
+        "RHS_calls": 4352,
+        "native_calls": 4352,
+        "accepted_steps": 320,
+        "attempts": 320,
+        "rejected_attempts": 0,
+        "max_estimated_error_norm": 0.0002448061767337108,
+        "internal_dt_range": [
+          0.04111106947038284,
+          53.026021394514814
+        ],
+        "packet_initial_h_range": [
+          0.04111106947038284,
+          0.060171521237628436
+        ],
+        "packets_with_not5steps": [],
+        "primary_CPU_seconds": 1.625,
+        "primary_wall_seconds": 1.6160539999837056,
+        "raw_rhs_wall_seconds": 1.46930520090973
+      },
+      {
+        "case": "three-bodies",
+        "backend": "python",
+        "recipe": "continuous",
+        "RHS_calls": 467,
+        "native_calls": 0,
+        "accepted_steps": 30,
+        "attempts": 32,
+        "rejected_attempts": 2,
+        "max_estimated_error_norm": 1.508728253930798,
+        "internal_dt_range": [
+          0.049889467856505,
+          173.69246560556894
+        ],
+        "packet_initial_h_range": [
+          0.049889467856505,
+          0.049889467856505
+        ],
+        "packets_with_not5steps": [],
+        "primary_CPU_seconds": 0.1875,
+        "primary_wall_seconds": 0.1872080999892205,
+        "raw_rhs_wall_seconds": 0.17096779926214367
+      }
+    ],
+    "boundary_checks": [
+      {
+        "case": "two-bodies",
+        "backend": "python",
+        "raw_qS_boundary_exact": true,
+        "independent_encode_decode_roundtrip_max_position_m": 1.8190449138500806e-12,
+        "independent_encode_decode_roundtrip_max_velocity_m_s": 4.441434166503682e-16,
+        "quaternion_norm_drift_max": 7.771561172376096e-16,
+        "note": "Roundtrip reconstructed using same coordinate arithmetic, not measured impulse or proven cause of global error. No q renormalization at packet boundary."
+      },
+      {
+        "case": "two-bodies",
+        "backend": "rust",
+        "raw_qS_boundary_exact": true,
+        "independent_encode_decode_roundtrip_max_position_m": 1.8190449138500806e-12,
+        "independent_encode_decode_roundtrip_max_velocity_m_s": 4.449557262054371e-16,
+        "quaternion_norm_drift_max": 7.771561172376096e-16,
+        "note": "Roundtrip reconstructed using same coordinate arithmetic, not measured impulse or proven cause of global error. No q renormalization at packet boundary."
+      },
+      {
+        "case": "three-bodies",
+        "backend": "python",
+        "raw_qS_boundary_exact": true,
+        "independent_encode_decode_roundtrip_max_position_m": 3.637978807091713e-12,
+        "independent_encode_decode_roundtrip_max_velocity_m_s": 4.484050470211362e-16,
+        "quaternion_norm_drift_max": 6.661338147750939e-16,
+        "note": "Roundtrip reconstructed using same coordinate arithmetic, not measured impulse or proven cause of global error. No q renormalization at packet boundary."
+      },
+      {
+        "case": "three-bodies",
+        "backend": "rust",
+        "raw_qS_boundary_exact": true,
+        "independent_encode_decode_roundtrip_max_position_m": 2.0344862341713998e-12,
+        "independent_encode_decode_roundtrip_max_velocity_m_s": 4.585973723508303e-16,
+        "quaternion_norm_drift_max": 1.2212453270876722e-15,
+        "note": "Roundtrip reconstructed using same coordinate arithmetic, not measured impulse or proven cause of global error. No q renormalization at packet boundary."
+      }
+    ],
+    "calls_scope": "Observed primary RHS/native counts only; benchmark counters separate. Smokes/suffixes/tests all included in CPU budget, not incorrectly folded into primary nfev.",
+    "primary_RHS_calls": 18294,
+    "primary_native_calls": 8704
+  },
+  "independent_fields": {
+    "states": 22,
+    "unchanged_criteria": "force/torque2e-6/reaction1e-13/angular2e-12",
+    "max_force_gradient_relative": 7.318452806363941e-10,
+    "max_torque_gradient_relative": 1.8848982832912345e-08,
+    "max_reaction": 1.286987244485582e-16,
+    "max_angular_balance": 2.5104266577708015e-16
+  },
+  "performance": [
+    {
+      "case": "two-bodies",
+      "backend": "python",
+      "median_RHS_CPU_us": 312.5,
+      "median_RHS_wall_us": 338.42650009319186,
+      "wall_RHS_us_range": [
+        326.46950014168397,
+        356.74999991897494
+      ],
+      "profile_corrections_inclusive_fraction": 0.6125154825142852,
+      "profile_R_inclusive_fraction": 0.114533338804729,
+      "profile_constant_Q_fraction": 0.03393046916938353,
+      "R_constructions_per_RHS": 4.0,
+      "Q_constructions_per_RHS": 2.0,
+      "optimistic_Amdahl_R_reuse_only": 1.0607453534777018,
+      "optimistic_Amdahl_R_and_constant_Q": 1.1003486481418256,
+      "interpretation": "cProfile attribution is perturbed timing, overlapping inclusive shares not additive except these distinct R/Q calls. Amdahl is optimistic upper estimate, not measured speedup. CPU batches quantized on Windows."
+    },
+    {
+      "case": "two-bodies",
+      "backend": "rust",
+      "median_RHS_CPU_us": 312.5,
+      "median_RHS_wall_us": 330.8590000960976,
+      "wall_RHS_us_range": [
+        313.28000011853874,
+        331.0725002666004
+      ],
+      "profile_corrections_inclusive_fraction": 0.6416670622300278,
+      "profile_R_inclusive_fraction": 0.11835255771269439,
+      "profile_constant_Q_fraction": 0.03493449054353736,
+      "R_constructions_per_RHS": 4.0,
+      "Q_constructions_per_RHS": 2.0,
+      "optimistic_Amdahl_R_reuse_only": 1.0628983703604042,
+      "optimistic_Amdahl_R_and_constant_Q": 1.1038877229366553,
+      "interpretation": "cProfile attribution is perturbed timing, overlapping inclusive shares not additive except these distinct R/Q calls. Amdahl is optimistic upper estimate, not measured speedup. CPU batches quantized on Windows."
+    },
+    {
+      "case": "three-bodies",
+      "backend": "python",
+      "median_RHS_CPU_us": 312.5,
+      "median_RHS_wall_us": 344.1515000304207,
+      "wall_RHS_us_range": [
+        340.3099998831749,
+        346.4289999101311
+      ],
+      "profile_corrections_inclusive_fraction": 0.6049339554225301,
+      "profile_R_inclusive_fraction": 0.11541431392029378,
+      "profile_constant_Q_fraction": 0.03267896592342937,
+      "R_constructions_per_RHS": 4.0,
+      "Q_constructions_per_RHS": 2.0,
+      "optimistic_Amdahl_R_reuse_only": 1.0612412132665494,
+      "optimistic_Amdahl_R_and_constant_Q": 1.0993675725024228,
+      "interpretation": "cProfile attribution is perturbed timing, overlapping inclusive shares not additive except these distinct R/Q calls. Amdahl is optimistic upper estimate, not measured speedup. CPU batches quantized on Windows."
+    },
+    {
+      "case": "three-bodies",
+      "backend": "rust",
+      "median_RHS_CPU_us": 312.5,
+      "median_RHS_wall_us": 323.3375001582317,
+      "wall_RHS_us_range": [
+        315.4705002089031,
+        363.262000028044
+      ],
+      "profile_corrections_inclusive_fraction": 0.637629859551869,
+      "profile_R_inclusive_fraction": 0.11737875094089494,
+      "profile_constant_Q_fraction": 0.03464258831572983,
+      "R_constructions_per_RHS": 4.0,
+      "Q_constructions_per_RHS": 2.0,
+      "optimistic_Amdahl_R_reuse_only": 1.0623485743611778,
+      "optimistic_Amdahl_R_and_constant_Q": 1.102939510447423,
+      "interpretation": "cProfile attribution is perturbed timing, overlapping inclusive shares not additive except these distinct R/Q calls. Amdahl is optimistic upper estimate, not measured speedup. CPU batches quantized on Windows."
+    }
+  ],
+  "optimization_proposals": [
+    {
+      "name": "Reuse same R within one RHS figure field/angular_velocity",
+      "measured": "4R constructions/RHS; profile R share11.5-11.8%; only two distinct q.",
+      "expected": "Optimistic whole RHS1.06x if half R work eliminated; not measured speedup.",
+      "risk": "May change input validation/array layout/FP operations; preserve contracts and prove same RHS/trajectory before use.",
+      "implemented": false
+    },
+    {
+      "name": "Prepare constant inertia-derived specificQ once per integrate invocation",
+      "measured": "2constantQ constructions/RHS,3.3-3.5%profile share.",
+      "expected": "Combined optimistic R+Q wholeRHS~1.10x, not measured.",
+      "risk": "Keep readonly arrays/validation and exact arithmetic; requires Q2 qualification, affectsonefigure too.",
+      "implemented": false
+    },
+    {
+      "name": "Warm/persistent solver to reduce startup work",
+      "measured": "Cold17384primaryRHS/4jobs; continuous910/2Pythonjobs. MatchedPython2body4352/443,3body4328/467.",
+      "expected": "Many fewer calls but scientifically different recipe/precision; not a behavior-preserving optimization.",
+      "risk": "Changes mesh, COM arithmetic, numerical accuracy, checkpoint/controller lifecycle. No production GO.",
+      "implemented": false
+    }
+  ],
+  "performance_limits": [
+    "cProfile perturbs time; inclusive times overlap",
+    "200-call CPU batches quantized on Windows; wall ranges saved",
+    "Not measured actual allocation profile or longrun leaks",
+    "SmallN2/3 only, no claim for300bodies",
+    "No optimized implementation or after measurements"
+  ],
+  "preparation_failures": [
+    {
+      "stage": "postprocess",
+      "kind": "wrong diagnostic import relative_coordinates; corrected to coordinates",
+      "production_issue": false
+    },
+    {
+      "stage": "new observer unit test",
+      "kind": "Unrealistic exact-zero assertion for scaled q in finite Decimal70; retained1FAIL8PASS log. q/-q exact test and independently rational scale invariance with precision-based1e-67 bound; no380gate changed.",
+      "production_issue": false
+    }
+  ],
+  "policy_A_D1": "STILL_PROPOSAL_OWNER_REQUIRED",
+  "production_changes": false,
+  "candidate_changed": false,
+  "historical_results_modified": false,
+  "decision": {
+    "code_fix": "NO-GO: no isolated implementation defect",
+    "optimization_implementation": "NO-GO within392; proposal only, separate approval/qualification",
+    "further_causal_work": "GO proposal for one controlled fixed-frame/cold-vs-warm or highprecision local-edge contrast; no automatic execution, no full matrix.",
+    "release": "NO-GO; three380FAIL and391 owner decisions remain open"
+  },
+  "validation": {
+    "targeted_tests": "13PASS0FAIL0skip",
+    "source_environment_freeze": true,
+    "historical_SHA_unchanged": true,
+    "runtime_Rust_diff_empty": true,
+    "doc_links_and_inventory": true,
+    "public_offline_CLI": true,
+    "full_check_project_run": false
+  },
+  "resources": {
+    "CPU_seconds": 35.546875,
+    "active_wall_seconds": 33.03723119996721,
+    "attempts": [
+      {
+        "name": "offline",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 4.34375,
+        "worker_CPU_seconds": 3.625,
+        "supervisor_whole_process_CPU_seconds": 0.71875,
+        "active_wall_seconds": 5.280029699963052,
+        "worker_private_peak_sampled": 119926784,
+        "worker_rss_peak_sampled": 123383808,
+        "supervisor_private_peak_OS": 37396480,
+        "supervisor_private_sampled": 36757504,
+        "supervisor_RSS_sampled": 28475392,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      },
+      {
+        "name": "experiment",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 16.921875,
+        "worker_CPU_seconds": 14.84375,
+        "supervisor_whole_process_CPU_seconds": 2.078125,
+        "active_wall_seconds": 15.264117199985776,
+        "worker_private_peak_sampled": 136364032,
+        "worker_rss_peak_sampled": 135065600,
+        "supervisor_private_peak_OS": 37380096,
+        "supervisor_private_sampled": 36827136,
+        "supervisor_RSS_sampled": 28504064,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      },
+      {
+        "name": "postprocess",
+        "complete": false,
+        "exit_code": 1,
+        "limit_reason": null,
+        "CPU_seconds": 0.46875,
+        "worker_CPU_seconds": 0.296875,
+        "supervisor_whole_process_CPU_seconds": 0.171875,
+        "active_wall_seconds": 0.42480979999527335,
+        "worker_private_peak_sampled": 71651328,
+        "worker_rss_peak_sampled": 47824896,
+        "supervisor_private_peak_OS": 37400576,
+        "supervisor_private_sampled": 36773888,
+        "supervisor_RSS_sampled": 28532736,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      },
+      {
+        "name": "postprocess2",
+        "complete": false,
+        "exit_code": 1,
+        "limit_reason": null,
+        "CPU_seconds": 2.65625,
+        "worker_CPU_seconds": 2.203125,
+        "supervisor_whole_process_CPU_seconds": 0.453125,
+        "active_wall_seconds": 2.4668943000142463,
+        "worker_private_peak_sampled": 144891904,
+        "worker_rss_peak_sampled": 122068992,
+        "supervisor_private_peak_OS": 37388288,
+        "supervisor_private_sampled": 36757504,
+        "supervisor_RSS_sampled": 28848128,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      },
+      {
+        "name": "tests",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 2.640625,
+        "worker_CPU_seconds": 2.171875,
+        "supervisor_whole_process_CPU_seconds": 0.46875,
+        "active_wall_seconds": 2.24133189994609,
+        "worker_private_peak_sampled": 144891904,
+        "worker_rss_peak_sampled": 136814592,
+        "supervisor_private_peak_OS": 37380096,
+        "supervisor_private_sampled": 36827136,
+        "supervisor_RSS_sampled": 28921856,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      },
+      {
+        "name": "fields",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 2.40625,
+        "worker_CPU_seconds": 1.9375,
+        "supervisor_whole_process_CPU_seconds": 0.46875,
+        "active_wall_seconds": 2.083049500011839,
+        "worker_private_peak_sampled": 144670720,
+        "worker_rss_peak_sampled": 125063168,
+        "supervisor_private_peak_OS": 37371904,
+        "supervisor_private_sampled": 36757504,
+        "supervisor_RSS_sampled": 28856320,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      },
+      {
+        "name": "byteaudit",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 0.5625,
+        "worker_CPU_seconds": 0.34375,
+        "supervisor_whole_process_CPU_seconds": 0.21875,
+        "active_wall_seconds": 0.39741690002847463,
+        "worker_private_peak_sampled": 38109184,
+        "worker_rss_peak_sampled": 47509504,
+        "supervisor_private_peak_OS": 37367808,
+        "supervisor_private_sampled": 36761600,
+        "supervisor_RSS_sampled": 28536832,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      },
+      {
+        "name": "finalchecks",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 5.546875,
+        "worker_CPU_seconds": 4.609375,
+        "supervisor_whole_process_CPU_seconds": 0.9375,
+        "active_wall_seconds": 4.879581900022458,
+        "worker_private_peak_sampled": 153141248,
+        "worker_rss_peak_sampled": 151089152,
+        "supervisor_private_peak_OS": 37453824,
+        "supervisor_private_sampled": 36823040,
+        "supervisor_RSS_sampled": 28725248,
+        "limitations": "PrivateUsage distinct from RSS; worker tree sampled50ms, discovered finalCPU handles; supervisor peak commit OS metric. Short unseen processes/peaks possible, not hardquota. Launcher startup wall before script/record tail not measured."
+      }
+    ]
+  },
+  "resource_summary": {
+    "measured_CPU_seconds": 35.546875,
+    "active_wall_seconds": 33.03723119996721,
+    "worker_private_peak_sampled": 153141248,
+    "worker_RSS_peak_sampled": 151089152,
+    "supervisor_peak_commit_OS": 37453824,
+    "conservative_sum_worker_supervisor_peaks": 190595072,
+    "artifact_bytes_before_final_notes_archive": 6698530,
+    "files_at_close": 71,
+    "peak_file_count": "NOT_INSTRUMENTED; final inventory not asserted to be exact peak",
+    "limits_unchanged": true,
+    "limit_stops": 0,
+    "limitations": "CPU includes actual worker and whole supervisor process CPU and all controlled failed attempts; outer venv launcher/record-tail and manual preparation/read/edit CPU not separately captured. Wall is active job sum, not whole chat duration. Sampled worker memory plus OS supervisor peak, no hardquota. Git/CI/backup separate."
+  },
+  "step_counter_semantics_source": {
+    "file": "scipy/integrate/_ivp/rk.py",
+    "SHA256": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+    "n_stages": 12,
+    "attempts": "Logged _estimate_error_norm calls, cross-checked nfev_delta/12 within _step_impl; dense output not included."
+  },
+  "self_review": {
+    "unique_roundoff_cause_not_claimed": true,
+    "old_FAIL_and_scientific_SHA_unchanged": true,
+    "metrics_not_global_physical_error": true,
+    "all6_trajectories_dtype_shape_bytes_exact": true,
+    "reference_not_used_in_original_convergence": true,
+    "profiling_not_measured_optimization": true,
+    "no_production_or_candidate_change": true,
+    "causal_investigation_left_UNRESOLVED": true
+  },
+  "format_note": "Compact maxima/component summaries only. Full per-epoch/per-body vectors and traces in separate raw392 manifest/archive; no metric value or criterion changed by compaction."
+}
