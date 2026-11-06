@@ -70,6 +70,11 @@ def rotation_matrix(quaternion):
 
 def angular_velocity(figure, quaternion, spin):
     rotation = rotation_matrix(quaternion)
+    return _angular_velocity_with_matrix(figure, rotation, spin)
+
+
+def _angular_velocity_with_matrix(figure, rotation, spin):
+    """Internal: use the matrix prepared from this RHS's validated quaternion."""
     return rotation @ ((rotation.T @ _vector(spin, 3, "S"))/figure.moments)
 
 
