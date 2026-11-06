@@ -139,3 +139,8 @@ saved-data audit и малый frozen standard subset, без изменения
 [Прототип Q2-performance394](../q2-performance-prototype-394.md): два worktrees,
 одна R/figure/RHS, exact finite contrasts и measured paired timing.
 GO TO REVIEW не меняет production, три FAIL380 или release033 NO-GO.
+
+[Review395](../q2-optimization-review-395.md): full source/environment/native
+fingerprints отдельного кандидата,36pairedepochs,6actualGUIjourneys,76unique tests.
+[Q2 qualification plan](../q2-optimized-qualification-protocol-395.md) не выполнен;
+старые receipts не присваиваются новому source, два harnessFAIL сохранены.

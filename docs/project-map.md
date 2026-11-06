@@ -124,3 +124,8 @@ Tools: scripts/q2_fixed_frame393.py и scripts/q2_frame_observer393.py; не run
 [Изолированный R-reuse394](q2-performance-prototype-394.md): локальный branch
 от frozen033, exact short r/v/q/S/RHS/persistence, five-series timing.
 GO TO REVIEW, не внедрение/новая qualification; helper и exact patch вне runtime.
+
+[Review/кандидат395](q2-optimization-review-395.md): отдельный source f723a21,
+индивидуальная проверка raw timing/error precedence и0/1/2Q2+actualTk.
+[Следующая scientific qualification](q2-optimized-qualification-protocol-395.md)
+только спланирована; ни optimized runtime в dev, ни новый scientificPASS не объявлены.
