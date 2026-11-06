@@ -19,3 +19,6 @@ rust/solar_adaptive/LICENSE-SCIPY.txt -text
 scripts/validation/newton384/*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
 
 scripts/validation/annual385/* -text
+
+# Exact unified patch bytes; blank context lines are structural, not source whitespace.
+scripts/validation/q2-r-reuse394.patch -text whitespace=-blank-at-eol,-blank-at-eof

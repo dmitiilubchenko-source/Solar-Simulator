@@ -260,6 +260,14 @@ brace-path до исполнения; Git quoted Unicode filename вызвал W
 при подсчёте размера checkout. Исправлены способ вызова и ls-files -z;
 физика/данные/численные критерии этим не менялись. Все10guarded jobs успешны.
 
+Первая фиксация отчёта обнаружила отдельный packaging недочёт: новый .patch
+не имел byte-stable Git attribute, а diff-check считал blank context lines
+trailing whitespace; PowerShell продолжил цепочку после ненулевого кода.
+Отдельное точечное правило -text сохраняет SHA при Windows checkout,
+whitespace attribute учитывает служебную структуру именно этого patch.
+Проверен filtered checkout с core.autocrlf=true и exact patch SHA; scientific
+bindings/source/plan/results не менялись, научные запуски не повторялись.
+
 ## Решение и следующий этап
 
 **GO TO REVIEW exact prototype**, но не GO production и не новый scientificPASS.
