@@ -129,3 +129,7 @@ GO TO REVIEW, не внедрение/новая qualification; helper и exact 
 индивидуальная проверка raw timing/error precedence и0/1/2Q2+actualTk.
 [Следующая scientific qualification](q2-optimized-qualification-protocol-395.md)
 только спланирована; ни optimized runtime в dev, ни новый scientificPASS не объявлены.
+
+[Preflight396](q2-optimized-qualification-396.md): источники проверены, K=1
+reference380 блокирует запуск58jobs. Новый provenance/output helper вне runtime;
+0/58, старые3FAIL сохранены, исправление reference требует отдельного этапа.

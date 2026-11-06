@@ -144,3 +144,7 @@ GO TO REVIEW не меняет production, три FAIL380 или release033 NO-G
 fingerprints отдельного кандидата,36pairedepochs,6actualGUIjourneys,76unique tests.
 [Q2 qualification plan](../q2-optimized-qualification-protocol-395.md) не выполнен;
 старые receipts не присваиваются новому source, два harnessFAIL сохранены.
+
+[Qualification396](../q2-optimized-qualification-396.md): mandatory preflight
+NO-GO из-за K=1 unpacker независимого reference380;0/58jobs. Actualsource/native/
+environment и saved380reference/3FAIL проверены; нового scientificPASS нет.
