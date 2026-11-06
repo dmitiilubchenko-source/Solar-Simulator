@@ -1,0 +1,102 @@
+diff --git a/src/solar_simulator/nbody_rotation.py b/src/solar_simulator/nbody_rotation.py
+index a122b1a..78174ea 100644
+--- a/src/solar_simulator/nbody_rotation.py
++++ b/src/solar_simulator/nbody_rotation.py
+@@ -12,6 +12,7 @@ from scipy.integrate import DOP853, solve_ivp
+ 
+ from .coordinates import prepare_pair
+ from .rotation import RigidFigure, angular_velocity, quaternion_rate, rotation_matrix, _vector
++from .rotation import _angular_velocity_with_matrix
+ from .simulation import Body, G
+ from .vector3 import Vector3
+ from ._numbers import finite_number
+@@ -68,6 +69,11 @@ def validate(bodies, rotations, settings=None):
+ 
+ def correction(positions, masses, source, figure, quaternion, pair_displacement=None):
+     """Return Q2 acceleration, figure torque and Q2 potential (not monopole)."""
++    return _correction(positions, masses, source, figure, quaternion, pair_displacement)
++
++
++def _correction(positions, masses, source, figure, quaternion, pair_displacement=None, *, matrix=None):
++    """Internal matrix is prepared from the current stage q; never cached."""
+     positions, masses = np.asarray(positions, dtype=float), np.asarray(masses, dtype=float)
+     if (masses.ndim != 1 or not masses.size or positions.shape != (len(masses),3)
+             or not np.all(np.isfinite(positions)) or not np.all(np.isfinite(masses))
+@@ -85,7 +91,8 @@ def correction(positions, masses, source, figure, quaternion, pair_displacement=
+     if np.any(d <= figure.bounding_radius):
+         raise ValueError("Q2 определена только вне ограничивающей сферы")
+     n = r/d[:, None]
+-    matrix = rotation_matrix(quaternion)
++    if matrix is None:
++        matrix = rotation_matrix(quaternion)
+     tensor = matrix@figure.quadrupole@matrix.T
+     qn = n@tensor
+     nqn = np.sum(n*qn, axis=1)
+@@ -102,19 +109,25 @@ def correction(positions, masses, source, figure, quaternion, pair_displacement=
+ 
+ 
+ def corrections(positions,masses,sources,rotations,quaternions=None,pair_displacement=None):
+-    """Sum M-Q terms only, once per figure; return one torque per figure.
++    """Sum M-Q terms once per figure; retain external-sphere validation.
+ 
+-    Each figure also interacts with the OTHER figure's monopole. This is not
+-    Q-Q coupling. Nonoverlapping bounding spheres are required for two figures.
+-    Raw stage quaternions are allowed, just as in the one-figure field.
++    Each figure also interacts with the other's monopole, without Q-Q coupling.
++    Raw stage quaternions are allowed; rotation_matrix validates/normalizes them.
+     """
++    return _corrections(positions,masses,sources,rotations,quaternions,pair_displacement)
++
++
++def _corrections(positions,masses,sources,rotations,quaternions=None,pair_displacement=None,*,matrices=None):
++    """Internal matrices belong to this RHS; no cross-evaluation state."""
+     if len(sources)!=len(rotations) or len(sources) not in (1,2) or len(set(sources))!=len(sources):
+         raise ValueError("Нужны разные индексы одной или двух фигур")
+     if quaternions is None:quaternions=tuple(s.quaternion for s in rotations)
+     if len(quaternions)!=len(rotations):raise ValueError("Нужна ориентация каждой фигуры")
++    if matrices is None:matrices=(None,)*len(rotations)
++    if len(matrices)!=len(rotations):raise ValueError("Нужна матрица каждой фигуры")
+     additional=None;torques=[];potential=0.
+-    for source,state,q in zip(sources,rotations,quaternions):
+-        a,torque,u=correction(positions,masses,source,state.figure,q,pair_displacement)
++    for source,state,q,matrix in zip(sources,rotations,quaternions,matrices):
++        a,torque,u=_correction(positions,masses,source,state.figure,q,pair_displacement,matrix=matrix)
+         additional=a if additional is None else additional+a
+         torques.append(torque);potential+=u
+     if len(sources)==2:
+@@ -231,14 +244,15 @@ def integrate(bodies, rotations, times, *, rtol=1e-11, position_atol=1e-4,
+             np.add.at(acceleration, pairs[0], field*masses[pairs[1], None])
+             np.add.at(acceleration, pairs[1], -field*masses[pairs[0], None])
+         spin_states=[(y[orbit_size+7*k:orbit_size+7*k+4],y[orbit_size+7*k+4:orbit_size+7*k+7]) for k in range(len(rotations))]
+-        additional,torques,_=corrections(positions,masses,sources,rotations,
+-            quaternions=tuple(q for q,spin in spin_states),pair_displacement=pair_r)
++        matrices=tuple(rotation_matrix(q) for q,spin in spin_states)
++        additional,torques,_=_corrections(positions,masses,sources,rotations,
++            quaternions=tuple(q for q,spin in spin_states),pair_displacement=pair_r,matrices=matrices)
+         acceleration += additional
+         if pair:
+             acceleration = pair.encode(acceleration)
+         result=np.concatenate((solver_velocity.ravel(),acceleration.ravel(),*(v
+-            for state,(q,spin),torque in zip(rotations,spin_states,torques)
+-            for v in (quaternion_rate(q,angular_velocity(state.figure,q,spin)),torque))))
++            for state,(q,spin),torque,matrix in zip(rotations,spin_states,torques,matrices)
++            for v in (quaternion_rate(q,_angular_velocity_with_matrix(state.figure,matrix,spin)),torque))))
+         if not np.all(np.isfinite(result)):
+             raise ValueError("Неконечная производная вращательного N-body")
+         return result
+diff --git a/src/solar_simulator/rotation.py b/src/solar_simulator/rotation.py
+index 98cf33d..ec31b5d 100644
+--- a/src/solar_simulator/rotation.py
++++ b/src/solar_simulator/rotation.py
+@@ -70,6 +70,11 @@ def rotation_matrix(quaternion):
+ 
+ def angular_velocity(figure, quaternion, spin):
+     rotation = rotation_matrix(quaternion)
++    return _angular_velocity_with_matrix(figure, rotation, spin)
++
++
++def _angular_velocity_with_matrix(figure, rotation, spin):
++    """Internal: use the matrix prepared from this RHS's validated quaternion."""
+     return rotation @ ((rotation.T @ _vector(spin, 3, "S"))/figure.moments)
+ 
+ 

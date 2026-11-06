@@ -1,0 +1,4092 @@
+{
+  "stage": 394,
+  "status": "COMPLETE_BOUNDED_PROTOTYPE_NOT_PRODUCTION_QUALIFICATION",
+  "recommendation": "GO TO REVIEW",
+  "baseline_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+  "prototype_commit": "896030c3206b1010175d6a491e1f5d7063abdcf5",
+  "dev_before": "127561a54e9464e697661cc7d619238d921c67aa",
+  "sources": {
+    "baseline": {
+      "rotation.py": "245087dc0b1f5cc64e8c3fbbd1c34fe9e8f80266069ceafb8081906f8dfd4f80",
+      "nbody_rotation.py": "7cdbf09b398aa467ec5badabcf4428c88dfc62ac81f49b73c988ae8c81c9ce7c"
+    },
+    "prototype": {
+      "rotation.py": "0cec73448d8bbd3a29656d04be7f74aa04338be6df40055548910557f29412c6",
+      "nbody_rotation.py": "9126ae10a8f41849f09acc83ae152fe8aea0abe85f99f79f183db5f86b79a6a2"
+    }
+  },
+  "patch_SHA256": "df958f9f4c41ad9f3ed57ec2851c30de8b55e608287bd4ebeecfb2f902abbdc6",
+  "plan_SHA256": "9a950cd72f00f9402461029e0136b5300e37fbe424eab9b35ce80ba9e9e22786",
+  "plan": {
+    "stage": 394,
+    "date": "2026-11-06",
+    "baseline_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+    "prototype_commit": "896030c3206b1010175d6a491e1f5d7063abdcf5",
+    "dev_before": "127561a54e9464e697661cc7d619238d921c67aa",
+    "baseline_sources": {
+      "rotation.py": "245087dc0b1f5cc64e8c3fbbd1c34fe9e8f80266069ceafb8081906f8dfd4f80",
+      "nbody_rotation.py": "7cdbf09b398aa467ec5badabcf4428c88dfc62ac81f49b73c988ae8c81c9ce7c"
+    },
+    "prototype_sources": {
+      "rotation.py": "0cec73448d8bbd3a29656d04be7f74aa04338be6df40055548910557f29412c6",
+      "nbody_rotation.py": "9126ae10a8f41849f09acc83ae152fe8aea0abe85f99f79f183db5f86b79a6a2"
+    },
+    "patch_SHA256": "df958f9f4c41ad9f3ed57ec2851c30de8b55e608287bd4ebeecfb2f902abbdc6",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "baseline_environment_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+    "prototype_environment_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+    "model": "Newton total-degree-two M-Q; no Q-Q/EIH/tides/contacts; SI",
+    "G_hex": "0x1.2589effed8accp-34",
+    "jobs": [
+      {
+        "id": "one-python",
+        "input": "inputs/one-python.json",
+        "input_SHA256": "414ea30d4d28e8d07cfd51330bf4f963bec4bee63bbe723435ac1778c73b2baa",
+        "kind": "one",
+        "backend": "python",
+        "figures": 1,
+        "benchmark": true
+      },
+      {
+        "id": "two-python",
+        "input": "inputs/two-python.json",
+        "input_SHA256": "c3eaa9d37dbfbc18a1ba47d4355543475c47ba08ffe434dfd403780afac45578",
+        "kind": "two",
+        "backend": "python",
+        "figures": 2,
+        "benchmark": true
+      },
+      {
+        "id": "free-python",
+        "input": "inputs/free-python.json",
+        "input_SHA256": "30a0e82676ace121d14328a89c6a80b39072b910e244b880bf19daf833fb415f",
+        "kind": "free",
+        "backend": "python",
+        "figures": 1,
+        "benchmark": false
+      },
+      {
+        "id": "zeroQ-python",
+        "input": "inputs/zeroQ-python.json",
+        "input_SHA256": "9303e16216f3e1e6f9316a1247fc3577c428b2b54f85a10c0855f60677529b43",
+        "kind": "zeroQ",
+        "backend": "python",
+        "figures": 2,
+        "benchmark": false
+      },
+      {
+        "id": "one-rust",
+        "input": "inputs/one-rust.json",
+        "input_SHA256": "6f0ff80c5166128aeb798b47d9564aab1505422c7035436526c5da9a250e67f1",
+        "kind": "one",
+        "backend": "rust",
+        "figures": 1,
+        "benchmark": true
+      },
+      {
+        "id": "two-rust",
+        "input": "inputs/two-rust.json",
+        "input_SHA256": "57fad3024d85eb17748b8336a19fb00a39a236c499f3e36b4ebbb023c0bf2a35",
+        "kind": "two",
+        "backend": "rust",
+        "figures": 2,
+        "benchmark": true
+      },
+      {
+        "id": "free-rust",
+        "input": "inputs/free-rust.json",
+        "input_SHA256": "50f23e81e454d9fefae124b8b3b3ecd2fd69616ca51394fae5f291b4cc56185d",
+        "kind": "free",
+        "backend": "rust",
+        "figures": 1,
+        "benchmark": false
+      },
+      {
+        "id": "zeroQ-rust",
+        "input": "inputs/zeroQ-rust.json",
+        "input_SHA256": "8c150db96d9583999e82265f9a2320175b5c798b050cff656aed6ef8451a581e",
+        "kind": "zeroQ",
+        "backend": "rust",
+        "figures": 2,
+        "benchmark": false
+      }
+    ],
+    "intervals": {
+      "packet_seconds": 50.0,
+      "packets": 2,
+      "output_epochs_seconds": [
+        0.0,
+        50.0,
+        100.0
+      ],
+      "rtol": 1e-11,
+      "position_atol": 1e-07,
+      "velocity_atol": 1e-11,
+      "rotation_atols": "exact stored input per figure; unchanged"
+    },
+    "benchmark": {
+      "series": 5,
+      "separate_worker_processes": true,
+      "micro_calls": 512,
+      "micro_warmup_calls": 8,
+      "macro_repeats": 8,
+      "macro_warmup_rollouts": 1,
+      "orders": [
+        "ABBA",
+        "BAAB",
+        "ABBA",
+        "BAAB",
+        "ABBA"
+      ],
+      "case_order": [
+        "one-python",
+        "two-python",
+        "one-rust",
+        "two-rust"
+      ],
+      "timing": "micro includes byte equality check; macro includes two advance calls only, no serialization/disk, last endpoints checked outside timed block",
+      "independence": "Distinct processes/temporally separate series; shared Windows machine/caches do not guarantee statistical independence.",
+      "decision": "GO TO REVIEW only if all numerical/validation tests pass, all5aggregate paired wall savings positive at both micro/macro, median speedup>=1.02 both, no case median slowdown>2%, no unexplained allocation growth. Otherwise NO BENEFIT or NO-GO/UNRESOLVED.",
+      "memory": "tracemalloc baseline/prototype windows after warmup; joint process private/RSS guard. Not per-runtime OS working-set attribution.",
+      "arithmetic": "Exact RHS and all saved r/v/q/S bytes required; any unexplained delta -> NO-GO, preserve values; SO3 independent observer if unequal. No thresholds changed."
+    },
+    "validation": {
+      "position_gradient_step_m": 0.02,
+      "attitude_gradient_step_rad": 1e-06,
+      "gradient_relative_limit": 2e-06,
+      "reaction_relative_limit": 1e-13,
+      "torque_balance_relative_limit": 2e-12,
+      "covariance": "reuse existing380 test limits unchanged",
+      "independent_observer": "Decimal80/110 saved-state E/P/L; existing scalar potential, independent matrix orientation",
+      "inertia_cache": "NOT part of394; figure.quadrupole remains rebuilt at every field evaluation",
+      "memory_probe_calls": 128,
+      "additional_peak_allowance_bytes": 8388608
+    },
+    "budget": {
+      "stage": 394,
+      "caps": {
+        "CPU_seconds": 120,
+        "active_wall_seconds": 240,
+        "private_bytes": 1073741824,
+        "artifact_bytes": 50331648
+      },
+      "early": {
+        "CPU_seconds": 90,
+        "active_wall_seconds": 190,
+        "private_bytes": 943718400,
+        "artifact_bytes": 41943040
+      },
+      "estimate_CPU_seconds": [
+        40,
+        80
+      ],
+      "estimate_wall_seconds": [
+        60,
+        160
+      ],
+      "method": "Existing385 monitor; whole supervisor and discovered workerCPU incl failed attempts,50ms sharedprivate sampling, retainedCPU handles, filecount/disk. Early stop unchanged.",
+      "separate_costs": [
+        "source reading/editing",
+        "Git/CI",
+        "mandatory backup",
+        "recoverable sparse source checkout6392147B; full initial checkout116541722B before sparse trimming; shared existing dependency environment, not scientific artifact bytes"
+      ],
+      "no_repetition_tuning": true
+    },
+    "estimate_CPU_seconds": [
+      40,
+      80
+    ],
+    "estimate_basis": "392~0.33ms per2figureRHS;40960microcalls plus1280packets at~60RHS each; onefigurecheaper, imports/tests/guards included estimate. No adaptive repetition choice.",
+    "prohibitions": [
+      "no production merge",
+      "no oldFAIL edits",
+      "no full380/384/385/compat/fullcheck/portable",
+      "no bodyQcache",
+      "no controller/tolerance/force-order changes"
+    ]
+  },
+  "execution_binding": {
+    "sealed_plan_SHA256": "9a950cd72f00f9402461029e0136b5300e37fbe424eab9b35ce80ba9e9e22786",
+    "source_SHA256": {
+      "scripts/q2_r_reuse394.py": "9ba3d147216ca0b97fdbeade3c662237f22edea5322c5abf8a81cecd28af6bbb",
+      "tests/test_q2_r_reuse394.py": "a14323311d77870a2b75d78b10eca6505d656ee52601b7f1831d08ae5d7b8d26",
+      "scripts/validation/q2-r-reuse394.patch": "df958f9f4c41ad9f3ed57ec2851c30de8b55e608287bd4ebeecfb2f902abbdc6",
+      "tests/test_two_q2.py": "ed0940474b05fd70c434d1ff7276e5cbf52f48ba4c122d922257be26ca1f6606",
+      "tests/test_nbody_rotation.py": "2cd76002ac6b91a266e51d200ad4b66e271ab0d0227e3d19657f169ff4cd596f",
+      "scripts/two_q2_fixture380.py": "bf00e1f0cc52e11f3ab23081637c721a74098dd43cdb4fe9667ec1a5295f368b",
+      "scripts/q2_frame_observer393.py": "2bf6d9ae683fdb31de94c05758f3a7d5134ca826e3efe7d9ab74aa072ae7d972",
+      ".tools/qualification394/benchmark.py": "d70a0e586e8f5d66cd2c308f2332ad56486cf010af0db94549176cdb3bb4d8c8",
+      ".tools/qualification394/common.py": "9fd3969339c93e78a6b63c9b4623299806530499f5f6a7208e0246a642a1799a",
+      ".tools/qualification394/preflight.py": "5aba97a7882f86b525109f8dbf2b6d4690b6de0df5a7e9916dd1bf47974c4003",
+      ".tools/qualification394/quality.py": "13f04e57c8845743c7fbad53590a0c51f9ee864608db0d3c12c57c727dfcc17c",
+      ".tools/qualification394/regress.py": "4d3174fb17de95862b2deef8a4531311eef54e76935e2cc262b5047465162279",
+      ".tools/qualification394/run.py": "3ca5b5b5e2203af41fb5a57531f94b57b9e5a167e6b35c29e4b7703d62d848c0"
+    }
+  },
+  "source_audit": {
+    "rotation_matrix_RigidFigure_vector_quaternionrate_unchanged": true,
+    "solver_and_other_integrate_AST_unchanged_after_only_allowed_preparation_normalization": true,
+    "correction_body_guards_and_physical_operations_order_exact_AST": true,
+    "angular_velocity_return_AST_exact": true,
+    "public_signatures_identical": true,
+    "exact_patch_reproduces_local_commit": true,
+    "historical_artifact_SHA256": {
+      "scripts/two-q2-380-plan.json": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+      "scripts/two-q2-380-completion-plan.json": "b93c534e6b38aedc82df70768f1c471963093645f700e20c741ec87fa6fffb13",
+      "docs/two-q2-380-initial.json": "a6044603119a9e61824ce2c68c116cd1c2743d5e89a558b687546b917e029e38",
+      "docs/two-q2-380-validation.json": "b6e90617263dd12607e5b82b729de778c57d7389f77bb8cd650a73e426fd8edd",
+      "docs/two-q2-380-resources.json": "abd47a995bd7563e2232a9b9e60818dd2721050013ca2aac30894c48a44dd0cb",
+      "scripts/validation/rotation-before380.zip": "222461071aed44c49fcf72a573db52d9e29fbfd94d5da7f0fe749eb080b26147",
+      "scripts/validation/two-q2-380-compatibility.zip": "92746b403f4c576740f2d72bab06c1f56a11303016fd7196a0d29d21ab194e1b",
+      "scripts/validation/two-q2-380-initial-scripts.zip": "3ceef815f41508b7eda78d34cd750e8041b3260db8ae4bc9c52a38c4e24d46bd",
+      "scripts/validation/two-q2-380-initial.npz": "b562f8935059735160a7b8f0c5428af90f84be3e31c5bd57005c357363ef1257",
+      "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+      "scripts/assess_two_q2_380.py": "55d0864ae69c3c048c9a9a145741f3636e9487c6d339c50963f48e1334756ba9",
+      "scripts/check_two_q2_compatibility380.py": "65084a570a6a4b1aac383f5cbcbc0fef14d5ded63f1d819985c5007442a3b5c2"
+    }
+  },
+  "aggregate_wall": {
+    "micro": {
+      "baseline": {
+        "median": 1.016945699993812,
+        "minimum": 1.0138118999966537,
+        "maximum": 1.0620038000197383,
+        "IQR": 0.01172400001087226
+      },
+      "prototype": {
+        "median": 0.9659706000020378,
+        "minimum": 0.958433400010108,
+        "maximum": 0.9833378000112134,
+        "IQR": 0.01600479999615345
+      },
+      "absolute_saving": {
+        "median": 0.058512299983704,
+        "minimum": 0.03047409998544026,
+        "maximum": 0.08130340001662262,
+        "IQR": 0.010449000015796628
+      },
+      "speedup": {
+        "median": 1.0610499383505279,
+        "minimum": 1.030990469384064,
+        "maximum": 1.082903402523711,
+        "IQR": 0.010747684275327574
+      },
+      "series_pairs": [
+        [
+          1.0271534999992582,
+          0.9659706000020378
+        ],
+        [
+          1.0620038000197383,
+          0.9807004000031156
+        ],
+        [
+          1.016945699993812,
+          0.958433400010108
+        ],
+        [
+          1.015429499988386,
+          0.9646956000069622
+        ],
+        [
+          1.0138118999966537,
+          0.9833378000112134
+        ]
+      ],
+      "positive_series": 5,
+      "non_tied_series": 5,
+      "one_sided_sign_p": 0.03125,
+      "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+    },
+    "macro": {
+      "baseline": {
+        "median": 2.076976199983619,
+        "minimum": 2.0558057999951416,
+        "maximum": 2.1930578000101377,
+        "IQR": 0.019477500012726523
+      },
+      "prototype": {
+        "median": 1.9981413999994402,
+        "minimum": 1.9354613000105019,
+        "maximum": 2.0209410000024945,
+        "IQR": 0.048031199992692564
+      },
+      "absolute_saving": {
+        "median": 0.12172049998480361,
+        "minimum": 0.05251890000363346,
+        "maximum": 0.17211680000764318,
+        "IQR": 0.043202599976211786
+      },
+      "speedup": {
+        "median": 1.062252983067574,
+        "minimum": 1.0262163647173332,
+        "maximum": 1.085166662464382,
+        "IQR": 0.02368190020859995
+      },
+      "series_pairs": [
+        [
+          2.0820708999963244,
+          1.9981413999994402
+        ],
+        [
+          2.1930578000101377,
+          2.0209410000024945
+        ],
+        [
+          2.062593399983598,
+          1.9354613000105019
+        ],
+        [
+          2.076976199983619,
+          1.9552556999988155
+        ],
+        [
+          2.0558057999951416,
+          2.003286899991508
+        ]
+      ],
+      "positive_series": 5,
+      "non_tied_series": 5,
+      "one_sided_sign_p": 0.03125,
+      "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+    }
+  },
+  "per_case": {
+    "one-python": {
+      "micro": {
+        "wall": {
+          "baseline": {
+            "median": 0.19578940000064904,
+            "minimum": 0.1887023999952362,
+            "maximum": 0.22636929999862332,
+            "IQR": 0.0015705999976489693
+          },
+          "prototype": {
+            "median": 0.18905439999798546,
+            "minimum": 0.1796879000030458,
+            "maximum": 0.19956409999576863,
+            "IQR": 0.010603099995933007
+          },
+          "absolute_saving": {
+            "median": 0.009014499992190395,
+            "minimum": 0.0006053000033716671,
+            "maximum": 0.02680520000285469,
+            "IQR": 0.0029027999989921227
+          },
+          "speedup": {
+            "median": 1.050167540452293,
+            "minimum": 1.0031011747543992,
+            "maximum": 1.1343187477277878,
+            "IQR": 0.016714578320007334
+          },
+          "series_pairs": [
+            [
+              0.19676269999763463,
+              0.18905439999798546
+            ],
+            [
+              0.22636929999862332,
+              0.19956409999576863
+            ],
+            [
+              0.1887023999952362,
+              0.1796879000030458
+            ],
+            [
+              0.19519209999998566,
+              0.18458100000134436
+            ],
+            [
+              0.19578940000064904,
+              0.19518409999727737
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.1875,
+            "minimum": 0.1875,
+            "maximum": 0.21875,
+            "IQR": 0.015625
+          },
+          "prototype": {
+            "median": 0.1875,
+            "minimum": 0.171875,
+            "maximum": 0.21875,
+            "IQR": 0.0
+          },
+          "absolute_saving": {
+            "median": 0.0,
+            "minimum": 0.0,
+            "maximum": 0.015625,
+            "IQR": 0.015625
+          },
+          "speedup": {
+            "median": 1.0,
+            "minimum": 1.0,
+            "maximum": 1.0909090909090908,
+            "IQR": 0.08333333333333326
+          },
+          "series_pairs": [
+            [
+              0.1875,
+              0.1875
+            ],
+            [
+              0.21875,
+              0.21875
+            ],
+            [
+              0.1875,
+              0.1875
+            ],
+            [
+              0.1875,
+              0.171875
+            ],
+            [
+              0.203125,
+              0.1875
+            ]
+          ],
+          "positive_series": 2,
+          "non_tied_series": 2,
+          "one_sided_sign_p": 0.25,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      },
+      "macro": {
+        "wall": {
+          "baseline": {
+            "median": 0.3896600999942166,
+            "minimum": 0.3779849999991711,
+            "maximum": 0.4070041000013589,
+            "IQR": 0.0072289000017917715
+          },
+          "prototype": {
+            "median": 0.3654005999924266,
+            "minimum": 0.360008800002106,
+            "maximum": 0.3985421000033966,
+            "IQR": 0.02921739999874262
+          },
+          "absolute_saving": {
+            "median": 0.012584400006744545,
+            "minimum": -0.0020512000046437606,
+            "maximum": 0.02789939999638591,
+            "IQR": 0.014693599994643591
+          },
+          "speedup": {
+            "median": 1.0344400091488777,
+            "minimum": 0.9947634903444201,
+            "maximum": 1.0769651571967882,
+            "IQR": 0.04308715209851943
+          },
+          "series_pairs": [
+            [
+              0.39039329999650363,
+              0.3624939000001177
+            ],
+            [
+              0.4070041000013589,
+              0.3985421000033966
+            ],
+            [
+              0.38316439999471186,
+              0.360008800002106
+            ],
+            [
+              0.3779849999991711,
+              0.3654005999924266
+            ],
+            [
+              0.3896600999942166,
+              0.39171129999886034
+            ]
+          ],
+          "positive_series": 4,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.1875,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.390625,
+            "minimum": 0.375,
+            "maximum": 0.40625,
+            "IQR": 0.03125
+          },
+          "prototype": {
+            "median": 0.375,
+            "minimum": 0.359375,
+            "maximum": 0.390625,
+            "IQR": 0.03125
+          },
+          "absolute_saving": {
+            "median": 0.015625,
+            "minimum": 0.0,
+            "maximum": 0.046875,
+            "IQR": 0.015625
+          },
+          "speedup": {
+            "median": 1.04,
+            "minimum": 1.0,
+            "maximum": 1.1304347826086956,
+            "IQR": 0.04347826086956519
+          },
+          "series_pairs": [
+            [
+              0.40625,
+              0.359375
+            ],
+            [
+              0.40625,
+              0.390625
+            ],
+            [
+              0.375,
+              0.359375
+            ],
+            [
+              0.375,
+              0.375
+            ],
+            [
+              0.390625,
+              0.390625
+            ]
+          ],
+          "positive_series": 3,
+          "non_tied_series": 3,
+          "one_sided_sign_p": 0.125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      }
+    },
+    "two-python": {
+      "micro": {
+        "wall": {
+          "baseline": {
+            "median": 0.33767799999623094,
+            "minimum": 0.3357375999985379,
+            "maximum": 0.3392919999969308,
+            "IQR": 0.0025459000025875866
+          },
+          "prototype": {
+            "median": 0.3177951000034227,
+            "minimum": 0.31412270000146236,
+            "maximum": 0.3255857999974978,
+            "IQR": 0.007322199999180157
+          },
+          "absolute_saving": {
+            "median": 0.021341300001950003,
+            "minimum": 0.012092199998733122,
+            "maximum": 0.02417010000499431,
+            "IQR": 0.007487099996069446
+          },
+          "speedup": {
+            "median": 1.0676439000893236,
+            "minimum": 1.0371398261190323,
+            "maximum": 1.0769447735069189,
+            "IQR": 0.024332737431917106
+          },
+          "series_pairs": [
+            [
+              0.3357469000038691,
+              0.3144056000019191
+            ],
+            [
+              0.3382928000064567,
+              0.31412270000146236
+            ],
+            [
+              0.3392919999969308,
+              0.3177951000034227
+            ],
+            [
+              0.33767799999623094,
+              0.3255857999974978
+            ],
+            [
+              0.3357375999985379,
+              0.32172780000109924
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.328125,
+            "minimum": 0.328125,
+            "maximum": 0.359375,
+            "IQR": 0.015625
+          },
+          "prototype": {
+            "median": 0.3125,
+            "minimum": 0.296875,
+            "maximum": 0.328125,
+            "IQR": 0.0
+          },
+          "absolute_saving": {
+            "median": 0.015625,
+            "minimum": 0.0,
+            "maximum": 0.0625,
+            "IQR": 0.015625
+          },
+          "speedup": {
+            "median": 1.05,
+            "minimum": 1.0,
+            "maximum": 1.2105263157894737,
+            "IQR": 0.050000000000000044
+          },
+          "series_pairs": [
+            [
+              0.328125,
+              0.3125
+            ],
+            [
+              0.34375,
+              0.3125
+            ],
+            [
+              0.328125,
+              0.3125
+            ],
+            [
+              0.359375,
+              0.296875
+            ],
+            [
+              0.328125,
+              0.328125
+            ]
+          ],
+          "positive_series": 4,
+          "non_tied_series": 4,
+          "one_sided_sign_p": 0.0625,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      },
+      "macro": {
+        "wall": {
+          "baseline": {
+            "median": 0.6529118999969796,
+            "minimum": 0.6404382999971858,
+            "maximum": 0.7242740000001504,
+            "IQR": 0.006703599996399134
+          },
+          "prototype": {
+            "median": 0.6244875000047614,
+            "minimum": 0.6176122000033502,
+            "maximum": 0.639106399998127,
+            "IQR": 0.011599800003750715
+          },
+          "absolute_saving": {
+            "median": 0.028749299992341548,
+            "minimum": 0.01380549999885261,
+            "maximum": 0.09257299999444513,
+            "IQR": 0.008583900002122391
+          },
+          "speedup": {
+            "median": 1.0460366300240154,
+            "minimum": 1.0216012544998658,
+            "maximum": 1.1465455967199816,
+            "IQR": 0.014030698055847557
+          },
+          "series_pairs": [
+            [
+              0.6529118999969796,
+              0.639106399998127
+            ],
+            [
+              0.7242740000001504,
+              0.6317010000057053
+            ],
+            [
+              0.6404382999971858,
+              0.6201012000019546
+            ],
+            [
+              0.6532367999971029,
+              0.6244875000047614
+            ],
+            [
+              0.6465332000007038,
+              0.6176122000033502
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.65625,
+            "minimum": 0.625,
+            "maximum": 0.71875,
+            "IQR": 0.015625
+          },
+          "prototype": {
+            "median": 0.625,
+            "minimum": 0.59375,
+            "maximum": 0.640625,
+            "IQR": 0.0
+          },
+          "absolute_saving": {
+            "median": 0.03125,
+            "minimum": 0.0,
+            "maximum": 0.078125,
+            "IQR": 0.046875
+          },
+          "speedup": {
+            "median": 1.05,
+            "minimum": 1.0,
+            "maximum": 1.1219512195121952,
+            "IQR": 0.08026315789473704
+          },
+          "series_pairs": [
+            [
+              0.65625,
+              0.59375
+            ],
+            [
+              0.71875,
+              0.640625
+            ],
+            [
+              0.640625,
+              0.625
+            ],
+            [
+              0.65625,
+              0.625
+            ],
+            [
+              0.625,
+              0.625
+            ]
+          ],
+          "positive_series": 4,
+          "non_tied_series": 4,
+          "one_sided_sign_p": 0.0625,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      }
+    },
+    "one-rust": {
+      "micro": {
+        "wall": {
+          "baseline": {
+            "median": 0.16993080000247573,
+            "minimum": 0.16704069999832427,
+            "maximum": 0.17225080000935122,
+            "IQR": 0.0019931000060751103
+          },
+          "prototype": {
+            "median": 0.16055380000034347,
+            "minimum": 0.1544520000097691,
+            "maximum": 0.16445939999539405,
+            "IQR": 0.007256100005179178
+          },
+          "absolute_saving": {
+            "median": 0.011697000009007752,
+            "minimum": 0.0033205999934580177,
+            "maximum": 0.015458499983651564,
+            "IQR": 0.006022599998686928
+          },
+          "speedup": {
+            "median": 1.0728540838583873,
+            "minimum": 1.0202821766744543,
+            "maximum": 1.100086110783116,
+            "IQR": 0.0408049718683694
+          },
+          "series_pairs": [
+            [
+              0.17190359999949578,
+              0.16445939999539405
+            ],
+            [
+              0.17225080000935122,
+              0.16055380000034347
+            ],
+            [
+              0.16993080000247573,
+              0.15646399999968708
+            ],
+            [
+              0.16991049999342067,
+              0.1544520000097691
+            ],
+            [
+              0.16704069999832427,
+              0.16372010000486625
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.171875,
+            "minimum": 0.171875,
+            "maximum": 0.1875,
+            "IQR": 0.0
+          },
+          "prototype": {
+            "median": 0.15625,
+            "minimum": 0.140625,
+            "maximum": 0.171875,
+            "IQR": 0.015625
+          },
+          "absolute_saving": {
+            "median": 0.015625,
+            "minimum": 0.0,
+            "maximum": 0.046875,
+            "IQR": 0.015625
+          },
+          "speedup": {
+            "median": 1.1,
+            "minimum": 1.0,
+            "maximum": 1.3333333333333333,
+            "IQR": 0.12222222222222223
+          },
+          "series_pairs": [
+            [
+              0.171875,
+              0.15625
+            ],
+            [
+              0.171875,
+              0.15625
+            ],
+            [
+              0.1875,
+              0.140625
+            ],
+            [
+              0.171875,
+              0.140625
+            ],
+            [
+              0.171875,
+              0.171875
+            ]
+          ],
+          "positive_series": 4,
+          "non_tied_series": 4,
+          "one_sided_sign_p": 0.0625,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      },
+      "macro": {
+        "wall": {
+          "baseline": {
+            "median": 0.3539696000079857,
+            "minimum": 0.34366900000168243,
+            "maximum": 0.3632356000089203,
+            "IQR": 0.009256599994841963
+          },
+          "prototype": {
+            "median": 0.3386714999942342,
+            "minimum": 0.32394700000440935,
+            "maximum": 0.3440049999990151,
+            "IQR": 0.011456099993665703
+          },
+          "absolute_saving": {
+            "median": 0.02456410001468612,
+            "minimum": 0.004614200006471947,
+            "maximum": 0.030733699990378227,
+            "IQR": 0.01516419998370111
+          },
+          "speedup": {
+            "median": 1.0725307562493576,
+            "minimum": 1.0136090095363262,
+            "maximum": 1.0938150853169848,
+            "IQR": 0.048604274236738076
+          },
+          "series_pairs": [
+            [
+              0.3539696000079857,
+              0.3440049999990151
+            ],
+            [
+              0.3632356000089203,
+              0.3386714999942342
+            ],
+            [
+              0.34907579999708105,
+              0.32394700000440935
+            ],
+            [
+              0.358332399991923,
+              0.3275987000015448
+            ],
+            [
+              0.34366900000168243,
+              0.3390547999952105
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.359375,
+            "minimum": 0.34375,
+            "maximum": 0.359375,
+            "IQR": 0.015625
+          },
+          "prototype": {
+            "median": 0.328125,
+            "minimum": 0.3125,
+            "maximum": 0.34375,
+            "IQR": 0.015625
+          },
+          "absolute_saving": {
+            "median": 0.03125,
+            "minimum": 0.0,
+            "maximum": 0.03125,
+            "IQR": 0.015625
+          },
+          "speedup": {
+            "median": 1.0952380952380953,
+            "minimum": 1.0,
+            "maximum": 1.1,
+            "IQR": 0.04978354978354993
+          },
+          "series_pairs": [
+            [
+              0.34375,
+              0.34375
+            ],
+            [
+              0.359375,
+              0.34375
+            ],
+            [
+              0.34375,
+              0.3125
+            ],
+            [
+              0.359375,
+              0.328125
+            ],
+            [
+              0.359375,
+              0.328125
+            ]
+          ],
+          "positive_series": 4,
+          "non_tied_series": 4,
+          "one_sided_sign_p": 0.0625,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      }
+    },
+    "two-rust": {
+      "micro": {
+        "wall": {
+          "baseline": {
+            "median": 0.31902049999916926,
+            "minimum": 0.3126488999987487,
+            "maximum": 0.32509090000530705,
+            "IQR": 0.007496099999116268
+          },
+          "prototype": {
+            "median": 0.30270580000797054,
+            "minimum": 0.29805120000673924,
+            "maximum": 0.3064598000055412,
+            "IQR": 0.004409600005601533
+          },
+          "absolute_saving": {
+            "median": 0.01453409999521682,
+            "minimum": 0.0125383999911719,
+            "maximum": 0.02468909999151947,
+            "IQR": 0.006058999999368098
+          },
+          "speedup": {
+            "median": 1.0477331663911038,
+            "minimum": 1.0414210761433766,
+            "maximum": 1.0828350967584135,
+            "IQR": 0.018898322319847116
+          },
+          "series_pairs": [
+            [
+              0.3227402999982587,
+              0.29805120000673924
+            ],
+            [
+              0.32509090000530705,
+              0.3064598000055412
+            ],
+            [
+              0.31902049999916926,
+              0.30448640000395244
+            ],
+            [
+              0.3126488999987487,
+              0.3000767999983509
+            ],
+            [
+              0.31524419999914244,
+              0.30270580000797054
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.328125,
+            "minimum": 0.3125,
+            "maximum": 0.34375,
+            "IQR": 0.015625
+          },
+          "prototype": {
+            "median": 0.28125,
+            "minimum": 0.28125,
+            "maximum": 0.3125,
+            "IQR": 0.015625
+          },
+          "absolute_saving": {
+            "median": 0.03125,
+            "minimum": 0.0,
+            "maximum": 0.0625,
+            "IQR": 0.015625
+          },
+          "speedup": {
+            "median": 1.1111111111111112,
+            "minimum": 1.0,
+            "maximum": 1.2222222222222223,
+            "IQR": 0.06140350877192979
+          },
+          "series_pairs": [
+            [
+              0.328125,
+              0.28125
+            ],
+            [
+              0.328125,
+              0.296875
+            ],
+            [
+              0.3125,
+              0.3125
+            ],
+            [
+              0.3125,
+              0.28125
+            ],
+            [
+              0.34375,
+              0.28125
+            ]
+          ],
+          "positive_series": 4,
+          "non_tied_series": 4,
+          "one_sided_sign_p": 0.0625,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      },
+      "macro": {
+        "wall": {
+          "baseline": {
+            "median": 0.6874219999954221,
+            "minimum": 0.6759434999985388,
+            "maximum": 0.6985440999997081,
+            "IQR": 0.0051187999997637235
+          },
+          "prototype": {
+            "median": 0.6520263999991585,
+            "minimum": 0.631404300002032,
+            "maximum": 0.6549085999940871,
+            "IQR": 0.014767200002097525
+          },
+          "absolute_saving": {
+            "median": 0.04651770000054967,
+            "minimum": 0.02103490000445163,
+            "maximum": 0.05851059999258723,
+            "IQR": 0.01739310000266414
+          },
+          "speedup": {
+            "median": 1.0713432768989257,
+            "minimum": 1.0321188330778395,
+            "maximum": 1.0926674081763443,
+            "IQR": 0.028416498565987602
+          },
+          "series_pairs": [
+            [
+              0.6847960999948555,
+              0.6525361000021803
+            ],
+            [
+              0.6985440999997081,
+              0.6520263999991585
+            ],
+            [
+              0.6899148999946192,
+              0.631404300002032
+            ],
+            [
+              0.6874219999954221,
+              0.6377689000000828
+            ],
+            [
+              0.6759434999985388,
+              0.6549085999940871
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        },
+        "CPU": {
+          "baseline": {
+            "median": 0.6875,
+            "minimum": 0.671875,
+            "maximum": 0.703125,
+            "IQR": 0.015625
+          },
+          "prototype": {
+            "median": 0.640625,
+            "minimum": 0.609375,
+            "maximum": 0.65625,
+            "IQR": 0.015625
+          },
+          "absolute_saving": {
+            "median": 0.046875,
+            "minimum": 0.03125,
+            "maximum": 0.09375,
+            "IQR": 0.015625
+          },
+          "speedup": {
+            "median": 1.075,
+            "minimum": 1.0476190476190477,
+            "maximum": 1.1538461538461537,
+            "IQR": 0.024390243902439046
+          },
+          "series_pairs": [
+            [
+              0.6875,
+              0.65625
+            ],
+            [
+              0.703125,
+              0.640625
+            ],
+            [
+              0.703125,
+              0.609375
+            ],
+            [
+              0.671875,
+              0.625
+            ],
+            [
+              0.6875,
+              0.640625
+            ]
+          ],
+          "positive_series": 5,
+          "non_tied_series": 5,
+          "one_sided_sign_p": 0.03125,
+          "sign_test_caveat": "Independent series/fair null sign assumed; timing evidence on this PC only."
+        }
+      }
+    }
+  },
+  "raw_timing_series": [
+    {
+      "series": 0,
+      "order": "ABBA",
+      "rows": [
+        {
+          "id": "one-python",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.10257479999563657,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.09640589999617077,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.09264850000181468,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.09418790000199806,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.2005693999963114,
+              "CPU_seconds": 0.203125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.18240820000210078,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.18008569999801693,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18982390000019222,
+              "CPU_seconds": 0.203125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "ecdb8d0282d3b4270fe2b722db6e431e3c0d50c8f9c49a19d5fbe3d8c4c3539b",
+          "exact": true
+        },
+        {
+          "id": "two-python",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.1726557000001776,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.15860529999918072,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.15580030000273837,
+              "CPU_seconds": 0.140625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.16309120000369148,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.33328729999630013,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.31617750000441447,
+              "CPU_seconds": 0.296875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.32292889999371255,
+              "CPU_seconds": 0.296875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3196246000006795,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "e0e25da243a2018a77bb9be3d39bf38478f6b9644b26836170cdda7bbf8fc63e",
+          "exact": true
+        },
+        {
+          "id": "one-rust",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.08614289999968605,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.0825838999953703,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.08187550000002375,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.08576069999980973,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.17799480000394396,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1747992000018712,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1692057999971439,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.17597480000404175,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "8da20c8ff91dd091062f0d195ce1991dc6381195887a0c991e002d5b70087105",
+          "exact": true
+        },
+        {
+          "id": "two-rust",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.16482559999712976,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1513827000017045,
+              "CPU_seconds": 0.140625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.14666850000503473,
+              "CPU_seconds": 0.140625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.15791470000112895,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.3390362999998615,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.3247800000026473,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.32775609999953303,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.34575979999499395,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "7203e396fb7bb702c2a0cfefe2800d47683870c37400df50547b80a20bf3196e",
+          "exact": true
+        }
+      ],
+      "clock_info": {
+        "process_time": {
+          "resolution": 1e-07,
+          "implementation": "GetProcessTimes()"
+        },
+        "perf_counter": {
+          "resolution": 1e-07,
+          "implementation": "QueryPerformanceCounter()"
+        }
+      }
+    },
+    {
+      "series": 1,
+      "order": "BAAB",
+      "rows": [
+        {
+          "id": "one-python",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.10038689999782946,
+              "CPU_seconds": 0.109375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.11499959999491693,
+              "CPU_seconds": 0.109375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.11136970000370638,
+              "CPU_seconds": 0.109375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.09917719999793917,
+              "CPU_seconds": 0.109375,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.19584179999947082,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.19624730000214186,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.21075679999921704,
+              "CPU_seconds": 0.21875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.2027003000039258,
+              "CPU_seconds": 0.203125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "ecdb8d0282d3b4270fe2b722db6e431e3c0d50c8f9c49a19d5fbe3d8c4c3539b",
+          "exact": true
+        },
+        {
+          "id": "two-python",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.1554796999989776,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.17057200000272132,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.16772080000373535,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.15864300000248477,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.3081448000011733,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3502857999992557,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3739882000008947,
+              "CPU_seconds": 0.375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.323556200004532,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "e0e25da243a2018a77bb9be3d39bf38478f6b9644b26836170cdda7bbf8fc63e",
+          "exact": true
+        },
+        {
+          "id": "one-rust",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.0828925000023446,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.08562390000588493,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.08662690000346629,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.07766129999799887,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.1700598999959766,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18282340000587283,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18041220000304747,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1686115999982576,
+              "CPU_seconds": 0.15625,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "8da20c8ff91dd091062f0d195ce1991dc6381195887a0c991e002d5b70087105",
+          "exact": true
+        },
+        {
+          "id": "two-rust",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.15650450000248384,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.16410240000550402,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.16098849999980303,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.14995530000305735,
+              "CPU_seconds": 0.140625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.32695180000155233,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.34392120000120485,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.35462289999850327,
+              "CPU_seconds": 0.359375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.32507459999760613,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "7203e396fb7bb702c2a0cfefe2800d47683870c37400df50547b80a20bf3196e",
+          "exact": true
+        }
+      ],
+      "clock_info": {
+        "process_time": {
+          "resolution": 1e-07,
+          "implementation": "GetProcessTimes()"
+        },
+        "perf_counter": {
+          "resolution": 1e-07,
+          "implementation": "QueryPerformanceCounter()"
+        }
+      }
+    },
+    {
+      "series": 2,
+      "order": "ABBA",
+      "rows": [
+        {
+          "id": "one-python",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.09246439999697031,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.0911061000006157,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.0885818000024301,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.09623799999826588,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.19357820000004722,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1819385999988299,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1780702000032761,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18958619999466464,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "ecdb8d0282d3b4270fe2b722db6e431e3c0d50c8f9c49a19d5fbe3d8c4c3539b",
+          "exact": true
+        },
+        {
+          "id": "two-python",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.17231490000267513,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.15508889999910025,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.16270620000432245,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.1669770999942557,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.3167974000025424,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.3165934999997262,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.3035077000022284,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3236408999946434,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "e0e25da243a2018a77bb9be3d39bf38478f6b9644b26836170cdda7bbf8fc63e",
+          "exact": true
+        },
+        {
+          "id": "one-rust",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.08549670000502374,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.07683759999781614,
+              "CPU_seconds": 0.0625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.07962640000187093,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.084434099997452,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.1772415000014007,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1583500000051572,
+              "CPU_seconds": 0.15625,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.16559699999925215,
+              "CPU_seconds": 0.15625,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.17183429999568034,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "8da20c8ff91dd091062f0d195ce1991dc6381195887a0c991e002d5b70087105",
+          "exact": true
+        },
+        {
+          "id": "two-rust",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.15408449999813456,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.15476190000481438,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.14972449999913806,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.1649360000010347,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.33802859999559587,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.31208479999622796,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.319319500005804,
+              "CPU_seconds": 0.296875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3518862999990233,
+              "CPU_seconds": 0.359375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "7203e396fb7bb702c2a0cfefe2800d47683870c37400df50547b80a20bf3196e",
+          "exact": true
+        }
+      ],
+      "clock_info": {
+        "process_time": {
+          "resolution": 1e-07,
+          "implementation": "GetProcessTimes()"
+        },
+        "perf_counter": {
+          "resolution": 1e-07,
+          "implementation": "QueryPerformanceCounter()"
+        }
+      }
+    },
+    {
+      "series": 3,
+      "order": "BAAB",
+      "rows": [
+        {
+          "id": "one-python",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.09362099999998463,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.09936279999965336,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.0958293000003323,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.09096000000135973,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.18191429999569664,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18968739999399986,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18829760000517126,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.18348629999672994,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "ecdb8d0282d3b4270fe2b722db6e431e3c0d50c8f9c49a19d5fbe3d8c4c3539b",
+          "exact": true
+        },
+        {
+          "id": "two-python",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.1643432999990182,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.16665829999692505,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.17101969999930589,
+              "CPU_seconds": 0.1875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.16124249999847962,
+              "CPU_seconds": 0.140625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.30711580000206595,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3270420999979251,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.32619469999917783,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.31737170000269543,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "e0e25da243a2018a77bb9be3d39bf38478f6b9644b26836170cdda7bbf8fc63e",
+          "exact": true
+        },
+        {
+          "id": "one-rust",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.07636930000444409,
+              "CPU_seconds": 0.0625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.08689089999825228,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.08301959999516839,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.07808270000532502,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.162559099997452,
+              "CPU_seconds": 0.15625,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18393899999500718,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.17439339999691583,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1650396000040928,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "8da20c8ff91dd091062f0d195ce1991dc6381195887a0c991e002d5b70087105",
+          "exact": true
+        },
+        {
+          "id": "two-rust",
+          "micro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.14774069999839412,
+              "CPU_seconds": 0.125,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.1534646000000066,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.15918429999874206,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1523360999999568,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "B",
+              "wall_seconds": 0.3211838999995962,
+              "CPU_seconds": 0.296875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.34952769999654265,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.33789429999887943,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.3165850000004866,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "7203e396fb7bb702c2a0cfefe2800d47683870c37400df50547b80a20bf3196e",
+          "exact": true
+        }
+      ],
+      "clock_info": {
+        "process_time": {
+          "resolution": 1e-07,
+          "implementation": "GetProcessTimes()"
+        },
+        "perf_counter": {
+          "resolution": 1e-07,
+          "implementation": "QueryPerformanceCounter()"
+        }
+      }
+    },
+    {
+      "series": 4,
+      "order": "ABBA",
+      "rows": [
+        {
+          "id": "one-python",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.10018409999611322,
+              "CPU_seconds": 0.109375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.1016072999991593,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.09357679999811808,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.09560530000453582,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.19990970000071684,
+              "CPU_seconds": 0.203125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.18623799999477342,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.20547330000408692,
+              "CPU_seconds": 0.203125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.18975039999349974,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "ecdb8d0282d3b4270fe2b722db6e431e3c0d50c8f9c49a19d5fbe3d8c4c3539b",
+          "exact": true
+        },
+        {
+          "id": "two-python",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.1675039999972796,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.15433019999909448,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.16739760000200476,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.1682336000012583,
+              "CPU_seconds": 0.15625,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.3251875999994809,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.308251400005247,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.3093607999981032,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3213456000012229,
+              "CPU_seconds": 0.296875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "e0e25da243a2018a77bb9be3d39bf38478f6b9644b26836170cdda7bbf8fc63e",
+          "exact": true
+        },
+        {
+          "id": "one-rust",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.08278820000123233,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.08260690000315662,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.08111320000170963,
+              "CPU_seconds": 0.078125,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.08425249999709195,
+              "CPU_seconds": 0.09375,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.16984229999798117,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.16506689999368973,
+              "CPU_seconds": 0.15625,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.17398790000152076,
+              "CPU_seconds": 0.171875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.17382670000370126,
+              "CPU_seconds": 0.1875,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "8da20c8ff91dd091062f0d195ce1991dc6381195887a0c991e002d5b70087105",
+          "exact": true
+        },
+        {
+          "id": "two-rust",
+          "micro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.16036119999625953,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.15314190000208328,
+              "CPU_seconds": 0.140625,
+              "calls": 512
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.14956390000588726,
+              "CPU_seconds": 0.140625,
+              "calls": 512
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.1548830000028829,
+              "CPU_seconds": 0.171875,
+              "calls": 512
+            }
+          ],
+          "macro": [
+            {
+              "role": "A",
+              "wall_seconds": 0.34277450000081444,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.330385599998408,
+              "CPU_seconds": 0.328125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "B",
+              "wall_seconds": 0.32452299999567913,
+              "CPU_seconds": 0.3125,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            },
+            {
+              "role": "A",
+              "wall_seconds": 0.3331689999977243,
+              "CPU_seconds": 0.34375,
+              "rollouts": 8,
+              "packets_per_rollout": 2
+            }
+          ],
+          "endpoint_SHA256": "7203e396fb7bb702c2a0cfefe2800d47683870c37400df50547b80a20bf3196e",
+          "exact": true
+        }
+      ],
+      "clock_info": {
+        "process_time": {
+          "resolution": 1e-07,
+          "implementation": "GetProcessTimes()"
+        },
+        "perf_counter": {
+          "resolution": 1e-07,
+          "implementation": "QueryPerformanceCounter()"
+        }
+      }
+    }
+  ],
+  "quality": {
+    "all_exact": true,
+    "rows": [
+      {
+        "job": {
+          "id": "one-python",
+          "input": "inputs/one-python.json",
+          "input_SHA256": "414ea30d4d28e8d07cfd51330bf4f963bec4bee63bbe723435ac1778c73b2baa",
+          "kind": "one",
+          "backend": "python",
+          "figures": 1,
+          "benchmark": true
+        },
+        "counts": [
+          {
+            "R_total": 230,
+            "R_in_RHS": 224,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 0,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 118,
+            "R_in_RHS": 112,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 0,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "38678294857916.917792853171860229408996414454970265074790651590324600845173752488",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.89963583857388584874570369720458984375000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-41185934316258862.2228000530240024090744554996490478515625000000000000000000",
+              "-631117187323191339.5984581770298973424360156059265136718750000000000000000000",
+              "5658180857075598848.9987831098715105326846241950988769531250000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18"
+            ]
+          },
+          {
+            "E_J": "38678294857917.068228827517581697493738395740086451348970102351425718827887852338",
+            "P_kg_m_s": [
+              "24000000000000.0053568260938163803075440227985382080078125000000000000000",
+              "-11999999999999.81081799660387332551181316375732421875000000000000000",
+              "6000000000000.0018596235662471372052095830440521240234375000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-41185934316258862.925366314633287070191477696301981214947443750169081555512207160",
+              "-631117187323191318.13519415404343384573203617284445783046248537172685094676083394",
+              "5658180857075599497.0148255480807274490320828108076439845197974003263713393963031"
+            ],
+            "qnorm_minus1": [
+              "5.36192971901428708674811057386635551331861855610822181887890405E-17"
+            ]
+          },
+          {
+            "E_J": "38678294857917.350819326987131259329210659905278647120842760453419049592144125738",
+            "P_kg_m_s": [
+              "24000000000000.006050715484207103145308792591094970703125000000000000000",
+              "-11999999999999.76640907561886706389486789703369140625000000000000000",
+              "6000000000000.006716849298982197069562971591949462890625000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-41185934316258865.929196886770582516270533749661109191594500337531281619618539480",
+              "-631117187323191324.64752576425782963910652406536964027936361515663116206198424152",
+              "5658180857075600835.8886499615930591627457188582882785620967298846530763034579081"
+            ],
+            "qnorm_minus1": [
+              "5.13198049003746769424312179972963187657785589524204918710811285E-17"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "67b257d2e830455605a89620b8dfc7af3808a091c918af98d81231f71ed551dc",
+          "67b257d2e830455605a89620b8dfc7af3808a091c918af98d81231f71ed551dc"
+        ],
+        "independent_differences": {
+          "positions": [
+            0.0,
+            0.0
+          ],
+          "velocities": [
+            0.0,
+            0.0
+          ],
+          "spins": [
+            0.0
+          ],
+          "raw_quaternion": [
+            0.0
+          ],
+          "sign_aligned_raw_quaternion": [
+            0.0
+          ],
+          "orientation_angle_rad": [
+            0.0
+          ],
+          "relative_positions": 0.0,
+          "relative_positions_norm_difference": 0.0,
+          "relative_velocities": 0.0,
+          "relative_velocities_norm_difference": 0.0,
+          "E_difference_J": 0.0,
+          "P_kg_m_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "L_kg_m2_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memory": [
+          {
+            "role": "A",
+            "tracked_peak_bytes": 13272,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          },
+          {
+            "role": "B",
+            "tracked_peak_bytes": 13392,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          }
+        ],
+        "stage_input_and_derivative_SHA256": [
+          "a95cd388f228bc8d3a98fd5bf7c9c35d87ccc4b49b0208a7b30f63715da05bb7",
+          "4305905d4108edaaf2e1029a81d3548cda02eaee75a90d88385f8b40fae54205",
+          "e501ea1ec9b9d4b0cc7f4df492d03ae8351c33732ca3b0c7c2c9024314287e24"
+        ]
+      },
+      {
+        "job": {
+          "id": "two-python",
+          "input": "inputs/two-python.json",
+          "input_SHA256": "c3eaa9d37dbfbc18a1ba47d4355543475c47ba08ffe434dfd403780afac45578",
+          "kind": "two",
+          "backend": "python",
+          "figures": 2,
+          "benchmark": true
+        },
+        "counts": [
+          {
+            "R_total": 460,
+            "R_in_RHS": 448,
+            "R_outside_RHS": 12,
+            "RHS": 112,
+            "native": 0,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 236,
+            "R_in_RHS": 224,
+            "R_outside_RHS": 12,
+            "RHS": 112,
+            "native": 0,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "104883731775639.87320964450685375788882008842590295200286646602909531078126414352",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.89963583857388584874570369720458984375000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520073.7771999469759975909255445003509521484375000000000000000000",
+              "-629998761620981645.3484581770298973424360156059265136718750000000000000000000",
+              "5724531484419812280.9987831098715105326846241950988769531250000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18",
+              "-1.172198189219308733130303643641643269689921791782466129092787422E-17"
+            ]
+          },
+          {
+            "E_J": "104883731775639.82547288810441945555667954274213906385586009813116203186869878227",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.85522691758887958712875843048095703125000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520077.146561382296209618600112033986015795911430085931431710477568231",
+              "-629998761620981654.32521755037977544404703975497070712680496530817310374406048368",
+              "5724531484419812057.6289902745967909789436485044151211571059090796407403667345193"
+            ],
+            "qnorm_minus1": [
+              "-7.4016547339429308041436809654313067231157284228709485047649503E-19",
+              "-1.3584283042197720016415582611042989869218031531274988268680495142E-16"
+            ]
+          },
+          {
+            "E_J": "104883731775640.01625187785916024832956550672873366460401454336119512081991412764",
+            "P_kg_m_s": [
+              "23999999999999.9907851488956112007144838571548461914062500000000000000000",
+              "-11999999999999.844124687342628021724522113800048828125000000000000000",
+              "6000000000000.0101862962509358112583868205547332763671875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520076.756706413027144830718961615525292845229728892590681521568285461",
+              "-629998761620981699.88283081735905444010609417886382839688723343503189144865217487",
+              "5724531484419813022.6497327679041565559198408353471978061259623800490978218213911"
+            ],
+            "qnorm_minus1": [
+              "1.073218242807180215596230299258878223301401892441900700675832985E-16",
+              "-1.7426014086076619368673209238111487921851473992589123991335769982E-16"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "6375b681420555a79dc4179043868fbc0de1dbfd92d04d0af5d6e53b020f1e3f",
+          "6375b681420555a79dc4179043868fbc0de1dbfd92d04d0af5d6e53b020f1e3f"
+        ],
+        "independent_differences": {
+          "positions": [
+            0.0,
+            0.0
+          ],
+          "velocities": [
+            0.0,
+            0.0
+          ],
+          "spins": [
+            0.0,
+            0.0
+          ],
+          "raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "sign_aligned_raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "orientation_angle_rad": [
+            0.0,
+            0.0
+          ],
+          "relative_positions": 0.0,
+          "relative_positions_norm_difference": 0.0,
+          "relative_velocities": 0.0,
+          "relative_velocities_norm_difference": 0.0,
+          "E_difference_J": 0.0,
+          "P_kg_m_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "L_kg_m2_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memory": [
+          {
+            "role": "A",
+            "tracked_peak_bytes": 14176,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          },
+          {
+            "role": "B",
+            "tracked_peak_bytes": 14520,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          }
+        ],
+        "stage_input_and_derivative_SHA256": [
+          "e22cd567fd2a7e6bf85c21b23346dfdc6fa127638bdcba074537b9c6db05b8a7",
+          "50598727275c7d384a3b67de35cfcfd7d253cb6af43f2e4e4384b441fb06fd38",
+          "e72d4785344fef97e0d16c1b3fe396e064a0353b2a7f95d82b9204269a461a15"
+        ]
+      },
+      {
+        "job": {
+          "id": "free-python",
+          "input": "inputs/free-python.json",
+          "input_SHA256": "30a0e82676ace121d14328a89c6a80b39072b910e244b880bf19daf833fb415f",
+          "kind": "free",
+          "backend": "python",
+          "figures": 1,
+          "benchmark": false
+        },
+        "counts": [
+          {
+            "R_total": 230,
+            "R_in_RHS": 224,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 0,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 118,
+            "R_in_RHS": 112,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 0,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "1002463888888888.9766423799639149915777539646657482184885361172244267403323800952",
+            "P_kg_m_s": [
+              "20000000000000.0004163336342344337026588618755340576171875000000000000000",
+              "-434999999999999.94226840271949185989797115325927734375000000000000000",
+              "-28333333333333.3318992952598591728019528090953826904296875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-13169267649592192.5067208120535724447108805179595947265625000000000000000000",
+              "-284550520656524626.5878443120207066385773941874504089355468750000000000000000",
+              "1385080857075598418.3932318938814205466769635677337646484375000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18"
+            ]
+          },
+          {
+            "E_J": "1002463888888888.9766423799639149915777539646657482184885361172244267403323800952",
+            "P_kg_m_s": [
+              "20000000000000.0004163336342344337026588618755340576171875000000000000000",
+              "-434999999999999.94226840271949185989797115325927734375000000000000000",
+              "-28333333333333.3318992952598591728019528090953826904296875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-13169267649592191.425837743818770438346626104239429134728914857349613143355782086",
+              "-284550520656524626.54249864035867290014339034998055973664354241839651721290849196",
+              "1385080857075598418.460018747706527619811822660267353057861328125000000000000000"
+            ],
+            "qnorm_minus1": [
+              "4.80792207219998365698936035949463309567923200382888658233055238E-17"
+            ]
+          },
+          {
+            "E_J": "1002463888888888.9766423799639149915777539646657482184885361172244267403323800952",
+            "P_kg_m_s": [
+              "20000000000000.0004163336342344337026588618755340576171875000000000000000",
+              "-434999999999999.94226840271949185989797115325927734375000000000000000",
+              "-28333333333333.3318992952598591728019528090953826904296875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-13169267649592190.344954675583968431982371690519263542895329714699226286711564171",
+              "-284550520656524626.49715296869663916170938651251071053774020983679303442581698391",
+              "1385080857075598418.52680560153163469294668175280094146728515625000000000000000"
+            ],
+            "qnorm_minus1": [
+              "2.16643994938645030331327694811964491941542340531727627071245021E-17"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "81d9c38090752085560b30507cbc386933b295668abbf07e755e32579712ce65",
+          "81d9c38090752085560b30507cbc386933b295668abbf07e755e32579712ce65"
+        ],
+        "independent_differences": {
+          "single_body_exact": true
+        },
+        "memory": [],
+        "stage_input_and_derivative_SHA256": [
+          "fd4da6f9046c624cd97039eceaaa484a50c00ce63d073e9bd0708c0e31a1313b",
+          "f4de440f4776aa9dedef11a184841c52faa88467bf2e874228ae928cd9a69c89",
+          "4a7b3f3ec5ab3f19acc7e6c13358c0933c752965a75ae4a01fc5a18d97a0dda6"
+        ]
+      },
+      {
+        "job": {
+          "id": "zeroQ-python",
+          "input": "inputs/zeroQ-python.json",
+          "input_SHA256": "9303e16216f3e1e6f9316a1247fc3577c428b2b54f85a10c0855f60677529b43",
+          "kind": "zeroQ",
+          "backend": "python",
+          "figures": 2,
+          "benchmark": false
+        },
+        "counts": [
+          {
+            "R_total": 508,
+            "R_in_RHS": 496,
+            "R_outside_RHS": 12,
+            "RHS": 124,
+            "native": 0,
+            "nfev": [
+              68,
+              56
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 260,
+            "R_in_RHS": 248,
+            "R_outside_RHS": 12,
+            "RHS": 124,
+            "native": 0,
+            "nfev": [
+              68,
+              56
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "238302500000000.25335748094158019551737932572226190704754996008440412408660707272",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.89963583857388584874570369720458984375000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520073.7771999469759975909255445003509521484375000000000000000000",
+              "-629998761620981645.3484581770298973424360156059265136718750000000000000000000",
+              "5724531484419812280.9987831098715105326846241950988769531250000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18",
+              "-1.172198189219308733130303643641643269689921791782466129092787422E-17"
+            ]
+          },
+          {
+            "E_J": "238302500000000.38992127451629479238733834611861878667424630281182086421848778687",
+            "P_kg_m_s": [
+              "23999999999999.9970301534091277062543667852878570556640625000000000000000",
+              "-11999999999999.81081799660387332551181316375732421875000000000000000",
+              "6000000000000.0074107386893729199073277413845062255859375000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520068.347007691785229885229844086658297790425762782955815266561216959",
+              "-629998761620981584.58292222748156229758360849182519178182238352246141710466531549",
+              "5724531484419812941.1628819097377503733758093315905879509336124874325363309779391"
+            ],
+            "qnorm_minus1": [
+              "-2.529913502889085637296597662226538709086547934125351823338763482E-17",
+              "7.57792651729415799914954281079041876553522851496322914947960364E-17"
+            ]
+          },
+          {
+            "E_J": "238302500000000.61975987995993030831151087526969005048550423866161011437320729411",
+            "P_kg_m_s": [
+              "23999999999999.997724042799518429092131555080413818359375000000000000000",
+              "-11999999999999.76640907561886706389486789703369140625000000000000000",
+              "6000000000000.001165734175856414367444813251495361328125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520064.680046140006911171282789371131849525924846521819644440398633379",
+              "-629998761620981647.74448181155495009350195733443243696570079730124788741640884382",
+              "5724531484419814017.7500293645224481854949585884742407439325138733803716162285013"
+            ],
+            "qnorm_minus1": [
+              "5.33594501190528945757171801171757639617055125324370863491221661E-17",
+              "1.113315742148595275874283186049816852207672843037715668833190773E-16"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "cd6b4bae5a53972725fdca44df06dcc79f0308ebd5524e231929ebe34e57558a",
+          "cd6b4bae5a53972725fdca44df06dcc79f0308ebd5524e231929ebe34e57558a"
+        ],
+        "independent_differences": {
+          "positions": [
+            0.0,
+            0.0
+          ],
+          "velocities": [
+            0.0,
+            0.0
+          ],
+          "spins": [
+            0.0,
+            0.0
+          ],
+          "raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "sign_aligned_raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "orientation_angle_rad": [
+            0.0,
+            0.0
+          ],
+          "relative_positions": 0.0,
+          "relative_positions_norm_difference": 0.0,
+          "relative_velocities": 0.0,
+          "relative_velocities_norm_difference": 0.0,
+          "E_difference_J": 0.0,
+          "P_kg_m_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "L_kg_m2_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memory": [],
+        "stage_input_and_derivative_SHA256": [
+          "b7873a6ebf167dc2ea90f222842ccf73727e717cdca9d504e8ec73762cc2f64b",
+          "26d51ba19b7750026ab31d2738d247ea3fe00ac6cfcfb95cfd85f8bbf02a3b8e",
+          "6f6381d7ed10ebc8f90819f872d5512eddd326eb5930ddf7a30316a0772bc92d"
+        ]
+      },
+      {
+        "job": {
+          "id": "one-rust",
+          "input": "inputs/one-rust.json",
+          "input_SHA256": "6f0ff80c5166128aeb798b47d9564aab1505422c7035436526c5da9a250e67f1",
+          "kind": "one",
+          "backend": "rust",
+          "figures": 1,
+          "benchmark": true
+        },
+        "counts": [
+          {
+            "R_total": 230,
+            "R_in_RHS": 224,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 112,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 118,
+            "R_in_RHS": 112,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 112,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "38678294857916.917792853171860229408996414454970265074790651590324600845173752488",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.89963583857388584874570369720458984375000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-41185934316258862.2228000530240024090744554996490478515625000000000000000000",
+              "-631117187323191339.5984581770298973424360156059265136718750000000000000000000",
+              "5658180857075598848.9987831098715105326846241950988769531250000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18"
+            ]
+          },
+          {
+            "E_J": "38678294857916.947520289305795136842431501148320101033190441948816988724744116921",
+            "P_kg_m_s": [
+              "24000000000000.0039690473130349346320144832134246826171875000000000000000",
+              "-11999999999999.81081799660387332551181316375732421875000000000000000",
+              "6000000000000.0018596235662471372052095830440521240234375000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-41185934316258863.901172993220686646833110622120623175276362033531835082911243262",
+              "-631117187323191318.35527372252674494841553681681880503936840679207308929532516117",
+              "5658180857075599434.6352114718089527900162818964012573264606599922430657523264585"
+            ],
+            "qnorm_minus1": [
+              "-4.426917296675370795854672609803853833058652856795042390549766255E-17"
+            ]
+          },
+          {
+            "E_J": "38678294857917.137706871104736372348419160943328332752161055171651480938666999986",
+            "P_kg_m_s": [
+              "24000000000000.01298960938811433152295649051666259765625000000000000000",
+              "-11999999999999.799715766357621760107576847076416015625000000000000000",
+              "6000000000000.006716849298982197069562971591949462890625000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-41185934316258868.265551119366762506096030246731858479124194606993403233730077772",
+              "-631117187323191324.45901518623737927320712320610249783016725905670715746076382402",
+              "5658180857075599835.3988954368238717315021090883640681578458921053773056364377680"
+            ],
+            "qnorm_minus1": [
+              "-5.045115067120079661244819675233688940242994826269632106232479631E-17"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "721cc643dc95339f32e1cf7dcba3861163312a025bcde424ee5033babbcc7946",
+          "721cc643dc95339f32e1cf7dcba3861163312a025bcde424ee5033babbcc7946"
+        ],
+        "independent_differences": {
+          "positions": [
+            0.0,
+            0.0
+          ],
+          "velocities": [
+            0.0,
+            0.0
+          ],
+          "spins": [
+            0.0
+          ],
+          "raw_quaternion": [
+            0.0
+          ],
+          "sign_aligned_raw_quaternion": [
+            0.0
+          ],
+          "orientation_angle_rad": [
+            0.0
+          ],
+          "relative_positions": 0.0,
+          "relative_positions_norm_difference": 0.0,
+          "relative_velocities": 0.0,
+          "relative_velocities_norm_difference": 0.0,
+          "E_difference_J": 0.0,
+          "P_kg_m_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "L_kg_m2_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memory": [
+          {
+            "role": "A",
+            "tracked_peak_bytes": 13784,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          },
+          {
+            "role": "B",
+            "tracked_peak_bytes": 13904,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          }
+        ],
+        "stage_input_and_derivative_SHA256": [
+          "c613c004fee02e123c446a3353bdd86207a87dc4cae8e5376fd803e8c0556de1",
+          "97ce6de2c2b956e1ab0029cc2e916d456e3b90dd2768ccde3588d101ad8c4252",
+          "f212c2199cda17dbbbfecc6696645ddffa7945b06c5a0fd3b1a8fa7d61cc77ee"
+        ]
+      },
+      {
+        "job": {
+          "id": "two-rust",
+          "input": "inputs/two-rust.json",
+          "input_SHA256": "57fad3024d85eb17748b8336a19fb00a39a236c499f3e36b4ebbb023c0bf2a35",
+          "kind": "two",
+          "backend": "rust",
+          "figures": 2,
+          "benchmark": true
+        },
+        "counts": [
+          {
+            "R_total": 508,
+            "R_in_RHS": 496,
+            "R_outside_RHS": 12,
+            "RHS": 124,
+            "native": 124,
+            "nfev": [
+              56,
+              68
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 260,
+            "R_in_RHS": 248,
+            "R_outside_RHS": 12,
+            "RHS": 124,
+            "native": 124,
+            "nfev": [
+              56,
+              68
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "104883731775639.87320964450685375788882008842590295200286646602909531078126414352",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.89963583857388584874570369720458984375000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520073.7771999469759975909255445003509521484375000000000000000000",
+              "-629998761620981645.3484581770298973424360156059265136718750000000000000000000",
+              "5724531484419812280.9987831098715105326846241950988769531250000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18",
+              "-1.172198189219308733130303643641643269689921791782466129092787422E-17"
+            ]
+          },
+          {
+            "E_J": "104883731775639.82527946269669513501131344085351039005913860891603146741131018671",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.85522691758887958712875843048095703125000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520077.146561382296209618600112033986015795911430085931431710477568231",
+              "-629998761620981654.25583127303787144348870531219267678752464709721926860996887854",
+              "5724531484419812056.7442970102152757879580234652315365067532549898498411833358546"
+            ],
+            "qnorm_minus1": [
+              "-7.4016547339429308041436809654313067231157284228709485047649503E-19",
+              "-1.3584283042197720016415582611042989869218031531274988268680495142E-16"
+            ]
+          },
+          {
+            "E_J": "104883731775640.01461392372381915535790922484294768398274370393854350395860134511",
+            "P_kg_m_s": [
+              "24000000000000.0018873791418627661187201738357543945312500000000000000000",
+              "-11999999999999.844124687342628021724522113800048828125000000000000000",
+              "6000000000000.0101862962509358112583868205547332763671875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520075.008361615286955202576746197968844054938603786806400330888777717",
+              "-629998761620981699.20651327878835992325713997570602742662028481043703237451936161",
+              "5724531484419813019.0182149033465800133398597175459953122471469180590833425448239"
+            ],
+            "qnorm_minus1": [
+              "1.228849978321076018923880277537678496392060834867084028932683392E-16",
+              "-1.6700361808743494628777354379579127508183554623865371946493760562E-16"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "066579866d27a18447029d836727e8c99029f157a262297e52b275c3fbe91611",
+          "066579866d27a18447029d836727e8c99029f157a262297e52b275c3fbe91611"
+        ],
+        "independent_differences": {
+          "positions": [
+            0.0,
+            0.0
+          ],
+          "velocities": [
+            0.0,
+            0.0
+          ],
+          "spins": [
+            0.0,
+            0.0
+          ],
+          "raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "sign_aligned_raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "orientation_angle_rad": [
+            0.0,
+            0.0
+          ],
+          "relative_positions": 0.0,
+          "relative_positions_norm_difference": 0.0,
+          "relative_velocities": 0.0,
+          "relative_velocities_norm_difference": 0.0,
+          "E_difference_J": 0.0,
+          "P_kg_m_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "L_kg_m2_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memory": [
+          {
+            "role": "A",
+            "tracked_peak_bytes": 14648,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          },
+          {
+            "role": "B",
+            "tracked_peak_bytes": 14992,
+            "tracked_retained_bytes": 0,
+            "calls": 128
+          }
+        ],
+        "stage_input_and_derivative_SHA256": [
+          "e19be77796befd9a57be928739ce9ff9c30aee7d4b260daa602b167418151cd2",
+          "09ae202a2a06c0cebe5c3b45519ae17280ed57aee812321ac115813dec5c54c2",
+          "76a6233e8ba29e3bd282c5592a345c246bd880b0320df9da1958bad09c5e6dfd"
+        ]
+      },
+      {
+        "job": {
+          "id": "free-rust",
+          "input": "inputs/free-rust.json",
+          "input_SHA256": "50f23e81e454d9fefae124b8b3b3ecd2fd69616ca51394fae5f291b4cc56185d",
+          "kind": "free",
+          "backend": "rust",
+          "figures": 1,
+          "benchmark": false
+        },
+        "counts": [
+          {
+            "R_total": 230,
+            "R_in_RHS": 224,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 112,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 118,
+            "R_in_RHS": 112,
+            "R_outside_RHS": 6,
+            "RHS": 112,
+            "native": 112,
+            "nfev": [
+              56,
+              56
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "1002463888888888.9766423799639149915777539646657482184885361172244267403323800952",
+            "P_kg_m_s": [
+              "20000000000000.0004163336342344337026588618755340576171875000000000000000",
+              "-434999999999999.94226840271949185989797115325927734375000000000000000",
+              "-28333333333333.3318992952598591728019528090953826904296875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-13169267649592192.5067208120535724447108805179595947265625000000000000000000",
+              "-284550520656524626.5878443120207066385773941874504089355468750000000000000000",
+              "1385080857075598418.3932318938814205466769635677337646484375000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18"
+            ]
+          },
+          {
+            "E_J": "1002463888888888.9766423799639149915777539646657482184885361172244267403323800952",
+            "P_kg_m_s": [
+              "20000000000000.0004163336342344337026588618755340576171875000000000000000",
+              "-434999999999999.94226840271949185989797115325927734375000000000000000",
+              "-28333333333333.3318992952598591728019528090953826904296875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-13169267649592191.425837743818770438346626104239429134728914857349613143355782086",
+              "-284550520656524626.54249864035867290014339034998055973664354241839651721290849196",
+              "1385080857075598418.460018747706527619811822660267353057861328125000000000000000"
+            ],
+            "qnorm_minus1": [
+              "4.80792207219998365698936035949463309567923200382888658233055238E-17"
+            ]
+          },
+          {
+            "E_J": "1002463888888888.9766423799639149915777539646657482184885361172244267403323800952",
+            "P_kg_m_s": [
+              "20000000000000.0004163336342344337026588618755340576171875000000000000000",
+              "-434999999999999.94226840271949185989797115325927734375000000000000000",
+              "-28333333333333.3318992952598591728019528090953826904296875000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "-13169267649592190.344954675583968431982371690519263542895329714699226286711564171",
+              "-284550520656524626.49715296869663916170938651251071053774020983679303442581698391",
+              "1385080857075598418.52680560153163469294668175280094146728515625000000000000000"
+            ],
+            "qnorm_minus1": [
+              "2.16643994938645030331327694811964491941542340531727627071245021E-17"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "cbbf86b8b2237103525b7fb28d55692592eff96288098332a2c681091cce5863",
+          "cbbf86b8b2237103525b7fb28d55692592eff96288098332a2c681091cce5863"
+        ],
+        "independent_differences": {
+          "single_body_exact": true
+        },
+        "memory": [],
+        "stage_input_and_derivative_SHA256": [
+          "fd4da6f9046c624cd97039eceaaa484a50c00ce63d073e9bd0708c0e31a1313b",
+          "f4de440f4776aa9dedef11a184841c52faa88467bf2e874228ae928cd9a69c89",
+          "4a7b3f3ec5ab3f19acc7e6c13358c0933c752965a75ae4a01fc5a18d97a0dda6"
+        ]
+      },
+      {
+        "job": {
+          "id": "zeroQ-rust",
+          "input": "inputs/zeroQ-rust.json",
+          "input_SHA256": "8c150db96d9583999e82265f9a2320175b5c798b050cff656aed6ef8451a581e",
+          "kind": "zeroQ",
+          "backend": "rust",
+          "figures": 2,
+          "benchmark": false
+        },
+        "counts": [
+          {
+            "R_total": 556,
+            "R_in_RHS": 544,
+            "R_outside_RHS": 12,
+            "RHS": 136,
+            "native": 136,
+            "nfev": [
+              68,
+              68
+            ],
+            "in_RHS": false
+          },
+          {
+            "R_total": 284,
+            "R_in_RHS": 272,
+            "R_outside_RHS": 12,
+            "RHS": 136,
+            "native": 136,
+            "nfev": [
+              68,
+              68
+            ],
+            "in_RHS": false
+          }
+        ],
+        "observer": [
+          {
+            "E_J": "238302500000000.25335748094158019551737932572226190704754996008440412408660707272",
+            "P_kg_m_s": [
+              "24000000000000.0004996003610813204431906342506408691406250000000000000000",
+              "-11999999999999.89963583857388584874570369720458984375000000000000000",
+              "6000000000000.0060229599085914742317982017993927001953125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520073.7771999469759975909255445003509521484375000000000000000000",
+              "-629998761620981645.3484581770298973424360156059265136718750000000000000000000",
+              "5724531484419812280.9987831098715105326846241950988769531250000000000000000000"
+            ],
+            "qnorm_minus1": [
+              "-2.53140529277173967526135924957660959585845764060476917546136630E-18",
+              "-1.172198189219308733130303643641643269689921791782466129092787422E-17"
+            ]
+          },
+          {
+            "E_J": "238302500000000.39011423875870845881273337790796867622732865237335489472791277863",
+            "P_kg_m_s": [
+              "23999999999999.9970301534091277062543667852878570556640625000000000000000",
+              "-11999999999999.81081799660387332551181316375732421875000000000000000",
+              "6000000000000.0074107386893729199073277413845062255859375000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520068.347007691785229885229844086658297790425762782955815266561216959",
+              "-629998761620981584.65230982647321116739903139432466801865614106298654761850741579",
+              "5724531484419812942.0475737968812735374781612029287667279135741243891594143278213"
+            ],
+            "qnorm_minus1": [
+              "-2.529913502889085637296597662226538709086547934125351823338763482E-17",
+              "7.57792651729415799914954281079041876553522851496322914947960364E-17"
+            ]
+          },
+          {
+            "E_J": "238302500000000.85597533436190032794580732811110369659023184559122075482640151286",
+            "P_kg_m_s": [
+              "23999999999999.9887034807244390322011895477771759033203125000000000000000",
+              "-11999999999999.7886135361113701947033405303955078125000000000000000",
+              "6000000000000.001165734175856414367444813251495361328125000000000000000"
+            ],
+            "L_kg_m2_s": [
+              "2920112604520061.999957670849851006024264151137856637006887561454349100387162253",
+              "-629998761620981648.35035128401943044630130783865794042831892933682891300151140968",
+              "5724531484419815125.2549877983932082658014054055543543712125970378051462161828056"
+            ],
+            "qnorm_minus1": [
+              "-1.907590875053205632904936151293611138185730616138102745751476424E-17",
+              "5.0207835583462078451679286920237426081146881673210935436247666E-18"
+            ]
+          }
+        ],
+        "checkpoint_SHA256": [
+          "e43cd3c0d96ec0f0c807f08ccb3ce3732765697fe2647a020281b607693ca0bd",
+          "e43cd3c0d96ec0f0c807f08ccb3ce3732765697fe2647a020281b607693ca0bd"
+        ],
+        "independent_differences": {
+          "positions": [
+            0.0,
+            0.0
+          ],
+          "velocities": [
+            0.0,
+            0.0
+          ],
+          "spins": [
+            0.0,
+            0.0
+          ],
+          "raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "sign_aligned_raw_quaternion": [
+            0.0,
+            0.0
+          ],
+          "orientation_angle_rad": [
+            0.0,
+            0.0
+          ],
+          "relative_positions": 0.0,
+          "relative_positions_norm_difference": 0.0,
+          "relative_velocities": 0.0,
+          "relative_velocities_norm_difference": 0.0,
+          "E_difference_J": 0.0,
+          "P_kg_m_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "L_kg_m2_s_difference": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "memory": [],
+        "stage_input_and_derivative_SHA256": [
+          "2982c33916cc0828ebf87f50b8525bb4fe0944c30a9f815226c9e745260837af",
+          "d4525401c6954a70aa8073d91c3884ae9ebd78b423cce57e41684c1d6f0d5ee0",
+          "b96155eea8f9f6e7dfdf36d254844530c6a11833570138c491f0566106f51f6b"
+        ]
+      }
+    ]
+  },
+  "field_checks": {
+    "rows": [
+      {
+        "role": "A",
+        "figures": 1,
+        "force_gradient_error": 1.789010287117241e-10,
+        "torque_gradient_errors": [
+          7.244083121038944e-10
+        ],
+        "reaction": 8.558594658595867e-17,
+        "torque_balance": 1.6798630494813636e-16,
+        "sign_exact": true,
+        "covariance": true,
+        "readonly_matrix": true
+      },
+      {
+        "role": "B",
+        "figures": 1,
+        "force_gradient_error": 1.789010287117241e-10,
+        "torque_gradient_errors": [
+          7.244083121038944e-10
+        ],
+        "reaction": 8.558594658595867e-17,
+        "torque_balance": 1.6798630494813636e-16,
+        "sign_exact": true,
+        "covariance": true,
+        "readonly_matrix": true
+      },
+      {
+        "role": "A",
+        "figures": 2,
+        "force_gradient_error": 9.891864281223163e-11,
+        "torque_gradient_errors": [
+          6.684568758552194e-10,
+          1.935384793696112e-10
+        ],
+        "reaction": 1.1487339760990936e-17,
+        "torque_balance": 6.967083243821018e-17,
+        "sign_exact": true,
+        "covariance": true,
+        "readonly_matrix": true
+      },
+      {
+        "role": "B",
+        "figures": 2,
+        "force_gradient_error": 9.891864281223163e-11,
+        "torque_gradient_errors": [
+          6.684568758552194e-10,
+          1.935384793696112e-10
+        ],
+        "reaction": 1.1487339760990936e-17,
+        "torque_balance": 6.967083243821018e-17,
+        "sign_exact": true,
+        "covariance": true,
+        "readonly_matrix": true
+      }
+    ]
+  },
+  "memory": [
+    [
+      "one-python",
+      [
+        {
+          "role": "A",
+          "tracked_peak_bytes": 13272,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        },
+        {
+          "role": "B",
+          "tracked_peak_bytes": 13392,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        }
+      ]
+    ],
+    [
+      "two-python",
+      [
+        {
+          "role": "A",
+          "tracked_peak_bytes": 14176,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        },
+        {
+          "role": "B",
+          "tracked_peak_bytes": 14520,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        }
+      ]
+    ],
+    [
+      "one-rust",
+      [
+        {
+          "role": "A",
+          "tracked_peak_bytes": 13784,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        },
+        {
+          "role": "B",
+          "tracked_peak_bytes": 13904,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        }
+      ]
+    ],
+    [
+      "two-rust",
+      [
+        {
+          "role": "A",
+          "tracked_peak_bytes": 14648,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        },
+        {
+          "role": "B",
+          "tracked_peak_bytes": 14992,
+          "tracked_retained_bytes": 0,
+          "calls": 128
+        }
+      ]
+    ]
+  ],
+  "allocation_ok": true,
+  "case_ok": true,
+  "benefit_condition": true,
+  "tests": {
+    "preflight-tests.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "10",
+      "time": "0.093",
+      "timestamp": "2026-11-06T18:57:25.478302+03:00",
+      "hostname": "DESKTOP-6DHG18S"
+    },
+    "baseline-regress.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "28",
+      "time": "1.984",
+      "timestamp": "2026-11-06T18:57:59.208518+03:00",
+      "hostname": "DESKTOP-6DHG18S"
+    },
+    "prototype-regress.xml": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "28",
+      "time": "1.990",
+      "timestamp": "2026-11-06T18:58:01.890765+03:00",
+      "hostname": "DESKTOP-6DHG18S"
+    }
+  },
+  "resources_before_assessment_finish": {
+    "CPU_seconds": 73.46875,
+    "active_wall_seconds": 62.51069909999205,
+    "attempts": [
+      {
+        "name": "preflight",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 4.9375,
+        "worker_CPU_seconds": 4.3125,
+        "supervisor_process_CPU_seconds": 0.625,
+        "active_wall_seconds": 4.624894000000495,
+        "worker_private_peak_sampled": 136728576,
+        "worker_RSS_peak_sampled": 135401472,
+        "supervisor_OS_peak_commit": 37486592,
+        "files_peak_sampled": 23,
+        "artifact_bytes": 615150
+      },
+      {
+        "name": "quality",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 6.34375,
+        "worker_CPU_seconds": 5.4375,
+        "supervisor_process_CPU_seconds": 0.90625,
+        "active_wall_seconds": 5.657665399994585,
+        "worker_private_peak_sampled": 162942976,
+        "worker_RSS_peak_sampled": 146980864,
+        "supervisor_OS_peak_commit": 37511168,
+        "files_peak_sampled": 45,
+        "artifact_bytes": 922589
+      },
+      {
+        "name": "regress-baseline",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 3.109375,
+        "worker_CPU_seconds": 2.53125,
+        "supervisor_process_CPU_seconds": 0.578125,
+        "active_wall_seconds": 2.5806580999997095,
+        "worker_private_peak_sampled": 139677696,
+        "worker_RSS_peak_sampled": 133099520,
+        "supervisor_OS_peak_commit": 37351424,
+        "files_peak_sampled": 51,
+        "artifact_bytes": 937887
+      },
+      {
+        "name": "regress-prototype",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 2.71875,
+        "worker_CPU_seconds": 2.515625,
+        "supervisor_process_CPU_seconds": 0.203125,
+        "active_wall_seconds": 2.5854985999976634,
+        "worker_private_peak_sampled": 178634752,
+        "worker_RSS_peak_sampled": 137629696,
+        "supervisor_OS_peak_commit": 37425152,
+        "files_peak_sampled": 57,
+        "artifact_bytes": 952609
+      },
+      {
+        "name": "series-0",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.171875,
+        "worker_CPU_seconds": 9.109375,
+        "supervisor_process_CPU_seconds": 2.0625,
+        "active_wall_seconds": 9.395743400003994,
+        "worker_private_peak_sampled": 119001088,
+        "worker_RSS_peak_sampled": 134172672,
+        "supervisor_OS_peak_commit": 37502976,
+        "files_peak_sampled": 61,
+        "artifact_bytes": 961112
+      },
+      {
+        "name": "series-1",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.546875,
+        "worker_CPU_seconds": 9.375,
+        "supervisor_process_CPU_seconds": 2.171875,
+        "active_wall_seconds": 9.648643000000448,
+        "worker_private_peak_sampled": 118583296,
+        "worker_RSS_peak_sampled": 132857856,
+        "supervisor_OS_peak_commit": 37433344,
+        "files_peak_sampled": 65,
+        "artifact_bytes": 970044
+      },
+      {
+        "name": "series-2",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.203125,
+        "worker_CPU_seconds": 9.109375,
+        "supervisor_process_CPU_seconds": 2.09375,
+        "active_wall_seconds": 9.314819699997315,
+        "worker_private_peak_sampled": 123961344,
+        "worker_RSS_peak_sampled": 121749504,
+        "supervisor_OS_peak_commit": 37642240,
+        "files_peak_sampled": 69,
+        "artifact_bytes": 979105
+      },
+      {
+        "name": "series-3",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.171875,
+        "worker_CPU_seconds": 9.0,
+        "supervisor_process_CPU_seconds": 2.171875,
+        "active_wall_seconds": 9.346486899994488,
+        "worker_private_peak_sampled": 119238656,
+        "worker_RSS_peak_sampled": 132112384,
+        "supervisor_OS_peak_commit": 37433344,
+        "files_peak_sampled": 73,
+        "artifact_bytes": 988018
+      },
+      {
+        "name": "series-4",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.265625,
+        "worker_CPU_seconds": 9.078125,
+        "supervisor_process_CPU_seconds": 2.1875,
+        "active_wall_seconds": 9.356290000003355,
+        "worker_private_peak_sampled": 120299520,
+        "worker_RSS_peak_sampled": 133992448,
+        "supervisor_OS_peak_commit": 37560320,
+        "files_peak_sampled": 77,
+        "artifact_bytes": 997365
+      }
+    ]
+  },
+  "limits": "120CPU/240activewall/1GiB/48MiB,early90/190/900MiB/40MiB; no adaptive repeats; backup/Git/editing separate",
+  "limitations": [
+    "Finite short synthetic cases, not new scientific accuracy claim or full Q2 qualification",
+    "Timing series separate processes, shared Windows machine; independence assumption not guaranteed",
+    "CPUtimer observed coarse quantization, wallprimary",
+    "Joint process memory includes both isolated Python namespaces; no isolated per-runtime OS private delta",
+    "tracemalloc finite128call windows, not universal allocation/leak proof",
+    "Timedmacro verifies final endpoint of each batch, not storing every intermediate repetition; quality saves both packet endpoints",
+    "Python/Rust same-within-backend only; not asserting identical trajectories across backends",
+    "Prototype remains separate local branch; old3FAIL and release033NO-GO unchanged"
+  ],
+  "resources_final_controlled": {
+    "CPU_seconds": 76.9375,
+    "active_wall_seconds": 65.57496509999328,
+    "attempts": [
+      {
+        "name": "preflight",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 4.9375,
+        "worker_CPU_seconds": 4.3125,
+        "supervisor_process_CPU_seconds": 0.625,
+        "active_wall_seconds": 4.624894000000495,
+        "worker_private_peak_sampled": 136728576,
+        "worker_RSS_peak_sampled": 135401472,
+        "supervisor_OS_peak_commit": 37486592,
+        "files_peak_sampled": 23,
+        "artifact_bytes": 615150
+      },
+      {
+        "name": "quality",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 6.34375,
+        "worker_CPU_seconds": 5.4375,
+        "supervisor_process_CPU_seconds": 0.90625,
+        "active_wall_seconds": 5.657665399994585,
+        "worker_private_peak_sampled": 162942976,
+        "worker_RSS_peak_sampled": 146980864,
+        "supervisor_OS_peak_commit": 37511168,
+        "files_peak_sampled": 45,
+        "artifact_bytes": 922589
+      },
+      {
+        "name": "regress-baseline",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 3.109375,
+        "worker_CPU_seconds": 2.53125,
+        "supervisor_process_CPU_seconds": 0.578125,
+        "active_wall_seconds": 2.5806580999997095,
+        "worker_private_peak_sampled": 139677696,
+        "worker_RSS_peak_sampled": 133099520,
+        "supervisor_OS_peak_commit": 37351424,
+        "files_peak_sampled": 51,
+        "artifact_bytes": 937887
+      },
+      {
+        "name": "regress-prototype",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 2.71875,
+        "worker_CPU_seconds": 2.515625,
+        "supervisor_process_CPU_seconds": 0.203125,
+        "active_wall_seconds": 2.5854985999976634,
+        "worker_private_peak_sampled": 178634752,
+        "worker_RSS_peak_sampled": 137629696,
+        "supervisor_OS_peak_commit": 37425152,
+        "files_peak_sampled": 57,
+        "artifact_bytes": 952609
+      },
+      {
+        "name": "series-0",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.171875,
+        "worker_CPU_seconds": 9.109375,
+        "supervisor_process_CPU_seconds": 2.0625,
+        "active_wall_seconds": 9.395743400003994,
+        "worker_private_peak_sampled": 119001088,
+        "worker_RSS_peak_sampled": 134172672,
+        "supervisor_OS_peak_commit": 37502976,
+        "files_peak_sampled": 61,
+        "artifact_bytes": 961112
+      },
+      {
+        "name": "series-1",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.546875,
+        "worker_CPU_seconds": 9.375,
+        "supervisor_process_CPU_seconds": 2.171875,
+        "active_wall_seconds": 9.648643000000448,
+        "worker_private_peak_sampled": 118583296,
+        "worker_RSS_peak_sampled": 132857856,
+        "supervisor_OS_peak_commit": 37433344,
+        "files_peak_sampled": 65,
+        "artifact_bytes": 970044
+      },
+      {
+        "name": "series-2",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.203125,
+        "worker_CPU_seconds": 9.109375,
+        "supervisor_process_CPU_seconds": 2.09375,
+        "active_wall_seconds": 9.314819699997315,
+        "worker_private_peak_sampled": 123961344,
+        "worker_RSS_peak_sampled": 121749504,
+        "supervisor_OS_peak_commit": 37642240,
+        "files_peak_sampled": 69,
+        "artifact_bytes": 979105
+      },
+      {
+        "name": "series-3",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.171875,
+        "worker_CPU_seconds": 9.0,
+        "supervisor_process_CPU_seconds": 2.171875,
+        "active_wall_seconds": 9.346486899994488,
+        "worker_private_peak_sampled": 119238656,
+        "worker_RSS_peak_sampled": 132112384,
+        "supervisor_OS_peak_commit": 37433344,
+        "files_peak_sampled": 73,
+        "artifact_bytes": 988018
+      },
+      {
+        "name": "series-4",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 11.265625,
+        "worker_CPU_seconds": 9.078125,
+        "supervisor_process_CPU_seconds": 2.1875,
+        "active_wall_seconds": 9.356290000003355,
+        "worker_private_peak_sampled": 120299520,
+        "worker_RSS_peak_sampled": 133992448,
+        "supervisor_OS_peak_commit": 37560320,
+        "files_peak_sampled": 77,
+        "artifact_bytes": 997365
+      },
+      {
+        "name": "assess",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 3.46875,
+        "worker_CPU_seconds": 2.65625,
+        "supervisor_process_CPU_seconds": 0.8125,
+        "active_wall_seconds": 3.0642660000012256,
+        "worker_private_peak_sampled": 114335744,
+        "worker_RSS_peak_sampled": 132227072,
+        "supervisor_OS_peak_commit": 37486592,
+        "files_peak_sampled": 83,
+        "artifact_bytes": 1352571
+      }
+    ]
+  },
+  "raw_quality_SHA256": "afd04913ca00505c22278a29d9bc03475b21908f94c75471e12132520842cadc",
+  "prototype_bundle": {
+    "file": "prototype-394.bundle",
+    "size": 1401,
+    "SHA256": "7b3ae0a78ef3bac6df4574f03a39ced2a87c55144a573837d693dfa54349b15f",
+    "requires_commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac"
+  },
+  "input_SHA256": {
+    "inputs/one-python.json": "414ea30d4d28e8d07cfd51330bf4f963bec4bee63bbe723435ac1778c73b2baa",
+    "inputs/two-python.json": "c3eaa9d37dbfbc18a1ba47d4355543475c47ba08ffe434dfd403780afac45578",
+    "inputs/free-python.json": "30a0e82676ace121d14328a89c6a80b39072b910e244b880bf19daf833fb415f",
+    "inputs/zeroQ-python.json": "9303e16216f3e1e6f9316a1247fc3577c428b2b54f85a10c0855f60677529b43",
+    "inputs/one-rust.json": "6f0ff80c5166128aeb798b47d9564aab1505422c7035436526c5da9a250e67f1",
+    "inputs/two-rust.json": "57fad3024d85eb17748b8336a19fb00a39a236c499f3e36b4ebbb023c0bf2a35",
+    "inputs/free-rust.json": "50f23e81e454d9fefae124b8b3b3ecd2fd69616ca51394fae5f291b4cc56185d",
+    "inputs/zeroQ-rust.json": "8c150db96d9583999e82265f9a2320175b5c798b050cff656aed6ef8451a581e"
+  }
+}

@@ -120,3 +120,7 @@ Offline CLI: scripts/q2_saved_metrics392.py, без интегрирования
 COM frame, pure encode/decode, независимый Decimal observer и15старыхпакетов.
 Frame CONTRIBUTES, restart/truncation-v-roundoff UNRESOLVED, production не менялся.
 Tools: scripts/q2_fixed_frame393.py и scripts/q2_frame_observer393.py; не runtime.
+
+[Изолированный R-reuse394](q2-performance-prototype-394.md): локальный branch
+от frozen033, exact short r/v/q/S/RHS/persistence, five-series timing.
+GO TO REVIEW, не внедрение/новая qualification; helper и exact patch вне runtime.

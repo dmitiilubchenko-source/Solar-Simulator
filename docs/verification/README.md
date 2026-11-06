@@ -135,3 +135,7 @@ saved-data audit и малый frozen standard subset, без изменения
 исторический A exact, fixed-frame B остаётся cold;26unique tests.
 Независимый saved-data observer не является IVP reference; полного объяснения
 трёх FAIL и нового production qualification нет. После этапа STOP.
+
+[Прототип Q2-performance394](../q2-performance-prototype-394.md): два worktrees,
+одна R/figure/RHS, exact finite contrasts и measured paired timing.
+GO TO REVIEW не меняет production, три FAIL380 или release033 NO-GO.
