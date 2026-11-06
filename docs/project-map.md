@@ -133,3 +133,7 @@ GO TO REVIEW, не внедрение/новая qualification; helper и exact 
 [Preflight396](q2-optimized-qualification-396.md): источники проверены, K=1
 reference380 блокирует запуск58jobs. Новый provenance/output helper вне runtime;
 0/58, старые3FAIL сохранены, исправление reference требует отдельного этапа.
+
+[Reference repair397](q2-reference-repair-397.md): отдельный K1/K2 output unpacker,
+старый380/RHS неизменны, recovery archive audit/short analytic controls.
+Proposed398 binding plan сохраняет58jobs, которые здесь не запускались.

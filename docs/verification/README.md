@@ -148,3 +148,7 @@ fingerprints отдельного кандидата,36pairedepochs,6actualGUIjo
 [Qualification396](../q2-optimized-qualification-396.md): mandatory preflight
 NO-GO из-за K=1 unpacker независимого reference380;0/58jobs. Actualsource/native/
 environment и saved380reference/3FAIL проверены; нового scientificPASS нет.
+
+[Repair397](../q2-reference-repair-397.md): независимая output-only K1/K2 адаптация,
+same-y exactK2 и shortanalyticK1. GO к отдельно разрешённому preflight398;
+qualification58jobs/release не выполнены, старые3FAIL неизменны.
