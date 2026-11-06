@@ -115,3 +115,8 @@ compatibility A/B/C, не release033/scientificaccuracy gate.
 метрики, ограниченные standard cold/continuous traces и профиль RHS.
 Причинный вклад reset/roundoff не разделён; три FAIL380 остаются FAIL.
 Offline CLI: scripts/q2_saved_metrics392.py, без интегрирования/текущей аттестации.
+
+[Локальные Q2-контрасты393](q2-causal-investigation-393.md): source-bound fixed
+COM frame, pure encode/decode, независимый Decimal observer и15старыхпакетов.
+Frame CONTRIBUTES, restart/truncation-v-roundoff UNRESOLVED, production не менялся.
+Tools: scripts/q2_fixed_frame393.py и scripts/q2_frame_observer393.py; не runtime.

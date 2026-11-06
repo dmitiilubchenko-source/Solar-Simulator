@@ -28,6 +28,7 @@ SUITES={
         'tests/test_compatibility389.py',
         'tests/test_compatibility390.py',
         'tests/test_q2_saved_metrics392.py',
+        'tests/test_q2_frame393.py','tests/test_q2_frame_observer393.py',
         'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
         'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_release_ui_history.py','tests/test_ias15_archive_source.py',
         'tests/test_ias15_full_state.py',

@@ -130,3 +130,8 @@ A testedformats PASS/B restrictedPASS/C PARTIAL, не release gatePASS.
 [Численная диагностика Q2-392](../q2-numerical-investigation-392.md): повторяемый
 saved-data audit и малый frozen standard subset, без изменения production.
 Старые три FAIL сохранены, единственная причина остаётся UNRESOLVED.
+
+[Причинная проверка393](../q2-causal-investigation-393.md):15localABC,
+исторический A exact, fixed-frame B остаётся cold;26unique tests.
+Независимый saved-data observer не является IVP reference; полного объяснения
+трёх FAIL и нового production qualification нет. После этапа STOP.
