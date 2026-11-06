@@ -218,7 +218,8 @@ retained Windows final CPU handles. Возможны короткие пропу
 outer venv launcher/последний record-tail CPU не полностью охвачены. Не hard OS quota.
 Scientific output на последнем sample2342013B, sampled filecount peak183.
 Финальные reports/bundle отдельно в пределах128MiB. Recoverable source-only sparse
-checkout нового кандидата6392147B и существующая dependency venv не смешиваются
+checkout нового кандидата6392151B (6392062B tracked files +89B Git pointer) и
+существующая dependency venv не смешиваются
 с experimental artifact bytes. Чтение/редактирование/Git/CI/обязательная backup
 отдельно; activewall не длительность всего чата. Никакого benchmark rerun.
 
