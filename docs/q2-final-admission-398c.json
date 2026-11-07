@@ -631,9 +631,23 @@
   "qualification_dependency": {
     "psutil_version": "7.2.2",
     "installed_in_qualified384venv_before398C": true,
-    "newly_declared_extra": "qualification",
-    "CI_setup": "dev+qualification; desktopdev+native+qualification",
+    "declaration": "requirements/qualification.txt",
+    "CI_setup": "Existing dev/nativeextras plus -r requirements/qualification.txt",
     "local_environment_modified": false,
-    "kind": "Source-level dependency contract gap; no scientificFAIL or actualCI failure claimed"
+    "original_pyproject_restored_exact375SHA": "94b8edcacb85a24944bbe6a45e40050b260628de2a361af340c92d27dec3790c"
+  },
+  "CI_metadata_failure": {
+    "failed_run": 42388831933,
+    "failed_job": 128451894755,
+    "passed": 158,
+    "setup_errors": 10,
+    "root_cause": "New optionalextra changed historical375 source-bound pyproject",
+    "fix": "Remove only own addedextra line, retain original WindowsCRLF; restored bytes exactly match375SHA; separate qualification requirements",
+    "restored_pyproject_SHA256": "94b8edcacb85a24944bbe6a45e40050b260628de2a361af340c92d27dec3790c",
+    "historical_receipt_changed": false,
+    "science_source_changed": false,
+    "normalized_Git_LF_vs_qualified_CRLF": "Initial Gitblob LF comparison rejected as expected; exactinversepatch preserves originalCRLF. HistoricalSHA not altered.",
+    "CI_log_SHA256": "a16e530836427ad36182fa0d019832daf90601fbe1d2987f98f6ec86ccc8ccb6",
+    "log_representation": "DecodedCItext normalizedtoLF"
   }
 }

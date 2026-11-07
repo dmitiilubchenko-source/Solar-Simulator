@@ -98,11 +98,15 @@ synthetic test локально заменён более сильным изм�
 отказов не было. SoftwarePASS не доказывает физическую точность.
 
 Перед публикацией выявлена dependency-contract проблема: controller импортирует
-psutil, а прежний CI устанавливал extras без этой зависимости. Объявлен отдельный
-`qualification` extra с уже использованной на основном ПК
-[psutil7.2.2](https://pypi.org/project/psutil/7.2.2/); CI устанавливает его явно.
-Это профилактика неполной среды CI, не наблюдавшийся scientificFAIL. Саму384venv,
-productiondependencies и численные source files после проверок не меняли.
+psutil, а прежний CI не объявлял эту зависимость. Используется отдельный
+[requirements/qualification.txt](../requirements/qualification.txt) с уже
+проверенной на основном ПК [psutil7.2.2](https://pypi.org/project/psutil/7.2.2/).
+Первоначальное добавление extra в pyproject вызвало10setup errors исторических
+375fixtures в desktopCI42388831933 (158PASS): все из-за одного sourceSHA mismatch.
+Прежние точные pyproject bytes восстановлены с проверкой исходного375SHA;
+зависимость вынесена в отдельный requirements файл. Красный CIlog сохранён,
+исторические receipts/архивы/SHA/критерии не менялись. Саму384venv и численные
+source files после computational checks не меняли. Повторный CI обязателен.
 
 ## Зафиксированные бюджеты399
 

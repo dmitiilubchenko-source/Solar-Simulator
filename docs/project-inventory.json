@@ -615,6 +615,7 @@
       "scripts/validation/vector3_before331.py"
     ],
     "requirements": [
+      "requirements/qualification.txt",
       "requirements/research-ias15.txt",
       "requirements/validated-windows-cp314t.txt"
     ],
