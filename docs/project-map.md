@@ -145,3 +145,8 @@ NO-GO399: Rustcohorts/controller/budget admission не завершены, seale
 [Preflight398B](q2-qualification-preflight-398b.md): missingRust prefixes завершены,
 resource-history guard проверен и усилен; независимый merge/budget по4cohorts
 пока только проект. NO-GO399, production physics/candidates не изменены.
+
+[Групповой допуск398C](q2-final-admission-398c.md): собственные budgets/receipts
+четырёхгрупп, guardedresume и отдельная full58offline assessment. TechnicalGO,
+[sealedplan399](../scripts/q2-qualification399-plan.json); выполнение отдельно
+разрешает владелец. Это validationtooling, не новый физический runtime.

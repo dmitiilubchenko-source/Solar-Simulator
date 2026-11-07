@@ -36,7 +36,7 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.14'
-      - run: python -m pip install -e '.[dev]' -c requirements/validated-windows-cp314t.txt
+      - run: python -m pip install -e '.[dev,qualification]' -c requirements/validated-windows-cp314t.txt
       - run: python -B scripts/check_environment.py
       - run: python -B scripts/check_suites.py python
 
@@ -54,7 +54,7 @@ jobs:
       - run: rustup default stable
       - run: rustup component add rustfmt
       - run: python -m venv .venv
-      - run: .venv/Scripts/python.exe -m pip install -e '.[dev,native]' -c requirements/validated-windows-cp314t.txt
+      - run: .venv/Scripts/python.exe -m pip install -e '.[dev,native,qualification]' -c requirements/validated-windows-cp314t.txt
       - run: .venv/Scripts/python.exe -B scripts/build_native.py
       - run: cargo build --release --manifest-path rust/solar_core/Cargo.toml
       - run: .venv/Scripts/python.exe -B scripts/check_suites.py desktop

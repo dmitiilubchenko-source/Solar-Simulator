@@ -161,3 +161,8 @@ NO-GO399; missingRust/controller checks и неаттестованный180CPUb
 6exactsource contrasts, реальные guard/process synthetic controller tests.
 Усилена проверка resource history; бюджет независимых групп только предложен.
 Scientific399 остаётся NO-GO, полной серии и sealedGOplan нет.
+
+[Финальный допуск398C](../q2-final-admission-398c.md): независимые4группы и
+отдельный evaluator, realprocess resume/faultchecks и полный synthetic65/81grid.
+TechnicalGO/sealedplan; следующий этап — scientific399 только после разрешения.
+58полных траекторий здесь не выполнялись; scientific/releasePASS не объявлен.

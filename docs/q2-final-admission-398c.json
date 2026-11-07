@@ -1,0 +1,639 @@
+{
+  "stage": "398C",
+  "status": "TECHNICAL_GO_TO_SEPARATELY_AUTHORIZED_399",
+  "base_dev": "8a26a96945927d6703c25182126a30b5bcb80aba",
+  "tool_commit": "78fe4cac8873914e5d1fa084d510f3f279b33c68",
+  "plan": {
+    "path": "scripts/q2-qualification399-plan.json",
+    "sha256": "3e1ceb821514a770632f7f5c0ac37260a869198d94e5adc60d81bfaa69bbe644",
+    "jobs": 58,
+    "execution_order": [
+      "baseline:python",
+      "baseline:rust",
+      "candidate:python",
+      "candidate:rust",
+      "baseline:evaluate"
+    ],
+    "groups": {
+      "baseline:evaluate": {
+        "caps": {
+          "cpu_seconds": 60,
+          "disk_bytes": 134217728,
+          "private_bytes": 1073741824,
+          "wall_seconds": 120
+        },
+        "directory": "baseline-evaluate",
+        "estimate_basis": {
+          "actual_scientific_integrations": 0,
+          "conservative_CPU_projection": 40.625,
+          "fixture_generation_excluded": true,
+          "measured_full_grid_assess_CPU_seconds": 1.578125,
+          "measured_full_grid_assess_wall_seconds": 1.6069961999892257,
+          "terms": "8x arithmetic,3startup/source attestation,10rawverification/JSONIO,10supervision,5audit reserve; hypotheses not measured raw58files"
+        },
+        "job_ids": [
+          "baseline__two-bodies__python__coarse__cold",
+          "baseline__two-bodies__python__coarse__continuous",
+          "baseline__two-bodies__python__standard__cold",
+          "baseline__two-bodies__python__standard__continuous",
+          "baseline__two-bodies__python__fine__cold",
+          "baseline__two-bodies__python__fine__continuous",
+          "baseline__three-bodies__python__coarse__cold",
+          "baseline__three-bodies__python__coarse__continuous",
+          "baseline__three-bodies__python__standard__cold",
+          "baseline__three-bodies__python__standard__continuous",
+          "baseline__three-bodies__python__fine__cold",
+          "baseline__three-bodies__python__fine__continuous",
+          "baseline__one__python__cold",
+          "baseline__one__python__continuous",
+          "baseline__two-bodies__rust__coarse__cold",
+          "baseline__two-bodies__rust__coarse__continuous",
+          "baseline__two-bodies__rust__standard__cold",
+          "baseline__two-bodies__rust__standard__continuous",
+          "baseline__two-bodies__rust__fine__cold",
+          "baseline__two-bodies__rust__fine__continuous",
+          "baseline__three-bodies__rust__coarse__cold",
+          "baseline__three-bodies__rust__coarse__continuous",
+          "baseline__three-bodies__rust__standard__cold",
+          "baseline__three-bodies__rust__standard__continuous",
+          "baseline__three-bodies__rust__fine__cold",
+          "baseline__three-bodies__rust__fine__continuous",
+          "baseline__one__rust__cold",
+          "baseline__one__rust__continuous",
+          "candidate__two-bodies__python__coarse__cold",
+          "candidate__two-bodies__python__coarse__continuous",
+          "candidate__two-bodies__python__standard__cold",
+          "candidate__two-bodies__python__standard__continuous",
+          "candidate__two-bodies__python__fine__cold",
+          "candidate__two-bodies__python__fine__continuous",
+          "candidate__three-bodies__python__coarse__cold",
+          "candidate__three-bodies__python__coarse__continuous",
+          "candidate__three-bodies__python__standard__cold",
+          "candidate__three-bodies__python__standard__continuous",
+          "candidate__three-bodies__python__fine__cold",
+          "candidate__three-bodies__python__fine__continuous",
+          "candidate__one__python__cold",
+          "candidate__one__python__continuous",
+          "candidate__two-bodies__rust__coarse__cold",
+          "candidate__two-bodies__rust__coarse__continuous",
+          "candidate__two-bodies__rust__standard__cold",
+          "candidate__two-bodies__rust__standard__continuous",
+          "candidate__two-bodies__rust__fine__cold",
+          "candidate__two-bodies__rust__fine__continuous",
+          "candidate__three-bodies__rust__coarse__cold",
+          "candidate__three-bodies__rust__coarse__continuous",
+          "candidate__three-bodies__rust__standard__cold",
+          "candidate__three-bodies__rust__standard__continuous",
+          "candidate__three-bodies__rust__fine__cold",
+          "candidate__three-bodies__rust__fine__continuous",
+          "candidate__one__rust__cold",
+          "candidate__one__rust__continuous",
+          "one-reference-3e-11",
+          "one-reference-3e-13"
+        ],
+        "limits": {
+          "cpu_seconds": 48,
+          "disk_bytes": 117440512,
+          "private_bytes": 943718400,
+          "wall_seconds": 96
+        }
+      },
+      "baseline:python": {
+        "caps": {
+          "cpu_seconds": 180,
+          "disk_bytes": 134217728,
+          "private_bytes": 1073741824,
+          "wall_seconds": 360
+        },
+        "directory": "baseline-python",
+        "estimate398B": {
+          "backend": "python",
+          "jobs": 16,
+          "projected_CPU_seconds_with_reserves": 102.3125,
+          "projected_bytes_with_1_25_margin": 10264316.25,
+          "projected_wall_seconds_with_reserves": 123.99568679986987,
+          "proposed_only_cap_CPU_seconds": 180,
+          "proposed_only_cap_wall_seconds": 360,
+          "proposed_only_early_CPU_seconds": 144,
+          "proposed_only_early_wall_seconds": 288,
+          "reference_horizon_scaled_CPU_seconds": 1.25,
+          "role": "baseline",
+          "runtime_horizon_scaled_CPU_seconds": 40.0
+        },
+        "job_ids": [
+          "baseline__two-bodies__python__coarse__cold",
+          "baseline__two-bodies__python__coarse__continuous",
+          "baseline__two-bodies__python__standard__cold",
+          "baseline__two-bodies__python__standard__continuous",
+          "baseline__two-bodies__python__fine__cold",
+          "baseline__two-bodies__python__fine__continuous",
+          "baseline__three-bodies__python__coarse__cold",
+          "baseline__three-bodies__python__coarse__continuous",
+          "baseline__three-bodies__python__standard__cold",
+          "baseline__three-bodies__python__standard__continuous",
+          "baseline__three-bodies__python__fine__cold",
+          "baseline__three-bodies__python__fine__continuous",
+          "baseline__one__python__cold",
+          "baseline__one__python__continuous",
+          "one-reference-3e-11",
+          "one-reference-3e-13"
+        ],
+        "limits": {
+          "cpu_seconds": 144,
+          "disk_bytes": 117440512,
+          "private_bytes": 943718400,
+          "wall_seconds": 288
+        }
+      },
+      "baseline:rust": {
+        "caps": {
+          "cpu_seconds": 180,
+          "disk_bytes": 134217728,
+          "private_bytes": 1073741824,
+          "wall_seconds": 360
+        },
+        "directory": "baseline-rust",
+        "estimate398B": {
+          "backend": "rust",
+          "jobs": 14,
+          "projected_CPU_seconds_with_reserves": 82.625,
+          "projected_bytes_with_1_25_margin": 8887431.25,
+          "projected_wall_seconds_with_reserves": 99.66170039889403,
+          "proposed_only_cap_CPU_seconds": 180,
+          "proposed_only_cap_wall_seconds": 360,
+          "proposed_only_early_CPU_seconds": 144,
+          "proposed_only_early_wall_seconds": 288,
+          "reference_horizon_scaled_CPU_seconds": 0.0,
+          "role": "baseline",
+          "runtime_horizon_scaled_CPU_seconds": 32.5
+        },
+        "job_ids": [
+          "baseline__two-bodies__rust__coarse__cold",
+          "baseline__two-bodies__rust__coarse__continuous",
+          "baseline__two-bodies__rust__standard__cold",
+          "baseline__two-bodies__rust__standard__continuous",
+          "baseline__two-bodies__rust__fine__cold",
+          "baseline__two-bodies__rust__fine__continuous",
+          "baseline__three-bodies__rust__coarse__cold",
+          "baseline__three-bodies__rust__coarse__continuous",
+          "baseline__three-bodies__rust__standard__cold",
+          "baseline__three-bodies__rust__standard__continuous",
+          "baseline__three-bodies__rust__fine__cold",
+          "baseline__three-bodies__rust__fine__continuous",
+          "baseline__one__rust__cold",
+          "baseline__one__rust__continuous"
+        ],
+        "limits": {
+          "cpu_seconds": 144,
+          "disk_bytes": 117440512,
+          "private_bytes": 943718400,
+          "wall_seconds": 288
+        }
+      },
+      "candidate:python": {
+        "caps": {
+          "cpu_seconds": 180,
+          "disk_bytes": 134217728,
+          "private_bytes": 1073741824,
+          "wall_seconds": 360
+        },
+        "directory": "candidate-python",
+        "estimate398B": {
+          "backend": "python",
+          "jobs": 14,
+          "projected_CPU_seconds_with_reserves": 90.78125,
+          "projected_bytes_with_1_25_margin": 9495260.0,
+          "projected_wall_seconds_with_reserves": 106.6623641999904,
+          "proposed_only_cap_CPU_seconds": 180,
+          "proposed_only_cap_wall_seconds": 360,
+          "proposed_only_early_CPU_seconds": 144,
+          "proposed_only_early_wall_seconds": 288,
+          "reference_horizon_scaled_CPU_seconds": 0.0,
+          "role": "candidate",
+          "runtime_horizon_scaled_CPU_seconds": 36.125
+        },
+        "job_ids": [
+          "candidate__two-bodies__python__coarse__cold",
+          "candidate__two-bodies__python__coarse__continuous",
+          "candidate__two-bodies__python__standard__cold",
+          "candidate__two-bodies__python__standard__continuous",
+          "candidate__two-bodies__python__fine__cold",
+          "candidate__two-bodies__python__fine__continuous",
+          "candidate__three-bodies__python__coarse__cold",
+          "candidate__three-bodies__python__coarse__continuous",
+          "candidate__three-bodies__python__standard__cold",
+          "candidate__three-bodies__python__standard__continuous",
+          "candidate__three-bodies__python__fine__cold",
+          "candidate__three-bodies__python__fine__continuous",
+          "candidate__one__python__cold",
+          "candidate__one__python__continuous"
+        ],
+        "limits": {
+          "cpu_seconds": 144,
+          "disk_bytes": 117440512,
+          "private_bytes": 943718400,
+          "wall_seconds": 288
+        }
+      },
+      "candidate:rust": {
+        "caps": {
+          "cpu_seconds": 180,
+          "disk_bytes": 134217728,
+          "private_bytes": 1073741824,
+          "wall_seconds": 360
+        },
+        "directory": "candidate-rust",
+        "estimate398B": {
+          "backend": "rust",
+          "jobs": 14,
+          "projected_CPU_seconds_with_reserves": 80.65625,
+          "projected_bytes_with_1_25_margin": 8897913.75,
+          "projected_wall_seconds_with_reserves": 97.54678499721922,
+          "proposed_only_cap_CPU_seconds": 180,
+          "proposed_only_cap_wall_seconds": 360,
+          "proposed_only_early_CPU_seconds": 144,
+          "proposed_only_early_wall_seconds": 288,
+          "reference_horizon_scaled_CPU_seconds": 0.0,
+          "role": "candidate",
+          "runtime_horizon_scaled_CPU_seconds": 31.625
+        },
+        "job_ids": [
+          "candidate__two-bodies__rust__coarse__cold",
+          "candidate__two-bodies__rust__coarse__continuous",
+          "candidate__two-bodies__rust__standard__cold",
+          "candidate__two-bodies__rust__standard__continuous",
+          "candidate__two-bodies__rust__fine__cold",
+          "candidate__two-bodies__rust__fine__continuous",
+          "candidate__three-bodies__rust__coarse__cold",
+          "candidate__three-bodies__rust__coarse__continuous",
+          "candidate__three-bodies__rust__standard__cold",
+          "candidate__three-bodies__rust__standard__continuous",
+          "candidate__three-bodies__rust__fine__cold",
+          "candidate__three-bodies__rust__fine__continuous",
+          "candidate__one__rust__cold",
+          "candidate__one__rust__continuous"
+        ],
+        "limits": {
+          "cpu_seconds": 144,
+          "disk_bytes": 117440512,
+          "private_bytes": 943718400,
+          "wall_seconds": 288
+        }
+      }
+    },
+    "scientific_authorization_granted": false
+  },
+  "scientific_jobs_executed": 0,
+  "preflight_probes_repeated": 0,
+  "readiness": {
+    "technical": "GO",
+    "scientific": "NOT_YET_QUALIFIED;ready to execute guarded groups afterexplicit owner authorization",
+    "release": "NO_GO;A+D1 notapproved; no main/tag/LATEST/portablechanges"
+  },
+  "local_tests": {
+    "current_revision_passed": 44,
+    "explicit_deselected": 1,
+    "reason": "Existing full58synthetic test superseded locally by measured full58realIC/full65/81grid fixture and strongerfaultchecks; normalCI stillruns originaltest",
+    "before_tests_failed_expected": 2,
+    "unexpected_failures": 0
+  },
+  "defects": [
+    {
+      "kind": "Original all-cohort dispatch cannot select onegroup",
+      "evidence": "selected-group-before: expected onlybaseline:rust, observed oldall5phase loop; not evidence of reintegrating completedjobs",
+      "fix": "Explicit group selector, independentdirectories,resources,ownership andfinalreceipts"
+    },
+    {
+      "kind": "Direct assess_all ignored declared protocolSHA",
+      "evidence": "assessor-protocol-before: foreign protocol reached identity/stateprocessing",
+      "fix": "Reject mismatched or missingcontractSHA before state processing; mathematicalreduction AST unchanged"
+    }
+  ],
+  "resume_and_process_tests": {
+    "CPU_after_resume": 1.015625,
+    "CPU_first_attempt": 0.484375,
+    "actual_integrations": 0,
+    "attempts": [
+      {
+        "exit_code": 1,
+        "group": "baseline:evaluate",
+        "log": "process-0.log",
+        "resume": false
+      },
+      {
+        "exit_code": 1,
+        "group": "baseline:python",
+        "log": "process-1.log",
+        "resume": false
+      },
+      {
+        "exit_code": 0,
+        "group": "baseline:python",
+        "log": "process-2.log",
+        "resume": true
+      },
+      {
+        "exit_code": 0,
+        "group": "baseline:rust",
+        "log": "process-3.log",
+        "resume": false
+      },
+      {
+        "exit_code": 0,
+        "group": "candidate:python",
+        "log": "process-4.log",
+        "resume": false
+      },
+      {
+        "exit_code": 0,
+        "group": "candidate:rust",
+        "log": "process-5.log",
+        "resume": false
+      },
+      {
+        "exit_code": 0,
+        "group": "baseline:evaluate",
+        "log": "process-6.log",
+        "resume": true
+      },
+      {
+        "exit_code": 1,
+        "group": "baseline:python",
+        "log": "process-7.log",
+        "resume": true
+      }
+    ],
+    "budget_preserved": true,
+    "completed_job_reexecutions": 0,
+    "group_immutable": true,
+    "scope": "SYNTHETIC ONLY; realCLI/controller/unchangedmonitor/harmlesschildren,6non-scientific records; real58 admission not mocked in separate tests",
+    "unique_fixture_jobs": 6,
+    "wall_after_resume": 1.5490692196472082,
+    "wall_first_attempt": 0.7562047154351603
+  },
+  "evaluator": {
+    "scope": "SYNTHETIC STATIC FULL GRID ONLY; no full orbit or scientific qualification",
+    "fixture_generation": {
+      "CPU_seconds": 4.890625,
+      "wall_seconds": 4.93140990001848
+    },
+    "measured_assess_all": {
+      "CPU_seconds": 1.578125,
+      "wall_seconds": 1.6069961999892257
+    },
+    "jobs": 58,
+    "epoch_counts": [
+      65,
+      81
+    ],
+    "runtime_cases": 56,
+    "source_pairs": 28,
+    "synthetic_source_equivalence": "PASS",
+    "synthetic_scientific_criteria": "FAIL",
+    "synthetic_strict_failures": 16,
+    "reference_resolution_synthetic": "EMPIRICAL_LEVEL_GAP_PASS_NOT_GLOBAL_BOUND",
+    "K1_reference_limit": "Synthetic static fixtures, NOT independently integrated reference; old short independent reference proof retained separately",
+    "faults": [
+      "missing",
+      "shape",
+      "IC",
+      "source",
+      "protocol",
+      "native-counter"
+    ],
+    "mathematical_reduction_AST_unchanged": true,
+    "actual_integrations": 0,
+    "actual_RHS_evaluations": 0,
+    "synthetic_dataset_manifest_SHA256": "7476e378458524d270f484f6df46482c9335d84312c1d439d6371c7e0fe92e5b",
+    "correction_to398B": "Existing test_full58_synthetic_evaluator supplied actual job epoch grids65/81, not2; defaults2 only applied when no job argument. Historical report unchanged."
+  },
+  "historical_FAIL_count": 3,
+  "source_checks": {
+    "baseline": {
+      "frozen_environment_file_SHA256": "2edd7288c1f3e67527930f83b75aa8d22ef734ec451ba7a5b3269e5d3527ca9b",
+      "identity": {
+        "commit": "fe0f456f2c7ba3a077eac21fc8413937d6e84fac",
+        "environment_LF_SHA256": "056c4559f48ef170804d3bc13527bbc30deba2f49e9ebaf04f752d5c6c7f795a",
+        "import_origin": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\src\\solar_simulator\\__init__.py",
+        "role": "baseline",
+        "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384",
+        "tree": "6d5cfd2dcafed37e781d05f913b677080965700d"
+      },
+      "integrations_requested": 0,
+      "source_binding_SHA256": "2296fbbee13e00144ecb82def91461a6bf3ae2c92311f5c2d723f3910e154694"
+    },
+    "candidate": {
+      "frozen_environment_file_SHA256": "b667c5083fe1dba7df6d3de72960f3a3a769052e60fd06a6e6c4cd2eaeb8f23d",
+      "identity": {
+        "commit": "f723a2162b4e115378959e244f428529be2d4516",
+        "environment_LF_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+        "import_origin": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395\\src\\solar_simulator\\__init__.py",
+        "role": "candidate",
+        "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395",
+        "tree": "b441aea60d6f291db10fd0a8d63f1829b8cd1794"
+      },
+      "integrations_requested": 0,
+      "source_binding_SHA256": "2296fbbee13e00144ecb82def91461a6bf3ae2c92311f5c2d723f3910e154694"
+    }
+  },
+  "resource_summary": {
+    "CPU_seconds": 33.578125,
+    "active_wall_seconds": 25.318565000023227,
+    "attempts": 8,
+    "worker_private_peak_sampled": 306298880,
+    "worker_RSS_peak_sampled": 168534016,
+    "supervisor_peak_commit": 37511168,
+    "last_artifact_bytes": 601593,
+    "caps": {
+      "CPU_seconds": 45,
+      "active_wall_seconds": 120,
+      "private_bytes": 536870912,
+      "artifact_bytes": 33554432
+    },
+    "early": {
+      "CPU_seconds": 35,
+      "active_wall_seconds": 90,
+      "private_bytes": 471859200,
+      "artifact_bytes": 27262976
+    },
+    "limitations": "50ms sampling; Windowsfinalhandles for discoveredworkers; short unseendescendants/memoryspikes possible. Controller charges processCPU fromstartup andwallfromprocess creation plusmonotonicfloor,explicit0.25CPU/wall tailallowance. No OS hardquota or physicalpowercutproof."
+  },
+  "resource_attempts": [
+    {
+      "name": "selected-group-before",
+      "complete": false,
+      "exit_code": 1,
+      "limit_reason": null,
+      "CPU_seconds": 0.875,
+      "worker_CPU_seconds": 0.71875,
+      "supervisor_process_CPU_seconds": 0.15625,
+      "active_wall_seconds": 0.8096555999945849,
+      "worker_private_peak_sampled": 71602176,
+      "worker_RSS_peak_sampled": 66863104,
+      "supervisor_OS_peak_commit": 37363712,
+      "files_peak_sampled": 17,
+      "artifact_bytes": 30421
+    },
+    {
+      "name": "grouped-unit-v1",
+      "complete": true,
+      "exit_code": 0,
+      "limit_reason": null,
+      "CPU_seconds": 3.5625,
+      "worker_CPU_seconds": 2.703125,
+      "supervisor_process_CPU_seconds": 0.859375,
+      "active_wall_seconds": 3.0527970000111964,
+      "worker_private_peak_sampled": 166899712,
+      "worker_RSS_peak_sampled": 137875456,
+      "supervisor_OS_peak_commit": 37457920,
+      "files_peak_sampled": 175,
+      "artifact_bytes": 273026
+    },
+    {
+      "name": "assessor-protocol-before",
+      "complete": false,
+      "exit_code": 1,
+      "limit_reason": null,
+      "CPU_seconds": 1.515625,
+      "worker_CPU_seconds": 0.890625,
+      "supervisor_process_CPU_seconds": 0.625,
+      "active_wall_seconds": 1.0601309000048786,
+      "worker_private_peak_sampled": 71561216,
+      "worker_RSS_peak_sampled": 79478784,
+      "supervisor_OS_peak_commit": 37425152,
+      "files_peak_sampled": 179,
+      "artifact_bytes": 279145
+    },
+    {
+      "name": "identity-baseline",
+      "complete": true,
+      "exit_code": 0,
+      "limit_reason": null,
+      "CPU_seconds": 3.203125,
+      "worker_CPU_seconds": 2.0,
+      "supervisor_process_CPU_seconds": 1.203125,
+      "active_wall_seconds": 2.231096700008493,
+      "worker_private_peak_sampled": 110989312,
+      "worker_RSS_peak_sampled": 118890496,
+      "supervisor_OS_peak_commit": 37498880,
+      "files_peak_sampled": 185,
+      "artifact_bytes": 289865
+    },
+    {
+      "name": "identity-candidate",
+      "complete": true,
+      "exit_code": 0,
+      "limit_reason": null,
+      "CPU_seconds": 3.546875,
+      "worker_CPU_seconds": 2.296875,
+      "supervisor_process_CPU_seconds": 1.25,
+      "active_wall_seconds": 2.4453397000033874,
+      "worker_private_peak_sampled": 165150720,
+      "worker_RSS_peak_sampled": 125775872,
+      "supervisor_OS_peak_commit": 37494784,
+      "files_peak_sampled": 189,
+      "artifact_bytes": 292730
+    },
+    {
+      "name": "full-grid-evaluator",
+      "complete": true,
+      "exit_code": 0,
+      "limit_reason": null,
+      "CPU_seconds": 11.90625,
+      "worker_CPU_seconds": 8.015625,
+      "supervisor_process_CPU_seconds": 3.890625,
+      "active_wall_seconds": 8.250918900012039,
+      "worker_private_peak_sampled": 178499584,
+      "worker_RSS_peak_sampled": 160100352,
+      "supervisor_OS_peak_commit": 37441536,
+      "files_peak_sampled": 194,
+      "artifact_bytes": 366304
+    },
+    {
+      "name": "grouped-real-processes",
+      "complete": true,
+      "exit_code": 0,
+      "limit_reason": null,
+      "CPU_seconds": 4.015625,
+      "worker_CPU_seconds": 1.96875,
+      "supervisor_process_CPU_seconds": 2.046875,
+      "active_wall_seconds": 3.936842600000091,
+      "worker_private_peak_sampled": 164315136,
+      "worker_RSS_peak_sampled": 99659776,
+      "supervisor_OS_peak_commit": 37511168,
+      "files_peak_sampled": 276,
+      "artifact_bytes": 428223
+    },
+    {
+      "name": "final-controls",
+      "complete": true,
+      "exit_code": 0,
+      "limit_reason": null,
+      "CPU_seconds": 4.953125,
+      "worker_CPU_seconds": 2.953125,
+      "supervisor_process_CPU_seconds": 2.0,
+      "active_wall_seconds": 3.5317835999885574,
+      "worker_private_peak_sampled": 306298880,
+      "worker_RSS_peak_sampled": 168534016,
+      "supervisor_OS_peak_commit": 37429248,
+      "files_peak_sampled": 433,
+      "artifact_bytes": 601593
+    }
+  ],
+  "backup_budget": {
+    "basis": {
+      "forecast_scientific_uncompressed_bytes": 30035936.8,
+      "measured398B_ZIP_bytes": 178983,
+      "measured398B_archive_CPU_seconds": 0.3125,
+      "measured398B_prepare_CPU_seconds": 1.046875,
+      "measured398B_raw_bytes": 481660,
+      "measured398B_total_five_local_legs_CPU_seconds": 2.234375,
+      "uncertainty": "Different scientific state compressibility,IO andnetwork;60CPUcap conservatively exceeds expected~5..25localCPU pergroup; not a measured throughput guarantee"
+    },
+    "cloud": "One upload andindependentdownload/SHA/size/parent verification; recordconnector wall. ServerCPU notobservable/enforced fromPC. Failure/timeout=CLOUD_UNVERIFIED, keep local originals, no falseclaim; no automatic sharing/deletion/retry budget reset",
+    "dependencies": "Reuse already verified395candidatebundle/398Python+RK45/398BRust archives by exactSHA; onlynew399rawuploaded",
+    "local_caps": {
+      "cpu_seconds": 60,
+      "disk_bytes": 134217728,
+      "private_bytes": 536870912,
+      "wall_seconds": 240
+    },
+    "local_early": {
+      "cpu_seconds": 48,
+      "disk_bytes": 117440512,
+      "private_bytes": 471859200,
+      "wall_seconds": 192
+    },
+    "mode": "Reviewed filtered_prepare_files currentproject only, aftereachgroup andevaluator; no broad dependency scan",
+    "required": [
+      "source/environment/inputSHA",
+      "rawstatefiles",
+      "jobcomplete manifests",
+      "verified group proof",
+      "launch/attempt/supervisor receipts",
+      "finalreceipt",
+      "evaluator summary",
+      "independentcloudreadback"
+    ]
+  },
+  "backup_status": "CLOUD_UNVERIFIED_PENDING_STAGE_ARCHIVE",
+  "CI_current_revision": "PENDING_PUSH",
+  "limitations": [
+    "No58fullscientifictrajectory executed; no4000squalification or newaccuracyclaim",
+    "Group estimates398B extrapolate shortprefixes andstandard→otherlevels; immutableguardlimits maySTOP,never increased afterscience results",
+    "1.578CPU is synthetic arithmetic only; fileloading/JSON/audit costs projected,not measured actualfull58pipeline",
+    "FullK1reference slots inthissynthetic dataset are static,not independently integrated; real399 mustexecute originaltwoRK45jobs",
+    "Independent post-evaluator Decimal audit uses existing393observer in a distinctread-only audit directory, with usedCPU/wall initialized fromclosed evaluatorreceipt andsame60CPU/120wall cap; it must not edit the immutablefinalgroup",
+    "Historical3FAIL notwaived; sourceequivalence doesnotprove physicalaccuracy",
+    "CloudserverCPU cannotbe measured/enforced locally; independently recordstatus/readback andkeep originals onfailure"
+  ],
+  "next_step": "Real scientific399groups under sealedplan afterexplicit userauthorization; no additional preparation stage withoutconcrete newblocker",
+  "qualification_dependency": {
+    "psutil_version": "7.2.2",
+    "installed_in_qualified384venv_before398C": true,
+    "newly_declared_extra": "qualification",
+    "CI_setup": "dev+qualification; desktopdev+native+qualification",
+    "local_environment_modified": false,
+    "kind": "Source-level dependency contract gap; no scientificFAIL or actualCI failure claimed"
+  }
+}
