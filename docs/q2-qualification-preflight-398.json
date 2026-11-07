@@ -4973,5 +4973,42 @@
     "log_SHA256": "ddcdf23574160ee14103e41cdabeb277320e59a1812dae8d961177c4e9a3e9af",
     "cause": "Cross-host unitfixturepath only",
     "scientific_recomputation": false
+  },
+  "final_CI": {
+    "source_commit": "1b37373fc005bd1d58b49981f24968c9bea634f5",
+    "run": 42316018973,
+    "jobs": [
+      {
+        "id": 128228728520,
+        "name": "python",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 128228728858,
+        "name": "desktop-native",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 128228730205,
+        "name": "adaptive-research",
+        "status": "completed",
+        "conclusion": "skipped"
+      }
+    ],
+    "scope": "Software CI only; scientific preflight still PARTIAL/NO-GO"
+  },
+  "backup_infrastructure": {
+    "worker_CPU_seconds": 288.234375,
+    "supervisor_CPU_seconds": 30.15625,
+    "total_CPU_seconds": 318.390625,
+    "wall_seconds": 303.88905830000294,
+    "sampled_private_tree_peak_bytes": 104820736,
+    "scope": "Filtered archive prepare only; Git/CI/upload/readback excluded; separate from computational probe ledger",
+    "archive_bytes": 225441,
+    "manifest_bytes": 3717,
+    "verification_status": "CLOUD_VERIFIED_SHA256",
+    "limitations": "Sampled process discovery/memory; no whole-operation resource bound established"
   }
 }
