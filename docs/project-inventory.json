@@ -1278,6 +1278,7 @@
       "tests/test_q2_execution398.py",
       "tests/test_q2_frame393.py",
       "tests/test_q2_frame_observer393.py",
+      "tests/test_q2_groups398c.py",
       "tests/test_q2_observer395.py",
       "tests/test_q2_r_reuse394.py",
       "tests/test_q2_reference397.py",

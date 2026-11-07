@@ -144,7 +144,7 @@ def test_full58_synthetic_evaluator_separates_equivalence_from_scientific_pass(m
     p=q.contract();p['_tool_sources']={'synthetic':'not a scientific source'};results={};documents={}
     for job in p['jobs']:
         r=payload(job);doc=r['initial'];documents[job['id']]=doc
-        r['binding']=dict(scope='scientific399',job=job,source={},initial_SHA256=__import__('hashlib').sha256(q.canonical(doc)).hexdigest(),tool_sources_SHA256=p['_tool_sources'])
+        r['binding']=dict(scope='scientific399',job=job,source={},initial_SHA256=__import__('hashlib').sha256(q.canonical(doc)).hexdigest(),tool_sources_SHA256=p['_tool_sources'],contract_SHA256=q.CONTRACT_SHA)
         if job.get('kind')=='reference':r['arrays'].pop('quaternions')
         results[job['id']]=r
     # This test isolates mathematical reductions with openly SYNTHETIC static

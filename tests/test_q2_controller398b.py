@@ -42,7 +42,7 @@ def test_resume_rejects_unconfirmed_guard_before_any_worker(tmp_path,monkeypatch
     def reached(*a,**k):raise AssertionError('Unconfirmed attempt reached worker preparation')
     monkeypatch.setattr(q,'require_sha',reached)
     with pytest.raises(ValueError,match='[Rr]esource|[Gg]uard'):
-        c.controller(args,execution,p)
+        c.attempt_history(tmp_path,LIMITS)
 
 
 @pytest.mark.parametrize('fault',['missing','changed','refund','stopped','partial'])
@@ -61,23 +61,27 @@ def test_verified_history_preserves_consumed_resources(tmp_path):
 def test_worker_resumes_verified_jobs_only_and_never_integrates(tmp_path,monkeypatch):
     job={'id':'synthetic-test','role':'baseline','backend':'rust'}
     p={'jobs':[job],'_tool_sources':{'synthetic':'fixture'}}
-    execution={'tool_sources':{}}
+    execution={'tool_sources':{},'tool_commit':'synthetic','groups':{'baseline:rust':{'directory':'baseline-rust'}}}
     identity={'scope':'synthetic-only'};binding={'scope':'synthetic-only','owner':'baseline'}
+    execution['source_identities']={'baseline':identity}
     monkeypatch.setattr(q,'load_runtime',lambda *a:({},identity))
     monkeypatch.setattr(c,'expected_binding',lambda *a:binding)
+    monkeypatch.setattr(c,'saved_binding',lambda *a:binding)
     monkeypatch.setattr(q,'run_job',lambda *a,**k:pytest.fail('Resume attempted integration'))
-    target=tmp_path/job['id'];target.mkdir()
+    target=tmp_path/'baseline-rust'/job['id'];target.mkdir(parents=True)
     q.atomic_json(target/'initial.json',q.envelope(binding))
     q.atomic_json(target/'result.json',dict(binding=binding,epochs=[0.,1.],synthetic_only=True))
     (target/'states.jsonl').write_bytes(b''.join(q.canonical(q.envelope(dict(time=t,document=None)))+b'\n' for t in (0.,1.)))
     files={name:dict(size=(target/name).stat().st_size,sha256=q.sha(target/name)) for name in ('initial.json','result.json','states.jsonl')}
     q.atomic_json(target/'complete.json',q.envelope(dict(binding=binding,files=files,frames=2)))
-    args=SimpleNamespace(worker='baseline:rust',output=str(tmp_path),resume_completed=True)
+    args=SimpleNamespace(worker='baseline:rust',output=str(tmp_path),resume_completed=True,sha='synthetic')
     c.worker(args,execution,p)
     with pytest.raises(FileExistsError):c.worker(SimpleNamespace(**{**vars(args),'resume_completed':False}),execution,p)
     monkeypatch.setattr(c,'expected_binding',lambda *a:{**binding,'owner':'candidate'})
+    monkeypatch.setattr(c,'saved_binding',lambda *a:{**binding,'owner':'candidate'})
     with pytest.raises(ValueError,match='Mixed'):c.worker(args,execution,p)
     monkeypatch.setattr(c,'expected_binding',lambda *a:binding)
+    monkeypatch.setattr(c,'saved_binding',lambda *a:binding)
     (target/'result.json').write_text('{}',encoding='utf-8')
     with pytest.raises(ValueError):c.worker(args,execution,p)
 

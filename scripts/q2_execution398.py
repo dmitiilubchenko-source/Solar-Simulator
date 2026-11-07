@@ -336,7 +336,7 @@ def assess_all(results,p):
     equivalence=[];criteria=[];references={};convergence=[]
     for job in p['jobs']:
         r=results[job['id']]
-        if r['binding']['scope']!='scientific399' or r['binding']['job']!=job or r['epochs']!=job['epochs']:raise ValueError('Wrong/mixed scientific job')
+        if r['binding']['scope']!='scientific399' or r['binding']['job']!=job or r['epochs']!=job['epochs'] or r['binding'].get('contract_SHA256')!=CONTRACT_SHA:raise ValueError('Wrong/mixed scientific job/protocol')
         require_identity(job,p,r['binding']['source'])
         if r['binding'].get('tool_sources_SHA256')!=p['_tool_sources']:raise ValueError('Wrong observer/executor source binding')
         if canonical(r['initial'])!=canonical(input_document(job,p)):raise ValueError('Scientific IC/settings mismatch')
