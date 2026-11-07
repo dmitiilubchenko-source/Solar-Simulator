@@ -389,6 +389,9 @@ class Laboratory:
             from .inspection_view import ROTATION_SCOPE,AXES_DESCRIPTION
             self.model_info.set(self.model_info.get()+f' Динамических фигур: {len(self.experiment.rotations)}. '
                 +ROTATION_SCOPE+' '+AXES_DESCRIPTION)
+            from .inspection import experimental_q2_warning
+            warning=experimental_q2_warning(self.experiment.rotations)
+            if warning:self.model_info.set(self.model_info.get()+' '+warning)
 
     def _record(self):
         self.frames.append({b.name:(b.position.x,b.position.y,b.position.z) for b in self.experiment.bodies})

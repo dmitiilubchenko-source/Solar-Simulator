@@ -9,6 +9,22 @@ from . import cli
 from .oblateness import prescribed
 
 
+TWO_Q2_EXPERIMENTAL_WARNING=(
+    'Экспериментальная модель двух динамических Q2-фигур: Newton total-degree-two M–Q. '
+    'Q2–Q2 и высшие мультиполи, приливы, диссипация и совместные EIH/Q2 эффекты не учтены. '
+    'Три исторических FAIL380 строгой сходимости не устранены: two/Python, two/Rust, three/Python. '
+    'Универсальная граница ошибки произвольной траектории не установлена; квалификация '
+    'конкретного короткого демосценария ещё не выполнена. Демо не устанавливает точность '
+    'реальных небесных тел. Обычный «Старт» не ограничен 200 с; отдельную цель задаёт '
+    '«Рассчитать до t». A/D1 и выпуск экспериментального режима владельцем не утверждены. '
+    'Результаты и ограничения: docs/q2-scientific-qualification-399.md.')
+
+
+def experimental_q2_warning(rotations):
+    """Presentation only; count is not a trajectory or release qualification."""
+    return TWO_Q2_EXPERIMENTAL_WARNING if len(rotations)==2 else ''
+
+
 def _native_status(experiment):
     if experiment.settings.backend!='rust':
         return dict(required=False,status='not_required',message='Текущие настройки используют Python; native не требуется.')
@@ -122,6 +138,8 @@ def report(experiment):
         limitations.append('Stored passive spin не означает интегрирования ориентации или rigid-spin энергии.')
         if contacts:limitations.append('Контакты/отскоки/слияния: механическая энергия может меняться; нужны dissipated_energy и model_energy_offset.')
     if not pn:limitations.append('В выбранной ньютоновской модели нет EIH-поправок и приливов; это не полная физическая модель реальных тел.')
+    if len(experiment.rotations)==2:
+        limitations.append(experimental_q2_warning(experiment.rotations))
     dop=settings.integrator=='dop853'
     detail=dict(schema=1,units=dict(mass='kg',position='m',velocity='m/s',time='s',energy='J',
         momentum='kg*m/s',angular_momentum='kg*m^2/s'),

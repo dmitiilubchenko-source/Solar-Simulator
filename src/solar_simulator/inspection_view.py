@@ -52,6 +52,9 @@ def rotation_text(payload):
     lines=[ROTATION_SCOPE,'','q=(w,x,y,z): body → инерциальный базис, безразмерный.',
         'S и ω ниже в инерциальном базисе. q/S показаны как сохранены;',
         'матрица R и ω вычислены существующими функциями; сохранение не нормируется.','']
+    from .inspection import experimental_q2_warning
+    warning=experimental_q2_warning(payload['rotations'])
+    if warning:lines[:0]=[warning,'']
     for r in payload['rotations']:
         lines.extend([r['body'],'q = '+vector(r['quaternion']),
             'S [кг·м²/с] = '+vector(r['angular_momentum']),
