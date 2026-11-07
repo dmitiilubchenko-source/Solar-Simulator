@@ -164,3 +164,18 @@ components. **NO-GO scientific399:** не утверждён и не реали�
 group budget, неизвестен full-grid evaluator cost и остаётся оговорка раннего
 resource accounting. Sealed GO plan не создан. Main/tags/LATEST/portable032,
 physics/integrators/R-reuse и оба frozen candidate не менялись. После отчёта STOP.
+
+## Завершение сохранения и CI
+
+Code commit`0d32c36f500a7cd4cb17bbedad4700344241c226`, CI42381484916:
+Python+desktop-native success, adaptive-research configured skip. Включён
+новый controller suite и прежний full58 synthetic evaluator; это software CI.
+Новая reviewed очередь prepare:1.046875CPU/2.500304wall; archive creation
+0.3125CPU/0.284310wall. Пять отдельно измеренных backup legs (3synthetictests,
+archive,prepare,дваcloudreadbacks):2.234375CPU/5.38715wall.
+Connector/server CPU, часть transfer latency, Git/CI/edit не измерены.
+Нельзя называть это ускорением318CPU того же алгоритма: scope теперь только
+новые115rawmembers, с reuse прежних verified dependencies. Dailyfullscan прежний.
+Archive178983B и внешний manifest8877B independently downloaded, size/SHA256/
+parent проверены: CLOUD_VERIFIED_SHA256. Личные документы и конфигурация
+других проектов не выгружены. Научная серия399 по-прежнему NO-GO.

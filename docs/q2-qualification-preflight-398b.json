@@ -936,7 +936,30 @@
     "deselected": 1,
     "reason": "Unchanged expensive full58 synthetic evaluator already verified in current-base CI42376428071; targeted new controller and all other execution398 tests run locally",
     "baseline_failing_test": "Unconfirmed guard record reached worker preparation; retained before.xml/log",
-    "CI_current_revision": "PENDING_AFTER_PUSH"
+    "CI_current_revision": {
+      "run": 42381484916,
+      "source_commit": "0d32c36f500a7cd4cb17bbedad4700344241c226",
+      "jobs": [
+        {
+          "id": 128429840189,
+          "name": "desktop-native",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 128429840436,
+          "name": "python",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "id": 128429841768,
+          "name": "adaptive-research",
+          "status": "completed",
+          "conclusion": "skipped"
+        }
+      ]
+    }
   },
   "controller_e2e": {
     "CLI_blocked_before_runtime": true,
@@ -1151,6 +1174,64 @@
     "Physical power-cut filesystem durability not proven",
     "No waiver of A+D1 or release033NO_GO"
   ],
-  "backup398b_status": "CLOUD_UNVERIFIED_PENDING_ARCHIVE",
-  "decision": "GO for reviewed short source-equivalence and scoped execution components; NO_GO to scientific399; no sealed GO plan"
+  "backup398b_status": "CLOUD_VERIFIED_SHA256_ARCHIVE_AND_MANIFEST",
+  "decision": "GO for reviewed short source-equivalence and scoped execution components; NO_GO to scientific399; no sealed GO plan",
+  "backup398b_measured": {
+    "legs": {
+      "scope-tests": {
+        "worker_CPU_seconds": 0.1875,
+        "parent_supervision_CPU_seconds": 0.03125,
+        "wall_seconds": 0.228209799999604,
+        "peak_private_tree_sampled": 71233536,
+        "complete": true
+      },
+      "archive": {
+        "worker_CPU_seconds": 0.265625,
+        "parent_supervision_CPU_seconds": 0.046875,
+        "wall_seconds": 0.2843101999897044,
+        "peak_private_tree_sampled": 37761024,
+        "complete": true
+      },
+      "prepare": {
+        "worker_CPU_seconds": 0.71875,
+        "parent_supervision_CPU_seconds": 0.328125,
+        "wall_seconds": 2.500303700013319,
+        "peak_private_tree_sampled": 56078336,
+        "complete": true
+      },
+      "cloud-readback": {
+        "worker_CPU_seconds": 0.171875,
+        "parent_supervision_CPU_seconds": 0.171875,
+        "wall_seconds": 1.617780100001255,
+        "peak_private_tree_sampled": 38633472,
+        "complete": true
+      },
+      "manifest-readback": {
+        "worker_CPU_seconds": 0.203125,
+        "parent_supervision_CPU_seconds": 0.109375,
+        "wall_seconds": 0.7565466999949422,
+        "peak_private_tree_sampled": 72273920,
+        "complete": true
+      }
+    },
+    "total_local_CPU_seconds": 2.234375,
+    "total_local_wall_seconds": 5.387150499998825,
+    "connector_tool_timing": {
+      "upload_wall_seconds": 10.093,
+      "fetch_metadata_wall_seconds": 2.188
+    },
+    "limitations": "Separate scopes, not a same-workload algorithm speedup. Local five legs measured; connector/server CPU,manifest upload latency,Git/CI/edit not measured. Source SHA/CRC/secret review and independent Drive download retained. Archive scope new raw only,395/398dependencies already verified.",
+    "archive": {
+      "name": "Solar-Simulator-stage398b-20261107.zip",
+      "size": 178983,
+      "sha256": "136d237461314d22ecd4f2750f37a850202862c299dab6d9a30186b20d7f14f4",
+      "git_commit": "0d32c36f500a7cd4cb17bbedad4700344241c226"
+    },
+    "manifest": {
+      "name": "Solar-Simulator-stage398b-manifest-20261107.json",
+      "size": 8877,
+      "sha256": "f369bdeeec58157258a18513c94ed0611a2ce1c4239042b00b1512ec0eb7550b",
+      "git_commit": "0d32c36f500a7cd4cb17bbedad4700344241c226"
+    }
+  }
 }
