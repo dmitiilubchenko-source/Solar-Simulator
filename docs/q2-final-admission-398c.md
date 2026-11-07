@@ -181,3 +181,19 @@ Git/CI/publication и обязательный incremental backup отдельн
 Productionphysics/integrators/R-reuse/native, оба кандидата, historicalevidence,
 main/tag/LATEST/portable032 не менялись. Новый подготовительный этап не требуется
 без конкретного нового блокера. После оформления отчёта STOP.
+
+## Итог CI и сохранения
+
+Исправленныйcommit`ab6ee8325e131150a817eaa9475456eace1b12d1`,
+CI42389901220:Python+desktop-native success,adaptive-research configuredskip.
+Точные pyprojectbytes375SHA94b8edca…790c восстановлены, scientificreceipts
+не менялись; первый красныйCI42388831933 сохранён и объяснён в companionarchive.
+Семь локальных backup legs:3.734375CPU/9.020568wall;
+стоимость connector/serverCPU/частиtransfer/Git/CI/edit отдельно не измерена.
+Primaryraw137176B,CIcompanion22880B,manifest14163B:все independentlydownloaded,
+SHA/size/parentPASS,CLOUD_VERIFIED_SHA256,owner-only. Originals сохранены,
+личный контекст и чужие конфигурации не выгружались; старые dependencies reused.
+Для independentaudit continuous t0 брать **raw arrays**p/v/q/S вместе с
+метаданными масс/фигур/ID. `initial_input` checkpoint хранит подлинный ввод;
+его p/v могут отличаться от frame-decoded численногоt0 на округление.
+Не подменять rawstate этим checkpoint и не сериализовать искусственныйt0Experiment.

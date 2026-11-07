@@ -616,8 +616,32 @@
       "independentcloudreadback"
     ]
   },
-  "backup_status": "CLOUD_UNVERIFIED_PENDING_STAGE_ARCHIVE",
-  "CI_current_revision": "PENDING_PUSH",
+  "backup_status": "CLOUD_VERIFIED_SHA256_PRIMARY_CI_COMPANION_MANIFEST",
+  "CI_current_revision": {
+    "run": 42389901220,
+    "commit": "ab6ee8325e131150a817eaa9475456eace1b12d1",
+    "jobs": [
+      {
+        "id": 128455096251,
+        "name": "python",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 128455096426,
+        "name": "desktop-native",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 128455097246,
+        "name": "adaptive-research",
+        "status": "completed",
+        "conclusion": "skipped"
+      }
+    ],
+    "scope": "Corrected CI metadata/requirements; no physics or toolcode changes from78fe4ca"
+  },
   "limitations": [
     "No58fullscientifictrajectory executed; no4000squalification or newaccuracyclaim",
     "Group estimates398B extrapolate shortprefixes andstandard→otherlevels; immutableguardlimits maySTOP,never increased afterscience results",
@@ -649,5 +673,80 @@
     "normalized_Git_LF_vs_qualified_CRLF": "Initial Gitblob LF comparison rejected as expected; exactinversepatch preserves originalCRLF. HistoricalSHA not altered.",
     "CI_log_SHA256": "a16e530836427ad36182fa0d019832daf90601fbe1d2987f98f6ec86ccc8ccb6",
     "log_representation": "DecodedCItext normalizedtoLF"
-  }
+  },
+  "backup_actual": {
+    "legs": {
+      "archive": {
+        "worker_CPU_seconds": 0.328125,
+        "parent_supervision_CPU_seconds": 0.046875,
+        "wall_seconds": 0.34326039999723434,
+        "complete": true,
+        "peak_private_tree_sampled": 37801984
+      },
+      "prepare": {
+        "worker_CPU_seconds": 0.734375,
+        "parent_supervision_CPU_seconds": 0.171875,
+        "wall_seconds": 1.4315271999803372,
+        "complete": true,
+        "peak_private_tree_sampled": 56000512
+      },
+      "cloud-archive": {
+        "worker_CPU_seconds": 0.234375,
+        "parent_supervision_CPU_seconds": 0.140625,
+        "wall_seconds": 0.9846269999979995,
+        "complete": true,
+        "peak_private_tree_sampled": 64483328
+      },
+      "ci-archive": {
+        "worker_CPU_seconds": 0.109375,
+        "parent_supervision_CPU_seconds": 0.03125,
+        "wall_seconds": 0.17928119999123737,
+        "complete": true,
+        "peak_private_tree_sampled": 37314560
+      },
+      "ci-prepare": {
+        "worker_CPU_seconds": 0.734375,
+        "parent_supervision_CPU_seconds": 0.234375,
+        "wall_seconds": 1.8556273999856785,
+        "complete": true,
+        "peak_private_tree_sampled": 56586240
+      },
+      "cloud-ci-archive": {
+        "worker_CPU_seconds": 0.1875,
+        "parent_supervision_CPU_seconds": 0.265625,
+        "wall_seconds": 2.1589585000183433,
+        "complete": true,
+        "peak_private_tree_sampled": 64962560
+      },
+      "cloud-manifest": {
+        "worker_CPU_seconds": 0.1875,
+        "parent_supervision_CPU_seconds": 0.328125,
+        "wall_seconds": 2.067285900004208,
+        "complete": true,
+        "peak_private_tree_sampled": 38645760
+      }
+    },
+    "local_CPU_seconds": 3.734375,
+    "local_wall_seconds": 9.020567599975038,
+    "scope": "Seven bounded localbackup legs only; connector/serverCPU andsome transferwall, Git/CI/edit excluded; no broad dependency scan. Raw+CI archives+externalmanifest independently downloaded SHA/size/parent verified.",
+    "primary": {
+      "name": "Solar-Simulator-stage398c-20261107.zip",
+      "size": 137176,
+      "sha256": "887a56a66c13b6ca734bd64c0f9d74510558383f721d1191c02ab0870bc39501",
+      "git_commit": "e08bd9f2b958f35e1161b4c3f1ec2ddd23c4db2b"
+    },
+    "CI_companion": {
+      "name": "Solar-Simulator-stage398c-ci-20261107.zip",
+      "size": 22880,
+      "sha256": "e766816ef80be3fae8fda8695f12865e87f78debbd7ecb30a0bd680f332ee009",
+      "git_commit": "ab6ee8325e131150a817eaa9475456eace1b12d1"
+    },
+    "manifest": {
+      "name": "Solar-Simulator-stage398c-manifest-20261107.json",
+      "size": 14163,
+      "sha256": "c53bf96c117b13afb862de54d3039282ce2efbb328a32fbd3dd0a07b47fe17b5",
+      "git_commit": "ab6ee8325e131150a817eaa9475456eace1b12d1"
+    }
+  },
+  "continuous_t0_audit_rule": "For continuous initial raw numerical state, use result arraysp/v/q/S andfrozen masses/figures/IDs; initial_inputdocument is genuine inputcheckpoint, not its binary64frame-decoded readout. Do notcreatefake t0Experiment or substitute inputcheckpoint for rawframe."
 }
