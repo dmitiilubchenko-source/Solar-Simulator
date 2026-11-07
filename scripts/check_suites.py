@@ -33,6 +33,7 @@ SUITES={
         'tests/test_q2_review395.py','tests/test_q2_observer395.py',
         'tests/test_q2_source_adapter396.py',
         'tests/test_q2_reference397.py',
+        'tests/test_q2_execution398.py',
         'tests/test_portable_rotation_documents.py','tests/test_public_test_inputs.py',
         'tests/test_nominal_jpl_audit.py','tests/test_release_history.py','tests/test_release_ui_history.py','tests/test_ias15_archive_source.py',
         'tests/test_ias15_full_state.py',

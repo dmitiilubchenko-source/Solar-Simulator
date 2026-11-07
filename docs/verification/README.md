@@ -152,3 +152,7 @@ environment и saved380reference/3FAIL проверены; нового scientif
 [Repair397](../q2-reference-repair-397.md): независимая output-only K1/K2 адаптация,
 same-y exactK2 и shortanalyticK1. GO к отдельно разрешённому preflight398;
 qualification58jobs/release не выполнены, старые3FAIL неизменны.
+
+[Preflight398](../q2-qualification-preflight-398.md): partial controlledstage,
+correctedobserver-ID/t0adapter, atomic/resourcefaults, Pythonshortcontrasts.
+NO-GO399; missingRust/controller checks и неаттестованный180CPUbudget.

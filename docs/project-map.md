@@ -137,3 +137,7 @@ reference380 блокирует запуск58jobs. Новый provenance/output
 [Reference repair397](q2-reference-repair-397.md): отдельный K1/K2 output unpacker,
 старый380/RHS неизменны, recovery archive audit/short analytic controls.
 Proposed398 binding plan сохраняет58jobs, которые здесь не запускались.
+
+[Preflight398](q2-qualification-preflight-398.md): draft fixed58 executor,
+body-ID observer и continuous-t0 recording fix; partial Python probes/faults.
+NO-GO399: Rustcohorts/controller/budget admission не завершены, sealedGOplan нет.
