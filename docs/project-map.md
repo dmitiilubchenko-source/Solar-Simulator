@@ -141,3 +141,7 @@ Proposed398 binding plan сохраняет58jobs, которые здесь н�
 [Preflight398](q2-qualification-preflight-398.md): draft fixed58 executor,
 body-ID observer и continuous-t0 recording fix; partial Python probes/faults.
 NO-GO399: Rustcohorts/controller/budget admission не завершены, sealedGOplan нет.
+
+[Preflight398B](q2-qualification-preflight-398b.md): missingRust prefixes завершены,
+resource-history guard проверен и усилен; независимый merge/budget по4cohorts
+пока только проект. NO-GO399, production physics/candidates не изменены.

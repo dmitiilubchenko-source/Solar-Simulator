@@ -156,3 +156,8 @@ qualification58jobs/release не выполнены, старые3FAIL неиз�
 [Preflight398](../q2-qualification-preflight-398.md): partial controlledstage,
 correctedobserver-ID/t0adapter, atomic/resourcefaults, Pythonshortcontrasts.
 NO-GO399; missingRust/controller checks и неаттестованный180CPUbudget.
+
+[Продолжение398B](../q2-qualification-preflight-398b.md): все12missingRust prefixes,
+6exactsource contrasts, реальные guard/process synthetic controller tests.
+Усилена проверка resource history; бюджет независимых групп только предложен.
+Scientific399 остаётся NO-GO, полной серии и sealedGOplan нет.

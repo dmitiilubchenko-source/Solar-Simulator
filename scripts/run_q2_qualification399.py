@@ -6,6 +6,7 @@ No code/commands from plans are evaluated. Worker command is fixed in this file.
 import argparse
 import importlib.util
 import json
+import math
 import os
 from pathlib import Path
 import subprocess
@@ -68,12 +69,47 @@ def worker(args,execution,p):
     for name,h in execution['tool_sources'].items():q.require_sha(ROOT/name,h)
 
 
+def attempt_history(directory,limits):
+    """Resume requires the original complete guard records, without refunds.
+
+    A checksum envelope alone is not confirmation that a guard finished. Match
+    its separately persisted record and reject gaps, partials and undercounts.
+    """
+    directory=Path(directory)
+    paths=sorted(directory.glob('attempt-*.json'))
+    if paths!=[directory/('attempt-'+f'{i:03d}'+'.json') for i in range(1,len(paths)+1)]:raise ValueError('Resource attempt sequence has gaps')
+    guards=sorted(directory.glob('guard-*'))
+    if guards!=[directory/('guard-'+f'{i:03d}') for i in range(1,len(paths)+1)]:raise ValueError('Missing guard resource accounting after interruption')
+    old=[];cpu=wall=0.
+    for path,guard in zip(paths,guards):
+        row=q.read_envelope(path)
+        if not guard.is_dir() or list(guard.rglob('*.partial')) or not (guard/'supervisor.json').is_file():raise ValueError('Unconfirmed guard resource record')
+        record=json.loads((guard/'supervisor.json').read_bytes())
+        if row.get('guard_record')!=record or row.get('complete') is not True or record.get('complete') is not True or record.get('exit_code')!=0 or record.get('limit_reason') is not None or record.get('error') is not None:raise ValueError('Stopped or mismatched resource attempt')
+        if row.get('cohort') not in ('baseline:python','baseline:rust','candidate:python','candidate:rust','baseline:evaluate'):raise ValueError('Unknown resource cohort')
+        values=[record.get(k) for k in ('worker_CPU_seconds','parent_supervision_CPU_seconds','wall_seconds','peak_private_tree_sampled','disk_bytes')]+[row.get(k) for k in ('cumulative_CPU_seconds','cumulative_active_wall_seconds')]
+        if any(type(x) not in (int,float) or not math.isfinite(x) or x<0 for x in values):raise ValueError('Invalid resource counters')
+        worker,parent,elapsed,private,disk,total_cpu,total_wall=values
+        if total_cpu+1e-9<cpu+worker+parent or total_wall+1e-9<wall+elapsed:raise ValueError('Resource refund or cumulative undercount')
+        if total_cpu>=limits['cpu_seconds'] or total_wall>=limits['wall_seconds'] or private>limits['private_bytes'] or disk>limits['disk_bytes']:raise ValueError('Prior resource budget exhausted')
+        old.append(row);cpu,wall=total_cpu,total_wall
+    return old
+
+
+def load_monitor(execution):
+    """Load only the fixed SHA-bound supervisor, never a command from JSON."""
+    monitor_path=ROOT/'.tools/qualification385/offline_monitor.py';q.require_sha(monitor_path,execution['monitor_SHA256'])
+    spec=importlib.util.spec_from_file_location('q2_guard399',monitor_path);guard=importlib.util.module_from_spec(spec);spec.loader.exec_module(guard)
+    return guard
+
+
 def controller(args,execution,p):
     if execution['status']!='SEALED_GO_FOR_SEPARATELY_AUTHORIZED_399':raise ValueError('Execution plan is NO-GO or unapproved')
     if execution['limits']!=dict(cpu_seconds=144,wall_seconds=288,private_bytes=900*1024**2,disk_bytes=112*1024**2):raise ValueError('Changed resource policy')
     directory=Path(args.output)
     expected=dict(plan_SHA256=args.sha,scope='scientific399',tool_commit=execution['tool_commit'],jobs=p['jobs'])
     if directory.exists():
+        if list(directory.glob('*.partial')):raise ValueError('Partial controller output requires separate recovery authorization')
         if not args.resume_completed or q.read_envelope(directory/'run.json')!=expected:raise ValueError('Wrong existing run')
         # A partial job or incomplete guard record needs a new explicit budget/
         # recovery decision; do not silently discard its consumed resources.
@@ -82,13 +118,9 @@ def controller(args,execution,p):
             if target.exists() and not (target/'complete.json').is_file():raise ValueError('Partial job requires separate recovery authorization')
         if (directory/'summary.json').exists():raise FileExistsError('Finished run is immutable')
     else:q.initialize(directory,expected)
-    old=[q.read_envelope(path) for path in sorted(directory.glob('attempt-*.json'))]
-    if any(not x['complete'] for x in old):raise ValueError('Prior failed/stopped attempt requires separate budget authorization')
-    guards=list(directory.glob('guard-*'))
-    if len(guards)!=len(old):raise ValueError('Missing resource accounting after interruption')
+    old=attempt_history(directory,execution['limits'])
     prior_cpu=old[-1]['cumulative_CPU_seconds'] if old else 0.;prior_wall=old[-1]['cumulative_active_wall_seconds'] if old else 0.
-    monitor_path=ROOT/'.tools/qualification385/offline_monitor.py';q.require_sha(monitor_path,execution['monitor_SHA256'])
-    spec=importlib.util.spec_from_file_location('q2_guard399',monitor_path);guard=importlib.util.module_from_spec(spec);spec.loader.exec_module(guard)
+    guard=load_monitor(execution)
     import psutil
     parent=psutil.Process();start=perf_counter();workers_cpu=0.
     def hook(sample):

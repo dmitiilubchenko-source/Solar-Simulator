@@ -1,0 +1,1156 @@
+{
+  "stage": "398B",
+  "base_dev": "91a9abb4ca59cc0d9b62de932029c6d69bcc2ba2",
+  "technical_prefix_checks": "PASS",
+  "controller_checks": "PASS_SCOPED_SYNTHETIC_PROCESS_AND_ACTUAL_GUARD",
+  "scientific399_admission": "NO_GO",
+  "sealed_GO_plan_created": false,
+  "scientific58_started": false,
+  "missing_Rust_probes_completed": 12,
+  "source_equivalence_contrasts": [
+    {
+      "checkpoint_journal_SHA256": "e108bc7bc1c0851275deb520adb22e4a8b1257a42ba1dd558c6a60860f80d8cf",
+      "exact": true,
+      "job": "baseline__two-bodies__rust__standard__cold",
+      "scope": "Samebackend/recipe/IC/sourcepair only; not scientificaccuracy",
+      "stable_SO3_angles_rad": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "checkpoint_journal_SHA256": "0f224f50bd305fb3f49afc01121bda20c67e778a0f4cce3538e6b4f6e04d6485",
+      "exact": true,
+      "job": "baseline__two-bodies__rust__standard__continuous",
+      "scope": "Samebackend/recipe/IC/sourcepair only; not scientificaccuracy",
+      "stable_SO3_angles_rad": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "checkpoint_journal_SHA256": "8d2d8f76f9f9182ffd0069570c8b4830d5690964ccfff93b85d9748fa7773818",
+      "exact": true,
+      "job": "baseline__three-bodies__rust__standard__cold",
+      "scope": "Samebackend/recipe/IC/sourcepair only; not scientificaccuracy",
+      "stable_SO3_angles_rad": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "checkpoint_journal_SHA256": "ccd34be83517f9321fc525dfa48042b5c68d5aecc2b6bea40538297199c7dc57",
+      "exact": true,
+      "job": "baseline__three-bodies__rust__standard__continuous",
+      "scope": "Samebackend/recipe/IC/sourcepair only; not scientificaccuracy",
+      "stable_SO3_angles_rad": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "checkpoint_journal_SHA256": "fd9742b88908c79619fdf0b0d09cf5b3fdc6f7fbea6356d9d266dddd6976046e",
+      "exact": true,
+      "job": "baseline__one__rust__cold",
+      "scope": "Samebackend/recipe/IC/sourcepair only; not scientificaccuracy",
+      "stable_SO3_angles_rad": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    },
+    {
+      "checkpoint_journal_SHA256": "2dcaa1c097d01032f87f7991229e8713ad36a335dc2b3aa7034fe7dcf92a3709",
+      "exact": true,
+      "job": "baseline__one__rust__continuous",
+      "scope": "Samebackend/recipe/IC/sourcepair only; not scientificaccuracy",
+      "stable_SO3_angles_rad": [
+        [
+          0.0
+        ],
+        [
+          0.0
+        ],
+        [
+          0.0
+        ]
+      ]
+    }
+  ],
+  "reference_comparisons": [
+    {
+      "error": {
+        "orientation": 3.1320307022217233e-14,
+        "position": 4.547612284625201e-16,
+        "spin": 3.793774082216227e-15,
+        "velocity": 3.255364532882199e-17
+      },
+      "job": "baseline__two-bodies__rust__standard__cold",
+      "reference_level_gap": {
+        "orientation": 9.688287749603302e-12,
+        "position": 3.046807287762627e-16,
+        "spin": 3.18751140628412e-13,
+        "velocity": 2.571697918161844e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 3.12157569985215e-14,
+        "position": 1.5161945321323573e-16,
+        "spin": 3.790526602455789e-15,
+        "velocity": 1.736194417537173e-16
+      },
+      "job": "baseline__two-bodies__rust__standard__continuous",
+      "reference_level_gap": {
+        "orientation": 9.688287749603302e-12,
+        "position": 3.046807287762627e-16,
+        "spin": 3.18751140628412e-13,
+        "velocity": 2.571697918161844e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 5.3763151788666413e-14,
+        "position": 2.4167521015693726e-16,
+        "spin": 5.226406768429725e-15,
+        "velocity": 3.4829696044174477e-16
+      },
+      "job": "baseline__three-bodies__rust__standard__cold",
+      "reference_level_gap": {
+        "orientation": 1.5188704572087866e-11,
+        "position": 3.642491164501102e-16,
+        "spin": 1.819325679981821e-12,
+        "velocity": 3.23317048339957e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 5.4395780436678854e-14,
+        "position": 2.6986731142060796e-16,
+        "spin": 5.243956246808687e-15,
+        "velocity": 3.550458054235123e-16
+      },
+      "job": "baseline__three-bodies__rust__standard__continuous",
+      "reference_level_gap": {
+        "orientation": 1.5188704572087866e-11,
+        "position": 3.642491164501102e-16,
+        "spin": 1.819325679981821e-12,
+        "velocity": 3.23317048339957e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 1.502985947302413e-13,
+        "position": 1.520559408164003e-16,
+        "spin": 9.986665123934148e-15,
+        "velocity": 3.5079185820123984e-16
+      },
+      "job": "baseline__one__rust__cold",
+      "reference_level_gap": {
+        "orientation": 1.149636990991434e-11,
+        "position": 4.554930560629808e-16,
+        "spin": 2.607184464231832e-13,
+        "velocity": 2.6079753257758193e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 1.5073026876872812e-13,
+        "position": 1.7023419710919066e-17,
+        "spin": 9.986665123934148e-15,
+        "velocity": 3.5061349033742145e-16
+      },
+      "job": "baseline__one__rust__continuous",
+      "reference_level_gap": {
+        "orientation": 1.149636990991434e-11,
+        "position": 4.554930560629808e-16,
+        "spin": 2.607184464231832e-13,
+        "velocity": 2.6079753257758193e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 3.1320307022217233e-14,
+        "position": 4.547612284625201e-16,
+        "spin": 3.793774082216227e-15,
+        "velocity": 3.255364532882199e-17
+      },
+      "job": "candidate__two-bodies__rust__standard__cold",
+      "reference_level_gap": {
+        "orientation": 9.688287749603302e-12,
+        "position": 3.046807287762627e-16,
+        "spin": 3.18751140628412e-13,
+        "velocity": 2.571697918161844e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 3.12157569985215e-14,
+        "position": 1.5161945321323573e-16,
+        "spin": 3.790526602455789e-15,
+        "velocity": 1.736194417537173e-16
+      },
+      "job": "candidate__two-bodies__rust__standard__continuous",
+      "reference_level_gap": {
+        "orientation": 9.688287749603302e-12,
+        "position": 3.046807287762627e-16,
+        "spin": 3.18751140628412e-13,
+        "velocity": 2.571697918161844e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 5.3763151788666413e-14,
+        "position": 2.4167521015693726e-16,
+        "spin": 5.226406768429725e-15,
+        "velocity": 3.4829696044174477e-16
+      },
+      "job": "candidate__three-bodies__rust__standard__cold",
+      "reference_level_gap": {
+        "orientation": 1.5188704572087866e-11,
+        "position": 3.642491164501102e-16,
+        "spin": 1.819325679981821e-12,
+        "velocity": 3.23317048339957e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 5.4395780436678854e-14,
+        "position": 2.6986731142060796e-16,
+        "spin": 5.243956246808687e-15,
+        "velocity": 3.550458054235123e-16
+      },
+      "job": "candidate__three-bodies__rust__standard__continuous",
+      "reference_level_gap": {
+        "orientation": 1.5188704572087866e-11,
+        "position": 3.642491164501102e-16,
+        "spin": 1.819325679981821e-12,
+        "velocity": 3.23317048339957e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 1.502985947302413e-13,
+        "position": 1.520559408164003e-16,
+        "spin": 9.986665123934148e-15,
+        "velocity": 3.5079185820123984e-16
+      },
+      "job": "candidate__one__rust__cold",
+      "reference_level_gap": {
+        "orientation": 1.149636990991434e-11,
+        "position": 4.554930560629808e-16,
+        "spin": 2.607184464231832e-13,
+        "velocity": 2.6079753257758193e-15
+      }
+    },
+    {
+      "error": {
+        "orientation": 1.5073026876872812e-13,
+        "position": 1.7023419710919066e-17,
+        "spin": 9.986665123934148e-15,
+        "velocity": 3.5061349033742145e-16
+      },
+      "job": "candidate__one__rust__continuous",
+      "reference_level_gap": {
+        "orientation": 1.149636990991434e-11,
+        "position": 4.554930560629808e-16,
+        "spin": 2.607184464231832e-13,
+        "velocity": 2.6079753257758193e-15
+      }
+    }
+  ],
+  "cohorts": [
+    {
+      "role": "baseline",
+      "backend": "python",
+      "attestation_before": {
+        "CPU_seconds": 1.859375,
+        "wall_seconds": 1.9772922999982256
+      },
+      "attestation_after": {
+        "CPU_seconds": 0.59375,
+        "wall_seconds": 0.6738358000002336
+      },
+      "total_measured_worker_body_CPU_seconds": 2.8125,
+      "total_measured_worker_body_wall_seconds": 3.0810469999996712,
+      "rows": [
+        {
+          "job": "baseline__two-bodies__python__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.125,
+          "wall_seconds": 0.13610119999793824,
+          "counters": {
+            "RHS": 136,
+            "compiled_native_calls": 0,
+            "nfev": 136,
+            "solver_calls": 2
+          },
+          "bytes": 23109,
+          "invariant_drifts": {
+            "angular_drift": 7.115823328364689e-16,
+            "energy_drift": 9.385392599356688e-15,
+            "linear_drift": 7.377531580265318e-17,
+            "quaternion_norm": 2.220446049250313e-16
+          }
+        },
+        {
+          "job": "baseline__two-bodies__python__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.140625,
+          "wall_seconds": 0.1330696000077296,
+          "counters": {
+            "solver_calls": 1,
+            "RHS": 68,
+            "nfev": 68,
+            "compiled_native_calls": 0
+          },
+          "bytes": 24183,
+          "invariant_drifts": {
+            "energy_drift": 5.214106999642592e-15,
+            "angular_drift": 1.791948417668023e-16,
+            "linear_drift": 4.8509104880242914e-18,
+            "quaternion_norm": 8.881784197001252e-16
+          }
+        },
+        {
+          "job": "baseline__three-bodies__python__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.0625,
+          "wall_seconds": 0.08149359999515582,
+          "counters": {
+            "solver_calls": 2,
+            "RHS": 136,
+            "nfev": 136,
+            "compiled_native_calls": 0
+          },
+          "bytes": 25671,
+          "invariant_drifts": {
+            "energy_drift": 4.9818074383701606e-15,
+            "angular_drift": 5.374080862023158e-16,
+            "linear_drift": 2.4912254070067202e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "baseline__three-bodies__python__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.0625,
+          "wall_seconds": 0.060630799998762086,
+          "counters": {
+            "solver_calls": 1,
+            "RHS": 68,
+            "nfev": 68,
+            "compiled_native_calls": 0
+          },
+          "bytes": 25761,
+          "invariant_drifts": {
+            "energy_drift": 6.4281386301550126e-15,
+            "angular_drift": 1.791551656653602e-16,
+            "linear_drift": 4.902657758117134e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "baseline__one__python__cold",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.046875,
+          "wall_seconds": 0.052143699998850934,
+          "counters": {
+            "solver_calls": 2,
+            "RHS": 112,
+            "nfev": 112,
+            "compiled_native_calls": 0
+          },
+          "bytes": 20394,
+          "invariant_drifts": {
+            "energy_drift": 1.615893364213484e-14,
+            "angular_drift": 3.597135798237569e-16,
+            "linear_drift": 2.49244293747832e-17,
+            "quaternion_norm": 0.0
+          }
+        },
+        {
+          "job": "baseline__one__python__continuous",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.015625,
+          "wall_seconds": 0.04427060000307392,
+          "counters": {
+            "solver_calls": 1,
+            "RHS": 71,
+            "nfev": 71,
+            "compiled_native_calls": 0
+          },
+          "bytes": 20447,
+          "invariant_drifts": {
+            "energy_drift": 6.4635734568538945e-15,
+            "angular_drift": 3.597163242101067e-16,
+            "linear_drift": 4.911172556212484e-17,
+            "quaternion_norm": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "role": "baseline",
+      "backend": "rust",
+      "attestation_before": {
+        "CPU_seconds": 1.984375,
+        "wall_seconds": 2.8473575999960303
+      },
+      "attestation_after": {
+        "CPU_seconds": 0.515625,
+        "wall_seconds": 0.5674101999902632
+      },
+      "total_measured_worker_body_CPU_seconds": 2.875,
+      "total_measured_worker_body_wall_seconds": 3.8418866000138223,
+      "rows": [
+        {
+          "job": "baseline__two-bodies__rust__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.125,
+          "wall_seconds": 0.14190669998060912,
+          "counters": {
+            "RHS": 136,
+            "compiled_native_calls": 136,
+            "nfev": 136,
+            "solver_calls": 2
+          },
+          "bytes": 22629,
+          "invariant_drifts": {
+            "angular_drift": 3.563080534356667e-16,
+            "energy_drift": 5.8100049424589016e-15,
+            "linear_drift": 2.4543881388409135e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "baseline__two-bodies__rust__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.046875,
+          "wall_seconds": 0.05662290001055226,
+          "counters": {
+            "RHS": 68,
+            "compiled_native_calls": 68,
+            "nfev": 68,
+            "solver_calls": 1
+          },
+          "bytes": 22669,
+          "invariant_drifts": {
+            "angular_drift": 1.792109934493595e-16,
+            "energy_drift": 1.4897448570407405e-15,
+            "linear_drift": 2.4734887237127756e-17,
+            "quaternion_norm": 4.440892098500626e-16
+          }
+        },
+        {
+          "job": "baseline__three-bodies__rust__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.078125,
+          "wall_seconds": 0.08032029998139478,
+          "counters": {
+            "RHS": 136,
+            "compiled_native_calls": 136,
+            "nfev": 136,
+            "solver_calls": 2
+          },
+          "bytes": 24144,
+          "invariant_drifts": {
+            "angular_drift": 5.337155307329417e-16,
+            "energy_drift": 4.821103972616284e-15,
+            "linear_drift": 1.6888256162710755e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "baseline__three-bodies__rust__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.0625,
+          "wall_seconds": 0.05525970002054237,
+          "counters": {
+            "RHS": 68,
+            "compiled_native_calls": 68,
+            "nfev": 68,
+            "solver_calls": 1
+          },
+          "bytes": 24234,
+          "invariant_drifts": {
+            "angular_drift": 1.7913901901437292e-16,
+            "energy_drift": 2.8926623835697557e-15,
+            "linear_drift": 4.0680941010870793e-17,
+            "quaternion_norm": 2.886579864025407e-15
+          }
+        },
+        {
+          "job": "baseline__one__rust__cold",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.03125,
+          "wall_seconds": 0.04749539998010732,
+          "counters": {
+            "RHS": 112,
+            "compiled_native_calls": 112,
+            "nfev": 112,
+            "solver_calls": 2
+          },
+          "bytes": 18880,
+          "invariant_drifts": {
+            "angular_drift": 3.597135798237569e-16,
+            "energy_drift": 9.695360185280904e-15,
+            "linear_drift": 2.5018661958048843e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "baseline__one__rust__continuous",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.03125,
+          "wall_seconds": 0.03979490001802333,
+          "counters": {
+            "RHS": 71,
+            "compiled_native_calls": 71,
+            "nfev": 71,
+            "solver_calls": 1
+          },
+          "bytes": 18935,
+          "invariant_drifts": {
+            "angular_drift": 3.597135798237569e-16,
+            "energy_drift": 3.2317867284269473e-15,
+            "linear_drift": 4.911172556212484e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        }
+      ]
+    },
+    {
+      "role": "candidate",
+      "backend": "python",
+      "attestation_before": {
+        "CPU_seconds": 1.859375,
+        "wall_seconds": 2.0995330000005197
+      },
+      "attestation_after": {
+        "CPU_seconds": 0.59375,
+        "wall_seconds": 0.6911534999962896
+      },
+      "total_measured_worker_body_CPU_seconds": 2.875,
+      "total_measured_worker_body_wall_seconds": 3.241961199993966,
+      "rows": [
+        {
+          "job": "candidate__two-bodies__python__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.15625,
+          "wall_seconds": 0.1515947000007145,
+          "counters": {
+            "solver_calls": 2,
+            "RHS": 136,
+            "nfev": 136,
+            "compiled_native_calls": 0
+          },
+          "bytes": 24183,
+          "invariant_drifts": {
+            "energy_drift": 9.385392599356688e-15,
+            "angular_drift": 7.115823328364689e-16,
+            "linear_drift": 7.377531580265318e-17,
+            "quaternion_norm": 2.220446049250313e-16
+          }
+        },
+        {
+          "job": "candidate__two-bodies__python__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.046875,
+          "wall_seconds": 0.05715459999919403,
+          "counters": {
+            "solver_calls": 1,
+            "RHS": 68,
+            "nfev": 68,
+            "compiled_native_calls": 0
+          },
+          "bytes": 24211,
+          "invariant_drifts": {
+            "energy_drift": 5.214106999642592e-15,
+            "angular_drift": 1.791948417668023e-16,
+            "linear_drift": 4.8509104880242914e-18,
+            "quaternion_norm": 8.881784197001252e-16
+          }
+        },
+        {
+          "job": "candidate__three-bodies__python__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.078125,
+          "wall_seconds": 0.08498610000242479,
+          "counters": {
+            "solver_calls": 2,
+            "RHS": 136,
+            "nfev": 136,
+            "compiled_native_calls": 0
+          },
+          "bytes": 25696,
+          "invariant_drifts": {
+            "energy_drift": 4.9818074383701606e-15,
+            "angular_drift": 5.374080862023158e-16,
+            "linear_drift": 2.4912254070067202e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "candidate__three-bodies__python__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.0625,
+          "wall_seconds": 0.058092899998882785,
+          "counters": {
+            "solver_calls": 1,
+            "RHS": 68,
+            "nfev": 68,
+            "compiled_native_calls": 0
+          },
+          "bytes": 25788,
+          "invariant_drifts": {
+            "energy_drift": 6.4281386301550126e-15,
+            "angular_drift": 1.791551656653602e-16,
+            "linear_drift": 4.902657758117134e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "candidate__one__python__cold",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.046875,
+          "wall_seconds": 0.05143870000028983,
+          "counters": {
+            "solver_calls": 2,
+            "RHS": 112,
+            "nfev": 112,
+            "compiled_native_calls": 0
+          },
+          "bytes": 20421,
+          "invariant_drifts": {
+            "energy_drift": 1.615893364213484e-14,
+            "angular_drift": 3.597135798237569e-16,
+            "linear_drift": 2.49244293747832e-17,
+            "quaternion_norm": 0.0
+          }
+        },
+        {
+          "job": "candidate__one__python__continuous",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.03125,
+          "wall_seconds": 0.04203569999663159,
+          "counters": {
+            "solver_calls": 1,
+            "RHS": 71,
+            "nfev": 71,
+            "compiled_native_calls": 0
+          },
+          "bytes": 20473,
+          "invariant_drifts": {
+            "energy_drift": 6.4635734568538945e-15,
+            "angular_drift": 3.597163242101067e-16,
+            "linear_drift": 4.911172556212484e-17,
+            "quaternion_norm": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "role": "candidate",
+      "backend": "rust",
+      "attestation_before": {
+        "CPU_seconds": 1.796875,
+        "wall_seconds": 1.8757588999869768
+      },
+      "attestation_after": {
+        "CPU_seconds": 0.53125,
+        "wall_seconds": 0.5651467000134289
+      },
+      "total_measured_worker_body_CPU_seconds": 2.703125,
+      "total_measured_worker_body_wall_seconds": 2.8588538999902084,
+      "rows": [
+        {
+          "job": "candidate__two-bodies__rust__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.140625,
+          "wall_seconds": 0.13990369997918606,
+          "counters": {
+            "RHS": 136,
+            "compiled_native_calls": 136,
+            "nfev": 136,
+            "solver_calls": 2
+          },
+          "bytes": 22655,
+          "invariant_drifts": {
+            "angular_drift": 3.563080534356667e-16,
+            "energy_drift": 5.8100049424589016e-15,
+            "linear_drift": 2.4543881388409135e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "candidate__two-bodies__rust__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.03125,
+          "wall_seconds": 0.05581400002120063,
+          "counters": {
+            "RHS": 68,
+            "compiled_native_calls": 68,
+            "nfev": 68,
+            "solver_calls": 1
+          },
+          "bytes": 22696,
+          "invariant_drifts": {
+            "angular_drift": 1.792109934493595e-16,
+            "energy_drift": 1.4897448570407405e-15,
+            "linear_drift": 2.4734887237127756e-17,
+            "quaternion_norm": 4.440892098500626e-16
+          }
+        },
+        {
+          "job": "candidate__three-bodies__rust__standard__cold",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.078125,
+          "wall_seconds": 0.07675839998410083,
+          "counters": {
+            "RHS": 136,
+            "compiled_native_calls": 136,
+            "nfev": 136,
+            "solver_calls": 2
+          },
+          "bytes": 24170,
+          "invariant_drifts": {
+            "angular_drift": 5.337155307329417e-16,
+            "energy_drift": 4.821103972616284e-15,
+            "linear_drift": 1.6888256162710755e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "candidate__three-bodies__rust__standard__continuous",
+          "epochs": [
+            0.0,
+            62.5,
+            125.0
+          ],
+          "CPU_seconds": 0.046875,
+          "wall_seconds": 0.05453439999837428,
+          "counters": {
+            "RHS": 68,
+            "compiled_native_calls": 68,
+            "nfev": 68,
+            "solver_calls": 1
+          },
+          "bytes": 24262,
+          "invariant_drifts": {
+            "angular_drift": 1.7913901901437292e-16,
+            "energy_drift": 2.8926623835697557e-15,
+            "linear_drift": 4.0680941010870793e-17,
+            "quaternion_norm": 2.886579864025407e-15
+          }
+        },
+        {
+          "job": "candidate__one__rust__cold",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.046875,
+          "wall_seconds": 0.046985399996628985,
+          "counters": {
+            "RHS": 112,
+            "compiled_native_calls": 112,
+            "nfev": 112,
+            "solver_calls": 2
+          },
+          "bytes": 18906,
+          "invariant_drifts": {
+            "angular_drift": 3.597135798237569e-16,
+            "energy_drift": 9.695360185280904e-15,
+            "linear_drift": 2.5018661958048843e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        },
+        {
+          "job": "candidate__one__rust__continuous",
+          "epochs": [
+            0.0,
+            50.0,
+            100.0
+          ],
+          "CPU_seconds": 0.03125,
+          "wall_seconds": 0.038500399998156354,
+          "counters": {
+            "RHS": 71,
+            "compiled_native_calls": 71,
+            "nfev": 71,
+            "solver_calls": 1
+          },
+          "bytes": 18962,
+          "invariant_drifts": {
+            "angular_drift": 3.597135798237569e-16,
+            "energy_drift": 3.2317867284269473e-15,
+            "linear_drift": 4.911172556212484e-17,
+            "quaternion_norm": 1.1102230246251565e-16
+          }
+        }
+      ]
+    }
+  ],
+  "source_SHA256": {
+    "scripts/q2_execution398.py": "27be9b6c066f50a1b7f5d021a224944e5d71b0898a6019e1fd6393ab02161dec",
+    "scripts/run_q2_qualification399.py": "8970db2bae3e5cd7482df5915a1b76b6f60d16c09fa267b2f522f285f811f62b",
+    "tests/test_q2_controller398b.py": "1c1fe3a44d8d1f7f42e79d33ace3f777d783283ca5f61e3c6a5710c3ef09452d",
+    "tests/test_q2_execution398.py": "a65172332f94ca381e6fa55f248cdac480988fdc4e6da19fbd20ef24b36b8194",
+    "scripts/q2-qualification398-plan.json": "b6131f0abeeec63ee2e324a34b22f6c96008e67e747fa94e9ee52b2795c0bd28",
+    "scripts/q2_reference397.py": "52b2d4efebad15fc25739776d3a8939015a6be42be1b88d9b3d5f999271e9338"
+  },
+  "local_tests": {
+    "passed": 30,
+    "deselected": 1,
+    "reason": "Unchanged expensive full58 synthetic evaluator already verified in current-base CI42376428071; targeted new controller and all other execution398 tests run locally",
+    "baseline_failing_test": "Unconfirmed guard record reached worker preparation; retained before.xml/log",
+    "CI_current_revision": "PENDING_AFTER_PUSH"
+  },
+  "controller_e2e": {
+    "CLI_blocked_before_runtime": true,
+    "actual_monitor_SHA256": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508",
+    "attempt_records": 7,
+    "calls": [
+      "baseline:python",
+      "baseline:rust",
+      "baseline:python",
+      "baseline:rust",
+      "candidate:python",
+      "candidate:rust",
+      "baseline:evaluate"
+    ],
+    "resume_resources_preserved": true,
+    "scientific_calls": 0,
+    "scope": "Real guard/process/controller; worker commands replaced by explicit harmless synthetic child. Actual worker SHA/codec resume tested separately. No scientific qualification simulated.",
+    "synthetic_only": true
+  },
+  "resources": {
+    "measured_CPU_seconds": 14.921875,
+    "measured_active_wall_seconds": 13.184024100017268,
+    "pre_guard_CPU_UNMEASURED": true,
+    "pre_guard_reserve_CPU_seconds": 1.0,
+    "pre_guard_reserve_wall_seconds": 1.0,
+    "nominal_charged_CPU_seconds": 15.921875,
+    "nominal_charged_wall_seconds": 14.184024100017268,
+    "worker_private_peak_sampled": 247054336,
+    "worker_RSS_peak_sampled": 149463040,
+    "supervisor_peak_commit": 37441536,
+    "attempts": [
+      {
+        "name": "resource-history-before",
+        "complete": false,
+        "exit_code": 1,
+        "limit_reason": null,
+        "CPU_seconds": 0.859375,
+        "worker_CPU_seconds": 0.671875,
+        "supervisor_process_CPU_seconds": 0.1875,
+        "active_wall_seconds": 0.9117709000129253,
+        "worker_private_peak_sampled": 70807552,
+        "worker_RSS_peak_sampled": 62738432,
+        "supervisor_OS_peak_commit": 37429248,
+        "files_peak_sampled": 8,
+        "artifact_bytes": 11350
+      },
+      {
+        "name": "current-targeted-tests",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 2.90625,
+        "worker_CPU_seconds": 2.40625,
+        "supervisor_process_CPU_seconds": 0.5,
+        "active_wall_seconds": 2.850133600004483,
+        "worker_private_peak_sampled": 178425856,
+        "worker_RSS_peak_sampled": 137814016,
+        "supervisor_OS_peak_commit": 37355520,
+        "files_peak_sampled": 75,
+        "artifact_bytes": 145271
+      },
+      {
+        "name": "missing-baseline-rust",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 4.28125,
+        "worker_CPU_seconds": 3.015625,
+        "supervisor_process_CPU_seconds": 1.265625,
+        "active_wall_seconds": 4.024066400015727,
+        "worker_private_peak_sampled": 132022272,
+        "worker_RSS_peak_sampled": 119042048,
+        "supervisor_OS_peak_commit": 37441536,
+        "files_peak_sampled": 104,
+        "artifact_bytes": 291766
+      },
+      {
+        "name": "missing-candidate-rust",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 3.96875,
+        "worker_CPU_seconds": 2.859375,
+        "supervisor_process_CPU_seconds": 1.109375,
+        "active_wall_seconds": 3.031937599997036,
+        "worker_private_peak_sampled": 135397376,
+        "worker_RSS_peak_sampled": 121454592,
+        "supervisor_OS_peak_commit": 37416960,
+        "files_peak_sampled": 133,
+        "artifact_bytes": 438490
+      },
+      {
+        "name": "final-independent-audit",
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "CPU_seconds": 2.90625,
+        "worker_CPU_seconds": 1.953125,
+        "supervisor_process_CPU_seconds": 0.953125,
+        "active_wall_seconds": 2.366115599987097,
+        "worker_private_peak_sampled": 247054336,
+        "worker_RSS_peak_sampled": 149463040,
+        "supervisor_OS_peak_commit": 37441536,
+        "files_peak_sampled": 167,
+        "artifact_bytes": 509509
+      }
+    ],
+    "limitations": "Initial developer-venv launcher lacked psutil before guard import; exactCPU unavailable,1CPU/1wall allowance is not an independently measured upper bound. Sampled memory/process discovery,50ms overshoot. No further computational tests after15.921875nominalCPU."
+  },
+  "backup398_analysis": {
+    "total_CPU_seconds": 318.390625,
+    "worker_CPU_seconds": 288.234375,
+    "supervisor_CPU_seconds": 30.15625,
+    "wall_seconds": 303.88905830000294,
+    "selection_rows": 183,
+    "selected_source_bytes": 391471909,
+    "generated_delta_bytes": 11999291,
+    "base_archive_bytes": 251639034,
+    "exact_per_operation_timings": "UNRESOLVED:no operation profiler or timestamped subphase measurements",
+    "verified_source_facts": [
+      "scientific_snapshot traverses and reviews/hashes all selected .tools files before testing unchanged delta",
+      "scientific_delta validates the entire base and all current members",
+      "prepare hashes and often reviews every configured archive before reusing existing cloud evidence",
+      "178selectedrecords already CLOUD_VERIFIED_SHA256 plus1chunkedverified; repeated source reads persist",
+      "50ms monitor recursively scans output files; measured supervision30.15625CPU",
+      "225441B stage398archive built separately: its compression cost cannot be inferred from318CPUwideprepare"
+    ]
+  },
+  "forecast": {
+    "method": "Measured matching source/backend prefix wholejobCPU scaled by4000/prefix horizon; same standard cost provisionally used for coarse/fine; 1.5worker margin,+3CPUstartup/attestation,50%supervisor reserve,+5CPU; wall=1.5scaledjobwall+5+.5projectedCPU. Explicit engineering hypotheses, not measured full trajectories.",
+    "cohorts": [
+      {
+        "role": "baseline",
+        "backend": "python",
+        "jobs": 16,
+        "runtime_horizon_scaled_CPU_seconds": 40.0,
+        "reference_horizon_scaled_CPU_seconds": 1.25,
+        "projected_CPU_seconds_with_reserves": 102.3125,
+        "projected_wall_seconds_with_reserves": 123.99568679986987,
+        "projected_bytes_with_1_25_margin": 10264316.25,
+        "proposed_only_cap_CPU_seconds": 180,
+        "proposed_only_early_CPU_seconds": 144,
+        "proposed_only_cap_wall_seconds": 360,
+        "proposed_only_early_wall_seconds": 288
+      },
+      {
+        "role": "baseline",
+        "backend": "rust",
+        "jobs": 14,
+        "runtime_horizon_scaled_CPU_seconds": 32.5,
+        "reference_horizon_scaled_CPU_seconds": 0.0,
+        "projected_CPU_seconds_with_reserves": 82.625,
+        "projected_wall_seconds_with_reserves": 99.66170039889403,
+        "projected_bytes_with_1_25_margin": 8887431.25,
+        "proposed_only_cap_CPU_seconds": 180,
+        "proposed_only_early_CPU_seconds": 144,
+        "proposed_only_cap_wall_seconds": 360,
+        "proposed_only_early_wall_seconds": 288
+      },
+      {
+        "role": "candidate",
+        "backend": "python",
+        "jobs": 14,
+        "runtime_horizon_scaled_CPU_seconds": 36.125,
+        "reference_horizon_scaled_CPU_seconds": 0.0,
+        "projected_CPU_seconds_with_reserves": 90.78125,
+        "projected_wall_seconds_with_reserves": 106.6623641999904,
+        "projected_bytes_with_1_25_margin": 9495260.0,
+        "proposed_only_cap_CPU_seconds": 180,
+        "proposed_only_early_CPU_seconds": 144,
+        "proposed_only_cap_wall_seconds": 360,
+        "proposed_only_early_wall_seconds": 288
+      },
+      {
+        "role": "candidate",
+        "backend": "rust",
+        "jobs": 14,
+        "runtime_horizon_scaled_CPU_seconds": 31.625,
+        "reference_horizon_scaled_CPU_seconds": 0.0,
+        "projected_CPU_seconds_with_reserves": 80.65625,
+        "projected_wall_seconds_with_reserves": 97.54678499721922,
+        "projected_bytes_with_1_25_margin": 8897913.75,
+        "proposed_only_cap_CPU_seconds": 180,
+        "proposed_only_early_CPU_seconds": 144,
+        "proposed_only_cap_wall_seconds": 360,
+        "proposed_only_early_wall_seconds": 288
+      }
+    ],
+    "projected_total_cohort_CPU_seconds": 356.375,
+    "projected_total_cohort_wall_seconds": 427.8665363959735,
+    "projected_total_bytes": 37544921.25,
+    "evaluation_CPU_wall": "UNRESOLVED: full-grid final evaluator timing not measured;2epoch synthetic test6.58wall is not a65epoch throughput qualification",
+    "RAM": "Measured short worker peaks only; proposed1GiB per process, early900MiB,not full-horizon qualification",
+    "backup": "Incremental reviewed files only; existing immutable395bundle/398archive reused, no rescanning widecache; new measured cost recorded separately",
+    "recommendation": "Four independent fixed(source,backend) groups,14+14+14+14runtime with2references attached baseline/python, then independent full58 merge; no chained continuation;180CPU/360wall per group only PROPOSED,not approved",
+    "controller_blocker": "Current controller intentionally retains original global144CPU/288wall policy and all-cohort loop. Independent group dispatch/budget logic is NOT implemented or admitted; requires separately tested source-bound change before399."
+  },
+  "old_cold_binding": {
+    "status": "Reusable for short raw-source comparison only",
+    "initial_integrator_and_cold_advance": "Unchanged; old complete files and original source binding retained; no relabeling as new399 result",
+    "numerical_evidence": "Six Python source contrasts exact in398, preserved unchanged; Rust six exact now",
+    "limitation": "Oldv1 cold is not attestation of current full399 executor; failed historical continuous raw was never written and remains unavailable"
+  },
+  "historical_FAIL_preserved": 3,
+  "production_physics_changed": false,
+  "candidates_changed": false,
+  "open_questions": [
+    "Full scientific58 criteria not evaluated;3historicFAIL remain",
+    "Budget per independent cohort proposed only; no controller group admission yet",
+    "Final full-grid evaluator and backup/network timing uncertainty",
+    "Exact CPU of pre-guard failed launcher unresolved despite reserved allowance",
+    "Physical power-cut filesystem durability not proven",
+    "No waiver of A+D1 or release033NO_GO"
+  ],
+  "backup398b_status": "CLOUD_UNVERIFIED_PENDING_ARCHIVE",
+  "decision": "GO for reviewed short source-equivalence and scoped execution components; NO_GO to scientific399; no sealed GO plan"
+}
