@@ -126,6 +126,7 @@ def test_continuous_t0_readout_is_not_an_experiment_checkpoint():
 
 def test_source_identity_fails_before_any_numerical_call(tmp_path,monkeypatch):
     p=q.contract();owner=p['roles']['baseline'];monkeypatch.setattr(q,'ROOT',tmp_path)
+    owner['root']=str(tmp_path/'synthetic-candidate')  # Native path grammar on each CI host.
     p['roles']['baseline']['environment']='profile.json';(tmp_path/'profile.json').write_text('{}')
     identity=dict(role='baseline',commit=owner['commit'],source=owner['root'],import_origin=str(Path(owner['root'])/'src/solar_simulator/__init__.py'),environment_LF_SHA256=__import__('hashlib').sha256(b'{}\n').hexdigest())
     q.require_identity({'role':'baseline'},p,identity)

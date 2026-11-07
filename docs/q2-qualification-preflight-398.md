@@ -115,6 +115,9 @@ tests2PASS. Ещё одна подготовительная ошибка worker
 учтены. Старые executed unit source/test bytes восстановлены из known diff и
 **подтверждены исходным SHA**, не реконструированы приблизительно. Текущие полные
 регрессии выполняет обычный CI; локальный all-tests PASS текущей ревизии не заявлен.
+Первый PythonCI:851PASS/1FAIL/1skip/4deselected. Отказ — положительный path-test
+с буквальным Windowsroot на Linux. Fixture заменён на native temporary root;
+валидатор и научные вычисления не ослаблялись. Исходный CIlog сохранён.
 
 Fault injection CPU/wall/RAM/disk/KeyboardInterrupt:5ownedchildren остановлены и
 reaped, reason/последний sample/CPU/RAM/logs сохранены. Исходный interruption

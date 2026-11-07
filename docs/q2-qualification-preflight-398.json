@@ -4904,7 +4904,7 @@
   "final_adapter_sources_SHA256": {
     "scripts/q2_execution398.py": "27be9b6c066f50a1b7f5d021a224944e5d71b0898a6019e1fd6393ab02161dec",
     "scripts/run_q2_qualification399.py": "1a9c26cdde51c0d9abfcdcc5b399658b80e483066c450ff602ebcb1072ab998b",
-    "tests/test_q2_execution398.py": "e35d9aa01802ecd04ca82951bdce975dbc730fb46ecffdc8c5cd5ad27bd019fc"
+    "tests/test_q2_execution398.py": "a65172332f94ca381e6fa55f248cdac480988fdc4e6da19fbd20ef24b36b8194"
   },
   "tests": {
     "before_t0_fix": "46PASS:15executor+22reference397+9saved392, priorcodeSHA intestbinding; exactoldsourcecopies retained",
@@ -4932,7 +4932,8 @@
     "Oldobserver assumes sourceindex0; separate ID-permutationadaptation tested againstDecimal, original A/B orderbitwise unchanged",
     "Newadapter wrongly serialized reconstructedcontinuous t0 asoriginalExperiment; fixedkeepingrawsamples andcanonicalICcheckpoint separately, zeroRHSdecoderreplay validatesmapping. Oldraw/criteria unchanged",
     "Testinsertion NameError, then generatedworkerIndentationError; bothsources/logs/failedcost retained",
-    "Onlyfirstcoldprobe completedv1; reusedreadonlyunderitsownsourcebinding, neverrerun orrelabeledasnewtoolversion"
+    "Onlyfirstcoldprobe completedv1; reusedreadonlyunderitsownsourcebinding, neverrerun orrelabeledasnewtoolversion",
+    "CI42315531908/python:851PASS/1FAIL/1skip/4deselected, positiveidentityfixtureWindowsliteralroot onLinux; fixture usesnative tmp root now, validatorunchanged. FulloriginalCIlog preserved. No newlocalnumericrun."
   ],
   "unresolved": [
     "12shortRustprobes notrun",
@@ -4941,7 +4942,8 @@
     "No4000sK1references or58runtimequalification",
     "No trueglobalerrorbound",
     "Scientific3historicalFAIL retained;A+D1notapproved;release033NO-GO",
-    "Filesystemfsync/atomicvisibility testedbyfaultinjection,notphysicalpower-cutdurability"
+    "Filesystemfsync/atomicvisibility testedbyfaultinjection,notphysicalpower-cutdurability",
+    "Failedv1continuous returned125srawsamples were not serialized before t0codec exception; no inventedreconstruction. Failure/binding/emptyjournal preserved, incompleteprobe was rerun innewdirectory."
   ],
   "recommended_next": {
     "task": "Finish398preflight under separatelyapprovedbudget;no scientificseries yet",
@@ -4964,5 +4966,12 @@
   "historical_results_modified": false,
   "production_source_modified": false,
   "candidates_modified": false,
-  "final_cli_admission_hardening": "Blockedplan/workerguard/frozenenvironment-source requirements added afterlastcontrolledprobe; localend-to-end NOTRUN, mandatoryCI testsseparate. No admitted399plan."
+  "final_cli_admission_hardening": "Blockedplan/workerguard/frozenenvironment-source requirements added afterlastcontrolledprobe; localend-to-end NOTRUN, mandatoryCI testsseparate. No admitted399plan.",
+  "first_CI_failure": {
+    "run": 42315531908,
+    "job": 128227074929,
+    "log_SHA256": "ddcdf23574160ee14103e41cdabeb277320e59a1812dae8d961177c4e9a3e9af",
+    "cause": "Cross-host unitfixturepath only",
+    "scientific_recomputation": false
+  }
 }
