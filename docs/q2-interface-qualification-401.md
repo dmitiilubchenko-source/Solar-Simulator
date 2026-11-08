@@ -114,10 +114,22 @@ stage files на момент сводки 3012458B.
 непрерывным upper bound. Combined parent+worker memory контролировалась отдельно.
 Редактирование/Git/cloud не выдаются за измеренный scientific CPU; backup учитывается отдельно.
 
-Incremental backup: **CLOUD_UNVERIFIED**. Оригиналы raw/checkpoint/profiles/logs
+Incremental backup: **CLOUD_VERIFIED_SHA256**. Оригиналы raw/checkpoint/profiles/logs
 сохранены; manifests содержат source/cloud locations, размеры, SHA, Git bindings.
 Проверка облака — отдельное скачивание, размер/SHA/parent, а не наличие очереди.
 Точный backup record находится в JSON; приватный контекст в архив не включается.
+
+Архив `Solar-Simulator-stage401-20261108.zip`:940767B, SHA256
+`c3f74ffa847eecc82bcfd2914151a607f3d65a176715bf30efabc6638e9a8b90`.
+Архив и отдельный Git recovery recipe независимо скачаны и проверены по
+размеру/SHA/parent; права owner-only перепроверены. Backup отдельно:6.0625CPU /
+8.098483activewall s. Prepare выполнен только для Solar-Simulator с reviewed
+очередью и чистым опубликованным Git; полное старое дерево не пересканировалось.
+
+При подготовке отчётных bindings был ещё один bookkeeping ValueError: relative
+path сопоставлялся с absolute root. Запуск остановился до guard/worker; исправлено
+формирование root-relative refs, без изменения научных инструментов. CPU этой
+короткой операции не измерен и не включён в computational ledger; лог сохранён.
 
 ## Раздельные решения
 
