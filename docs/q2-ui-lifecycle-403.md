@@ -157,12 +157,11 @@ Relative-vector/angular displacement не переименован в scalar dis
 | DEMONSTRATED_EDUCATIONAL_EFFECTS | FAILdistance_AB;10/11 |
 | RELEASE_READINESS | NO-GO |
 
-Computationalledger до closingtail:55.609375CPU /
-52.281036activewall s. FinalCPU/wall/пики/диск — JSON
-после записиclosingresource receipt. Initial2CPU/5wall allowance не measured;
+Final computationalledger:63.0625CPU /58.7532847activewall s.
+Пики/диск и все phase receipts — JSON после closingaudit. Initial2CPU/5wall allowance не measured;
 50ms sampledmemory/tree и0.25tail allowance не строгие continuousbounds.
 90CPU/180wall caps,early72/144,1GiB/900MiB,32/28MiB не повышались.
-Backup отдельно; сейчас CLOUD_UNVERIFIED, raw originals сохранены.
+Backup отдельно; CLOUD_VERIFIED_SHA256, raw originals сохранены.
 После filteredProject-Archives нужны independentdownload SHA/size/parent;
 приватный контекст туда автоматически не включается.
 Main/tags/LATEST/portable032 и oldcandidates неизменны. После отчёта STOP.
@@ -173,3 +172,12 @@ Final computational ledger: **63.0625chargedCPU /58.7532847activewall s**,
 включая неудачный cancellation probe, continuation и closingaudit.
 6portable negativecontrols PASS/0skip; inventory1372files/1455links PASS.
 Все наблюдённые lifecycleerrors сохранены; PASStools не означает GUIlifecyclePASS.
+
+Incremental backup: ZIP276496B SHA256
+`e09cbb4279781812fce3afcbf5d74acde01c978aaf0553a1e207d742905f7bf4`,
+Drive1biSBdzUJXb7A2W8viDQ3rPoWOIE_5uR9. Git recovery recipe582B SHA256
+`9c779c289142a14fc964e94121255a6f7cca2405550ee56f12e0e4a2307ec218`,
+Drive1TySXO-HkbT1Yg5MssNindUGKvUp3Y0pw. Оба независимо скачаны и проверены
+по SHA/size/parent; owner-only права перепроверены. Backup4.84375CPU /
+7.812667activewall s отдельно; connectorCPU не measured. Filteredqueue только
+Solar-Simulator, старые immutabledependencies reused, без broadrescan.
