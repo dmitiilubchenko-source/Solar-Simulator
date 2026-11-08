@@ -7,6 +7,7 @@ class ControlRow(ttk.Frame):
         super().__init__(parent)
         self.items = []
         self.pending = None
+        self._closing = False
         self.bind("<Configure>", self._schedule)
 
     def add(self, widget):
@@ -16,10 +17,22 @@ class ControlRow(ttk.Frame):
         return widget
 
     def _schedule(self, event=None):
+        if self._closing:return
         if self.pending is None:
             self.pending = self.after_idle(self._layout)
 
+    def destroy(self):
+        if self._closing:return
+        self._closing = True
+        if self.pending is not None and self.pending in self.tk.call('after', 'info'):
+            self.after_cancel(self.pending)
+        self.pending = None
+        super().destroy()
+
     def _layout(self):
+        if self._closing:return
+        if self.pending is not None and self.pending in self.tk.call('after', 'info'):
+            self.after_cancel(self.pending)
         self.pending = None
         width = max(1, self.winfo_width())
         x = y = row_height = 0

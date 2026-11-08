@@ -29,6 +29,7 @@ class Laboratory:
             self.experiment = replace(self.experiment, settings=replace(self.experiment.settings, integrator="dop853"))
         self.pool = ThreadPoolExecutor(max_workers=1,thread_name_prefix="solar-physics")
         self.future = None
+        self._poll_after_id = None
         self.running = False
         self.target_time = None
         self.parent_snapshot = parent_snapshot
@@ -71,7 +72,7 @@ class Laboratory:
         self._build()
         self._set_experiment(self.experiment,parent_snapshot=parent_snapshot)
         self.root.protocol("WM_DELETE_WINDOW",self._request_close)
-        self.root.after(40,self._poll)
+        self._poll_after_id = self.root.after(40,self._poll)
 
     def _button(self,parent,text,command):
         widget = ttk.Button(parent,text=text,command=lambda:self._guard(command))
@@ -453,7 +454,14 @@ class Laboratory:
             self._lock()
             self._update_status()
 
+    def _cancel_poll(self):
+        identifier = self._poll_after_id
+        self._poll_after_id = None
+        if identifier is not None and identifier in self.root.tk.call('after', 'info'):
+            self.root.after_cancel(identifier)
+
     def _poll(self):
+        self._cancel_poll()  # Direct/manual calls replace, rather than duplicate, the timer.
         if self.closed:
             return
         try:
@@ -492,7 +500,7 @@ class Laboratory:
             # Input/submission errors must not terminate the Tk polling loop.
             if not self.closed:
                 self._lock()
-                self.root.after(40,self._poll)
+                self._poll_after_id = self.root.after(40,self._poll)
 
     def _update_status(self,values=None):
         if values is None:
@@ -755,8 +763,35 @@ class Laboratory:
         else:
             self._destroy()
 
+    def _cancel_canvas_callbacks(self):
+        # Embedded TkAgg has no FigureManagerTk.destroy: validate its ownership
+        # contract before any cancellation. Unknown backends leave the window open.
+        widget = self.canvas.get_tk_widget()
+        pending = set(widget.tk.call('after', 'info'))
+        callbacks = []
+        for field, name in (('_idle_draw_id', 'idle_draw'), ('_event_loop_id', 'stop_event_loop')):
+            if not hasattr(self.canvas, field):
+                raise RuntimeError('Неизвестный контракт cleanup встроенного TkAgg')
+            identifier = getattr(self.canvas, field)
+            if identifier is not None and type(identifier) is not str:
+                raise RuntimeError('Неверный afterID встроенного TkAgg')
+            if identifier in pending:
+                script = widget.tk.call('after', 'info', identifier)[0]
+                command = widget.tk.splitlist(script)[0]
+                if (not command.endswith(name)
+                        or command not in (getattr(widget, '_tclCommands', None) or ())):
+                    raise RuntimeError('Callback TkAgg не принадлежит этому canvas')
+            callbacks.append((field, identifier))
+        for field, identifier in callbacks:
+            if identifier in pending:
+                widget.after_cancel(identifier)
+            setattr(self.canvas, field, None)
+
     def _destroy(self):
+        if self.closed:return
         if self.future is not None:raise RuntimeError('Нельзя закрыть окно до завершения пакета')
+        self._cancel_canvas_callbacks()
+        self._cancel_poll()
         self.closed=True
         self.running=False
         self.pool.shutdown(wait=False,cancel_futures=True)
