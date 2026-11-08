@@ -182,7 +182,7 @@ WorkerCPU26.062500s,private sampledpeak
 Cap60CPU/120wall/1GiB/32MiB,early50/100/900MiB/28MiB не повышались.
 50ms polling/tail allowances и несэмплированная начальная подготовка ограничивают
 точность измерения; редактирование/Git/cloudCPU не выданы за measured scientific CPU.
-Backup — отдельный operational ledger. Status **CLOUD_UNVERIFIED**;
+Backup — отдельный operational ledger. Status **CLOUD_VERIFIED_SHA256**;
 сырьё/checkpoints/logs/manifests сохранены, отсутствие DriveFS не является uploadproof.
 Cloud verification требует отдельного скачивания и SHA/size/parent.
 
@@ -213,3 +213,13 @@ Cloud verification требует отдельного скачивания и S
 Проверки завершения:5portable observer regression tests PASS/0skip;
 реестр1363публичных файлов и1455file/line links PASS. Это проверки tools,
 не снятие научных/учебных FAIL. Старые74PASS400 и fixed58/399 не повторялись.
+
+Резервирование завершено: архив569744B SHA256
+`0d4c02b043ea09363ee2547a10b2f2b37f29e72bda8f03098195ce3901b9558c`,
+Drive1CIPr1EwJ-eUVripURRzqLKSfv77THW08. Git recovery recipe582B SHA256
+`413580d0c52f7551c8a95fc7f69619d08a86e54f956a3413b553153598ae9907`.
+Оба файла независимо скачаны; SHA/size/parent/owner-only права проверены.
+Backup отдельно5.15625CPU/9.0268825activewall s; connectorCPU не измерен.
+Prepare использовал только Solar-Simulator reviewedqueue на чистом опубликованном
+Git, без broad rescan. Старые immutable401/399/395 dependencies переиспользованы.
+Все executed tool revisions сохранены и SHA-проверены; оригиналы не изменены.
