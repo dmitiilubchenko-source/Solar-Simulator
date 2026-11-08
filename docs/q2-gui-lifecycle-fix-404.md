@@ -143,10 +143,26 @@ Caps 120 CPU/240 wall/1 GiB/48 MiB и early-stop 96/192/900 MiB/40 MiB не по
 до любой записи production-файлов; он исправлен, отказ и allowance сохранены.
 После production fix проваленных acceptance-попыток не было.
 
-Backup: **CLOUD_UNVERIFIED**, до завершения отдельного upload/readback. Оригиналы
-raw, recovery, логов и manifests сохранены. Очередь только filtered Project-Archives /
-Solar-Simulator; private context/SQLite/secrets/окружения/кеши исключены. Чистые
-опубликованные Git-источники восстанавливаются по точным commit, не дублируются.
+Резервирование завершено: **CLOUD_VERIFIED_SHA256**. Отдельный operational ledger:
+**5.421875 CPU-с / 9.161312 active wall-с**;
+connector CPU не измерен, окно операций transfer/readback 50.908 с
+учтено отдельно. Повторно проверены аккаунт, родитель и owner-only права.
+Filtered Project-Archives/Solar-Simulator содержит:
+
+- Raw ZIP: **397823 байт**, SHA-256
+  `6c896847d55447cde4531cb40986689f57b8347f05926c4d66832fc49e83cef6`.
+- Git recovery recipe для `c66c70ab22efdd9924364f5de2fcd5cd234fe0c2`:
+  **582 байта**, SHA-256
+  `ad75ae5693f75236c315c46c1f1fc87fea28b4eafef715c6ba280c65cc9a692d`.
+
+Обе облачные копии независимо скачаны заново; размер, SHA и parent совпали.
+Архив содержит 82 проверенных raw/служебных файла, manifest и инструкцию восстановления;
+зависимости 403/402/401/399/395 повторно не загружались. Исходники доступны по точным
+опубликованным commit. Private context/SQLite/secrets/окружения/кеши исключены;
+оригиналы не удалялись. Личный контекст сохраняется отдельно в приватном Git.
+При оформлении Markdown был отказ кодировки до записи; явный UTF-8 устранил его.
+Это metadata-операция, исходники и экспериментальные данные не менялись.
+
 
 | Решение | Результат |
 |---|---|
