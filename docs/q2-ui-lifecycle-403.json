@@ -1,0 +1,2702 @@
+{
+  "stage": 403,
+  "date": "2026-11-08",
+  "status": "TRUTHFUL_TEXT_CANDIDATE_GO_LIFECYCLE_DEFECT_CONFIRMED_NOT_FIXED",
+  "verdicts": {
+    "SCIENTIFIC_UI_TEXT": "PASS",
+    "PRESENTATION_SOURCE_DELTA": "PASS_ONE_EXISTING_LITERAL_ONLY",
+    "GUI_LIFECYCLE": "FAIL_CONFIRMED_DANGLING_AFTER_NOT_FIXED",
+    "APPLICATION_D1_NUMERICAL": "HISTORICAL402_PASS11_OF11_FIXED_SCOPE_ONLY",
+    "DEMONSTRATED_EDUCATIONAL_EFFECTS": "HISTORICAL402_FAIL_DISTANCE_AB10M_ONLY10_OF11",
+    "RELEASE_READINESS": "NO-GO"
+  },
+  "original_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+  "new_candidate": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+  "candidate_branch": "codex/candidate-0.3.3-q2-marking-403",
+  "actual_source_fingerprint": "d53f18828b57cb63a7a5c9eab92d4ee1d264fe31b44174ffa00806f5759b06a4",
+  "original_source_fingerprint": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+  "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "plan": {
+    "stage": 403,
+    "status": "SEALED_BEFORE_DIAGNOSTIC_TESTS",
+    "date": "2026-11-08",
+    "dev_start": "2fd44246f62b9b50df7ac2c1b1f182ac110eb913",
+    "original_source": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-interface-400",
+    "original_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+    "original_fingerprint": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+    "new_source": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-marking-403",
+    "new_commit": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+    "interpreter": "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "input_SHA256": {
+      "docs/q2-application-acceptance-402.json": "66c3c832136550d722602d64e042b6b4a6e07645abc82929d60b383ccdd245f9",
+      "docs/q2-interface-qualification-401.json": "cebb4b2aa2c6fe4fa726dbd67bb219c61d756f87843b8e7461d3474400c48348",
+      "docs/q2-scientific-qualification-399.json": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+      "docs/release-scope-391.md": "94b9c1cc1a3dc03abad4a19f192ffde44dc4fbcd7c0fc46cebef3c7ae9edeab6",
+      "scripts/qualification402/plan.json": "f5445ec4f5a5b9da508e660d0f49a46e2c4bd6ef02540d2dea5f82d7a9444fbe",
+      "scripts/qualification402/execute.py": "e9556ca76cae8a999e98097b24e03fc251ffb6f8db8024cf27dc2af8595dbfa3"
+    },
+    "life_state": "existing402 mainPythonGUIcold saved frame100; no new integration",
+    "life_state_SHA256": "8c2e64c2c2430eef0a86fbf0b0b93574168f5dabab975c9d024d78d1bb2a5fa2",
+    "lifecycle_cases": [
+      {
+        "id": "single_no_pump",
+        "mode": "single",
+        "roots": 1
+      },
+      {
+        "id": "fresh_process_reopen",
+        "mode": "single",
+        "roots": 1
+      },
+      {
+        "id": "single_with_pump",
+        "mode": "single-pump",
+        "roots": 1
+      },
+      {
+        "id": "multi_three_roots",
+        "mode": "multi",
+        "roots": 3
+      },
+      {
+        "id": "completed_worker",
+        "mode": "completed-worker",
+        "roots": 1
+      },
+      {
+        "id": "active_close_recovery",
+        "mode": "active-close",
+        "roots": 1
+      },
+      {
+        "id": "only_poll",
+        "mode": "isolate-poll",
+        "roots": 1
+      },
+      {
+        "id": "only_layout",
+        "mode": "isolate-layout",
+        "roots": 1
+      },
+      {
+        "id": "only_idle_draw",
+        "mode": "isolate-idle",
+        "roots": 1
+      },
+      {
+        "id": "cancel_all_control",
+        "mode": "cancel-all",
+        "roots": 1
+      }
+    ],
+    "required_text_tokens": [
+      "Newton total-degree-two M–Q",
+      "A+D1 утверждён владельцем как цель",
+      "0–200 с",
+      "11/11 PASS",
+      "10/11",
+      "distance_AB: 0.244795 м",
+      "10 м — FAIL",
+      "application acceptance демо — NO-GO",
+      "Три исторических FAIL380",
+      "четыре новых коротких FAIL",
+      "Универсальные границы",
+      "не получает допуска402",
+      "Tcl",
+      "«Старт» не ограничен 200 с",
+      "Release0.3.3 — NO-GO"
+    ],
+    "caps": {
+      "cpu_seconds": 90,
+      "wall_seconds": 180,
+      "private_bytes": 1073741824,
+      "disk_bytes": 33554432
+    },
+    "early": {
+      "cpu_seconds": 72,
+      "wall_seconds": 144,
+      "private_bytes": 943718400,
+      "disk_bytes": 29360128
+    },
+    "initial_setup": {
+      "CPU_allowance": 2.0,
+      "active_wall_allowance": 5.0,
+      "measurement": "readonly discovery/Git not sampled; allowance not a strict measured bound"
+    },
+    "forecast": {
+      "CPU_seconds": 64.0,
+      "active_wall_seconds": 110.0,
+      "private_bytes": 681574400,
+      "disk_bytes": 8388608,
+      "parts_CPU": {
+        "initial": 2,
+        "presentation_profile_and_UI": 8,
+        "lifecycle_workers": 30,
+        "supervision_IO": 10,
+        "audit_tests_close": 8,
+        "reserve": 6
+      }
+    },
+    "stop": "Unexpected source/numerical change, any evolution call or resource early threshold =>stop/partial. No74GUI/full401/22jobs402/fullscience/portable. No production lifecycle fix in text candidate.",
+    "interpretation": "A+D1goal approved;fullD1effectFAIL remains. Pending-after provenance must distinguish process-exit masking, single-root retained interpreter, multi-root, isolated callbacks and cancellation control. Controls do not constitute a production fix."
+  },
+  "plan_SHA256": "8148dcec04fab49915235339be300bbcd37a407a9564c901419df2cdbf78fb58",
+  "continuation": {
+    "stage": 403,
+    "kind": "DIAGNOSTIC_CONTINUATION_NOT_NEW_ORBITAL_PROTOCOL",
+    "parent_plan_SHA256": "8148dcec04fab49915235339be300bbcd37a407a9564c901419df2cdbf78fb58",
+    "used_CPU_seconds": 47.609375,
+    "remaining_worker_forecast_CPU": 12,
+    "close_forecast_CPU": 8,
+    "total_forecast_CPU": 67.609375,
+    "early_CPU": 72,
+    "original_limits_unchanged": true,
+    "reused_six_complete": [
+      {
+        "id": "active_close_recovery",
+        "receipt_SHA256": "3c126658c5cc32d70039f724cb400ffa4f06242eaa4ccc5d516df33d39cd2999",
+        "result_SHA256": "6871b24e465e76b178cb42d9fa0cc7248289dec1ea1dc1e8c34ffd37a9f9bf77"
+      },
+      {
+        "id": "completed_worker",
+        "receipt_SHA256": "392cb012d5c993b4c8fbe9e039027417816504a9cb21fff6fe23864d2c3eff47",
+        "result_SHA256": "b287b9d7a657a419b12d3d1701b9cfbd0a05d21c573727c020bdb0e65c5bdb54"
+      },
+      {
+        "id": "fresh_process_reopen",
+        "receipt_SHA256": "33eac25270ee01c4091637609c41c76e73cf13fddc4c28abee498f9c5e185dab",
+        "result_SHA256": "c20916d5e1588eb0b895979b6e9d3b933b467a29f2fb6acec1a32416512f3135"
+      },
+      {
+        "id": "multi_three_roots",
+        "receipt_SHA256": "d10cf17d66a295b392cdc827f087d149da9573c9bebe6bcc83055b25d61367b6",
+        "result_SHA256": "36297a4e1451227d5394c7b495bdfd32446ba7536b496eb4550e3e837529de4f"
+      },
+      {
+        "id": "single_no_pump",
+        "receipt_SHA256": "3c9757b3e57978890e53eda0c095adbc32be0e0450484fee5a257ac5cf1f6e85",
+        "result_SHA256": "a3ce2460ccc9fd86fab20578b9cb84ed20db9accee1438670470857484746cd4"
+      },
+      {
+        "id": "single_with_pump",
+        "receipt_SHA256": "8a0ef28ff7d8a4a52073d5ae3781c138e04472564a8c8f35238cf0ca9693824a",
+        "result_SHA256": "b1198081314b7392c6d31ceaf9c2de642244dcb75e28cc7a0e89067d62647fe9"
+      }
+    ],
+    "failed_case": "only_poll",
+    "failure": "Cross-widget root.after_cancel deleted a child Tclcommand without removing it from child._tclCommands, causing seconddelete on child destroy; test bug, not fixed in production",
+    "new_cases": [
+      {
+        "id": "correct_only_poll",
+        "mode": "isolate-poll",
+        "roots": 1
+      },
+      {
+        "id": "correct_only_layout",
+        "mode": "isolate-layout",
+        "roots": 1
+      },
+      {
+        "id": "correct_only_idle",
+        "mode": "isolate-idle",
+        "roots": 1
+      },
+      {
+        "id": "correct_cancel_all",
+        "mode": "cancel-all",
+        "roots": 1
+      },
+      {
+        "id": "multi_with_events",
+        "mode": "multi-pumped",
+        "roots": 3
+      }
+    ],
+    "process_policy": "Shared Python import only; every probe has separate Tk/Tcl interpreter, queues consumed and logged for isolation. Fresh-process reopen control already completed twice. Additional multi-pumped case corrects original multi probe which never processed events and hence was nondiagnostic.",
+    "no_old_cases_repeated": true
+  },
+  "continuation_SHA256": "cf6f871864e0a5a665907293b056f70c424078a938a9d454f44f4612b74f8ca9",
+  "presentation": {
+    "actual_import": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-marking-403\\src\\solar_simulator\\__init__.py",
+    "candidate_clean": true,
+    "delta": {
+      "all_other_AST_and_bytes_exact": true,
+      "new_SHA256": "6cbe69943556db1c237c59abecf152e061eac5e930e84d7b8d8d8c3690240726",
+      "new_text": "Две динамические Q2 — экспериментальная учебная модель Newton total-degree-two M–Q. Нет Q2–Q2, высших мультиполей, приливов, диссипации и совместных EIH/Q2 эффектов. A+D1 утверждён владельцем как цель только для точного синтетического демо A/B, 0–200 с, замороженных IC, recipes и среды. Этап402: численные бюджеты 11/11 PASS; учебные эффекты 10/11. Изменение скалярного расстояния distance_AB: 0.244795 м вместо 10 м — FAIL. Полная application acceptance демо — NO-GO. Три исторических FAIL380 и четыре новых коротких FAIL строгой сходимости сохранены. Универсальные границы ошибки произвольной траектории не установлены. Загруженная или изменённая система с двумя Q2 не получает допуска402; точность реальных тел не аттестована. Проверка GUI lifecycle: сообщения Tcl ещё не разрешены. Обычный «Старт» не ограничен 200 с; цель задаёт «Рассчитать до t». Release0.3.3 — NO-GO. Подробности: docs/q2-application-acceptance-402.md.",
+      "old_SHA256": "2be1be8bac8a7b25348c838dbca0b02486aa95c311e33dc721bc68fef482116b",
+      "old_text": "Экспериментальная модель двух динамических Q2-фигур: Newton total-degree-two M–Q. Q2–Q2 и высшие мультиполи, приливы, диссипация и совместные EIH/Q2 эффекты не учтены. Три исторических FAIL380 строгой сходимости не устранены: two/Python, two/Rust, three/Python. Универсальная граница ошибки произвольной траектории не установлена; квалификация конкретного короткого демосценария ещё не выполнена. Демо не устанавливает точность реальных небесных тел. Обычный «Старт» не ограничен 200 с; отдельную цель задаёт «Рассчитать до t». A/D1 и выпуск экспериментального режима владельцем не утверждены. Результаты и ограничения: docs/q2-scientific-qualification-399.md.",
+      "status": "PASS_ONE_LITERAL_ONLY"
+    },
+    "dependency_prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+    "evolution_calls": 0,
+    "fingerprint_kind": "actual source, not wheel/portable",
+    "native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "new_actual_source_fingerprint": "d53f18828b57cb63a7a5c9eab92d4ee1d264fe31b44174ffa00806f5759b06a4",
+    "numerical_reports": {
+      "arbitrary_loaded_two": {
+        "angular_momentum": [
+          2920112604520072.0,
+          -6.265137616209816e+17,
+          5.671026484419811e+18
+        ],
+        "backend": "python",
+        "bodies": 2,
+        "center_of_mass": [
+          202.49999999999977,
+          -200.0,
+          50.0
+        ],
+        "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+        "dissipated_energy_joules": 0.0,
+        "dynamic_spin_torque": [
+          0.0,
+          -330582905990.7835,
+          -286984601561.7567
+        ],
+        "dynamic_spin_torques_by_body": [
+          {
+            "body": "Custom",
+            "torque": [
+              0.0,
+              416218199555.30414,
+              -328057963870.53503
+            ]
+          },
+          {
+            "body": "Other",
+            "torque": [
+              0.0,
+              -746801105546.0876,
+              41073362308.77832
+            ]
+          }
+        ],
+        "energy_budget_residual_joules": 0.0,
+        "energy_joules": 93335273565557.38,
+        "epoch_jd_tdb": null,
+        "error_control": "per-body",
+        "events": 0,
+        "figure_orbital_torque": [
+          -0.0,
+          330582905990.7835,
+          286984601561.7567
+        ],
+        "figures": [],
+        "halted": false,
+        "integrator": "dop853",
+        "model_energy_offset_joules": 0.0,
+        "momentum": [
+          24000000000000.0,
+          -11999999999999.875,
+          6000000000000.008
+        ],
+        "orbital_angular_momentum_conserved": false,
+        "orientation_power_watts": 0.0,
+        "orientation_work_joules": 0.0,
+        "origin": null,
+        "physics": "newtonian",
+        "relative_pair": [
+          "Custom",
+          "Other"
+        ],
+        "rotations": [
+          {
+            "angular_momentum": [
+              -4.0585934316258856e+16,
+              -2.317171873231913e+17,
+              5.545808570755985e+17
+            ],
+            "body": "Custom",
+            "figure": {
+              "bounding_radius": 1000.0,
+              "mass": 1000000000000000.0,
+              "moments": [
+                2e+20,
+                2.5e+20,
+                3e+20
+              ]
+            },
+            "momentum_atol": 60241.18192731614,
+            "provenance": "synthetic rigid Q2 validation380:A",
+            "quaternion": [
+              0.9639684818261637,
+              0.148194058982302,
+              -0.09879603932153468,
+              0.19759207864306935
+            ],
+            "quaternion_atol": 1e-13
+          },
+          {
+            "angular_momentum": [
+              4.4106046920778936e+16,
+              1118425702209694.2,
+              6.635062734421343e+16
+            ],
+            "body": "Other",
+            "figure": {
+              "bounding_radius": 900.0,
+              "mass": 200000000000000.0,
+              "moments": [
+                3e+19,
+                4e+19,
+                5e+19
+              ]
+            },
+            "momentum_atol": 7968.061244744546,
+            "provenance": "synthetic rigid Q2 validation380:B",
+            "quaternion": [
+              0.9757238626644188,
+              -0.12398684771443423,
+              0.1735815868002079,
+              0.04959473908577369
+            ],
+            "quaternion_atol": 1e-13
+          }
+        ],
+        "time_seconds": 0.0
+      },
+      "one": {
+        "angular_momentum": [
+          8.225989249943257e+41,
+          2.6066500462603096e+41,
+          3.1313502668856564e+43
+        ],
+        "backend": "python",
+        "bodies": 10,
+        "center_of_mass": [
+          -127616.77270501852,
+          -13954.088507458568,
+          13505.046359703876
+        ],
+        "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH",
+        "dissipated_energy_joules": 0.0,
+        "dynamic_spin_torque": [
+          -1.0938135272317876e+19,
+          -3.0775653952868078e+19,
+          3.702032377730163e+19
+        ],
+        "energy_budget_residual_joules": 0.0,
+        "energy_joules": -1.9806413329290263e+35,
+        "epoch_jd_tdb": 2461321.5,
+        "error_control": "per-body",
+        "events": 0,
+        "figure_orbital_torque": [
+          1.0938135272317876e+19,
+          3.0775653952868078e+19,
+          -3.702032377730163e+19
+        ],
+        "figures": [],
+        "halted": false,
+        "integrator": "dop853",
+        "model_energy_offset_joules": 0.0,
+        "momentum": [
+          -4.037783440570791e+25,
+          -4.131430280713093e+25,
+          -9.291112471375066e+24
+        ],
+        "orbital_angular_momentum_conserved": false,
+        "orientation_power_watts": 0.0,
+        "orientation_work_joules": 0.0,
+        "origin": {
+          "center": "Solar System Barycenter",
+          "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+          "ephemeris": "DE441",
+          "epoch_jd_tdb": 2461321.5,
+          "frame": "Ecliptic J2000",
+          "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+        },
+        "physics": "newtonian",
+        "relative_pair": [
+          "Earth",
+          "Moon"
+        ],
+        "rotations": [
+          {
+            "angular_momentum": [
+              3.419154287723472e+27,
+              5.290449460625025e+27,
+              2.319379971539693e+29
+            ],
+            "body": "Moon",
+            "figure": {
+              "bounding_radius": 1800000.0,
+              "mass": 7.345789248996225e+22,
+              "moments": [
+                8.71174869368716e+34,
+                8.71373927015286e+34,
+                8.71725356622506e+34
+              ]
+            },
+            "momentum_atol": 2.320235203494106e+16,
+            "provenance": "rigid-solid-equivalent; initial-only SHA256=733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+            "quaternion": [
+              0.9797944418457909,
+              -0.012346413269881654,
+              0.005320538150443124,
+              -0.199554778648004
+            ],
+            "quaternion_atol": 1e-13
+          }
+        ],
+        "time_seconds": 0.0
+      },
+      "two": {
+        "angular_momentum": [
+          2920112604520072.0,
+          -6.299987616209816e+17,
+          5.724531484419811e+18
+        ],
+        "backend": "python",
+        "bodies": 2,
+        "center_of_mass": [
+          99.99999999999977,
+          -200.0,
+          50.0
+        ],
+        "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+        "dissipated_energy_joules": 0.0,
+        "dynamic_spin_torque": [
+          0.0,
+          -320521321229.6167,
+          -278249969971.8105
+        ],
+        "dynamic_spin_torques_by_body": [
+          {
+            "body": "A",
+            "torque": [
+              0.0,
+              403550228471.2738,
+              -318073227968.45776
+            ]
+          },
+          {
+            "body": "B",
+            "torque": [
+              0.0,
+              -724071549700.8905,
+              39823257996.64728
+            ]
+          }
+        ],
+        "energy_budget_residual_joules": 0.0,
+        "energy_joules": 104883731775639.62,
+        "epoch_jd_tdb": null,
+        "error_control": "per-body",
+        "events": 0,
+        "figure_orbital_torque": [
+          -0.0,
+          320521321229.6167,
+          278249969971.8105
+        ],
+        "figures": [],
+        "halted": false,
+        "integrator": "dop853",
+        "model_energy_offset_joules": 0.0,
+        "momentum": [
+          24000000000000.0,
+          -11999999999999.875,
+          6000000000000.008
+        ],
+        "orbital_angular_momentum_conserved": false,
+        "orientation_power_watts": 0.0,
+        "orientation_work_joules": 0.0,
+        "origin": null,
+        "physics": "newtonian",
+        "relative_pair": [
+          "A",
+          "B"
+        ],
+        "rotations": [
+          {
+            "angular_momentum": [
+              -4.0585934316258856e+16,
+              -2.317171873231913e+17,
+              5.545808570755985e+17
+            ],
+            "body": "A",
+            "figure": {
+              "bounding_radius": 1000.0,
+              "mass": 1000000000000000.0,
+              "moments": [
+                2e+20,
+                2.5e+20,
+                3e+20
+              ]
+            },
+            "momentum_atol": 60241.18192731614,
+            "provenance": "synthetic rigid Q2 validation380:A",
+            "quaternion": [
+              0.9639684818261637,
+              0.148194058982302,
+              -0.09879603932153468,
+              0.19759207864306935
+            ],
+            "quaternion_atol": 1e-13
+          },
+          {
+            "angular_momentum": [
+              4.4106046920778936e+16,
+              1118425702209694.2,
+              6.635062734421343e+16
+            ],
+            "body": "B",
+            "figure": {
+              "bounding_radius": 900.0,
+              "mass": 200000000000000.0,
+              "moments": [
+                3e+19,
+                4e+19,
+                5e+19
+              ]
+            },
+            "momentum_atol": 7968.061244744546,
+            "provenance": "synthetic rigid Q2 validation380:B",
+            "quaternion": [
+              0.9757238626644188,
+              -0.12398684771443423,
+              0.1735815868002079,
+              0.04959473908577369
+            ],
+            "quaternion_atol": 1e-13
+          }
+        ],
+        "time_seconds": 0.0
+      },
+      "zero": {
+        "angular_momentum": [
+          0.0,
+          0.0,
+          2.661105278993906e+40
+        ],
+        "backend": "python",
+        "bodies": 2,
+        "center_of_mass": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "conservation_scope": "Newtonian energy, momentum and angular momentum",
+        "dissipated_energy_joules": 0.0,
+        "dynamic_spin_torque": null,
+        "energy_budget_residual_joules": 0.0,
+        "energy_joules": -2.6491725992765086e+33,
+        "epoch_jd_tdb": null,
+        "error_control": "per-body",
+        "events": 0,
+        "figure_orbital_torque": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "figures": [],
+        "halted": false,
+        "integrator": "dop853",
+        "model_energy_offset_joules": 0.0,
+        "momentum": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "orbital_angular_momentum_conserved": true,
+        "orientation_power_watts": 0.0,
+        "orientation_work_joules": 0.0,
+        "origin": null,
+        "physics": "newtonian",
+        "relative_pair": null,
+        "rotations": [],
+        "time_seconds": 0.0
+      }
+    },
+    "original_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+    "original_fingerprint": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+    "scope": "Exact computation/callback/storage/native identity; historical399/401/402 applicability only in original fixed scope, no automatic source-bound gate transfer",
+    "source_commit": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+    "status": "PASS_TEXT_AND_NON_EVOLVING_UI",
+    "variants": [
+      {
+        "automatic_certification": false,
+        "figures": 0,
+        "name": "zero",
+        "numerical_diagnostics_unchanged": true,
+        "q_S_settings_unchanged": true,
+        "warning_present": false
+      },
+      {
+        "automatic_certification": false,
+        "figures": 1,
+        "name": "one",
+        "numerical_diagnostics_unchanged": true,
+        "q_S_settings_unchanged": true,
+        "warning_present": false
+      },
+      {
+        "automatic_certification": false,
+        "figures": 2,
+        "name": "two",
+        "numerical_diagnostics_unchanged": true,
+        "q_S_settings_unchanged": true,
+        "warning_present": true
+      },
+      {
+        "automatic_certification": false,
+        "figures": 2,
+        "name": "arbitrary_loaded_two",
+        "numerical_diagnostics_unchanged": true,
+        "q_S_settings_unchanged": true,
+        "warning_present": true
+      }
+    ]
+  },
+  "full_presentation_SHA256": "5998737ccd4eae91bac1243ca4e7d57dd787e6ecea03d127f506d629789bec4a",
+  "independent_audit": {
+    "status": "PASS_READ_ONLY_PROVENANCE_AUDIT_NOT_GUI_LIFECYCLE_PASS",
+    "cases": [
+      {
+        "id": "active_close_recovery",
+        "case": {
+          "id": "active_close_recovery",
+          "mode": "active-close",
+          "roots": 1
+        },
+        "background_error_count": 1,
+        "callbacks": [
+          "FigureCanvasTk.draw_idle.<locals>.idle_draw"
+        ],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 1,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          1
+        ],
+        "result_SHA256": "6871b24e465e76b178cb42d9fa0cc7248289dec1ea1dc1e8c34ffd37a9f9bf77",
+        "complete_SHA256": "3c126658c5cc32d70039f724cb400ffa4f06242eaa4ccc5d516df33d39cd2999"
+      },
+      {
+        "id": "completed_worker",
+        "case": {
+          "id": "completed_worker",
+          "mode": "completed-worker",
+          "roots": 1
+        },
+        "background_error_count": 2,
+        "callbacks": [
+          "FigureCanvasTk.draw_idle.<locals>.idle_draw",
+          "Laboratory._poll"
+        ],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 1,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          2
+        ],
+        "result_SHA256": "b287b9d7a657a419b12d3d1701b9cfbd0a05d21c573727c020bdb0e65c5bdb54",
+        "complete_SHA256": "392cb012d5c993b4c8fbe9e039027417816504a9cb21fff6fe23864d2c3eff47"
+      },
+      {
+        "id": "correct_cancel_all",
+        "case": {
+          "id": "correct_cancel_all",
+          "mode": "cancel-all",
+          "roots": 1
+        },
+        "background_error_count": 0,
+        "callbacks": [],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          0
+        ],
+        "result_SHA256": "4ee36f29f1ca8fe0a9fad8a4cb0d35181b2a12b12a3ff05a80ffd30bfb6161e3",
+        "complete_SHA256": "fd5f082083424a11812b99b1cf73b3b2b7750d8e8f860f57ca02e670b116e53d"
+      },
+      {
+        "id": "correct_only_idle",
+        "case": {
+          "id": "correct_only_idle",
+          "mode": "isolate-idle",
+          "roots": 1
+        },
+        "background_error_count": 1,
+        "callbacks": [
+          "FigureCanvasTk.draw_idle.<locals>.idle_draw"
+        ],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          1
+        ],
+        "result_SHA256": "ffe7236cfa8df1666b66031ca7e7dcc8d835fa6d0a08529b738ae63d697093db",
+        "complete_SHA256": "9438f78d87cd09bb4a008ed51f04135960246b702d3319a6abbf0a72c478198d"
+      },
+      {
+        "id": "correct_only_layout",
+        "case": {
+          "id": "correct_only_layout",
+          "mode": "isolate-layout",
+          "roots": 1
+        },
+        "background_error_count": 8,
+        "callbacks": [
+          "ControlRow._layout"
+        ],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          8
+        ],
+        "result_SHA256": "6e1385b6cc2a200e98890ab861b00baf226ed094552f30981b53694f365b1477",
+        "complete_SHA256": "f708061d289635f9f868476cc7636a07f778077d0159f97958d82c0acc0ae9d8"
+      },
+      {
+        "id": "correct_only_poll",
+        "case": {
+          "id": "correct_only_poll",
+          "mode": "isolate-poll",
+          "roots": 1
+        },
+        "background_error_count": 1,
+        "callbacks": [
+          "Laboratory._poll"
+        ],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          1
+        ],
+        "result_SHA256": "093c3c48f8cd385a9b9c3fdc37888e8fc204361a7f724bd298f4e1bc07fa4c88",
+        "complete_SHA256": "76f6df3cdad6669e8fb9ebbbd889ab84e2a37a9d19e18e776faa557d4dda34b5"
+      },
+      {
+        "id": "fresh_process_reopen",
+        "case": {
+          "id": "fresh_process_reopen",
+          "mode": "single",
+          "roots": 1
+        },
+        "background_error_count": 0,
+        "callbacks": [],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          10
+        ],
+        "result_SHA256": "c20916d5e1588eb0b895979b6e9d3b933b467a29f2fb6acec1a32416512f3135",
+        "complete_SHA256": "33eac25270ee01c4091637609c41c76e73cf13fddc4c28abee498f9c5e185dab"
+      },
+      {
+        "id": "multi_three_roots",
+        "case": {
+          "id": "multi_three_roots",
+          "mode": "multi",
+          "roots": 3
+        },
+        "background_error_count": 0,
+        "callbacks": [],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          10,
+          10,
+          10
+        ],
+        "result_SHA256": "36297a4e1451227d5394c7b495bdfd32446ba7536b496eb4550e3e837529de4f",
+        "complete_SHA256": "d10cf17d66a295b392cdc827f087d149da9573c9bebe6bcc83055b25d61367b6"
+      },
+      {
+        "id": "multi_with_events",
+        "case": {
+          "id": "multi_with_events",
+          "mode": "multi-pumped",
+          "roots": 3
+        },
+        "background_error_count": 3,
+        "callbacks": [
+          "Laboratory._poll"
+        ],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          1,
+          1,
+          1
+        ],
+        "result_SHA256": "a8a2b56c20679c8324a0a3baf7892f1ca2cfe16f7c58452faf1d8f2a9b0fb852",
+        "complete_SHA256": "657b17d836a7eedd03f8936af5426a69ecda728d591a047335823106942d346c"
+      },
+      {
+        "id": "single_no_pump",
+        "case": {
+          "id": "single_no_pump",
+          "mode": "single",
+          "roots": 1
+        },
+        "background_error_count": 0,
+        "callbacks": [],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          10
+        ],
+        "result_SHA256": "a3ce2460ccc9fd86fab20578b9cb84ed20db9accee1438670470857484746cd4",
+        "complete_SHA256": "3c9757b3e57978890e53eda0c095adbc32be0e0450484fee5a257ac5cf1f6e85"
+      },
+      {
+        "id": "single_with_pump",
+        "case": {
+          "id": "single_with_pump",
+          "mode": "single-pump",
+          "roots": 1
+        },
+        "background_error_count": 10,
+        "callbacks": [
+          "ControlRow._layout",
+          "FigureCanvasTk.draw_idle.<locals>.idle_draw",
+          "Laboratory._poll"
+        ],
+        "evolution_calls": 0,
+        "synthetic_worker_calls": 0,
+        "state_save_recovery_unchanged": true,
+        "pending_after_destroy": [
+          10
+        ],
+        "result_SHA256": "b1198081314b7392c6d31ceaf9c2de642244dcb75e28cc7a0e89067d62647fe9",
+        "complete_SHA256": "8a0ef28ff7d8a4a52073d5ae3781c138e04472564a8c8f35238cf0ca9693824a"
+      }
+    ],
+    "warning_provenance": [
+      {
+        "case": "active_close_recovery",
+        "command": "4053140734528idle_draw",
+        "after_id": "after#12",
+        "callback": "FigureCanvasTk.draw_idle.<locals>.idle_draw",
+        "widget": ".!canvas",
+        "registration_elapsed": 0.5021094999974594,
+        "error_elapsed": 0.5725289999973029,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 78
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "mainloop",
+            "line": 1613
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "__call__",
+            "line": 2088
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "callit",
+            "line": 876
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_poll",
+            "line": 479
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_draw",
+            "line": 569
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\matplotlib\\backends\\_backend_tk.py",
+            "function": "draw_idle",
+            "line": 316
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"4053140734528idle_draw\"\n    while executing\n\"4053140734528idle_draw\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "completed_worker",
+        "command": "3737479119552_poll",
+        "after_id": "after#14",
+        "callback": "Laboratory._poll",
+        "widget": ".",
+        "registration_elapsed": 0.4577491999953054,
+        "error_elapsed": 0.5267936000018381,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 78
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "mainloop",
+            "line": 1613
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "__call__",
+            "line": 2088
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "callit",
+            "line": 876
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_poll",
+            "line": 495
+          }
+        ],
+        "errorInfo": "invalid command name \"3737479119552_poll\"\n    while executing\n\"3737479119552_poll\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "completed_worker",
+        "command": "3737542375360idle_draw",
+        "after_id": "after#13",
+        "callback": "FigureCanvasTk.draw_idle.<locals>.idle_draw",
+        "widget": ".!canvas",
+        "registration_elapsed": 0.4567547999904491,
+        "error_elapsed": 0.5268098999804351,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 78
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "mainloop",
+            "line": 1613
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "__call__",
+            "line": 2088
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "callit",
+            "line": 876
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_poll",
+            "line": 479
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_draw",
+            "line": 569
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\matplotlib\\backends\\_backend_tk.py",
+            "function": "draw_idle",
+            "line": 316
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3737542375360idle_draw\"\n    while executing\n\"3737542375360idle_draw\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_idle",
+        "command": "3755346655168idle_draw",
+        "after_id": "after#28",
+        "callback": "FigureCanvasTk.draw_idle.<locals>.idle_draw",
+        "widget": ".!canvas",
+        "registration_elapsed": 0.16284689999883994,
+        "error_elapsed": 0.23461020001559518,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 72
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_set_experiment",
+            "line": 367
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_draw",
+            "line": 569
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\matplotlib\\backends\\_backend_tk.py",
+            "function": "draw_idle",
+            "line": 316
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755346655168idle_draw\"\n    while executing\n\"3755346655168idle_draw\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345875008_layout",
+        "after_id": "after#10",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow",
+        "registration_elapsed": 0.0643096000130754,
+        "error_elapsed": 0.25223600000026636,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 103
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345875008_layout\"\n    while executing\n\"3755345875008_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345481856_layout",
+        "after_id": "after#11",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow2",
+        "registration_elapsed": 0.07150280001224019,
+        "error_elapsed": 0.252244300005259,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 114
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_button",
+            "line": 78
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345481856_layout\"\n    while executing\n\"3755345481856_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345486080_layout",
+        "after_id": "after#12",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow",
+        "registration_elapsed": 0.07777329999953508,
+        "error_elapsed": 0.25224790000356734,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 125
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345486080_layout\"\n    while executing\n\"3755345486080_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345490368_layout",
+        "after_id": "after#13",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow2",
+        "registration_elapsed": 0.0839453000226058,
+        "error_elapsed": 0.252250500023365,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 131
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345490368_layout\"\n    while executing\n\"3755345490368_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345494208_layout",
+        "after_id": "after#14",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow3",
+        "registration_elapsed": 0.09026710002217442,
+        "error_elapsed": 0.2522532000148203,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 136
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345494208_layout\"\n    while executing\n\"3755345494208_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345496576_layout",
+        "after_id": "after#15",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow4",
+        "registration_elapsed": 0.0925967000075616,
+        "error_elapsed": 0.2522561000077985,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 139
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345496576_layout\"\n    while executing\n\"3755345496576_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345500160_layout",
+        "after_id": "after#16",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow3",
+        "registration_elapsed": 0.09759670001221821,
+        "error_elapsed": 0.25225950000458397,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 145
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_button",
+            "line": 78
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345500160_layout\"\n    while executing\n\"3755345500160_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_layout",
+        "command": "3755345505344_layout",
+        "after_id": "after#17",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow4",
+        "registration_elapsed": 0.1048826000187546,
+        "error_elapsed": 0.2522633000044152,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 157
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_entry",
+            "line": 83
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345505344_layout\"\n    while executing\n\"3755345505344_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "correct_only_poll",
+        "command": "3755345476032_poll",
+        "after_id": "after#9",
+        "callback": "Laboratory._poll",
+        "widget": ".",
+        "registration_elapsed": 0.22168720001354814,
+        "error_elapsed": 0.2837149999977555,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 74
+          }
+        ],
+        "errorInfo": "invalid command name \"3755345476032_poll\"\n    while executing\n\"3755345476032_poll\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "multi_with_events",
+        "command": "3755352756480_poll",
+        "after_id": "after#49",
+        "callback": "Laboratory._poll",
+        "widget": ".",
+        "registration_elapsed": 0.20086929999524727,
+        "error_elapsed": 0.8808066000055987,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 74
+          }
+        ],
+        "errorInfo": "invalid command name \"3755352756480_poll\"\n    while executing\n\"3755352756480_poll\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "multi_with_events",
+        "command": "3755365215680_poll",
+        "after_id": "after#61",
+        "callback": "Laboratory._poll",
+        "widget": ".",
+        "registration_elapsed": 0.7223316000017803,
+        "error_elapsed": 1.306194000004325,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 74
+          }
+        ],
+        "errorInfo": "invalid command name \"3755365215680_poll\"\n    while executing\n\"3755365215680_poll\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "multi_with_events",
+        "command": "3755360493184_poll",
+        "after_id": "after#73",
+        "callback": "Laboratory._poll",
+        "widget": ".",
+        "registration_elapsed": 1.1742830000002868,
+        "error_elapsed": 1.4367531000170857,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 107
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 54
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 74
+          }
+        ],
+        "errorInfo": "invalid command name \"3755360493184_poll\"\n    while executing\n\"3755360493184_poll\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408193617856_poll",
+        "after_id": "after#9",
+        "callback": "Laboratory._poll",
+        "widget": ".",
+        "registration_elapsed": 0.26250479998998344,
+        "error_elapsed": 0.3265899999823887,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 74
+          }
+        ],
+        "errorInfo": "invalid command name \"3408193617856_poll\"\n    while executing\n\"3408193617856_poll\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408172012352_layout",
+        "after_id": "after#0",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow",
+        "registration_elapsed": 0.10274030000437051,
+        "error_elapsed": 0.32660679999389686,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 103
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408172012352_layout\"\n    while executing\n\"3408172012352_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408198700352_layout",
+        "after_id": "after#1",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow2",
+        "registration_elapsed": 0.11284600000362843,
+        "error_elapsed": 0.3266155000019353,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 114
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_button",
+            "line": 78
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408198700352_layout\"\n    while executing\n\"3408198700352_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408198726336_layout",
+        "after_id": "after#2",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow",
+        "registration_elapsed": 0.12024980000569485,
+        "error_elapsed": 0.32662179999169894,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 125
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408198726336_layout\"\n    while executing\n\"3408198726336_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408198730240_layout",
+        "after_id": "after#3",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow2",
+        "registration_elapsed": 0.12781380000524223,
+        "error_elapsed": 0.32662780000828207,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 131
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408198730240_layout\"\n    while executing\n\"3408198730240_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408198734080_layout",
+        "after_id": "after#4",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow3",
+        "registration_elapsed": 0.13346049998654053,
+        "error_elapsed": 0.326633499993477,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 136
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408198734080_layout\"\n    while executing\n\"3408198734080_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408198736448_layout",
+        "after_id": "after#5",
+        "callback": "ControlRow._layout",
+        "widget": ".!frame.!controlrow4",
+        "registration_elapsed": 0.13685360000818036,
+        "error_elapsed": 0.32663870000396855,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 139
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_combo",
+            "line": 91
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408198736448_layout\"\n    while executing\n\"3408198736448_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408198740032_layout",
+        "after_id": "after#6",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow3",
+        "registration_elapsed": 0.1425357999978587,
+        "error_elapsed": 0.3266435999830719,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 145
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_button",
+            "line": 78
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408198740032_layout\"\n    while executing\n\"3408198740032_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408198744704_layout",
+        "after_id": "after#7",
+        "callback": "ControlRow._layout",
+        "widget": ".!controlrow4",
+        "registration_elapsed": 0.152327099989634,
+        "error_elapsed": 0.326648699992802,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 71
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_build",
+            "line": 157
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_entry",
+            "line": 83
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "add",
+            "line": 15
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\control_row.py",
+            "function": "_schedule",
+            "line": 20
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408198744704_layout\"\n    while executing\n\"3408198744704_layout\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      },
+      {
+        "case": "single_with_pump",
+        "command": "3408193608896idle_draw",
+        "after_id": "after#8",
+        "callback": "FigureCanvasTk.draw_idle.<locals>.idle_draw",
+        "widget": ".!canvas",
+        "registration_elapsed": 0.2609922999981791,
+        "error_elapsed": 0.3266538000025321,
+        "registration_stack": [
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "<module>",
+            "line": 96
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\lifecycle.py",
+            "function": "main",
+            "line": 51
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "__init__",
+            "line": 72
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_set_experiment",
+            "line": 367
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\app.py",
+            "function": "_draw",
+            "line": 569
+          },
+          {
+            "file": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\matplotlib\\backends\\_backend_tk.py",
+            "function": "draw_idle",
+            "line": 316
+          },
+          {
+            "file": "C:\\Program Files\\Python314\\Lib\\tkinter\\__init__.py",
+            "function": "after_idle",
+            "line": 896
+          }
+        ],
+        "errorInfo": "invalid command name \"3408193608896idle_draw\"\n    while executing\n\"3408193608896idle_draw\"\n    (\"after\" script)",
+        "queued_after_destroy": true,
+        "command_deleted_on_destroy": true
+      }
+    ],
+    "historical402_names": [
+      "2879478175680_poll",
+      "2879478030912_layout",
+      "2879478021120_layout",
+      "2879478037952_layout",
+      "2879478037632_layout",
+      "2879478182016idle_draw",
+      "2879442919552_poll",
+      "2879442796224_layout",
+      "2879442802560_layout",
+      "2879442800192_layout",
+      "2879442811264_layout",
+      "2879442912896idle_draw"
+    ],
+    "historical402_log_SHA256": "b0de762b2ad0ac79c0a94d740952886b6b322acdf6b9808361a8d38381944d41",
+    "historical402_timestamp_status": "NOT_RECORDED_DO_NOT_INVENT",
+    "root_cause": "Production destroy deletes Python Tclcommands while after IDs remain queued. Retained single-root interpreter and causal group isolation reproduce missing-command errors; correct owner cancellation removes them. Standalone process exit masks them. Not solely a multi-root harness issue.",
+    "harness_error": "Cross-widget root.after_cancel removed Tclcommand but left child Python ownership list, leading to duplicate delete. Corrected ONLY in diagnostics.",
+    "production_fix_applied": false,
+    "all_state_save_recovery_checks": true,
+    "completed_cases_repeated": 0,
+    "failed_probe_retained": "only_poll v1",
+    "nondiagnostic_original_probe": "multi_three_roots did not process events; zero errors is not a lifecycle PASS",
+    "raw_hashes": {
+      "active_close_recovery": {
+        "result": "6871b24e465e76b178cb42d9fa0cc7248289dec1ea1dc1e8c34ffd37a9f9bf77",
+        "complete": "3c126658c5cc32d70039f724cb400ffa4f06242eaa4ccc5d516df33d39cd2999"
+      },
+      "completed_worker": {
+        "result": "b287b9d7a657a419b12d3d1701b9cfbd0a05d21c573727c020bdb0e65c5bdb54",
+        "complete": "392cb012d5c993b4c8fbe9e039027417816504a9cb21fff6fe23864d2c3eff47"
+      },
+      "correct_cancel_all": {
+        "result": "4ee36f29f1ca8fe0a9fad8a4cb0d35181b2a12b12a3ff05a80ffd30bfb6161e3",
+        "complete": "fd5f082083424a11812b99b1cf73b3b2b7750d8e8f860f57ca02e670b116e53d"
+      },
+      "correct_only_idle": {
+        "result": "ffe7236cfa8df1666b66031ca7e7dcc8d835fa6d0a08529b738ae63d697093db",
+        "complete": "9438f78d87cd09bb4a008ed51f04135960246b702d3319a6abbf0a72c478198d"
+      },
+      "correct_only_layout": {
+        "result": "6e1385b6cc2a200e98890ab861b00baf226ed094552f30981b53694f365b1477",
+        "complete": "f708061d289635f9f868476cc7636a07f778077d0159f97958d82c0acc0ae9d8"
+      },
+      "correct_only_poll": {
+        "result": "093c3c48f8cd385a9b9c3fdc37888e8fc204361a7f724bd298f4e1bc07fa4c88",
+        "complete": "76f6df3cdad6669e8fb9ebbbd889ab84e2a37a9d19e18e776faa557d4dda34b5"
+      },
+      "fresh_process_reopen": {
+        "result": "c20916d5e1588eb0b895979b6e9d3b933b467a29f2fb6acec1a32416512f3135",
+        "complete": "33eac25270ee01c4091637609c41c76e73cf13fddc4c28abee498f9c5e185dab"
+      },
+      "multi_three_roots": {
+        "result": "36297a4e1451227d5394c7b495bdfd32446ba7536b496eb4550e3e837529de4f",
+        "complete": "d10cf17d66a295b392cdc827f087d149da9573c9bebe6bcc83055b25d61367b6"
+      },
+      "multi_with_events": {
+        "result": "a8a2b56c20679c8324a0a3baf7892f1ca2cfe16f7c58452faf1d8f2a9b0fb852",
+        "complete": "657b17d836a7eedd03f8936af5426a69ecda728d591a047335823106942d346c"
+      },
+      "single_no_pump": {
+        "result": "a3ce2460ccc9fd86fab20578b9cb84ed20db9accee1438670470857484746cd4",
+        "complete": "3c9757b3e57978890e53eda0c095adbc32be0e0450484fee5a257ac5cf1f6e85"
+      },
+      "single_with_pump": {
+        "result": "b1198081314b7392c6d31ceaf9c2de642244dcb75e28cc7a0e89067d62647fe9",
+        "complete": "8a0ef28ff7d8a4a52073d5ae3781c138e04472564a8c8f35238cf0ca9693824a"
+      }
+    },
+    "limitations": [
+      "Standalone defaultprocess exit did not show errors; actual user-visible impact in long-lived hosts depends on continued event processing.",
+      "Probe error/registration clocks are relative; destroy ordering is recorded by queue snapshots, no separate wall timestamp.",
+      "The final pump in multi_with_events consumes lastroot callbacks too, unlike402 process exit. Counts are state/queue dependent, not expected to equal12.",
+      "Worker was a real executor/poll but returned saved402state; no active scientific solver interruption was tested."
+    ]
+  },
+  "resources": {
+    "charged_CPU_seconds": 63.0625,
+    "active_wall_seconds": 58.753284700011136,
+    "peak_worker_private_sampled": 247025664,
+    "stage_bytes": 971367,
+    "phases": {
+      "close-resources.json": {
+        "charged_CPU_seconds": 7.453125,
+        "charged_active_wall_seconds": 6.472248700010823,
+        "record": {
+          "complete": true,
+          "disk_bytes": 967344,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 967344,
+            "elapsed": 6.1485324000241235,
+            "parent_cpu": 1.953125,
+            "private_tree": 901120,
+            "rss_tree": 4227072,
+            "worker_cpu": 4.859375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 1.96875,
+          "peak_private_tree_sampled": 108175360,
+          "peak_rss_tree_sampled": 91979776,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794163245.6629896,
+              "pid": 25552,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 1.921875,
+              "creation_time": 1794163245.671692,
+              "pid": 3620,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794163245.9087937,
+              "pid": 19964,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794163245.920126,
+              "pid": 17508,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794163245.99026,
+              "pid": 26016,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794163246.0823176,
+              "pid": 20872,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 1.078125,
+              "creation_time": 1794163246.0888069,
+              "pid": 492,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794163247.4406567,
+              "pid": 24632,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 2.0,
+              "creation_time": 1794163247.4481847,
+              "pid": 31188,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 78,
+          "wall_seconds": 6.21906050000689,
+          "worker_CPU_seconds": 5.046875
+        },
+        "tail_CPU_allowance": 0.25,
+        "tail_wall_allowance": 0.25,
+        "total_CPU_seconds": 63.0625,
+        "total_active_wall_seconds": 58.753284700011136
+      },
+      "lifecycle-resources.json": {
+        "charged_CPU_seconds": 34.078125,
+        "charged_active_wall_seconds": 28.775111599999946,
+        "record": {
+          "complete": false,
+          "disk_bytes": 765265,
+          "error": null,
+          "exit_code": 1,
+          "last_sample": {
+            "disk": 765265,
+            "elapsed": 28.457386499998393,
+            "parent_cpu": 7.125,
+            "private_tree": 21610496,
+            "rss_tree": 28856320,
+            "worker_cpu": 26.203125
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 7.125,
+          "peak_private_tree_sampled": 247025664,
+          "peak_rss_tree_sampled": 211693568,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162588.6109116,
+              "pid": 33536,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 0.1875,
+              "creation_time": 1794162588.6181693,
+              "pid": 25028,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162588.7307081,
+              "pid": 10892,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.703125,
+              "creation_time": 1794162588.7383099,
+              "pid": 5580,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162592.7548168,
+              "pid": 17312,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.75,
+              "creation_time": 1794162592.7616131,
+              "pid": 22420,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.046875,
+              "creation_time": 1794162596.131785,
+              "pid": 31432,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162596.1441813,
+              "pid": 17004,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162596.6773896,
+              "pid": 15760,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.59375,
+              "creation_time": 1794162596.6851485,
+              "pid": 18996,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162600.62299,
+              "pid": 16900,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 4.078125,
+              "creation_time": 1794162600.631137,
+              "pid": 9380,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162603.9925935,
+              "pid": 31988,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162604.003009,
+              "pid": 20300,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162605.0487654,
+              "pid": 24248,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.671875,
+              "creation_time": 1794162605.056779,
+              "pid": 21060,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162609.1314306,
+              "pid": 31884,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.796875,
+              "creation_time": 1794162609.1375203,
+              "pid": 8832,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162613.2905695,
+              "pid": 26160,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.609375,
+              "creation_time": 1794162613.2967944,
+              "pid": 31148,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162616.5869963,
+              "pid": 25916,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162616.5982592,
+              "pid": 33548,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 417,
+          "wall_seconds": 28.521886300004553,
+          "worker_CPU_seconds": 26.5625
+        },
+        "tail_CPU_allowance": 0.25,
+        "tail_wall_allowance": 0.25,
+        "total_CPU_seconds": 47.609375,
+        "total_active_wall_seconds": 45.22243470000103
+      },
+      "presentation-resources.json": {
+        "charged_CPU_seconds": 11.53125,
+        "charged_active_wall_seconds": 11.447323100001086,
+        "record": {
+          "complete": true,
+          "disk_bytes": 618360,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 618360,
+            "elapsed": 11.138005600019824,
+            "parent_cpu": 1.984375,
+            "private_tree": 884736,
+            "rss_tree": 4186112,
+            "worker_cpu": 8.90625
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 2.0,
+          "peak_private_tree_sampled": 203390976,
+          "peak_rss_tree_sampled": 160980992,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162530.1553192,
+              "pid": 19228,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 8.859375,
+              "creation_time": 1794162530.1638703,
+              "pid": 17020,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162530.451349,
+              "pid": 6348,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162530.463899,
+              "pid": 32492,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162530.4971871,
+              "pid": 31864,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794162530.5108917,
+              "pid": 17116,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162530.5540638,
+              "pid": 25284,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794162530.565215,
+              "pid": 28036,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162530.644468,
+              "pid": 10896,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162530.6963425,
+              "pid": 21760,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794162530.7076285,
+              "pid": 12396,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162530.744752,
+              "pid": 29268,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794162530.755948,
+              "pid": 25272,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 181,
+          "wall_seconds": 11.193127900012769,
+          "worker_CPU_seconds": 9.078125
+        },
+        "tail_CPU_allowance": 0.25,
+        "tail_wall_allowance": 0.25,
+        "total_CPU_seconds": 13.53125,
+        "total_active_wall_seconds": 16.447323100001086
+      },
+      "remaining-resources.json": {
+        "charged_CPU_seconds": 8.0,
+        "charged_active_wall_seconds": 7.058601299999282,
+        "record": {
+          "complete": true,
+          "disk_bytes": 889337,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 889337,
+            "elapsed": 6.7203463000187185,
+            "parent_cpu": 2.0,
+            "private_tree": 179273728,
+            "rss_tree": 177872896,
+            "worker_cpu": 5.484375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 2.015625,
+          "peak_private_tree_sampled": 187994112,
+          "peak_rss_tree_sampled": 183365632,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162804.0020845,
+              "pid": 32368,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 5.484375,
+              "creation_time": 1794162804.0097463,
+              "pid": 14612,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794162807.9351735,
+              "pid": 28548,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162808.3005002,
+              "pid": 33728,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162808.646629,
+              "pid": 24276,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794162808.6584861,
+              "pid": 31748,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 92,
+          "wall_seconds": 6.785770399990724,
+          "worker_CPU_seconds": 5.53125
+        },
+        "tail_CPU_allowance": 0.25,
+        "tail_wall_allowance": 0.25,
+        "total_CPU_seconds": 55.609375,
+        "total_active_wall_seconds": 52.28103600000031
+      },
+      "initial-setup-ledger.json": {
+        "charged_CPU_seconds": 2.0,
+        "charged_active_wall_seconds": 5.0,
+        "measured": false,
+        "scope": "readonly discovery/Git not sampled; allowance not a strict measured bound"
+      }
+    },
+    "limitations": "2CPU/5wall initial allowance not measured;50ms sampled memory/tree/CPU and0.25CPU/wall tailallowances per phase, not continuous strict bounds. Git/edit/connector CPU excluded; backup separate."
+  },
+  "backup": {
+    "status": "CLOUD_UNVERIFIED",
+    "reason": "archive/prepare/upload/readback pending; original outputs retained"
+  },
+  "scientific_evidence": "399/401/402unchanged. Identical computation code proves applicability only in their original fixed scope; receipts/fingerprints not rewritten or automatically accepted by current gates.",
+  "future_policy_A": "Keep originalD1and its10mdistanceDelta: fullD1remainsNO-GO.",
+  "future_policy_B": "Only if separately authorized: prospectively register another educational profile focused on relative-vector/orientation changes, with justified observables/criteria and separate checks.402FAILremains; saved402data is not automatic newprofilePASS.",
+  "next_fix_proposal": {
+    "separate_candidate_required": true,
+    "app_poll": "Track root.after ID, cancel owned pending poll before destroy. Preserve worker completion/recovery order and handle manual_poll tests without duplicate timers.",
+    "control_row": "Cancel pending after_idle using registering ControlRow instance before widget destruction; prevent reschedule during destroy.",
+    "matplotlib": "Embedded canvas idle_draw is owned by canvas; add explicit supported/qualified cleanup before root destruction. FigureManagerTk cleanup is not invoked by this embedding; respect installedbackend version/private API risks.",
+    "regressions": "Separate source-bound GUI lifecycle candidate;0/1/2states,manual/realpoll,stop/closewhileinertworker/savedframes,recovery/save,otherwindows timerownership. No automatic neworbits or physics changes."
+  },
+  "portable_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "6",
+    "time": "0.236",
+    "timestamp": "2026-11-08T21:40:46.948783+03:00",
+    "hostname": "DESKTOP-6DHG18S"
+  }
+}
