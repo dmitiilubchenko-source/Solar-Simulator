@@ -1,0 +1,1300 @@
+{
+  "stage": 400,
+  "date": "2026-11-08",
+  "status": "PARTIAL_RESOURCE_STOP",
+  "presentation_qualification": "NO_GO_INCOMPLETE",
+  "release_readiness": "NO-GO",
+  "owner_A_D1_approved": false,
+  "dev_start_commit": "0658c718320912a4b38a4a2993cfe508a12c801c",
+  "base_commit": "f723a2162b4e115378959e244f428529be2d4516",
+  "candidate_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+  "candidate_branch": "codex/candidate-0.3.3-q2-interface-400",
+  "candidate_remote_SHA_verified": true,
+  "source_changes": [
+    {
+      "path": "src/solar_simulator/app.py",
+      "old_SHA256": "fa74ec7809fdc2442b6b6ad9de63d4e61e358e0ad67883432cecba8deb3b62fe",
+      "new_SHA256": "d794a547bdf762604d9c1c593a01ec6ceaf558fa9f1c6454877c9942b144fde5"
+    },
+    {
+      "path": "src/solar_simulator/inspection.py",
+      "old_SHA256": "aacbd64c7c33d0555aa3f17b9e1b24e4b11f34ce29056b9766cf73202597238c",
+      "new_SHA256": "2be1be8bac8a7b25348c838dbca0b02486aa95c311e33dc721bc68fef482116b"
+    },
+    {
+      "path": "src/solar_simulator/inspection_view.py",
+      "old_SHA256": "0c75a57abbe31ee6a7656838327aac3f0b62bdd21a4a6517fe572b4a048d23f1",
+      "new_SHA256": "c6b93b98c09edf3fabd20c21e5f8855ab45d88a2e652199cc387b9136925685d"
+    }
+  ],
+  "diff": "diff --git a/src/solar_simulator/app.py b/src/solar_simulator/app.py\nindex 37012f2..29082ac 100644\n--- a/src/solar_simulator/app.py\n+++ b/src/solar_simulator/app.py\n@@ -389,6 +389,9 @@ class Laboratory:\n             from .inspection_view import ROTATION_SCOPE,AXES_DESCRIPTION\n             self.model_info.set(self.model_info.get()+f' Динамических фигур: {len(self.experiment.rotations)}. '\n                 +ROTATION_SCOPE+' '+AXES_DESCRIPTION)\n+            from .inspection import experimental_q2_warning\n+            warning=experimental_q2_warning(self.experiment.rotations)\n+            if warning:self.model_info.set(self.model_info.get()+' '+warning)\n \n     def _record(self):\n         self.frames.append({b.name:(b.position.x,b.position.y,b.position.z) for b in self.experiment.bodies})\ndiff --git a/src/solar_simulator/inspection.py b/src/solar_simulator/inspection.py\nindex 8241e7a..378f653 100644\n--- a/src/solar_simulator/inspection.py\n+++ b/src/solar_simulator/inspection.py\n@@ -9,6 +9,22 @@ from . import cli\n from .oblateness import prescribed\n \n \n+TWO_Q2_EXPERIMENTAL_WARNING=(\n+    'Экспериментальная модель двух динамических Q2-фигур: Newton total-degree-two M–Q. '\n+    'Q2–Q2 и высшие мультиполи, приливы, диссипация и совместные EIH/Q2 эффекты не учтены. '\n+    'Три исторических FAIL380 строгой сходимости не устранены: two/Python, two/Rust, three/Python. '\n+    'Универсальная граница ошибки произвольной траектории не установлена; квалификация '\n+    'конкретного короткого демосценария ещё не выполнена. Демо не устанавливает точность '\n+    'реальных небесных тел. Обычный «Старт» не ограничен 200 с; отдельную цель задаёт '\n+    '«Рассчитать до t». A/D1 и выпуск экспериментального режима владельцем не утверждены. '\n+    'Результаты и ограничения: docs/q2-scientific-qualification-399.md.')\n+\n+\n+def experimental_q2_warning(rotations):\n+    \"\"\"Presentation only; count is not a trajectory or release qualification.\"\"\"\n+    return TWO_Q2_EXPERIMENTAL_WARNING if len(rotations)==2 else ''\n+\n+\n def _native_status(experiment):\n     if experiment.settings.backend!='rust':\n         return dict(required=False,status='not_required',message='Текущие настройки используют Python; native не требуется.')\n@@ -122,6 +138,8 @@ def report(experiment):\n         limitations.append('Stored passive spin не означает интегрирования ориентации или rigid-spin энергии.')\n         if contacts:limitations.append('Контакты/отскоки/слияния: механическая энергия может меняться; нужны dissipated_energy и model_energy_offset.')\n     if not pn:limitations.append('В выбранной ньютоновской модели нет EIH-поправок и приливов; это не полная физическая модель реальных тел.')\n+    if len(experiment.rotations)==2:\n+        limitations.append(experimental_q2_warning(experiment.rotations))\n     dop=settings.integrator=='dop853'\n     detail=dict(schema=1,units=dict(mass='kg',position='m',velocity='m/s',time='s',energy='J',\n         momentum='kg*m/s',angular_momentum='kg*m^2/s'),\ndiff --git a/src/solar_simulator/inspection_view.py b/src/solar_simulator/inspection_view.py\nindex cef185a..bfd3fdc 100644\n--- a/src/solar_simulator/inspection_view.py\n+++ b/src/solar_simulator/inspection_view.py\n@@ -52,6 +52,9 @@ def rotation_text(payload):\n     lines=[ROTATION_SCOPE,'','q=(w,x,y,z): body → инерциальный базис, безразмерный.',\n         'S и ω ниже в инерциальном базисе. q/S показаны как сохранены;',\n         'матрица R и ω вычислены существующими функциями; сохранение не нормируется.','']\n+    from .inspection import experimental_q2_warning\n+    warning=experimental_q2_warning(payload['rotations'])\n+    if warning:lines[:0]=[warning,'']\n     for r in payload['rotations']:\n         lines.extend([r['body'],'q = '+vector(r['quaternion']),\n             'S [кг·м²/с] = '+vector(r['angular_momentum']),",
+  "tools_SHA256": {
+    "scripts\\q2_presentation_delta400.py": "ea7fc64c533fdae636cea17234d3561837b7b79e74206a971b34a884443ec55c",
+    "scripts\\qualification400\\test_interface.py": "6c4066e2cedb40f4a07b3d65f5a97c31614ab4e364448b4b1930e0372e5125ff",
+    "scripts\\qualification400\\test_gui.py": "4666451ee400c4a0b02e77cd54aa21718ee2e1df0ad7f2de2d4f456a32001b6c",
+    "tests\\test_q2_delta400.py": "7a4ae3a84eeab405a3119f0fb1e0926dc28d7e54d39f406f81c5b990f30f3564",
+    ".tools\\qualification400-20261108\\executed-check_candidate400.py": "68dc4b4f123982fa4d0436e17eaf36ad8dc24fc4d1daaa0e9119e03fd0f9689d",
+    ".tools\\qualification400-20261108\\run.py": "e4cdc79a122ea17bb04224dfb824a96c765520481141fdc331c1077e335ec710"
+  },
+  "formal_source_AST_review": {
+    "status": "NOT_REACHED_AFTER_RESOURCE_STOP",
+    "portable_synthetic_negative_tests": "6PASS within targeted-v1; genuine source delta review not reached",
+    "manual_diff": "Exactly3 presentation files,24 added lines; other materialized Python package files byte-equal in pre-test comparison. Formal source-bound qualification pending."
+  },
+  "environment": {
+    "actual_new_fingerprint": null,
+    "status": "NOT_COMPUTED_RESOURCE_STOP",
+    "parent_environment_LF_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+    "parent_fingerprint_is_not_candidate_fingerprint": true,
+    "qualified_dependency_prefix": "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "dependency_installations": 0
+  },
+  "tests_before": {
+    "attributes": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "0",
+      "tests": "1",
+      "time": "1.597",
+      "timestamp": "2026-11-08T01:10:08.202214+03:00",
+      "hostname": "DESKTOP-6DHG18S"
+    },
+    "cases": [
+      {
+        "classname": "tests.test_q2_interface400",
+        "name": "test_two_q2_has_one_shared_scientific_warning",
+        "time": "0.023",
+        "status": "FAIL",
+        "failure": "def test_two_q2_has_one_shared_scientific_warning():\n>       from solar_simulator.inspection import experimental_q2_warning,report\nE       ImportError: cannot import name 'experimental_q2_warning' from 'solar_simulator.inspection' (C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\inspection.py)\n\ntests\\test_q2_interface400.py:13: ImportError"
+      }
+    ]
+  },
+  "targeted_tests": {
+    "attributes": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "1",
+      "skipped": "0",
+      "tests": "75",
+      "time": "64.809",
+      "timestamp": "2026-11-08T01:15:10.883487+03:00",
+      "hostname": "DESKTOP-6DHG18S"
+    },
+    "cases": [
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_two_q2_has_one_shared_scientific_warning",
+        "time": "0.135",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_zero_one_q2_never_receive_two_q2_warning[0]",
+        "time": "0.006",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_zero_one_q2_never_receive_two_q2_warning[1]",
+        "time": "0.013",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_custom_or_loaded_two_q2_does_not_get_automatic_pass[name]",
+        "time": "0.004",
+        "status": "FAIL",
+        "failure": "change = 'name'\n\n    @pytest.mark.parametrize('change',['name','time','mass'])\n    def test_custom_or_loaded_two_q2_does_not_get_automatic_pass(change):\n        from solar_simulator.inspection import experimental_q2_warning,report\n        doc=to_document(two_q2_demo())\n        if change=='name':\n            doc['bodies'][0]['name']='custom star';doc['initial'][0]['name']='custom star'\n            doc['rotations'][0]['body']='custom star';doc['initial_rotations'][0]['body']='custom star'\n        elif change=='time':doc['time']=200.\n        else:\n            doc['bodies'][0]['mass']*=2;doc['initial'][0]['mass']*=2\n            doc['rotations'][0]['figure']['mass']*=2;doc['initial_rotations'][0]['figure']['mass']*=2\n>       before=deepcopy(doc);state=from_document(doc);detail=report(state)['numerical_reliability']\n                                   ^^^^^^^^^^^^^^^^^^\n\nscripts\\qualification400\\test_interface.py:52: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n..\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\storage.py:97: in from_document\n    result = replace(from_document(legacy), initial_rotations=initial_rotations, rotations=rotations)\n                     ^^^^^^^^^^^^^^^^^^^^^\n..\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\storage.py:211: in from_document\n    prepare_pair(initial,settings.relative_pair)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nbodies = [Body(name='custom star', mass=1000000000000000.0, position=Vector3(-1900.0, -200.0, 50.0), velocity=Vector3(0.02, -0....=Vector3(10100.0, -200.0, 50.0), velocity=Vector3(0.02, 2.115, 0.1716666666666667), radius=0.0, spin=Vector3(0, 0, 0))]\npair = ('A', 'B')\n\n    def prepare_pair(bodies, pair):\n        validate_pair_option(pair)\n        if pair is None:\n            return None\n        names = [body.name for body in bodies]\n        if len(set(names)) != len(names) or any(name not in names for name in pair):\n>           raise ValueError(\"Относительная пара требует существующие тела с уникальными именами\")\nE           ValueError: Относительная пара требует существующие тела с уникальными именами\n\n..\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\coordinates.py:48: ValueError"
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_custom_or_loaded_two_q2_does_not_get_automatic_pass[time]",
+        "time": "0.018",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_custom_or_loaded_two_q2_does_not_get_automatic_pass[mass]",
+        "time": "0.016",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_inspection_does_not_integrate_and_legacy_json_does_not_change",
+        "time": "0.019",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_invalid_user_snapshots_are_still_rejected[True]",
+        "time": "0.004",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_invalid_user_snapshots_are_still_rejected[nan]",
+        "time": "0.005",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_invalid_user_snapshots_are_still_rejected[inf]",
+        "time": "0.004",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_interface",
+        "name": "test_eih_fixed_j2_never_receive_two_q2_warning",
+        "time": "0.008",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_gui",
+        "name": "test_demo_load_model_report_start_and_cancel",
+        "time": "5.377",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "scripts.qualification400.test_gui",
+        "name": "test_bad_loaded_data_leave_current_experiment_and_file_unchanged",
+        "time": "4.488",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_q2_delta400",
+        "name": "test_exact_presentation_sequence_is_required",
+        "time": "0.024",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_q2_delta400",
+        "name": "test_force_tolerance_native_and_callback_mutations_are_rejected[src/solar_simulator/simulation.py-6.67430e-11-7.67430e-11]",
+        "time": "0.001",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_q2_delta400",
+        "name": "test_force_tolerance_native_and_callback_mutations_are_rejected[src/solar_simulator/experiment.py-1e-13-1e-3]",
+        "time": "0.001",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_q2_delta400",
+        "name": "test_force_tolerance_native_and_callback_mutations_are_rejected[rust/solar_native/src/lib.rs-1.0-2.0]",
+        "time": "0.001",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_q2_delta400",
+        "name": "test_force_tolerance_native_and_callback_mutations_are_rejected[src/solar_simulator/app.py-set(\"old\")-set(\"changed callback\")]",
+        "time": "0.001",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_q2_delta400",
+        "name": "test_new_source_file_cannot_hide_behind_a_presentation_delta",
+        "time": "0.001",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_profile_is_the_exact_two_body_start_of380",
+        "time": "0.011",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_snapshot_matches_independent_inertia_solve_and_preserves_all_state[0]",
+        "time": "0.005",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_snapshot_matches_independent_inertia_solve_and_preserves_all_state[1]",
+        "time": "0.017",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_snapshot_matches_independent_inertia_solve_and_preserves_all_state[2]",
+        "time": "0.016",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_cancelled_inspection_never_calls_the_evaluator",
+        "time": "0.005",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_projected_axes_are_inertial_columns_not_an_inferred_shape[axes0]",
+        "time": "0.008",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_projected_axes_are_inertial_columns_not_an_inferred_shape[axes1]",
+        "time": "0.006",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_projected_axes_are_inertial_columns_not_an_inferred_shape[axes2]",
+        "time": "0.007",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_missing_native_is_explained_without_a_force_or_state_write",
+        "time": "0.082",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_changed_demo_data_is_rejected_before_any_scenario_replacement",
+        "time": "0.001",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_before381_archive_cannot_weaken_current_source_checks[missing]",
+        "time": "0.011",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation",
+        "name": "test_before381_archive_cannot_weaken_current_source_checks[corrupt]",
+        "time": "0.012",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation_gui",
+        "name": "test_demo_start_pause_stop_save_restore_scenarios_and_read_only_views",
+        "time": "4.893",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_laboratory_rotation_gui",
+        "name": "test_inspection_cancellation_errors_and_parent_close_leave_no_state_change",
+        "time": "4.058",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_opt_in_extends_inspect_without_changing_legacy_json",
+        "time": "0.025",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_report_only_reads_existing_state_and_preserves_SI[<lambda>0]",
+        "time": "0.007",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_report_only_reads_existing_state_and_preserves_SI[<lambda>1]",
+        "time": "0.007",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_report_only_reads_existing_state_and_preserves_SI[<lambda>2]",
+        "time": "0.014",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_report_only_reads_existing_state_and_preserves_SI[<lambda>3]",
+        "time": "0.003",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_changed_mass_and_unknown_system_never_receive_qualification",
+        "time": "0.017",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_restored_checkpoint_and_branch_have_the_same_diagnostics",
+        "time": "0.018",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_missing_native_does_not_prevent_state_diagnostics",
+        "time": "0.003",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_python_backend_does_not_probe_native_and_verlet_hides_unused_tolerances",
+        "time": "0.002",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_newton_energy_and_momentum_against_hand_computed_values",
+        "time": "0.002",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_fixed_figures_and_1pn_are_not_described_as_plain_conserved_orbit[newtonian]",
+        "time": "0.008",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_fixed_figures_and_1pn_are_not_described_as_plain_conserved_orbit[eih-1pn]",
+        "time": "0.010",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_prescribed_orientation_requires_work_corrected_energy[newtonian]",
+        "time": "0.025",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_prescribed_orientation_requires_work_corrected_energy[eih-1pn]",
+        "time": "0.009",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_dynamic_rotation_uses_total_rigid_energy_and_angular_momentum",
+        "time": "0.005",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_contact_energy_is_a_ledger_not_a_mechanical_energy_guarantee",
+        "time": "0.002",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_1pn_without_figures_uses_noether_energy_not_newtonian_energy",
+        "time": "0.004",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_existing_375_and_376_states_do_not_turn_into_new_accuracy_claims",
+        "time": "0.078",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_inspect_help_exposes_the_opt_in_flag",
+        "time": "0.006",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_matching_initial_profile_cannot_certify_an_edited_later_state",
+        "time": "0.008",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_fractional_terminal_step_is_not_reported_as_the_nominal_Verlet_step",
+        "time": "0.002",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_inspect_reliability",
+        "name": "test_factory_input_match_is_not_confused_with_the_qualification_time_horizon",
+        "time": "0.011",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_recovery_is_unique_and_preserves_full_branch",
+        "time": "0.019",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_failed_recovery_does_not_damage_previous_copy",
+        "time": "0.012",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_cli_interrupt_or_failure_preserves_last_packet_and_parent[0-interrupt]",
+        "time": "0.025",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_cli_interrupt_or_failure_preserves_last_packet_and_parent[0-worker]",
+        "time": "0.028",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_cli_interrupt_or_failure_preserves_last_packet_and_parent[1-interrupt]",
+        "time": "0.029",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_cli_interrupt_or_failure_preserves_last_packet_and_parent[1-worker]",
+        "time": "0.028",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_invalid_cli_request_does_not_create_recovery",
+        "time": "0.015",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_real_gui_cooperative_stop[_check_gui_pending_close]",
+        "time": "4.400",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_real_gui_cooperative_stop[_check_gui_failure_and_retry]",
+        "time": "4.568",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_real_gui_cooperative_stop[_check_gui_stop_keeps_window_and_does_not_submit_next_packet]",
+        "time": "4.948",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_real_gui_cooperative_stop[_check_gui_worker_failure_without_close_saves_previous_state]",
+        "time": "4.898",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_controlled_stop",
+        "name": "test_cli_does_not_report_saved_when_recovery_write_fails",
+        "time": "0.014",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_final_output_failure_recovers_finished_result[missing-directory]",
+        "time": "0.045",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_final_output_failure_recovers_finished_result[denied]",
+        "time": "0.045",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_final_output_failure_recovers_finished_result[interrupt]",
+        "time": "0.055",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_final_output_recovery_falls_back_to_local_data",
+        "time": "0.038",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_final_output_and_both_recoveries_fail_explicitly",
+        "time": "0.015",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_recovery_inventory_is_local_and_keeps_damaged_files_visible",
+        "time": "0.013",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_save_close_restart_restore_continue[python]",
+        "time": "8.704",
+        "status": "PASS",
+        "failure": null
+      },
+      {
+        "classname": "tests.test_recovery_journey",
+        "name": "test_save_close_restart_restore_continue[rust]",
+        "time": "13.601",
+        "status": "PASS",
+        "failure": null
+      }
+    ]
+  },
+  "corrected_name_test": "FIXTURE_CHANGED_NOT_RERUN: rename relative_pair with body; original ValueError was correct validation",
+  "short_source_comparison": {
+    "planned_source_cases": 12,
+    "completed_baseline_cases": 2,
+    "completed_candidate_cases": 0,
+    "matched_pairs": 0,
+    "partial_files": [
+      {
+        "path": "final\\base\\point-python-checkpoint.json",
+        "size": 1850,
+        "sha256": "e5960f7ed86b9626d291ca978eadba3b2a771ca3a7b69cd80148b0d4d50809ec"
+      },
+      {
+        "path": "final\\base\\point-python.json",
+        "size": 3998,
+        "sha256": "fbd36907aaea3273137e04bebafbb4869240a585e806b43f7ca9b194f892ed53"
+      },
+      {
+        "path": "final\\base\\point-rust-checkpoint.json",
+        "size": 1848,
+        "sha256": "b151e364f8de895f4869c3f3ef5176d235b095aa457f5af6d76e56a89e6d0c2a"
+      },
+      {
+        "path": "final\\base\\point-rust.json",
+        "size": 3990,
+        "sha256": "fe3f0d364a7766c5d1d14e1ecd4583311cd1f95a156416f31da177f66b8f483b"
+      }
+    ],
+    "selection": "0/1/2 figures; Python/Rust;0/2/4seconds; no criteria/selection/budget alteration",
+    "remaining": "4 baseline +6 candidate cases, formal AST/fingerprint and corrected test. Do not rerun completed point baseline cases automatically; executed helper lacks qualified resume."
+  },
+  "resources": {
+    "before-corrected-resources.json": {
+      "charged_CPU_seconds": 2.75,
+      "charged_active_wall_seconds": 2.6117888999870047,
+      "name": "before-corrected",
+      "record": {
+        "complete": false,
+        "disk_bytes": 7236,
+        "error": null,
+        "exit_code": 1,
+        "last_sample": {
+          "disk": 7236,
+          "elapsed": 2.307874599995557,
+          "parent_cpu": 0.25,
+          "private_tree": 89997312,
+          "rss_tree": 113229824,
+          "worker_cpu": 2.125
+        },
+        "limit_reason": null,
+        "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+        "parent_interjob_CPU_excluded": true,
+        "parent_supervision_CPU_seconds": 0.25,
+        "peak_private_tree_sampled": 144883712,
+        "peak_rss_tree_sampled": 137768960,
+        "poll_seconds": 0.05,
+        "processes": [
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794089407.603488,
+            "pid": 15032,
+            "role": "launcher"
+          },
+          {
+            "CPU_seconds": 2.125,
+            "creation_time": 1794089407.6074345,
+            "pid": 3744,
+            "role": "analyzer_or_audit_descendant"
+          }
+        ],
+        "root_final_CPU_seconds": 0.015625,
+        "samples": 41,
+        "wall_seconds": 2.3598800000036135,
+        "worker_CPU_seconds": 2.140625
+      },
+      "tail_allowance_CPU_seconds": 0.25,
+      "tail_allowance_wall_seconds": 0.25,
+      "total_CPU_seconds": 3.75,
+      "total_active_wall_seconds": 3.6117888999870047
+    },
+    "before-launch-resources.json": {
+      "name": "before-launch-infrastructure-error",
+      "charged_CPU_seconds": 1.0,
+      "charged_active_wall_seconds": 1.0,
+      "record": {
+        "complete": false,
+        "worker_CPU_seconds": 0.0,
+        "reason": "Wrapper pre-created monitor's exclusive output directory; FileExistsError before monitor/worker start",
+        "CPU_measurement": "unavailable for exited launcher; charged1CPU/1wall allowance, not measured bound",
+        "tool_observed_command_wall_seconds": 0.3468149,
+        "scientific_integrations": 0
+      },
+      "allowance_basis": "Explicit conservative startup allowance retained within original95CPU/190wall, no refund. Empty guard-before directory retained."
+    },
+    "final-source-check-resources.json": {
+      "charged_CPU_seconds": 7.25,
+      "charged_active_wall_seconds": 6.140567099995678,
+      "name": "final-source-check",
+      "record": {
+        "complete": false,
+        "disk_bytes": 1229976,
+        "error": null,
+        "exit_code": 15,
+        "last_sample": {
+          "disk": 1229976,
+          "elapsed": 5.6014078999869525,
+          "parent_cpu": 2.78125,
+          "private_tree": 163356672,
+          "rss_tree": 140267520,
+          "worker_cpu": 3.171875
+        },
+        "limit_reason": "stage-CPU",
+        "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+        "parent_interjob_CPU_excluded": true,
+        "parent_supervision_CPU_seconds": 3.125,
+        "peak_private_tree_sampled": 163356672,
+        "peak_rss_tree_sampled": 147468288,
+        "poll_seconds": 0.05,
+        "processes": [
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794090121.7080448,
+            "pid": 19604,
+            "role": "launcher"
+          },
+          {
+            "CPU_seconds": 0.109375,
+            "creation_time": 1794090121.7151687,
+            "pid": 5960,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794090121.8970957,
+            "pid": 2016,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 3.3125,
+            "creation_time": 1794090121.9069932,
+            "pid": 24156,
+            "role": "analyzer_or_audit_descendant"
+          }
+        ],
+        "root_final_CPU_seconds": 0.015625,
+        "samples": 27,
+        "wall_seconds": 5.886507999995956,
+        "worker_CPU_seconds": 3.453125
+      },
+      "tail_allowance_CPU_seconds": 0.25,
+      "tail_allowance_wall_seconds": 0.25,
+      "total_CPU_seconds": 96.3125,
+      "total_active_wall_seconds": 76.21470419998514
+    },
+    "targeted-v1-resources.json": {
+      "charged_CPU_seconds": 85.3125,
+      "charged_active_wall_seconds": 66.46234820000245,
+      "name": "targeted-v1",
+      "record": {
+        "complete": false,
+        "disk_bytes": 1209167,
+        "error": null,
+        "exit_code": 1,
+        "last_sample": {
+          "disk": 1209167,
+          "elapsed": 66.03707390002091,
+          "parent_cpu": 25.578125,
+          "private_tree": 145485824,
+          "rss_tree": 110100480,
+          "worker_cpu": 58.390625
+        },
+        "limit_reason": null,
+        "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+        "parent_interjob_CPU_excluded": true,
+        "parent_supervision_CPU_seconds": 25.6875,
+        "peak_private_tree_sampled": 402907136,
+        "peak_rss_tree_sampled": 311361536,
+        "poll_seconds": 0.05,
+        "processes": [
+          {
+            "CPU_seconds": 0.0,
+            "creation_time": 1794089709.9817414,
+            "pid": 23744,
+            "role": "launcher"
+          },
+          {
+            "CPU_seconds": 5.46875,
+            "creation_time": 1794089709.9880145,
+            "pid": 29800,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794089714.893168,
+            "pid": 7592,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.53125,
+            "creation_time": 1794089714.9005728,
+            "pid": 27404,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.0,
+            "creation_time": 1794089720.23061,
+            "pid": 30172,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 3.953125,
+            "creation_time": 1794089720.2394357,
+            "pid": 18084,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794089724.9413724,
+            "pid": 24776,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.578125,
+            "creation_time": 1794089724.950061,
+            "pid": 27784,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794089729.8363264,
+            "pid": 3452,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 3.859375,
+            "creation_time": 1794089729.8418176,
+            "pid": 656,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.0,
+            "creation_time": 1794089734.3386128,
+            "pid": 16152,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.21875,
+            "creation_time": 1794089734.3456047,
+            "pid": 19164,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794089738.741315,
+            "pid": 16932,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.3125,
+            "creation_time": 1794089738.7488143,
+            "pid": 15972,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.0,
+            "creation_time": 1794089743.3087063,
+            "pid": 6156,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.6875,
+            "creation_time": 1794089743.3152623,
+            "pid": 14912,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794089748.259071,
+            "pid": 30832,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.578125,
+            "creation_time": 1794089748.2667298,
+            "pid": 15060,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.0,
+            "creation_time": 1794089753.3879967,
+            "pid": 7064,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.375,
+            "creation_time": 1794089753.3941057,
+            "pid": 11952,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.0,
+            "creation_time": 1794089757.9640863,
+            "pid": 22704,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 3.8125,
+            "creation_time": 1794089757.9709563,
+            "pid": 18684,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.0,
+            "creation_time": 1794089762.0921187,
+            "pid": 17392,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 4.71875,
+            "creation_time": 1794089762.0989969,
+            "pid": 15424,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794089768.0965571,
+            "pid": 9876,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 5.890625,
+            "creation_time": 1794089768.116466,
+            "pid": 26056,
+            "role": "analyzer_or_audit_descendant"
+          }
+        ],
+        "root_final_CPU_seconds": 0.0,
+        "samples": 736,
+        "wall_seconds": 66.20500200000242,
+        "worker_CPU_seconds": 59.078125
+      },
+      "tail_allowance_CPU_seconds": 0.25,
+      "tail_allowance_wall_seconds": 0.25,
+      "total_CPU_seconds": 89.0625,
+      "total_active_wall_seconds": 70.07413709998946
+    }
+  },
+  "charged_CPU_seconds": 96.3125,
+  "charged_active_wall_seconds": 76.21470419998514,
+  "unmeasured_startup_CPU_allowance": 1.0,
+  "per_guard_tail_CPU_allowance": 0.25,
+  "initial_plan": {
+    "stage": 400,
+    "date": "2026-11-08",
+    "status": "FROZEN_BEFORE_TESTS",
+    "base_commit": "f723a2162b4e115378959e244f428529be2d4516",
+    "candidate": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-interface-400",
+    "branch": "codex/candidate-0.3.3-q2-interface-400",
+    "caps": {
+      "cpu_seconds": 120,
+      "wall_seconds": 240,
+      "private_bytes": 1073741824,
+      "disk_bytes": 67108864
+    },
+    "early": {
+      "cpu_seconds": 95,
+      "wall_seconds": 190,
+      "private_bytes": 943718400,
+      "disk_bytes": 54525952
+    },
+    "estimate": {
+      "CPU_seconds": 65,
+      "wall_seconds": 110,
+      "private_bytes": 600000000,
+      "disk_bytes": 16000000,
+      "basis": "One failing presentation unit test; ~100 focused read-only/GUI/recovery tests with existing short packet journeys; 0/1/2-Q2 matched baseline/candidate two 2-second packets on Python/Rust, plus source/AST/negative guards. No long scientific qualification or performance benchmark."
+    },
+    "test_files": [
+      "tests/test_q2_interface400.py",
+      "tests/test_q2_interface400_gui.py",
+      "tests/test_q2_delta400.py",
+      "tests/test_laboratory_rotation.py",
+      "tests/test_laboratory_rotation_gui.py",
+      "tests/test_inspect_reliability.py",
+      "tests/test_controlled_stop.py",
+      "tests/test_recovery_journey.py"
+    ],
+    "short_scenarios": {
+      "factories": [
+        "application_profiles.scenario(sun-earth)",
+        "application_profiles.lunar_rotation",
+        "application_profiles.two_q2_demo"
+      ],
+      "backends": [
+        "python",
+        "rust"
+      ],
+      "epochs_seconds": [
+        0,
+        2,
+        4
+      ],
+      "physical_settings": "Exact factory settings apart from explicitly fixed diagnostic dt=2 seconds identically in both sources; original factory IC/G/rtol/atol preserved; no production setting changes",
+      "comparison": "Exact canonical state/legacy diagnostics before and after inspection, save/load and same-packet resume; no arbitrary new accuracy thresholds"
+    },
+    "negative_controls": [
+      "force source",
+      "tolerance literal",
+      "Rust/native source",
+      "unexpected presentation callback change"
+    ],
+    "interpretation": "New presentation-only delta argument on exact f723a216 and fixed58 evidence399. Not transferable old391 whitelist, not A/D1 application acceptance, not new 380/399 qualification. Release033NO-GO."
+  },
+  "test_path_addendum": {
+    "scope": "Implementation path clarification only; frozen numerical budget/cases/criteria remain unchanged",
+    "reason": "Candidate-only interface tests must not run against unmodified dev UI. They are explicit tests outside ordinary tests discovery, not skips or xfails.",
+    "aliases": {
+      "tests/test_q2_interface400.py": "scripts/qualification400/test_interface.py",
+      "tests/test_q2_interface400_gui.py": "scripts/qualification400/test_gui.py"
+    },
+    "before_test": "Original path remains recorded in before.xml; same test now has an explicit candidate-only location",
+    "physical_selection_changes": 0,
+    "budget_changes": 0
+  },
+  "final_admission": {
+    "prior_charged_CPU_seconds": 89.0625,
+    "remaining_to_early_CPU_seconds": 5.9375,
+    "operation": "One combined worker: fresh baseline process then candidate; fixed six short scenarios per source plus exact source/AST review, actual fingerprint and direct rerun of the single corrected name-case test",
+    "estimate_CPU_seconds": 4.8,
+    "estimate_wall_seconds": 10,
+    "uncertainty": "Import/supervision/IO cost uncertain; original monitor must stop at95CPU, partial output is not completion. No budget increase, no repeated74PASS tests.",
+    "assertion": "No new science criterion or application D1; unchanged original0/2/4-second short contrast selection; all outputs exclusive."
+  },
+  "preserved_evidence_SHA256": {
+    "docs/q2-scientific-qualification-399.md": "a61dea0f1cf132b97652d2198bd5af7e7960cee75f377acc3ab8f197d8c93a9f",
+    "docs/q2-scientific-qualification-399.json": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+    "scripts/q2-qualification399-plan.json": "3e1ceb821514a770632f7f5c0ac37260a869198d94e5adc60d81bfaa69bbe644",
+    "scripts/validation/two-q2-380.npz": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a"
+  },
+  "scientific399_scope": "Historical fixed58 exact equivalence only; 10PASS/6FAIL strict comparisons, three FAIL380 unresolved. No repeated380/399 matrix or benchmark394.",
+  "errors": [
+    {
+      "phase": "launcher",
+      "reason": "Exclusive monitor output directory pre-created by wrapper; no worker started",
+      "accounting": "1CPU/1wall startup allowance, actual CPU unavailable; source fix only wrapper, old empty directory retained"
+    },
+    {
+      "phase": "targeted test",
+      "reason": "Renamed body fixture omitted relative_pair rename; runtime correctly rejected invalid data",
+      "action": "Fixture corrected, no production validation change; rerun not reached"
+    },
+    {
+      "phase": "final check",
+      "reason": "stage-CPU early-stop",
+      "action": "No raise/rerun; scientific/source audit remains partial"
+    },
+    {
+      "phase": "operational backup prepare",
+      "reason": "Own early stage-CPU limit reached, final record10.390625CPU",
+      "effect": "No repeated prepare; dead owned PID26804 lock preserved and cleared only after process absence verified; archive bytes remained intact"
+    },
+    {
+      "phase": "cloud receipt transfer",
+      "reason": "First inline payload exceeded Node strict64000-byte review limit",
+      "effect": "No execution; raw byte payload transferred in smaller inert chunks; built-in SHA256 matched exactly"
+    },
+    {
+      "phase": "metadata registration",
+      "reason": "TypeError: dict() got multiple values for keyword argument 'status'",
+      "effect": "No write_record reached; finally released owned lock; global manifest row unchanged",
+      "corrected": true
+    }
+  ],
+  "backup": {
+    "project": "Solar-Simulator",
+    "name": "Solar-Simulator-stage400-partial-20261108.zip",
+    "source": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification400-backup-20261108\\Solar-Simulator-stage400-partial-20261108.zip",
+    "size": 54278,
+    "sha256": "bcccf57600fa12057599c816cd7d8bd064015f4ae74af055b62c70d1e76b921f",
+    "git_commit": "0658c718320912a4b38a4a2993cfe508a12c801c",
+    "candidate_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+    "cloud_parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+    "status": "CLOUD_VERIFIED_SHA256",
+    "cloud_location": "https://drive.google.com/file/d/1PEZybFv7L3VomjctdmNIwXD5pf8ZmRi_/view",
+    "cloud_evidence": {
+      "id": "1PEZybFv7L3VomjctdmNIwXD5pf8ZmRi_",
+      "parent_ids": [
+        "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+      ],
+      "size": 54278,
+      "sha256": "bcccf57600fa12057599c816cd7d8bd064015f4ae74af055b62c70d1e76b921f",
+      "method": "Independent Google Drive raw download; Node built-in SHA256; local archive not read",
+      "project": "Solar-Simulator",
+      "git_commit": "0658c718320912a4b38a4a2993cfe508a12c801c",
+      "candidate_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+      "url": "https://drive.google.com/file/d/1PEZybFv7L3VomjctdmNIwXD5pf8ZmRi_/view",
+      "status": "CLOUD_VERIFIED_SHA256",
+      "owner_only_metadata_verified": true,
+      "local_prepare_status": "PARTIAL_RESOURCE_STOP; not rerun",
+      "connector_runtime_CPU": "unmeasured; not scientific computation"
+    },
+    "local_guarded_resources": {
+      "archive-resources.json": {
+        "scope": "Operational backup only, not numerical400 continuation",
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.390625,
+            "parent_cpu": 0.09375,
+            "private_tree": 37986304,
+            "rss_tree": 40734720,
+            "disk": 61414,
+            "elapsed": 0.4344029000203591
+          },
+          "samples": 8,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.40625,
+          "root_final_CPU_seconds": 0.03125,
+          "parent_supervision_CPU_seconds": 0.09375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 37986304,
+          "processes": [
+            {
+              "pid": 26548,
+              "creation_time": 1794090651.2399633,
+              "CPU_seconds": 0.03125,
+              "role": "launcher"
+            },
+            {
+              "pid": 14048,
+              "creation_time": 1794090651.2493904,
+              "CPU_seconds": 0.375,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 40734720,
+          "wall_seconds": 0.48875270001008175,
+          "disk_bytes": 61414,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 0.90625,
+        "active_wall_seconds": 0.7418617999937851,
+        "total_CPU_seconds": 0.90625,
+        "total_active_wall_seconds": 0.7418617999937851,
+        "hard_caps": {
+          "cpu_seconds": 12,
+          "wall_seconds": 180,
+          "private_bytes": 536870912,
+          "disk_bytes": 33554432
+        },
+        "early": {
+          "cpu_seconds": 10,
+          "wall_seconds": 140,
+          "private_bytes": 471859200,
+          "disk_bytes": 27262976
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      },
+      "prepare-resources.json": {
+        "scope": "Operational backup only, not numerical400 continuation",
+        "record": {
+          "exit_code": 15,
+          "limit_reason": "stage-CPU",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 7.375,
+            "parent_cpu": 1.703125,
+            "private_tree": 79749120,
+            "rss_tree": 101994496,
+            "disk": 64280,
+            "elapsed": 8.045240800012834
+          },
+          "samples": 123,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 7.40625,
+          "root_final_CPU_seconds": 0.390625,
+          "parent_supervision_CPU_seconds": 1.71875,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 89276416,
+          "processes": [
+            {
+              "pid": 22100,
+              "creation_time": 1794090652.0315807,
+              "CPU_seconds": 0.390625,
+              "role": "launcher"
+            },
+            {
+              "pid": 26804,
+              "creation_time": 1794090652.423669,
+              "CPU_seconds": 6.9375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 16620,
+              "creation_time": 1794090652.6551764,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 6524,
+              "creation_time": 1794090652.7082407,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 5296,
+              "creation_time": 1794090652.7224245,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 29412,
+              "creation_time": 1794090652.7787209,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 29312,
+              "creation_time": 1794090652.7907512,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 113643520,
+          "wall_seconds": 8.08182580000721,
+          "disk_bytes": 64280,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 9.484375,
+        "active_wall_seconds": 8.336175600008573,
+        "total_CPU_seconds": 10.390625,
+        "total_active_wall_seconds": 9.078037400002358,
+        "hard_caps": {
+          "cpu_seconds": 12,
+          "wall_seconds": 180,
+          "private_bytes": 536870912,
+          "disk_bytes": 33554432
+        },
+        "early": {
+          "cpu_seconds": 10,
+          "wall_seconds": 140,
+          "private_bytes": 471859200,
+          "disk_bytes": 27262976
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      }
+    },
+    "local_guarded_CPU_seconds": 10.390625,
+    "local_guarded_active_wall_seconds": 9.078037400002358,
+    "local_prepare_complete": false,
+    "metadata_registration": {
+      "scope": "Post-STOP metadata closure only, no data hashing/integration/prepare",
+      "CPU_seconds": 0.15625,
+      "archive_status": "CLOUD_VERIFIED_SHA256",
+      "local_prepare_complete": false
+    },
+    "metadata_registration_error": {
+      "phase": "metadata registration, after cloud bytes independently verified",
+      "exception": "TypeError: dict() got multiple values for keyword argument 'status'",
+      "effect": "No write_record reached; finally released owned lock; global manifest row unchanged",
+      "source_before": "register-cloud-metadata-before.py",
+      "startup_CPU_measured": false,
+      "startup_CPU_allowance_seconds": 0.25,
+      "not_scientific_computation": true
+    },
+    "total_local_CPU_including_registration_and_allowance": 10.796875,
+    "method": "Filtered current-project archive. Guarded prepare stopped; no retry. Existing archive independently read from Drive and SHA256 computed in Node; metadata-only registration under the normal backup lock.",
+    "limitations": "Connector/Node CPU not observed by local Python guard; no new scientific verification. Cloud proof and final registration are in final Git report, not recursively in the earlier ZIP."
+  },
+  "next_A": "Owner must approve experimental scope/waiver separately; complete remaining delta review/fingerprint/short contrasts first, then separately authorize application D1 and release/portable acceptance.",
+  "next_B": "If owner excludes two-Q2 from release, implement explicit create/load/advance cardinality policy in separate task, keep saved originals and0/1 compatibility. Hiding a button is insufficient; presentation-only delta argument does not cover that code.",
+  "limitations": [
+    "74PASS is a focused subset, not full application/release acceptance.",
+    "Native/source fingerprints from f723a216 or399 are not transferred to a99f73a.",
+    "Counterexample source/AST tests are portable synthetic controls, not completed actual delta qualification.",
+    "CPU/memory/tree enforcement sampled50ms; final Windows CPU and charged tails can exceed early threshold; hard120CPU not exceeded.",
+    "CPU of source editing/Git/report formatting/backup is separate; initial launcher CPU unknown, allowance explicitly charged.",
+    "No new actual fingerprint after STOP; no falsely completed receipts."
+  ],
+  "closure_status": "PARTIAL_RESOURCE_STOP; CANDIDATE_PROVISIONAL; CLOUD_VERIFIED; NO-GO_FOR_SOURCE_DELTA_QUALIFICATION_AND_RELEASE",
+  "publication_QA_scope": "Only report/receipt consistency, file inventory, links and Git metadata checked after STOP. No actual source AST comparison, new runtime fingerprint or numerical checks after STOP."
+}
