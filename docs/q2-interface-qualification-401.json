@@ -1,0 +1,3542 @@
+{
+  "stage": 401,
+  "date": "2026-11-08",
+  "candidate_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+  "base_commit": "f723a2162b4e115378959e244f428529be2d4516",
+  "dev_start_commit": "5541b1b5c4a2fdf2d05c7d03d760887d0294d6c4",
+  "verdicts": {
+    "PRESENTATION DELTA": "PASS_EXACT_THREE_FILE_AST_AND_BYTE_DELTA",
+    "SHORT SOURCE EQUIVALENCE": "PASS_SIX_EXACT_STATE_CONTRASTS_AND_KNOWN_COUNTER_CONTRACT",
+    "SCIENTIFIC EVIDENCE APPLICABILITY": "APPLICABLE_BY_EXPLICIT_NUMERICAL_SOURCE_IDENTITY_ONLY_IN_FIXED399_SCOPE",
+    "APPLICATION A/D1": "NOT_AUTHORIZED_NOT_EXECUTED",
+    "RELEASE READINESS": "NO-GO"
+  },
+  "tests": {
+    "fixed_one": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "1",
+      "time": "1.926",
+      "timestamp": "2026-11-08T17:17:12.198438+03:00",
+      "hostname": "DESKTOP-6DHG18S"
+    },
+    "new_adapter_faults": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "13",
+      "time": "0.189",
+      "timestamp": "2026-11-08T17:18:12.785067+03:00",
+      "hostname": "DESKTOP-6DHG18S"
+    },
+    "historical74": "Not rerun; same exact a99f73a source retained"
+  },
+  "scientific399_preservation": {
+    "Git_source": "5541b1b5c4a2fdf2d05c7d03d760887d0294d6c4",
+    "report_SHA256": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+    "sealed_plan_SHA256": "3e1ceb821514a770632f7f5c0ac37260a869198d94e5adc60d81bfaa69bbe644",
+    "reference380_SHA256": "51e7c79d7a36547df92959a8614d9d5804232d39c0ebfe5c4a143ecdd6da696a",
+    "status": "Historical58completed/28exactpairs preserved; no rerun or rewritten receipts;3unique coldFAIL retained",
+    "new399matrix_executed": false
+  },
+  "logical_counter_scope": {
+    "recorded_legacy_native": true,
+    "legacy_solver_invocations": "3 proved by archived helper and unchanged pointDOP source call path, not labelled measured",
+    "historical_RHS_nfev": null,
+    "measured401_solver_and_RHS_native": true,
+    "unrecorded_internal_history_not_reconstructed": true
+  },
+  "errors": [
+    {
+      "phase": "recovery-v1",
+      "kind": "KeyError Windows tool metadata key",
+      "integrations": 0
+    },
+    {
+      "phase": "recovery-v2",
+      "kind": "KeyError Windows partial payload reference",
+      "integrations": 0
+    },
+    {
+      "phase": "report-audit-v1",
+      "kind": "Rehashing sorted canonical JSON as original order-preserving LF profile; data and measured fingerprints did not differ",
+      "integrations": 0
+    }
+  ],
+  "fixes": "Normalize logical references only, reject ambiguous/unsafe references; exact archive/source/SHA unchanged. Tool versions and both failed costs retained; no scientific cases repeated.",
+  "callers_review": {
+    "app": "Only Tk model_info StringVar, no write trace to physics; _set_experiment/settings refresh callers unchanged",
+    "inspection": "Only append shared string to limits; qualification False/global error None unchanged",
+    "inspection_view": "Only rotation_text prefix from pure count helper; q/S/omega preparation unchanged",
+    "launch_load_recovery": "Full unchanged module AST after removing exact approved presentation nodes; protected source files byte-identical"
+  },
+  "limitations": [
+    "Source equality on six fixed short contrasts is not a global IVP error bound.",
+    "Legacy point RHS/nfev were never saved; not converted into measured PASS. Known counters have explicitly different provenance.",
+    "Historical399hasthree strict-convergence FAIL; explicit source applicability does not waive them or create fresh current-source399receipts.",
+    "A/D1owner decision and separate application acceptance remain necessary; no automatic release,main/tag/LATEST changes.",
+    "Future changes to interface text or candidate source require their actual fingerprint/delta assessment; this receipt binds exacta99f73a.",
+    "50ms process/tree/memory sampling and0.25CPU/wall tail allowances are not strict continuous upper bounds.",
+    "Prior400cost96.3125CPU remains separate; new401budget authorized by owner,not refunded or reset."
+  ],
+  "plan": {
+    "stage": 401,
+    "date": "2026-11-08",
+    "status": "FROZEN_BEFORE_EXECUTION",
+    "prior_stage400_charged_CPU_seconds": 96.3125,
+    "prior_budget_is_not_reset_or_reused": true,
+    "dev_start": "5541b1b5c4a2fdf2d05c7d03d760887d0294d6c4",
+    "base": "f723a2162b4e115378959e244f428529be2d4516",
+    "candidate": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+    "source_roots": {
+      "base": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-395",
+      "candidate": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-interface-400"
+    },
+    "interpreter": "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+    "archive400": "C:/Users/Admin/Desktop/Solar-simulator/.tools/qualification400-backup-20261108/Solar-Simulator-stage400-partial-20261108.zip",
+    "archive400_SHA256": "bcccf57600fa12057599c816cd7d8bd064015f4ae74af055b62c70d1e76b921f",
+    "caps": {
+      "cpu_seconds": 160,
+      "wall_seconds": 300,
+      "private_bytes": 1073741824,
+      "disk_bytes": 67108864
+    },
+    "early": {
+      "cpu_seconds": 128,
+      "wall_seconds": 240,
+      "private_bytes": 943718400,
+      "disk_bytes": 54525952
+    },
+    "estimates_CPU_seconds": {
+      "recovery": 12,
+      "fixed-test": 6,
+      "delta-fingerprint": 12,
+      "adapter-faults": 6,
+      "base-runs": 20,
+      "candidate-runs": 28,
+      "independent-audit": 12
+    },
+    "estimates_wall_seconds": {
+      "recovery": 18,
+      "fixed-test": 8,
+      "delta-fingerprint": 18,
+      "adapter-faults": 8,
+      "base-runs": 25,
+      "candidate-runs": 35,
+      "independent-audit": 18
+    },
+    "recovered_jobs": [
+      "base__point__python",
+      "base__point__rust"
+    ],
+    "new_jobs": [
+      "base__one__python",
+      "base__one__rust",
+      "base__two__python",
+      "base__two__rust",
+      "candidate__point__python",
+      "candidate__point__rust",
+      "candidate__one__python",
+      "candidate__one__rust",
+      "candidate__two__python",
+      "candidate__two__rust"
+    ],
+    "case_contract": {
+      "factories": {
+        "point": "application_profiles.scenario('sun-earth')",
+        "one": "application_profiles.lunar_rotation()",
+        "two": "application_profiles.two_q2_demo()"
+      },
+      "epochs_seconds": [
+        0,
+        2,
+        4
+      ],
+      "dt_seconds": 2,
+      "packets": "advance1,checkpoint at2,advance1 plus independent same-packet restart2->4, identical to helper400",
+      "native_counts_include_resume": true,
+      "new_accuracy_thresholds": false
+    },
+    "legacy_counter_policy": "Native counters recorded;3 solver invocations require explicit static control-flow proof, never mislabelled as measured. Historical RHS/nfev not recorded; retain null and scope unknown fields rather than reconstruct them.",
+    "stop": "Source/IC/settings/array/SHA inconsistency =>STOP before new orbits; no automatic repetition or budget increase. No74PASS/full399/380/394/application A/D1/portable."
+  },
+  "plan_SHA256": "90e9f1c937ae6f1feac8bbc61f2b2704867a03b0271b792f66d79cfc3c159b6e",
+  "tools_manifest": {
+    "scope": "Version3 normalizes all legacy logical path references; source/data/plan/budget unchanged, no integrations before version3",
+    "files": {
+      "scripts/q2_interface_recovery401.py": "a52c5db2c86d7de833b3b521e6428ffed2d68c92d223b98b506b1e31c7529770",
+      "scripts/qualification401/qualify.py": "199ab687caf6a7bdfc17d23a656b83cd21ece59838af7a6d020594da3ce95f7b",
+      "scripts/qualification401/audit.py": "6fdd7ab108c6abb5487dca1eca893a2eeaf05daf5754949c233c2fc8dbf1a7ec",
+      "tests/test_q2_recovery401.py": "f3810a74060208bd68a74a17a017586647c5d6fbe3571cf297aef840c51dcb7a",
+      "scripts/q2_presentation_delta400.py": "ea7fc64c533fdae636cea17234d3561837b7b79e74206a971b34a884443ec55c",
+      "scripts/q2_execution398.py": "9fa1b0f66e7297c182f7ec619c603481a5d60baa01046f4185d0d71d8b5e3864",
+      "scripts/qualification400/test_interface.py": "6c4066e2cedb40f4a07b3d65f5a97c31614ab4e364448b4b1930e0372e5125ff",
+      ".tools/qualification400-20261108/pytest-runtime.py": "8b1f442c17f4dab081a34ea45d94ecc8b260e364b6f167ab7154424d8581c984",
+      ".tools/qualification401-20261108/plan.json": "90e9f1c937ae6f1feac8bbc61f2b2704867a03b0271b792f66d79cfc3c159b6e",
+      ".tools/qualification401-20261108/run-v3.py": "1f3807ad0d1f61f6a51613a1789f7cc78416549aef8a394d0006cca00a4ff484"
+    }
+  },
+  "tools_manifest_SHA256": "3ff64dc6794fd60376545c23b836556e5559d0577e343d36128c659db5aef3b3",
+  "status": "SOURCE_BOUND_CHECKS_COMPLETE_APPLICATION_AND_RELEASE_NOT_APPROVED",
+  "source_delta": {
+    "application_acceptance_performed": false,
+    "base_commit": "f723a2162b4e115378959e244f428529be2d4516",
+    "changed": [
+      {
+        "base_SHA256": "fa74ec7809fdc2442b6b6ad9de63d4e61e358e0ad67883432cecba8deb3b62fe",
+        "path": "src/solar_simulator/app.py",
+        "remaining_module_AST_exact": true,
+        "target_SHA256": "d794a547bdf762604d9c1c593a01ec6ceaf558fa9f1c6454877c9942b144fde5"
+      },
+      {
+        "base_SHA256": "aacbd64c7c33d0555aa3f17b9e1b24e4b11f34ce29056b9766cf73202597238c",
+        "path": "src/solar_simulator/inspection.py",
+        "remaining_module_AST_exact": true,
+        "target_SHA256": "2be1be8bac8a7b25348c838dbca0b02486aa95c311e33dc721bc68fef482116b"
+      },
+      {
+        "base_SHA256": "0c75a57abbe31ee6a7656838327aac3f0b62bdd21a4a6517fe572b4a048d23f1",
+        "path": "src/solar_simulator/inspection_view.py",
+        "remaining_module_AST_exact": true,
+        "target_SHA256": "c6b93b98c09edf3fabd20c21e5f8855ab45d88a2e652199cc387b9136925685d"
+      }
+    ],
+    "historical74_repeated": false,
+    "legacy_solver_call_proof": {
+      "chain": "Authenticated helper400 has3completed advance(state,1) calls; validated positive2s point DOP settings; advance has1point evolve_accurate call and evolve_accurate1solve_ivp call; no inspection/storage integration.",
+      "historical_nfev": null,
+      "kind": "Static control-flow proof, not historical instrumentation",
+      "solver_invocations_per_completed_legacy_point_case": 3,
+      "source_files_SHA256": {
+        "accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+        "experiment.py": "9fa67811531b1e904eec2df40ba8d12dc5e4d4ea99963a32b2adb397c8efbb6d"
+      }
+    },
+    "protected_SHA256": {
+      ".gitattributes": "35c9757f5a43826c996766c96d677f1e9f5952e6c52b15a398ded752fc1dd41a",
+      "pyproject.toml": "f2ca791ae5b51b1f811f84dea21221333b6220b0776cb10614969689577405c5",
+      "rust/solar_adaptive/Cargo.lock": "e88456727deadd89772939729e4f199b1b2baa3619540f0a60a59f9a3febc84c",
+      "rust/solar_adaptive/Cargo.toml": "b29aa0553f6e8af4ed652e0f6653ce43a7a90896240bbfb4630693d12635c6ab",
+      "rust/solar_adaptive/LICENSE-SCIPY.txt": "221e59f5e910fd7f94e44f0dac77436a11338c285c6346232e4a850a50da0e94",
+      "rust/solar_adaptive/README.md": "7d5908a79177837d8092d99a03214017984d50c33bf6ea41a040802d101c34f1",
+      "rust/solar_adaptive/src/coefficients.rs": "ca2fcc2ffda57474ad16761972983a1836d1e57d8dc17726aa26bddabfee4cee",
+      "rust/solar_adaptive/src/lib.rs": "4c9fe3787b5213a22cc2706d32b59c9c4410fe675a1093ff398968dacff75965",
+      "rust/solar_adaptive/src/main.rs": "54206c7eaf5706ecd644009985e6778481eb86a0778702a7526ba13ee52b2985",
+      "rust/solar_adaptive/src/newton.rs": "67d55b849b00b3a3f2f44b7eeb549138fdcc90e1f46fa118761523d3ce40627b",
+      "rust/solar_adaptive/src/solver.rs": "aedb17cf95d40973242e9aac676dc163aa2f2bd2d009da7029302fb8e6374e37",
+      "rust/solar_adaptive/src/trace.rs": "69a5a27475c5539706e95cfecf8de1754bd045ebf8af19bdccc2f1e1a5ffe370",
+      "rust/solar_adaptive/tests/contract.rs": "6fa5714980420ac60471bf8a5c557ff29f2fbdd8c3d0ffb0f3f8adf84b1107d2",
+      "rust/solar_adaptive/tests/trace.rs": "e837aeb76a6ed46d4a282e9b60c92185cfabc9addc0efa6c2e98dee4dec0be6e",
+      "rust/solar_core/Cargo.lock": "853161d9d0557ad5e2189c9f29f654827eb3dadfe5601ecf5ba5eb57e99f2860",
+      "rust/solar_core/Cargo.toml": "17af82fa9ed164f3c330ae83d6af29c7d9444d269a85f5ef13f061e82264f136",
+      "rust/solar_core/README.md": "0e01b84e33e87baa00ae661e7fcd7ebf4a2f331daecd95c6909264882985f90e",
+      "rust/solar_core/src/collisions.rs": "dba247071f1fa924157cc8b8e125665731adfe8954f913464af2912cd6520abd",
+      "rust/solar_core/src/contacts.rs": "0caae19f427120ec73cde2fc79edd4f3da56ddf7c4a4541c14dc9b89da885863",
+      "rust/solar_core/src/impacts.rs": "3a9230536702f203d8a079e8d9b51b952e11ac59da1a36cb460272630700d374",
+      "rust/solar_core/src/lib.rs": "6df5a41ccdcd9ea2317d4e25db82a5074c1029cb2099142029a88d93781608ad",
+      "rust/solar_core/src/main.rs": "1365b6e5edcdb80ee82e1a188e3d8a2d1a17d86732dee1c2c65dd5dce2b5f1d4",
+      "rust/solar_core/src/relativity.rs": "c92759ec1e85f6a5750d4692e1b8ed587a90073fc97b685b5a065e649e811a48",
+      "rust/solar_native/Cargo.lock": "45378a525e8c554723b068609f3cd08197a32f5231be07f4de33ced380ec28e9",
+      "rust/solar_native/Cargo.toml": "27e51625e381c884f24f9d7e902881d65f07d6c358879f59da1319b0e7e00689",
+      "rust/solar_native/README.md": "6ae95ad2e4bfef78dd4631d6109499bed9e472a9c6fce1692303a41cfd1691f8",
+      "rust/solar_native/pyproject.toml": "fa22135799f1473c149630444fe4b26356e970d851f68e4794d8e2ed1b54ea31",
+      "rust/solar_native/src/lib.rs": "3a38d0d17585c41fe58a97a4673988cbbdf5bcb7444987a908ec6dcf950c3ad6",
+      "src/solar_simulator/README.md": "c97e0c8cfe0e3a659cd2ee38b4a56ec592e4ee233cfa01173934a60f2ec79fe8",
+      "src/solar_simulator/__init__.py": "998496e34c0a00ad0e0dac19dd0821d58296ceb63116c4e64b9ca93fbf7aa333",
+      "src/solar_simulator/__main__.py": "91c41ad25552ac451d1440a7bc54ab11ce5c2ca29045dcf29961c36d02f2268d",
+      "src/solar_simulator/_numbers.py": "9eb1222d384d39fc47e74c660d9b497c1daf715293efc0f737855459c64d8688",
+      "src/solar_simulator/accuracy.py": "fbbfadd7f55850a19bac728e6379d5dd6be61f66b3998d5c336ed0f1d591081a",
+      "src/solar_simulator/application_profiles.py": "7989d9d633db285313ceb1ed280cd6aa773d92a053a0d327ec211e8e578c7e07",
+      "src/solar_simulator/body_fields.py": "57cf09e0f959609e72f973dbea4b3ca3b25ec0d472458aee3ab12cadff56e6a3",
+      "src/solar_simulator/branch_io.py": "ac7e55d5217d529ca3aff63f834cbc83817be09c6df1aff333507ac34f1c58c4",
+      "src/solar_simulator/cli.py": "aec860c8fd5793bda20d177e469318026b7d5333bf577a243cff4e5e39239f79",
+      "src/solar_simulator/collisions.py": "888fc2be6f62a6b404c916fe389d75f76c4b3b70b58d572629d10cb53a79eca7",
+      "src/solar_simulator/commands.py": "c750cae35815d76f6b8704bb536d11d92b7769800878cd54d41f5dc8d5e97814",
+      "src/solar_simulator/comparison.py": "93c8e0cb6706ff7a12d36c26ee665607a984268d6c843ee79894c7dc48fb4d38",
+      "src/solar_simulator/comparison_loader.py": "5b41429b384d4be57b86b390fed12c149ee3b7d229293388af1d8d165ea70811",
+      "src/solar_simulator/comparison_view.py": "bedc3b72709e10aa2b3172d528806127df843b7588081ba505c27ee916bd1dab",
+      "src/solar_simulator/contacts.py": "8270efc59abb0d665a0dabbd76f50b1945be05bb584749569bcd3041e486d68f",
+      "src/solar_simulator/continuous.py": "babd20f45d897f7e4520331b2757d11dffc5620add3066b128d59842b3765a6d",
+      "src/solar_simulator/continuous_cli.py": "3a28c3cf082487f16a983ee1b528fef4b30cd05fdedec69498ff22fe783d23b5",
+      "src/solar_simulator/control_row.py": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+      "src/solar_simulator/convergence.py": "494794fa10b187692cacc1b6079ec6aa61876979961cbaafde4ffd7139915247",
+      "src/solar_simulator/coordinates.py": "858cadb0d5b138edf11b142e7beb87817cd8fa1028ac2583ce4344f956e77d8b",
+      "src/solar_simulator/data/ERFA-LICENSE.txt": "c72781d8712dad739d5a173c4c7da23c206e19929e9ea271bff4c2e2ea225018",
+      "src/solar_simulator/data/__init__.py": "6be782b736708257bb5c441bdb7e196627e313d9dc8d0f13582d54d196428b18",
+      "src/solar_simulator/data/asteroids-20261008.json": "9e0cab041d7417daaa1a7235b034e1cdce913850cb8f3e1d92b5690748008a7e",
+      "src/solar_simulator/data/asteroids-catalog-20261008.json": "5df76143a986ebe0d540b936b08e6e38c17577c851ad2d19a34c25a6a1ea98ad",
+      "src/solar_simulator/data/asteroids-full-20261008.json": "ac6cbb16469320d017cb1ed07be4c836d380d6b715590f115f5ffcd75efb2394",
+      "src/solar_simulator/data/earth-j2-20261008.json": "f078a600e0da97fcf1c63e462c1af8b60f75d9fa336382a79ee436e404a14be1",
+      "src/solar_simulator/data/kuiper-20261010.json": "22bc4852169214a14f2375c89ed2cb6e443ebb649a69ad792c69457d4a70d856",
+      "src/solar_simulator/data/kuiper-ring-036-0-20261011.json": "ccd553842164101df83692dee8b4985502ace8c8234c77a80a22801548f01c31",
+      "src/solar_simulator/data/kuiper-ring-036-1-20261011.json": "d080f8d11847e697a774f68917a60d58d63fa03454952b9e1b24ecdb1bea12b0",
+      "src/solar_simulator/data/kuiper-ring-072-0-20261011.json": "2f1c4ad83627ccc7c839b5fca932fb996bc3f3c88556170096eadbe535a8a98a",
+      "src/solar_simulator/data/kuiper-ring-072-1-20261011.json": "07f8585e53a25258cccc08b9572055d5b02d7f5f3fe8ea6d3053a0ac7777c145",
+      "src/solar_simulator/data/kuiper-ring-144-0-20261011.json": "1e254c1421669597a427ddbf29df153f5f224179c4dd663f1f715440b45dc333",
+      "src/solar_simulator/data/kuiper-ring-144-1-20261011.json": "eb6822a5503f5effe3e799f205d06c1bcd080c1e9d8c2650b83b297918175716",
+      "src/solar_simulator/data/kuiper-ring-manifest.json": "b0959e9f5e24931899c0031ed642e09f63082874d3b577afc042431a05088461",
+      "src/solar_simulator/data/lunar-spin-solid-equivalent-20261008.json": "733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+      "src/solar_simulator/data/orbit-cohort-13270.json": "acbcba4103bbad0183c105fbb4f31a1e460699ac8393a83090893e62ccbf67ab",
+      "src/solar_simulator/data/orbit-cohort-13271.json": "a61ddc0809bf470bf7d541de2e747ef193a00f0357675dd69e161f113101abda",
+      "src/solar_simulator/data/orbit-observations-13270.json": "f214cbe2fea0de40901d69b8e10a6c20dee0451c4b4db6e82e0088ca35008d31",
+      "src/solar_simulator/data/orientation-de441-20261008.json": "e2919814946832a4b6635aa0643ce415ffc47fa34945d9c43b53dc61697695eb",
+      "src/solar_simulator/data/pluto-system-20261008.json": "778ea14fa0377bd946f1e6dd52cce4ae7df318f32f070c1d5c6fa5701bf1de76",
+      "src/solar_simulator/data/solar-j2-20261008.json": "0ae6a04ba4a181b4b45f5c085cccc5d9c58b520a67a01b2fa46fb69c9a7a656e",
+      "src/solar_simulator/data/solar-system-20261008.json": "6786b7c481e76383350b5c86517d9a91067f82abd9f66d07a14b262c8c3817cc",
+      "src/solar_simulator/data/solar-system-moon-20261008.json": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+      "src/solar_simulator/data/two-q2-demo380.json": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+      "src/solar_simulator/diagnostics.py": "83310b38a673b6b600de2e8692caa420ecd24fbd79b397d12dcb6c931924572a",
+      "src/solar_simulator/ephemerides.py": "4a88ce4226eaa41ad3cfbc29b87745200605429df74ebd1b5666165d520ff479",
+      "src/solar_simulator/error_control.py": "695218911e605bcc5f49c3cc1b124b17d7c5c5d305b6114b66a7d0ff51bf8323",
+      "src/solar_simulator/experiment.py": "9fa67811531b1e904eec2df40ba8d12dc5e4d4ea99963a32b2adb397c8efbb6d",
+      "src/solar_simulator/impacts.py": "0f6017b3d6db7f9283dc231802af431c03f69e1bb469bfc1af37655290619f7a",
+      "src/solar_simulator/input_units.py": "f774ea2af4453a94be178d06d002dfc8c136102aa51c5682c0adb5375963e1ab",
+      "src/solar_simulator/kuiper_ring.py": "6df62aed1e285736311aaca794b5bf21a6cd680b96842e03d409ccc6b28d965a",
+      "src/solar_simulator/mergers.py": "ef01b86ac34bdf608af7e419887a7b58874ccd7ea96c40a75fca5473f18c743e",
+      "src/solar_simulator/motion.py": "e1e7ea4a1d3bedb32c77476badd8316aebde03533014fcf6ab9174a7d9ddeead",
+      "src/solar_simulator/native_forces.py": "c44a42214d9f867de42d14407d75e969dda04a848a1f8571a7bc8787e8508654",
+      "src/solar_simulator/nbody_rotation.py": "9126ae10a8f41849f09acc83ae152fe8aea0abe85f99f79f183db5f86b79a6a2",
+      "src/solar_simulator/oblateness.py": "930ac5d8e7d76491a1cdbcfb2ea4bb8fe81e77a5195397165ef17cc4ddea2fe7",
+      "src/solar_simulator/orbit_determination.py": "b6c9b750d54d378240c1dc3513ef2f6d58ba8774319f3c8463f56a496b9f8e93",
+      "src/solar_simulator/orbit_view.py": "82e0dde798304688b8f64e72959813424d5a4ec220f7b7c3e1c3771fa842fe60",
+      "src/solar_simulator/orientation.py": "ecf13044b60bad49b917d31f022e275a4e3466535f56f9be45562c0a9f0bdf5f",
+      "src/solar_simulator/perturbers.py": "e0760dd806798a8c0bbf4cba03bbae3c12181fa649abd5432ba980d190fbe7d5",
+      "src/solar_simulator/planets.py": "ec80a0ac3020ede00aa912362b8e42fb9120d398839f9c19c63dd4d45c8b11b2",
+      "src/solar_simulator/playback.py": "5961af2bfeafb7eb8bc019b9c38c61dea70b2d2551075e693f235633163be987",
+      "src/solar_simulator/plot_artists.py": "822a9dff2572460bca88c00395f00cefaaa10c451288d2f65f1e36d21d220b76",
+      "src/solar_simulator/recipe.py": "776ef2e2ceb1a6f7985178c006dba828d86b55c1884336e21df90b2cb6f71af1",
+      "src/solar_simulator/recovery.py": "b66d4772555da6cdc86fd6b3efa8c2645f58623bd98c283ff4d1b45c18d5a7ee",
+      "src/solar_simulator/relativity.py": "53803362132a7c2c757475cd43b767f4755fc140430f438f2a6ec8328dceec8a",
+      "src/solar_simulator/rotation.py": "0cec73448d8bbd3a29656d04be7f74aa04338be6df40055548910557f29412c6",
+      "src/solar_simulator/runner.py": "d0ae9d6b6b09a153ba3bdf15a8fcaf38e1caf5c8e753d9f9dafe4f7d694d14aa",
+      "src/solar_simulator/rust_backend.py": "fd85ac27cdc4716b031de3f23bfb3485b22234d97c8830228104fe1b8250175c",
+      "src/solar_simulator/sandbox.py": "46120a00ac7434d107b9e9b5aa653d3401c225adc7ad9fce33b2b274b6851806",
+      "src/solar_simulator/scenario_catalog.py": "adf453caa5c33883d8126080775a7288baf73740b45e1c24e7b09de69e8386f1",
+      "src/solar_simulator/scenarios.py": "985ee4ec9e5cc4052a1dadddaf9f7ff1291195f06f6d66601ce12c382181a359",
+      "src/solar_simulator/simulation.py": "eb1d18898ed5412ea5b813b03e52472d206be1c204a0de41d3c8c0a0095cd53d",
+      "src/solar_simulator/solar_profiles.py": "b626b64a5dacd9eef5cd768d9de91ae909f697eef7d07759a2a62ba350146134",
+      "src/solar_simulator/spin_initial.py": "118547bfb5f22afbd6e504bcab8aafb9c08867927f91112e5897a017af057868",
+      "src/solar_simulator/state_export.py": "ac4b11aaa3805555c23c1357261b4a00bb507f0e29251739f08add2189461635",
+      "src/solar_simulator/storage.py": "1fa867fd29f780f7453c8357b5b72ee0c930b5dec671e144c20fabb056a20f1a",
+      "src/solar_simulator/time_control.py": "30558d7b413d3ae8a25754cb02e56ccca826ab62d7e8560006610a7371ec1436",
+      "src/solar_simulator/trajectory.py": "59c3b5b6a1e58a2387fee2ae12c945eeff7256be045834da7adc2257b6e86a68",
+      "src/solar_simulator/trajectory_loader.py": "9d91555919d24ac2316fe689a5673750bd768f787000235b96ea83716ab3b336",
+      "src/solar_simulator/trajectory_view.py": "b004b251c6cdbb63d5c826de44f7f9a875c807fce89c29724623803d7d85a20d",
+      "src/solar_simulator/vector3.py": "d9f0f2875614da470a226738a771d88f031c081d4a5d178c23437bc1c0e53032"
+    },
+    "protected_files": 110,
+    "release_approved": false,
+    "representations": "Materialized src bytes including IC/data; exact Git blobs for Rust/metadata; working delta restricted to exact3 approved paths.",
+    "scope": "Exact patch only, f723a216 + fixed58 evidence399. Not the fe0f456/391 whitelist or historical receipt migration.",
+    "source": {
+      "actual_import": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400\\src\\solar_simulator\\__init__.py",
+      "commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+      "compiled_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+      "dependency_origins": {
+        "numpy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+        "scipy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\scipy\\__init__.py",
+        "solar_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\__init__.py"
+      },
+      "environment_LF_SHA256": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+      "interpreter": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Scripts\\python.exe",
+      "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+      "prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+      "profile_kind": "source, not wheel/portable",
+      "role": "candidate",
+      "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-interface-400",
+      "source_package_map_SHA256": "0cbb7fb78a69a3f79ae2e004171033e6f42929e77b7b3aadad9c3f824298ff91",
+      "tree": "b4d5fb8c21f24d4d7d4e6d96caf65c42cd7be722",
+      "versions": {
+        "application": "0.3.3",
+        "native": "0.3.3",
+        "numpy": "2.5.1",
+        "python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+        "scipy": "1.18.1"
+      }
+    },
+    "status": "PRESENTATION_ONLY_DELTA_CONFIRMED_NOT_ACCURACY_QUALIFICATION"
+  },
+  "profiles": {
+    "base_LF_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+    "candidate_LF_SHA256": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+    "base_file_SHA256": "85083df93e1d16f41127202d0363a3efdaf7d0b53995a8ede997ab8b8374eebf",
+    "candidate_file_SHA256": "4eca48e4651fea902d67816811466033aae72314defc1f60a5b777eb38ec2db8",
+    "base_actual_emission_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+    "candidate_actual_emission_SHA256": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+    "qualified395_raw_profile_SHA256": "b667c5083fe1dba7df6d3de72960f3a3a769052e60fd06a6e6c4cd2eaeb8f23d",
+    "profile_kind": "Actual source environment; not wheel/portable",
+    "serialization": "LF hashes refer to actual recipe emission order; canonical stored profile JSON has distinct raw-byte SHA. Structured values agree; no old profile or digest rewritten."
+  },
+  "short_contrasts": {
+    "application_A_D1_approved": false,
+    "candidate_environment_LF_SHA256": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+    "integrations_in_this_audit": 0,
+    "legacy_counters_limitation": "Historical nfev/RHS not recorded;3solver invocations are a static source proof, not labelled measured. No claim about unrecorded internal steps.",
+    "new_cases": 10,
+    "pairs": [
+      {
+        "backend": "python",
+        "base_counter_kind": "source-proven3invocations; recorded native count; historical RHS/nfev absent",
+        "base_counters": {
+          "RHS": null,
+          "native_calls": 0,
+          "nfev": null,
+          "solver_calls": 3
+        },
+        "candidate_counters": {
+          "RHS": 123,
+          "native_calls": 0,
+          "nfev": 123,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "PerBodyDOP853",
+              "nfev": 41,
+              "rtol": 1e-13
+            },
+            {
+              "method": "PerBodyDOP853",
+              "nfev": 41,
+              "rtol": 1e-13
+            },
+            {
+              "method": "PerBodyDOP853",
+              "nfev": 41,
+              "rtol": 1e-13
+            }
+          ]
+        },
+        "case": "point",
+        "checkpoint_exact": true,
+        "common_counters_equal": true,
+        "dimensions": {
+          "S": [
+            3,
+            0,
+            3
+          ],
+          "p": [
+            3,
+            2,
+            3
+          ],
+          "q": [
+            3,
+            0,
+            4
+          ],
+          "v": [
+            3,
+            2,
+            3
+          ]
+        },
+        "exact_p_v_q_S": true,
+        "full_payload_exact": true,
+        "historical_RHS_nfev_comparison": "UNRECORDED_NOT_INVENTED",
+        "numerical_diagnostics": [
+          {
+            "angular_momentum": [
+              0.0,
+              0.0,
+              2.661105278993906e+40
+            ],
+            "backend": "python",
+            "bodies": 2,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "conservation_scope": "Newtonian energy, momentum and angular momentum",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": null,
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -2.6491725992765086e+33,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orbital_angular_momentum_conserved": true,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": null,
+            "rotations": [],
+            "time_seconds": 0.0
+          },
+          {
+            "angular_momentum": [
+              0.0,
+              0.0,
+              2.661105278993906e+40
+            ],
+            "backend": "python",
+            "bodies": 2,
+            "center_of_mass": [
+              -5.820766091346741e-11,
+              -1.3877787807814457e-16,
+              0.0
+            ],
+            "conservation_scope": "Newtonian energy, momentum and angular momentum",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": null,
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -2.6491725992765086e+33,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              25165824.0,
+              0.0,
+              0.0
+            ],
+            "orbital_angular_momentum_conserved": true,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": null,
+            "rotations": [],
+            "time_seconds": 2.0
+          },
+          {
+            "angular_momentum": [
+              0.0,
+              0.0,
+              2.661105278993906e+40
+            ],
+            "backend": "python",
+            "bodies": 2,
+            "center_of_mass": [
+              -5.820766091346741e-11,
+              -2.220446049250313e-16,
+              0.0
+            ],
+            "conservation_scope": "Newtonian energy, momentum and angular momentum",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": null,
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -2.6491725992765086e+33,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              67108864.0,
+              35184372088832.0,
+              0.0
+            ],
+            "orbital_angular_momentum_conserved": true,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": null,
+            "rotations": [],
+            "time_seconds": 4.0
+          }
+        ],
+        "same_packet_restart_exact": true
+      },
+      {
+        "backend": "rust",
+        "base_counter_kind": "source-proven3invocations; recorded native count; historical RHS/nfev absent",
+        "base_counters": {
+          "RHS": null,
+          "native_calls": 123,
+          "nfev": null,
+          "solver_calls": 3
+        },
+        "candidate_counters": {
+          "RHS": 123,
+          "native_calls": 123,
+          "nfev": 123,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "PerBodyDOP853",
+              "nfev": 41,
+              "rtol": 1e-13
+            },
+            {
+              "method": "PerBodyDOP853",
+              "nfev": 41,
+              "rtol": 1e-13
+            },
+            {
+              "method": "PerBodyDOP853",
+              "nfev": 41,
+              "rtol": 1e-13
+            }
+          ]
+        },
+        "case": "point",
+        "checkpoint_exact": true,
+        "common_counters_equal": true,
+        "dimensions": {
+          "S": [
+            3,
+            0,
+            3
+          ],
+          "p": [
+            3,
+            2,
+            3
+          ],
+          "q": [
+            3,
+            0,
+            4
+          ],
+          "v": [
+            3,
+            2,
+            3
+          ]
+        },
+        "exact_p_v_q_S": true,
+        "full_payload_exact": true,
+        "historical_RHS_nfev_comparison": "UNRECORDED_NOT_INVENTED",
+        "numerical_diagnostics": [
+          {
+            "angular_momentum": [
+              0.0,
+              0.0,
+              2.661105278993906e+40
+            ],
+            "backend": "rust",
+            "bodies": 2,
+            "center_of_mass": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "conservation_scope": "Newtonian energy, momentum and angular momentum",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": null,
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -2.6491725992765086e+33,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "orbital_angular_momentum_conserved": true,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": null,
+            "rotations": [],
+            "time_seconds": 0.0
+          },
+          {
+            "angular_momentum": [
+              0.0,
+              0.0,
+              2.661105278993906e+40
+            ],
+            "backend": "rust",
+            "bodies": 2,
+            "center_of_mass": [
+              -5.820766091346741e-11,
+              -1.3877787807814457e-16,
+              0.0
+            ],
+            "conservation_scope": "Newtonian energy, momentum and angular momentum",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": null,
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -2.6491725992765086e+33,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -75497472.0,
+              0.0,
+              0.0
+            ],
+            "orbital_angular_momentum_conserved": true,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": null,
+            "rotations": [],
+            "time_seconds": 2.0
+          },
+          {
+            "angular_momentum": [
+              0.0,
+              0.0,
+              2.661105278993906e+40
+            ],
+            "backend": "rust",
+            "bodies": 2,
+            "center_of_mass": [
+              -5.820766091346741e-11,
+              -2.220446049250313e-16,
+              0.0
+            ],
+            "conservation_scope": "Newtonian energy, momentum and angular momentum",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": null,
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -2.6491725992765086e+33,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -67108864.0,
+              35184372088832.0,
+              0.0
+            ],
+            "orbital_angular_momentum_conserved": true,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": null,
+            "rotations": [],
+            "time_seconds": 4.0
+          }
+        ],
+        "same_packet_restart_exact": true
+      },
+      {
+        "backend": "python",
+        "base_counter_kind": "measured401instrumentation",
+        "base_counters": {
+          "RHS": 132,
+          "native_calls": 0,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            }
+          ]
+        },
+        "candidate_counters": {
+          "RHS": 132,
+          "native_calls": 0,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            }
+          ]
+        },
+        "case": "one",
+        "checkpoint_exact": true,
+        "common_counters_equal": true,
+        "dimensions": {
+          "S": [
+            3,
+            1,
+            3
+          ],
+          "p": [
+            3,
+            10,
+            3
+          ],
+          "q": [
+            3,
+            1,
+            4
+          ],
+          "v": [
+            3,
+            10,
+            3
+          ]
+        },
+        "exact_p_v_q_S": true,
+        "full_payload_exact": true,
+        "historical_RHS_nfev_comparison": "MEASURED_EXACT",
+        "numerical_diagnostics": [
+          {
+            "angular_momentum": [
+              8.225989249943257e+41,
+              2.6066500462603096e+41,
+              3.1313502668856564e+43
+            ],
+            "backend": "python",
+            "bodies": 10,
+            "center_of_mass": [
+              -127616.77270501852,
+              -13954.088507458568,
+              13505.046359703876
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              -1.0938135272317876e+19,
+              -3.0775653952868078e+19,
+              3.702032377730163e+19
+            ],
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -1.9806413329290263e+35,
+            "epoch_jd_tdb": 2461321.5,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              1.0938135272317876e+19,
+              3.0775653952868078e+19,
+              -3.702032377730163e+19
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -4.037783440570791e+25,
+              -4.131430280713093e+25,
+              -9.291112471375066e+24
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": {
+              "center": "Solar System Barycenter",
+              "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+              "ephemeris": "DE441",
+              "epoch_jd_tdb": 2461321.5,
+              "frame": "Ecliptic J2000",
+              "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+            },
+            "physics": "newtonian",
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  3.419154287723472e+27,
+                  5.290449460625025e+27,
+                  2.319379971539693e+29
+                ],
+                "body": "Moon",
+                "figure": {
+                  "bounding_radius": 1800000.0,
+                  "mass": 7.345789248996225e+22,
+                  "moments": [
+                    8.71174869368716e+34,
+                    8.71373927015286e+34,
+                    8.71725356622506e+34
+                  ]
+                },
+                "momentum_atol": 2.320235203494106e+16,
+                "provenance": "rigid-solid-equivalent; initial-only SHA256=733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+                "quaternion": [
+                  0.9797944418457909,
+                  -0.012346413269881654,
+                  0.005320538150443124,
+                  -0.199554778648004
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 0.0
+          },
+          {
+            "angular_momentum": [
+              8.225989249943257e+41,
+              2.6066500462603096e+41,
+              3.1313502668856573e+43
+            ],
+            "backend": "python",
+            "bodies": 10,
+            "center_of_mass": [
+              -127616.77274546027,
+              -13954.088549068198,
+              13505.046350371093
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              -1.0938216773701913e+19,
+              -3.0776406753718145e+19,
+              3.702037928919579e+19
+            ],
+            "energy_budget_residual_joules": 3.6893488147419103e+19,
+            "energy_joules": -1.980641332929026e+35,
+            "epoch_jd_tdb": 2461321.500023148,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              1.0938216773701913e+19,
+              3.0776406753718145e+19,
+              -3.702037928919579e+19
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -4.037783440132306e+25,
+              -4.131430280516061e+25,
+              -9.291112471427843e+24
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": {
+              "center": "Solar System Barycenter",
+              "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+              "ephemeris": "DE441",
+              "epoch_jd_tdb": 2461321.5,
+              "frame": "Ecliptic J2000",
+              "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+            },
+            "physics": "newtonian",
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  3.41915426584712e+27,
+                  5.290449399072965e+27,
+                  2.3193799722801002e+29
+                ],
+                "body": "Moon",
+                "figure": {
+                  "bounding_radius": 1800000.0,
+                  "mass": 7.345789248996225e+22,
+                  "moments": [
+                    8.71174869368716e+34,
+                    8.71373927015286e+34,
+                    8.71725356622506e+34
+                  ]
+                },
+                "momentum_atol": 2.320235203494106e+16,
+                "provenance": "rigid-solid-equivalent; initial-only SHA256=733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+                "quaternion": [
+                  0.9797949729545545,
+                  -0.012346401107930664,
+                  0.005320572591589339,
+                  -0.19955217077236545
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 2.0
+          },
+          {
+            "angular_momentum": [
+              8.225989249943257e+41,
+              2.606650046260311e+41,
+              3.131350266885657e+43
+            ],
+            "backend": "python",
+            "bodies": 10,
+            "center_of_mass": [
+              -127616.77278605103,
+              -13954.08859045431,
+              13505.046341038309
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              -1.0938298266570166e+19,
+              -3.0777159554373132e+19,
+              3.702043480003632e+19
+            ],
+            "energy_budget_residual_joules": 7.378697629483821e+19,
+            "energy_joules": -1.9806413329290256e+35,
+            "epoch_jd_tdb": 2461321.5000462965,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              1.0938298266570166e+19,
+              3.0777159554373132e+19,
+              -3.702043480003632e+19
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -4.037783439657757e+25,
+              -4.131430280889015e+25,
+              -9.291112471258518e+24
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": {
+              "center": "Solar System Barycenter",
+              "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+              "ephemeris": "DE441",
+              "epoch_jd_tdb": 2461321.5,
+              "frame": "Ecliptic J2000",
+              "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+            },
+            "physics": "newtonian",
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  3.419154243970606e+27,
+                  5.290449337519398e+27,
+                  2.3193799730205082e+29
+                ],
+                "body": "Moon",
+                "figure": {
+                  "bounding_radius": 1800000.0,
+                  "mass": 7.345789248996225e+22,
+                  "moments": [
+                    8.71174869368716e+34,
+                    8.71373927015286e+34,
+                    8.71725356622506e+34
+                  ]
+                },
+                "momentum_atol": 2.320235203494106e+16,
+                "provenance": "rigid-solid-equivalent; initial-only SHA256=733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+                "quaternion": [
+                  0.979795504056377,
+                  -0.012346388945892321,
+                  0.005320607032697102,
+                  -0.19954956289531237
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 4.0
+          }
+        ],
+        "same_packet_restart_exact": true
+      },
+      {
+        "backend": "rust",
+        "base_counter_kind": "measured401instrumentation",
+        "base_counters": {
+          "RHS": 132,
+          "native_calls": 132,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            }
+          ]
+        },
+        "candidate_counters": {
+          "RHS": 132,
+          "native_calls": 132,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-13
+            }
+          ]
+        },
+        "case": "one",
+        "checkpoint_exact": true,
+        "common_counters_equal": true,
+        "dimensions": {
+          "S": [
+            3,
+            1,
+            3
+          ],
+          "p": [
+            3,
+            10,
+            3
+          ],
+          "q": [
+            3,
+            1,
+            4
+          ],
+          "v": [
+            3,
+            10,
+            3
+          ]
+        },
+        "exact_p_v_q_S": true,
+        "full_payload_exact": true,
+        "historical_RHS_nfev_comparison": "MEASURED_EXACT",
+        "numerical_diagnostics": [
+          {
+            "angular_momentum": [
+              8.225989249943257e+41,
+              2.6066500462603096e+41,
+              3.1313502668856564e+43
+            ],
+            "backend": "rust",
+            "bodies": 10,
+            "center_of_mass": [
+              -127616.77270501852,
+              -13954.088507458568,
+              13505.046359703876
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              -1.0938135272317876e+19,
+              -3.0775653952868078e+19,
+              3.702032377730163e+19
+            ],
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": -1.9806413329290263e+35,
+            "epoch_jd_tdb": 2461321.5,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              1.0938135272317876e+19,
+              3.0775653952868078e+19,
+              -3.702032377730163e+19
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -4.037783440570791e+25,
+              -4.131430280713093e+25,
+              -9.291112471375066e+24
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": {
+              "center": "Solar System Barycenter",
+              "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+              "ephemeris": "DE441",
+              "epoch_jd_tdb": 2461321.5,
+              "frame": "Ecliptic J2000",
+              "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+            },
+            "physics": "newtonian",
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  3.419154287723472e+27,
+                  5.290449460625025e+27,
+                  2.319379971539693e+29
+                ],
+                "body": "Moon",
+                "figure": {
+                  "bounding_radius": 1800000.0,
+                  "mass": 7.345789248996225e+22,
+                  "moments": [
+                    8.71174869368716e+34,
+                    8.71373927015286e+34,
+                    8.71725356622506e+34
+                  ]
+                },
+                "momentum_atol": 2.320235203494106e+16,
+                "provenance": "rigid-solid-equivalent; initial-only SHA256=733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+                "quaternion": [
+                  0.9797944418457909,
+                  -0.012346413269881654,
+                  0.005320538150443124,
+                  -0.199554778648004
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 0.0
+          },
+          {
+            "angular_momentum": [
+              8.225989249943257e+41,
+              2.6066500462603103e+41,
+              3.1313502668856573e+43
+            ],
+            "backend": "rust",
+            "bodies": 10,
+            "center_of_mass": [
+              -127616.77274557948,
+              -13954.088549053296,
+              13505.046350371093
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              -1.0938216773701913e+19,
+              -3.0776406753718145e+19,
+              3.702037928919579e+19
+            ],
+            "energy_budget_residual_joules": 3.6893488147419103e+19,
+            "energy_joules": -1.980641332929026e+35,
+            "epoch_jd_tdb": 2461321.500023148,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              1.0938216773701913e+19,
+              3.0776406753718145e+19,
+              -3.702037928919579e+19
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -4.037783440132306e+25,
+              -4.131430280523098e+25,
+              -9.29111247143444e+24
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": {
+              "center": "Solar System Barycenter",
+              "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+              "ephemeris": "DE441",
+              "epoch_jd_tdb": 2461321.5,
+              "frame": "Ecliptic J2000",
+              "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+            },
+            "physics": "newtonian",
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  3.4191542658471197e+27,
+                  5.290449399072964e+27,
+                  2.3193799722801002e+29
+                ],
+                "body": "Moon",
+                "figure": {
+                  "bounding_radius": 1800000.0,
+                  "mass": 7.345789248996225e+22,
+                  "moments": [
+                    8.71174869368716e+34,
+                    8.71373927015286e+34,
+                    8.71725356622506e+34
+                  ]
+                },
+                "momentum_atol": 2.320235203494106e+16,
+                "provenance": "rigid-solid-equivalent; initial-only SHA256=733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+                "quaternion": [
+                  0.9797949729545545,
+                  -0.012346401107930663,
+                  0.005320572591589339,
+                  -0.19955217077236545
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 2.0
+          },
+          {
+            "angular_momentum": [
+              8.225989249943257e+41,
+              2.606650046260311e+41,
+              3.131350266885657e+43
+            ],
+            "backend": "rust",
+            "bodies": 10,
+            "center_of_mass": [
+              -127616.77278617024,
+              -13954.088590439409,
+              13505.046341037378
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; one dynamic Q2 figure; no tides/EIH",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              -1.0938298266570166e+19,
+              -3.0777159554373132e+19,
+              3.702043480003632e+19
+            ],
+            "energy_budget_residual_joules": 7.378697629483821e+19,
+            "energy_joules": -1.9806413329290256e+35,
+            "epoch_jd_tdb": 2461321.5000462965,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              1.0938298266570166e+19,
+              3.0777159554373132e+19,
+              -3.702043480003632e+19
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              -4.037783439657757e+25,
+              -4.131430280896052e+25,
+              -9.291112471265115e+24
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": {
+              "center": "Solar System Barycenter",
+              "dataset_sha256": "d58227299b10b217246aa5c63f33da51b0fd331b5c7a75bee400d577d6d1f702",
+              "ephemeris": "DE441",
+              "epoch_jd_tdb": 2461321.5,
+              "frame": "Ecliptic J2000",
+              "gm_sha256": "169cfed3b0927e73929d0a1b5c931f9afb5167a83b921064127ffc54a673df0c"
+            },
+            "physics": "newtonian",
+            "relative_pair": [
+              "Earth",
+              "Moon"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  3.419154243970605e+27,
+                  5.290449337519397e+27,
+                  2.3193799730205082e+29
+                ],
+                "body": "Moon",
+                "figure": {
+                  "bounding_radius": 1800000.0,
+                  "mass": 7.345789248996225e+22,
+                  "moments": [
+                    8.71174869368716e+34,
+                    8.71373927015286e+34,
+                    8.71725356622506e+34
+                  ]
+                },
+                "momentum_atol": 2.320235203494106e+16,
+                "provenance": "rigid-solid-equivalent; initial-only SHA256=733d91c85c47f991fa7b39dcf66b61efcf62e0990ab74dbf7756af797a4081ba",
+                "quaternion": [
+                  0.979795504056377,
+                  -0.01234638894589232,
+                  0.005320607032697102,
+                  -0.19954956289531237
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 4.0
+          }
+        ],
+        "same_packet_restart_exact": true
+      },
+      {
+        "backend": "python",
+        "base_counter_kind": "measured401instrumentation",
+        "base_counters": {
+          "RHS": 132,
+          "native_calls": 0,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            }
+          ]
+        },
+        "candidate_counters": {
+          "RHS": 132,
+          "native_calls": 0,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            }
+          ]
+        },
+        "case": "two",
+        "checkpoint_exact": true,
+        "common_counters_equal": true,
+        "dimensions": {
+          "S": [
+            3,
+            2,
+            3
+          ],
+          "p": [
+            3,
+            2,
+            3
+          ],
+          "q": [
+            3,
+            2,
+            4
+          ],
+          "v": [
+            3,
+            2,
+            3
+          ]
+        },
+        "exact_p_v_q_S": true,
+        "full_payload_exact": true,
+        "historical_RHS_nfev_comparison": "MEASURED_EXACT",
+        "numerical_diagnostics": [
+          {
+            "angular_momentum": [
+              2920112604520072.0,
+              -6.299987616209816e+17,
+              5.724531484419811e+18
+            ],
+            "backend": "python",
+            "bodies": 2,
+            "center_of_mass": [
+              99.99999999999977,
+              -200.0,
+              50.0
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              0.0,
+              -320521321229.6167,
+              -278249969971.8105
+            ],
+            "dynamic_spin_torques_by_body": [
+              {
+                "body": "A",
+                "torque": [
+                  0.0,
+                  403550228471.2738,
+                  -318073227968.45776
+                ]
+              },
+              {
+                "body": "B",
+                "torque": [
+                  0.0,
+                  -724071549700.8905,
+                  39823257996.64728
+                ]
+              }
+            ],
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": 104883731775639.62,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              -0.0,
+              320521321229.6167,
+              278249969971.8105
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              24000000000000.0,
+              -11999999999999.875,
+              6000000000000.008
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": [
+              "A",
+              "B"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  -4.0585934316258856e+16,
+                  -2.317171873231913e+17,
+                  5.545808570755985e+17
+                ],
+                "body": "A",
+                "figure": {
+                  "bounding_radius": 1000.0,
+                  "mass": 1000000000000000.0,
+                  "moments": [
+                    2e+20,
+                    2.5e+20,
+                    3e+20
+                  ]
+                },
+                "momentum_atol": 60241.18192731614,
+                "provenance": "synthetic rigid Q2 validation380:A",
+                "quaternion": [
+                  0.9639684818261637,
+                  0.148194058982302,
+                  -0.09879603932153468,
+                  0.19759207864306935
+                ],
+                "quaternion_atol": 1e-13
+              },
+              {
+                "angular_momentum": [
+                  4.4106046920778936e+16,
+                  1118425702209694.2,
+                  6.635062734421343e+16
+                ],
+                "body": "B",
+                "figure": {
+                  "bounding_radius": 900.0,
+                  "mass": 200000000000000.0,
+                  "moments": [
+                    3e+19,
+                    4e+19,
+                    5e+19
+                  ]
+                },
+                "momentum_atol": 7968.061244744546,
+                "provenance": "synthetic rigid Q2 validation380:B",
+                "quaternion": [
+                  0.9757238626644188,
+                  -0.12398684771443423,
+                  0.1735815868002079,
+                  0.04959473908577369
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 0.0
+          },
+          {
+            "angular_momentum": [
+              2920112604520072.0,
+              -6.299987616209818e+17,
+              5.724531484419812e+18
+            ],
+            "backend": "python",
+            "bodies": 2,
+            "center_of_mass": [
+              100.04000000000019,
+              -200.02000000000004,
+              50.01
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              144835709.61430508,
+              -318496517248.4211,
+              -284240428471.4877
+            ],
+            "dynamic_spin_torques_by_body": [
+              {
+                "body": "A",
+                "torque": [
+                  -161398068.89229453,
+                  404888552380.50214,
+                  -320387815901.6835
+                ]
+              },
+              {
+                "body": "B",
+                "torque": [
+                  306233778.5065996,
+                  -723385069628.9232,
+                  36147387430.19582
+                ]
+              }
+            ],
+            "energy_budget_residual_joules": 0.28125,
+            "energy_joules": 104883731775639.9,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              -144835709.61430508,
+              318496517248.4211,
+              284240428471.4877
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              24000000000000.0,
+              -11999999999999.875,
+              6000000000000.008
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": [
+              "A",
+              "B"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  -4.058593447749347e+16,
+                  -2.3171637888210736e+17,
+                  5.5458021861121146e+17
+                ],
+                "body": "A",
+                "figure": {
+                  "bounding_radius": 1000.0,
+                  "mass": 1000000000000000.0,
+                  "moments": [
+                    2e+20,
+                    2.5e+20,
+                    3e+20
+                  ]
+                },
+                "momentum_atol": 60241.18192731614,
+                "provenance": "synthetic rigid Q2 validation380:A",
+                "quaternion": [
+                  0.9635367601049792,
+                  0.14813216250039893,
+                  -0.09926516372987455,
+                  0.1994998787694773
+                ],
+                "quaternion_atol": 1e-13
+              },
+              {
+                "angular_momentum": [
+                  4.410604722706935e+16,
+                  1116978244489011.9,
+                  6.6350703314250104e+16
+                ],
+                "body": "B",
+                "figure": {
+                  "bounding_radius": 900.0,
+                  "mass": 200000000000000.0,
+                  "moments": [
+                    3e+19,
+                    4e+19,
+                    5e+19
+                  ]
+                },
+                "momentum_atol": 7968.061244744546,
+                "provenance": "synthetic rigid Q2 validation380:B",
+                "quaternion": [
+                  0.9758092109280065,
+                  -0.12311583645795557,
+                  0.17330965533554776,
+                  0.05101605677424199
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 2.0
+          },
+          {
+            "angular_momentum": [
+              2920112604520072.0,
+              -6.299987616209818e+17,
+              5.724531484419814e+18
+            ],
+            "backend": "python",
+            "bodies": 2,
+            "center_of_mass": [
+              100.08000000000061,
+              -200.04000000000002,
+              50.019999999999996
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              288354330.08145386,
+              -316478966735.02734,
+              -290207070045.43964
+            ],
+            "dynamic_spin_torques_by_body": [
+              {
+                "body": "A",
+                "torque": [
+                  -323769076.19854575,
+                  406213030018.87366,
+                  -322682281422.2149
+                ]
+              },
+              {
+                "body": "B",
+                "torque": [
+                  612123406.2799996,
+                  -722691996753.901,
+                  32475211376.77529
+                ]
+              }
+            ],
+            "energy_budget_residual_joules": 0.328125,
+            "energy_joules": 104883731775639.95,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              -288354330.08145386,
+              316478966735.02734,
+              290207070045.43964
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              24000000000000.0,
+              -11999999999999.875,
+              6000000000000.004
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": [
+              "A",
+              "B"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  -4.058593496249976e+16,
+                  -2.3171556777821264e+17,
+                  5.545795755377499e+17
+                ],
+                "body": "A",
+                "figure": {
+                  "bounding_radius": 1000.0,
+                  "mass": 1000000000000000.0,
+                  "moments": [
+                    2e+20,
+                    2.5e+20,
+                    3e+20
+                  ]
+                },
+                "momentum_atol": 60241.18192731614,
+                "provenance": "synthetic rigid Q2 validation380:A",
+                "quaternion": [
+                  0.9631011217502442,
+                  0.14806982644484362,
+                  -0.09973369007971386,
+                  0.2014069185581731
+                ],
+                "quaternion_atol": 1e-13
+              },
+              {
+                "angular_momentum": [
+                  4.4106048145484616e+16,
+                  1115532166326386.2,
+                  6.635077193622617e+16
+                ],
+                "body": "B",
+                "figure": {
+                  "bounding_radius": 900.0,
+                  "mass": 200000000000000.0,
+                  "moments": [
+                    3e+19,
+                    4e+19,
+                    5e+19
+                  ]
+                },
+                "momentum_atol": 7968.061244744546,
+                "provenance": "synthetic rigid Q2 validation380:B",
+                "quaternion": [
+                  0.9758916735173144,
+                  -0.12224401391009991,
+                  0.17303811206550246,
+                  0.052437147095634865
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 4.0
+          }
+        ],
+        "same_packet_restart_exact": true
+      },
+      {
+        "backend": "rust",
+        "base_counter_kind": "measured401instrumentation",
+        "base_counters": {
+          "RHS": 132,
+          "native_calls": 132,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            }
+          ]
+        },
+        "candidate_counters": {
+          "RHS": 132,
+          "native_calls": 132,
+          "nfev": 132,
+          "solver_calls": 3,
+          "solves": [
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            },
+            {
+              "method": "RotationDOP853",
+              "nfev": 44,
+              "rtol": 1e-11
+            }
+          ]
+        },
+        "case": "two",
+        "checkpoint_exact": true,
+        "common_counters_equal": true,
+        "dimensions": {
+          "S": [
+            3,
+            2,
+            3
+          ],
+          "p": [
+            3,
+            2,
+            3
+          ],
+          "q": [
+            3,
+            2,
+            4
+          ],
+          "v": [
+            3,
+            2,
+            3
+          ]
+        },
+        "exact_p_v_q_S": true,
+        "full_payload_exact": true,
+        "historical_RHS_nfev_comparison": "MEASURED_EXACT",
+        "numerical_diagnostics": [
+          {
+            "angular_momentum": [
+              2920112604520072.0,
+              -6.299987616209816e+17,
+              5.724531484419811e+18
+            ],
+            "backend": "rust",
+            "bodies": 2,
+            "center_of_mass": [
+              99.99999999999977,
+              -200.0,
+              50.0
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              0.0,
+              -320521321229.6167,
+              -278249969971.8105
+            ],
+            "dynamic_spin_torques_by_body": [
+              {
+                "body": "A",
+                "torque": [
+                  0.0,
+                  403550228471.2738,
+                  -318073227968.45776
+                ]
+              },
+              {
+                "body": "B",
+                "torque": [
+                  0.0,
+                  -724071549700.8905,
+                  39823257996.64728
+                ]
+              }
+            ],
+            "energy_budget_residual_joules": 0.0,
+            "energy_joules": 104883731775639.62,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              -0.0,
+              320521321229.6167,
+              278249969971.8105
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              24000000000000.0,
+              -11999999999999.875,
+              6000000000000.008
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": [
+              "A",
+              "B"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  -4.0585934316258856e+16,
+                  -2.317171873231913e+17,
+                  5.545808570755985e+17
+                ],
+                "body": "A",
+                "figure": {
+                  "bounding_radius": 1000.0,
+                  "mass": 1000000000000000.0,
+                  "moments": [
+                    2e+20,
+                    2.5e+20,
+                    3e+20
+                  ]
+                },
+                "momentum_atol": 60241.18192731614,
+                "provenance": "synthetic rigid Q2 validation380:A",
+                "quaternion": [
+                  0.9639684818261637,
+                  0.148194058982302,
+                  -0.09879603932153468,
+                  0.19759207864306935
+                ],
+                "quaternion_atol": 1e-13
+              },
+              {
+                "angular_momentum": [
+                  4.4106046920778936e+16,
+                  1118425702209694.2,
+                  6.635062734421343e+16
+                ],
+                "body": "B",
+                "figure": {
+                  "bounding_radius": 900.0,
+                  "mass": 200000000000000.0,
+                  "moments": [
+                    3e+19,
+                    4e+19,
+                    5e+19
+                  ]
+                },
+                "momentum_atol": 7968.061244744546,
+                "provenance": "synthetic rigid Q2 validation380:B",
+                "quaternion": [
+                  0.9757238626644188,
+                  -0.12398684771443423,
+                  0.1735815868002079,
+                  0.04959473908577369
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 0.0
+          },
+          {
+            "angular_momentum": [
+              2920112604520072.0,
+              -6.299987616209818e+17,
+              5.724531484419812e+18
+            ],
+            "backend": "rust",
+            "bodies": 2,
+            "center_of_mass": [
+              100.04000000000019,
+              -200.02000000000004,
+              50.01
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              144835709.61430508,
+              -318496517248.4211,
+              -284240428471.4877
+            ],
+            "dynamic_spin_torques_by_body": [
+              {
+                "body": "A",
+                "torque": [
+                  -161398068.89229453,
+                  404888552380.50214,
+                  -320387815901.6835
+                ]
+              },
+              {
+                "body": "B",
+                "torque": [
+                  306233778.5065996,
+                  -723385069628.9232,
+                  36147387430.19582
+                ]
+              }
+            ],
+            "energy_budget_residual_joules": 0.28125,
+            "energy_joules": 104883731775639.9,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              -144835709.61430508,
+              318496517248.4211,
+              284240428471.4877
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              24000000000000.0,
+              -11999999999999.875,
+              6000000000000.008
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": [
+              "A",
+              "B"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  -4.058593447749347e+16,
+                  -2.3171637888210736e+17,
+                  5.5458021861121146e+17
+                ],
+                "body": "A",
+                "figure": {
+                  "bounding_radius": 1000.0,
+                  "mass": 1000000000000000.0,
+                  "moments": [
+                    2e+20,
+                    2.5e+20,
+                    3e+20
+                  ]
+                },
+                "momentum_atol": 60241.18192731614,
+                "provenance": "synthetic rigid Q2 validation380:A",
+                "quaternion": [
+                  0.9635367601049792,
+                  0.14813216250039893,
+                  -0.09926516372987455,
+                  0.1994998787694773
+                ],
+                "quaternion_atol": 1e-13
+              },
+              {
+                "angular_momentum": [
+                  4.410604722706935e+16,
+                  1116978244489011.9,
+                  6.6350703314250104e+16
+                ],
+                "body": "B",
+                "figure": {
+                  "bounding_radius": 900.0,
+                  "mass": 200000000000000.0,
+                  "moments": [
+                    3e+19,
+                    4e+19,
+                    5e+19
+                  ]
+                },
+                "momentum_atol": 7968.061244744546,
+                "provenance": "synthetic rigid Q2 validation380:B",
+                "quaternion": [
+                  0.9758092109280065,
+                  -0.12311583645795557,
+                  0.17330965533554776,
+                  0.05101605677424199
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 2.0
+          },
+          {
+            "angular_momentum": [
+              2920112604520072.0,
+              -6.299987616209818e+17,
+              5.724531484419814e+18
+            ],
+            "backend": "rust",
+            "bodies": 2,
+            "center_of_mass": [
+              100.08000000000061,
+              -200.04000000000002,
+              50.019999999999996
+            ],
+            "conservation_scope": "Newtonian orbital+rigid-spin energy, linear momentum and total angular momentum; two dynamic Q2 figures; M-Q only; Q2-Q2 omitted; no tides/EIH/contacts",
+            "dissipated_energy_joules": 0.0,
+            "dynamic_spin_torque": [
+              288354330.08145386,
+              -316478966735.02734,
+              -290207070045.43964
+            ],
+            "dynamic_spin_torques_by_body": [
+              {
+                "body": "A",
+                "torque": [
+                  -323769076.19854575,
+                  406213030018.87366,
+                  -322682281422.2149
+                ]
+              },
+              {
+                "body": "B",
+                "torque": [
+                  612123406.2799996,
+                  -722691996753.901,
+                  32475211376.77529
+                ]
+              }
+            ],
+            "energy_budget_residual_joules": 0.328125,
+            "energy_joules": 104883731775639.95,
+            "epoch_jd_tdb": null,
+            "error_control": "per-body",
+            "events": 0,
+            "figure_orbital_torque": [
+              -288354330.08145386,
+              316478966735.02734,
+              290207070045.43964
+            ],
+            "figures": [],
+            "halted": false,
+            "integrator": "dop853",
+            "model_energy_offset_joules": 0.0,
+            "momentum": [
+              24000000000000.004,
+              -11999999999999.875,
+              6000000000000.004
+            ],
+            "orbital_angular_momentum_conserved": false,
+            "orientation_power_watts": 0.0,
+            "orientation_work_joules": 0.0,
+            "origin": null,
+            "physics": "newtonian",
+            "relative_pair": [
+              "A",
+              "B"
+            ],
+            "rotations": [
+              {
+                "angular_momentum": [
+                  -4.058593496249976e+16,
+                  -2.3171556777821264e+17,
+                  5.545795755377499e+17
+                ],
+                "body": "A",
+                "figure": {
+                  "bounding_radius": 1000.0,
+                  "mass": 1000000000000000.0,
+                  "moments": [
+                    2e+20,
+                    2.5e+20,
+                    3e+20
+                  ]
+                },
+                "momentum_atol": 60241.18192731614,
+                "provenance": "synthetic rigid Q2 validation380:A",
+                "quaternion": [
+                  0.9631011217502442,
+                  0.14806982644484362,
+                  -0.09973369007971386,
+                  0.2014069185581731
+                ],
+                "quaternion_atol": 1e-13
+              },
+              {
+                "angular_momentum": [
+                  4.4106048145484616e+16,
+                  1115532166326386.2,
+                  6.635077193622617e+16
+                ],
+                "body": "B",
+                "figure": {
+                  "bounding_radius": 900.0,
+                  "mass": 200000000000000.0,
+                  "moments": [
+                    3e+19,
+                    4e+19,
+                    5e+19
+                  ]
+                },
+                "momentum_atol": 7968.061244744546,
+                "provenance": "synthetic rigid Q2 validation380:B",
+                "quaternion": [
+                  0.9758916735173144,
+                  -0.12224401391009991,
+                  0.17303811206550246,
+                  0.052437147095634865
+                ],
+                "quaternion_atol": 1e-13
+              }
+            ],
+            "time_seconds": 4.0
+          }
+        ],
+        "same_packet_restart_exact": true
+      }
+    ],
+    "presentation_delta": "PRESENTATION_ONLY_DELTA_CONFIRMED_NOT_ACCURACY_QUALIFICATION",
+    "recovered_cases": 2,
+    "release_readiness": "NO-GO",
+    "source_arrays_and_checkpoints_unchanged": true,
+    "status": "PASS_EXACT_SIX_STATE_CONTRASTS_AND_KNOWN_COUNTER_CONTRACT"
+  },
+  "run_ownership": {
+    "base__one__python": {
+      "origin": "new401run",
+      "complete_SHA256": "eeaaff6b195b96dacfd501933af3a818aa8acaf8423886bb9f985b52a3708916",
+      "binding_SHA256": "e446b13b95c80d7354236febec6ecf354072443151f18c5b38ec0d9830a118a8"
+    },
+    "base__one__rust": {
+      "origin": "new401run",
+      "complete_SHA256": "185af2131a322717980c075c625b71ef0273bc89e556463c038b3094fa01c388",
+      "binding_SHA256": "caef87c8d9e230ad2a923428e0085cfb5cb170be0258e6666f1ad54a49a52180"
+    },
+    "base__point__python": {
+      "origin": "authenticated400archive",
+      "complete_SHA256": null,
+      "binding_SHA256": "95c28915eccd7d731f7a94c32c63750d3e7c21c6422e6a0257ef0424b422f48d"
+    },
+    "base__point__rust": {
+      "origin": "authenticated400archive",
+      "complete_SHA256": null,
+      "binding_SHA256": "899d7da8e59523cad986fd2b6c8d097e487ea6d5e371d23e64af5f82eb4a188c"
+    },
+    "base__two__python": {
+      "origin": "new401run",
+      "complete_SHA256": "2d705d16402bd1ed8927e14cd64a8d2cf976de4fd5bee2ea664f4f7a01fdf1c4",
+      "binding_SHA256": "71ead77cada8fe14d6120fc179c195b97b0f686661ed10b6d236bd765b000e53"
+    },
+    "base__two__rust": {
+      "origin": "new401run",
+      "complete_SHA256": "a8fd452f4793b6762e748bf3be8ea7ece2e6124b14a3a625be8f9f29a6384b4d",
+      "binding_SHA256": "2141715632601a34e865f14e1cea21f0826957964a2536001e75922eb6d9c3cd"
+    },
+    "candidate__one__python": {
+      "origin": "new401run",
+      "complete_SHA256": "980b58a46a56b865842255e32bec2ddc1a6f9c72336d5df384af9b4507848c41",
+      "binding_SHA256": "545f39dcdfb966e705e831b503a06ecb87c339eefe5070ac4806a36d50ce86bb"
+    },
+    "candidate__one__rust": {
+      "origin": "new401run",
+      "complete_SHA256": "2f3b51db11367b8b1d3df53089e99e82e58f143e07f7e74dbb85fa874d7108fe",
+      "binding_SHA256": "b8cc0733aef43686578fbb41d1ed8993b7c8b7365b4e278d68b9bd232bac677c"
+    },
+    "candidate__point__python": {
+      "origin": "new401run",
+      "complete_SHA256": "40bb5b1dd96dbc7596c2572fda41a6eab955d89dd1a1bb127de3abd0d92fea45",
+      "binding_SHA256": "1f8cd3f374c7d2626a24eea21c8587ac52fe83e9f1c89f44eb5807385edb970a"
+    },
+    "candidate__point__rust": {
+      "origin": "new401run",
+      "complete_SHA256": "c09314c4329e1f34e32bda23dc65f0d65934441fe1c99cb3a8f43cbaf4206687",
+      "binding_SHA256": "5011a27ae0bb7b61ce61b5550491a799aa795183e13f8d0f102e9a58ee96163c"
+    },
+    "candidate__two__python": {
+      "origin": "new401run",
+      "complete_SHA256": "f0c723357542b0d481daebc21ff7176bfb443f4962db61ddde2bad885abe07af",
+      "binding_SHA256": "53f9d9c98305c768d056fb951b5d6ac2fcdc6a2189e6bd17d4dd955dd936311c"
+    },
+    "candidate__two__rust": {
+      "origin": "new401run",
+      "complete_SHA256": "70cc2defc4966cd70e6b9dad8de2581226e6756d125bd920ab36e52a1268c94f",
+      "binding_SHA256": "33fa808ace0b6c3b71754b577bb9dcccbfe00f5ee38c6efead638eb8a8448958"
+    }
+  },
+  "recovery": {
+    "archive_binding": {
+      "archive_SHA256": "bcccf57600fa12057599c816cd7d8bd064015f4ae74af055b62c70d1e76b921f",
+      "base_commit": "f723a2162b4e115378959e244f428529be2d4516",
+      "candidate_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+      "counter_scope": "3 source-level advance calls, not a historical measured nfev/RHS count; point DOP path must independently establish one solve per advance",
+      "helper_SHA256": "68dc4b4f123982fa4d0436e17eaf36ad8dc24fc4d1daaa0e9119e03fd0f9689d",
+      "statically_proven_per_completed_case_advance_calls": 3
+    },
+    "member_SHA256": {
+      "backup-infrastructure/archive400.py": "fdba08520c85ff23e187ca7049a880a00485e02ac1e9af35c954ca1bceb1870c",
+      "backup-infrastructure/run400.py": "0c59f2ff3cb44a20531c323b50c32f4c583f739c14147911ec73573756787a6a",
+      "qualification400/before-corrected-resources.json": "472eacab42ec66c45aca138264cc5393998c6e03625367ffa3de59b16e98c74f",
+      "qualification400/before-launch-resources.json": "a797e4488dee35f9ccabc4b9e0a81da84fb30ef2f0c6c4140c93890ddd462c7f",
+      "qualification400/before.xml": "465bf517d2f8ff8c9e43339f9a240751e7e4e8136338ef270c3cc7550b8a3f16",
+      "qualification400/build-report.py": "57903a59ca738089946928ac9d12d0e320098d6dbeeb8c86f2bfce9893427b21",
+      "qualification400/executed-check_candidate400.py": "68dc4b4f123982fa4d0436e17eaf36ad8dc24fc4d1daaa0e9119e03fd0f9689d",
+      "qualification400/execution-plan.json": "3cceb4680f981fe724ce5b98d1d9e4054c223c67de9a785e17ffa255f0209100",
+      "qualification400/final-admission.json": "ab220ee7d87f77200b24c2f28cfaee648804453c7ba0e424e5f9e78a80d69165",
+      "qualification400/final-source-check-resources.json": "17e28cf3921c326ea4c2a303cb560b53ffbd4f0148593605be6ab002e8020003",
+      "qualification400/final/base/point-python-checkpoint.json": "e5960f7ed86b9626d291ca978eadba3b2a771ca3a7b69cd80148b0d4d50809ec",
+      "qualification400/final/base/point-python.json": "fbd36907aaea3273137e04bebafbb4869240a585e806b43f7ca9b194f892ed53",
+      "qualification400/final/base/point-rust-checkpoint.json": "b151e364f8de895f4869c3f3ef5176d235b095aa457f5af6d76e56a89e6d0c2a",
+      "qualification400/final/base/point-rust.json": "fe3f0d364a7766c5d1d14e1ecd4583311cd1f95a156416f31da177f66b8f483b",
+      "qualification400/guard-before-corrected/stdout.log": "71c62951672b48c3268a1252ee715b7308ca27e856a29307456c008fc6f24717",
+      "qualification400/guard-before-corrected/supervisor.json": "841dbbfd136031846a575c95e715c0b66a93da5131f326d1a540b8b907197a03",
+      "qualification400/guard-final-source-check/stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "qualification400/guard-final-source-check/supervisor.json": "bd8aa6ea9b48bd4257361b868f5de52d63342922cc8362a19838fde56fe8ff04",
+      "qualification400/guard-targeted-v1/stdout.log": "99d31336eba65d49a7000c75b24030130bb1df239f1d7d4e1f828a6229e74c3f",
+      "qualification400/guard-targeted-v1/supervisor.json": "4ed16cd12850476d987c1c67c3889389d295f1fa45ab882657c06d5a566cc0c9",
+      "qualification400/pytest-runtime.py": "8b1f442c17f4dab081a34ea45d94ecc8b260e364b6f167ab7154424d8581c984",
+      "qualification400/report-core.json": "2d95a4edf2592594e8c29aa3192646db32a35e8b97cd2465ed400bbdb050e486",
+      "qualification400/run.py": "e4cdc79a122ea17bb04224dfb824a96c765520481141fdc331c1077e335ec710",
+      "qualification400/targeted-v1-resources.json": "d04162b5d8df3a68f6c04cea46e8593bdb8cdfdc9932e2c3ef215ae6872876c7",
+      "qualification400/targeted-v1.xml": "7d67eeac23069796b75d0c86f798c8b86b10d3d90b8c47fb69980a5f6e8d2fa7",
+      "qualification400/test-paths-addendum.json": "1936dae2fd21e800bb199f738f8d92eca08f75907f7263f2359d3c9619b410a2",
+      "unpublished-tools-at-archive/scripts/q2_presentation_delta400.py": "ea7fc64c533fdae636cea17234d3561837b7b79e74206a971b34a884443ec55c",
+      "unpublished-tools-at-archive/scripts/qualification400/test_gui.py": "4666451ee400c4a0b02e77cd54aa21718ee2e1df0ad7f2de2d4f456a32001b6c",
+      "unpublished-tools-at-archive/scripts/qualification400/test_interface.py": "6c4066e2cedb40f4a07b3d65f5a97c31614ab4e364448b4b1930e0372e5125ff",
+      "unpublished-tools-at-archive/tests/test_q2_delta400.py": "7a4ae3a84eeab405a3119f0fb1e0926dc28d7e54d39f406f81c5b990f30f3564"
+    },
+    "old400_results_not_modified": true,
+    "previous400_RESOURCE_STOP": {
+      "charged_CPU_seconds": 7.25,
+      "charged_active_wall_seconds": 6.140567099995678,
+      "name": "final-source-check",
+      "record": {
+        "complete": false,
+        "disk_bytes": 1229976,
+        "error": null,
+        "exit_code": 15,
+        "last_sample": {
+          "disk": 1229976,
+          "elapsed": 5.6014078999869525,
+          "parent_cpu": 2.78125,
+          "private_tree": 163356672,
+          "rss_tree": 140267520,
+          "worker_cpu": 3.171875
+        },
+        "limit_reason": "stage-CPU",
+        "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+        "parent_interjob_CPU_excluded": true,
+        "parent_supervision_CPU_seconds": 3.125,
+        "peak_private_tree_sampled": 163356672,
+        "peak_rss_tree_sampled": 147468288,
+        "poll_seconds": 0.05,
+        "processes": [
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794090121.7080448,
+            "pid": 19604,
+            "role": "launcher"
+          },
+          {
+            "CPU_seconds": 0.109375,
+            "creation_time": 1794090121.7151687,
+            "pid": 5960,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 0.015625,
+            "creation_time": 1794090121.8970957,
+            "pid": 2016,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "CPU_seconds": 3.3125,
+            "creation_time": 1794090121.9069932,
+            "pid": 24156,
+            "role": "analyzer_or_audit_descendant"
+          }
+        ],
+        "root_final_CPU_seconds": 0.015625,
+        "samples": 27,
+        "wall_seconds": 5.886507999995956,
+        "worker_CPU_seconds": 3.453125
+      },
+      "tail_allowance_CPU_seconds": 0.25,
+      "tail_allowance_wall_seconds": 0.25,
+      "total_CPU_seconds": 96.3125,
+      "total_active_wall_seconds": 76.21470419998514
+    },
+    "rows": {
+      "base__point__python": {
+        "archive_member": "qualification400/final/base/point-python.json",
+        "backend": "python",
+        "checkpoint_SHA256": "e5960f7ed86b9626d291ca978eadba3b2a771ca3a7b69cd80148b0d4d50809ec",
+        "checkpoint_member": "qualification400/final/base/point-python-checkpoint.json",
+        "frames": 3,
+        "historical_nfev": null,
+        "historical_solver_calls_measured": null,
+        "inferred_source_level_advance_calls": 3,
+        "initial_SHA256": "dee303bc28f296dba7c8c18f66aabee0cfb8c2139fd0da0f3ecd99d5bd88c64d",
+        "payload_SHA256": "fbd36907aaea3273137e04bebafbb4869240a585e806b43f7ca9b194f892ed53",
+        "physical_accuracy_certified": false,
+        "provenance": {
+          "archive_SHA256": "bcccf57600fa12057599c816cd7d8bd064015f4ae74af055b62c70d1e76b921f",
+          "base_commit": "f723a2162b4e115378959e244f428529be2d4516",
+          "candidate_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+          "counter_scope": "3 source-level advance calls, not a historical measured nfev/RHS count; point DOP path must independently establish one solve per advance",
+          "helper_SHA256": "68dc4b4f123982fa4d0436e17eaf36ad8dc24fc4d1daaa0e9119e03fd0f9689d",
+          "statically_proven_per_completed_case_advance_calls": 3
+        },
+        "raw_binary64_SHA256": "be825817ae7cf5fb9a8d3a9009bda265ac9b6929c28b3fe858f3625721e6137f",
+        "recorded_native_calls": 0,
+        "source": {
+          "actual_import": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395\\src\\solar_simulator\\__init__.py",
+          "commit": "f723a2162b4e115378959e244f428529be2d4516",
+          "compiled_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+          "dependency_origins": {
+            "numpy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+            "scipy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\scipy\\__init__.py",
+            "solar_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\__init__.py"
+          },
+          "environment_LF_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+          "interpreter": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Scripts\\python.exe",
+          "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+          "prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+          "profile_kind": "source, not wheel/portable",
+          "role": "base",
+          "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395",
+          "source_package_map_SHA256": "5f29fe5d423a4de4934d54e44a668c8a1c71f6309f35538581a6b4a4c86114c6",
+          "tree": "b441aea60d6f291db10fd0a8d63f1829b8cd1794",
+          "versions": {
+            "application": "0.3.3",
+            "native": "0.3.3",
+            "numpy": "2.5.1",
+            "python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+            "scipy": "1.18.1"
+          }
+        },
+        "status": "AUTHENTICATED_HISTORICAL_POINT_INPUT_AND_RAW_STATE"
+      },
+      "base__point__rust": {
+        "archive_member": "qualification400/final/base/point-rust.json",
+        "backend": "rust",
+        "checkpoint_SHA256": "b151e364f8de895f4869c3f3ef5176d235b095aa457f5af6d76e56a89e6d0c2a",
+        "checkpoint_member": "qualification400/final/base/point-rust-checkpoint.json",
+        "frames": 3,
+        "historical_nfev": null,
+        "historical_solver_calls_measured": null,
+        "inferred_source_level_advance_calls": 3,
+        "initial_SHA256": "bed7811021a9273b35d343b49cbb22c8bedd12ddc7a6ee9387ca1ee42b0d698e",
+        "payload_SHA256": "fe3f0d364a7766c5d1d14e1ecd4583311cd1f95a156416f31da177f66b8f483b",
+        "physical_accuracy_certified": false,
+        "provenance": {
+          "archive_SHA256": "bcccf57600fa12057599c816cd7d8bd064015f4ae74af055b62c70d1e76b921f",
+          "base_commit": "f723a2162b4e115378959e244f428529be2d4516",
+          "candidate_commit": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+          "counter_scope": "3 source-level advance calls, not a historical measured nfev/RHS count; point DOP path must independently establish one solve per advance",
+          "helper_SHA256": "68dc4b4f123982fa4d0436e17eaf36ad8dc24fc4d1daaa0e9119e03fd0f9689d",
+          "statically_proven_per_completed_case_advance_calls": 3
+        },
+        "raw_binary64_SHA256": "42ef8c5f190fc86a873972fc5961d6baa3a8865f5edf951b0160c3c210698755",
+        "recorded_native_calls": 123,
+        "source": {
+          "actual_import": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395\\src\\solar_simulator\\__init__.py",
+          "commit": "f723a2162b4e115378959e244f428529be2d4516",
+          "compiled_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+          "dependency_origins": {
+            "numpy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+            "scipy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\scipy\\__init__.py",
+            "solar_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\__init__.py"
+          },
+          "environment_LF_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+          "interpreter": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Scripts\\python.exe",
+          "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+          "prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+          "profile_kind": "source, not wheel/portable",
+          "role": "base",
+          "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395",
+          "source_package_map_SHA256": "5f29fe5d423a4de4934d54e44a668c8a1c71f6309f35538581a6b4a4c86114c6",
+          "tree": "b441aea60d6f291db10fd0a8d63f1829b8cd1794",
+          "versions": {
+            "application": "0.3.3",
+            "native": "0.3.3",
+            "numpy": "2.5.1",
+            "python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+            "scipy": "1.18.1"
+          }
+        },
+        "status": "AUTHENTICATED_HISTORICAL_POINT_INPUT_AND_RAW_STATE"
+      }
+    },
+    "source": {
+      "actual_import": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395\\src\\solar_simulator\\__init__.py",
+      "commit": "f723a2162b4e115378959e244f428529be2d4516",
+      "compiled_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+      "dependency_origins": {
+        "numpy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+        "scipy": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\scipy\\__init__.py",
+        "solar_native": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\solar_native\\__init__.py"
+      },
+      "environment_LF_SHA256": "d1a2e827e6edcf43ceedacbfc3f62ad72b624c2f0f03332326aa0cf6185695c7",
+      "interpreter": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Scripts\\python.exe",
+      "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+      "prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+      "profile_kind": "source, not wheel/portable",
+      "role": "base",
+      "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-395",
+      "source_package_map_SHA256": "5f29fe5d423a4de4934d54e44a668c8a1c71f6309f35538581a6b4a4c86114c6",
+      "tree": "b441aea60d6f291db10fd0a8d63f1829b8cd1794",
+      "versions": {
+        "application": "0.3.3",
+        "native": "0.3.3",
+        "numpy": "2.5.1",
+        "python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+        "scipy": "1.18.1"
+      }
+    },
+    "status": "RECOVERED_TWO_AUTHENTICATED_CASES_NO_INTEGRATION"
+  },
+  "resources": {
+    "charged_CPU_seconds": 53.6875,
+    "charged_active_wall_seconds": 44.45823190000374,
+    "peak_worker_private_sampled": 161550336,
+    "peak_worker_RSS_sampled": 145510400,
+    "current_stage_files_bytes": 3012458,
+    "measured_worker_CPU_seconds": 36.765625,
+    "charged_parent_and_tail_CPU_seconds": 16.921875,
+    "phase_receipts": {
+      "adapter-faults-resources.json": {
+        "charged_CPU_seconds": 1.625,
+        "charged_active_wall_seconds": 1.3243184999737423,
+        "launch_SHA256": "a8f0b0e4d377a3d601d291be008c04df1b9d179de04b75fe7dbca31b7b969c9d",
+        "name": "adapter-faults",
+        "record": {
+          "complete": true,
+          "disk_bytes": 913145,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 913145,
+            "elapsed": 1.0137289999984205,
+            "parent_cpu": 0.265625,
+            "private_tree": 0,
+            "rss_tree": 0,
+            "worker_cpu": 0.875
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 0.265625,
+          "peak_private_tree_sampled": 70819840,
+          "peak_rss_tree_sampled": 59518976,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147492.078571,
+              "pid": 3952,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 0.953125,
+              "creation_time": 1794147492.085368,
+              "pid": 19496,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 16,
+          "wall_seconds": 1.0715455999888945,
+          "worker_CPU_seconds": 0.953125
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 20.6875,
+        "total_active_wall_seconds": 18.67686320003122
+      },
+      "base-runs-resources.json": {
+        "charged_CPU_seconds": 6.75,
+        "charged_active_wall_seconds": 5.48862519999966,
+        "launch_SHA256": "33b71f7a8d9119cb6ae11685d3e91db901ea2a01a198ffb75c3312bddc520dbc",
+        "name": "base-runs",
+        "record": {
+          "complete": true,
+          "disk_bytes": 1025733,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 1025733,
+            "elapsed": 5.170364100020379,
+            "parent_cpu": 1.484375,
+            "private_tree": 120299520,
+            "rss_tree": 98500608,
+            "worker_cpu": 4.765625
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 1.5,
+          "peak_private_tree_sampled": 161550336,
+          "peak_rss_tree_sampled": 120184832,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147557.4136195,
+              "pid": 14536,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 4.71875,
+              "creation_time": 1794147557.4203277,
+              "pid": 16160,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147557.548373,
+              "pid": 18588,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147557.5865104,
+              "pid": 23168,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794147557.5966544,
+              "pid": 30392,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147560.536418,
+              "pid": 16124,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147560.5475688,
+              "pid": 8744,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 73,
+          "wall_seconds": 5.235576900013257,
+          "worker_CPU_seconds": 4.828125
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 27.4375,
+        "total_active_wall_seconds": 24.16548840003088
+      },
+      "candidate-runs-resources.json": {
+        "charged_CPU_seconds": 6.96875,
+        "charged_active_wall_seconds": 5.410539100004826,
+        "launch_SHA256": "f3465ab122df163456b6670bc1bccb809606f10deb7d227b62b2a37ff03d02c4",
+        "name": "candidate-runs",
+        "record": {
+          "complete": true,
+          "disk_bytes": 1161594,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 1161594,
+            "elapsed": 5.079978199995821,
+            "parent_cpu": 1.625,
+            "private_tree": 117108736,
+            "rss_tree": 103481344,
+            "worker_cpu": 4.734375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 1.65625,
+          "peak_private_tree_sampled": 126455808,
+          "peak_rss_tree_sampled": 119230464,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147569.987726,
+              "pid": 4464,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 4.796875,
+              "creation_time": 1794147569.9944322,
+              "pid": 27252,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147570.1205587,
+              "pid": 31272,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147570.1313865,
+              "pid": 12780,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 67,
+          "wall_seconds": 5.157205399998929,
+          "worker_CPU_seconds": 4.828125
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 34.40625,
+        "total_active_wall_seconds": 29.576027500035707
+      },
+      "delta-fingerprint-resources.json": {
+        "charged_CPU_seconds": 5.03125,
+        "charged_active_wall_seconds": 4.422859700018307,
+        "launch_SHA256": "1f29c63b91b7bf48703dc0a8f87984ee8749c346d7dc76ba1cd61cc32fda0fdc",
+        "name": "delta-fingerprint",
+        "record": {
+          "complete": true,
+          "disk_bytes": 904953,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 904953,
+            "elapsed": 4.109459799976321,
+            "parent_cpu": 0.921875,
+            "private_tree": 81444864,
+            "rss_tree": 101904384,
+            "worker_cpu": 3.5625
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 0.921875,
+          "peak_private_tree_sampled": 108548096,
+          "peak_rss_tree_sampled": 120418304,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147442.9682224,
+              "pid": 29912,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 3.484375,
+              "creation_time": 1794147442.976028,
+              "pid": 24100,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794147443.1462512,
+              "pid": 12788,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147443.1558132,
+              "pid": 30260,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147443.2292368,
+              "pid": 29988,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147443.2753763,
+              "pid": 27460,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794147443.286888,
+              "pid": 6224,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147443.315196,
+              "pid": 13580,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147443.3693657,
+              "pid": 7032,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.046875,
+              "creation_time": 1794147443.3804662,
+              "pid": 3020,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147446.915094,
+              "pid": 2596,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147446.9246655,
+              "pid": 17936,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147446.961174,
+              "pid": 17264,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794147446.971599,
+              "pid": 4772,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 64,
+          "wall_seconds": 4.168961099989247,
+          "worker_CPU_seconds": 3.703125
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 19.0625,
+        "total_active_wall_seconds": 17.35254470005748
+      },
+      "fixed-test-resources.json": {
+        "charged_CPU_seconds": 3.671875,
+        "charged_active_wall_seconds": 3.1654593000130262,
+        "launch_SHA256": "58a2b94820a03021d04a62458656ccfb1d2a129a765be8fb05708eebc2bf7b3a",
+        "name": "fixed-test",
+        "record": {
+          "complete": true,
+          "disk_bytes": 344115,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 344115,
+            "elapsed": 2.8556960000132676,
+            "parent_cpu": 0.578125,
+            "private_tree": 124481536,
+            "rss_tree": 113082368,
+            "worker_cpu": 2.625
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 0.59375,
+          "peak_private_tree_sampled": 144347136,
+          "peak_rss_tree_sampled": 132321280,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147431.3821743,
+              "pid": 13420,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 2.640625,
+              "creation_time": 1794147431.3888924,
+              "pid": 17644,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 45,
+          "wall_seconds": 2.9128369000100065,
+          "worker_CPU_seconds": 2.65625
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 14.03125,
+        "total_active_wall_seconds": 12.929685000039171
+      },
+      "independent-audit-resources.json": {
+        "charged_CPU_seconds": 4.984375,
+        "charged_active_wall_seconds": 3.9164697999949567,
+        "launch_SHA256": "5170346d4910cf571954d3d4db1dcb8b8eefcf233afd354964ca4b23b166d426",
+        "name": "independent-audit",
+        "record": {
+          "complete": true,
+          "disk_bytes": 1225045,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 1225045,
+            "elapsed": 3.5882071999949403,
+            "parent_cpu": 1.203125,
+            "private_tree": 85626880,
+            "rss_tree": 91471872,
+            "worker_cpu": 3.25
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 1.234375,
+          "peak_private_tree_sampled": 126734336,
+          "peak_rss_tree_sampled": 119824384,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147688.7203193,
+              "pid": 1800,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 3.1875,
+              "creation_time": 1794147688.7271235,
+              "pid": 22176,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147689.1819427,
+              "pid": 23124,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794147689.1936443,
+              "pid": 14316,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147691.904555,
+              "pid": 644,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.078125,
+              "creation_time": 1794147691.91502,
+              "pid": 29452,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 45,
+          "wall_seconds": 3.66354589999537,
+          "worker_CPU_seconds": 3.3125
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 39.390625,
+        "total_active_wall_seconds": 33.492497300030664
+      },
+      "recovery-fixedpaths-resources.json": {
+        "charged_CPU_seconds": 5.421875,
+        "charged_active_wall_seconds": 5.64874730000156,
+        "launch_SHA256": "9ead9d729f7af5f92d2237cbf994ae311714262311a80da346b528643ad01cf7",
+        "name": "recovery-fixedpaths",
+        "record": {
+          "complete": false,
+          "disk_bytes": 42537,
+          "error": null,
+          "exit_code": 1,
+          "last_sample": {
+            "disk": 42537,
+            "elapsed": 5.339004699984798,
+            "parent_cpu": 1.0,
+            "private_tree": 92155904,
+            "rss_tree": 101257216,
+            "worker_cpu": 3.984375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 1.0,
+          "peak_private_tree_sampled": 111104000,
+          "peak_rss_tree_sampled": 119513088,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147289.6130478,
+              "pid": 25928,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 4.0,
+              "creation_time": 1794147289.620986,
+              "pid": 31336,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147289.8042612,
+              "pid": 1244,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147294.8488438,
+              "pid": 2668,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147294.8603535,
+              "pid": 9640,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 86,
+          "wall_seconds": 5.395481299987296,
+          "worker_CPU_seconds": 4.046875
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 6.015625,
+        "total_active_wall_seconds": 6.087605700013228
+      },
+      "recovery-fixedrefs-resources.json": {
+        "charged_CPU_seconds": 4.34375,
+        "charged_active_wall_seconds": 3.6766200000129174,
+        "launch_SHA256": "37ae234dfa2256aa97d43dde49c31cec478b2b37345e7c87d86d74e706f571d5",
+        "name": "recovery-fixedrefs",
+        "record": {
+          "complete": true,
+          "disk_bytes": 339964,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 339964,
+            "elapsed": 3.367639500007499,
+            "parent_cpu": 0.75,
+            "private_tree": 90288128,
+            "rss_tree": 99663872,
+            "worker_cpu": 3.09375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 0.75,
+          "peak_private_tree_sampled": 111067136,
+          "peak_rss_tree_sampled": 119619584,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147396.7855785,
+              "pid": 16428,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 3.125,
+              "creation_time": 1794147396.793422,
+              "pid": 14644,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794147396.967343,
+              "pid": 25872,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794147396.9786808,
+              "pid": 30260,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 54,
+          "wall_seconds": 3.424353800015524,
+          "worker_CPU_seconds": 3.15625
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 10.359375,
+        "total_active_wall_seconds": 9.764225700026145
+      },
+      "recovery-resources.json": {
+        "charged_CPU_seconds": 0.59375,
+        "charged_active_wall_seconds": 0.438858400011668,
+        "launch_SHA256": "2caa806deb39644e0b568c9b4e87478831480909f1f9410070ea11099fe1bd8e",
+        "name": "recovery",
+        "record": {
+          "complete": false,
+          "disk_bytes": 8057,
+          "error": null,
+          "exit_code": 1,
+          "last_sample": {
+            "disk": 6952,
+            "elapsed": 0.13297909998800606,
+            "parent_cpu": 0.03125,
+            "private_tree": 37314560,
+            "rss_tree": 32571392,
+            "worker_cpu": 0.125
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 0.03125,
+          "peak_private_tree_sampled": 37314560,
+          "peak_rss_tree_sampled": 32571392,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794147182.0378509,
+              "pid": 21920,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 0.140625,
+              "creation_time": 1794147182.0447507,
+              "pid": 8496,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 3,
+          "wall_seconds": 0.18606789998011664,
+          "worker_CPU_seconds": 0.15625
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 0.59375,
+        "total_active_wall_seconds": 0.438858400011668
+      },
+      "report-audit-formats-resources.json": {
+        "charged_CPU_seconds": 9.65625,
+        "charged_active_wall_seconds": 7.29985549999401,
+        "launch_SHA256": "358b72bc91e263b7b677cbcdd86915d0b390e6662ece20db8d7c14596c11a3be",
+        "name": "report-audit-formats",
+        "record": {
+          "complete": true,
+          "disk_bytes": 2982066,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 2982066,
+            "elapsed": 6.967862599994987,
+            "parent_cpu": 2.796875,
+            "private_tree": 29929472,
+            "rss_tree": 36016128,
+            "worker_cpu": 6.234375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 2.84375,
+          "peak_private_tree_sampled": 148283392,
+          "peak_rss_tree_sampled": 145510400,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148313.4981253,
+              "pid": 4896,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 0.21875,
+              "creation_time": 1794148313.506358,
+              "pid": 29308,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794148313.5912669,
+              "pid": 4440,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 2.9375,
+              "creation_time": 1794148313.5979924,
+              "pid": 23908,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148313.7273004,
+              "pid": 22964,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0625,
+              "creation_time": 1794148313.739792,
+              "pid": 1908,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794148316.9184265,
+              "pid": 10244,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.09375,
+              "creation_time": 1794148316.9270077,
+              "pid": 11212,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794148317.1119564,
+              "pid": 28416,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148317.121874,
+              "pid": 9204,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148320.0575273,
+              "pid": 3644,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148320.221802,
+              "pid": 3556,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148320.2342708,
+              "pid": 23964,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 81,
+          "wall_seconds": 7.045998999994481,
+          "worker_CPU_seconds": 6.40625
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 49.6875,
+        "total_active_wall_seconds": 41.23394580002059
+      },
+      "report-audit-resources.json": {
+        "charged_CPU_seconds": 0.640625,
+        "charged_active_wall_seconds": 0.44159299999591894,
+        "launch_SHA256": "84852f26962d1fd11d71d731fda6e8d23bea7b69e93baae7c2291e664c380c87",
+        "name": "report-audit",
+        "record": {
+          "complete": false,
+          "disk_bytes": 1238604,
+          "error": null,
+          "exit_code": 1,
+          "last_sample": {
+            "disk": 1238198,
+            "elapsed": 0.11515940001117997,
+            "parent_cpu": 0.046875,
+            "private_tree": 37335040,
+            "rss_tree": 29749248,
+            "worker_cpu": 0.09375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 0.078125,
+          "peak_private_tree_sampled": 37335040,
+          "peak_rss_tree_sampled": 29749248,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148084.3536205,
+              "pid": 26780,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 0.125,
+              "creation_time": 1794148084.362275,
+              "pid": 24136,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 2,
+          "wall_seconds": 0.18882490001851693,
+          "worker_CPU_seconds": 0.140625
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 40.03125,
+        "total_active_wall_seconds": 33.93409030002658
+      },
+      "report-close-resources.json": {
+        "charged_CPU_seconds": 4.0,
+        "charged_active_wall_seconds": 3.2242860999831464,
+        "launch_SHA256": "09c1a13d5b03896d45e4c7c86b8344eddab0e0c759778ac83ed1017c88faa196",
+        "name": "report-close",
+        "record": {
+          "complete": true,
+          "disk_bytes": 3007781,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 3007641,
+            "elapsed": 2.8961334000050556,
+            "parent_cpu": 0.953125,
+            "private_tree": 30621696,
+            "rss_tree": 38838272,
+            "worker_cpu": 2.5
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 0.96875,
+          "peak_private_tree_sampled": 73691136,
+          "peak_rss_tree_sampled": 58531840,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794148701.2378526,
+              "pid": 28440,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 1.234375,
+              "creation_time": 1794148701.244002,
+              "pid": 29852,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794148701.3013964,
+              "pid": 25872,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.109375,
+              "creation_time": 1794148701.307948,
+              "pid": 6692,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148701.4239984,
+              "pid": 4124,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 1.15625,
+              "creation_time": 1794148701.4296749,
+              "pid": 11616,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148703.9313016,
+              "pid": 22260,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148703.943676,
+              "pid": 13924,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148704.0274763,
+              "pid": 16796,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794148704.0977666,
+              "pid": 24952,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794148704.1062024,
+              "pid": 31648,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 38,
+          "wall_seconds": 2.9721281000238378,
+          "worker_CPU_seconds": 2.578125
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25,
+        "total_CPU_seconds": 53.6875,
+        "total_active_wall_seconds": 44.45823190000374
+      }
+    },
+    "scope": "Guarded computational phases, all failed attempts included; editing/Git/cloud/bookkeeping not measured as scientific computation.",
+    "limitations": "50ms sampled memory/tree and 0.25CPU/wall tail allowances per phase; unseen short children and non-continuous peaks possible. Combined parent+worker memory guarded at900MiB; reported worker peak is not a combined continuous peak.",
+    "prior400_CPU_seconds": 96.3125
+  },
+  "backup": {
+    "status": "CLOUD_UNVERIFIED",
+    "reason": "Reviewed incremental archive pending publication/prepare/upload/readback; originals retained."
+  },
+  "full_artifact_SHA256": {
+    "report-core.json": "9c212267fbe79c99413ea122e127a7dcb047cf17bd08b7b327a9ba5419cbd0ce",
+    "delta.json": "32276c7da2d0c2c247625d6d1e916cf9b2869cfab4ab258206a081263a2372da",
+    "independent-audit.json": "c03f67309b0a445f2ffe20208a6d630a82e4d203162c0cdf1ff706ab5d77d795",
+    "base-environment.json": "85083df93e1d16f41127202d0363a3efdaf7d0b53995a8ede997ab8b8374eebf",
+    "candidate-environment.json": "4eca48e4651fea902d67816811466033aae72314defc1f60a5b777eb38ec2db8",
+    "tools-v3.json": "3ff64dc6794fd60376545c23b836556e5559d0577e343d36128c659db5aef3b3",
+    "report-format-bindings.json": "927a161b65ea6f8d7b76a97d7269140eaa6fb1af997c95eefc16864cacd0cf42"
+  }
+}
