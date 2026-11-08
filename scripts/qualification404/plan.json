@@ -1,0 +1,80 @@
+{
+  "stage": 404,
+  "status": "SEALED_BEFORE_BASELINE",
+  "date": "2026-11-08",
+  "dev_start": "35bc09c133ec6abe05bb254a03d29118c3fe6835",
+  "base_source": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-marking-403",
+  "base_commit": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+  "base_fingerprint": "d53f18828b57cb63a7a5c9eab92d4ee1d264fe31b44174ffa00806f5759b06a4",
+  "new_source": "C:/Users/Admin/Desktop/Solar-candidate-033-gui-teardown-404",
+  "new_branch": "codex/candidate-0.3.3-gui-teardown-404",
+  "interpreter": "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+  "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "reproducer_SHA256": "afb18dee4ca3ae6e8c6798b9f97010f4b001e94b1cf5903a7efd70530f5e9aee",
+  "input_SHA256": {
+    "docs/q2-ui-lifecycle-403.json": "8e6ea58b8f42c55037afb004f5072c33d60e3c59cfb6e08ad1683619a751ca5d",
+    "docs/q2-application-acceptance-402.json": "66c3c832136550d722602d64e042b6b4a6e07645abc82929d60b383ccdd245f9",
+    "docs/q2-scientific-qualification-399.json": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+    "scripts/qualification403/reproduce_close.py": "afb18dee4ca3ae6e8c6798b9f97010f4b001e94b1cf5903a7efd70530f5e9aee",
+    "scripts/qualification402/plan.json": "f5445ec4f5a5b9da508e660d0f49a46e2c4bd6ef02540d2dea5f82d7a9444fbe"
+  },
+  "allowed_production_paths": [
+    "src/solar_simulator/app.py",
+    "src/solar_simulator/control_row.py"
+  ],
+  "post_cases": [
+    "zero_figures_close",
+    "one_figure_close",
+    "two_figures_pending_all",
+    "manual_and_scheduled_poll",
+    "controlrow_owners_and_repeat_destroy",
+    "executing_layout_destroy",
+    "canvas_event_loop_cleanup",
+    "completed_worker",
+    "active_programmatic_close",
+    "active_request_close",
+    "stop_keeps_window",
+    "worker_failure",
+    "save_failure_retry",
+    "active_worker_save_failure_retry",
+    "two_windows_and_foreign_callbacks",
+    "canvas_contract_and_foreign_owner",
+    "resize_layout_draw",
+    "user_save_load"
+  ],
+  "orbits": 0,
+  "gate": "Zero dangling/invalidcommand errors with continued Tcl event processing; zero worker-stop/recovery/state persistence regressions; own cancellation only. No process-exit masking.",
+  "canvas_contract": "Qualified Matplotlib3.11.0 _idle_draw_id/_event_loop_id via public get_tk_widget; check fieldtype/pendingcommand belongs to that widget before mutation. No global queue cancel, no error suppression.",
+  "scientific_status": "402numerical11/11, effects10/11distanceFAIL;4short+3historicFAIL unchanged;releaseNO-GO;warninge9literal unchanged even if lifecycle note becomes stale.",
+  "caps": {
+    "cpu_seconds": 120,
+    "wall_seconds": 240,
+    "private_bytes": 1073741824,
+    "disk_bytes": 50331648
+  },
+  "early": {
+    "cpu_seconds": 96,
+    "wall_seconds": 192,
+    "private_bytes": 943718400,
+    "disk_bytes": 41943040
+  },
+  "initial_setup": {
+    "CPU_allowance": 2.0,
+    "wall_allowance": 5.0,
+    "not_measured": true
+  },
+  "forecast": {
+    "CPU_seconds": 80,
+    "active_wall_seconds": 150,
+    "private_bytes": 734003200,
+    "disk_bytes": 12582912,
+    "basis": "One before-fix subprocess;one shared-import acceptance worker18nonorbital cases;source/audit/tests;supervisor/failedattemptreserve included. No fullscience/runtimebenchmarks.",
+    "parts_CPU": {
+      "initial": 2,
+      "baseline": 10,
+      "acceptance": 38,
+      "audit_and_close": 16,
+      "supervisor_reserve": 14
+    }
+  }
+}

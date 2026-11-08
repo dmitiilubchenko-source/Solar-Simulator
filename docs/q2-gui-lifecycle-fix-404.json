@@ -1,0 +1,1027 @@
+{
+  "stage": 404,
+  "date": "2026-11-08",
+  "status": "TECHNICAL_GUI_CANDIDATE_GO_NOT_RELEASE",
+  "verdicts": {
+    "GUI_LIFECYCLE": "PASS_FIXED_CONTROLLED_MATRIX_ON_QUALIFIED_ENVIRONMENT",
+    "CALLBACK_OWNERSHIP": "PASS_ONLY_OWN_REGISTERED_IDS",
+    "WORKER_RECOVERY": "PASS_EXACT_STATE_AND_HISTORICAL_RECOVERY_SHA",
+    "NUMERICAL_SOURCE_IDENTITY": "PASS_UNCHANGED_PHYSICS_DISPATCH_RECOVERY_BODIES",
+    "APPLICATION_D1": "HISTORICAL402_NUMERICAL11_OF11_EFFECTS10_OF11_DISTANCE_FAIL_FULL_NO_GO",
+    "RELEASE_READINESS": "NO-GO"
+  },
+  "candidate": {
+    "branch": "codex/candidate-0.3.3-gui-teardown-404",
+    "commit": "0985860f1776594a565f5754275fd110a00e29f2",
+    "parent": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+    "production_SHA256": {
+      "src/solar_simulator/app.py": "891d81946105a9879501839e79d1f3d9a9389c3b16f20f3d6fb6e7bc78363eea",
+      "src/solar_simulator/control_row.py": "33c289f8716fb8a7e45f5d9775e3482a49c74650faa908a024d80358a3ee8026"
+    }
+  },
+  "base_commit": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+  "actual_source_fingerprint": "81f9b67806a0b258a4a4b5ec0f8d535f56e23c0ab4bf81125f3375fa090de805",
+  "base_fingerprint": "d53f18828b57cb63a7a5c9eab92d4ee1d264fe31b44174ffa00806f5759b06a4",
+  "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "plan": {
+    "stage": 404,
+    "status": "SEALED_BEFORE_BASELINE",
+    "date": "2026-11-08",
+    "dev_start": "35bc09c133ec6abe05bb254a03d29118c3fe6835",
+    "base_source": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-marking-403",
+    "base_commit": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+    "base_fingerprint": "d53f18828b57cb63a7a5c9eab92d4ee1d264fe31b44174ffa00806f5759b06a4",
+    "new_source": "C:/Users/Admin/Desktop/Solar-candidate-033-gui-teardown-404",
+    "new_branch": "codex/candidate-0.3.3-gui-teardown-404",
+    "interpreter": "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "reproducer_SHA256": "afb18dee4ca3ae6e8c6798b9f97010f4b001e94b1cf5903a7efd70530f5e9aee",
+    "input_SHA256": {
+      "docs/q2-ui-lifecycle-403.json": "8e6ea58b8f42c55037afb004f5072c33d60e3c59cfb6e08ad1683619a751ca5d",
+      "docs/q2-application-acceptance-402.json": "66c3c832136550d722602d64e042b6b4a6e07645abc82929d60b383ccdd245f9",
+      "docs/q2-scientific-qualification-399.json": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+      "scripts/qualification403/reproduce_close.py": "afb18dee4ca3ae6e8c6798b9f97010f4b001e94b1cf5903a7efd70530f5e9aee",
+      "scripts/qualification402/plan.json": "f5445ec4f5a5b9da508e660d0f49a46e2c4bd6ef02540d2dea5f82d7a9444fbe"
+    },
+    "allowed_production_paths": [
+      "src/solar_simulator/app.py",
+      "src/solar_simulator/control_row.py"
+    ],
+    "post_cases": [
+      "zero_figures_close",
+      "one_figure_close",
+      "two_figures_pending_all",
+      "manual_and_scheduled_poll",
+      "controlrow_owners_and_repeat_destroy",
+      "executing_layout_destroy",
+      "canvas_event_loop_cleanup",
+      "completed_worker",
+      "active_programmatic_close",
+      "active_request_close",
+      "stop_keeps_window",
+      "worker_failure",
+      "save_failure_retry",
+      "active_worker_save_failure_retry",
+      "two_windows_and_foreign_callbacks",
+      "canvas_contract_and_foreign_owner",
+      "resize_layout_draw",
+      "user_save_load"
+    ],
+    "orbits": 0,
+    "gate": "Zero dangling/invalidcommand errors with continued Tcl event processing; zero worker-stop/recovery/state persistence regressions; own cancellation only. No process-exit masking.",
+    "canvas_contract": "Qualified Matplotlib3.11.0 _idle_draw_id/_event_loop_id via public get_tk_widget; check fieldtype/pendingcommand belongs to that widget before mutation. No global queue cancel, no error suppression.",
+    "scientific_status": "402numerical11/11, effects10/11distanceFAIL;4short+3historicFAIL unchanged;releaseNO-GO;warninge9literal unchanged even if lifecycle note becomes stale.",
+    "caps": {
+      "cpu_seconds": 120,
+      "wall_seconds": 240,
+      "private_bytes": 1073741824,
+      "disk_bytes": 50331648
+    },
+    "early": {
+      "cpu_seconds": 96,
+      "wall_seconds": 192,
+      "private_bytes": 943718400,
+      "disk_bytes": 41943040
+    },
+    "initial_setup": {
+      "CPU_allowance": 2.0,
+      "wall_allowance": 5.0,
+      "not_measured": true
+    },
+    "forecast": {
+      "CPU_seconds": 80,
+      "active_wall_seconds": 150,
+      "private_bytes": 734003200,
+      "disk_bytes": 12582912,
+      "basis": "One before-fix subprocess;one shared-import acceptance worker18nonorbital cases;source/audit/tests;supervisor/failedattemptreserve included. No fullscience/runtimebenchmarks.",
+      "parts_CPU": {
+        "initial": 2,
+        "baseline": 10,
+        "acceptance": 38,
+        "audit_and_close": 16,
+        "supervisor_reserve": 14
+      }
+    }
+  },
+  "plan_SHA256": "b187f4f4519df51ae1c86a51b613f7fd8eb7bb90ea3fe7a8aa4445628fa0416d",
+  "baseline": {
+    "Matplotlib": "3.11.0",
+    "actual_import": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-marking-403\\src\\solar_simulator\\__init__.py",
+    "actual_source_fingerprint": "d53f18828b57cb63a7a5c9eab92d4ee1d264fe31b44174ffa00806f5759b06a4",
+    "assertion": "Original403 assert no background errors fails on exacte9; not xfail/skip or hidden PASS",
+    "command": [
+      "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Scripts\\python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification403\\reproduce_close.py",
+      "--source",
+      "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-q2-marking-403"
+    ],
+    "dependency_prefix": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "orbits": 0,
+    "raw_log_SHA256": "c008ce187b06e071af21fbccc6b370f71c31d6b25f88f04b23072a3ffb98056c",
+    "reproducer_SHA256": "afb18dee4ca3ae6e8c6798b9f97010f4b001e94b1cf5903a7efd70530f5e9aee",
+    "returncode": 1,
+    "source": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+    "status": "EXPECTED_FAIL_CONFIRMED"
+  },
+  "baseline_error_commands": [
+    "5152336857216_poll",
+    "5152325173888_layout",
+    "5152339487104_layout",
+    "5152339484032_layout",
+    "5152339481152_layout",
+    "5152339473280_layout",
+    "5152339470528_layout",
+    "5152339466880_layout",
+    "5152339492608_layout",
+    "5152336850560idle_draw"
+  ],
+  "post_exact_reproducer": {
+    "background_errors": 0,
+    "destroy": [
+      {
+        "after": [],
+        "before": [
+          {
+            "id": "after#9",
+            "info": [
+              "3471403870400_poll",
+              "timer"
+            ]
+          },
+          {
+            "id": "after#8",
+            "info": [
+              "3471403852096idle_draw",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#7",
+            "info": [
+              "3471403363456_layout",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#6",
+            "info": [
+              "3471403319616_layout",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#5",
+            "info": [
+              "3471403354432_layout",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#4",
+            "info": [
+              "3471403346432_layout",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#3",
+            "info": [
+              "3471403341504_layout",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#2",
+            "info": [
+              "3471403349888_layout",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#1",
+            "info": [
+              "3471403329728_layout",
+              "idle"
+            ]
+          },
+          {
+            "id": "after#0",
+            "info": [
+              "3471403325376_layout",
+              "idle"
+            ]
+          }
+        ]
+      }
+    ],
+    "events": [
+      {
+        "after_id": "after#0",
+        "command": "3471403325376_layout",
+        "delay": "idle",
+        "owner": ".!controlrow"
+      },
+      {
+        "after_id": "after#1",
+        "command": "3471403329728_layout",
+        "delay": "idle",
+        "owner": ".!controlrow2"
+      },
+      {
+        "after_id": "after#2",
+        "command": "3471403349888_layout",
+        "delay": "idle",
+        "owner": ".!frame.!controlrow"
+      },
+      {
+        "after_id": "after#3",
+        "command": "3471403341504_layout",
+        "delay": "idle",
+        "owner": ".!frame.!controlrow2"
+      },
+      {
+        "after_id": "after#4",
+        "command": "3471403346432_layout",
+        "delay": "idle",
+        "owner": ".!frame.!controlrow3"
+      },
+      {
+        "after_id": "after#5",
+        "command": "3471403354432_layout",
+        "delay": "idle",
+        "owner": ".!frame.!controlrow4"
+      },
+      {
+        "after_id": "after#6",
+        "command": "3471403319616_layout",
+        "delay": "idle",
+        "owner": ".!controlrow3"
+      },
+      {
+        "after_id": "after#7",
+        "command": "3471403363456_layout",
+        "delay": "idle",
+        "owner": ".!controlrow4"
+      },
+      {
+        "after_id": "after#8",
+        "command": "3471403852096idle_draw",
+        "delay": "idle",
+        "owner": ".!canvas"
+      },
+      {
+        "after_id": "after#9",
+        "command": "3471403870400_poll",
+        "delay": "40",
+        "owner": "."
+      }
+    ],
+    "evolution_calls": 0,
+    "reproducer_SHA256": "afb18dee4ca3ae6e8c6798b9f97010f4b001e94b1cf5903a7efd70530f5e9aee",
+    "scope": "Same unmodified reproduce function; its own bgerror/assertion preserved, registration/destroy/version spies only. Event processing continues after window destruction.",
+    "source": {
+      "branch": "codex/candidate-0.3.3-gui-teardown-404",
+      "commit": "0985860f1776594a565f5754275fd110a00e29f2",
+      "parent": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+      "production_SHA256": {
+        "src/solar_simulator/app.py": "891d81946105a9879501839e79d1f3d9a9389c3b16f20f3d6fb6e7bc78363eea",
+        "src/solar_simulator/control_row.py": "33c289f8716fb8a7e45f5d9775e3482a49c74650faa908a024d80358a3ee8026"
+      }
+    },
+    "status": "PASS_SAME_ORIGINAL_ASSERTION_AFTER_FIX",
+    "versions": [
+      {
+        "Tcl": "8.6.15",
+        "Tk": "8.6.15"
+      }
+    ]
+  },
+  "scope_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "4",
+    "time": "0.198",
+    "timestamp": "2026-11-08T23:04:12.447780+03:00",
+    "hostname": "DESKTOP-6DHG18S"
+  },
+  "source_delta": {
+    "all_other_AST_bytes_exact": true,
+    "dispatch_and_recovery_AST_exact": true,
+    "geometry_layout_AST_exact": true,
+    "new_helpers_call_allowlists": true,
+    "poll_interval_ms": 40,
+    "source_SHA256": {
+      "app_new": "891d81946105a9879501839e79d1f3d9a9389c3b16f20f3d6fb6e7bc78363eea",
+      "app_old": "d794a547bdf762604d9c1c593a01ec6ceaf558fa9f1c6454877c9942b144fde5",
+      "row_new": "33c289f8716fb8a7e45f5d9775e3482a49c74650faa908a024d80358a3ee8026",
+      "row_old": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742"
+    },
+    "status": "PASS_REVIEWED_GUI_LIFECYCLE_SCOPE_NOT_PRESENTATION_ONLY"
+  },
+  "full_audit_SHA256": "628d72890d66f5cb737f38390a390daa2902e5967d0dbfb0b16ba420a431894c",
+  "cases": [
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "f1d3df28144c29226378b5d676cefa70c0bd5a5812a66ff6e72729ad24515fa0",
+      "id": "zero_figures_close",
+      "recovery": [],
+      "result": {
+        "figures": 0,
+        "repeated_close_safe": true
+      },
+      "status": "PASS",
+      "registered_count": 10,
+      "cancelled_count": 10,
+      "destroy_count": 2
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "df1608bc624ca56f74d42517784a83b3bcb3c6240168abde7bbccc324d246170",
+      "id": "one_figure_close",
+      "recovery": [],
+      "result": {
+        "figures": 1,
+        "repeated_close_safe": true
+      },
+      "status": "PASS",
+      "registered_count": 10,
+      "cancelled_count": 10,
+      "destroy_count": 2
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "d7c947ac15f3ad832e942ceda5f9d3056efc230deb87e059aa7d5975c51a5bac",
+      "id": "two_figures_pending_all",
+      "recovery": [],
+      "result": {
+        "figures": 2,
+        "repeated_close_safe": true
+      },
+      "status": "PASS",
+      "registered_count": 10,
+      "cancelled_count": 10,
+      "destroy_count": 2
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "1097f3a392fc9f14432203833ca5383a1cb464af758e2b43abd30c639dfee633",
+      "id": "manual_and_scheduled_poll",
+      "recovery": [],
+      "result": {
+        "manual_calls": 5,
+        "normal_delay_ms": 40,
+        "parallel_poll_loops": 1
+      },
+      "status": "PASS",
+      "registered_count": 16,
+      "cancelled_count": 6,
+      "destroy_count": 2
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "1e2387e5a9a06302e01e08591ff231f1c01ed943a7a0f9fe8381256e5992f8db",
+      "id": "controlrow_owners_and_repeat_destroy",
+      "recovery": [],
+      "result": {
+        "already_running_layout_safe": true,
+        "own_row_only": true
+      },
+      "status": "PASS",
+      "registered_count": 2,
+      "cancelled_count": 1,
+      "destroy_count": 0
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "e6975b98a5563a269476ac3f82e4a94fb2ba3c19da033d7145ded05721211f0a",
+      "id": "executing_layout_destroy",
+      "recovery": [],
+      "result": {
+        "already_running_layout_safe": true,
+        "own_row_only": true
+      },
+      "status": "PASS",
+      "registered_count": 2,
+      "cancelled_count": 0,
+      "destroy_count": 0
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "5448ed94821df0f76e9c7d8b8374622e0ad08a782c92bad064ba14a768a35d43",
+      "id": "canvas_event_loop_cleanup",
+      "recovery": [],
+      "result": {
+        "real_backend_event_loop": true
+      },
+      "status": "PASS",
+      "registered_count": 12,
+      "cancelled_count": 11,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "148c3816c5a819a644085cf759ff9a7f70a0cd1b0559d77d4545c4c203560203",
+      "id": "completed_worker",
+      "recovery": [
+        {
+          "file": "final-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        }
+      ],
+      "result": {
+        "no_postclose_calculation": true,
+        "submitted_packets": 1,
+        "worker_finished_before_close": true
+      },
+      "status": "PASS",
+      "registered_count": 13,
+      "cancelled_count": 1,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "cd7c48fd02d96d3b96aa5a8189bde1a83f605e1d45a5f3d374dc665065e52ac0",
+      "id": "active_programmatic_close",
+      "recovery": [
+        {
+          "file": "final-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        }
+      ],
+      "result": {
+        "no_postclose_calculation": true,
+        "submitted_packets": 1,
+        "worker_finished_before_close": true
+      },
+      "status": "PASS",
+      "registered_count": 11,
+      "cancelled_count": 1,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "a24f90bbf9be6e98ea06a3c914dacc5e58a7c976846e1cecef4f82d528ebd317",
+      "id": "active_request_close",
+      "recovery": [
+        {
+          "file": "final-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        }
+      ],
+      "result": {
+        "no_postclose_calculation": true,
+        "submitted_packets": 1,
+        "worker_finished_before_close": true
+      },
+      "status": "PASS",
+      "registered_count": 11,
+      "cancelled_count": 1,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "56cb59b1f6c48b0398d88ab1f4cdbc570adfce497aa844067f3c483d84b8d6f9",
+      "id": "stop_keeps_window",
+      "recovery": [
+        {
+          "file": "before-close-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        },
+        {
+          "file": "final-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        }
+      ],
+      "result": {
+        "no_postclose_calculation": true,
+        "submitted_packets": 1,
+        "worker_finished_before_close": true
+      },
+      "status": "PASS",
+      "registered_count": 21,
+      "cancelled_count": 1,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [
+        {
+          "args": [
+            "Расчёт остановлен",
+            "controlled worker failure404"
+          ],
+          "case": "worker_failure"
+        }
+      ],
+      "bgerrors": 0,
+      "complete_SHA256": "c80200535357d2e2e6654c647293453cedbef104d036e03a6c4b71a4f948ba2c",
+      "id": "worker_failure",
+      "recovery": [
+        {
+          "file": "before-close-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        },
+        {
+          "file": "final-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        }
+      ],
+      "result": {
+        "no_postclose_calculation": true,
+        "submitted_packets": 1,
+        "worker_finished_before_close": true
+      },
+      "status": "PASS",
+      "registered_count": 21,
+      "cancelled_count": 1,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [
+        {
+          "args": [
+            "Копия не сохранена — окно оставлено открытым",
+            "controlled save failure404"
+          ],
+          "case": "save_failure_retry"
+        }
+      ],
+      "bgerrors": 0,
+      "complete_SHA256": "f233d7a0ff7efcfc663c4c96fb70a7139591690d6f0bf40abfaa524f70c7a4c4",
+      "id": "save_failure_retry",
+      "recovery": [
+        {
+          "file": "retry-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        }
+      ],
+      "result": {
+        "failure_kept_window": true,
+        "retry_success": true
+      },
+      "status": "PASS",
+      "registered_count": 10,
+      "cancelled_count": 10,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [
+        {
+          "args": [
+            "Копия не сохранена — окно оставлено открытым",
+            "controlled full disk404"
+          ],
+          "case": "active_worker_save_failure_retry"
+        }
+      ],
+      "bgerrors": 0,
+      "complete_SHA256": "d4c97036e6edcf601766fc72c8cdf5d6300b0039fe325d3b1aa9e663a8c65f10",
+      "id": "active_worker_save_failure_retry",
+      "recovery": [
+        {
+          "file": "final-recovery.json",
+          "sha256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e"
+        }
+      ],
+      "result": {
+        "no_postclose_calculation": true,
+        "submitted_packets": 1,
+        "worker_finished_before_close": true
+      },
+      "status": "PASS",
+      "registered_count": 13,
+      "cancelled_count": 1,
+      "destroy_count": 1
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "4509ef4ebac8bf910c3d091722c3623e08ca7fc3e21643c5d6491cf3e9d40d90",
+      "id": "two_windows_and_foreign_callbacks",
+      "recovery": [],
+      "result": {
+        "contract_failure_before_destroy": true,
+        "foreign_canvas_and_timer_preserved": true
+      },
+      "status": "PASS",
+      "registered_count": 36,
+      "cancelled_count": 11,
+      "destroy_count": 2
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "5183ab6ff112128fdb1b0f68f73c92f908576862548f1e64ed27775ab62a4311",
+      "id": "canvas_contract_and_foreign_owner",
+      "recovery": [],
+      "result": {
+        "contract_failure_before_destroy": true,
+        "foreign_canvas_and_timer_preserved": true
+      },
+      "status": "PASS",
+      "registered_count": 36,
+      "cancelled_count": 11,
+      "destroy_count": 4
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "de66e94953b6bfb912eec56ed778598b3325d9d7e5eebe87ad371cf20820ee46",
+      "id": "resize_layout_draw",
+      "recovery": [],
+      "result": {
+        "draw_enabled": true,
+        "layout_enabled": true,
+        "narrow": [
+          864,
+          864,
+          864,
+          864
+        ],
+        "wide": [
+          1164,
+          1164,
+          1164,
+          1164
+        ]
+      },
+      "status": "PASS",
+      "registered_count": 40,
+      "cancelled_count": 1,
+      "destroy_count": 2
+    },
+    {
+      "UI_messages": [],
+      "bgerrors": 0,
+      "complete_SHA256": "4e7e12799330233d22a3b1a1becaa724e54147d92a51e4174bddbe0c12ab1916",
+      "id": "user_save_load",
+      "recovery": [],
+      "result": {
+        "save_load_and_cancel_exact": true
+      },
+      "status": "PASS",
+      "registered_count": 10,
+      "cancelled_count": 10,
+      "destroy_count": 2
+    }
+  ],
+  "expected_recovery_SHA256": "f678795c5ef0839722639ec7a0ee91df70a1609a2541a261dd689169edf5ee5e",
+  "Matplotlib": "3.11.0",
+  "backend_source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-384\\.venv\\Lib\\site-packages\\matplotlib\\backends\\_backend_tk.py",
+  "backend_SHA256": "ce1142ad3a384ebc491a1543f7a499f6203624f24fe7caccdd60d1396c63c23f",
+  "resources": {
+    "charged_CPU_seconds": 46.359375,
+    "active_wall_seconds": 42.63520879999851,
+    "peak_worker_private_sampled": 261103616,
+    "stage_bytes": 1254818,
+    "phases": {
+      "acceptance-resources.json": {
+        "charged_CPU_seconds": 17.078125,
+        "charged_active_wall_seconds": 15.467686699994374,
+        "record": {
+          "complete": true,
+          "disk_bytes": 612020,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 612020,
+            "elapsed": 15.138038200006122,
+            "parent_cpu": 4.609375,
+            "private_tree": 243175424,
+            "rss_tree": 238641152,
+            "worker_cpu": 11.859375
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 4.640625,
+          "peak_private_tree_sampled": 261103616,
+          "peak_rss_tree_sampled": 254869504,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794167263.3513265,
+              "pid": 32240,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 11.875,
+              "creation_time": 1794167263.3585653,
+              "pid": 32416,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794167266.851782,
+              "pid": 26908,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794167266.8642716,
+              "pid": 18788,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 203,
+          "wall_seconds": 15.214375700015808,
+          "worker_CPU_seconds": 11.9375
+        },
+        "tail_CPU_allowance": 0.25,
+        "tail_wall_allowance": 0.25,
+        "total_CPU_seconds": 28.796875,
+        "total_active_wall_seconds": 29.622707700007595
+      },
+      "baseline-resources.json": {
+        "charged_CPU_seconds": 9.21875,
+        "charged_active_wall_seconds": 8.155021000013221,
+        "record": {
+          "complete": true,
+          "disk_bytes": 378374,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 378374,
+            "elapsed": 7.847966599976644,
+            "parent_cpu": 1.375,
+            "private_tree": 78667776,
+            "rss_tree": 99024896,
+            "worker_cpu": 7.296875
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 1.375,
+          "peak_private_tree_sampled": 236032000,
+          "peak_rss_tree_sampled": 265539584,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794166812.365219,
+              "pid": 32428,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 3.375,
+              "creation_time": 1794166812.371693,
+              "pid": 29156,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0625,
+              "creation_time": 1794166814.4461052,
+              "pid": 17648,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794166814.45775,
+              "pid": 19248,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794166814.486216,
+              "pid": 8668,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794166814.4969473,
+              "pid": 14012,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794166815.950549,
+              "pid": 20580,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.921875,
+              "creation_time": 1794166815.9589603,
+              "pid": 6464,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.015625,
+          "samples": 129,
+          "wall_seconds": 7.902276799984975,
+          "worker_CPU_seconds": 7.421875
+        },
+        "tail_CPU_allowance": 0.25,
+        "tail_wall_allowance": 0.25,
+        "total_CPU_seconds": 11.21875,
+        "total_active_wall_seconds": 13.155021000013221
+      },
+      "close-resources.json": {
+        "charged_CPU_seconds": 17.5625,
+        "charged_active_wall_seconds": 13.012501099990914,
+        "record": {
+          "complete": true,
+          "disk_bytes": 1248430,
+          "error": null,
+          "exit_code": 0,
+          "last_sample": {
+            "disk": 1248288,
+            "elapsed": 12.678108199994313,
+            "parent_cpu": 5.109375,
+            "private_tree": 30916608,
+            "rss_tree": 35086336,
+            "worker_cpu": 11.703125
+          },
+          "limit_reason": null,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible",
+          "parent_interjob_CPU_excluded": true,
+          "parent_supervision_CPU_seconds": 5.140625,
+          "peak_private_tree_sampled": 225316864,
+          "peak_rss_tree_sampled": 204840960,
+          "poll_seconds": 0.05,
+          "processes": [
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794168243.518473,
+              "pid": 14956,
+              "role": "launcher"
+            },
+            {
+              "CPU_seconds": 1.953125,
+              "creation_time": 1794168243.5255055,
+              "pid": 26328,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794168243.6555023,
+              "pid": 24276,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.609375,
+              "creation_time": 1794168243.6621687,
+              "pid": 25400,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794168243.8421793,
+              "pid": 32968,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794168243.931478,
+              "pid": 28820,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794168243.9800384,
+              "pid": 14012,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794168243.9907925,
+              "pid": 23164,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794168244.06447,
+              "pid": 19760,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794168244.0753348,
+              "pid": 5444,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794168244.2378109,
+              "pid": 26844,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.03125,
+              "creation_time": 1794168244.250134,
+              "pid": 32652,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.0,
+              "creation_time": 1794168247.875034,
+              "pid": 23680,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 3.734375,
+              "creation_time": 1794168247.8823476,
+              "pid": 8724,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794168251.7299633,
+              "pid": 32068,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.953125,
+              "creation_time": 1794168251.7376251,
+              "pid": 12388,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 0.015625,
+              "creation_time": 1794168252.7908072,
+              "pid": 23812,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "CPU_seconds": 1.578125,
+              "creation_time": 1794168252.7978444,
+              "pid": 5580,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "root_final_CPU_seconds": 0.0,
+          "samples": 143,
+          "wall_seconds": 12.759349500003736,
+          "worker_CPU_seconds": 11.984375
+        },
+        "tail_CPU_allowance": 0.25,
+        "tail_wall_allowance": 0.25,
+        "total_CPU_seconds": 46.359375,
+        "total_active_wall_seconds": 42.63520879999851
+      },
+      "patch-setup-resources.json": {
+        "charged_CPU_seconds": 0.5,
+        "charged_active_wall_seconds": 1.0,
+        "measured": false,
+        "reason": "Patch helper duplicate LF/CRLF candidates for a single-line replacement raised AssertionError before writing any production file. Conservative setup allowance, not measured. Original candidate remained clean."
+      },
+      "initial-setup-ledger.json": {
+        "charged_CPU_seconds": 2.0,
+        "charged_active_wall_seconds": 5.0,
+        "measured": false,
+        "scope": "readonly discovery incl missing rg paths; explicit initial allowance"
+      }
+    },
+    "limitations": "Initial2CPU/5wall +failedpreparation0.5CPU/1wall allowances are not measured.50ms process/memory samples and0.25CPU/wall tailallowances perphase are not continuous strict bounds; metadata/edit/Git/cloudCPU excluded. Backup separately measured."
+  },
+  "backup": {
+    "status": "CLOUD_UNVERIFIED",
+    "reason": "reviewed incremental archive/prepare/upload/readback pending; originals retained"
+  },
+  "science": {
+    "orbits": 0,
+    "old399_401_402_403_unchanged": true,
+    "new_scientific_qualification": false,
+    "receipt_transfer": false,
+    "limitations": "Data/forces/integrators/IC/tolerances/native/storage byte identity; GUI lifecycle behavior genuinely changed. Historical evidence only in original scope, no new highaccuracy or D1 qualification."
+  },
+  "known_stale_text": "inspection warning from exacte9 is unchanged and still says Tcl lifecycle unresolved. A later literal-only patch needs its own actual fingerprint/source audit.",
+  "private_API_risks": [
+    "Embedded TkAgg uses _idle_draw_id/_event_loop_id and Tk widget._tclCommands ownership; qualified Matplotlib3.11.0/Python3.14.2t.",
+    "Fields/types/callback names/owner membership checked before cancellation; unknown or foreign contract refuses window destruction, preserving state.",
+    "Future versions keeping field shape but changing semantics may evade structural checks; dependency upgrades require GUI regression qualification.",
+    "Nested event loop cleanup tested on a single application root; arbitrary externally embedded/custom Matplotlib interactive APIs are not universally qualified."
+  ],
+  "errors": [
+    {
+      "kind": "patch_setup",
+      "cause": "LF/CRLF candidate list duplicated a single-line pattern, AssertionError before any production write",
+      "resolution": "byte replacement helper deduplicated; conservative0.5CPU/1wall allowance retained",
+      "candidate_changed_before_failure": false
+    }
+  ],
+  "limitations": [
+    "Worker controls used an actual executor or existing402snapshot; no physical solver ran.",
+    "All18targetedGUIcases and exactMRE are finite tests; not a blanket GUI/portable acceptance.",
+    "No cancel-all, global Tcl queue mutation, TkAgg package patch, error suppression or unrelated figure close.",
+    "Scientific warning update intentionally deferred;4shortconvergenceFAIL+3historicalFAIL and missing10mdistanceeffect remain."
+  ],
+  "raw_details": "Immutable .tools/qualification404-20261108/cases plus audit.json; command names, afterIDs, owners and full queues are archived, not duplicated in Git."
+}
