@@ -59,6 +59,12 @@ FAIL402/380 и отделяют дефект teardown от исправлени�
 [Проверки текста и provenance](../scripts/qualification405/README.md) переиспользуют
 guards403/404 и учитывают sparse checkout и контракт scheduled inspector poll.
 
+[Полная source/native/GUI приёмка406](q2-release-source-acceptance-406.md):
+exact405 candidate,3045узлов без исключений,2972PASS/63FAIL/10ERROR.
+[Исполнители и sealed plan](../scripts/qualification406/README.md) отделяют
+реальные GUI-ограничения, исторические fixtures и ошибки размещения стенда.
+Rust/native и bounded recovery прошли, общая source/portable/release приёмка NO-GO.
+
 Для связанной группы допускается локальный README. Папка на каждый маленький
 файл и отдельные CHANGELOG не обязательны. Изменение импорта/команды/ограничения
 должно отражаться в README группы и затронутых проверках.
