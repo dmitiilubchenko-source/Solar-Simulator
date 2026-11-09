@@ -23684,11 +23684,503 @@
     "source_candidate_not_changed": true,
     "main_tags_LATEST_portable032_unchanged": true,
     "portable_build": false,
-    "portable_relocated_acceptance": false
+    "portable_relocated_acceptance": false,
+    "evidence_commit": "d891b3a067092b35c816e9c60ce7f0701e51a8d8",
+    "scope": "Tools/report only in dev; candidate8fe and main/tag/LATEST untouched."
   },
   "backup": {
-    "status": "CLOUD_UNVERIFIED",
-    "reason": "New406filtered archive/prepare/upload/readback pending; old399-405archives retained and not reuploaded."
+    "status": "CLOUD_VERIFIED_SHA256",
+    "account": "dmitiilubchenko@gmail.com",
+    "folder": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+    "owner_only_verified": true,
+    "archive": {
+      "project": "Solar-Simulator",
+      "source": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\acceptance406-backup-20261110\\Solar-Simulator-stage406-20261110-reviewed-v2.zip",
+      "name": "Solar-Simulator-stage406-20261110-reviewed-v2.zip",
+      "size": 19482148,
+      "sha256": "969960976ab1301f20bd80b47a0a6f804cdd3358c4f9364f7bdfffba19b2e649",
+      "git_commit": "d891b3a067092b35c816e9c60ce7f0701e51a8d8",
+      "candidate_commit": "8fe01304e502f55e879addb0a4b6f3e062832e37",
+      "base_commit": "0985860f1776594a565f5754275fd110a00e29f2",
+      "cloud_parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+      "status": "PENDING_UPLOAD",
+      "member_count": 819,
+      "source_map_count": 3274,
+      "excluded_count": 11,
+      "invalid_npz_exclusions": 6,
+      "uncompressed_payload_bytes": 49546989
+    },
+    "files": [
+      {
+        "name": "Solar-Simulator-stage406-20261110-reviewed-v2.zip",
+        "source": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\acceptance406-backup-20261110\\Solar-Simulator-stage406-20261110-reviewed-v2.zip",
+        "project": "Solar-Simulator",
+        "project_root": "C:\\Users\\Admin\\Desktop\\Solar-simulator",
+        "host": "DESKTOP-6DHG18S",
+        "git_commit": "d891b3a067092b35c816e9c60ce7f0701e51a8d8",
+        "git_status": "",
+        "cloud_parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "cloud_location": "https://drive.google.com/file/d/1VqU-JXBI8nOXRNxoThFp5Ues-X1ZNX12/view",
+        "size": 19482148,
+        "sha256": "969960976ab1301f20bd80b47a0a6f804cdd3358c4f9364f7bdfffba19b2e649",
+        "checked_at": "2026-11-09T21:33:18.813211+00:00",
+        "status": "CLOUD_VERIFIED_SHA256",
+        "coverage": "COMPLETE_SELECTED_SCOPE",
+        "source_files_unavailable": 0,
+        "source_files_excluded": 0,
+        "scan_git_commit": "d891b3a067092b35c816e9c60ce7f0701e51a8d8",
+        "scan_git_status": "",
+        "cloud_evidence": {
+          "file_id": "1VqU-JXBI8nOXRNxoThFp5Ues-X1ZNX12",
+          "parent_ids": [
+            "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+          ],
+          "sha256": "969960976ab1301f20bd80b47a0a6f804cdd3358c4f9364f7bdfffba19b2e649",
+          "size": 19482148,
+          "verified_at": "2026-11-09T21:34:35.640949+00:00",
+          "method": "independent Drive connector download; streamed SHA256"
+        }
+      },
+      {
+        "name": "Solar-Simulator-recovery-d891b3a067092b35c816e9c60ce7f0701e51a8d8.json",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\Solar-Simulator-recovery-d891b3a067092b35c816e9c60ce7f0701e51a8d8.json",
+        "project": "Solar-Simulator",
+        "project_root": "C:\\Users\\Admin\\Desktop\\Solar-simulator",
+        "host": "DESKTOP-6DHG18S",
+        "git_commit": "d891b3a067092b35c816e9c60ce7f0701e51a8d8",
+        "git_status": "",
+        "cloud_parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "cloud_location": "https://drive.google.com/file/d/19knvBu1NLOvGnZYhXbNUrFQJ33t2SDUm/view",
+        "size": 582,
+        "sha256": "84c06d6a4bb0664365e4b8db1120b069c6b5886bb780b286a34f0d29bb24ab78",
+        "checked_at": "2026-11-09T21:33:27.590683+00:00",
+        "status": "CLOUD_VERIFIED_SHA256",
+        "coverage": "COMPLETE_SELECTED_SCOPE",
+        "source_files_unavailable": 0,
+        "source_files_excluded": 0,
+        "scan_git_commit": "d891b3a067092b35c816e9c60ce7f0701e51a8d8",
+        "scan_git_status": "",
+        "cloud_evidence": {
+          "file_id": "19knvBu1NLOvGnZYhXbNUrFQJ33t2SDUm",
+          "parent_ids": [
+            "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+          ],
+          "sha256": "84c06d6a4bb0664365e4b8db1120b069c6b5886bb780b286a34f0d29bb24ab78",
+          "size": 582,
+          "verified_at": "2026-11-09T21:34:53.931518+00:00",
+          "method": "independent Drive connector download; streamed SHA256"
+        }
+      }
+    ],
+    "operational_CPU_seconds": 48.1875,
+    "operational_active_wall_seconds": 47.05333839991363,
+    "operational_resource_receipts": {
+      "archive-resources.json": {
+        "scope": "Operational backup only, not source406 continuation",
+        "record": {
+          "exit_code": 1,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 19.0625,
+            "parent_cpu": 2.265625,
+            "private_tree": 93691904,
+            "rss_tree": 85446656,
+            "disk": 19490861,
+            "elapsed": 19.49545530002797
+          },
+          "samples": 343,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 19.109375,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 2.265625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 105132032,
+          "processes": [
+            {
+              "pid": 13004,
+              "creation_time": 1794259904.5777764,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 15308,
+              "creation_time": 1794259904.5820973,
+              "CPU_seconds": 19.09375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 16916,
+              "creation_time": 1794259904.6939597,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 98078720,
+          "wall_seconds": 19.54686430003494,
+          "disk_bytes": 19490861,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 21.75,
+        "active_wall_seconds": 19.80094210000243,
+        "total_CPU_seconds": 21.75,
+        "total_active_wall_seconds": 19.80094210000243,
+        "hard_caps": {
+          "cpu_seconds": 120,
+          "wall_seconds": 900,
+          "private_bytes": 1073741824,
+          "disk_bytes": 536870912
+        },
+        "early": {
+          "cpu_seconds": 96,
+          "wall_seconds": 720,
+          "private_bytes": 943718400,
+          "disk_bytes": 419430400
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      },
+      "archive-v2-resources.json": {
+        "scope": "Operational backup only, not source406 continuation",
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 8.9375,
+            "parent_cpu": 1.09375,
+            "private_tree": 133431296,
+            "rss_tree": 112775168,
+            "disk": 38982987,
+            "elapsed": 9.181671000027563
+          },
+          "samples": 160,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 8.984375,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 1.109375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 138932224,
+          "processes": [
+            {
+              "pid": 30068,
+              "creation_time": 1794259981.3366027,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 31064,
+              "creation_time": 1794259981.342136,
+              "CPU_seconds": 8.96875,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 24224,
+              "creation_time": 1794259981.4586203,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 113561600,
+          "wall_seconds": 9.234025900019333,
+          "disk_bytes": 38984478,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 10.453125,
+        "active_wall_seconds": 9.486108899989631,
+        "total_CPU_seconds": 35.34375,
+        "total_active_wall_seconds": 32.11270889994921,
+        "hard_caps": {
+          "cpu_seconds": 120,
+          "wall_seconds": 900,
+          "private_bytes": 1073741824,
+          "disk_bytes": 536870912
+        },
+        "early": {
+          "cpu_seconds": 96,
+          "wall_seconds": 720,
+          "private_bytes": 943718400,
+          "disk_bytes": 419430400
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      },
+      "prepare-resources.json": {
+        "scope": "Operational backup only, not source406 continuation",
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 9.21875,
+            "parent_cpu": 1.46875,
+            "private_tree": 58195968,
+            "rss_tree": 71004160,
+            "disk": 38988403,
+            "elapsed": 10.102894200012088
+          },
+          "samples": 174,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 9.28125,
+          "root_final_CPU_seconds": 0.296875,
+          "parent_supervision_CPU_seconds": 1.46875,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 89726976,
+          "processes": [
+            {
+              "pid": 1548,
+              "creation_time": 1794259997.5446343,
+              "CPU_seconds": 0.296875,
+              "role": "launcher"
+            },
+            {
+              "pid": 29516,
+              "creation_time": 1794259997.7947636,
+              "CPU_seconds": 8.890625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 21068,
+              "creation_time": 1794259997.9582381,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 33732,
+              "creation_time": 1794259997.9756997,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 25820,
+              "creation_time": 1794259997.9815729,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 14692,
+              "creation_time": 1794259997.9908836,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 28360,
+              "creation_time": 1794259997.9990644,
+              "CPU_seconds": 0.0625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 135380992,
+          "wall_seconds": 10.155780099972617,
+          "disk_bytes": 38988403,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 11.078125,
+        "active_wall_seconds": 10.408146400004625,
+        "total_CPU_seconds": 46.421875,
+        "total_active_wall_seconds": 42.52085529995384,
+        "hard_caps": {
+          "cpu_seconds": 120,
+          "wall_seconds": 900,
+          "private_bytes": 1073741824,
+          "disk_bytes": 536870912
+        },
+        "early": {
+          "cpu_seconds": 96,
+          "wall_seconds": 720,
+          "private_bytes": 943718400,
+          "disk_bytes": 419430400
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      },
+      "review-resources.json": {
+        "scope": "Operational backup only, not source406 continuation",
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 2.4375,
+            "parent_cpu": 0.3125,
+            "private_tree": 60551168,
+            "rss_tree": 35237888,
+            "disk": 19494048,
+            "elapsed": 2.5200905999518
+          },
+          "samples": 45,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 2.484375,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.3125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 71053312,
+          "processes": [
+            {
+              "pid": 22796,
+              "creation_time": 1794259936.4574826,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 5612,
+              "creation_time": 1794259936.4609337,
+              "CPU_seconds": 2.484375,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 44666880,
+          "wall_seconds": 2.5717024999903515,
+          "disk_bytes": 19494079,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 3.140625,
+        "active_wall_seconds": 2.82565789995715,
+        "total_CPU_seconds": 24.890625,
+        "total_active_wall_seconds": 22.62659999995958,
+        "hard_caps": {
+          "cpu_seconds": 120,
+          "wall_seconds": 900,
+          "private_bytes": 1073741824,
+          "disk_bytes": 536870912
+        },
+        "early": {
+          "cpu_seconds": 96,
+          "wall_seconds": 720,
+          "private_bytes": 943718400,
+          "disk_bytes": 419430400
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      },
+      "verify-recipe-resources.json": {
+        "scope": "Operational backup only, not source406 continuation",
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.171875,
+            "parent_cpu": 0.09375,
+            "private_tree": 64569344,
+            "rss_tree": 51834880,
+            "disk": 38995905,
+            "elapsed": 0.6015688999905251
+          },
+          "samples": 11,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.203125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.09375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 64569344,
+          "processes": [
+            {
+              "pid": 30528,
+              "creation_time": 1794260093.4114172,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 14664,
+              "creation_time": 1794260093.4148362,
+              "CPU_seconds": 0.203125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 51834880,
+          "wall_seconds": 0.6541185000096448,
+          "disk_bytes": 38996118,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 0.640625,
+        "active_wall_seconds": 0.9067398000042886,
+        "total_CPU_seconds": 48.1875,
+        "total_active_wall_seconds": 47.05333839991363,
+        "hard_caps": {
+          "cpu_seconds": 120,
+          "wall_seconds": 900,
+          "private_bytes": 1073741824,
+          "disk_bytes": 536870912
+        },
+        "early": {
+          "cpu_seconds": 96,
+          "wall_seconds": 720,
+          "private_bytes": 943718400,
+          "disk_bytes": 419430400
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      },
+      "verify-zip-resources.json": {
+        "scope": "Operational backup only, not source406 continuation",
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.28125,
+            "parent_cpu": 0.46875,
+            "private_tree": 67997696,
+            "rss_tree": 54054912,
+            "disk": 38992851,
+            "elapsed": 3.3211326000164263
+          },
+          "samples": 57,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.3125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.46875,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 67997696,
+          "processes": [
+            {
+              "pid": 21872,
+              "creation_time": 1794260072.379041,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 13528,
+              "creation_time": 1794260072.3825731,
+              "CPU_seconds": 0.3125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 62345216,
+          "wall_seconds": 3.3736554000061005,
+          "disk_bytes": 38993048,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "CPU_seconds": 1.125,
+        "active_wall_seconds": 3.625743299955502,
+        "total_CPU_seconds": 47.546875,
+        "total_active_wall_seconds": 46.14659859990934,
+        "hard_caps": {
+          "cpu_seconds": 120,
+          "wall_seconds": 900,
+          "private_bytes": 1073741824,
+          "disk_bytes": 536870912
+        },
+        "early": {
+          "cpu_seconds": 96,
+          "wall_seconds": 720,
+          "private_bytes": 943718400,
+          "disk_bytes": 419430400
+        },
+        "tail_allowance_CPU_seconds": 0.25,
+        "tail_allowance_wall_seconds": 0.25
+      }
+    },
+    "scope": "New406 only;49.5MB unique raw payload compressed to19.48MB; all originals retained; existing399-405not reuploaded",
+    "exclusions": "11 explicit entries:6 malformed NPZ fixtures,5 protected/ambiguous names. No private context/SQLite/secrets/environment/cache/recoverable dependencies or clean Git copies. Malformed first archive retained locally, not uploaded.",
+    "limitations": "Backup CPU/wall is separate operational budget, not further source/science work. Connector/editor/network transfer process CPU unmeasured. Exact uploaded archiveCRC/memberSHA verified locally, fresh independent cloud streamSHA/size/parent verified for both files. No public/domain sharing. Own failedarchive/review cost included."
   },
   "notes": [
     "Full stock suite belongs to frozen241test files. Laterdev tests were not silently substituted or auto-counted as passed.404/405receipts retain original bounded scopes.",

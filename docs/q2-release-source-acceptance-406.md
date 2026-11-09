@@ -210,8 +210,33 @@ candidate/plan/budget и полная приёмка без автоматиче
 Кандидат8fe, accepted main/v0.3.2, теги, LATEST, portable и квалифицированные
 бинарники не изменяются. Личные документы — только отдельный приватный контекст.
 
-Статус нового filtered406backup: **CLOUD_UNVERIFIED**, передача и независимый
-readback ещё не завершены. Локальные raw/checkpoint/logs сохранены; подготовка
-очереди не считается резервированием. Итоговые ID/размер/SHA/status будут добавлены
-после фактической проверки.399–405архивы не загружаются повторно;404использовать
-только с прежним обязательным append-only manifest erratum, не ложным base_commit.
+Новый filtered406backup **CLOUD_VERIFIED_SHA256**: свежий независимый download,
+SHA256/size/parent сверены для обоих файлов; аккаунт/папка проверены заново,
+доступ owner-only. DriveFS отсутствует: использованы prepare queue и коннектор,
+а не предположение о завершении синхронизации.
+
+| Файл | Размер B | SHA256 | Drive ID |
+|---|---:|---|---|
+| Новый reviewed-v2 ZIP406 | 19482148 | `969960976ab1301f20bd80b47a0a6f804cdd3358c4f9364f7bdfffba19b2e649` | `1VqU-JXBI8nOXRNxoThFp5Ues-X1ZNX12` |
+| Git restore recipe d891b3a | 582 | `84c06d6a4bb0664365e4b8db1120b069c6b5886bb780b286a34f0d29bb24ab78` | `19knvBu1NLOvGnZYhXbNUrFQJ33t2SDUm` |
+
+819уникальных payload members,3274source aliases/точных Git restore references;
+49546989B до сжатия. Локальный ZIP CRC и каждый member SHA проверены. Candidate8fe,
+родитель098 и его родительe9 подтверждены до/после упаковки.399–405архивы не
+выгружались повторно;404требует прежний append-only manifest erratum.
+
+Первая упаковка отклонена nested-archive review: шесть намеренно повреждённых
+NPZ-fixtures не проходят review как ZIP. Первый архив/код/ошибка сохранены
+локально. Reviewed-v2 исключает эти6байтовых payload и ещё5защищённых/неоднозначных
+имён, перечисляя исходный путь/размер/SHA/причину в manifest. Они не выдаются за
+cloud-backed; все оригиналы остаются на ПК. Полные test logs/tracebacks и
+GUI/recovery сохранены в облаке. Environment/source copies, кеши, зависимости,
+SQLite, личный контекст и секреты в архив не включены. Чистые Git-файлы
+восстанавливаются по точному commit/path/SHA, не загружаются повторно.
+
+Операционный backup отдельно:48.1875CPU/47.0533384activewall; включая неудачную
+упаковку и review, в пределах заранее заданных120CPU/900wall/1GiB/512MiB
+(early96/720/900MiB/400MiB). Connector/editor CPU не измерен. Полные operational
+receipts включены в машинный отчёт. Новых source/scientific запусков в этом
+бюджете нет. Доказательства опубликованы в dev commit `d891b3a`; последующее
+уточнение backup меняет только отчёт. Main/tags/LATEST/portable прежние. STOP.
