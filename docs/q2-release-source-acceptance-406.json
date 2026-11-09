@@ -24179,7 +24179,7 @@
       }
     },
     "scope": "New406 only;49.5MB unique raw payload compressed to19.48MB; all originals retained; existing399-405not reuploaded",
-    "exclusions": "11 explicit entries:6 malformed NPZ fixtures,5 protected/ambiguous names. No private context/SQLite/secrets/environment/cache/recoverable dependencies or clean Git copies. Malformed first archive retained locally, not uploaded.",
+    "exclusions": "11 explicit entries:6 malformed NPZ fixtures and5 corrupt/unsafe ZIP fixtures (one unsafe archive member). Exact reasons/source/size/SHA are in immutable archive MANIFEST. Protected names/context/SQLite/secrets/environment/cache/recoverable dependencies excluded separately by selection. Originals retained locally; no clean Git copies.",
     "limitations": "Backup CPU/wall is separate operational budget, not further source/science work. Connector/editor/network transfer process CPU unmeasured. Exact uploaded archiveCRC/memberSHA verified locally, fresh independent cloud streamSHA/size/parent verified for both files. No public/domain sharing. Own failedarchive/review cost included."
   },
   "notes": [
