@@ -1420,8 +1420,162 @@
     "status": "CLOUD_VERIFIED_ARCHIVE_AND_ERRATUM_PROVENANCE"
   },
   "backup": {
-    "status": "CLOUD_UNVERIFIED",
-    "reason": "New405incremental archive/prepare/upload/readback pending; originals retained."
+    "status": "CLOUD_VERIFIED_SHA256",
+    "project": "Solar-Simulator",
+    "git_commit": "82db424e6449523d2d230e1974086e746dc92977",
+    "candidate_commit": "8fe01304e502f55e879addb0a4b6f3e062832e37",
+    "base_commit": "0985860f1776594a565f5754275fd110a00e29f2",
+    "files": [
+      {
+        "name": "Solar-Simulator-stage405-20261109.zip",
+        "source": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification405-backup-20261109\\Solar-Simulator-stage405-20261109.zip",
+        "project": "Solar-Simulator",
+        "project_root": "C:\\Users\\Admin\\Desktop\\Solar-simulator",
+        "host": "DESKTOP-6DHG18S",
+        "git_commit": "82db424e6449523d2d230e1974086e746dc92977",
+        "git_status": "",
+        "cloud_parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "cloud_location": "https://drive.google.com/file/d/1hb7Wuz-b9J9exvF8a-uunkD8vCW7bYqt/view",
+        "size": 680123,
+        "sha256": "cb19c42eecf4f5fc2e669973028e118672e8686d557601e0ff1ce83cabf54d88",
+        "checked_at": "2026-11-09T17:47:36.303377+00:00",
+        "status": "CLOUD_VERIFIED_SHA256",
+        "coverage": "COMPLETE_SELECTED_SCOPE",
+        "source_files_unavailable": 0,
+        "source_files_excluded": 0,
+        "scan_git_commit": "82db424e6449523d2d230e1974086e746dc92977",
+        "scan_git_status": "",
+        "cloud_evidence": {
+          "file_id": "1hb7Wuz-b9J9exvF8a-uunkD8vCW7bYqt",
+          "parent_ids": [
+            "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+          ],
+          "sha256": "cb19c42eecf4f5fc2e669973028e118672e8686d557601e0ff1ce83cabf54d88",
+          "size": 680123,
+          "verified_at": "2026-11-09T17:48:40.267806+00:00",
+          "method": "independent Drive connector download; streamed SHA256"
+        }
+      },
+      {
+        "name": "Solar-Simulator-recovery-82db424e6449523d2d230e1974086e746dc92977.json",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\Solar-Simulator-recovery-82db424e6449523d2d230e1974086e746dc92977.json",
+        "project": "Solar-Simulator",
+        "project_root": "C:\\Users\\Admin\\Desktop\\Solar-simulator",
+        "host": "DESKTOP-6DHG18S",
+        "git_commit": "82db424e6449523d2d230e1974086e746dc92977",
+        "git_status": "",
+        "cloud_parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "cloud_location": "https://drive.google.com/file/d/1F2QFgHsCRExO303kbAYQBHQrvAajvu99/view",
+        "size": 582,
+        "sha256": "7af3d1f5d107c2cdac0d761702d3a637bcae8af9adeb9ed01b7e589bcb7dff50",
+        "checked_at": "2026-11-09T17:47:36.639487+00:00",
+        "status": "CLOUD_VERIFIED_SHA256",
+        "coverage": "COMPLETE_SELECTED_SCOPE",
+        "source_files_unavailable": 0,
+        "source_files_excluded": 0,
+        "scan_git_commit": "82db424e6449523d2d230e1974086e746dc92977",
+        "scan_git_status": "",
+        "cloud_evidence": {
+          "file_id": "1F2QFgHsCRExO303kbAYQBHQrvAajvu99",
+          "parent_ids": [
+            "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+          ],
+          "sha256": "7af3d1f5d107c2cdac0d761702d3a637bcae8af9adeb9ed01b7e589bcb7dff50",
+          "size": 582,
+          "verified_at": "2026-11-09T17:49:09.266591+00:00",
+          "method": "independent Drive connector download; streamed SHA256"
+        }
+      }
+    ],
+    "CPU_seconds": 8.953125,
+    "active_wall_seconds": 21.518444999936037,
+    "resources": {
+      "archive-resources.json": {
+        "CPU": 1.328125,
+        "active_wall": 1.2763791999896057,
+        "complete": true,
+        "peak_private": 62119936,
+        "receipt_SHA256": "6d19a216bcdfdeae453b443cb9a0ff6ea1f9e27605763ea8f69371c9be9f8552"
+      },
+      "historical-readback-resources.json": {
+        "CPU": 0.96875,
+        "active_wall": 2.32653040002333,
+        "complete": true,
+        "peak_private": 38666240,
+        "receipt_SHA256": "dfc1977028b4a67db194cb4e4d32908c0dd7506144bb08001b5c8fd364301d41"
+      },
+      "prepare-resources.json": {
+        "CPU": 2.140625,
+        "active_wall": 3.2273285999544896,
+        "complete": true,
+        "peak_private": 89448448,
+        "receipt_SHA256": "e0b783ee6be631b9f70e49beb25eb85da2a3e0aa00c612b570ea3625746d0f4d"
+      },
+      "verify0-resources.json": {
+        "CPU": 3.03125,
+        "active_wall": 13.167934499972034,
+        "complete": true,
+        "peak_private": 65847296,
+        "receipt_SHA256": "d765d585ed97565dd4c1c8fc9475bee441b70fc2a811b26fdd067e98c840a3eb"
+      },
+      "verify1-resources.json": {
+        "CPU": 0.59375,
+        "active_wall": 0.44861379999201745,
+        "complete": false,
+        "peak_private": 37548032,
+        "receipt_SHA256": "f9f24731969dc2daadad9cc2294d282785dc7d41d24bd61333e2c0f5dcf00355"
+      },
+      "verify1-retry-resources.json": {
+        "CPU": 0.890625,
+        "active_wall": 1.0716585000045598,
+        "complete": true,
+        "peak_private": 64663552,
+        "receipt_SHA256": "3c1a2881881b3837b7db59602635e118e7cc6562299859c0ae1771c4c57b2b75"
+      }
+    },
+    "connector_operation_window_seconds": 76.066,
+    "connector_CPU": "unmeasured; API/transfer/orchestration window is not network throughput or computational405wall",
+    "historical404": {
+      "archive_members_CRC_SHA": 82,
+      "archive_unchanged": true,
+      "candidate_commit": "0985860f1776594a565f5754275fd110a00e29f2",
+      "correct_base_commit": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+      "files": {
+        "archive": {
+          "file_id": "17nsmZpXkM3uKq2bIIPSIpRC7hXAHJpjv",
+          "parent_ids": [
+            "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+          ],
+          "sha256": "6c896847d55447cde4531cb40986689f57b8347f05926c4d66832fc49e83cef6",
+          "size": 397823,
+          "status": "CLOUD_VERIFIED_SHA256_NEW_INDEPENDENT_READBACK"
+        },
+        "erratum": {
+          "file_id": "1-E2sBW7uTdl_U0Neb7-KgFo8ZA_Xney5",
+          "parent_ids": [
+            "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+          ],
+          "sha256": "6aff3ca203101bc86e8713f0d1817da9bb853fa208b37b95a9b664fd297a8107",
+          "size": 1233,
+          "status": "CLOUD_VERIFIED_SHA256_NEW_INDEPENDENT_READBACK"
+        }
+      },
+      "incorrect_manifest_base_commit": "a99f73a4adce95be9d264d8c404e0e6768a54cd7",
+      "method": "Fresh connected Drive fetch; independent HTTP readback SHA/size/parent, in-memory ZIP/member CRC/SHA and erratum/Git parent comparison. Nothing extracted, overwritten or executed.",
+      "status": "CLOUD_VERIFIED_ARCHIVE_AND_ERRATUM_PROVENANCE"
+    },
+    "operational_errors": [
+      {
+        "phase": "verify1",
+        "stdout": "FileExistsError: [Errno 17] File exists: 'C:\\\\Users\\\\Admin\\\\Documents\\\\Codex\\\\2026-10-29\\\\files-pasted-by-the-user-codex\\\\outputs\\\\backup.lock'\n",
+        "cause": "First readback command yielded a running process; caller launched next verification too early. backup.py refused existing active lock; no manifest writes or lock removal.",
+        "resolution": "Waited for first verifier to finish and release lock; fetched a fresh recipe reference, retried under a new phase name. Both attempts charged; original failure retained.",
+        "receipt_SHA256": "f9f24731969dc2daadad9cc2294d282785dc7d41d24bd61333e2c0f5dcf00355"
+      }
+    ],
+    "account_and_owner_only_parent_rechecked": true,
+    "scope": "Only new405raw receipts/sourcebindings/manifests/recovery instructions;399-404 reused, no privatecontext/SQLite/secrets/env/cache/cleanGit duplication",
+    "method": "Fresh Drive connector fetch, independent HTTP streamed SHA256/size/parent under backup.py lock; archive CRC/member SHA and actual Git parent verified before upload"
   },
   "science": {
     "new_orbits": 0,

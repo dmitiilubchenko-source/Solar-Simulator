@@ -123,10 +123,29 @@ CPU не измерены и исключены. Caps60CPU/150wall/1GiB/32MiB и
 все82 member CRC/SHA проверены в памяти. Correct parent e9 независимо подтверждён
 Git. Старый ошибочный manifest и архив не перезаписаны. Erratum SHA
 `6aff3ca203101bc86e8713f0d1817da9bb853fa208b37b95a9b664fd297a8107`.
-Новый backup405 пока **CLOUD_UNVERIFIED** до отдельного upload/readback.
-Reviewed filtered queue содержит только новые405raw/source bindings/receipts и
-recovery instructions;399–404 не выгружаются повторно. Private context/SQLite/
-secrets/окружения/кеши исключены; опубликованные чистые Git-файлы не дублируются.
+Новый backup405: **CLOUD_VERIFIED_SHA256**, оба объекта независимо скачаны заново:
+
+- ZIP **680123 байта**, SHA-256
+  `cb19c42eecf4f5fc2e669973028e118672e8686d557601e0ff1ce83cabf54d88`.
+- Git recovery recipe для82db424: **582 байта**, SHA-256
+  `7af3d1f5d107c2cdac0d761702d3a637bcae8af9adeb9ed01b7e589bcb7dff50`.
+
+Размер, SHA и parent совпали.53raw/служебных файла, manifest и restore instructions
+проверены CRC/memberSHA. Поля candidate/base явно заданы и сверены с Git до/после
+создания ZIP; общей замены номера этапа нет. Архивы399–404 повторно не загружались.
+Private context/SQLite/secrets/окружения/кеши исключены; чистый Git восстановим по
+точным опубликованным commits. Исходники/архивы не удалялись и не перезаписывались.
+
+Отдельный operational ledger: **8.953125 CPU-с / 21.518445 active wall-с**,
+включая один отказ lock и повтор. После возврата команды со still-running session
+следующий verifier был ошибочно запущен раньше завершения первого. Защита backup.py
+отклонила активный lock без записи manifest. После завершения первого выполнен
+новый fetch и отдельный retry; оба исходных receipt сохранены, lock не удалялся.
+Непересекающиеся вычислительные этапы не затронуты; сумма operational wall
+консервативно включает небольшое перекрытие. Connector CPU не измерен;
+окно API/transfer/orchestration 76.066 с не является
+измерением скорости сети или CPU. Operational caps20CPU/180wall, early16/140 не повышались.
+
 
 | Verdict | Решение |
 |---|---|
