@@ -51,7 +51,13 @@ FAIL402/380 и отделяют дефект teardown от исправлени�
 [Исправление lifecycle404](q2-gui-lifecycle-fix-404.md): отдельный GUI-кандидат
 с отменой owned poll/layout/TkAgg callbacks, без изменения физики или текста403.
 [Проверки и ограничения private API](../scripts/qualification404/README.md)
-отделяют технический teardown-допуск от прежних научных и учебных FAIL.
+отделяют технический teardown-допуск от прежних научных и учебных FAIL;
+это не универсальный допуск GUI или релиза.
+
+[Финальная маркировка405](q2-final-ui-marking-405.md): один литерал после fix404,
+сохранённые scientific FAIL, новый source fingerprint и один штатный GUI smoke.
+[Проверки текста и provenance](../scripts/qualification405/README.md) переиспользуют
+guards403/404 и учитывают sparse checkout и контракт scheduled inspector poll.
 
 Для связанной группы допускается локальный README. Папка на каждый маленький
 файл и отдельные CHANGELOG не обязательны. Изменение импорта/команды/ограничения

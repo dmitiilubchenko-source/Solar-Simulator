@@ -1,0 +1,106 @@
+{
+  "stage": 405,
+  "date": "2026-11-09",
+  "status": "SEALED_BEFORE_TARGETED_RUNS",
+  "dev_start": "71742f8c51ba9372ab16f9eed047d8592b69ac0a",
+  "base_commit": "0985860f1776594a565f5754275fd110a00e29f2",
+  "base_source": "C:/Users/Admin/Desktop/Solar-candidate-033-gui-teardown-404",
+  "base_fingerprint": "81f9b67806a0b258a4a4b5ec0f8d535f56e23c0ab4bf81125f3375fa090de805",
+  "candidate_commit": "8fe01304e502f55e879addb0a4b6f3e062832e37",
+  "candidate_tree": "f65701c8576e53882771e9f1b6633c92866f46f3",
+  "candidate_branch": "codex/candidate-0.3.3-final-marking-405",
+  "candidate_source": "C:/Users/Admin/Desktop/Solar-candidate-033-final-marking-405",
+  "interpreter": "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+  "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "old_sentence": "Проверка GUI lifecycle: сообщения Tcl ещё не разрешены.",
+  "new_sentence": "Закрытие GUI: ограниченная проверка404 — 18/18 PASS, без оставшихся Tcl callback errors в квалифицированной среде. Это не гарантия для других версий Tk/Matplotlib и не готовность релиза.",
+  "required_text_tokens": [
+    "Newton total-degree-two M–Q",
+    "A+D1 утверждён владельцем как цель",
+    "0–200 с",
+    "11/11 PASS",
+    "10/11",
+    "distance_AB: 0.244795 м",
+    "10 м — FAIL",
+    "application acceptance демо — NO-GO",
+    "Три исторических FAIL380",
+    "четыре новых коротких FAIL",
+    "Универсальные границы",
+    "не получает допуска402",
+    "Tcl",
+    "«Старт» не ограничен 200 с",
+    "Release0.3.3 — NO-GO",
+    "экспериментальная",
+    "Нет Q2–Q2",
+    "18/18 PASS",
+    "квалифицированной среде",
+    "других версий Tk/Matplotlib",
+    "не готовность релиза"
+  ],
+  "input_SHA256": {
+    "docs/q2-application-acceptance-402.json": "66c3c832136550d722602d64e042b6b4a6e07645abc82929d60b383ccdd245f9",
+    "docs/q2-interface-qualification-401.json": "cebb4b2aa2c6fe4fa726dbd67bb219c61d756f87843b8e7461d3474400c48348",
+    "docs/q2-scientific-qualification-399.json": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+    "docs/release-scope-391.md": "94b9c1cc1a3dc03abad4a19f192ffde44dc4fbcd7c0fc46cebef3c7ae9edeab6",
+    "scripts/qualification402/plan.json": "f5445ec4f5a5b9da508e660d0f49a46e2c4bd6ef02540d2dea5f82d7a9444fbe",
+    "scripts/qualification402/execute.py": "e9556ca76cae8a999e98097b24e03fc251ffb6f8db8024cf27dc2af8595dbfa3",
+    "docs/q2-ui-lifecycle-403.json": "8e6ea58b8f42c55037afb004f5072c33d60e3c59cfb6e08ad1683619a751ca5d",
+    "docs/q2-gui-lifecycle-fix-404.json": "1af46e0b345cfa36096fb31831b568be74ceb6d14fd715812f26b789f5a4368a",
+    "scripts/qualification404/check_gui.py": "ab384403b07937c712e0f12cc87d4d4e723df45fddfde32887f498fc17f5bf0c",
+    "scripts/qualification404/plan.json": "b187f4f4519df51ae1c86a51b613f7fd8eb7bb90ea3fe7a8aa4445628fa0416d",
+    "scripts/q2_text_delta403.py": "5977844bfb8100e9b7e1125df632bdcb0321e29bbfcc6dc92481dd43426876fb",
+    ".tools/qualification404-20261108/new-actual-environment.json": "81f9b67806a0b258a4a4b5ec0f8d535f56e23c0ab4bf81125f3375fa090de805",
+    ".tools/qualification404-20261108/audit.json": "628d72890d66f5cb737f38390a390daa2902e5967d0dbfb0b16ba420a431894c",
+    ".tools/qualification404-20261108/post-reproducer.json": "9dbc03e9c57d1c6469eafa08390b48fe2eebb9e4700b857e0378f33646c1292c"
+  },
+  "caps": {
+    "cpu_seconds": 60,
+    "wall_seconds": 150,
+    "private_bytes": 1073741824,
+    "disk_bytes": 33554432
+  },
+  "early": {
+    "cpu_seconds": 48,
+    "wall_seconds": 120,
+    "private_bytes": 943718400,
+    "disk_bytes": 29360128
+  },
+  "initial_setup": {
+    "charged_CPU_seconds": 2.0,
+    "charged_active_wall_seconds": 5.0,
+    "measurement": "Conservative allowances for unsampled discovery, not measured. Git/editor/cloud excluded."
+  },
+  "forecast": {
+    "CPU_seconds": 32,
+    "active_wall_seconds": 75,
+    "parts_CPU": {
+      "initial": 2,
+      "checks_GUI_environment": 14,
+      "supervision": 5,
+      "final_audit_tests": 5,
+      "reserve": 6
+    }
+  },
+  "checks": [
+    "one_literal/full_Git_blob_and_file_SHA/AST",
+    "four_UI_states_one_Tk_root",
+    "current_certification_false/global_bounds_unknown/no_evolution",
+    "unchanged_402_404_evidence",
+    "portable_negative_controls",
+    "one_final_smoke_close_and_retained_Tcl_eventpump"
+  ],
+  "historical_archive404": {
+    "id": "17nsmZpXkM3uKq2bIIPSIpRC7hXAHJpjv",
+    "size": 397823,
+    "sha256": "6c896847d55447cde4531cb40986689f57b8347f05926c4d66832fc49e83cef6"
+  },
+  "historical_erratum404": {
+    "id": "1-E2sBW7uTdl_U0Neb7-KgFo8ZA_Xney5",
+    "size": 1233,
+    "sha256": "6aff3ca203101bc86e8713f0d1817da9bb853fa208b37b95a9b664fd297a8107"
+  },
+  "stop": "Unexpected production delta, any evolution call, insufficient evidence or early resource threshold => PARTIAL/STOP; no new orbits/full404/scientific/fullportable runs.",
+  "editorial_errors": [
+    "PowerShell interpreted unquoted HEAD^{tree} as a script block; read-only git rev-parse failed. Correct quoted command confirmed expected tree; no files changed, Git/editor CPU unmeasured."
+  ]
+}
