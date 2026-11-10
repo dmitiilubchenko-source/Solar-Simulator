@@ -73,6 +73,18 @@ def test_ready_lunar_profile_preserves_previously_packaged_settings_and_provenan
     assert result.rotations == lunar_initial(original.bodies, original.origin)
 
 
+def _assert_one_poll(app):
+    ids = [identifier for identifier in app.root.tk.call('after', 'info')
+           if str(app.root.tk.call('after', 'info', identifier)[0]).endswith('_poll')]
+    assert ids == [app._poll_after_id], ('Expected exactly one owned poll', ids)
+    return ids[0]
+
+
+def _assert_worker_error(app, completed, errors, count):
+    assert app.experiment is completed and not app.running and app.future is None
+    assert len(errors) == count
+
+
 def _check_worker_recovery(tmp_path):
     from concurrent.futures import Future
     import tkinter as tk
@@ -110,15 +122,17 @@ def _check_worker_recovery(tmp_path):
         app.future = failure; app.running = True
         with patch('solar_simulator.app.messagebox.showerror', side_effect=lambda *a, **kw: errors.append(a)):
             app._poll()
-        assert app.experiment is completed and not app.running and app.future is None
-        assert len(errors) == 1 and 'controlled worker failure' in errors[0][1]
+        _assert_worker_error(app, completed, errors, 1)
+        assert 'controlled worker failure' in errors[0][1]
         # Bad asynchronous input cannot remove the next poll callback.
         app.batch.set('bad'); app.running = True
-        timers_before = len(root.tk.call('after', 'info'))
+        previous_poll = _assert_one_poll(app)
         with patch('solar_simulator.app.messagebox.showerror', side_effect=lambda *a, **kw: errors.append(a)):
             app._poll()
-        assert not app.running and app.future is None and len(errors) == 2
-        assert len(root.tk.call('after', 'info')) > timers_before
+        _assert_worker_error(app, completed, errors, 2)
+        assert errors[1][0] == 'Расчёт остановлен' and 'bad' in errors[1][1]
+        assert _assert_one_poll(app) != previous_poll
+        assert previous_poll not in root.tk.call('after', 'info')
         app.batch.set('1')
         app._submit(1)
         app.future.result(timeout=10)
