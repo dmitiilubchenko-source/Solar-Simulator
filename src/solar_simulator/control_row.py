@@ -40,8 +40,8 @@ class ControlRow(ttk.Frame):
             requested = min(item.winfo_reqwidth(), max(1,width-6))
             height = item.winfo_reqheight()
             if x and x+requested+6 > width:
-                x = 0; y += row_height+6; row_height = 0
-            item.place(x=x+3, y=y+3, width=requested, height=height)
+                x = 0; y += row_height+4; row_height = 0
+            item.place(x=x+3, y=y+2, width=requested, height=height)
             x += requested+6
             row_height = max(row_height, height)
-        self.configure(height=y+row_height+6)
+        self.configure(height=y+row_height+4)
