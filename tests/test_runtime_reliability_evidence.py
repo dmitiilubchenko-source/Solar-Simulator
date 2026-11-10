@@ -3,6 +3,16 @@ import json
 import pytest
 
 
+@pytest.fixture(autouse=True)
+def historical_source_checkout(tmp_path,monkeypatch):
+    from historical376_fixture407 import checkout
+    from scripts import assess_runtime_reliability376 as module
+    historical=checkout(module.ROOT,tmp_path/'historical376')
+    # Only the historical source reader uses this root. Current verify_source
+    # retains its own actual live root and must still reject the old receipt.
+    monkeypatch.setattr(module,'ROOT',historical)
+
+
 def test_scientific_metrics_are_recomputed_from_raw_arrays_before_accepting_flags(tmp_path):
     from scripts.assess_runtime_reliability376 import REPORT,ARRAYS,verify
     result=verify(historical=True)

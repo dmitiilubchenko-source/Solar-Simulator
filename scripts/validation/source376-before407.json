@@ -1,0 +1,25 @@
+{
+  "name": "historical376-inputs.zip",
+  "size": 706900,
+  "SHA256": "2326775712ab071ec6354b01f529ba2749c22bbee773e5f26948c11408cc38d5",
+  "files": {
+    ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd": {
+      "member": "native032.pyd",
+      "sha256": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+      "size": 1913351
+    },
+    ".venv/Lib/site-packages/scipy/integrate/_ivp/rk.py": {
+      "member": "rk.py.txt",
+      "sha256": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+      "size": 29289
+    },
+    ".venv/Lib/site-packages/scipy/integrate/_ivp/base.py": {
+      "member": "base.py.txt",
+      "sha256": "5bd1a3ddb9fb986333d3d3cc2d2e00bc19efbda00169dcc5b82324aad9f198af",
+      "size": 10844
+    }
+  },
+  "source_commit": "08d60d92c53ba349ce959c2233297199b759d6ae",
+  "extra_sources_SHA256": "8c60e7b4e02f8dd088b61e85a9cbabfb2cb4677237069b5af2e9eee71da6b8c7",
+  "source": "Exact original376 Git sources and existing old032pyd/SciPy sources, all original protocolSHA matched. Never imported/executed, only hash-checked in isolated historical fixture."
+}
