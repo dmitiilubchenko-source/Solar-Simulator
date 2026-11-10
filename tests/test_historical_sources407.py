@@ -80,3 +80,19 @@ def test_historical032_and_candidate033_cannot_exchange_metadata(tmp_path):
         path=destination/'rust/solar_core/Cargo.toml';raw=path.read_bytes();path.write_bytes((source/'rust/solar_core/Cargo.toml').read_bytes())
         with pytest.raises(AssertionError):assert_version(destination,version)
         path.write_bytes(raw)
+
+
+@pytest.mark.parametrize('name',['src/solar_simulator/simulation.py','src/solar_simulator/accuracy.py',
+                                'src/solar_simulator/data/two-q2-demo380.json','native'])
+def test_current_source_guard_never_substitutes_archived_force_tolerance_IC_or_native(tmp_path,name):
+    from scripts.ias15_process import verify_files
+    if name=='native':
+        import solar_native
+        module=getattr(solar_native,'solar_native',solar_native)
+        raw=Path(module.__file__).read_bytes();name='compiled-native.pyd'
+    else:raw=(ROOT/name).read_bytes()
+    target=tmp_path/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+    expected=hashlib.sha256(raw).hexdigest()
+    verify_files({name:expected},root=tmp_path)
+    target.write_bytes(raw+b'controlled corruption')
+    with pytest.raises(ValueError,match='SHA mismatch'):verify_files({name:expected},root=tmp_path)
