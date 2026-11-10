@@ -1,0 +1,4750 @@
+{
+  "stage": 407,
+  "date": "2026-11-10",
+  "status": "GO_TO_FRESH_FULL_SOURCE_ACCEPTANCE408_NOT_RELEASE",
+  "candidate": {
+    "status": "TARGETED_GO_NOT_FULL_ACCEPTANCE",
+    "candidate": "828c79805f7db4576b474206923285ce0b4541c4",
+    "tree": "b858d380b86ac702e85e20ff4acfe0b1efef66ab",
+    "base": "8fe01304e502f55e879addb0a4b6f3e062832e37",
+    "source_fingerprint_SHA256": "29bb46f8e37f0e92e635bfc292739ca53d0c742d218726c44bb97d6d87fe051c",
+    "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+    "actual_interpreter": "C:\\Users\\Admin\\Documents\\Codex\\Solar407-20261110\\env\\Scripts\\python.exe",
+    "prefix": "C:\\Users\\Admin\\Documents\\Codex\\Solar407-20261110\\env",
+    "actual_import": "C:\\Users\\Admin\\Desktop\\Solar-candidate-033-blockers-407\\src\\solar_simulator\\__init__.py",
+    "package_diff": [
+      "control_row.py"
+    ],
+    "production_diff": [
+      "src/solar_simulator/control_row.py"
+    ],
+    "numerical_Rust_native_inputs_unchanged": true,
+    "other_controlrow_methods_AST_identical": true,
+    "old399_406_evidence_unchanged": true,
+    "original73": [
+      {
+        "group": "responsive_layout",
+        "nodeid": "tests/test_app_usability.py::test_controls_and_footer_fit_three_window_sizes_with_open_and_closed_settings",
+        "old_status": "FAIL",
+        "trace_SHA256": "8ee310fec1e65f2ce595af6d4d13a00573871d19b9d112b46eea44eacf28bd9a",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "4.505"
+        }
+      },
+      {
+        "group": "legacy_poll_count_assertion",
+        "nodeid": "tests/test_app_workflows.py::test_invalid_start_pause_worker_failure_and_polling_recovery",
+        "old_status": "FAIL",
+        "trace_SHA256": "ade9b09422d50a24e6ca1cb1133f09c277400a8f33f737a947f8d9c4f4a80aa3",
+        "new": {
+          "status": "PASS",
+          "receipt": "foreign-poll-fixed.xml",
+          "receipt_SHA256": "cc3c1d09c3a302114dcd6ece999b64fe8cd9b108cddd2352cf8ff9b2388249e4",
+          "test_seconds": "2.778"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[docs/current-runtime-375-validation.json]",
+        "old_status": "ERROR",
+        "trace_SHA256": "97097d56a8fad691e5bd6a594afa2ea6752166e27b0159ba26ae28c279dae904",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.102"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[scripts/current-runtime-375-protocol.json]",
+        "old_status": "ERROR",
+        "trace_SHA256": "2d7aa3069f7acb034d3dc1c10a75e5cf09030cda7b75bf3519430f1babb3c92e",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.125"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[scripts/validation/current-runtime-375.npz]",
+        "old_status": "ERROR",
+        "trace_SHA256": "ad518197cd924c4be37d26bf6a9cb20b03ba250b577e70d549300a9257f75b11",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.119"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[src/solar_simulator/_numbers.py]",
+        "old_status": "ERROR",
+        "trace_SHA256": "d676e4fd4845c82bc3f47278c560239183b35bbda45274bbf4f8a5d846908ee7",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.107"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_current_runtime_qualification.py::test_changed_real_environment_cannot_reuse_qualification",
+        "old_status": "ERROR",
+        "trace_SHA256": "0c1bf82e9f31c3ad2a838b1b9febecc6303f0f78ea0e4d1ec1631ddf0c3847ce",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.721"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_current_runtime_qualification.py::test_strict_gate_accepts_only_an_actual_matching_environment",
+        "old_status": "ERROR",
+        "trace_SHA256": "ce6f8f4f496871a42a629bf8db8bfcd20730d0a617c966ef792bd6e2f7c64c15",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.267"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_current_runtime_qualification.py::test_missing_native_cannot_produce_qualification",
+        "old_status": "ERROR",
+        "trace_SHA256": "7a414070792db3148e090d9131e34aa34d697abc42d361600a39c99e556688a9",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.675"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_sandbox_acceptance.py::test_dense_failure_retained_and_frozen375_inputs_verified",
+        "old_status": "ERROR",
+        "trace_SHA256": "edaa25d7474e12005e3d135d20d4886777b98b491dc29bddcdc756b4b8f3417f",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.121"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_sandbox_acceptance.py::test_source_or_pinned_reference_change_rejected_before_acceptance[src/solar_simulator/oblateness.py]",
+        "old_status": "ERROR",
+        "trace_SHA256": "3f08c31f87ce8f93044fb67c62d67813b310ac19cc1fa5b696ca2e917d384217",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.121"
+        }
+      },
+      {
+        "group": "historical375_cargo_fixture",
+        "nodeid": "tests/test_sandbox_acceptance.py::test_source_or_pinned_reference_change_rejected_before_acceptance[docs/solar-system-moon-reference.json]",
+        "old_status": "ERROR",
+        "trace_SHA256": "798778155b6a93a8f8279e59c7b36a1a6c5fbc1ddd4fedbaadebf6ca71071f0f",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.136"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_full_state.py::test_public_offline_pilot_replays_all_packets_without_rebound",
+        "old_status": "FAIL",
+        "trace_SHA256": "d0db28e321ab17d19512b59dc79a3adb0c84d0faa93bcf6024a47a3c999e21d5",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.382"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_full_suite.py::test_public_full_suite_replays_all_cases_and_preserves_failures",
+        "old_status": "FAIL",
+        "trace_SHA256": "49a18c1463bb88c47957475ecf654d40b966861cc441e8fb48546549cafddd68",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "2.245"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_all_nine_force_swaps_replay_without_native_library_raw_or_network",
+        "old_status": "FAIL",
+        "trace_SHA256": "3afc169bc9d37a19f335071d41f50299e4211791a8de0759832a47791e3fb567",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "2.008"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_cargo_checkout_eol_change_preserves_replay_but_content_change_does_not",
+        "old_status": "FAIL",
+        "trace_SHA256": "64d2af09e28fab65fe0e596f26bafcfe7b156d9408c2dd84f488618c0c22e535",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.175"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[physical]",
+        "old_status": "FAIL",
+        "trace_SHA256": "53fabdfd66020caf3ea77bc7030187b0a8a8d4512d4f2e75dc8f47ee80ce563f",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.680"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[force]",
+        "old_status": "FAIL",
+        "trace_SHA256": "e49be6f0b1a1d545e051618f958dbbaa19e8f174de9cc19752402899d1bd4dd4",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.444"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[model]",
+        "old_status": "FAIL",
+        "trace_SHA256": "1fbd0d8d784d722a34d6fb9af1fcd530fc846215ff1c43e920e23739563f55af",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.419"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[gate]",
+        "old_status": "FAIL",
+        "trace_SHA256": "9ef85e6f0b4ae4448dfe094777fbc77364a9c3c5f829bbfc29c0880f3f1296ac",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.832"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[source]",
+        "old_status": "FAIL",
+        "trace_SHA256": "d94bd9f4255650f373a837093e3e6bc849955f282dc8452ab071b8e5f7c746fb",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.171"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[partial]",
+        "old_status": "FAIL",
+        "trace_SHA256": "a61d4ef67b8c345b845139c4e55ea06295c795d0e52a7a7cb8e2c4fd6cca8ad1",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.171"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_new_session_replays_all_modes_without_native_library_raw_or_network",
+        "old_status": "FAIL",
+        "trace_SHA256": "d71024a78e72abd8989f363f4c5b6012da31dab73749c0c6fc3ac95ee172a90e",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.782"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[live-source]",
+        "old_status": "FAIL",
+        "trace_SHA256": "82a70d4f33f61c918ff77d23ba5761c3d21e566c09fb5d31da958940a5af66a6",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "7.234"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[historical-source]",
+        "old_status": "FAIL",
+        "trace_SHA256": "5fcd965b123b5929c7873e7a8b214002248910a1f52958942867bbc1bbf1d0b2",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "6.777"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[lifecycle]",
+        "old_status": "FAIL",
+        "trace_SHA256": "2983a33c5e1630be01e93f1b3572b761a518f3059952a9fbc1b6fe8ba1606d83",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "7.334"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[metrics]",
+        "old_status": "FAIL",
+        "trace_SHA256": "a5eecf48ab12d4fa307780a6542f5f867664c9fadb12d504d36b71f7688233cc",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "7.503"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[gate]",
+        "old_status": "FAIL",
+        "trace_SHA256": "a8e4c714abac83c68606e62c415030e4d1759d27eecdfeded39dead4c88bc5b8",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "7.455"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[cargo]",
+        "old_status": "FAIL",
+        "trace_SHA256": "0dac45ded4c7290ecc279839bec499cf8f8230d04ac3bf84764a45b107842b68",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "7.641"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[partial]",
+        "old_status": "FAIL",
+        "trace_SHA256": "c74d09cc0e3e6489b394ae90129efaacba035a125f673f60791556e51eafa714",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "7.275"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_process.py::test_public_process_evidence_replay",
+        "old_status": "FAIL",
+        "trace_SHA256": "ddbb36205a9d583706d3d1771d94899dc09d6a17432c47411a187776c3e06fca",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.987"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_all_metrics_and_6786_checkpoints_replay_without_raw_library_or_network",
+        "old_status": "FAIL",
+        "trace_SHA256": "0769655ece3bc33919d5678f87f401fb90f3359eaf927ad333f5becfb8034a46",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.202"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[source]",
+        "old_status": "FAIL",
+        "trace_SHA256": "225334b5a2cb7db2cc46f29687a27c436efe0fa0bb79e94225780165ec60995f",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.219"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[archive]",
+        "old_status": "FAIL",
+        "trace_SHA256": "5a1abcfc5874a1c501fa135b808bb43083c3e65943f4c1ef3cc11e26c9aee756",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.305"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[partial]",
+        "old_status": "FAIL",
+        "trace_SHA256": "3d83d7ff318d771cc8da11788a8001a8743aa3bb57790bf68a95e2f12dc520cc",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.217"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[aggregate]",
+        "old_status": "FAIL",
+        "trace_SHA256": "17f87235f475b1a44ae8ee875a8af73561b4cf288a7f9200906fd624a97a510f",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "2.358"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[metric]",
+        "old_status": "FAIL",
+        "trace_SHA256": "6d2b076b665c8bce9f374830d1ff26db5aca5bc738fbe9281421461881fa0c73",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.459"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_inner_physical_corruption_is_detected_even_after_outer_archive_rehash[packet_states]",
+        "old_status": "FAIL",
+        "trace_SHA256": "e1cea5388a1bee4408fc932ccd5b105fcc722a2c2ca70a20edc7010f182d0398",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.956"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_replay.py::test_inner_physical_corruption_is_detected_even_after_outer_archive_rehash[checkpoint_json]",
+        "old_status": "FAIL",
+        "trace_SHA256": "fbf16607159afde9a8a7843a6bee920699010f5fa349b027076a84346979012a",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.938"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_step_replay.py::test_all_36_step_cases_replay_without_raw_library",
+        "old_status": "FAIL",
+        "trace_SHA256": "0b0eee3f2c4004a079f8dc134805879c1acf9239a780a82deef9ca9f52409fd7",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "2.210"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_step_replay.py::test_changed_recipe_gate_or_source_is_rejected[used-dt]",
+        "old_status": "FAIL",
+        "trace_SHA256": "1aa1c5559c63d9295ca13fe6456f9955db77c0aaf2f15ebc9307dde464fd0577",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.982"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_step_replay.py::test_changed_recipe_gate_or_source_is_rejected[gate]",
+        "old_status": "FAIL",
+        "trace_SHA256": "48d7391471cbc2d079424a0650b3d75bb6313a75542b43fdae3ca01201fa125b",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "4.295"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_restart_step_replay.py::test_changed_recipe_gate_or_source_is_rejected[source]",
+        "old_status": "FAIL",
+        "trace_SHA256": "f7030af6c1e57aaa2ce7a8be64bdb580c12502c029f4c8abb19328972c54a273",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.457"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_session_replay.py::test_all_18_owned_sessions_replay_without_library_raw_or_network",
+        "old_status": "FAIL",
+        "trace_SHA256": "9b9ac59e213617764ae95b64ad34eb2d954b650e52afd0d498b48284c2e96833",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.642"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_session_replay.py::test_historical_receipt_uses_exact_frozen_source_without_qualifying_live_extension",
+        "old_status": "FAIL",
+        "trace_SHA256": "f67a4269b650a4db65bb1960b343eb186b41a63c5ab83bf78900f4fe7f6322a7",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "1.648"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[physical]",
+        "old_status": "FAIL",
+        "trace_SHA256": "d63a0398d32219a9a27dc46fe2528749891a9414e84cdaf4c50561dfe6507b39",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.088"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[lifecycle]",
+        "old_status": "FAIL",
+        "trace_SHA256": "59d9b01fdea2f40708605883b31d97c163188e77d874be046820c551dd96cd79",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "3.153"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[source]",
+        "old_status": "FAIL",
+        "trace_SHA256": "2988d6a66e0fd0afb4aac8f2734f6b8bde369e6bed7e8c3142bcc86b8da6882f",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "2.857"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[partial]",
+        "old_status": "FAIL",
+        "trace_SHA256": "ee95857edc4ad79f53cafd2b02288a0dc8f03b8ddd4f3c05734dc60c410c8d92",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "2.852"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_all_eight_variants_and_reference_levels_replay_without_numerical_backends",
+        "old_status": "FAIL",
+        "trace_SHA256": "d3940bea7e6ccaf6cf46086be186c32ee19bb712968b3fb6a4e0fd27bb13017d",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.261"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[physical]",
+        "old_status": "FAIL",
+        "trace_SHA256": "2d449f4c112f52c485ed033559e1963867e0c2153f8a24f0805ec1848f5f5f8b",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.449"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[clock]",
+        "old_status": "FAIL",
+        "trace_SHA256": "b1425a230d85ad5d2138c8ee5835aaea3b514b1b8fe9f8cd3747c41842ecda54",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.436"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[reference]",
+        "old_status": "FAIL",
+        "trace_SHA256": "94712cde8430694fb1ffe76d54f31075c51c6165b89cccf240fe6796c677efb1",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.453"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[force]",
+        "old_status": "FAIL",
+        "trace_SHA256": "2c01d23766d2a1ffcf6f901b67e4e77f4174bc10516417263f807214c8c7d1b4",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.362"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[metric]",
+        "old_status": "FAIL",
+        "trace_SHA256": "d91c654988bdb0aa7db5536692c434e68ffc6f106f168eb76b4daf29f3d0b975",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.439"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[source]",
+        "old_status": "FAIL",
+        "trace_SHA256": "22207b2a4853f028b1701fbb66b3e1cbb76febefee4583125da95a7f712be301",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.276"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[partial]",
+        "old_status": "FAIL",
+        "trace_SHA256": "1887f74eb101c695878920b1d5ca7d296310690a9d47878b87fa32a959319b53",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.302"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[gate]",
+        "old_status": "FAIL",
+        "trace_SHA256": "0e8e28e3f7da9bd055322e4c8cd21ae4272c12a9450e1f64a4fcf388e6f28342",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.460"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_native_newton_year_replay.py::test_original_reference_corruption_cannot_be_accepted_by_outer_rehash",
+        "old_status": "FAIL",
+        "trace_SHA256": "2d97280495c7fe6db9b08509ce776fe9866ffd07c87ef1b94ac65eb4fc8e256a",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.266"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_nominal_jpl_audit.py::test_frozen_payload_and_raw_data_qualify_without_network_or_propagation",
+        "old_status": "FAIL",
+        "trace_SHA256": "d985aded78efd28dcc11753c9a5d2f317f0a354968d1b7ce6bc57ea77718560d",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.236"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_nominal_jpl_audit.py::test_windows_receipt_paths_are_portable_with_posix_path_rules",
+        "old_status": "FAIL",
+        "trace_SHA256": "0db42ba68f823c5cdf5a1b5c2dd38e42293d5b2cad79250d60f63ff831c7be6c",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.103"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_runtime_reliability_evidence.py::test_scientific_metrics_are_recomputed_from_raw_arrays_before_accepting_flags",
+        "old_status": "FAIL",
+        "trace_SHA256": "c3b808a0343b3c10dccfed725b5e9c613aafbbe61b65da686a9122c2dac62ca8",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.842"
+        }
+      },
+      {
+        "group": "historical_control_row_binding",
+        "nodeid": "tests/test_runtime_reliability_evidence.py::test_scientific_array_corruption_is_rejected_before_measurement",
+        "old_status": "FAIL",
+        "trace_SHA256": "b079f002aa63faafcb06615cfb8a4c296c9ab3ddd3e217643ce84cdb5dfc84cf",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.156"
+        }
+      },
+      {
+        "group": "private_ancestor_setup",
+        "nodeid": "tests/test_jpl_replay.py::test_public_bundle_replays_published_values_and_preserves_prior_failure",
+        "old_status": "FAIL",
+        "trace_SHA256": "39760c2e31cc6537fdd2831e7c9e6cb15102d10502474430447c37b5e70de8b2",
+        "new": {
+          "status": "PASS",
+          "receipt": "targeted73-v2.xml",
+          "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+          "test_seconds": "0.093"
+        }
+      },
+      {
+        "group": "private_ancestor_setup",
+        "nodeid": "tests/test_portable_rotation_documents.py::test_public_rotation_document_closure_resolves_nested_links_and_excludes_personal_files",
+        "old_status": "FAIL",
+        "trace_SHA256": "5255f555c71bb45dab5114d3061f51164f5298d97ed45ca27f8e61316f1af015",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.015"
+        }
+      },
+      {
+        "group": "private_ancestor_setup",
+        "nodeid": "tests/test_portable_rotation_documents.py::test_only_explicit_public_runtime_license_may_join_document_closure[ERFA-LICENSE.txt-True]",
+        "old_status": "FAIL",
+        "trace_SHA256": "7771d6e025d949502f8b0ed9b0e5344afa7255d9ee0d9179626f29316180ac57",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.012"
+        }
+      },
+      {
+        "group": "private_ancestor_setup",
+        "nodeid": "tests/test_portable_rotation_documents.py::test_only_explicit_public_runtime_license_may_join_document_closure[private-source.txt-False]",
+        "old_status": "FAIL",
+        "trace_SHA256": "5b34a1d3019e4dbccbd5a31263ce5ab17553dc651bff1b2f44c924cbae71e4f0",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.010"
+        }
+      },
+      {
+        "group": "private_ancestor_setup",
+        "nodeid": "tests/test_portable_rotation_documents.py::test_actual_prepared_portable_has_complete_relative_document_links",
+        "old_status": "FAIL",
+        "trace_SHA256": "e20800c160123bda2b2da528e14089df81debc73ad55495c5cdf516f51227dad",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.515"
+        }
+      },
+      {
+        "group": "private_ancestor_setup",
+        "nodeid": "tests/test_portable_rotation_documents.py::test_unlisted_archives_cannot_join_public_closure",
+        "old_status": "FAIL",
+        "trace_SHA256": "0fdb8adfb14054bcb0ce33677b304c7d82a352673c66bc0bc0e52ecb2da94526",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.010"
+        }
+      },
+      {
+        "group": "historical032_cargo_metadata",
+        "nodeid": "tests/test_release_history.py::test_exact_historical_bytes_survive_product_version_transition",
+        "old_status": "FAIL",
+        "trace_SHA256": "16a25e0ffaa2686f87f93300f07a553db5fb7850b26aacd6a371b761d4e81aab",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.023"
+        }
+      },
+      {
+        "group": "historical032_cargo_metadata",
+        "nodeid": "tests/test_release_history.py::test_cargo_checkout_line_endings_are_allowed_but_content_is_not",
+        "old_status": "FAIL",
+        "trace_SHA256": "71efbd678d1025f9c79b83acbf965859571a54f00644bcdba244b02ef83b5cb9",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.025"
+        }
+      },
+      {
+        "group": "historical032_cargo_metadata",
+        "nodeid": "tests/test_release_history.py::test_entire_mapped_closure_survives_linux_and_windows_cargo_checkout[\\n]",
+        "old_status": "FAIL",
+        "trace_SHA256": "c994d41c37be1aa13775c19af6d72f23f5a9cb67d9c8aaefaa8858fa1d96026b",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.031"
+        }
+      },
+      {
+        "group": "historical032_cargo_metadata",
+        "nodeid": "tests/test_release_history.py::test_entire_mapped_closure_survives_linux_and_windows_cargo_checkout[\\r\\n]",
+        "old_status": "FAIL",
+        "trace_SHA256": "3e5b77971bc5743e6894ba69bc9b2bab795624bd60201de621d0a013bd85f936",
+        "new": {
+          "status": "PASS",
+          "receipt": "neighbors-final.xml",
+          "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+          "test_seconds": "0.021"
+        }
+      }
+    ],
+    "inventory_count": 3073,
+    "added_nodes": 28,
+    "inventory_SHA256": "16445ae75352fbfa29d9b5311e551e979f9402e9f2cb118d1dd6c0c08d8ed44c",
+    "commits": [
+      {
+        "commit": "c9bc3e7dbd0d54535b1b3726ec584f9896df0f81",
+        "subject": "Fit expanded controls at 900x720 with smaller vertical row spacing",
+        "paths": [
+          "src/solar_simulator/control_row.py"
+        ],
+        "diff_SHA256": "f8a181164c84515d87ec19b8e4a2f039fa8aede597e9296a1c83262159e6fbeb",
+        "affected_tests": [],
+        "runtime_changed_paths": [
+          "src/solar_simulator/control_row.py"
+        ],
+        "scientific_runtime_change": false,
+        "impact": "Three verticalgeometry constants only"
+      },
+      {
+        "commit": "7d892eceb08e0065132d76b65988788c9f1b68b9",
+        "subject": "Test single-owned scheduled poll and worker-error recovery contract",
+        "paths": [
+          "tests/test_app_workflows.py",
+          "tests/test_poll_ownership407.py"
+        ],
+        "diff_SHA256": "137361841285b336a2c9453d4f84e80cc58534af80d62b4bb39afe578e657047",
+        "affected_tests": [
+          "tests/test_app_workflows.py",
+          "tests/test_poll_ownership407.py"
+        ],
+        "runtime_changed_paths": [],
+        "scientific_runtime_change": false,
+        "impact": "Tests/offlinefixtures/docs only; no live numericalsource change"
+      },
+      {
+        "commit": "243a337842c5f10f4f9c3dfcd8873000f9841b39",
+        "subject": "Restore exact pre404 ControlRow and complete historical375 source artifacts",
+        "paths": [
+          "scripts/historical_sources407.py",
+          "scripts/release_history.py",
+          "scripts/validation/source-before407.json",
+          "scripts/validation/source-before407.zip",
+          "tests/test_sandbox_acceptance.py"
+        ],
+        "diff_SHA256": "407f15003a7ded22d23d7cfa8f3389aa2d2405372e4fb3852edf2317457146ed",
+        "affected_tests": [
+          "tests/test_sandbox_acceptance.py"
+        ],
+        "runtime_changed_paths": [],
+        "scientific_runtime_change": false,
+        "impact": "Tests/offlinefixtures/docs only; no live numericalsource change"
+      },
+      {
+        "commit": "bae34d180e110fafda830bd4dd640f230eb06730",
+        "subject": "Use explicit accepted032 metadata in historical replay fixtures",
+        "paths": [
+          "tests/fixtures/control-row-405.py.txt",
+          "tests/test_historical_sources407.py",
+          "tests/test_ias15_native_newton_replay.py",
+          "tests/test_ias15_native_session_replay.py",
+          "tests/test_native_newton_year_replay.py",
+          "tests/test_release_history.py"
+        ],
+        "diff_SHA256": "1101e463f41d913bddef5f42a9505953717381dd565026254831ff1e296c84b8",
+        "affected_tests": [
+          "tests/fixtures/control-row-405.py.txt",
+          "tests/test_historical_sources407.py",
+          "tests/test_ias15_native_newton_replay.py",
+          "tests/test_ias15_native_session_replay.py",
+          "tests/test_native_newton_year_replay.py",
+          "tests/test_release_history.py"
+        ],
+        "runtime_changed_paths": [],
+        "scientific_runtime_change": false,
+        "impact": "Tests/offlinefixtures/docs only; no live numericalsource change"
+      },
+      {
+        "commit": "069148b377b4f69a67246fbc491537f52144f2e5",
+        "subject": "Close isolated historical376 replay inputs without executing old dependencies",
+        "paths": [
+          "scripts/validation/source376-before407.json",
+          "scripts/validation/source376-before407.zip",
+          "tests/historical376_fixture407.py",
+          "tests/test_runtime_reliability_evidence.py"
+        ],
+        "diff_SHA256": "c4b6ccd6886dc806985e96453b57d10bc60aab38661454d4b3adbc8684df949e",
+        "affected_tests": [
+          "tests/historical376_fixture407.py",
+          "tests/test_runtime_reliability_evidence.py"
+        ],
+        "runtime_changed_paths": [],
+        "scientific_runtime_change": false,
+        "impact": "Tests/offlinefixtures/docs only; no live numericalsource change"
+      },
+      {
+        "commit": "0da97d1164f6dbb35045682193ffe1668277e230",
+        "subject": "Complete candidate Q2 documents and statically prepare their public export",
+        "paths": [
+          ".gitattributes",
+          "docs/q2-application-acceptance-402.json",
+          "docs/q2-application-acceptance-402.md",
+          "docs/q2-document-composition-407.json",
+          "docs/q2-gui-lifecycle-fix-404.json",
+          "docs/q2-gui-lifecycle-fix-404.md",
+          "docs/releases/v0.3.3.md",
+          "scripts/build_portable.py",
+          "scripts/q2_execution398.py",
+          "scripts/q2_frame_observer393.py",
+          "scripts/q2_lifecycle_delta404.py",
+          "scripts/q2_source_adapter396.py",
+          "scripts/qualification402/README.md",
+          "scripts/qualification402/metrics.py",
+          "scripts/qualification402/plan.json",
+          "scripts/qualification404/README.md",
+          "scripts/qualification404/audit.py",
+          "scripts/qualification404/check_gui.py",
+          "scripts/qualification404/plan.json",
+          "tests/test_candidate_documents407.py",
+          "tests/test_historical376_inputs407.py",
+          "tests/test_ias15_native_newton_replay.py",
+          "tests/test_ias15_native_session_replay.py",
+          "tests/test_native_newton_year_replay.py",
+          "tests/test_q2_application402.py",
+          "tests/test_q2_lifecycle404.py",
+          "tests/test_release_history.py"
+        ],
+        "diff_SHA256": "a14410a517d1cedf474b518590cd841de8876f445989c30d53cbceb661359d80",
+        "affected_tests": [
+          "tests/test_candidate_documents407.py",
+          "tests/test_historical376_inputs407.py",
+          "tests/test_ias15_native_newton_replay.py",
+          "tests/test_ias15_native_session_replay.py",
+          "tests/test_native_newton_year_replay.py",
+          "tests/test_q2_application402.py",
+          "tests/test_q2_lifecycle404.py",
+          "tests/test_release_history.py"
+        ],
+        "runtime_changed_paths": [],
+        "scientific_runtime_change": false,
+        "impact": "Tests/offlinefixtures/docs only; no live numericalsource change"
+      },
+      {
+        "commit": "032c36eae8e7ec5577469285ee0d9b15adab6a52",
+        "subject": "Document candidate scope and enforce current source integrity controls",
+        "paths": [
+          "docs/candidate407.md",
+          "docs/project-inventory.json",
+          "docs/project-map.md",
+          "tests/test_historical_sources407.py"
+        ],
+        "diff_SHA256": "39275e7f57737fb75698e1f1ae92dcbc0331877bf08e52af6bb3668d51e4f4b3",
+        "affected_tests": [
+          "tests/test_historical_sources407.py"
+        ],
+        "runtime_changed_paths": [],
+        "scientific_runtime_change": false,
+        "impact": "Tests/offlinefixtures/docs only; no live numericalsource change"
+      },
+      {
+        "commit": "828c79805f7db4576b474206923285ce0b4541c4",
+        "subject": "Distinguish owned poll callbacks from same-named foreign timers",
+        "paths": [
+          "tests/test_app_workflows.py",
+          "tests/test_poll_ownership407.py"
+        ],
+        "diff_SHA256": "002a215445d146256277898ccc698252e7e9e5a8915609d17aa3fd31d228d1c9",
+        "affected_tests": [
+          "tests/test_app_workflows.py",
+          "tests/test_poll_ownership407.py"
+        ],
+        "runtime_changed_paths": [],
+        "scientific_runtime_change": false,
+        "impact": "Tests/offlinefixtures/docs only; no live numericalsource change"
+      }
+    ],
+    "monitor": "Original385 retained; optimized prototype NO-GO after real Windows race",
+    "source_scope": "70 original cases PASS at phase metadata fixes; 66neighbor cases at032c36e supersede all3late blockers; final2pollcases at new frozen head verify ownership correction, tests-only delta. Unchanged numerical/replay implementation and inputs verified; final historical51 not reexecuted. Not a full-candidate acceptance or new scientific qualification."
+  },
+  "verdicts": {
+    "RESPONSIVE_LAYOUT": "PASS_167_TO_191PX_ORIGINAL170CONTRACT",
+    "POLL_OWNERSHIP_CONTRACT": "PASS_REAL_SCHEDULED_AND_NEGATIVE_CONTROLS",
+    "HISTORICAL_SOURCE_CLOSURE": "PASS_EXACT375_AND_ISOLATED376_WITH_PINNED_FORENSIC_INPUTS",
+    "HISTORICAL_METADATA": "PASS_ACCEPTED032_SEPARATE_FROM_CURRENT033",
+    "TEST_ENVIRONMENT_PATHS": "PASS_ORDINARY_SOURCE_TEMP_NO_PRIVACY_RELAXATION",
+    "CANDIDATE_COMPOSITION": "PASS_EXACT_PUBLIC_DOCS_DOCUMENT_ONLY_EXPORT",
+    "TARGETED_REGRESSION_ACCEPTANCE": "PASS_PHASED_ALL73_PLUS_FINAL66_NEIGHBORS",
+    "NUMERICAL_SOURCE_IDENTITY": "PASS_ONLY_THREE_CONTROLROW_GEOMETRY_CONSTANTS_DIFFER_IN_SRC_RUST",
+    "FULL_SOURCE_ACCEPTANCE": "NOT_RUN_REQUIRES_NEW408",
+    "APPLICATION_D1": "NO-GO_UNCHANGED",
+    "RELEASE_READINESS": "NO-GO_UNCHANGED"
+  },
+  "baseline406": {
+    "commit": "8fe01304e502f55e879addb0a4b6f3e062832e37",
+    "report_SHA256": "b09477906cbe80bb427d3ca6ddadaebb959fcfe51c113ef5eda588e5343185ad",
+    "counts": {
+      "PASS": 2972,
+      "FAIL": 63,
+      "ERROR": 10,
+      "SKIP": 0
+    },
+    "unchanged": true
+  },
+  "original73": [
+    {
+      "group": "responsive_layout",
+      "nodeid": "tests/test_app_usability.py::test_controls_and_footer_fit_three_window_sizes_with_open_and_closed_settings",
+      "old_status": "FAIL",
+      "trace_SHA256": "8ee310fec1e65f2ce595af6d4d13a00573871d19b9d112b46eea44eacf28bd9a",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "4.505"
+      }
+    },
+    {
+      "group": "legacy_poll_count_assertion",
+      "nodeid": "tests/test_app_workflows.py::test_invalid_start_pause_worker_failure_and_polling_recovery",
+      "old_status": "FAIL",
+      "trace_SHA256": "ade9b09422d50a24e6ca1cb1133f09c277400a8f33f737a947f8d9c4f4a80aa3",
+      "new": {
+        "status": "PASS",
+        "receipt": "foreign-poll-fixed.xml",
+        "receipt_SHA256": "cc3c1d09c3a302114dcd6ece999b64fe8cd9b108cddd2352cf8ff9b2388249e4",
+        "test_seconds": "2.778"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[docs/current-runtime-375-validation.json]",
+      "old_status": "ERROR",
+      "trace_SHA256": "97097d56a8fad691e5bd6a594afa2ea6752166e27b0159ba26ae28c279dae904",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.102"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[scripts/current-runtime-375-protocol.json]",
+      "old_status": "ERROR",
+      "trace_SHA256": "2d7aa3069f7acb034d3dc1c10a75e5cf09030cda7b75bf3519430f1babb3c92e",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.125"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[scripts/validation/current-runtime-375.npz]",
+      "old_status": "ERROR",
+      "trace_SHA256": "ad518197cd924c4be37d26bf6a9cb20b03ba250b577e70d549300a9257f75b11",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.119"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_current_runtime_qualification.py::test_single_evidence_or_dependency_corruption_rejected[src/solar_simulator/_numbers.py]",
+      "old_status": "ERROR",
+      "trace_SHA256": "d676e4fd4845c82bc3f47278c560239183b35bbda45274bbf4f8a5d846908ee7",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.107"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_current_runtime_qualification.py::test_changed_real_environment_cannot_reuse_qualification",
+      "old_status": "ERROR",
+      "trace_SHA256": "0c1bf82e9f31c3ad2a838b1b9febecc6303f0f78ea0e4d1ec1631ddf0c3847ce",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.721"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_current_runtime_qualification.py::test_strict_gate_accepts_only_an_actual_matching_environment",
+      "old_status": "ERROR",
+      "trace_SHA256": "ce6f8f4f496871a42a629bf8db8bfcd20730d0a617c966ef792bd6e2f7c64c15",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.267"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_current_runtime_qualification.py::test_missing_native_cannot_produce_qualification",
+      "old_status": "ERROR",
+      "trace_SHA256": "7a414070792db3148e090d9131e34aa34d697abc42d361600a39c99e556688a9",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.675"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_sandbox_acceptance.py::test_dense_failure_retained_and_frozen375_inputs_verified",
+      "old_status": "ERROR",
+      "trace_SHA256": "edaa25d7474e12005e3d135d20d4886777b98b491dc29bddcdc756b4b8f3417f",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.121"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_sandbox_acceptance.py::test_source_or_pinned_reference_change_rejected_before_acceptance[src/solar_simulator/oblateness.py]",
+      "old_status": "ERROR",
+      "trace_SHA256": "3f08c31f87ce8f93044fb67c62d67813b310ac19cc1fa5b696ca2e917d384217",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.121"
+      }
+    },
+    {
+      "group": "historical375_cargo_fixture",
+      "nodeid": "tests/test_sandbox_acceptance.py::test_source_or_pinned_reference_change_rejected_before_acceptance[docs/solar-system-moon-reference.json]",
+      "old_status": "ERROR",
+      "trace_SHA256": "798778155b6a93a8f8279e59c7b36a1a6c5fbc1ddd4fedbaadebf6ca71071f0f",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.136"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_full_state.py::test_public_offline_pilot_replays_all_packets_without_rebound",
+      "old_status": "FAIL",
+      "trace_SHA256": "d0db28e321ab17d19512b59dc79a3adb0c84d0faa93bcf6024a47a3c999e21d5",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.382"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_full_suite.py::test_public_full_suite_replays_all_cases_and_preserves_failures",
+      "old_status": "FAIL",
+      "trace_SHA256": "49a18c1463bb88c47957475ecf654d40b966861cc441e8fb48546549cafddd68",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "2.245"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_all_nine_force_swaps_replay_without_native_library_raw_or_network",
+      "old_status": "FAIL",
+      "trace_SHA256": "3afc169bc9d37a19f335071d41f50299e4211791a8de0759832a47791e3fb567",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "2.008"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_cargo_checkout_eol_change_preserves_replay_but_content_change_does_not",
+      "old_status": "FAIL",
+      "trace_SHA256": "64d2af09e28fab65fe0e596f26bafcfe7b156d9408c2dd84f488618c0c22e535",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.175"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[physical]",
+      "old_status": "FAIL",
+      "trace_SHA256": "53fabdfd66020caf3ea77bc7030187b0a8a8d4512d4f2e75dc8f47ee80ce563f",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.680"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[force]",
+      "old_status": "FAIL",
+      "trace_SHA256": "e49be6f0b1a1d545e051618f958dbbaa19e8f174de9cc19752402899d1bd4dd4",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.444"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[model]",
+      "old_status": "FAIL",
+      "trace_SHA256": "1fbd0d8d784d722a34d6fb9af1fcd530fc846215ff1c43e920e23739563f55af",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.419"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[gate]",
+      "old_status": "FAIL",
+      "trace_SHA256": "9ef85e6f0b4ae4448dfe094777fbc77364a9c3c5f829bbfc29c0880f3f1296ac",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.832"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[source]",
+      "old_status": "FAIL",
+      "trace_SHA256": "d94bd9f4255650f373a837093e3e6bc849955f282dc8452ab071b8e5f7c746fb",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.171"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_newton_replay.py::test_corruption_is_rejected_even_with_outer_archive_rehash[partial]",
+      "old_status": "FAIL",
+      "trace_SHA256": "a61d4ef67b8c345b845139c4e55ea06295c795d0e52a7a7cb8e2c4fd6cca8ad1",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.171"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_new_session_replays_all_modes_without_native_library_raw_or_network",
+      "old_status": "FAIL",
+      "trace_SHA256": "d71024a78e72abd8989f363f4c5b6012da31dab73749c0c6fc3ac95ee172a90e",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.782"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[live-source]",
+      "old_status": "FAIL",
+      "trace_SHA256": "82a70d4f33f61c918ff77d23ba5761c3d21e566c09fb5d31da958940a5af66a6",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "7.234"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[historical-source]",
+      "old_status": "FAIL",
+      "trace_SHA256": "5fcd965b123b5929c7873e7a8b214002248910a1f52958942867bbc1bbf1d0b2",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "6.777"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[lifecycle]",
+      "old_status": "FAIL",
+      "trace_SHA256": "2983a33c5e1630be01e93f1b3572b761a518f3059952a9fbc1b6fe8ba1606d83",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "7.334"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[metrics]",
+      "old_status": "FAIL",
+      "trace_SHA256": "a5eecf48ab12d4fa307780a6542f5f867664c9fadb12d504d36b71f7688233cc",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "7.503"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[gate]",
+      "old_status": "FAIL",
+      "trace_SHA256": "a8e4c714abac83c68606e62c415030e4d1759d27eecdfeded39dead4c88bc5b8",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "7.455"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[cargo]",
+      "old_status": "FAIL",
+      "trace_SHA256": "0dac45ded4c7290ecc279839bec499cf8f8230d04ac3bf84764a45b107842b68",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "7.641"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_native_session_replay.py::test_changed_live_history_or_receipt_cannot_reuse_old_pass[partial]",
+      "old_status": "FAIL",
+      "trace_SHA256": "c74d09cc0e3e6489b394ae90129efaacba035a125f673f60791556e51eafa714",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "7.275"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_process.py::test_public_process_evidence_replay",
+      "old_status": "FAIL",
+      "trace_SHA256": "ddbb36205a9d583706d3d1771d94899dc09d6a17432c47411a187776c3e06fca",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.987"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_all_metrics_and_6786_checkpoints_replay_without_raw_library_or_network",
+      "old_status": "FAIL",
+      "trace_SHA256": "0769655ece3bc33919d5678f87f401fb90f3359eaf927ad333f5becfb8034a46",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.202"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[source]",
+      "old_status": "FAIL",
+      "trace_SHA256": "225334b5a2cb7db2cc46f29687a27c436efe0fa0bb79e94225780165ec60995f",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.219"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[archive]",
+      "old_status": "FAIL",
+      "trace_SHA256": "5a1abcfc5874a1c501fa135b808bb43083c3e65943f4c1ef3cc11e26c9aee756",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.305"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[partial]",
+      "old_status": "FAIL",
+      "trace_SHA256": "3d83d7ff318d771cc8da11788a8001a8743aa3bb57790bf68a95e2f12dc520cc",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.217"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[aggregate]",
+      "old_status": "FAIL",
+      "trace_SHA256": "17f87235f475b1a44ae8ee875a8af73561b4cf288a7f9200906fd624a97a510f",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "2.358"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_damaged_sources_receipts_and_aggregate_cannot_turn_failure_into_pass[metric]",
+      "old_status": "FAIL",
+      "trace_SHA256": "6d2b076b665c8bce9f374830d1ff26db5aca5bc738fbe9281421461881fa0c73",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.459"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_inner_physical_corruption_is_detected_even_after_outer_archive_rehash[packet_states]",
+      "old_status": "FAIL",
+      "trace_SHA256": "e1cea5388a1bee4408fc932ccd5b105fcc722a2c2ca70a20edc7010f182d0398",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.956"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_replay.py::test_inner_physical_corruption_is_detected_even_after_outer_archive_rehash[checkpoint_json]",
+      "old_status": "FAIL",
+      "trace_SHA256": "fbf16607159afde9a8a7843a6bee920699010f5fa349b027076a84346979012a",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.938"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_step_replay.py::test_all_36_step_cases_replay_without_raw_library",
+      "old_status": "FAIL",
+      "trace_SHA256": "0b0eee3f2c4004a079f8dc134805879c1acf9239a780a82deef9ca9f52409fd7",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "2.210"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_step_replay.py::test_changed_recipe_gate_or_source_is_rejected[used-dt]",
+      "old_status": "FAIL",
+      "trace_SHA256": "1aa1c5559c63d9295ca13fe6456f9955db77c0aaf2f15ebc9307dde464fd0577",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.982"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_step_replay.py::test_changed_recipe_gate_or_source_is_rejected[gate]",
+      "old_status": "FAIL",
+      "trace_SHA256": "48d7391471cbc2d079424a0650b3d75bb6313a75542b43fdae3ca01201fa125b",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "4.295"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_restart_step_replay.py::test_changed_recipe_gate_or_source_is_rejected[source]",
+      "old_status": "FAIL",
+      "trace_SHA256": "f7030af6c1e57aaa2ce7a8be64bdb580c12502c029f4c8abb19328972c54a273",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.457"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_session_replay.py::test_all_18_owned_sessions_replay_without_library_raw_or_network",
+      "old_status": "FAIL",
+      "trace_SHA256": "9b9ac59e213617764ae95b64ad34eb2d954b650e52afd0d498b48284c2e96833",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.642"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_session_replay.py::test_historical_receipt_uses_exact_frozen_source_without_qualifying_live_extension",
+      "old_status": "FAIL",
+      "trace_SHA256": "f67a4269b650a4db65bb1960b343eb186b41a63c5ab83bf78900f4fe7f6322a7",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "1.648"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[physical]",
+      "old_status": "FAIL",
+      "trace_SHA256": "d63a0398d32219a9a27dc46fe2528749891a9414e84cdaf4c50561dfe6507b39",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.088"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[lifecycle]",
+      "old_status": "FAIL",
+      "trace_SHA256": "59d9b01fdea2f40708605883b31d97c163188e77d874be046820c551dd96cd79",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "3.153"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[source]",
+      "old_status": "FAIL",
+      "trace_SHA256": "2988d6a66e0fd0afb4aac8f2734f6b8bde369e6bed7e8c3142bcc86b8da6882f",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "2.857"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_ias15_session_replay.py::test_corrupt_physical_arrays_lifecycle_source_or_partial_receipt_are_rejected[partial]",
+      "old_status": "FAIL",
+      "trace_SHA256": "ee95857edc4ad79f53cafd2b02288a0dc8f03b8ddd4f3c05734dc60c410c8d92",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "2.852"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_all_eight_variants_and_reference_levels_replay_without_numerical_backends",
+      "old_status": "FAIL",
+      "trace_SHA256": "d3940bea7e6ccaf6cf46086be186c32ee19bb712968b3fb6a4e0fd27bb13017d",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.261"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[physical]",
+      "old_status": "FAIL",
+      "trace_SHA256": "2d449f4c112f52c485ed033559e1963867e0c2153f8a24f0805ec1848f5f5f8b",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.449"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[clock]",
+      "old_status": "FAIL",
+      "trace_SHA256": "b1425a230d85ad5d2138c8ee5835aaea3b514b1b8fe9f8cd3747c41842ecda54",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.436"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[reference]",
+      "old_status": "FAIL",
+      "trace_SHA256": "94712cde8430694fb1ffe76d54f31075c51c6165b89cccf240fe6796c677efb1",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.453"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[force]",
+      "old_status": "FAIL",
+      "trace_SHA256": "2c01d23766d2a1ffcf6f901b67e4e77f4174bc10516417263f807214c8c7d1b4",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.362"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[metric]",
+      "old_status": "FAIL",
+      "trace_SHA256": "d91c654988bdb0aa7db5536692c434e68ffc6f106f168eb76b4daf29f3d0b975",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.439"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[source]",
+      "old_status": "FAIL",
+      "trace_SHA256": "22207b2a4853f028b1701fbb66b3e1cbb76febefee4583125da95a7f712be301",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.276"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[partial]",
+      "old_status": "FAIL",
+      "trace_SHA256": "1887f74eb101c695878920b1d5ca7d296310690a9d47878b87fa32a959319b53",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.302"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_corruption_is_rejected_even_with_outer_npz_rehash[gate]",
+      "old_status": "FAIL",
+      "trace_SHA256": "0e8e28e3f7da9bd055322e4c8cd21ae4272c12a9450e1f64a4fcf388e6f28342",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.460"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_native_newton_year_replay.py::test_original_reference_corruption_cannot_be_accepted_by_outer_rehash",
+      "old_status": "FAIL",
+      "trace_SHA256": "2d97280495c7fe6db9b08509ce776fe9866ffd07c87ef1b94ac65eb4fc8e256a",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.266"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_nominal_jpl_audit.py::test_frozen_payload_and_raw_data_qualify_without_network_or_propagation",
+      "old_status": "FAIL",
+      "trace_SHA256": "d985aded78efd28dcc11753c9a5d2f317f0a354968d1b7ce6bc57ea77718560d",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.236"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_nominal_jpl_audit.py::test_windows_receipt_paths_are_portable_with_posix_path_rules",
+      "old_status": "FAIL",
+      "trace_SHA256": "0db42ba68f823c5cdf5a1b5c2dd38e42293d5b2cad79250d60f63ff831c7be6c",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.103"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_runtime_reliability_evidence.py::test_scientific_metrics_are_recomputed_from_raw_arrays_before_accepting_flags",
+      "old_status": "FAIL",
+      "trace_SHA256": "c3b808a0343b3c10dccfed725b5e9c613aafbbe61b65da686a9122c2dac62ca8",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.842"
+      }
+    },
+    {
+      "group": "historical_control_row_binding",
+      "nodeid": "tests/test_runtime_reliability_evidence.py::test_scientific_array_corruption_is_rejected_before_measurement",
+      "old_status": "FAIL",
+      "trace_SHA256": "b079f002aa63faafcb06615cfb8a4c296c9ab3ddd3e217643ce84cdb5dfc84cf",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.156"
+      }
+    },
+    {
+      "group": "private_ancestor_setup",
+      "nodeid": "tests/test_jpl_replay.py::test_public_bundle_replays_published_values_and_preserves_prior_failure",
+      "old_status": "FAIL",
+      "trace_SHA256": "39760c2e31cc6537fdd2831e7c9e6cb15102d10502474430447c37b5e70de8b2",
+      "new": {
+        "status": "PASS",
+        "receipt": "targeted73-v2.xml",
+        "receipt_SHA256": "f4fb3b6925910850c8417892afe9ff5c4b097b755c361ddb770da5e4da9a34e8",
+        "test_seconds": "0.093"
+      }
+    },
+    {
+      "group": "private_ancestor_setup",
+      "nodeid": "tests/test_portable_rotation_documents.py::test_public_rotation_document_closure_resolves_nested_links_and_excludes_personal_files",
+      "old_status": "FAIL",
+      "trace_SHA256": "5255f555c71bb45dab5114d3061f51164f5298d97ed45ca27f8e61316f1af015",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.015"
+      }
+    },
+    {
+      "group": "private_ancestor_setup",
+      "nodeid": "tests/test_portable_rotation_documents.py::test_only_explicit_public_runtime_license_may_join_document_closure[ERFA-LICENSE.txt-True]",
+      "old_status": "FAIL",
+      "trace_SHA256": "7771d6e025d949502f8b0ed9b0e5344afa7255d9ee0d9179626f29316180ac57",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.012"
+      }
+    },
+    {
+      "group": "private_ancestor_setup",
+      "nodeid": "tests/test_portable_rotation_documents.py::test_only_explicit_public_runtime_license_may_join_document_closure[private-source.txt-False]",
+      "old_status": "FAIL",
+      "trace_SHA256": "5b34a1d3019e4dbccbd5a31263ce5ab17553dc651bff1b2f44c924cbae71e4f0",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.010"
+      }
+    },
+    {
+      "group": "private_ancestor_setup",
+      "nodeid": "tests/test_portable_rotation_documents.py::test_actual_prepared_portable_has_complete_relative_document_links",
+      "old_status": "FAIL",
+      "trace_SHA256": "e20800c160123bda2b2da528e14089df81debc73ad55495c5cdf516f51227dad",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.515"
+      }
+    },
+    {
+      "group": "private_ancestor_setup",
+      "nodeid": "tests/test_portable_rotation_documents.py::test_unlisted_archives_cannot_join_public_closure",
+      "old_status": "FAIL",
+      "trace_SHA256": "0fdb8adfb14054bcb0ce33677b304c7d82a352673c66bc0bc0e52ecb2da94526",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.010"
+      }
+    },
+    {
+      "group": "historical032_cargo_metadata",
+      "nodeid": "tests/test_release_history.py::test_exact_historical_bytes_survive_product_version_transition",
+      "old_status": "FAIL",
+      "trace_SHA256": "16a25e0ffaa2686f87f93300f07a553db5fb7850b26aacd6a371b761d4e81aab",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.023"
+      }
+    },
+    {
+      "group": "historical032_cargo_metadata",
+      "nodeid": "tests/test_release_history.py::test_cargo_checkout_line_endings_are_allowed_but_content_is_not",
+      "old_status": "FAIL",
+      "trace_SHA256": "71efbd678d1025f9c79b83acbf965859571a54f00644bcdba244b02ef83b5cb9",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.025"
+      }
+    },
+    {
+      "group": "historical032_cargo_metadata",
+      "nodeid": "tests/test_release_history.py::test_entire_mapped_closure_survives_linux_and_windows_cargo_checkout[\\n]",
+      "old_status": "FAIL",
+      "trace_SHA256": "c994d41c37be1aa13775c19af6d72f23f5a9cb67d9c8aaefaa8858fa1d96026b",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.031"
+      }
+    },
+    {
+      "group": "historical032_cargo_metadata",
+      "nodeid": "tests/test_release_history.py::test_entire_mapped_closure_survives_linux_and_windows_cargo_checkout[\\r\\n]",
+      "old_status": "FAIL",
+      "trace_SHA256": "3e5b77971bc5743e6894ba69bc9b2bab795624bd60201de621d0a013bd85f936",
+      "new": {
+        "status": "PASS",
+        "receipt": "neighbors-final.xml",
+        "receipt_SHA256": "1b45986678676bdb9510582132bbd3de055ae3434393b77e3bf0ed456fbd6d9e",
+        "test_seconds": "0.021"
+      }
+    }
+  ],
+  "all73_passed_phased": true,
+  "coverage_note": "70 original cases PASS at phase metadata fixes; 66neighbor cases at032c36e supersede all3late blockers; final2pollcases at new frozen head verify ownership correction, tests-only delta. Unchanged numerical/replay implementation and inputs verified; final historical51 not reexecuted. Not a full-candidate acceptance or new scientific qualification.",
+  "resources": {
+    "charged_CPU_seconds": 647.265625,
+    "charged_active_wall_seconds": 329.0637618000037,
+    "metered_process_CPU_seconds": 560.265625,
+    "tail_CPU_allowances": 5.0,
+    "initial_CPU_allowance": 2.0,
+    "lost_attempt_conservative_CPU_bound": 80.0,
+    "lost_attempt_wall_bound": 5.0,
+    "sampled_worker_private_peak_recorded": 447508480,
+    "data_tree_peak_recorded": 1014658044,
+    "external_source_reserved_bytes": 536870912,
+    "phases": {
+      "composition-regression-resources.json": {
+        "record": {
+          "exit_code": 1,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 1.5625,
+            "parent_cpu": 1.46875,
+            "private_tree": 101548032,
+            "rss_tree": 82866176,
+            "disk": 1014650309,
+            "elapsed": 2.3451158000389114
+          },
+          "samples": 3,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 2.265625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 2.21875,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 101548032,
+          "processes": [
+            {
+              "pid": 26684,
+              "creation_time": 1794335780.7875395,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 26496,
+              "creation_time": 1794335780.791768,
+              "CPU_seconds": 2.265625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 82866176,
+          "wall_seconds": 3.1055581000400707,
+          "disk_bytes": 1014658044,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 5.53125,
+        "charged_active_wall_seconds": 3.357388300006278,
+        "total_CPU": 454.921875,
+        "total_wall": 217.13933540001744,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "final-composition-controls-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 2.359375,
+            "parent_cpu": 2.28125,
+            "private_tree": 128462848,
+            "rss_tree": 116588544,
+            "disk": 505640874,
+            "elapsed": 3.2585755000473
+          },
+          "samples": 4,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 3.09375,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 3.046875,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 128462848,
+          "processes": [
+            {
+              "pid": 15572,
+              "creation_time": 1794335960.953384,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 30616,
+              "creation_time": 1794335960.9581814,
+              "CPU_seconds": 3.078125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 116588544,
+          "wall_seconds": 3.6718020000262186,
+          "disk_bytes": 273160964,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 6.84375,
+        "charged_active_wall_seconds": 3.923683599976357,
+        "total_CPU": 461.765625,
+        "total_wall": 221.0630189999938,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "foreign-poll-owner-failing-resources.json": {
+        "record": {
+          "exit_code": 1,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 3.375,
+            "parent_cpu": 3.234375,
+            "private_tree": 279687168,
+            "rss_tree": 217276416,
+            "disk": 314265587,
+            "elapsed": 5.252485000004526
+          },
+          "samples": 6,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 3.90625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 4.734375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 279687168,
+          "processes": [
+            {
+              "pid": 29572,
+              "creation_time": 1794336911.2682593,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 21612,
+              "creation_time": 1794336911.2726932,
+              "CPU_seconds": 0.984375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 26096,
+              "creation_time": 1794336911.917585,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 24764,
+              "creation_time": 1794336911.921518,
+              "CPU_seconds": 2.921875,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 217276416,
+          "wall_seconds": 6.667141999991145,
+          "disk_bytes": 285955208,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 10.296875,
+        "charged_active_wall_seconds": 6.920457099971827,
+        "total_CPU": 597.96875,
+        "total_wall": 299.5601095999591,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "foreign-poll-owner-fixed-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 5.546875,
+            "parent_cpu": 5.421875,
+            "private_tree": 260423680,
+            "rss_tree": 199745536,
+            "disk": 285960969,
+            "elapsed": 7.403821899963077
+          },
+          "samples": 8,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 6.546875,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 6.859375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 265089024,
+          "processes": [
+            {
+              "pid": 17920,
+              "creation_time": 1794336933.2372632,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 12580,
+              "creation_time": 1794336933.2412274,
+              "CPU_seconds": 0.828125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 29628,
+              "creation_time": 1794336933.9098253,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 28276,
+              "creation_time": 1794336933.913391,
+              "CPU_seconds": 2.671875,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 7880,
+              "creation_time": 1794336936.6889682,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 22708,
+              "creation_time": 1794336936.6932662,
+              "CPU_seconds": 3.03125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 228093952,
+          "wall_seconds": 8.892409999971278,
+          "disk_bytes": 281791082,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 15.140625,
+        "charged_active_wall_seconds": 9.144718600029591,
+        "total_CPU": 613.109375,
+        "total_wall": 308.7048281999887,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "freeze-audit-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 10.0,
+            "parent_cpu": 11.6875,
+            "private_tree": 92696576,
+            "rss_tree": 112443392,
+            "disk": 313137336,
+            "elapsed": 13.514800600009039
+          },
+          "samples": 27,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 10.1875,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 12.109375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 272891904,
+          "processes": [
+            {
+              "pid": 26960,
+              "creation_time": 1794336291.5523772,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 6680,
+              "creation_time": 1794336291.5570688,
+              "CPU_seconds": 3.265625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 27092,
+              "creation_time": 1794336294.074144,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 18672,
+              "creation_time": 1794336294.0798907,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 10524,
+              "creation_time": 1794336294.5997734,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 11020,
+              "creation_time": 1794336295.101072,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 6588,
+              "creation_time": 1794336295.107135,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 15628,
+              "creation_time": 1794336296.3099113,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 30268,
+              "creation_time": 1794336296.3133228,
+              "CPU_seconds": 6.875,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 19376,
+              "creation_time": 1794336304.1215632,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 27680,
+              "creation_time": 1794336304.1272724,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 307412992,
+          "wall_seconds": 13.964482399984263,
+          "disk_bytes": 313137336,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 23.015625,
+        "charged_active_wall_seconds": 14.236509400012437,
+        "total_CPU": 578.703125,
+        "total_wall": 286.96667150000576,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "freeze-audit-v2-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 14.53125,
+            "parent_cpu": 15.953125,
+            "private_tree": 92504064,
+            "rss_tree": 113070080,
+            "disk": 283277142,
+            "elapsed": 18.71090579999145
+          },
+          "samples": 16,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 15.28125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 17.234375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 258301952,
+          "processes": [
+            {
+              "pid": 29288,
+              "creation_time": 1794336976.8157363,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 6444,
+              "creation_time": 1794336976.81987,
+              "CPU_seconds": 4.640625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 5376,
+              "creation_time": 1794336979.875756,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 28236,
+              "creation_time": 1794336981.345111,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 25724,
+              "creation_time": 1794336981.9778535,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 11008,
+              "creation_time": 1794336981.9820957,
+              "CPU_seconds": 10.609375,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 307384320,
+          "wall_seconds": 20.087056300020777,
+          "disk_bytes": 283324839,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 34.15625,
+        "charged_active_wall_seconds": 20.358933600015007,
+        "total_CPU": 647.265625,
+        "total_wall": 329.0637618000037,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "guard-audit-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.515625,
+            "parent_cpu": 0.4375,
+            "private_tree": 37556224,
+            "rss_tree": 31981568,
+            "disk": 310574040,
+            "elapsed": 0.9382844000356272
+          },
+          "samples": 2,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.640625,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 0.828125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 37556224,
+          "processes": [
+            {
+              "pid": 6164,
+              "creation_time": 1794336289.7954824,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 1228,
+              "creation_time": 1794336289.7998006,
+              "CPU_seconds": 0.625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 31981568,
+          "wall_seconds": 1.3868003000388853,
+          "disk_bytes": 310575185,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 2.203125,
+        "charged_active_wall_seconds": 1.6405173999955878,
+        "total_CPU": 555.6875,
+        "total_wall": 272.7301620999933,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "initial-resources.json": {
+        "charged_CPU_seconds": 2.0,
+        "charged_active_wall_seconds": 5.0,
+        "scope": "Conservative unmeasured setup/Git worktree allowance; all subsequent execution guarded"
+      },
+      "late376-closure-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 2.296875,
+            "parent_cpu": 2.203125,
+            "private_tree": 93368320,
+            "rss_tree": 116322304,
+            "disk": 971622958,
+            "elapsed": 3.216937199991662
+          },
+          "samples": 4,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 3.09375,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 3.0,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 109072384,
+          "processes": [
+            {
+              "pid": 17984,
+              "creation_time": 1794335660.4026537,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 32516,
+              "creation_time": 1794335660.407564,
+              "CPU_seconds": 3.09375,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 116322304,
+          "wall_seconds": 4.111674599989783,
+          "disk_bytes": 986328846,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 7.28125,
+        "charged_active_wall_seconds": 4.363511900010053,
+        "total_CPU": 449.390625,
+        "total_wall": 213.78194710001117,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "layout-baseline-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 4.328125,
+            "parent_cpu": 3.703125,
+            "private_tree": 198021120,
+            "rss_tree": 198336512,
+            "disk": 212251123,
+            "elapsed": 4.808673299965449
+          },
+          "samples": 16,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 4.484375,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 4.0,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 198021120,
+          "processes": [
+            {
+              "pid": 30124,
+              "creation_time": 1794334407.8875024,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 12508,
+              "creation_time": 1794334407.8917701,
+              "CPU_seconds": 4.484375,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 198336512,
+          "wall_seconds": 5.106647500011604,
+          "disk_bytes": 212544418,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 9.015625,
+        "charged_active_wall_seconds": 5.358508399978746,
+        "total_CPU": 38.140625,
+        "total_wall": 27.57658749993425,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "layout-fixed-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 4.21875,
+            "parent_cpu": 3.609375,
+            "private_tree": 195313664,
+            "rss_tree": 195465216,
+            "disk": 212622656,
+            "elapsed": 4.7140892000170425
+          },
+          "samples": 16,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 4.34375,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 3.890625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 195313664,
+          "processes": [
+            {
+              "pid": 27884,
+              "creation_time": 1794334455.0234823,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 14492,
+              "creation_time": 1794334455.028099,
+              "CPU_seconds": 4.34375,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 195465216,
+          "wall_seconds": 5.00661849998869,
+          "disk_bytes": 212915947,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 8.828125,
+        "charged_active_wall_seconds": 5.260522300028242,
+        "total_CPU": 46.96875,
+        "total_wall": 32.83710979996249,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "layout-regression-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 4.8125,
+            "parent_cpu": 4.15625,
+            "private_tree": 300003328,
+            "rss_tree": 220864512,
+            "disk": 212919187,
+            "elapsed": 5.339987099985592
+          },
+          "samples": 18,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 4.921875,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 4.375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 333791232,
+          "processes": [
+            {
+              "pid": 12572,
+              "creation_time": 1794334460.160046,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 24784,
+              "creation_time": 1794334460.1638155,
+              "CPU_seconds": 0.65625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 21804,
+              "creation_time": 1794334460.7528152,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 22640,
+              "creation_time": 1794334460.7563756,
+              "CPU_seconds": 4.265625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 241119232,
+          "wall_seconds": 5.632814500015229,
+          "disk_bytes": 212919680,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 9.859375,
+        "charged_active_wall_seconds": 5.885607699980028,
+        "total_CPU": 56.828125,
+        "total_wall": 38.72271749994252,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "metadata-and-history-controls-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 2.015625,
+            "parent_cpu": 0.859375,
+            "private_tree": 92233728,
+            "rss_tree": 115666944,
+            "disk": 216780657,
+            "elapsed": 2.175996000005398
+          },
+          "samples": 26,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 2.078125,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 0.90625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 111263744,
+          "processes": [
+            {
+              "pid": 20908,
+              "creation_time": 1794335064.1281009,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 20448,
+              "creation_time": 1794335064.1323416,
+              "CPU_seconds": 2.0625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 134103040,
+          "wall_seconds": 2.2574427999788895,
+          "disk_bytes": 216780758,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 3.359375,
+        "charged_active_wall_seconds": 2.5093410999979824,
+        "total_CPU": 85.921875,
+        "total_wall": 57.047390799969435,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "monitor-qualification-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 2.28125,
+            "parent_cpu": 2.6875,
+            "private_tree": 22925312,
+            "rss_tree": 33230848,
+            "disk": 214044709,
+            "elapsed": 3.4276197999715805
+          },
+          "samples": 9,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 2.28125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 2.984375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 96657408,
+          "processes": [
+            {
+              "pid": 31664,
+              "creation_time": 1794334967.808591,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 33108,
+              "creation_time": 1794334967.81219,
+              "CPU_seconds": 2.21875,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 33668,
+              "creation_time": 1794334970.068453,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 14420,
+              "creation_time": 1794334970.072018,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 5684,
+              "creation_time": 1794334970.487198,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 30608,
+              "creation_time": 1794334970.4909167,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 19880,
+              "creation_time": 1794334970.5277245,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 33772,
+              "creation_time": 1794334970.5311756,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 70864896,
+          "wall_seconds": 3.7924974999623373,
+          "disk_bytes": 214044709,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 5.921875,
+        "charged_active_wall_seconds": 4.046373300021514,
+        "total_CPU": 82.5625,
+        "total_wall": 54.53804969997145,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "neighbors-final-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 43.765625,
+            "parent_cpu": 42.625,
+            "private_tree": 137216000,
+            "rss_tree": 123518976,
+            "disk": 332204218,
+            "elapsed": 49.24466550000943
+          },
+          "samples": 110,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 47.75,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 43.140625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 376999936,
+          "processes": [
+            {
+              "pid": 2176,
+              "creation_time": 1794336119.2750688,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 9016,
+              "creation_time": 1794336119.27838,
+              "CPU_seconds": 4.875,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 3140,
+              "creation_time": 1794336121.7742884,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 7880,
+              "creation_time": 1794336121.7781792,
+              "CPU_seconds": 4.40625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 13396,
+              "creation_time": 1794336126.2760515,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 13948,
+              "creation_time": 1794336126.2797337,
+              "CPU_seconds": 2.515625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 24764,
+              "creation_time": 1794336128.8511968,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 9512,
+              "creation_time": 1794336128.8550243,
+              "CPU_seconds": 2.609375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 25928,
+              "creation_time": 1794336131.616689,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 8908,
+              "creation_time": 1794336131.6202445,
+              "CPU_seconds": 2.5,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 17508,
+              "creation_time": 1794336134.2427611,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 6364,
+              "creation_time": 1794336134.2461643,
+              "CPU_seconds": 2.859375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 9472,
+              "creation_time": 1794336137.1685672,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 6436,
+              "creation_time": 1794336137.1720428,
+              "CPU_seconds": 2.8125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 18344,
+              "creation_time": 1794336140.2498677,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 3672,
+              "creation_time": 1794336140.2537322,
+              "CPU_seconds": 2.765625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 21192,
+              "creation_time": 1794336143.0601227,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 30216,
+              "creation_time": 1794336143.06374,
+              "CPU_seconds": 2.75,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 10244,
+              "creation_time": 1794336145.8910463,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 23088,
+              "creation_time": 1794336145.8945618,
+              "CPU_seconds": 2.75,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 3168,
+              "creation_time": 1794336148.7302945,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 30404,
+              "creation_time": 1794336148.734027,
+              "CPU_seconds": 2.734375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 22200,
+              "creation_time": 1794336151.6838057,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 21716,
+              "creation_time": 1794336151.6873417,
+              "CPU_seconds": 2.78125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 464,
+              "creation_time": 1794336154.5192008,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 22644,
+              "creation_time": 1794336154.522667,
+              "CPU_seconds": 2.78125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 22556,
+              "creation_time": 1794336157.4097753,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 6828,
+              "creation_time": 1794336157.4134665,
+              "CPU_seconds": 2.75,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 12504,
+              "creation_time": 1794336160.248466,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 14084,
+              "creation_time": 1794336160.252113,
+              "CPU_seconds": 2.859375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 3260,
+              "creation_time": 1794336163.1978366,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 18520,
+              "creation_time": 1794336163.2013562,
+              "CPU_seconds": 2.90625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 317759488,
+          "wall_seconds": 49.774761500011664,
+          "disk_bytes": 310561600,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 91.71875,
+        "charged_active_wall_seconds": 50.02662570000393,
+        "total_CPU": 553.484375,
+        "total_wall": 271.08964469999773,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "original-two-fail-resources.json": {
+        "record": {
+          "exit_code": 1,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 7.703125,
+            "parent_cpu": 6.875,
+            "private_tree": 239661056,
+            "rss_tree": 209809408,
+            "disk": 212157931,
+            "elapsed": 8.6937692000065
+          },
+          "samples": 29,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 8.046875,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 7.125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 291504128,
+          "processes": [
+            {
+              "pid": 26508,
+              "creation_time": 1794334388.115994,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 7748,
+              "creation_time": 1794334388.1208591,
+              "CPU_seconds": 0.78125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 10464,
+              "creation_time": 1794334388.796092,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 15684,
+              "creation_time": 1794334388.7999542,
+              "CPU_seconds": 4.625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 17508,
+              "creation_time": 1794334394.0641406,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 21344,
+              "creation_time": 1794334394.0685837,
+              "CPU_seconds": 2.625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 228700160,
+          "wall_seconds": 8.969628499995451,
+          "disk_bytes": 212173185,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 15.75,
+        "charged_active_wall_seconds": 9.241522599942982,
+        "total_CPU": 29.125,
+        "total_wall": 22.218079099955503,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "original73-after-fixes-resources.json": {
+        "record": {
+          "exit_code": 1,
+          "limit_reason": "monitor-error-plus-finalization-error",
+          "error": "PermissionError WinError32 entering transient pytest *current directory; new scanner retries again in finally; no supervisor.json produced",
+          "complete": false,
+          "worker_CPU_seconds": null
+        },
+        "charged_CPU_seconds": 80.0,
+        "charged_active_wall_seconds": 5.0,
+        "execution_completed": false,
+        "accounting_kind": "CONSERVATIVE_UPPER_BOUND_NOT_MEASURED_CPU",
+        "basis": "Tool call observed total3.184021wall seconds from parent start to exit; whole-machine16logicalCPU bound with5wall margin gives80CPU. This is an upward charge, not a claim of measured consumption or a budget reset. No test finished in stdout; all children terminated before supervisor finalization failed.",
+        "logical_cpus": 16,
+        "lost_final_CPU": true
+      },
+      "original73-after-fixes-v2-resources.json": {
+        "record": {
+          "exit_code": 1,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 142.78125,
+            "parent_cpu": 130.75,
+            "private_tree": 230699008,
+            "rss_tree": 187006976,
+            "disk": 950374584,
+            "elapsed": 146.29447000002256
+          },
+          "samples": 259,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 143.578125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 131.5,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 447508480,
+          "processes": [
+            {
+              "pid": 22364,
+              "creation_time": 1794335193.8703225,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 25488,
+              "creation_time": 1794335193.8740308,
+              "CPU_seconds": 0.09375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 17332,
+              "creation_time": 1794335193.912511,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 25028,
+              "creation_time": 1794335193.91632,
+              "CPU_seconds": 136.46875,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 19312,
+              "creation_time": 1794335197.0004935,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 11220,
+              "creation_time": 1794335197.0041668,
+              "CPU_seconds": 4.375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 1228,
+              "creation_time": 1794335201.5693955,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 27420,
+              "creation_time": 1794335201.5734477,
+              "CPU_seconds": 2.625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 343351296,
+          "wall_seconds": 147.11930939997546,
+          "disk_bytes": 962519758,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 276.1875,
+        "charged_active_wall_seconds": 147.37104440003168,
+        "total_CPU": 442.109375,
+        "total_wall": 209.4184352000011,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "poll-contract-resources.json": {
+        "record": {
+          "exit_code": 1,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 3.515625,
+            "parent_cpu": 3.234375,
+            "private_tree": 36827136,
+            "rss_tree": 52555776,
+            "disk": 212938484,
+            "elapsed": 4.1507684999960475
+          },
+          "samples": 14,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 3.75,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 3.453125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 266526720,
+          "processes": [
+            {
+              "pid": 15268,
+              "creation_time": 1794334615.7651937,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 6364,
+              "creation_time": 1794334615.7701213,
+              "CPU_seconds": 0.75,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 4856,
+              "creation_time": 1794334616.4337463,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 31864,
+              "creation_time": 1794334616.437346,
+              "CPU_seconds": 2.59375,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 32216,
+              "creation_time": 1794334619.175861,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 26996,
+              "creation_time": 1794334619.17924,
+              "CPU_seconds": 0.40625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 205176832,
+          "wall_seconds": 4.4231134000001475,
+          "disk_bytes": 212938484,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 7.75,
+        "charged_active_wall_seconds": 4.675426299974788,
+        "total_CPU": 64.578125,
+        "total_wall": 43.39814379991731,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "poll-contract-v2-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 5.703125,
+            "parent_cpu": 5.09375,
+            "private_tree": 48812032,
+            "rss_tree": 60534784,
+            "disk": 212943574,
+            "elapsed": 6.561896400002297
+          },
+          "samples": 22,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 6.15625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 5.359375,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 303738880,
+          "processes": [
+            {
+              "pid": 7592,
+              "creation_time": 1794334640.2054617,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 21108,
+              "creation_time": 1794334640.2091353,
+              "CPU_seconds": 0.71875,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 10524,
+              "creation_time": 1794334640.844234,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 22212,
+              "creation_time": 1794334640.8478036,
+              "CPU_seconds": 2.53125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 20660,
+              "creation_time": 1794334643.4591453,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 24736,
+              "creation_time": 1794334643.462436,
+              "CPU_seconds": 2.890625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 238485504,
+          "wall_seconds": 6.840712999983225,
+          "disk_bytes": 212943574,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 12.0625,
+        "charged_active_wall_seconds": 7.093532600032631,
+        "total_CPU": 76.640625,
+        "total_wall": 50.49167639994994,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "prepare-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 5.03125,
+            "parent_cpu": 5.28125,
+            "private_tree": 163647488,
+            "rss_tree": 181780480,
+            "disk": 211780762,
+            "elapsed": 7.419051599979866
+          },
+          "samples": 38,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 5.296875,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 5.515625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 174993408,
+          "processes": [
+            {
+              "pid": 25716,
+              "creation_time": 1794334350.0636687,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 8096,
+              "creation_time": 1794334350.0672412,
+              "CPU_seconds": 2.578125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 16444,
+              "creation_time": 1794334350.1728344,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 7564,
+              "creation_time": 1794334350.180494,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 26260,
+              "creation_time": 1794334354.4435027,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 6436,
+              "creation_time": 1794334354.4536085,
+              "CPU_seconds": 2.6875,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 192303104,
+          "wall_seconds": 7.724701200029813,
+          "disk_bytes": 212055485,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 11.375,
+        "charged_active_wall_seconds": 7.976556500012521,
+        "total_CPU": 13.375,
+        "total_wall": 12.97655650001252,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      },
+      "retained-monitor-controls-resources.json": {
+        "record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 3.609375,
+            "parent_cpu": 3.953125,
+            "private_tree": 96075776,
+            "rss_tree": 69980160,
+            "disk": 314232706,
+            "elapsed": 4.854854799981695
+          },
+          "samples": 8,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 3.671875,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 4.453125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 96075776,
+          "processes": [
+            {
+              "pid": 29148,
+              "creation_time": 1794336416.7016916,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 20128,
+              "creation_time": 1794336416.7052877,
+              "CPU_seconds": 3.578125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 22452,
+              "creation_time": 1794336420.2782743,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 26984,
+              "creation_time": 1794336420.2818208,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 23980,
+              "creation_time": 1794336420.686968,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 15860,
+              "creation_time": 1794336420.690461,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 3904,
+              "creation_time": 1794336420.7275653,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 27128,
+              "creation_time": 1794336420.7310863,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 69980160,
+          "wall_seconds": 5.421086199989077,
+          "disk_bytes": 314244466,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "charged_CPU_seconds": 8.96875,
+        "charged_active_wall_seconds": 5.672980999981519,
+        "total_CPU": 587.671875,
+        "total_wall": 292.6396524999873,
+        "tail_allowances": 0.25,
+        "execution_completed": true
+      }
+    },
+    "limitations": "Failedprototype3.184s has no finalCPU/memoryreceipt.80CPU=16logicalcores*5wall margin is an upward bound, NOT measured consumption. Other phase charges include17*.25tail; initial2CPU/5wall allowance. Recorded memory peak excludes lostattempt, combinedprivate threshold checked but totalpeak notpersisted. Sparse samples not OS quota. Metadata/Git/editor/cloud/remoteCI excluded; backup separate. Ephemeral pytest fixtures may rotate by pytest retention; logs/XML/source snapshots/forensicbundle retained."
+  },
+  "monitor": {
+    "decision": {
+      "status": "NO_GO_PROTOTYPE_KEEP_ORIGINAL385_MONITOR",
+      "synthetic": "PASS only static/fault examples",
+      "real_attempt": "PermissionError during ephemeral pytest path scan; finally receipt failed too",
+      "speed": "Static-env4scans1CPU→0.09375CPU; not a qualified drop-in or full-suite speedup",
+      "budget_recovery": {
+        "record": {
+          "exit_code": 1,
+          "limit_reason": "monitor-error-plus-finalization-error",
+          "error": "PermissionError WinError32 entering transient pytest *current directory; new scanner retries again in finally; no supervisor.json produced",
+          "complete": false,
+          "worker_CPU_seconds": null
+        },
+        "charged_CPU_seconds": 80.0,
+        "charged_active_wall_seconds": 5.0,
+        "execution_completed": false,
+        "accounting_kind": "CONSERVATIVE_UPPER_BOUND_NOT_MEASURED_CPU",
+        "basis": "Tool call observed total3.184021wall seconds from parent start to exit; whole-machine16logicalCPU bound with5wall margin gives80CPU. This is an upward charge, not a claim of measured consumption or a budget reset. No test finished in stdout; all children terminated before supervisor finalization failed.",
+        "logical_cpus": 16,
+        "lost_final_CPU": true
+      },
+      "old_monitor_SHA256": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508"
+    },
+    "prototype_static_controls": {
+      "status": "PASS",
+      "only_disk_traversal_AST_changed": true,
+      "poll_seconds": 0.05,
+      "comparisons": [
+        {
+          "root": "C:\\Users\\Admin\\Documents\\Codex\\Solar407-20261110\\monitor-tests\\static",
+          "old": {
+            "CPU": 0.390625,
+            "wall": 0.39216859999578446,
+            "sizes": [
+              15700,
+              15700,
+              15700,
+              15700
+            ]
+          },
+          "new": {
+            "CPU": 0.015625,
+            "wall": 0.011386499973013997,
+            "sizes": [
+              15700,
+              15700,
+              15700,
+              15700
+            ]
+          }
+        },
+        {
+          "root": "C:\\Users\\Admin\\Documents\\Codex\\Solar407-20261110\\env",
+          "old": {
+            "CPU": 1.0,
+            "wall": 1.0436771999811754,
+            "sizes": [
+              211299011,
+              211299011,
+              211299011,
+              211299011
+            ]
+          },
+          "new": {
+            "CPU": 0.09375,
+            "wall": 0.09520089998841286,
+            "sizes": [
+              211299011,
+              211299011,
+              211299011,
+              211299011
+            ]
+          }
+        }
+      ],
+      "faults": {
+        "CPU": {
+          "exit_code": 15,
+          "limit_reason": "stage-CPU",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.125,
+            "parent_cpu": 0.03125,
+            "private_tree": 36798464,
+            "rss_tree": 16662528,
+            "disk": 0,
+            "elapsed": 0.12315379997016862
+          },
+          "samples": 3,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.140625,
+          "root_final_CPU_seconds": 0.03125,
+          "parent_supervision_CPU_seconds": 0.03125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 36798464,
+          "processes": [
+            {
+              "pid": 16404,
+              "creation_time": 1794334969.9365044,
+              "CPU_seconds": 0.03125,
+              "role": "launcher"
+            },
+            {
+              "pid": 20144,
+              "creation_time": 1794334969.9401698,
+              "CPU_seconds": 0.109375,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 16662528,
+          "wall_seconds": 0.12994690000778064,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "wall": {
+          "exit_code": 15,
+          "limit_reason": "stage-wall",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.015625,
+            "parent_cpu": 0.015625,
+            "private_tree": 36790272,
+            "rss_tree": 16650240,
+            "disk": 0,
+            "elapsed": 0.1796186999999918
+          },
+          "samples": 4,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.015625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.03125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 36790272,
+          "processes": [
+            {
+              "pid": 33668,
+              "creation_time": 1794334970.068453,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 14420,
+              "creation_time": 1794334970.072018,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 16650240,
+          "wall_seconds": 0.18594529997790232,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "RAM": {
+          "exit_code": 15,
+          "limit_reason": "private-memory",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.046875,
+            "parent_cpu": 0.0,
+            "private_tree": 204886016,
+            "rss_tree": 150913024,
+            "disk": 0,
+            "elapsed": 0.06848770001670346
+          },
+          "samples": 2,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.0625,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 0.015625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 204886016,
+          "processes": [
+            {
+              "pid": 19784,
+              "creation_time": 1794334970.2564583,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 20728,
+              "creation_time": 1794334970.2598715,
+              "CPU_seconds": 0.046875,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 150913024,
+          "wall_seconds": 0.075575300026685,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "disk": {
+          "exit_code": 15,
+          "limit_reason": "stage-disk",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.03125,
+            "parent_cpu": 0.0,
+            "private_tree": 36802560,
+            "rss_tree": 21032960,
+            "disk": 1048576,
+            "elapsed": 0.06739999999990687
+          },
+          "samples": 2,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.03125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.0,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 36802560,
+          "processes": [
+            {
+              "pid": 2108,
+              "creation_time": 1794334970.3343236,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 29004,
+              "creation_time": 1794334970.337972,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 21032960,
+          "wall_seconds": 0.07366549997823313,
+          "disk_bytes": 1048576,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "interrupt": {
+          "exit_code": 15,
+          "limit_reason": "interrupted",
+          "error": {
+            "type": "KeyboardInterrupt",
+            "message": "fault407"
+          },
+          "last_sample": {
+            "worker_cpu": 0.015625,
+            "parent_cpu": 0.015625,
+            "private_tree": 73699328,
+            "rss_tree": 37613568,
+            "disk": 35,
+            "elapsed": 0.06705169996712357
+          },
+          "samples": 2,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.015625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.015625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 73699328,
+          "processes": [
+            {
+              "pid": 28400,
+              "creation_time": 1794334970.4103467,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 16876,
+              "creation_time": 1794334970.4138358,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 20868,
+              "creation_time": 1794334970.4498155,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 14408,
+              "creation_time": 1794334970.453338,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 37613568,
+          "wall_seconds": 0.07418719999259338,
+          "disk_bytes": 35,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "termination": {
+          "exit_code": 15,
+          "limit_reason": "stage-wall",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.046875,
+            "parent_cpu": 0.0625,
+            "private_tree": 73732096,
+            "rss_tree": 37638144,
+            "disk": 35,
+            "elapsed": 0.404586200020276
+          },
+          "samples": 8,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.046875,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.078125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 73732096,
+          "processes": [
+            {
+              "pid": 5684,
+              "creation_time": 1794334970.487198,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 30608,
+              "creation_time": 1794334970.4909167,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 19880,
+              "creation_time": 1794334970.5277245,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 33772,
+              "creation_time": 1794334970.5311756,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 37638144,
+          "wall_seconds": 0.41103700001258403,
+          "disk_bytes": 35,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "prior-budget": {
+          "exit_code": 15,
+          "limit_reason": "stage-CPU",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.015625,
+            "parent_cpu": 0.0,
+            "private_tree": 36777984,
+            "rss_tree": 12578816,
+            "disk": 0,
+            "elapsed": 0.011533999990206212
+          },
+          "samples": 1,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.015625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.015625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 36777984,
+          "processes": [
+            {
+              "pid": 8432,
+              "creation_time": 1794334970.9002757,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 27192,
+              "creation_time": 1794334970.9038727,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 12578816,
+          "wall_seconds": 0.019543099973816425,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        }
+      },
+      "partial_and_overwrite_rejected": true,
+      "limitations": "Sampled guard, no OS quota; unchanged process-tree discovery/memory cadence/retained final CPU handles/tail policy. Same exact per-scan byte count with faster Windows DirEntry metadata traversal."
+    },
+    "retained_controls": {
+      "status": "PASS",
+      "only_disk_traversal_AST_changed": true,
+      "poll_seconds": 0.05,
+      "comparisons": [
+        {
+          "root": "C:\\Users\\Admin\\Documents\\Codex\\Solar407-20261110\\monitor-tests-retained\\static",
+          "old": {
+            "CPU": 0.375,
+            "wall": 0.3852780999732204,
+            "sizes": [
+              15700,
+              15700,
+              15700,
+              15700
+            ]
+          },
+          "new": {
+            "CPU": 0.375,
+            "wall": 0.38709979999111965,
+            "sizes": [
+              15700,
+              15700,
+              15700,
+              15700
+            ]
+          }
+        },
+        {
+          "root": "C:\\Users\\Admin\\Documents\\Codex\\Solar407-20261110\\env",
+          "old": {
+            "CPU": 1.015625,
+            "wall": 1.0200334999826737,
+            "sizes": [
+              211299011,
+              211299011,
+              211299011,
+              211299011
+            ]
+          },
+          "new": {
+            "CPU": 0.984375,
+            "wall": 1.024684400006663,
+            "sizes": [
+              211299011,
+              211299011,
+              211299011,
+              211299011
+            ]
+          }
+        }
+      ],
+      "faults": {
+        "CPU": {
+          "exit_code": 15,
+          "limit_reason": "stage-CPU",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.171875,
+            "parent_cpu": 0.03125,
+            "private_tree": 36802560,
+            "rss_tree": 16666624,
+            "disk": 0,
+            "elapsed": 0.1797108000027947
+          },
+          "samples": 4,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.1875,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.046875,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 36802560,
+          "processes": [
+            {
+              "pid": 20576,
+              "creation_time": 1794336420.089748,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 10984,
+              "creation_time": 1794336420.093316,
+              "CPU_seconds": 0.1875,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 16666624,
+          "wall_seconds": 0.18688150000525638,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "wall": {
+          "exit_code": 15,
+          "limit_reason": "stage-wall",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.015625,
+            "parent_cpu": 0.03125,
+            "private_tree": 36749312,
+            "rss_tree": 16617472,
+            "disk": 0,
+            "elapsed": 0.17742550000548363
+          },
+          "samples": 4,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.015625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.046875,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 36749312,
+          "processes": [
+            {
+              "pid": 22452,
+              "creation_time": 1794336420.2782743,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 26984,
+              "creation_time": 1794336420.2818208,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 16617472,
+          "wall_seconds": 0.18372219998855144,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "RAM": {
+          "exit_code": 15,
+          "limit_reason": "private-memory",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.078125,
+            "parent_cpu": 0.015625,
+            "private_tree": 204890112,
+            "rss_tree": 150925312,
+            "disk": 0,
+            "elapsed": 0.0647037000162527
+          },
+          "samples": 2,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.078125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.03125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 204890112,
+          "processes": [
+            {
+              "pid": 28656,
+              "creation_time": 1794336420.4639292,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 24440,
+              "creation_time": 1794336420.4679594,
+              "CPU_seconds": 0.078125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 150925312,
+          "wall_seconds": 0.07172619999619201,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "disk": {
+          "exit_code": 15,
+          "limit_reason": "stage-disk",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.03125,
+            "parent_cpu": 0.0,
+            "private_tree": 36835328,
+            "rss_tree": 21057536,
+            "disk": 1048576,
+            "elapsed": 0.06503240001620725
+          },
+          "samples": 2,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.03125,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.015625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 36835328,
+          "processes": [
+            {
+              "pid": 9016,
+              "creation_time": 1794336420.5374327,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 5524,
+              "creation_time": 1794336420.5409193,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 21057536,
+          "wall_seconds": 0.07311379996826872,
+          "disk_bytes": 1048576,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "interrupt": {
+          "exit_code": 15,
+          "limit_reason": "interrupted",
+          "error": {
+            "type": "KeyboardInterrupt",
+            "message": "fault407"
+          },
+          "last_sample": {
+            "worker_cpu": 0.0625,
+            "parent_cpu": 0.015625,
+            "private_tree": 73662464,
+            "rss_tree": 37330944,
+            "disk": 35,
+            "elapsed": 0.06466879998333752
+          },
+          "samples": 2,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.0625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.03125,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 73662464,
+          "processes": [
+            {
+              "pid": 21412,
+              "creation_time": 1794336420.6125824,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 28032,
+              "creation_time": 1794336420.6160147,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 27720,
+              "creation_time": 1794336420.6549735,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 29412,
+              "creation_time": 1794336420.6586452,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 37330944,
+          "wall_seconds": 0.0722811000305228,
+          "disk_bytes": 35,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "termination": {
+          "exit_code": 15,
+          "limit_reason": "stage-wall",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.0625,
+            "parent_cpu": 0.046875,
+            "private_tree": 73678848,
+            "rss_tree": 37568512,
+            "disk": 34,
+            "elapsed": 0.4049047000007704
+          },
+          "samples": 8,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.0625,
+          "root_final_CPU_seconds": 0.015625,
+          "parent_supervision_CPU_seconds": 0.0625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 73678848,
+          "processes": [
+            {
+              "pid": 23980,
+              "creation_time": 1794336420.686968,
+              "CPU_seconds": 0.015625,
+              "role": "launcher"
+            },
+            {
+              "pid": 15860,
+              "creation_time": 1794336420.690461,
+              "CPU_seconds": 0.03125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 3904,
+              "creation_time": 1794336420.7275653,
+              "CPU_seconds": 0.0,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 27128,
+              "creation_time": 1794336420.7310863,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 37568512,
+          "wall_seconds": 0.41233320004539564,
+          "disk_bytes": 34,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        },
+        "prior-budget": {
+          "exit_code": 15,
+          "limit_reason": "stage-CPU",
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.0,
+            "parent_cpu": 0.0,
+            "private_tree": 2666496,
+            "rss_tree": 7774208,
+            "disk": 0,
+            "elapsed": 0.007915399968624115
+          },
+          "samples": 1,
+          "poll_seconds": 0.05,
+          "worker_CPU_seconds": 0.015625,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.015625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 2666496,
+          "processes": [
+            {
+              "pid": 5104,
+              "creation_time": 1794336421.1017315,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 20468,
+              "creation_time": 1794336421.1052704,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 7774208,
+          "wall_seconds": 0.015312599949538708,
+          "disk_bytes": 0,
+          "complete": false,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 50ms cap overshoot possible"
+        }
+      },
+      "partial_and_overwrite_rejected": true,
+      "limitations": "Sampled guard, no OS quota; unchanged process-tree discovery/memory cadence/retained final CPU handles/tail policy. Same exact per-scan byte count with faster Windows DirEntry metadata traversal."
+    },
+    "retained_receipt_naming": {
+      "reason": "Profiler loop variable label shadowed execution label only in receipt filename; retained oldmonitor module was selected correctly before loop. Original rawresult kept; exactbyte copy gives unambiguous name, no rerun.",
+      "old": "monitor-validation-new.json",
+      "new": "monitor-validation-retained.json",
+      "SHA256": "9a87fa72d6ecb24d3fa65e3de4354ccc41665567d4857fb37740af24582c5993"
+    },
+    "preflight_negative_controls": {
+      "status": "PASS_PREFLIGHT_NEGATIVE_CONTROLS",
+      "executed_actual_preflight_AST": true,
+      "failed_work_counted": true,
+      "missing_partial_rejected": true,
+      "resume_caps_unchanged": true,
+      "operation_microprofile": {
+        "tree_discovery": {
+          "calls": 100,
+          "CPU": 0.546875,
+          "wall": 0.537820500030648
+        },
+        "memory": {
+          "calls": 100,
+          "CPU": 0.0,
+          "wall": 0.0003153000143356621
+        },
+        "CPU": {
+          "calls": 100,
+          "CPU": 0.0,
+          "wall": 0.000262599962297827
+        }
+      },
+      "old406": {
+        "samples": 852,
+        "wall": 568.4616408000002,
+        "supervisorCPU": 515.640625,
+        "workerCPU": 550.984375,
+        "mean_sample_cycle_seconds": 0.6672084985915495
+      },
+      "prototype": "NO-GO Windows transient-directory race; original385monitor retained, no old receipts rewritten",
+      "limitations": "Microprofile one owned process; no extrapolation to fullpytest from static scans. Final Windows CPU handles and tail policy unchanged. Sparse sampling is not an OS quota."
+    }
+  },
+  "new_failures_and_resolutions": [
+    {
+      "problem": "Ownership oracle initially counted same-named foreignpoll",
+      "result": "New failingforeignhostpoll test retained; filter now includes Tclcommand owner, final2PASS; productionpoll unchanged"
+    },
+    {
+      "problem": "Newpolltests wrongmessage language and freshchild helper import",
+      "result": "2FAIL retained; actualerror checked and scoped runpy helper used; then2PASS"
+    },
+    {
+      "problem": "Optimizedscanner Windows PermissionError plus failedfinallyreceipt",
+      "result": "No testcompleted; allknownchildren terminated; prototypeNO-GO,oldmonitorretained;80CPUuppercharge, notbudgetreset"
+    },
+    {
+      "problem": "Complete73run exposes376closure and absent033doc",
+      "result": "70PASS/3FAIL; exact376source/dependencies fixture and candidate-only nonrelease page; all3PASS in final66"
+    },
+    {
+      "problem": "Copied402observer tests missing393dependency",
+      "result": "2FAIL retained; approved read-only module copied; then2PASS"
+    },
+    {
+      "problem": "Metadata preparation selected wronghistoricalanalysisrevision",
+      "result": "Assertion before archivecreation; exact08d60Git bytes recovered at originalSHA"
+    },
+    {
+      "problem": "Concurrentguard attempt while neighborphaseactive",
+      "result": "Safe preflight no-worker refusal; waited for complete receipt; noledger rewritten"
+    },
+    {
+      "problem": "Fourtests incidental EOLrewrite during fixtureupdate",
+      "result": "Original historical byte representation restored beforefreeze; final405diff has3explicitfixturelines each"
+    },
+    {
+      "problem": "Retainedmonitor testdriver looplabel shadowed outputlabel",
+      "result": "Module selected correctly, onlyreceiptfilename misleading; originalkept and exactSHAcopy recorded; no rerun"
+    }
+  ],
+  "documentation_manifest": "docs/q2-document-composition-407.json inside candidate",
+  "forensic376_inputs": {
+    "name": "historical376-inputs.zip",
+    "size": 706900,
+    "SHA256": "2326775712ab071ec6354b01f529ba2749c22bbee773e5f26948c11408cc38d5",
+    "files": {
+      ".venv/Lib/site-packages/solar_native/solar_native.cp314t-win_amd64.pyd": {
+        "member": "native032.pyd",
+        "sha256": "0cbc389f139854628f287c04a7cea52c530a18294c2c3a0670faa48bf53c0601",
+        "size": 1913351
+      },
+      ".venv/Lib/site-packages/scipy/integrate/_ivp/rk.py": {
+        "member": "rk.py.txt",
+        "sha256": "54fb9365032395cd9c087df03b386972c6084108e1371b803d658ae97e171540",
+        "size": 29289
+      },
+      ".venv/Lib/site-packages/scipy/integrate/_ivp/base.py": {
+        "member": "base.py.txt",
+        "sha256": "5bd1a3ddb9fb986333d3d3cc2d2e00bc19efbda00169dcc5b82324aad9f198af",
+        "size": 10844
+      }
+    },
+    "source_commit": "08d60d92c53ba349ce959c2233297199b759d6ae",
+    "extra_sources_SHA256": "8c60e7b4e02f8dd088b61e85a9cbabfb2cb4677237069b5af2e9eee71da6b8c7",
+    "source": "Exact original376 Git sources and existing old032pyd/SciPy sources, all original protocolSHA matched. Never imported/executed, only hash-checked in isolated historical fixture."
+  },
+  "scientific_scope": {
+    "fixed58_equivalence": "28/28retained",
+    "D1_numerical": "11/11PASS historical",
+    "D1_effects": "10/11;distance_AB0.244795m vs10mFAIL",
+    "convergence": "3historic380+4short402FAILretained",
+    "full_D1": "NO-GO",
+    "new_science_series": false,
+    "portable_build": false,
+    "qualified_native_changed": false
+  },
+  "inventory": {
+    "path": "scripts/qualification407/inventory407.json",
+    "SHA256": "b6eaeb6617df154f31b2a7aa53d84551020095408787f9d23af5b10ba1aa600d",
+    "nodes": 3073,
+    "old3045_present": true,
+    "added": 28,
+    "removed": 0
+  },
+  "future408": {
+    "path": "scripts/qualification407/full408-plan.json",
+    "SHA256": "ad6e32efa35433b74d7c216cd90277fd1e93fa1bf908dcbfc157107bac90060d",
+    "executed": false
+  },
+  "backup": {
+    "status": "CLOUD_UNVERIFIED",
+    "reason": "New407filtered archive/readback pending; old399-406notreuploaded"
+  },
+  "publication": {
+    "candidate_branch_pushed": true,
+    "main_tags_LATEST_portable032_unchanged": true,
+    "dev_tools_commit_pending": true,
+    "candidate_commit": "828c79805f7db4576b474206923285ce0b4541c4"
+  },
+  "limitations": [
+    "Full3073suite notrun",
+    "All73verdicts combine phases plus 66neighbors at032c36e plus final2polltests at828c798; historical51not repeated after source-equivalent fixturecomments/EOL, doc-only additions and polltests-only correction",
+    "Nativeunchanged; not a new bit-reproducible PyO3build",
+    "ScientificFAIL and globalaccuracy not requalified",
+    "PrototypeNO-GO/lostpeak unknown,conservativeCPUcharged",
+    "Exactforensic376bundle is mandatory for futurefulltests; missing/changed inputs fail,never skip"
+  ],
+  "historical399_406_input_audit": [
+    {
+      "path": "docs/q2-scientific-qualification-399.json",
+      "SHA256": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+      "exact411bytes": true,
+      "commit_objects": {
+        "8a49600846c9daede1a0c35534c61d61129799ab": {
+          "exists": true,
+          "fields": [
+            ".backup[0].git_commit",
+            ".backup[1].git_commit",
+            ".backup[2].git_commit",
+            ".backup[3].git_commit",
+            ".backup[4].git_commit",
+            ".backup[5].git_commit",
+            ".development_start_commit"
+          ]
+        },
+        "fe0f456f2c7ba3a077eac21fc8413937d6e84fac": {
+          "exists": true,
+          "fields": [
+            ".jobs[0].source.commit",
+            ".jobs[1].source.commit",
+            ".jobs[2].source.commit",
+            ".jobs[3].source.commit",
+            ".jobs[4].source.commit",
+            ".jobs[5].source.commit",
+            ".jobs[6].source.commit",
+            ".jobs[7].source.commit",
+            ".jobs[8].source.commit",
+            ".jobs[9].source.commit",
+            ".jobs[10].source.commit",
+            ".jobs[11].source.commit",
+            ".jobs[12].source.commit",
+            ".jobs[13].source.commit",
+            ".jobs[14].source.commit",
+            ".jobs[15].source.commit",
+            ".jobs[16].source.commit",
+            ".jobs[17].source.commit",
+            ".jobs[18].source.commit",
+            ".jobs[19].source.commit",
+            ".jobs[20].source.commit",
+            ".jobs[21].source.commit",
+            ".jobs[22].source.commit",
+            ".jobs[23].source.commit",
+            ".jobs[24].source.commit",
+            ".jobs[25].source.commit",
+            ".jobs[26].source.commit",
+            ".jobs[27].source.commit",
+            ".jobs[28].source.commit",
+            ".jobs[29].source.commit",
+            ".source_identities.baseline.commit"
+          ]
+        },
+        "f723a2162b4e115378959e244f428529be2d4516": {
+          "exists": true,
+          "fields": [
+            ".jobs[30].source.commit",
+            ".jobs[31].source.commit",
+            ".jobs[32].source.commit",
+            ".jobs[33].source.commit",
+            ".jobs[34].source.commit",
+            ".jobs[35].source.commit",
+            ".jobs[36].source.commit",
+            ".jobs[37].source.commit",
+            ".jobs[38].source.commit",
+            ".jobs[39].source.commit",
+            ".jobs[40].source.commit",
+            ".jobs[41].source.commit",
+            ".jobs[42].source.commit",
+            ".jobs[43].source.commit",
+            ".jobs[44].source.commit",
+            ".jobs[45].source.commit",
+            ".jobs[46].source.commit",
+            ".jobs[47].source.commit",
+            ".jobs[48].source.commit",
+            ".jobs[49].source.commit",
+            ".jobs[50].source.commit",
+            ".jobs[51].source.commit",
+            ".jobs[52].source.commit",
+            ".jobs[53].source.commit",
+            ".jobs[54].source.commit",
+            ".jobs[55].source.commit",
+            ".jobs[56].source.commit",
+            ".jobs[57].source.commit",
+            ".source_identities.candidate.commit"
+          ]
+        },
+        "aad21e5e72f18ee6d8dd6433d7f0053236bb3591": {
+          "exists": true,
+          "fields": [
+            ".publication_CI.commit"
+          ]
+        },
+        "78fe4cac8873914e5d1fa084d510f3f279b33c68": {
+          "exists": true,
+          "fields": [
+            ".tool_commit"
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/q2-experimental-interface-400.json",
+      "SHA256": "eeffd2ae0ce9121b16ab97726292283471ecaeaa6186425fdef61b8213199fa3",
+      "exact411bytes": true,
+      "commit_objects": {
+        "0658c718320912a4b38a4a2993cfe508a12c801c": {
+          "exists": true,
+          "fields": [
+            ".dev_start_commit",
+            ".backup.git_commit",
+            ".backup.cloud_evidence.git_commit"
+          ]
+        },
+        "f723a2162b4e115378959e244f428529be2d4516": {
+          "exists": true,
+          "fields": [
+            ".base_commit",
+            ".initial_plan.base_commit"
+          ]
+        },
+        "a99f73a4adce95be9d264d8c403e0e6768a54cd7": {
+          "exists": true,
+          "fields": [
+            ".candidate_commit",
+            ".backup.candidate_commit",
+            ".backup.cloud_evidence.candidate_commit"
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/q2-interface-qualification-401.json",
+      "SHA256": "cebb4b2aa2c6fe4fa726dbd67bb219c61d756f87843b8e7461d3474400c48348",
+      "exact411bytes": true,
+      "commit_objects": {
+        "a99f73a4adce95be9d264d8c403e0e6768a54cd7": {
+          "exists": true,
+          "fields": [
+            ".candidate_commit",
+            ".source_delta.source.commit",
+            ".recovery.archive_binding.candidate_commit",
+            ".recovery.rows.base__point__python.provenance.candidate_commit",
+            ".recovery.rows.base__point__rust.provenance.candidate_commit"
+          ]
+        },
+        "f723a2162b4e115378959e244f428529be2d4516": {
+          "exists": true,
+          "fields": [
+            ".base_commit",
+            ".source_delta.base_commit",
+            ".recovery.archive_binding.base_commit",
+            ".recovery.rows.base__point__python.provenance.base_commit",
+            ".recovery.rows.base__point__python.source.commit",
+            ".recovery.rows.base__point__rust.provenance.base_commit",
+            ".recovery.rows.base__point__rust.source.commit",
+            ".recovery.source.commit"
+          ]
+        },
+        "5541b1b5c4a2fdf2d05c7d03d760887d0294d6c4": {
+          "exists": true,
+          "fields": [
+            ".dev_start_commit"
+          ]
+        },
+        "ab75ad56fd984aa3dda264dc7931c823c7364d52": {
+          "exists": true,
+          "fields": [
+            ".backup.git_commit",
+            ".backup.files[0].git_commit",
+            ".backup.files[0].scan_git_commit",
+            ".backup.files[1].git_commit",
+            ".backup.files[1].scan_git_commit",
+            ".publication.checked_commit"
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/q2-application-acceptance-402.json",
+      "SHA256": "66c3c832136550d722602d64e042b6b4a6e07645abc82929d60b383ccdd245f9",
+      "exact411bytes": true,
+      "commit_objects": {
+        "a99f73a4adce95be9d264d8c403e0e6768a54cd7": {
+          "exists": true,
+          "fields": [
+            ".source.commit",
+            ".jobs[0].source_commit",
+            ".jobs[1].source_commit",
+            ".jobs[2].source_commit",
+            ".jobs[3].source_commit",
+            ".jobs[4].source_commit",
+            ".jobs[5].source_commit",
+            ".jobs[6].source_commit",
+            ".jobs[7].source_commit",
+            ".jobs[8].source_commit",
+            ".jobs[9].source_commit",
+            ".jobs[10].source_commit",
+            ".jobs[11].source_commit",
+            ".jobs[12].source_commit",
+            ".jobs[13].source_commit",
+            ".jobs[14].source_commit",
+            ".jobs[15].source_commit",
+            ".jobs[16].source_commit",
+            ".jobs[17].source_commit",
+            ".jobs[18].source_commit",
+            ".jobs[19].source_commit",
+            ".jobs[20].source_commit",
+            ".jobs[21].source_commit",
+            ".independent_audit.source.commit"
+          ]
+        },
+        "de4a41ab9faa8611f9fac14173d4c8d9a9ed0697": {
+          "exists": true,
+          "fields": [
+            ".backup.git_commit",
+            ".backup.files[0].git_commit",
+            ".backup.files[0].scan_git_commit",
+            ".backup.files[1].git_commit",
+            ".backup.files[1].scan_git_commit",
+            ".publication.checked_source_tools_commit"
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/q2-ui-lifecycle-403.json",
+      "SHA256": "8e6ea58b8f42c55037afb004f5072c33d60e3c59cfb6e08ad1683619a751ca5d",
+      "exact411bytes": true,
+      "commit_objects": {
+        "a99f73a4adce95be9d264d8c403e0e6768a54cd7": {
+          "exists": true,
+          "fields": [
+            ".original_commit",
+            ".plan.original_commit",
+            ".presentation.original_commit"
+          ]
+        },
+        "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db": {
+          "exists": true,
+          "fields": [
+            ".plan.new_commit",
+            ".presentation.source_commit",
+            ".backup.candidate_commit"
+          ]
+        },
+        "c698feb8dc35931ced9200f292653987e2ad4d2a": {
+          "exists": true,
+          "fields": [
+            ".backup.git_commit",
+            ".backup.files[0].git_commit",
+            ".backup.files[0].scan_git_commit",
+            ".backup.files[1].git_commit",
+            ".backup.files[1].scan_git_commit",
+            ".publication.checked_dev_commit"
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/q2-gui-lifecycle-fix-404.json",
+      "SHA256": "1af46e0b345cfa36096fb31831b568be74ceb6d14fd715812f26b789f5a4368a",
+      "exact411bytes": true,
+      "commit_objects": {
+        "0985860f1776594a565f5754275fd110a00e29f2": {
+          "exists": true,
+          "fields": [
+            ".candidate.commit",
+            ".post_exact_reproducer.source.commit",
+            ".backup.candidate_commit",
+            ".backup.manifest_erratum.candidate_commit"
+          ]
+        },
+        "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db": {
+          "exists": true,
+          "fields": [
+            ".base_commit",
+            ".plan.base_commit",
+            ".backup.manifest_erratum.correct_base_commit",
+            ".errors[2].correct_base_commit"
+          ]
+        },
+        "c66c70ab22efdd9924364f5de2fcd5cd234fe0c2": {
+          "exists": true,
+          "fields": [
+            ".backup.git_commit",
+            ".backup.files[0].git_commit",
+            ".backup.files[0].scan_git_commit",
+            ".backup.files[1].git_commit",
+            ".backup.files[1].scan_git_commit"
+          ]
+        },
+        "51f87fc18500b1b722ff62ab156fe787dc5fd938": {
+          "exists": true,
+          "fields": [
+            ".backup.files[2].git_commit",
+            ".backup.files[2].scan_git_commit",
+            ".backup.files[3].git_commit",
+            ".backup.files[3].scan_git_commit",
+            ".backup.manifest_erratum.git_commit"
+          ]
+        },
+        "a99f73a4adce95be9d264d8c404e0e6768a54cd7": {
+          "exists": false,
+          "fields": [
+            ".backup.manifest_erratum.incorrect_base_commit",
+            ".errors[2].incorrect_base_commit"
+          ],
+          "status": "PRESERVED_KNOWN404_BOGUS_ARCHIVE_LABEL_NOT_A_REAL_SOURCE",
+          "correct_base": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+          "mandatory_erratum_SHA256": "6aff3ca203101bc86e8713f0d1817da9bb853fa208b37b95a9b664fd297a8107"
+        }
+      }
+    },
+    {
+      "path": "docs/q2-final-ui-marking-405.json",
+      "SHA256": "0bf881c4851564e3ea26098493cf568cf52fbd45e0cc62c49319c6d74504770d",
+      "exact411bytes": true,
+      "commit_objects": {
+        "8fe01304e502f55e879addb0a4b6f3e062832e37": {
+          "exists": true,
+          "fields": [
+            ".candidate.commit",
+            ".manual_control.source_commit",
+            ".backup.candidate_commit"
+          ]
+        },
+        "0985860f1776594a565f5754275fd110a00e29f2": {
+          "exists": true,
+          "fields": [
+            ".historical404_cloud.candidate_commit",
+            ".backup.base_commit",
+            ".backup.historical404.candidate_commit"
+          ]
+        },
+        "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db": {
+          "exists": true,
+          "fields": [
+            ".historical404_cloud.correct_base_commit",
+            ".backup.historical404.correct_base_commit"
+          ]
+        },
+        "a99f73a4adce95be9d264d8c404e0e6768a54cd7": {
+          "exists": false,
+          "fields": [
+            ".historical404_cloud.incorrect_manifest_base_commit",
+            ".backup.historical404.incorrect_manifest_base_commit"
+          ],
+          "status": "PRESERVED_KNOWN404_BOGUS_ARCHIVE_LABEL_NOT_A_REAL_SOURCE",
+          "correct_base": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+          "mandatory_erratum_SHA256": "6aff3ca203101bc86e8713f0d1817da9bb853fa208b37b95a9b664fd297a8107"
+        },
+        "82db424e6449523d2d230e1974086e746dc92977": {
+          "exists": true,
+          "fields": [
+            ".backup.git_commit",
+            ".backup.files[0].git_commit",
+            ".backup.files[0].scan_git_commit",
+            ".backup.files[1].git_commit",
+            ".backup.files[1].scan_git_commit"
+          ]
+        }
+      }
+    },
+    {
+      "path": "docs/q2-release-source-acceptance-406.json",
+      "SHA256": "b09477906cbe80bb427d3ca6ddadaebb959fcfe51c113ef5eda588e5343185ad",
+      "exact411bytes": true,
+      "commit_objects": {
+        "8fe01304e502f55e879addb0a4b6f3e062832e37": {
+          "exists": true,
+          "fields": [
+            ".candidate.commit",
+            ".backup.archive.candidate_commit"
+          ]
+        },
+        "d891b3a067092b35c816e9c60ce7f0701e51a8d8": {
+          "exists": true,
+          "fields": [
+            ".publication.evidence_commit",
+            ".backup.archive.git_commit",
+            ".backup.files[0].git_commit",
+            ".backup.files[0].scan_git_commit",
+            ".backup.files[1].git_commit",
+            ".backup.files[1].scan_git_commit"
+          ]
+        },
+        "0985860f1776594a565f5754275fd110a00e29f2": {
+          "exists": true,
+          "fields": [
+            ".backup.archive.base_commit"
+          ]
+        }
+      }
+    }
+  ]
+}

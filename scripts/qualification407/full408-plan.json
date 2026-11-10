@@ -1,0 +1,67 @@
+{
+  "stage": 408,
+  "status": "PREPARED_NOT_AUTHORIZED_NOT_EXECUTED",
+  "candidate_commit": "828c79805f7db4576b474206923285ce0b4541c4",
+  "candidate_tree": "b858d380b86ac702e85e20ff4acfe0b1efef66ab",
+  "candidate_branch": "codex/candidate-0.3.3-blockers-407",
+  "source_fingerprint": "29bb46f8e37f0e92e635bfc292739ca53d0c742d218726c44bb97d6d87fe051c",
+  "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "inventory": "scripts/qualification407/inventory407.json",
+  "inventory_SHA256": "b6eaeb6617df154f31b2a7aa53d84551020095408787f9d23af5b10ba1aa600d",
+  "node_count": 3073,
+  "old_nodes": 3045,
+  "new_related_nodes": 28,
+  "selection": "Unchanged full check_project.py --require-native; no deselect/skip/xfail waiver. Stock Rust completion separately if pytest aborts; report every nonpass.",
+  "environment": "Use frozen407 source and byte-verified qualified copied dependencies; verify actual -I imports/prefix/fingerprint/native before running. No install/rebuild PyO3 or dev-source substitution.",
+  "source_temp": "Ordinary isolated source/TEMP roots with no private ancestor markers; fresh output only, POSIX JUnit paths. Preserve407source and its qualified prefix; record bindings before every phase.",
+  "required_external_inputs": [
+    {
+      "name": "historical376-inputs.zip",
+      "size": 706900,
+      "SHA256": "2326775712ab071ec6354b01f529ba2749c22bbee773e5f26948c11408cc38d5",
+      "purpose": "3forensic artifacts only, never import/execute; SOLAR_HISTORICAL376_BUNDLE explicit; must preflight before pytest"
+    },
+    {
+      "name": "public research63 input bundle",
+      "purpose": "Existing SHA-bound prepare_test_inputs; no private archives or scientific reruns"
+    }
+  ],
+  "monitor": {
+    "choice": "Retain exact385offline_monitor.py",
+    "SHA256": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508",
+    "prototype407": "NO-GO transient Windows directory race and lost finalreceipt; static speedup is insufficient",
+    "policy": "Same50ms requested cadence and same process/memory/disk checks. SHA-complete group receipts plus cumulative ledger, missing/partial stops; no budget resets; reserve finalization. Sparse samples not OS quota."
+  },
+  "proposed_hard_caps": {
+    "cpu_seconds": 2400,
+    "active_wall_seconds": 2700,
+    "private_bytes": 3221225472,
+    "disk_bytes": 2147483648
+  },
+  "proposed_early": {
+    "cpu_seconds": 1920,
+    "active_wall_seconds": 2160,
+    "private_bytes": 2899102924,
+    "disk_bytes": 1932735283
+  },
+  "forecast": {
+    "CPU_seconds": 1555,
+    "active_wall_seconds": 1100,
+    "data_bytes": 1572864000,
+    "uncertainty": "Estimate, not a measured full qualification. Baseline4061067.94CPU plus full recovered73phase276.19CPU without subtracting priorfailcost,60CPU newnodes,50Rust/build,40preflight,60audit\u22481555. New fullfixture file counts and disk scans may grow. Stop if preflight cannot protect reserves."
+  },
+  "phase_reserves": {
+    "preflight_CPU": 40,
+    "standalone_Rust_CPU": 50,
+    "full_driver_CPU": 1405,
+    "GUI_and_independent_audit_CPU": 60,
+    "early_cpu_headroom": 365
+  },
+  "forbidden": [
+    "No portable build/relocated acceptance",
+    "No new58/22jobs/year/608series",
+    "No change main/tag/LATEST/thresholds/scientificFAIL",
+    "No old scientific receipt transfer to new runtime"
+  ],
+  "scientific_application_release": "D1 distanceFAIL;3historic380+4short402FAIL; fullD1/releaseNO-GO unchanged"
+}

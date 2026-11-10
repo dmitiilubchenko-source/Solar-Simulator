@@ -65,6 +65,11 @@ exact405 candidate,3045узлов без исключений,2972PASS/63FAIL/10
 реальные GUI-ограничения, исторические fixtures и ошибки размещения стенда.
 Rust/native и bounded recovery прошли, общая source/portable/release приёмка NO-GO.
 
+[Устранение блокеров407](q2-release-blockers-407.md): отдельный кандидат от405,
+layout/poll ownership, exact historical fixtures и публичные402/404документы.
+[Инструменты и план408](../scripts/qualification407/README.md) сохраняют73исходных
+отказа и phased PASS; полный3073прогон ещё не выполнен, scientific/release NO-GO.
+
 Для связанной группы допускается локальный README. Папка на каждый маленький
 файл и отдельные CHANGELOG не обязательны. Изменение импорта/команды/ограничения
 должно отражаться в README группы и затронутых проверках.
