@@ -343,7 +343,8 @@ def prepare_documents(output):
         "sandbox-models-validation.md","sandbox-experiments.md","time-control-validation.md",
         "sandbox-demo-validation.md","sandbox-demo.md","sandbox-controls.md","runtime-performance-validation.md",
         "qualification-extension-validation.md", "verification-bundle-validation.md",
-        "continuous-integration-validation.md", f"releases/v{project_version}.md"))
+        "continuous-integration-validation.md", f"releases/v{project_version}.md",
+        "q2-application-acceptance-402.md", "q2-gui-lifecycle-fix-404.md"))
     orientation_doc=documents/"orientation.md"
     orientation_doc.write_text(orientation_doc.read_text(encoding="utf-8").replace(
         "../src/solar_simulator/data/ERFA-LICENSE.txt",
@@ -387,6 +388,18 @@ def copy_public_rotation_documents(output,extra_seeds=()):
                 if not raw or ':' in raw:return match.group(0)
                 candidate=(source.parent/raw).resolve()
                 if candidate.name in private or '.tools' in candidate.parts:return label
+                # Keep exact historical reports in source. In the future document
+                # export, link their developer references to the pinned public
+                # revision rather than packaging executable research tools.
+                public_source_links={
+                    'scripts/qualification402/README.md','tests/test_q2_application402.py',
+                    'scripts/qualification404/audit.py','scripts/qualification404/check_gui.py',
+                    'scripts/q2_lifecycle_delta404.py','tests/test_q2_lifecycle404.py'}
+                if (relative.as_posix() in {'docs/q2-application-acceptance-402.md','docs/q2-gui-lifecycle-fix-404.md'}
+                        and candidate.is_relative_to(ROOT.resolve())
+                        and candidate.relative_to(ROOT.resolve()).as_posix() in public_source_links):
+                    path=candidate.relative_to(ROOT.resolve()).as_posix()
+                    return f'[{label}](https://github.com/dmitiilubchenko-source/Solar-Simulator/blob/41164b76b0b3f4c4b9c46d0cddec2b0e807a5297/{path})'
                 if candidate.suffix in {'.md','.json','.png','.txt','.zip'} or candidate.name=='continuous-integration-reference.npz':pending.append(candidate)
                 return match.group(0)
             text=re.sub(r'\[([^\]]*)\]\(([^)]+)\)',local_link,text)

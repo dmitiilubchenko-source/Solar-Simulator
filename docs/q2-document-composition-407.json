@@ -1,0 +1,92 @@
+{
+  "source": "Approved public docs and exact linked code/read-only dependency closure only; no wholedev merge, no raw results or personal context",
+  "dev_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297",
+  "files": {
+    "docs/q2-application-acceptance-402.json": {
+      "SHA256": "66c3c832136550d722602d64e042b6b4a6e07645abc82929d60b383ccdd245f9",
+      "size": 659751,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "docs/q2-application-acceptance-402.md": {
+      "SHA256": "ce38b1326626f017e085152a7f417d90798107cfaa813167708ee2b719e8a741",
+      "size": 18118,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "docs/q2-gui-lifecycle-fix-404.json": {
+      "SHA256": "1af46e0b345cfa36096fb31831b568be74ceb6d14fd715812f26b789f5a4368a",
+      "size": 67268,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "docs/q2-gui-lifecycle-fix-404.md": {
+      "SHA256": "0ac513a76e88cfe111642e019894df4f8ff735c8841cd0c212496723fe257cd5",
+      "size": 16353,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/q2_execution398.py": {
+      "SHA256": "9fa1b0f66e7297c182f7ec619c603481a5d60baa01046f4185d0d71d8b5e3864",
+      "size": 26657,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/q2_lifecycle_delta404.py": {
+      "SHA256": "26e07056ad5952db5698fd9a1f15d225b5e9170386bcfe436aa36add955bb210",
+      "size": 4841,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/q2_source_adapter396.py": {
+      "SHA256": "db45c461479ea1273f02d6707bc983ff044502c8f48df2091c237b8ebd400b5d",
+      "size": 2792,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/qualification402/README.md": {
+      "SHA256": "48516a5c16087bf87082ae59caaea9887de2d4a3dfc05f4e36123bee3c839578",
+      "size": 2712,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/qualification402/metrics.py": {
+      "SHA256": "358e621ff801e6a6286971a072eab27474c03b0552ab36106119ae4cda7fe7a3",
+      "size": 8994,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/qualification402/plan.json": {
+      "SHA256": "f5445ec4f5a5b9da508e660d0f49a46e2c4bd6ef02540d2dea5f82d7a9444fbe",
+      "size": 17718,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/qualification404/README.md": {
+      "SHA256": "327c490685f36029794edc0da1c651f798400b6373441f1da2e81a1c94946f39",
+      "size": 2873,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/qualification404/audit.py": {
+      "SHA256": "a0b041ee5ae5f43961f8d02ebcaf2f84b129289e9955b1a944250e3aeb5644ae",
+      "size": 6630,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/qualification404/check_gui.py": {
+      "SHA256": "ab384403b07937c712e0f12cc87d4d4e723df45fddfde32887f498fc17f5bf0c",
+      "size": 16533,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/qualification404/plan.json": {
+      "SHA256": "b187f4f4519df51ae1c86a51b613f7fd8eb7bb90ea3fe7a8aa4445628fa0416d",
+      "size": 3572,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "tests/test_q2_application402.py": {
+      "SHA256": "45e72f068aac0fef4909e544a1fde96fa5f8e8f9a438a7f95e39951ecce2f244",
+      "size": 1565,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "tests/test_q2_lifecycle404.py": {
+      "SHA256": "f499e9d83da993f6e369326e6f6594b492c8b5e8cdb38558ea68986422fb2b3f",
+      "size": 705,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    },
+    "scripts/q2_frame_observer393.py": {
+      "SHA256": "2bf6d9ae683fdb31de94c05758f3a7d5134ca826e3efe7d9ab74aa072ae7d972",
+      "size": 6511,
+      "origin_commit": "41164b76b0b3f4c4b9c46d0cddec2b0e807a5297"
+    }
+  },
+  "source_reports_unchanged": true
+}

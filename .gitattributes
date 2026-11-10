@@ -24,3 +24,4 @@ rust/solar_core/Cargo.lock -text
 rust/solar_native/Cargo.lock -text
 src/solar_simulator/data/ERFA-LICENSE.txt -text
 .gitattributes -text
+tests/fixtures/control-row-405.py.txt -text

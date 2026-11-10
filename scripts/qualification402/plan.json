@@ -1,0 +1,710 @@
+{
+  "stage": 402,
+  "date": "2026-11-08",
+  "status": "SEALED_BEFORE_ANY_SCIENTIFIC_JOB",
+  "owner_decision": "A+D1 approved exclusively exact synthetic demo0..200s; not global physics/science/release waiver",
+  "dev_start": "4fa57a2ca00475f8dcbfc5c1e763972d2307f6c7",
+  "candidate": "a99f73a4adce95be9d264d8c403e0e6768a54cd7",
+  "source": "C:/Users/Admin/Desktop/Solar-candidate-033-q2-interface-400",
+  "interpreter": "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+  "fingerprint": "1a5b054241a628dc6d4ade30a978726166d001dbb0f25ad9a971cd7fc9f21122",
+  "native_SHA256": "651e3466d67b94601c56eaf1bd622f178748c8439ade7e6725fd52682e13e091",
+  "demo_SHA256": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+  "input_SHA256": {
+    "scripts/two-q2-380-plan.json": "26eaaf67878e34bd292682b90e07b0df5e3ad9b096f8ee9d0f5a0cf6e9b94d68",
+    "src/solar_simulator/data/two-q2-demo380.json": "3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b",
+    "scripts/two_q2_reference380.py": "174c6529d010bc652f6ec5e5b6dd8aed5202a98b4cbc1c18d4b27d2b5fbbf78a",
+    "scripts/q2_reference397.py": "52b2d4efebad15fc25739776d3a8939015a6be42be1b88d9b3d5f999271e9338",
+    "docs/q2-scientific-qualification-399.json": "ff2f0b9d4cff56fde08e18cab67902a9a01d761da8596af7960e429f2ebd26b9",
+    "docs/q2-interface-qualification-401.json": "cebb4b2aa2c6fe4fa726dbd67bb219c61d756f87843b8e7461d3474400c48348",
+    "docs/two-q2-application-protocol.md": "97a444a5448540b641d1c96db62b739c927283599d8fee955c8a2cfc1ad43aaf",
+    "docs/release-scope-391.json": "14a9a954b84794950f6787b6cc83ca14a6f0a6f4c0be78a6c673c46526f6d897"
+  },
+  "initial": {
+    "schema_version": 10,
+    "units": "SI",
+    "model": "newtonian-dop853-dynamic-q2",
+    "settings": {
+      "dt": 50.0,
+      "backend": "python",
+      "contact_mode": "stop",
+      "restitution": 1.0,
+      "integrator": "dop853",
+      "rtol": 1e-11,
+      "position_atol": 1e-07,
+      "velocity_atol": 1e-11,
+      "physics": "newtonian",
+      "figures": [],
+      "relative_pair": [
+        "A",
+        "B"
+      ],
+      "error_control": "per-body"
+    },
+    "initial": [
+      {
+        "name": "A",
+        "mass": 1000000000000000.0,
+        "radius": 0.0,
+        "position": [
+          -1900.0,
+          -200.0,
+          50.0
+        ],
+        "velocity": [
+          0.02,
+          -0.43499999999999994,
+          -0.028333333333333332
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "B",
+        "mass": 200000000000000.0,
+        "radius": 0.0,
+        "position": [
+          10100.0,
+          -200.0,
+          50.0
+        ],
+        "velocity": [
+          0.02,
+          2.115,
+          0.1716666666666667
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "bodies": [
+      {
+        "name": "A",
+        "mass": 1000000000000000.0,
+        "radius": 0.0,
+        "position": [
+          -1900.0,
+          -200.0,
+          50.0
+        ],
+        "velocity": [
+          0.02,
+          -0.43499999999999994,
+          -0.028333333333333332
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "B",
+        "mass": 200000000000000.0,
+        "radius": 0.0,
+        "position": [
+          10100.0,
+          -200.0,
+          50.0
+        ],
+        "velocity": [
+          0.02,
+          2.115,
+          0.1716666666666667
+        ],
+        "spin": [
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "time": 0.0,
+    "dissipated_energy": 0.0,
+    "halted": false,
+    "model_energy_offset": 0.0,
+    "orientation_work": 0.0,
+    "events": [],
+    "origin": null,
+    "initial_rotations": [
+      {
+        "body": "A",
+        "figure": {
+          "mass": 1000000000000000.0,
+          "moments": [
+            2e+20,
+            2.5e+20,
+            3e+20
+          ],
+          "bounding_radius": 1000.0
+        },
+        "quaternion": [
+          0.9639684818261637,
+          0.148194058982302,
+          -0.09879603932153468,
+          0.19759207864306935
+        ],
+        "angular_momentum": [
+          -4.0585934316258856e+16,
+          -2.317171873231913e+17,
+          5.545808570755985e+17
+        ],
+        "quaternion_atol": 1e-13,
+        "momentum_atol": 60241.18192731614,
+        "provenance": "synthetic rigid Q2 validation380:A"
+      },
+      {
+        "body": "B",
+        "figure": {
+          "mass": 200000000000000.0,
+          "moments": [
+            3e+19,
+            4e+19,
+            5e+19
+          ],
+          "bounding_radius": 900.0
+        },
+        "quaternion": [
+          0.9757238626644188,
+          -0.12398684771443423,
+          0.1735815868002079,
+          0.04959473908577369
+        ],
+        "angular_momentum": [
+          4.4106046920778936e+16,
+          1118425702209694.2,
+          6.635062734421343e+16
+        ],
+        "quaternion_atol": 1e-13,
+        "momentum_atol": 7968.061244744546,
+        "provenance": "synthetic rigid Q2 validation380:B"
+      }
+    ],
+    "rotations": [
+      {
+        "body": "A",
+        "figure": {
+          "mass": 1000000000000000.0,
+          "moments": [
+            2e+20,
+            2.5e+20,
+            3e+20
+          ],
+          "bounding_radius": 1000.0
+        },
+        "quaternion": [
+          0.9639684818261637,
+          0.148194058982302,
+          -0.09879603932153468,
+          0.19759207864306935
+        ],
+        "angular_momentum": [
+          -4.0585934316258856e+16,
+          -2.317171873231913e+17,
+          5.545808570755985e+17
+        ],
+        "quaternion_atol": 1e-13,
+        "momentum_atol": 60241.18192731614,
+        "provenance": "synthetic rigid Q2 validation380:A"
+      },
+      {
+        "body": "B",
+        "figure": {
+          "mass": 200000000000000.0,
+          "moments": [
+            3e+19,
+            4e+19,
+            5e+19
+          ],
+          "bounding_radius": 900.0
+        },
+        "quaternion": [
+          0.9757238626644188,
+          -0.12398684771443423,
+          0.1735815868002079,
+          0.04959473908577369
+        ],
+        "angular_momentum": [
+          4.4106046920778936e+16,
+          1118425702209694.2,
+          6.635062734421343e+16
+        ],
+        "quaternion_atol": 1e-13,
+        "momentum_atol": 7968.061244744546,
+        "provenance": "synthetic rigid Q2 validation380:B"
+      }
+    ]
+  },
+  "levels": [
+    {
+      "id": "gui",
+      "rtol": 1e-11,
+      "position_atol": 1e-07,
+      "velocity_atol": 1e-11,
+      "spin_factor": 1.0
+    },
+    {
+      "id": "coarse",
+      "rtol": 1e-09,
+      "position_atol": 1e-06,
+      "velocity_atol": 1e-10,
+      "spin_factor": 100.0
+    },
+    {
+      "id": "standard",
+      "rtol": 1e-11,
+      "position_atol": 1e-08,
+      "velocity_atol": 1e-12,
+      "spin_factor": 1.0
+    },
+    {
+      "id": "fine",
+      "rtol": 3e-13,
+      "position_atol": 3e-10,
+      "velocity_atol": 3e-14,
+      "spin_factor": 0.03
+    }
+  ],
+  "epochs": [
+    0.0,
+    50.0,
+    100.0,
+    150.0,
+    200.0
+  ],
+  "jobs": [
+    {
+      "id": "main__python__gui__cold",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "gui",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": true
+    },
+    {
+      "id": "main__python__gui__continuous",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "gui",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__python__coarse__cold",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "coarse",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__python__coarse__continuous",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "coarse",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__python__standard__cold",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "standard",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__python__standard__continuous",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "standard",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__python__fine__cold",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "fine",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__python__fine__continuous",
+      "kind": "runtime",
+      "backend": "python",
+      "level": "fine",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__rust__gui__cold",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "gui",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": true
+    },
+    {
+      "id": "main__rust__gui__continuous",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "gui",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__rust__coarse__cold",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "coarse",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__rust__coarse__continuous",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "coarse",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__rust__standard__cold",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "standard",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__rust__standard__continuous",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "standard",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__rust__fine__cold",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "fine",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "main__rust__fine__continuous",
+      "kind": "runtime",
+      "backend": "rust",
+      "level": "fine",
+      "recipe": "continuous",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false
+    },
+    {
+      "id": "repeat__python",
+      "kind": "repeat",
+      "backend": "python",
+      "level": "gui",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": true
+    },
+    {
+      "id": "repeat__rust",
+      "kind": "repeat",
+      "backend": "rust",
+      "level": "gui",
+      "recipe": "cold",
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": true
+    },
+    {
+      "id": "suffix__python",
+      "kind": "suffix",
+      "backend": "python",
+      "level": "gui",
+      "recipe": "cold",
+      "epochs": [
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false,
+      "source": "main__python__gui__cold/checkpoint-100.json"
+    },
+    {
+      "id": "suffix__rust",
+      "kind": "suffix",
+      "backend": "rust",
+      "level": "gui",
+      "recipe": "cold",
+      "epochs": [
+        100.0,
+        150.0,
+        200.0
+      ],
+      "GUI": false,
+      "source": "main__rust__gui__cold/checkpoint-100.json"
+    },
+    {
+      "id": "reference__0",
+      "kind": "reference",
+      "rtol": 3e-11,
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "atol_factor": 0.01,
+      "max_step_seconds": 50.0
+    },
+    {
+      "id": "reference__1",
+      "kind": "reference",
+      "rtol": 3e-13,
+      "epochs": [
+        0.0,
+        50.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "atol_factor": 0.01,
+      "max_step_seconds": 50.0
+    }
+  ],
+  "criteria380": {
+    "energy_drift": 1e-08,
+    "angular_drift": 1e-08,
+    "linear_drift": 1e-12,
+    "quaternion_norm": 1e-08,
+    "reference_difference": 1e-07,
+    "reference_uncertainty": 1e-08,
+    "empirical_tolerance_convergence": "standard closer than coarse to fine",
+    "gradients": "independent potential position/attitude gradients relative2e-6, reaction1e-13, angular balance2e-12",
+    "old_scenarios": "8cases/24canonical snapshots byte-identical; same-packet save/resume exact"
+  },
+  "model": "Newton monopoles plus total-degree-two M-Q per figure; no Q-Q/tides/EIH/contacts",
+  "units": "SI; inertial positions/velocities/S, body-to-inertial unit quaternion",
+  "G_SI": 6.6743e-11,
+  "D1": {
+    "names": [
+      "r_A",
+      "r_B",
+      "rho_BA",
+      "distance_AB",
+      "v_A",
+      "v_B",
+      "v_BA",
+      "theta_A",
+      "theta_B",
+      "S_A",
+      "S_B"
+    ],
+    "B": [
+      "1 m",
+      "1 m",
+      "1 m",
+      "1 m",
+      ".001 m/s",
+      ".001 m/s",
+      ".001 m/s",
+      ".001 rad",
+      ".001 rad",
+      "1e-5 times exact initial spin norm",
+      "1e-5 times exact initial spin norm"
+    ],
+    "Delta": [
+      "10 m",
+      "10 m",
+      "10 m",
+      "10 m",
+      ".01 m/s",
+      ".01 m/s",
+      ".01 m/s",
+      ".01 rad",
+      ".01 rad",
+      "1e-4 times exact initial spin norm",
+      "1e-4 times exact initial spin norm"
+    ],
+    "spin": "Decimal80/120 sqrt(sum exact binary64 components squared), original S0 only",
+    "rule": "U<=B/10,N<=B/10,e+U+N<B independently each observable/epoch/job; no fitting/no RMS",
+    "U_ref": "two independent RK45levels; orientation projected angle+sum raw projection defects/sqrt2, empirical not bound",
+    "N_sens": "backend-specific envelope all level pairs within recipes,cold/continuous samelevel,GUIrepeat,independent saved observer arithmetic; Python/Rust separate diagnostic",
+    "geometry": "finite positive-det nonsingular rawR; preserve raw, observer-only polar projection via eig and independent SVD; stable atan2 vs quaternion angle, no naive acos",
+    "effect": "compare actual runtime observable change from original t0 separately to Delta; suffix uses its parent t0",
+    "domain": "genuine validation/corrections on each attempted RHS; record sampled minimum, no continuous mathematical domain guarantee; last complete packet preserved on exception"
+  },
+  "caps": {
+    "cpu_seconds": 60,
+    "wall_seconds": 120,
+    "private_bytes": 1073741824,
+    "disk_bytes": 33554432
+  },
+  "early": {
+    "cpu_seconds": 50,
+    "wall_seconds": 100,
+    "private_bytes": 943718400,
+    "disk_bytes": 29360128
+  },
+  "initial_setup": {
+    "CPU_allowance": 2.0,
+    "active_wall_allowance": 5.0,
+    "reason": "read-only shell/Git/document discovery incl invalid rg glob; not measured"
+  },
+  "forecast": {
+    "total_CPU_seconds": 46.0,
+    "active_wall_seconds": 70.0,
+    "private_bytes": 681574400,
+    "disk_bytes": 12582912,
+    "parts_CPU": {
+      "initial": 2,
+      "preflight_and_reference_AST": 5,
+      "GUI_runtime_references": 17,
+      "observers_and_independent_audit": 10,
+      "supervision_and_IO": 8,
+      "reserve": 4
+    },
+    "basis": "3994000s runs and401short overhead, not proportional cost extrapolation; 4realTkjourneys share oneprocess import; 22jobs singleworker; enforced cumulative guard, no retries or reduced matrix if insufficient",
+    "after_preflight": "recheck remaining fixed22jobs forecast+reserve; NO-GO before series if early budget insufficient"
+  },
+  "warnings": [
+    "Exact candidate text A/D1notapproved is outdated after this owner decision; do not edit source; new UI fingerprint needed separately",
+    "3historicalstrictFAIL380 retained; fixed58science399 not rerun",
+    "N is operational empirical sensitivity, not absolute roundoff",
+    "No release/main/tag/LATEST/portable changes"
+  ]
+}

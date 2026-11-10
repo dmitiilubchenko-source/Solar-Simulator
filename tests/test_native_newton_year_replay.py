@@ -22,8 +22,7 @@ def portable(tmp_path):
         target = tmp_path/name
         target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(ROOT/name, target)
-    # This is an explicitly accepted032 historical replay checkout. Candidate033
-    # metadata is checked separately and may never stand in for these bytes.
+    # Explicit accepted032 historical replay checkout; never candidate033.
     from scripts.historical_sources407 import restore_metadata032
     restore_metadata032(ROOT,tmp_path)
     return tmp_path, report
