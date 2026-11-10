@@ -13,7 +13,8 @@ def _check_poll_contract(tmp_path):
     from solar_simulator.app import Laboratory
     host=tk.Tk();host.withdraw();root=tk.Toplevel(host);root.withdraw()
     errors=[];host.report_callback_exception=lambda *a:errors.append(a)
-    foreign=host.after(10000,lambda:None);app=Laboratory(root)
+    def _poll():pass  # A foreign owner may use the same callback name.
+    foreign=host.after(10000,_poll);app=Laboratory(root)
     try:
         before=_assert_one_poll(app);app._poll();after=_assert_one_poll(app)
         assert before!=after and before not in host.tk.call('after','info')

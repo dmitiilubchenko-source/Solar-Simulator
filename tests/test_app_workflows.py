@@ -74,8 +74,10 @@ def test_ready_lunar_profile_preserves_previously_packaged_settings_and_provenan
 
 
 def _assert_one_poll(app):
+    owned_commands=set(app.root._tclCommands or ())
     ids = [identifier for identifier in app.root.tk.call('after', 'info')
-           if str(app.root.tk.call('after', 'info', identifier)[0]).endswith('_poll')]
+           if str(app.root.tk.call('after', 'info', identifier)[0]) in owned_commands
+           and str(app.root.tk.call('after', 'info', identifier)[0]).endswith('_poll')]
     assert ids == [app._poll_after_id], ('Expected exactly one owned poll', ids)
     return ids[0]
 
