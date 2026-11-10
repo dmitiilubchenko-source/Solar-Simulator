@@ -211,7 +211,33 @@ historical checks. Нужен новый source-bound execution plan/preflight �
 
 Кандидат407 опубликован в отдельной ветке; dev получает только tooling/report.
 Main/tags/LATEST/portable0.3.2 и прежние кандидаты не менялись; release не создаётся.
-Новый407backup пока **CLOUD_UNVERIFIED**: упаковка/загрузка/readback pending.
-Архивы399–406 не перезаписываются и не выгружаются заново. Для404по-прежнему
-обязателен прежний manifest erratum.11исключённых fixtures406 не объявляются
-облачно сохранёнными. Личный контекст — отдельный приватный Git. После отчёта STOP.
+Новый407backup **CLOUD_VERIFIED_SHA256**: оба файла независимо скачаны,
+SHA256/size/parent совпали; аккаунт и owner-only папка проверены заново.
+DriveFS отсутствует, поэтому queue сама по себе не считалась загрузкой.
+
+| Объект | Размер B | SHA256 | Drive ID |
+|---|---:|---|---|
+|Raw407 ZIP|2747719|`2aebc9c451aca6235c94314fd0f6125a624fc3ec72177ee07b87c08b35010962`|`1XZLyNiFJIlQ3gF05RjA5BKzCuTsC3zB6`|
+|Git restore recipe2d4abc8|582|`f3c359105e0ba75d0846cefd43f3b2cb5ba705327806d1a0950e8b03f50f0e94`|`14njU1XQF2fJeN3iqEYiN-zlSdmZ4vvv-`|
+
+180member payload8695699B до сжатия; CRC и каждый member SHA проверены.
+Сохранены новые407логи/XML/geometry screenshots/resource receipts/executed tool
+variants/commit diffs и forensic376bundle. Отдельно сохранён точный651native033
+как проектный build artifact: прежний395source bundle не содержит binary, а
+битово идентичная пересборка не предполагается. Это не копия окружения, новая
+установка, изменение квалифицированного binary или аттестация другого ПК.
+Old032native из forensic bundle нельзя подставлять вместо651current artifact.
+
+Не включены env/cache/recoverable dependencies/SQLite/private context/secrets,
+чистые опубликованные Git-файлы и воспроизводимые ephemeral fixtures.
+Архивы399–406 не перезаписывались и не выгружались повторно. Для404обязателен
+прежний manifest erratum; его неверный initial base остаётся invalid исторической
+меткой, не реальным Git source.11исключённых fixtures406 не объявляются cloud-backed.
+Отдельный operational backup:12.5625CPU/36.0170178activewall в заранее заданных
+80CPU/600wall/1GiB/256MiB,early64/480/900MiB/220MiB. Connector/editor CPU не измерен.
+
+Dev evidence commit2d4abc8: CI42881994930, Python130060379872SUCCESS,
+desktop-native130060380431SUCCESS, adaptive130060383097configuredSKIP.
+Это dev subsets, не полная приёмка frozen407. Backup metadata публикуется
+отдельным commit. Личный контекст сохраняется отдельно в приватном Git.
+Main/tags/LATEST/portable0.3.2 не трогались.408не запускался. После отчёта STOP.
