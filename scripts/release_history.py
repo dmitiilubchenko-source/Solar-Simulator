@@ -114,6 +114,13 @@ def ui_historical_sha(root,name,expected):
         raise ValueError('Historical source escapes checkout')
     actual=digest(path.read_bytes()) if path.is_file() else None
     if actual==expected:return actual
+    # Exact old ControlRow only. This function is used by offline replayers;
+    # current worker/checkpoint/environment guards do not use this mapping.
+    from scripts.historical_sources407 import ARCHIVE as A407, MANIFEST as M407, CONTROL, CONTROL_SHA, read_sources
+    if name==CONTROL and expected==CONTROL_SHA:
+        if (root/A407).exists() or (root/M407).exists():
+            _,files=read_sources(root)
+            return digest(files[name])
     from io import BytesIO
     for archive_name, archive_sha, names in (
             (QUALIFICATION_ARCHIVE, QUALIFICATION_ARCHIVE_SHA, QUALIFICATION_FILES),
@@ -165,6 +172,9 @@ HISTORY_FILES = ('scripts/assess_nominal_jpl.py',
  'tests/test_time_control.py')
 HISTORICAL_FILES = set(UI_FILES) | set(NUMERIC_FILES) | set(HISTORY_FILES) | set(INSPECTION_FILES) | set(ROTATION_FILES) | set(LABORATORY_FILES) | set(CI_FILES) | set(QUALIFICATION_FILES)
 HISTORICAL_ARCHIVES = (UI_ARCHIVE, NUMERIC_ARCHIVE, HISTORY_ARCHIVE, INSPECTION_ARCHIVE, ROTATION_ARCHIVE, LABORATORY_ARCHIVE, CI_ARCHIVE, QUALIFICATION_ARCHIVE)
+from scripts.historical_sources407 import ARCHIVE as SOURCE407, MANIFEST as SOURCE407_MANIFEST, CONTROL
+HISTORICAL_FILES.add(CONTROL)
+HISTORICAL_ARCHIVES += (SOURCE407, SOURCE407_MANIFEST)
 
 
 def verify_checkpoint_history(checkpoint, root):

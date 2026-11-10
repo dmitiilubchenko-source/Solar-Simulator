@@ -1,0 +1,104 @@
+{
+  "schema": 1,
+  "archive": "scripts/validation/source-before407.zip",
+  "archive_SHA256": "a6d7daced5e4cb66850316bc9c02baf113fb848b547447157e1d418c71abb097",
+  "base405": "8fe01304e502f55e879addb0a4b6f3e062832e37",
+  "accepted032": "cf653c9ca4b60649e70658b002a5e70669411266",
+  "pre404": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+  "files": {
+    "pyproject.toml": {
+      "git_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+      "git_blob_SHA256": "ebf8b8689f6ae270b5e2f2dae0acdffdf1f5ca8b11f17f99f5a83781e3bca266",
+      "working_SHA256": "94b8edcacb85a24944bbe6a45e40050b260628de2a361af340c92d27dec3790c",
+      "working_bytes_source": "Exact unchanged accepted032 qualified raw bytes verified at original375 SHA; not normalized on write"
+    },
+    "rust/solar_core/Cargo.toml": {
+      "git_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+      "git_blob_SHA256": "4facfca69b5cf4d37f8daf366b77bb36cab50cb79a99cc3f12bc19aaec3d6640",
+      "working_SHA256": "8a5aeb59a7bc44ea0a07a61f192db5465a1d59c5688a503c4fb81acaac2818e0",
+      "working_bytes_source": "Exact unchanged accepted032 qualified raw bytes verified at original375 SHA; not normalized on write"
+    },
+    "rust/solar_core/Cargo.lock": {
+      "git_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+      "git_blob_SHA256": "a65871d6b5959bfcf43463a31a84d2eaf3f3d497a1f45fd51faa2560ca3e7972",
+      "working_SHA256": "c9afa096bb70f84778c86f27839a71ad2dc2b308b3206d945943ae88d669d222",
+      "working_bytes_source": "Exact unchanged accepted032 qualified raw bytes verified at original375 SHA; not normalized on write"
+    },
+    "rust/solar_native/Cargo.toml": {
+      "git_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+      "git_blob_SHA256": "1944f227aa48a3e8077df63b8d9b1106a287627a78027bf257c5bb939afb5d3a",
+      "working_SHA256": "379329b76f1037d07f5cf52900d00e0e80ced726aacfd931dbb112ac92a698a3",
+      "working_bytes_source": "Exact unchanged accepted032 qualified raw bytes verified at original375 SHA; not normalized on write"
+    },
+    "rust/solar_native/Cargo.lock": {
+      "git_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+      "git_blob_SHA256": "f19719b3eb4719764cec1054c4b6b8a2ebd26a5773a8581a26cb5e8055055b72",
+      "working_SHA256": "a71c90f3bdfa4d2e3872a426224aea7167e65024e75ed5515da9b09cd6c0ade3",
+      "working_bytes_source": "Exact unchanged accepted032 qualified raw bytes verified at original375 SHA; not normalized on write"
+    },
+    "rust/solar_native/pyproject.toml": {
+      "git_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+      "git_blob_SHA256": "35187b0385f657a98fea7e5006a26c34ab2fbf924a98f02de82bfa9456a4f7cc",
+      "working_SHA256": "b7bb83f33b0df6f0aed915483d2be3941d7f50a8147d2d6cac56c511287cb72c",
+      "working_bytes_source": "Exact unchanged accepted032 qualified raw bytes verified at original375 SHA; not normalized on write"
+    },
+    "src/solar_simulator/data/ERFA-LICENSE.txt": {
+      "git_commit": "cf653c9ca4b60649e70658b002a5e70669411266",
+      "git_blob_SHA256": "c72781d8712dad739d5a173c4c7da23c206e19929e9ea271bff4c2e2ea225018",
+      "working_SHA256": "18e2c04c5328fe190fd5487da86ea538068c219174f65c6df71288e48fd60047",
+      "working_bytes_source": "Exact unchanged accepted032 qualified raw bytes verified at original375 SHA; not normalized on write"
+    },
+    "src/solar_simulator/control_row.py": {
+      "git_commit": "e9ddd352ac3dbff2eb8e2c5e37370aecd59fb5db",
+      "git_blob_SHA256": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+      "working_SHA256": "0dbf30d3fc5212a3a58abc326fdda6d3f120be5f269827253d3ecffff85b2742",
+      "working_bytes_source": "Exact e9 Git bytes; historical expectedSHA matches directly"
+    }
+  },
+  "receipt375": {
+    "path": "docs/current-runtime-375-validation.json",
+    "SHA256": "e7d8d97f0a17a142cb4cc1203792fd8cc174fe0bc61a403538de9a524a42f9d6"
+  },
+  "control_row_receipts": {
+    "docs/catalog-performance-validation.json": "67c9a37a363b6bcd86c7b0dc619f1d4d9fe53b3f8152a6194f9d7941f42b1bf2",
+    "docs/edited-j2-validation.json": "7450ba27f0bae2c076f94bb4fd8b3ecdde850cb22e825ccba0bff8014676289a",
+    "docs/edited-solar-month-validation.json": "e16e769a89fbdaaeff55ef485656d5b1f0dceff498869cca1d9745d391b82a66",
+    "docs/edited-solar-packet20-validation.json": "7c438847b74c3e21f4eecae40240279ef97a1e784fa2286c94c0ea99d7d5843e",
+    "docs/edited-solar-quarter-validation.json": "1af795441f9d2489fe5a6c8a097d5a164a3a2982070d0e82d31f26b58e3fc888",
+    "docs/edited-solar-validation.json": "03e9b8e225dcfd23ce3bb54ccf20cde38c8ba8b2f9d463a6cc15c16c92c05502",
+    "docs/edited-solar-year-validation.json": "4fd07edf184255971334edc937b866c2d47cc8cdba20f536bb07cfb3dad5e104",
+    "docs/edited-system-scope-validation.json": "4148b102fbace66d2cd852b6777650f35fe437874b8dbcfa607fc667fb313b60",
+    "docs/eih-year-validation.json": "9c800b5592ff136b2e7e45239a18d93498226b223cb6939992fd2c130a5680de",
+    "docs/fixed-j2-ias-validation.json": "d3095ce27d1a40518f4a89faf2a9e682615ad8660aec73c3b7e6966a8f7b356f",
+    "docs/fixed-j2-year-validation.json": "718070317b98157eeeb2c4876e8952fe3376f56fe8fd850c60ed092064ac1316",
+    "docs/ias15-comparison-validation.json": "bc7e3d9a8b85c697565df46cd745308b519ca2c0b6380a64d859dd3c6605362b",
+    "docs/ias15-eih-validation.json": "fcf4702ef79ea7e664642506071da7c2101e6205fdc2c624805e003725890f1a",
+    "docs/ias15-full-state-validation.json": "555801d087643f21b4697c7eb31d6ea4c2a90a9e4001ea03478cd133107a7698",
+    "docs/ias15-full-suite-validation.json": "e6ed5acf23fe9bb204baeed648c32012684240a85c0af99e46d45f05543870c0",
+    "docs/ias15-native-newton-validation.json": "752604c6cdd545f8fd14bdf868d94172df1987753f58b4faf2e3afa562ce626b",
+    "docs/ias15-native-session-validation.json": "f1b86f06d42ce6d87010cba289cabc5107d41f0da4caa916b320ba1a213de540",
+    "docs/ias15-process-validation.json": "96f8c8202300be147ca7d7dcf78862ee86bec82ded593a6adb673322bc440684",
+    "docs/ias15-restart-step-validation.json": "34c40b3622849722f56aa3b40aeaf9685bb93e4b35b396bf7177c650966280a6",
+    "docs/ias15-restart-validation.json": "799b3d9ad957c10144751ab97c0b9e0b0926b12e2a2447fe6dc53733f2f7add0",
+    "docs/ias15-session-validation.json": "4758eea0ae2dda3dc4564971e0158afa0644b7c6f1f9f3397afd198723797f50",
+    "docs/kepler-phase-validation.json": "460ef0b1c2053ddeb5aaec7cc6519376f5b46f101c8b6b1f9ed59601086cfe1d",
+    "docs/native-newton-year-validation.json": "4ccb5576b92504f1184b2979bc1cfae29c84f22c5e828f8a343c0cdca1ba46c9",
+    "docs/newton-year-validation.json": "0ea0baa2813978fa9606edf410b58c8389ad4f0598fe8daa54672cabf756b124",
+    "docs/nominal-solar-packet20-validation.json": "16c619a971484d05105326c481c76f014d4aefba8d9aa84fa3e9c5a79ec3bf77",
+    "docs/qualification-033-preflight.json": "b13e2eee8a570a218b6ab1b942ff1654db677f58c9bdf669799268406b2c3393",
+    "docs/release-031-validation.json": "58fd1476f842a1bc176b01b25fe550d1c4911d06a073a3e1a860fe65606169da",
+    "docs/release-032-validation.json": "f43c820ab2b883dafdfdaf6353a9e42c3c22b45f0176afb75902979b34678799",
+    "docs/runtime-reliability-376-validation.json": "191213995adf2bff00d67f61ce5a427eb12ef1e907acbb8ce9795005d699ee75",
+    "docs/runtime-stabilization-validation.json": "fb24126e5f163226cf9b2aadddb15228af1aa94ec1916a084f6cff89b8224389",
+    "docs/solar-noether-pilot-validation.json": "1f42ff47963a069610c900f9911f9d957c404656f01c7770bc66ae9ef8b36cec"
+  },
+  "purpose": "Historical offline source reconstruction only; never authorize current runtime or transfer old scientific PASS",
+  "metadata032": [
+    "pyproject.toml",
+    "rust/solar_core/Cargo.toml",
+    "rust/solar_core/Cargo.lock",
+    "rust/solar_native/Cargo.toml",
+    "rust/solar_native/Cargo.lock",
+    "rust/solar_native/pyproject.toml"
+  ]
+}

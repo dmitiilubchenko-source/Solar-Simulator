@@ -18,6 +18,8 @@ def historical_checkout(tmp_path):
         LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES,
         QUALIFICATION_ARCHIVE,QUALIFICATION_ARCHIVE_SHA,QUALIFICATION_FILES)
     current = json.loads((ROOT/CURRENT_RECEIPT).read_bytes())
+    from scripts.historical_sources407 import read_sources
+    _,extra_sources=read_sources(ROOT)
     paths = {CURRENT_RECEIPT,current['protocol'],current['array_archive'],
              *current['source_sha256'],*current['input_sha256']}
     for name in paths:
@@ -25,6 +27,8 @@ def historical_checkout(tmp_path):
         destination.parent.mkdir(parents=True,exist_ok=True)
         expected=current['source_sha256'].get(name)
         if expected is not None and hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=expected:
+            if name in extra_sources and hashlib.sha256(extra_sources[name]).hexdigest()==expected:
+                destination.write_bytes(extra_sources[name]);continue
             for archive_name,digest,names in ((QUALIFICATION_ARCHIVE,QUALIFICATION_ARCHIVE_SHA,QUALIFICATION_FILES),
                     (LABORATORY_ARCHIVE,LABORATORY_ARCHIVE_SHA,LABORATORY_FILES),
                     (ROTATION_ARCHIVE,ROTATION_ARCHIVE_SHA,ROTATION_FILES)):
