@@ -21,7 +21,7 @@ TWO_Q2_EXPERIMENTAL_WARNING=(
     'или изменённая система с двумя Q2 не получает допуска402; точность реальных тел '
     'не аттестована. Закрытие GUI: ограниченная проверка404 — 18/18 PASS, без оставшихся Tcl callback errors в квалифицированной среде. Это не гарантия для других версий Tk/Matplotlib и не готовность релиза. '
     'Обычный «Старт» не ограничен 200 с; цель задаёт «Рассчитать до t». '
-    'Release0.3.3 — NO-GO. Подробности: docs/q2-application-acceptance-402.md.')
+    'Solar-Simulator 0.4.0 — кандидат, выпуск не разрешён. Подробности: docs/q2-application-acceptance-402.md.')
 
 
 def experimental_q2_warning(rotations):

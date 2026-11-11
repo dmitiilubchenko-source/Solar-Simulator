@@ -11,7 +11,13 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--wheel", action="store_true", help="Build wheel into .tools/wheels instead of installing")
     parser.add_argument("--gnu-bin", type=Path, help="Explicit Windows GNU bin directory (as/dlltool)")
+    parser.add_argument("--out", type=Path, help="Isolated wheel output (requires --wheel)")
+    parser.add_argument("--target-dir", type=Path, help="Isolated Cargo target directory")
+    parser.add_argument("--locked", action="store_true", help="Require existing Cargo lockfile")
+    parser.add_argument("--offline", action="store_true", help="Disable Cargo network access")
     args = parser.parse_args()
+    if args.out is not None and not args.wheel:
+        parser.error("--out requires --wheel")
     if sys.prefix == sys.base_prefix:
         raise SystemExit("Run this script with the project's .venv Python")
     root = Path(__file__).resolve().parents[1]
@@ -38,7 +44,13 @@ def main():
     command = [sys.executable, "-m", "maturin", "build" if args.wheel else "develop", "--release",
                "--manifest-path", str(root / "rust/solar_native/Cargo.toml")]
     if args.wheel:
-        command += ["--interpreter", sys.executable, "--out", str(root / ".tools/wheels")]
+        command += ["--interpreter", sys.executable, "--out", str(args.out if args.out is not None else root / ".tools/wheels")]
+    if args.target_dir is not None:
+        command += ["--target-dir", str(args.target_dir)]
+    if args.locked:
+        command += ["--locked"]
+    if args.offline:
+        command += ["--offline"]
     subprocess.run(command, env=env, check=True, cwd=root)
 
 

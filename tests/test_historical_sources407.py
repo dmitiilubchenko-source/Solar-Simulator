@@ -71,10 +71,12 @@ def assert_version(root,version):
 
 def test_historical032_and_candidate033_cannot_exchange_metadata(tmp_path):
     old=tmp_path/'accepted032';new=tmp_path/'candidate033'
-    saved.restore_metadata032(ROOT,old);assert_version(old,'0.3.2');assert_version(ROOT,'0.3.3')
+    saved.restore_metadata032(ROOT,old);assert_version(old,'0.3.2')
+    from historical033_fixture407v import restore033
+    restore033(new)
     m,_=saved.read_sources(ROOT)
     for name in m['metadata032']:
-        dst=new/name;dst.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(ROOT/name,dst)
+        assert (new/name).is_file()  # exact immutable033, independent of current version
     assert_version(new,'0.3.3')
     for destination,source,version in ((old,new,'0.3.2'),(new,old,'0.3.3')):
         path=destination/'rust/solar_core/Cargo.toml';raw=path.read_bytes();path.write_bytes((source/'rust/solar_core/Cargo.toml').read_bytes())

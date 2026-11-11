@@ -110,9 +110,8 @@ def test_380_rejects_changed_criteria(tmp_path):
 def test_candidate_metadata_overlay_does_not_edit_other_values(tmp_path):
     from scripts.prepare_qualification383 import METADATA, version_overlay, ROOT
     import tomllib
-    for name in METADATA:
-        path=tmp_path/name;path.parent.mkdir(parents=True,exist_ok=True)
-        path.write_bytes((ROOT/name).read_bytes())
+    from historical033_fixture407v import restore033
+    restore033(tmp_path)  # historical383 prepares033, never overlay live040
     before={name:tomllib.loads((tmp_path/name).read_text()) for name in METADATA}
     changes=version_overlay(tmp_path)
     assert set(changes)==set(METADATA)

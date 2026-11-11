@@ -80,3 +80,8 @@ inspection.report через существующий async-loader lifecycle. Ф
 [Подготовка кандидата383](qualification-033-preflight.md): отдельный staging export,
 явный metadata overlay, новые sealed планы и output существующих drivers.
 Технический preflight не является научной квалификацией или выпуском.
+
+
+## Кандидат0.4.0 — version migration407V
+
+[Состав кандидата](releases/v0.4.0.md): UNRELEASED; метаданные и изолированный native обновлены отдельно от исторических0.3.3 evidence. Full408 и portable acceptance ещё не выполнены; физические алгоритмы прежние.

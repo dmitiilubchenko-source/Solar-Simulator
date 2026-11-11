@@ -365,6 +365,7 @@
       "docs/releases/v0.3.1.md",
       "docs/releases/v0.3.2.md",
       "docs/releases/v0.3.3.md",
+      "docs/releases/v0.4.0.md",
       "docs/reproducibility-protocol.md",
       "docs/reproducibility.md",
       "docs/review-followup-cost.json",
@@ -1033,6 +1034,8 @@
       "tests/data/research63-inputs.json",
       "tests/data/research63-inputs.zip",
       "tests/fixtures/control-row-405.py.txt",
+      "tests/fixtures/metadata033-828c798.zip",
+      "tests/historical033_fixture407v.py",
       "tests/historical376_fixture407.py",
       "tests/test_accuracy.py",
       "tests/test_anchored_reference.py",
@@ -1279,7 +1282,8 @@
       "tests/test_two_q2_evidence.py",
       "tests/test_two_q2_gui.py",
       "tests/test_vector3.py",
-      "tests/test_verification_commands.py"
+      "tests/test_verification_commands.py",
+      "tests/test_version407v.py"
     ]
   }
 }
