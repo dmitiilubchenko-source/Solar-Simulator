@@ -46,3 +46,11 @@ def test_required_release040_doc_present_and_unreleased():
     text=(ROOT/'docs/releases/v0.4.0.md').read_text(encoding='utf8')
     assert 'UNRELEASED / RELEASE CANDIDATE' in text
     assert all(x in text for x in ['0.244795','10/11','11/11','FAIL380','FAIL402','NO-GO'])
+
+
+def test_release040_document_closure(tmp_path):
+    from scripts.build_portable import copy_public_rotation_documents
+    from scripts.check_portable import check_document_links
+    copied=copy_public_rotation_documents(tmp_path,extra_seeds=('releases/v0.4.0.md',))
+    assert 'docs/releases/v0.4.0.md' in copied
+    assert check_document_links(tmp_path)>100
