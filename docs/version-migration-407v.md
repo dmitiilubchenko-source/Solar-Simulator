@@ -85,9 +85,28 @@ APPLICATION_D1 и RELEASE_READINESS **NO-GO**: historical40211/11 и10/11,
 distance_AB0.244795m вместо10mFAIL;3historical380+4short402FAIL сохранены.
 Нет допуска arbitrarytwoQ2, гарантии глобальной ошибки или новой точности реальных тел.
 
-Cloud: **CLOUD_UNVERIFIED**, резервирование ещё не завершено; отдельный итог ниже.
+Cloud: **CLOUD_VERIFIED_SHA256_AND_MEMBERS**; подтверждение приведено ниже. Архивный internal manifest сохраняет первоначальный pending-статус, а независимое подтверждение записано отдельно.
 
 **GO TO FULL SOURCE ACCEPTANCE408 — exact0.4.0 candidate, not release approval.**
 После отчёта STOP. Main/tag/LATEST/portable032 не затронуты.
 
 Итог основного407V: charged 315.281250CPU/239.999718activewall, включая finalization allowance25CPU/60wall (консервативный bound, не измерение). Из них worker 140.968750CPU, supervisor 123.656250CPU измерены. Wdisk513279399B+128MiBsource reserve; внутри прежних caps.
+
+## Независимое облачное подтверждение
+
+[Архив407V](https://drive.google.com/file/d/18JO2RqwyIk9f59CIE3InoBoGfSy-pSdA/view),
+1460557B, SHA256 `0f2770d81513b431841658048901d447491d0d9207e08c7dbb682570abd40e42`.
+Fresh connector metadata/fetch и отдельный urllib stream сверили SHA/size/parent;
+134members CRC/SHA и вложенный wheel/native SHA проверены повторным скачиванием.
+[Git recovery recipe](https://drive.google.com/file/d/1s6iWYg_DsQUv4m_ShJdxDOOWDAqYZ7NW/view),
+582B, SHA256 `48ff4b1027253b435fac78290dbd62c5a18ededf93ece96ede262d868f133721`.
+Оба файла owner-only; аккаунт и Solar-Simulator parent/root перепроверены.
+Project-filtered механизм завершён, queue/upload не использованы как доказательство.
+Оригиналы не удалены;399–407не перезаливались;404требует прежний immutable erratum.
+
+Backup отдельно: conservative local operational charge20CPU/180wall внутри80/600;
+измерения архива и повторного download приведены в JSON (connector server CPU
+недоступен). Это bound, не измеренная сумма. Среды/кеши/личный контекст/SQLite
+не архивировались. Public9d1e2cf и candidate237f736 присутствуют в GitHub.
+CI9d1e2cf: Python SUCCESS, desktop-native ещё выполнялся при записи; configured
+adaptive skip не считается scientificPASS. Это не full408кандидата0.4.0.

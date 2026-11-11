@@ -332,7 +332,7 @@
       "private_bytes": 2899102924,
       "disk_bytes": 1449551462
     },
-    "limitations": "Retained50ms385 monitor; memory/discovery sampled, not OS quotas. Combined supervisor+worker private checked by hook; peak field is worker only. Initial12CPU/25wall and wrapper1CPU/1wall tail conservative allowances. Finalization still charged separately; backup separate.",
+    "limitations": "Retained50ms385 monitor; memory/discovery sampled, not OS quotas. Combined supervisor+worker private checked by hook; peak field is worker only. Initial12CPU/25wall and wrapper1CPU/1wall tail conservative allowances. Finalization allowance already included; backup separate.",
     "finalization_allowance": {
       "charged_CPU_seconds": 25,
       "charged_active_wall_seconds": 60,
@@ -368,7 +368,61 @@
     "RELEASE_READINESS": "NO-GO"
   },
   "cloud": {
-    "status": "CLOUD_UNVERIFIED_PENDING_BACKUP"
+    "status": "CLOUD_VERIFIED_SHA256_AND_MEMBERS",
+    "account_rechecked": true,
+    "owner_only_permissions": true,
+    "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+    "root_parent": "1D_w0GKtWScPmtUKm5wcmK2QOAaB_6k2C",
+    "files": [
+      {
+        "name": "Solar-Simulator-stage407V-20261111.zip",
+        "size": 1460557,
+        "SHA256": "0f2770d81513b431841658048901d447491d0d9207e08c7dbb682570abd40e42",
+        "id": "18JO2RqwyIk9f59CIE3InoBoGfSy-pSdA",
+        "status": "CLOUD_VERIFIED_SHA256"
+      },
+      {
+        "name": "Solar-Simulator-recovery-9d1e2cf8a92de08f814fe9656fffb42022b35238.json",
+        "size": 582,
+        "SHA256": "48ff4b1027253b435fac78290dbd62c5a18ededf93ece96ede262d868f133721",
+        "id": "1s6iWYg_DsQUv4m_ShJdxDOOWDAqYZ7NW",
+        "status": "CLOUD_VERIFIED_SHA256"
+      }
+    ],
+    "members": 134,
+    "nested_wheel_native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+    "member_audit": {
+      "id": "18JO2RqwyIk9f59CIE3InoBoGfSy-pSdA",
+      "parent": [
+        "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+      ],
+      "SHA256": "0f2770d81513b431841658048901d447491d0d9207e08c7dbb682570abd40e42",
+      "size": 1460557,
+      "members": 134,
+      "member_CRC_SHA256": true,
+      "nested_wheel_CRC_SHA256": true,
+      "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+      "CPU": 0.078125,
+      "wall": 21.23116840000148,
+      "peak_private_sampled": 38117376,
+      "status": "CLOUD_VERIFIED_SHA256_AND_MEMBERS"
+    },
+    "archive_operation_measured": {
+      "CPU": 0.9375,
+      "wall": 0.9871612999995705
+    },
+    "operational_charge": {
+      "CPU_bound": 20,
+      "active_wall_bound": 180,
+      "kind": "Conservative upper charge for local archive/prepare/verify/metadata commands; connector server CPU unavailable, not measured; download/archive measurements separate"
+    },
+    "backup_caps": {
+      "CPU_seconds": 80,
+      "wall_seconds": 600,
+      "private_bytes": 1073741824,
+      "data_bytes": 268435456
+    },
+    "scope": "Only new407Vselected raw/wheel/restoration; no environment, caches, privatecontext, SQLite or repeated399–407archives; raw sources preserved"
   },
   "unresolved": [
     "Full3083source/native/GUI acceptance408 not executed",
@@ -400,5 +454,26 @@
     "targeted-resources.json": "f810683babeb01e02cbb81615104272821331c84cee0c8032942085c839b9cf3",
     "toolchain-resources.json": "5cfd3d2b4d354758b5a6dadbcd2e9c4b20dd3d68e96de3d0417525099bd06416"
   },
-  "independent_audit_SHA256": "ac192dc10a774a6c568b9803a9fd106dc860ee562c224c00e0913f1433faf50e"
+  "independent_audit_SHA256": "ac192dc10a774a6c568b9803a9fd106dc860ee562c224c00e0913f1433faf50e",
+  "toolchain_files_postbuild_SHA256": {
+    "C:\\Users\\Admin\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\rustc.exe": "cbd682cf84ccc20bfde002443274f9768f777b68afef63da4462abb490c0a4ff",
+    "C:\\Users\\Admin\\.rustup\\toolchains\\stable-x86_64-pc-windows-gnu\\bin\\cargo.exe": "ef158b64cfedc443156b060d61c18d05298d1d4c010857b0623333963524fd1b",
+    "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\env\\Scripts\\maturin.exe": "787779fa7f453d3444ac732689ad2bb8f1399b4d4e2af1ad9e00f84bb6460f07"
+  },
+  "local_build_environment_observed_at_final_audit": {
+    "RUSTFLAGS": null,
+    "CARGO_ENCODED_RUSTFLAGS": null,
+    "CARGO_BUILD_TARGET": null,
+    "CC": null,
+    "CXX": null,
+    "CARGO_TARGET_X86_64_PC_WINDOWS_GNU_LINKER": null
+  },
+  "CI": {
+    "head": "9d1e2cf8a92de08f814fe9656fffb42022b35238",
+    "run": 43071422953,
+    "python": "SUCCESS",
+    "desktop_native": "IN_PROGRESS_LAST_OBSERVED",
+    "adaptive_research": "CONFIGURED_SKIP",
+    "scope": "dev subsets, not exact040fullacceptance; final metadata push may have its own run"
+  }
 }

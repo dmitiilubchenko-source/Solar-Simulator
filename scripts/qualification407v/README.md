@@ -11,7 +11,7 @@ branch. These tools are not runtime or portable components. No full408 executed.
 - `prepare.py` stages six metadata overlays and immutable033fixture, copied exact
   dependencies and existing offline build tools into a NEW environment. Do not
   rerun against completed directories. Executed original is retained in raw;
-  final restoration script includes the missing maturin.exe and correct optional
+  final staging script includes the missing maturin.exe and correct optional
   REBOUND dependency path. No scientific REBOUND runs occur here.
 - `preflight.py`, candidate `build_native.py --wheel --locked --offline --out …
   --target-dir … --gnu-bin …`, `install.py`, `rust.py` prepare the honest artifact.
