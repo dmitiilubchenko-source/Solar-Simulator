@@ -174,7 +174,8 @@
     "New native040 has no automatic scientific qualification from033receipts",
     "FullD1 distance_AB effect remainsFAIL;3historical380+4short402convergenceFAIL retained",
     "Portable build/relocated acceptance not authorized/not executed",
-    "Release not approved; no main/tag/LATEST changes"
+    "Release not approved; no main/tag/LATEST changes",
+    "CLOUD_UNVERIFIED: first16MiBpart independentdownload timedout100s; full download/reassembly/memberCRC incomplete; reuse uploaded IDs and local originals, no reupload or acceptance rerun"
   ],
   "resources": {
     "charged_CPU_seconds": 1385.921875,
@@ -226,9 +227,158 @@
     "RELEASE_READINESS": "NO-GO_NO_OWNER_RELEASE_APPROVAL_PORTABLE_NOT_ACCEPTED_D1_UNMET"
   },
   "cloud": {
-    "status": "CLOUD_UNVERIFIED_PENDING_REVIEW_AND_DOWNLOAD"
+    "status": "CLOUD_UNVERIFIED",
+    "cause": "Independent verify-cloud of first16MiBpart timed out at100seconds; no bytes/SHA readback completed; no CRC audit run",
+    "archive_SHA256": "f9e56e3ddc3d93b0d29916dd0a7c095e9ea8c8af975f1370a222af31f2bfbadd",
+    "archive_size": 44203479,
+    "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+    "root": "1D_w0GKtWScPmtUKm5wcmK2QOAaB_6k2C",
+    "files": [
+      {
+        "name": "f9e56e3ddc3d93b0-part0001-of0003.bin",
+        "source": "C:/Users/Admin/Documents/Codex/2026-10-29/files-pasted-by-the-user-codex/outputs/parts/f9e56e3ddc3d93b0-part0001-of0003.bin",
+        "size": 16777216,
+        "sha256": "ff412c504e9a24bfc4bc67630763eac6f13e475dde1b0e23d0eb83b191e53626",
+        "id": "13NPitOalzAd8v20yy_4fmaKblcaypUQw",
+        "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "owner_only": true,
+        "metadata_size": 16777216,
+        "status": "UPLOADED_METADATA_VERIFIED_CONTENT_UNVERIFIED"
+      },
+      {
+        "name": "f9e56e3ddc3d93b0-part0002-of0003.bin",
+        "source": "C:/Users/Admin/Documents/Codex/2026-10-29/files-pasted-by-the-user-codex/outputs/parts/f9e56e3ddc3d93b0-part0002-of0003.bin",
+        "size": 16777216,
+        "sha256": "b7f015c0d485c6c57d75cf438732af8fef16bd1ca99eb0f319e9e6339e19d4fa",
+        "id": "12JeO4n4OdCyCFEOOFnSnlsG6gtDggPxC",
+        "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "owner_only": true,
+        "metadata_size": 16777216,
+        "status": "UPLOADED_METADATA_VERIFIED_CONTENT_UNVERIFIED"
+      },
+      {
+        "name": "f9e56e3ddc3d93b0-part0003-of0003.bin",
+        "source": "C:/Users/Admin/Documents/Codex/2026-10-29/files-pasted-by-the-user-codex/outputs/parts/f9e56e3ddc3d93b0-part0003-of0003.bin",
+        "size": 10649047,
+        "sha256": "839b0fdf07cfa452a355853b797d7083c1a3dbdd73a95a068e004f9a7cf9eae4",
+        "id": "1YNLNYO-XPZjWbgoq-Elbb7ipoJcdWNbA",
+        "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "owner_only": true,
+        "metadata_size": 10649047,
+        "status": "UPLOADED_METADATA_VERIFIED_CONTENT_UNVERIFIED"
+      },
+      {
+        "name": "f9e56e3ddc3d93b0.parts.json",
+        "source": "C:/Users/Admin/Documents/Codex/2026-10-29/files-pasted-by-the-user-codex/outputs/parts/f9e56e3ddc3d93b0.parts.json",
+        "size": 600,
+        "sha256": "ad5b14bd42efda77932d5c64b83e254f8720a2ef3a749d5a95aa4b2ea88c1149",
+        "id": "1NXt0gWi-c6iDY-7gX-O5xUNNmrh-AQn9",
+        "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "owner_only": true,
+        "metadata_size": 600,
+        "status": "UPLOADED_METADATA_VERIFIED_CONTENT_UNVERIFIED"
+      },
+      {
+        "name": "Solar-Simulator-recovery-a26b77b4ddf0528c8663d4fab29b5e53b1f3350a.json",
+        "source": "C:/Users/Admin/Documents/Codex/2026-10-29/files-pasted-by-the-user-codex/outputs/Solar-Simulator-recovery-a26b77b4ddf0528c8663d4fab29b5e53b1f3350a.json",
+        "size": 582,
+        "sha256": "a4c74d631d0f912785c84ba9a185e96a5153b25c2f4d1e3d7c4c7c126f7fe5ef",
+        "id": "1-WG65EdXd0fcp11gGeB5gfrCgV0hi1y9",
+        "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+        "owner_only": true,
+        "metadata_size": 582,
+        "status": "UPLOADED_METADATA_VERIFIED_CONTENT_UNVERIFIED"
+      }
+    ],
+    "cloud_permissions": "Fresh metadata owner-only/account and exact parent/size verified; this is not content verification",
+    "resume": "Reuse these exact IDs and original archive/parts/manifests, search before any upload; no reupload or rerun acceptance. Fresh independent downloads of all parts/manifest/recipe, SHA-size verification, exact ordered reassembly and CRC/SHA of1110members/2982logicalfiles still required within a newly estimated operational budget.",
+    "private_context_or_SQLite_uploaded": false,
+    "backup_operational_stop_elapsed_seconds": 836.0827023983002,
+    "backup_caps": {
+      "CPU": 120,
+      "wall": 900,
+      "private_bytes": 1073741824,
+      "data_bytes": 536870912
+    },
+    "archive_generation": {
+      "CPU": 24.796875,
+      "wall": 25.144115899998724,
+      "peak_private": 70778880
+    },
+    "local_archive_CRC_SHA_verified": true,
+    "local_archive_members": 1110,
+    "logical_files": 2982,
+    "excluded_originals": 10646,
+    "unsafe_corrupt_fixture_exclusions": [
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_before381_archive_cannot_1/scripts/validation/laboratory-before381.zip",
+        "size": 15,
+        "sha256": "c243dda0f4d9be8537fb4f19150cb88274a7d27a29dc0da54f44fe4a835e01eb",
+        "reason": "UNREADABLE_ARCHIVE:BadZipFile",
+        "cloud_backed": false
+      },
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_corrupted_public_archive_0/bad.zip",
+        "size": 7,
+        "sha256": "f1234d75178d892a133a410355a5a990cf75d2f33eba25d575943d4df632f3a4",
+        "reason": "UNREADABLE_ARCHIVE:BadZipFile",
+        "cloud_backed": false
+      },
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_existing_output_or_partia2/.tools/run-sources.zip",
+        "size": 21,
+        "sha256": "7712458c5724c18cbed6b5fd89890a0e674937792dc26bf9712608158ef266a4",
+        "reason": "UNREADABLE_ARCHIVE:BadZipFile",
+        "cloud_backed": false
+      },
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_historical_source_cannot_1/scripts/validation/rotation-before380.zip",
+        "size": 21,
+        "sha256": "3b17a0c9ff78a0a60f229ecb5226f7a9981ccc1fdedfa25b1ab03739f36beb35",
+        "reason": "UNREADABLE_ARCHIVE:BadZipFile",
+        "cloud_backed": false
+      },
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_no_substitution_for_missi1/forensic.zip",
+        "size": 24,
+        "sha256": "aae84a8f98a35d17fd4e598225cb729bc681d677d2ca0485f3696b12506298f7",
+        "reason": "UNREADABLE_ARCHIVE:BadZipFile",
+        "cloud_backed": false
+      },
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_unexpected_archive_path_i0/escape.zip",
+        "size": 135,
+        "sha256": "865bc955d22d04e01aecd838c8562094243fac435cc539ff7a792cccb318fe0f",
+        "reason": "UNSAFE_ARCHIVE_MEMBER",
+        "cloud_backed": false
+      },
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_unlisted_archives_cannot_0/source/docs/personal.zip",
+        "size": 7,
+        "sha256": "715dc8493c36579a5b116995100f635e3572fdf8703e708ef1a08d943b36774e",
+        "reason": "UNREADABLE_ARCHIVE:BadZipFile",
+        "cloud_backed": false
+      },
+      {
+        "path": "temp/pytest-of-Admin/pytest-0/test_wrong_tar_sha_is_rejected0/bad.tar.gz",
+        "size": 28,
+        "sha256": "29eac12fac3dc82d819d3de78b4627c929c139d3838d48c638fad8a3f12945d8",
+        "reason": "UNREADABLE_ARCHIVE:ReadError",
+        "cloud_backed": false
+      }
+    ],
+    "source_originals_retained": true,
+    "stale_lock_cleanup": "Removed only stale verifier lock after independent PID-dead check; no config/manifest edits",
+    "CPU_limitations": "Archive measured24.796875CPU; prepare/hash/metadata/readback subprocess CPU not fully measured, conservative120CPU bound not claimed as measured. Connector server CPU unavailable.",
+    "local_archive": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\acceptance408backup-20261111\\Solar-Simulator-stage408-20261111.zip"
   },
   "decision": "TECHNICAL SOURCE/NATIVE/GUI GO — exact Solar-Simulator 0.4.0 candidate, verified environment only.",
   "next_step": "Plan a separate portable build/relocation acceptance and owner decision on disclosed experimentalQ2scope; no build/release now",
-  "final_closure_SHA256": "1066d00cbe609c50d22bd91e09b353ef906cc7431b9c956c119b6d39b1d0e073"
+  "final_closure_SHA256": "1066d00cbe609c50d22bd91e09b353ef906cc7431b9c956c119b6d39b1d0e073",
+  "CI": {
+    "head": "a26b77b4ddf0528c8663d4fab29b5e53b1f3350a",
+    "run": 43079691834,
+    "conclusion": "SUCCESS",
+    "scope": "devsubsetCI, distinct from exact040fullsourceacceptance; final metadata commit has separate run"
+  }
 }

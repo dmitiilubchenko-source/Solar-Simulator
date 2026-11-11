@@ -1069,6 +1069,7 @@
       "scripts/qualification407v/targeted.py",
       "scripts/qualification408/README.md",
       "scripts/qualification408/audit.py",
+      "scripts/qualification408/backup-pending.json",
       "scripts/qualification408/census.py",
       "scripts/qualification408/evidence-manifest.json",
       "scripts/qualification408/final-closure.json",

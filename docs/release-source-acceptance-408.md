@@ -108,3 +108,31 @@ Cloud пока **CLOUD_UNVERIFIED**, independentreadback ещё впереди.
 Здесь portable/build/release/main/tag/LATEST не выполняются. После отчёта STOP.
 
 Final closure: 1385.921875chargedCPU/844.457832activewall; включает finalization allowance20CPU/45wall (не измерение). Все supervisor/completion receipts закрыты, в том числе сохранённый report-only exit1 и исправленный report2exit0. [Полная closure](../scripts/qualification408/final-closure.json). Primary tests/runtime failures0.
+
+## Резервирование: CLOUD_UNVERIFIED
+
+Локальный reviewed deduplicated archive44203479B, SHA256
+`f9e56e3ddc3d93b0d29916dd0a7c095e9ea8c8af975f1370a222af31f2bfbadd`:
+2982logicalfiles/1109unique payloads/1110ZIPmembers. Локальные CRC/SHA проверены.
+Восемь intentionally corrupt/unsafe test fixtures не загружены; точные пути/SHA/
+причины в JSON и EXCLUDED-ORIGINALS.json внутри архива. Оригиналы сохранены.
+Остальные10646exclusions включают Cargo/cache/Git-recoverable/staticstaging и
+private-named/compiled-test fixtures; они не объявляются cloud-backed.
+
+Три части16MiB/16MiB/10649047B,600Btransportmanifest и582BGitrecoveryrecipe
+загружены в существующий приватный Solar-Simulator parent. Fresh metadata
+подтвердила размер/parent/owner-only; **это не подтверждение содержимого**.
+Первый independentverify-cloud download превысил100s; subprocess остановлен,
+stale lock15428 снят только после проверки отсутствия PID. Новых prepare,
+повторных загрузок или попыток сверх бюджета не было. Последующая CRC-проверка
+облачных байтов не запускалась. Backup остановлен до900wallcaps; архивирование
+24.796875CPU/25.144116wall measured, прочие CPU/tool costs не полностью измерены.
+Операционный backupbudget120CPU/900wall/1GiB/512MiB отдельный; не увеличивался.
+
+[Точные ID/SHA и инструкция продолжения](../scripts/qualification408/backup-pending.json)
+позволяют продолжить только readback с отдельной оценкой бюджета. Сначала использовать
+существующие IDs, а не загружать дубликаты. Source acceptance повторять не требуется.
+Никакие secret/context/SQLite/env/cache не загружались;399–407Vархивы не тронуты;
+404использовать только вместе с прежним append-only erratum.
+Технический результат408 остаётся GO; облачное резервирование **не завершено**.
+CIa26b77b run43079691834SUCCESS — только devsubsets, не замена full408.
