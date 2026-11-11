@@ -1,0 +1,55 @@
+{
+  "stage": 410,
+  "status": "FROZEN_INPUTS_BLOCKED_VERIFIER_BINDING_NOT_AUTHORIZED_NOT_EXECUTED",
+  "runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "packaging_commit": "02ca1cf1b0e327481713bfa7d9b0fa328991c0ef",
+  "tooling_SHA256": "995ddf20768cc968aef8b557f2780f569d04671c6a5fee41450a1db5876e5936",
+  "archive": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\output\\SolarSimulator-0.4.0-20261111-224857-409.zip",
+  "archive_SHA256": "74247a863bd1c445ecfa736e1a0df60db43ad541cb34d7df5de909410781f3bd",
+  "archive_size": 112698889,
+  "archive_member_count": 6001,
+  "archive_root": "SolarSimulator-0.4.0-20261111-224857",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "environment": "PackagedCPython3.14.2t/NumPy2.5.1/SciPy1.18.1/Matplotlib3.11.0; newrelocationwithspaces,-I,noPYTHONPATH; no qualifiedvenv imports",
+  "hard": {
+    "cpu_seconds": 900,
+    "wall_seconds": 1200,
+    "private_bytes": 2147483648,
+    "disk_bytes": 2147483648
+  },
+  "early": {
+    "cpu_seconds": 720,
+    "wall_seconds": 960,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1932735283
+  },
+  "forecast": {
+    "CPU_seconds": null,
+    "active_wall_seconds": null,
+    "reason": "409shortsmokes are not a forecast for year/continuous workloads. Must inspect current verifier and prior measured410-equivalentcost before admission; caps not raised automatically."
+  },
+  "mandatory": [
+    "Verify originalZIP/allmembers/source/native/ABI/license/privacy",
+    "ExtracttoNEWpathwithspaces; noPYTHONPATH/-I actualruntime origins",
+    "RealGUI/lifecycle/backend0/1/2Q2/save/load/branch/recovery/oldfiles",
+    "SavedJPLreplay AND genuine fresh-year propagation; no cachedNPZreplacement",
+    "Mandatorycurrent continuous-year probes; all errors/FAIL/partial preserved",
+    "Independent rawoutcome/resource/scientificscopeaudit",
+    "Reviewedbackup/independentcloudSHA-size-parent-owner"
+  ],
+  "known_blockers": [
+    {
+      "component": "verification/recompute_jpl.py",
+      "failure": "Runtime scientific source changed: src/solar_simulator/experiment.py",
+      "evidence_SHA256": "5bbbf20db7e60ec8da9980eb19461064152f88ba56f12e733fc57f319978a16d",
+      "cause": "Historical strictreport pins oldgenerator experiment/application_profiles bytes. Current040source differs. Savedreplay is valid but cannot authorize current solver.",
+      "required_resolution": "Separate reviewed qualification-only current-source binding mode/protocol before anyyearrun; preserve oldstrictmode, oldreports/SHA/IC/settings/thresholds and require live040allsource/native/environment proof. Negativecontrols for substituted source/native/version/environment. Do not simply replace historicalexpectedSHA or waive freshyear.",
+      "not_implemented": true
+    }
+  ],
+  "preflight_must_stop_if_blocker_unresolved": true,
+  "portable_acceptance_pass": false,
+  "release_approved": false
+}

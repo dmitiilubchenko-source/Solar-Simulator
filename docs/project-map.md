@@ -204,3 +204,8 @@ resource-history guard проверен и усилен; независимый 
 
 
 [Full source/native/GUI acceptance408](release-source-acceptance-408.md): exact0.4.0candidate237f736,3083PythonPASS/core19PASS. Технический GO только проверенной среды, scientificD1/releaseNO-GO; portable не создавалась.
+
+[Portable build409](portable-build-409.md): cloud408 независимо закрыт;
+exact237f736/native407V упакованы отдельным tooling. Smoke/ZIP integrity PASS,
+полная410 не запускалась: историческая source-привязка fresh-year verifier — блокер.
+Main/tag/LATEST/release не изменены. [Инструменты и план410](../scripts/qualification409/README.md).

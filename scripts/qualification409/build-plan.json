@@ -1,0 +1,77 @@
+{
+  "stage": 409,
+  "phase": "B_PORTABLE_CANDIDATE",
+  "status": "SEALED_BEFORE_TOOLING_EDITS_AND_BUILD",
+  "base_runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "base_runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "packaging_branch": "codex/packaging-0.4.0-reuse-wheel-409",
+  "packaging_root": "C:/Users/Admin/Desktop/Solar-packaging-040-409",
+  "qualified_prefix": "C:/Users/Admin/Documents/Codex/Solar407V-20261111/env",
+  "source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "wheel": "C:/Users/Admin/Documents/Codex/Solar407V-20261111/wheels/solar_native-0.4.0-cp314-cp314t-win_amd64.whl",
+  "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "cloud408_closure_SHA256": "11f44785cd933c79a03d1a7058d603556b1431f615452deaaf4d47704fd0221c",
+  "hard": {
+    "cpu_seconds": 300,
+    "wall_seconds": 600,
+    "private_bytes": 2147483648,
+    "disk_bytes": 1073741824
+  },
+  "early": {
+    "cpu_seconds": 240,
+    "wall_seconds": 480,
+    "private_bytes": 1932735283,
+    "disk_bytes": 943718400
+  },
+  "external_source_reserve": 134217728,
+  "forecast": {
+    "staging_preflight_CPU": 20,
+    "tests_and_historical_export_CPU": 15,
+    "build_wheel_copy_export_smoke_zip_CPU": 90,
+    "supervisor_CPU": 60,
+    "independent_archive_audit_CPU": 20,
+    "finalization_CPU": 15,
+    "active_wall_seconds": 255,
+    "newdata_bytes": 800000000
+  },
+  "CPU_final_reserve": 20,
+  "wall_final_reserve": 40,
+  "monitor_SHA256": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508",
+  "tooling_scope": [
+    "Onlyscripts/build_portable.py in separatebranch: explicit verifiedreusewheel, optionaloutputroot, offline/noisolationPythonwheel underreuse, explicitSHA-boundhistoricalverificationfixture; defaults unchanged",
+    "Historicalsourcefixture restores onlyexactdeclaredrawoldgeneratorfiles from pinnedexistingarchives; no sourceSHA/oldreportchanges, no oldruntime execution; cachedreplayexport distinctfromactual040runtime",
+    "Runtime/Rust/settings/IC/checkpoints/smokes unchanged; no native rebuild, fullcheck_portable/year/continuous410 forbidden"
+  ],
+  "required_negatives": [
+    "missingwheel",
+    "wrongversion",
+    "wrongABI",
+    "wrongwheelSHA",
+    "wrongpydSHA",
+    "ambiguouswheels",
+    "unexpectednativecompile",
+    "outsideportableimport"
+  ],
+  "historic_source_substitutions": {
+    "src/solar_simulator/experiment.py": {
+      "SHA256": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+      "archive": "scripts/validation/numeric-before373.zip",
+      "archive_SHA256": "0cbe5a3754c7732ac645d03c9a582b1193b9ec64475b6138974eff9fd2758abb"
+    },
+    "src/solar_simulator/application_profiles.py": {
+      "SHA256": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+      "archive": "scripts/validation/laboratory-before381.zip",
+      "archive_SHA256": "b840ba94506142266f71eb8b6fa62825eb94a28bc754ac941978afd6d80f14a3"
+    }
+  },
+  "forbidden": [
+    "No qualifiedcandidate changes",
+    "No qualifiedenvinstall",
+    "No nativebuild",
+    "No numericalcriteria/sourcechanges",
+    "No408repeat or58/22series",
+    "No fullcheck_portable/relocated410",
+    "No main/tag/release/LATEST"
+  ]
+}

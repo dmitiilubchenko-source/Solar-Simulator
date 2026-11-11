@@ -1,0 +1,99 @@
+{
+  "stage": 409,
+  "phase": "A_CLOUD408_CLOSURE",
+  "status": "SEALED_BEFORE_READBACK",
+  "date": "2026-11-11",
+  "dev_start": "7f89c39a92ebf8f94948007b2a04a7be10963f03",
+  "source_candidate": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "source_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "output": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-20261111",
+  "prior_pending_SHA256": "6b36c0dde6861cec079cb142c30ac7bf8b36decae9eb59f497cd17532a137f88",
+  "archive_size": 44203479,
+  "archive_SHA256": "f9e56e3ddc3d93b0d29916dd0a7c095e9ea8c8af975f1370a222af31f2bfbadd",
+  "members": 1110,
+  "logical_files": 2982,
+  "files": [
+    {
+      "name": "f9e56e3ddc3d93b0-part0001-of0003.bin",
+      "id": "13NPitOalzAd8v20yy_4fmaKblcaypUQw",
+      "size": 16777216,
+      "sha256": "ff412c504e9a24bfc4bc67630763eac6f13e475dde1b0e23d0eb83b191e53626",
+      "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+    },
+    {
+      "name": "f9e56e3ddc3d93b0-part0002-of0003.bin",
+      "id": "12JeO4n4OdCyCFEOOFnSnlsG6gtDggPxC",
+      "size": 16777216,
+      "sha256": "b7f015c0d485c6c57d75cf438732af8fef16bd1ca99eb0f319e9e6339e19d4fa",
+      "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+    },
+    {
+      "name": "f9e56e3ddc3d93b0-part0003-of0003.bin",
+      "id": "1YNLNYO-XPZjWbgoq-Elbb7ipoJcdWNbA",
+      "size": 10649047,
+      "sha256": "839b0fdf07cfa452a355853b797d7083c1a3dbdd73a95a068e004f9a7cf9eae4",
+      "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+    },
+    {
+      "name": "f9e56e3ddc3d93b0.parts.json",
+      "id": "1NXt0gWi-c6iDY-7gX-O5xUNNmrh-AQn9",
+      "size": 600,
+      "sha256": "ad5b14bd42efda77932d5c64b83e254f8720a2ef3a749d5a95aa4b2ea88c1149",
+      "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+    },
+    {
+      "name": "Solar-Simulator-recovery-a26b77b4ddf0528c8663d4fab29b5e53b1f3350a.json",
+      "id": "1-WG65EdXd0fcp11gGeB5gfrCgV0hi1y9",
+      "size": 582,
+      "sha256": "a4c74d631d0f912785c84ba9a185e96a5153b25c2f4d1e3d7c4c7c126f7fe5ef",
+      "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+    }
+  ],
+  "readback_order": [
+    3,
+    4,
+    0,
+    1,
+    2
+  ],
+  "method": "Fresh connector HTTPS references; independent streamed urllib cloud bytes to NEW files, per-file SHA/size and immutable completion; no local408part fallback. Small controls first. Retain confirmed parts, retry only failed part after cause/budget check. No portable activity until complete cloudmember audit.",
+  "hard": {
+    "cpu_seconds": 120,
+    "wall_seconds": 1800,
+    "private_bytes": 1073741824,
+    "disk_bytes": 536870912
+  },
+  "early": {
+    "cpu_seconds": 96,
+    "wall_seconds": 1440,
+    "private_bytes": 943718400,
+    "disk_bytes": 419430400
+  },
+  "forecasts": {
+    "metadata_and_controls_CPU": 8,
+    "download_and_supervision_CPU": 35,
+    "archive_audit_CPU": 12,
+    "finalization_CPU": 15,
+    "active_wall_seconds": 1100,
+    "data_bytes": 150000000,
+    "uncertainty": "Previous first16MiB download100s timeout supplies lowerbound only; budget300s per16MiB,240s thirdpart,60s percontrol +140s audit/finalization. Forecast not measured; no blind retries."
+  },
+  "per_file_wall_limits": {
+    "control": 150,
+    "part": 360
+  },
+  "socket_timeout_seconds": 300,
+  "CPU_final_reserve": 15,
+  "wall_final_reserve": 100,
+  "monitor_SHA256": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508",
+  "portable_phase_gated": "If A notcomplete STOP BACKUP_PENDING; B hard300CPU600wall/2GiB/1GiB,early240/480/1.8GiB/900MiB must get separate sealedbuildplan after actual tooling/resource audit",
+  "old408_operational_CPU": "UNRESOLVED_UNCHANGED",
+  "forbidden": [
+    "No uploads of408",
+    "No3083rerun",
+    "No58/22/yearseries",
+    "No runtime/test/native changes",
+    "No main/tag/LATEST/release"
+  ],
+  "created_timestamp": 1794424958.2182314
+}

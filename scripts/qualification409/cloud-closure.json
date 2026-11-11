@@ -1,0 +1,63 @@
+{
+  "status": "CLOUD408_CLOSURE_VERIFIED",
+  "new409_CPU_charged": 64.375,
+  "new409_active_wall_charged": 552.7829635,
+  "worker_CPU_measured": 2.34375,
+  "supervisor_CPU_measured": 44.21875,
+  "historical408_CPU": "UNRESOLVED_UNCHANGED",
+  "old408reports_unchanged": true,
+  "proof_SHA256": "18bacd6b7d14ac3987d055292107a667be8592b858fe38032bc0bf0839e28f79",
+  "metadata_SHA256": "0cfe28dea38cfba8903c71fc3b89bef8c3decdd7fcd0f235ff9be36b21739066",
+  "monitor200_delta": "409A2 separatelysealed, fivefaultchecks, old385logic except200mscadence; old408monitor/results untouched",
+  "originalparts_no_reupload": true,
+  "fullarchive": {
+    "status": "CLOUD408_VERIFIED_SHA256_SIZE_ALL_CRC_MEMBERS",
+    "archive_SHA256": "f9e56e3ddc3d93b0d29916dd0a7c095e9ea8c8af975f1370a222af31f2bfbadd",
+    "archive_size": 44203479,
+    "source": "Only fresh independent409cloud downloads concatenated in frozen order; original local408archive/parts not read",
+    "members": 1110,
+    "logical_files": 2982,
+    "unique_payloads": 1109,
+    "CRC_SHA256": true,
+    "parts": [
+      {
+        "id": "13NPitOalzAd8v20yy_4fmaKblcaypUQw",
+        "name": "f9e56e3ddc3d93b0-part0001-of0003.bin",
+        "size": 16777216,
+        "SHA256": "ff412c504e9a24bfc4bc67630763eac6f13e475dde1b0e23d0eb83b191e53626",
+        "label": "part1"
+      },
+      {
+        "id": "12JeO4n4OdCyCFEOOFnSnlsG6gtDggPxC",
+        "name": "f9e56e3ddc3d93b0-part0002-of0003.bin",
+        "size": 16777216,
+        "SHA256": "b7f015c0d485c6c57d75cf438732af8fef16bd1ca99eb0f319e9e6339e19d4fa",
+        "label": "part2"
+      },
+      {
+        "id": "1YNLNYO-XPZjWbgoq-Elbb7ipoJcdWNbA",
+        "name": "f9e56e3ddc3d93b0-part0003-of0003.bin",
+        "size": 10649047,
+        "SHA256": "839b0fdf07cfa452a355853b797d7083c1a3dbdd73a95a068e004f9a7cf9eae4",
+        "label": "part3"
+      },
+      {
+        "id": "1NXt0gWi-c6iDY-7gX-O5xUNNmrh-AQn9",
+        "name": "f9e56e3ddc3d93b0.parts.json",
+        "size": 600,
+        "SHA256": "ad5b14bd42efda77932d5c64b83e254f8720a2ef3a749d5a95aa4b2ea88c1149",
+        "label": "manifest"
+      },
+      {
+        "id": "1-WG65EdXd0fcp11gGeB5gfrCgV0hi1y9",
+        "name": "Solar-Simulator-recovery-a26b77b4ddf0528c8663d4fab29b5e53b1f3350a.json",
+        "size": 582,
+        "SHA256": "a4c74d631d0f912785c84ba9a185e96a5153b25c2f4d1e3d7c4c7c126f7fe5ef",
+        "label": "recipe"
+      }
+    ],
+    "start_timestamp": 1794425862.5805027,
+    "end_timestamp": 1794425863.1819944,
+    "original408_operational_CPU": "UNRESOLVED unchanged; new409resources separate"
+  }
+}

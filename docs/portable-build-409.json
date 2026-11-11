@@ -1,0 +1,301 @@
+{
+  "stage": 409,
+  "date": "2026-11-11",
+  "dev_start": "7f89c39a92ebf8f94948007b2a04a7be10963f03",
+  "runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "runtime_source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "packaging_branch": "codex/packaging-0.4.0-reuse-wheel-409",
+  "packaging_commit": "02ca1cf1b0e327481713bfa7d9b0fa328991c0ef",
+  "packaging_tooling_SHA256": "995ddf20768cc968aef8b557f2780f569d04671c6a5fee41450a1db5876e5936",
+  "tooling_changed_paths": [
+    "scripts/build_portable.py"
+  ],
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "native_wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "native_rebuilt": false,
+  "archive": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\output\\SolarSimulator-0.4.0-20261111-224857-409.zip",
+  "archive_SHA256": "74247a863bd1c445ecfa736e1a0df60db43ad541cb34d7df5de909410781f3bd",
+  "archive_size": 112698889,
+  "archive_members": 6001,
+  "original_builder_archive": {
+    "path": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\output\\SolarSimulator-0.4.0-20261111-224857.zip",
+    "SHA256": "f780053cb021edec50e39f293887ae11a1fa5a09ec95d2aa8e1eb36eab1d5c35",
+    "retained_unchanged": true
+  },
+  "source_package_files": 84,
+  "runtime_file_count": 5573,
+  "license_file_count": 46,
+  "runtime_roles": {
+    "CPythonlicense": 1,
+    "dependency:contourpy": 26,
+    "dependency:cycler": 8,
+    "dependency:fonttools": 359,
+    "dependency:kiwisolver": 11,
+    "dependency:matplotlib": 603,
+    "dependency:numpy": 949,
+    "dependency:packaging": 28,
+    "dependency:pillow": 122,
+    "dependency:pyparsing": 24,
+    "dependency:python-dateutil": 26,
+    "dependency:scipy": 1536,
+    "dependency:six": 7,
+    "explicit_isolation_configuration": 1,
+    "pinnedNative040wheel": 6,
+    "project040wheel": 89,
+    "qualifiedCPython": 2,
+    "qualifiedCPythonDLL": 6,
+    "qualifiedCPythonStdlibTcl": 1769
+  },
+  "developer_packages_absent": [
+    "pytest",
+    "maturin",
+    "setuptools",
+    "pip"
+  ],
+  "document_links": 587,
+  "cloud408_closure": {
+    "status": "CLOUD408_CLOSURE_VERIFIED",
+    "new409_CPU_charged": 64.375,
+    "new409_active_wall_charged": 552.7829635,
+    "worker_CPU_measured": 2.34375,
+    "supervisor_CPU_measured": 44.21875,
+    "historical408_CPU": "UNRESOLVED_UNCHANGED",
+    "old408reports_unchanged": true,
+    "proof_SHA256": "18bacd6b7d14ac3987d055292107a667be8592b858fe38032bc0bf0839e28f79",
+    "metadata_SHA256": "0cfe28dea38cfba8903c71fc3b89bef8c3decdd7fcd0f235ff9be36b21739066",
+    "monitor200_delta": "409A2 separatelysealed, fivefaultchecks, old385logic except200mscadence; old408monitor/results untouched",
+    "originalparts_no_reupload": true,
+    "fullarchive": {
+      "status": "CLOUD408_VERIFIED_SHA256_SIZE_ALL_CRC_MEMBERS",
+      "archive_SHA256": "f9e56e3ddc3d93b0d29916dd0a7c095e9ea8c8af975f1370a222af31f2bfbadd",
+      "archive_size": 44203479,
+      "source": "Only fresh independent409cloud downloads concatenated in frozen order; original local408archive/parts not read",
+      "members": 1110,
+      "logical_files": 2982,
+      "unique_payloads": 1109,
+      "CRC_SHA256": true,
+      "parts": [
+        {
+          "id": "13NPitOalzAd8v20yy_4fmaKblcaypUQw",
+          "name": "f9e56e3ddc3d93b0-part0001-of0003.bin",
+          "size": 16777216,
+          "SHA256": "ff412c504e9a24bfc4bc67630763eac6f13e475dde1b0e23d0eb83b191e53626",
+          "label": "part1"
+        },
+        {
+          "id": "12JeO4n4OdCyCFEOOFnSnlsG6gtDggPxC",
+          "name": "f9e56e3ddc3d93b0-part0002-of0003.bin",
+          "size": 16777216,
+          "SHA256": "b7f015c0d485c6c57d75cf438732af8fef16bd1ca99eb0f319e9e6339e19d4fa",
+          "label": "part2"
+        },
+        {
+          "id": "1YNLNYO-XPZjWbgoq-Elbb7ipoJcdWNbA",
+          "name": "f9e56e3ddc3d93b0-part0003-of0003.bin",
+          "size": 10649047,
+          "SHA256": "839b0fdf07cfa452a355853b797d7083c1a3dbdd73a95a068e004f9a7cf9eae4",
+          "label": "part3"
+        },
+        {
+          "id": "1NXt0gWi-c6iDY-7gX-O5xUNNmrh-AQn9",
+          "name": "f9e56e3ddc3d93b0.parts.json",
+          "size": 600,
+          "SHA256": "ad5b14bd42efda77932d5c64b83e254f8720a2ef3a749d5a95aa4b2ea88c1149",
+          "label": "manifest"
+        },
+        {
+          "id": "1-WG65EdXd0fcp11gGeB5gfrCgV0hi1y9",
+          "name": "Solar-Simulator-recovery-a26b77b4ddf0528c8663d4fab29b5e53b1f3350a.json",
+          "size": 582,
+          "SHA256": "a4c74d631d0f912785c84ba9a185e96a5153b25c2f4d1e3d7c4c7c126f7fe5ef",
+          "label": "recipe"
+        }
+      ],
+      "start_timestamp": 1794425862.5805027,
+      "end_timestamp": 1794425863.1819944,
+      "original408_operational_CPU": "UNRESOLVED unchanged; new409resources separate"
+    }
+  },
+  "resource_build": {
+    "charged_CPU": 131.890625,
+    "charged_active_wall": 85.70355239999844,
+    "worker_CPU_measured": 64.6875,
+    "supervisor_CPU_measured": 57.125,
+    "sampled_worker_private_peak": 379465728,
+    "new_data_in_W": 567259507,
+    "external_source_reserve": 134217728,
+    "hard": {
+      "cpu_seconds": 300,
+      "wall_seconds": 600,
+      "private_bytes": 2147483648,
+      "disk_bytes": 1073741824
+    },
+    "early": {
+      "cpu_seconds": 240,
+      "wall_seconds": 480,
+      "private_bytes": 1932735283,
+      "disk_bytes": 943718400
+    },
+    "limitations": "Sampled, not OSquota; supervisor charged. Includes every failed audit attempt. Initial5CPU10wall allowance conservative. Finalization to be added without capreset; newbackup separate."
+  },
+  "packaged_probe": {
+    "prefix": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\output\\SolarSimulator-0.4.0-20261111-224857\\runtime",
+    "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\output\\SolarSimulator-0.4.0-20261111-224857\\runtime\\Lib\\site-packages\\solar_simulator\\__init__.py",
+    "native": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\output\\SolarSimulator-0.4.0-20261111-224857\\runtime\\Lib\\site-packages\\solar_native\\solar_native.cp314t-win_amd64.pyd",
+    "version": "0.4.0",
+    "twoQ2": true
+  },
+  "negative_controls": {
+    "status": "PASS_TOOLING_NEGATIVE_CONTROLS",
+    "controls": [
+      {
+        "name": "missingwheel",
+        "rejected": true,
+        "type": "FileNotFoundError",
+        "message": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\negative-controls\\absent.whl"
+      },
+      {
+        "name": "wrongversion",
+        "rejected": true,
+        "type": "ValueError",
+        "message": "Native wheel version/ABI mismatch"
+      },
+      {
+        "name": "wrongABI",
+        "rejected": true,
+        "type": "ValueError",
+        "message": "Native wheel version/ABI mismatch"
+      },
+      {
+        "name": "wrongwheelSHA",
+        "rejected": true,
+        "type": "ValueError",
+        "message": "Native wheel SHA256 mismatch"
+      },
+      {
+        "name": "wrongcompiledSHA",
+        "rejected": true,
+        "type": "ValueError",
+        "message": "Native compiled member SHA256 mismatch"
+      },
+      {
+        "name": "ambiguouswheels",
+        "rejected": true,
+        "type": "ValueError",
+        "message": "Expected one compatible solar-native 0.4.0 wheel; found 2"
+      },
+      {
+        "name": "reuse_path_forbids_compiler_subprocess",
+        "passed": true
+      },
+      {
+        "name": "legacy_default_retains_native_build_command",
+        "passed": true,
+        "command": [
+          "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\env\\Scripts\\python.exe",
+          "-B",
+          "C:\\Users\\Admin\\Documents\\Codex\\Solar409-build-20261111\\negative-controls\\legacy\\scripts\\build_native.py",
+          "--wheel"
+        ]
+      },
+      {
+        "name": "wrong_archival_manifest_SHA",
+        "rejected": true,
+        "type": "ValueError",
+        "message": "Verification source manifest SHA256 mismatch"
+      },
+      {
+        "name": "archival_source_corruption",
+        "rejected": true,
+        "type": "ValueError",
+        "message": "Verification source input SHA256 mismatch"
+      }
+    ],
+    "remaining_control": "Actual outsideportableimport negative after real build",
+    "native_compilation_executed": false
+  },
+  "outside_import_negative": true,
+  "original_export_refusal_SHA256": "9f7a53eddbc0d39117127dfca3bb067bc31c0fb41ca7157a0069061b3f44761c",
+  "historical_export": {
+    "role": "Savedhistoricalreplay only; originalexporter/verified_sources unchanged. ExactoldsourceDATA restored from pinnedarchives, current040modules imported; advanceforbidden inpreflight, nooldruntime/physics execution",
+    "source_fixture_manifest_SHA256": "3867be0cd15efb6ca629bfeadfd6c65a97fc694256b4d6fb647f251bc5ae5f7b",
+    "source_snapshots": {
+      "src/solar_simulator/experiment.py": {
+        "SHA256": "6101d58c1922c9e843987664ec72ab8857580b16a59429bec4f22c093845f657",
+        "archive": "scripts/validation/numeric-before373.zip",
+        "archive_SHA256": "0cbe5a3754c7732ac645d03c9a582b1193b9ec64475b6138974eff9fd2758abb"
+      },
+      "src/solar_simulator/application_profiles.py": {
+        "SHA256": "3a7a944461c734964099ad713cae4ab30581f199efd1dbfdece40656910c5893",
+        "archive": "scripts/validation/laboratory-before381.zip",
+        "archive_SHA256": "b840ba94506142266f71eb8b6fa62825eb94a28bc754ac941978afd6d80f14a3"
+      }
+    }
+  },
+  "failures": [
+    {
+      "scope": "Originalexporter current-source guard",
+      "status": "Expectedrefusal preserved, not waived",
+      "resolution": "Separate SHA-bound historical source-data fixture for savedreplay; no changedguards/currentruntimecertification"
+    },
+    {
+      "scope": "Diagnosticpackage-audit firstattempt",
+      "cause": "Wrongname scenario(two-q2-demo) instead of existing two_q2_demo() factory",
+      "resolution": "Onlyauditscript corrected; firstFAIL/log/source kept. No rebuild, no packagecodechange"
+    },
+    {
+      "scope": "Contentaudit firsttwoattempts",
+      "cause": "Independent top-level allowlist omitted declaredERFAsource-license copy and publictests/data/jpl-verification.zip",
+      "resolution": "Exactalreadydeclaredpublicassets checkedagainstsourceSHA; no blanketwaiver or packagechange. RawFAILs kept"
+    }
+  ],
+  "known_next_blocker": [
+    {
+      "component": "verification/recompute_jpl.py",
+      "failure": "Runtime scientific source changed: src/solar_simulator/experiment.py",
+      "evidence_SHA256": "5bbbf20db7e60ec8da9980eb19461064152f88ba56f12e733fc57f319978a16d",
+      "cause": "Historical strictreport pins oldgenerator experiment/application_profiles bytes. Current040source differs. Savedreplay is valid but cannot authorize current solver.",
+      "required_resolution": "Separate reviewed qualification-only current-source binding mode/protocol before anyyearrun; preserve oldstrictmode, oldreports/SHA/IC/settings/thresholds and require live040allsource/native/environment proof. Negativecontrols for substituted source/native/version/environment. Do not simply replace historicalexpectedSHA or waive freshyear.",
+      "not_implemented": true
+    }
+  ],
+  "acceptance410_plan_SHA256": "551fe1d6d2da5a9d80f5bc528f41bffa2b2d72a73f22f754b57bb3f62b05cbc6",
+  "verdicts": {
+    "CLOUD_408_CLOSURE": "PASS_NEW409READBACK_CRC_SHA",
+    "SOURCE_IDENTITY": "PASS_FROZEN237_RUNTIME_RAWBYTES",
+    "NATIVE_WHEEL_REUSE": "PASS_EXACT407VWHEEL_NO_REBUILD",
+    "PORTABLE_BUILD": "PASS_UNRELEASED_CANDIDATE",
+    "PACKAGED_RUNTIME_SMOKE": "PASS_LIMITED",
+    "PACKAGE_CONTENT_INTEGRITY": "PASS_ALL6001MEMBERS_AND_RUNTIME_CLOSURE",
+    "SCIENTIFIC_SCOPE": "PASS_PRESERVED_LIMITATIONS_NOT_NEW_CERTIFICATION",
+    "PORTABLE_ACCEPTANCE410": "NOT_RUN_BLOCKED_STOCK_FRESH_YEAR_SOURCE_GATE",
+    "RELEASE_READINESS": "NO-GO"
+  },
+  "scientific_facts": {
+    "equivalence399": "28/28historical",
+    "numerical402": "11/11historical",
+    "effects402": "10/11historical",
+    "distance_AB": "0.244795m versus10mFAIL",
+    "historical380_FAIL": 3,
+    "short402_FAIL": 4,
+    "fullD1": "NO-GO",
+    "arbitrary_twoQ2_and_real_bodies": "NOTQUALIFIED"
+  },
+  "new_backup": {
+    "status": "CLOUD_UNVERIFIED_PENDING409BACKUP",
+    "portableZIP_is_distinct_from_evidencearchive": true
+  },
+  "decision": "BUILD/SMOKE/CONTENTS GO; NO-GO TO EXECUTABLE410 UNTIL EXPLICIT CURRENT-YEAR VERIFIER SOURCE-BINDING PREPARATION. NOT RELEASE APPROVAL.",
+  "resource_build_final": {
+    "charged_CPU": 153.96875,
+    "charged_active_wall": 127.31459739999627,
+    "finalization_allowance_CPU": 20,
+    "finalization_allowance_wall": 40,
+    "private_sampled_peak": 379465728,
+    "bytes_in_W": 567262591,
+    "external_data_allowance": 134217728,
+    "initial_and_final_allowances": "Conservative charges, not measured consumption",
+    "measurement_limits": "Sampled process discovery/private peaks; not OSquota. Supervisor and failed attempts charged."
+  }
+}

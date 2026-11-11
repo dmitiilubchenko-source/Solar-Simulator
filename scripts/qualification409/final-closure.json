@@ -1,0 +1,21 @@
+{
+  "stage": 409,
+  "source_identity": "PASS_EXACT_RAW_BYTES",
+  "resource_build": {
+    "charged_CPU": 153.96875,
+    "charged_active_wall": 127.31459739999627,
+    "finalization_allowance_CPU": 20,
+    "finalization_allowance_wall": 40,
+    "private_sampled_peak": 379465728,
+    "bytes_in_W": 567262591,
+    "external_data_allowance": 134217728,
+    "initial_and_final_allowances": "Conservative charges, not measured consumption",
+    "measurement_limits": "Sampled process discovery/private peaks; not OSquota. Supervisor and failed attempts charged."
+  },
+  "cloud408": "VERIFIED_NEW_INDEPENDENT_READBACK",
+  "portable_build": "PASS",
+  "acceptance410": "BLOCKED_STOCK_FRESH_YEAR_SOURCE_GATE_NOT_RUN",
+  "release": "NO-GO",
+  "no_native_rebuild": true,
+  "original_scientific_receipts_unchanged": true
+}
