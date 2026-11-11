@@ -369,8 +369,18 @@
     ],
     "source_originals_retained": true,
     "stale_lock_cleanup": "Removed only stale verifier lock after independent PID-dead check; no config/manifest edits",
-    "CPU_limitations": "Archive measured24.796875CPU; prepare/hash/metadata/readback subprocess CPU not fully measured, conservative120CPU bound not claimed as measured. Connector server CPU unavailable.",
-    "local_archive": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\acceptance408backup-20261111\\Solar-Simulator-stage408-20261111.zip"
+    "CPU_limitations": "ArchiveCPU measured24.796875; full operational CPU UNRESOLVED.120CPU is approved cap, not measured usage or proven upper bound. Wrapper killed timedout verifier before complete resource receipt; connector server CPU unavailable.",
+    "local_archive": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\acceptance408backup-20261111\\Solar-Simulator-stage408-20261111.zip",
+    "resource_status": "Wall stop measured below900; archiveCPU/RAM measured; full operationalCPU UNRESOLVED",
+    "readback_failure": {
+      "scope": "Backup only, no acceptance rerun",
+      "status": "CLOUD_UNVERIFIED",
+      "observed_exec_chunk": "56d76d",
+      "traceback_copy": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\Documents\\Codex\\Solar408-20261111\\verify_cloud408.py\", line 6, in <module>\n    p=subprocess.run([sys.executable,'-X','utf8','-B',str(B/'backup.py'),'verify-cloud','--project','Solar-Simulator'],input=json.dumps(row),encoding='utf8',stdout=subprocess.PIPE,stderr=subprocess.PIPE,timeout=100)\n  File \"C:\\Program Files\\Python314\\Lib\\subprocess.py\", line 556, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n  File \"C:\\Program Files\\Python314\\Lib\\subprocess.py\", line 1220, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n  File \"C:\\Program Files\\Python314\\Lib\\subprocess.py\", line 1663, in _communicate\n    raise TimeoutExpired(self.args, orig_timeout)\nsubprocess.TimeoutExpired: Command '['C:\\\\Users\\\\Admin\\\\Desktop\\\\Solar-candidate-033-384\\\\.venv\\\\Scripts\\\\python.exe', '-X', 'utf8', '-B', 'C:\\\\Users\\\\Admin\\\\Documents\\\\Codex\\\\2026-10-29\\\\files-pasted-by-the-user-codex\\\\outputs\\\\backup.py', 'verify-cloud', '--project', 'Solar-Simulator']' timed out after 100 seconds\n",
+      "wrapper_source_SHA256": "400a183b0774e01d98ac85b5d9d6e9b4fd33a5d63e535566c14fad3e12d42e9d",
+      "traceback_copy_SHA256": "b06c812f123ac8819c134f51172b7788895b8dfc97a49a94d0ab06ba59067c71",
+      "note": "Text copied from observed tool output; no signed URLs or secrets; raw local helper/originals preserved"
+    }
   },
   "decision": "TECHNICAL SOURCE/NATIVE/GUI GO — exact Solar-Simulator 0.4.0 candidate, verified environment only.",
   "next_step": "Plan a separate portable build/relocation acceptance and owner decision on disclosed experimentalQ2scope; no build/release now",
