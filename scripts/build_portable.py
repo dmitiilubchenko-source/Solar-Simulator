@@ -4,6 +4,7 @@ No registry, PATH or global Python changes. Each build gets a new directory.
 The runtime is licensed CPython; dependency metadata/licenses are retained.
 """
 from collections import deque
+import argparse
 from datetime import datetime
 import hashlib
 from importlib import metadata
@@ -51,6 +52,60 @@ def select_native_wheel(directory,version):
     if len(candidates)!=1:
         raise ValueError(f'Expected one compatible solar-native {version} wheel; found {len(candidates)}')
     return candidates[0]
+
+
+def checked_native_wheel(path, version, wheel_sha256, native_sha256):
+    """Explicit reuse authenticates both the container and compiled member."""
+    path=Path(path)
+    if path.is_dir():path=select_native_wheel(path,version)
+    if not path.is_file():raise FileNotFoundError(path)
+    name,actual,_,tags=parse_wheel_filename(path.name)
+    if name!='solar-native' or actual!=Version(version) or not tags & set(sys_tags()):
+        raise ValueError('Native wheel version/ABI mismatch')
+    if not wheel_sha256 or not native_sha256:
+        raise ValueError('Reuse requires pinned wheel and native SHA256')
+    if hashlib.sha256(path.read_bytes()).hexdigest()!=wheel_sha256:
+        raise ValueError('Native wheel SHA256 mismatch')
+    with zipfile.ZipFile(path) as archive:
+        if archive.testzip() is not None:raise ValueError('Native wheel CRC mismatch')
+        members=[n for n in archive.namelist() if n.endswith('.pyd')]
+        if len(members)!=1 or hashlib.sha256(archive.read(members[0])).hexdigest()!=native_sha256:
+            raise ValueError('Native compiled member SHA256 mismatch')
+        from email.parser import BytesParser
+        metadata_files=[n for n in archive.namelist() if n.endswith('.dist-info/METADATA')]
+        if len(metadata_files)!=1:raise ValueError('Native metadata ambiguity')
+        meta=BytesParser().parsebytes(archive.read(metadata_files[0]))
+        if Version(meta['Version'])!=Version(version):raise ValueError('Native metadata version mismatch')
+    return path
+
+
+def native_artifact(version, reuse=None, wheel_sha256=None, native_sha256=None):
+    """No compiler invocation on the explicit reuse path; legacy default retained."""
+    if reuse is not None:
+        return checked_native_wheel(reuse,version,wheel_sha256,native_sha256)
+    if wheel_sha256 is not None or native_sha256 is not None:
+        raise ValueError('Native SHA options require --native-wheel')
+    subprocess.run([sys.executable,'-B',str(ROOT/'scripts/build_native.py'),'--wheel'],check=True,cwd=ROOT)
+    return select_native_wheel(ROOT/'.tools/wheels',version)
+
+
+def checked_verification_root(root, expected_manifest_sha256):
+    """Authenticate a historical source-data fixture, never a runtime overlay."""
+    if root is None:
+        if expected_manifest_sha256 is not None:raise ValueError('Verification hash needs explicit root')
+        return ROOT
+    root=Path(root).resolve();manifest=root/'VERIFICATION-SOURCE.json'
+    if not expected_manifest_sha256 or hashlib.sha256(manifest.read_bytes()).hexdigest()!=expected_manifest_sha256:
+        raise ValueError('Verification source manifest SHA256 mismatch')
+    payload=json.loads(manifest.read_bytes())
+    if payload['kind']!='historical-saved-replay-export-only':raise ValueError('Wrong verification source role')
+    actual={p.relative_to(root).as_posix() for p in root.rglob('*') if p.is_file() and p!=manifest}
+    if actual!=set(payload['files']):raise ValueError('Verification source closure mismatch')
+    for name,digest in payload['files'].items():
+        path=(root/name).resolve()
+        if not path.is_relative_to(root) or path.is_symlink() or hashlib.sha256(path.read_bytes()).hexdigest()!=digest:
+            raise ValueError('Verification source input SHA256 mismatch')
+    return root
 
 
 def dependency_closure():
@@ -113,12 +168,24 @@ def run_build_smokes(executable,output,probes):
                            env=environment,timeout=120)
 
 
-def build():
+def build(*, native_wheel=None, wheel_sha256=None, native_sha256=None, output_root=None,
+          verification_root=None, verification_manifest_sha256=None):
     if sys.platform!="win32" or sys.prefix==sys.base_prefix:
         raise RuntimeError("Build from the project Windows .venv")
     stamp=datetime.now().strftime("%Y%m%d-%H%M%S")
     project_version,rust_versions=candidate_versions()
-    output=ROOT/"dist"/f"SolarSimulator-{project_version}-{stamp}"
+    if native_wheel is None and (wheel_sha256 is not None or native_sha256 is not None):
+        raise ValueError('Native SHA options require --native-wheel')
+    selected_native=native_artifact(rust_versions['solar_native'],native_wheel,wheel_sha256,native_sha256) if native_wheel is not None else None
+    if selected_native is not None:
+        # This packaging-only adapter may name237f736 only after checking the
+        # actual runtime/Rust/metadata diff against that immutable source.
+        protected=['src','rust','pyproject.toml']
+        delta=subprocess.check_output(['git','diff','--name-only','237f73612c3c159acf92b32a15cf0289958fd921','--',*protected],cwd=ROOT)
+        status=subprocess.check_output(['git','status','--porcelain','--',*protected],cwd=ROOT)
+        if delta or status:raise ValueError('Qualified runtime source identity mismatch')
+    verification_source=checked_verification_root(verification_root,verification_manifest_sha256)
+    output=Path(output_root if output_root is not None else ROOT/'dist')/f"SolarSimulator-{project_version}-{stamp}"
     output.mkdir(parents=True,exist_ok=False)
     runtime=output/"runtime"
     runtime.mkdir()
@@ -141,10 +208,11 @@ def build():
         copy_distribution(distribution,packages)
     wheels=ROOT/".tools"/"distribution-wheels"
     wheels.mkdir(parents=True,exist_ok=True)
-    subprocess.run([sys.executable,"-B","-m","pip","wheel","--no-deps","--wheel-dir",str(wheels),str(ROOT)],check=True)
+    wheel_command=[sys.executable,"-B","-m","pip","wheel","--no-deps","--wheel-dir",str(wheels),str(ROOT)]
+    if native_wheel is not None:wheel_command[5:5]=['--no-build-isolation','--no-index']
+    subprocess.run(wheel_command,check=True)
     unpack_wheel(wheels/f"solar_simulator-{project_version}-py3-none-any.whl",packages)
-    subprocess.run([sys.executable,"-B",str(ROOT/"scripts/build_native.py"),"--wheel"],check=True,cwd=ROOT)
-    native_wheel=select_native_wheel(ROOT/'.tools/wheels',rust_versions['solar_native'])
+    native_wheel=selected_native if selected_native is not None else native_artifact(rust_versions['solar_native'])
     unpack_wheel(native_wheel,packages)
     # _pth isolates imports from user packages, environment variables and registry.
     dll_name=f"python{sys.version_info.major}{sys.version_info.minor}"+("t" if __import__("sysconfig").get_config_var("Py_GIL_DISABLED") else "")
@@ -224,7 +292,7 @@ def build():
     shutil.copy2(ROOT/"docs/solar-sandbox-strict-checkpoint.json",scenarios/"solar-sandbox-strict.json")
     (output/"Solar Sandbox Strict.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui "scenarios\\solar-sandbox-strict.json"\r\nif errorlevel 1 pause\r\n',encoding="ascii")
     verification_export=subprocess.run([sys.executable,"-X","utf8","-B","-m","scripts.export_jpl_bundle",
-        "--output",str(output/"verification")],cwd=ROOT,capture_output=True,text=True,encoding="utf-8")
+        "--output",str(output/"verification")],cwd=verification_source,capture_output=True,text=True,encoding="utf-8")
     if verification_export.returncode:raise RuntimeError("Verification bundle export failed:\n"+verification_export.stderr)
     if not json.loads(verification_export.stdout)["checks_passed"]:raise RuntimeError("Exported JPL comparison failed")
     (output/"JPL Verification.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -I "verification\\replay_jpl.py" "verification"\r\npause\r\n',encoding="ascii")
@@ -276,6 +344,13 @@ def build():
                                     "recorded-trajectories", "independent-playback", "parent-child-comparison",
                                     "explicit-editor-units", "recording-recipes", "full-frame-replay"],
                   physical_PN_lunar_rotation_certified=False)
+    if selected_native is not None:
+        manifest['artifact_provenance']=dict(native_rebuilt=False,native_wheel_SHA256=wheel_sha256,
+            compiled_native_SHA256=native_sha256,runtime_source_commit='237f73612c3c159acf92b32a15cf0289958fd921',
+            runtime_source_tree='5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9',
+            packaging_tooling_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            verification_role='saved historical replay, not current runtime scientific certification',
+            verification_source_manifest_SHA256=verification_manifest_sha256)
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     # Prove the copied runtime imports local packages and initializes real Tk.
     probe="import sys,pathlib,tkinter,solar_simulator,solar_native,numpy,matplotlib,scipy; from solar_simulator.experiment import advance,preset; r=tkinter.Tk(); r.withdraw(); r.destroy(); s=advance(preset('spheres',backend='rust'),2000); assert len(s.events)==2; from dataclasses import replace; a=preset('sun-earth'); a=replace(a,settings=replace(a.settings,integrator='dop853')); assert advance(a,20).time>0; assert len(advance(preset('solar-system'),20).bodies)==9; print(sys.prefix); print(pathlib.Path(solar_simulator.__file__).resolve()); print('portable Tk + native physics OK')"
@@ -424,4 +499,14 @@ def export_guide(source,target):
 
 
 if __name__=="__main__":
-    build()
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--native-wheel',type=Path)
+    parser.add_argument('--wheel-sha256')
+    parser.add_argument('--native-sha256')
+    parser.add_argument('--output-root',type=Path)
+    parser.add_argument('--verification-root',type=Path)
+    parser.add_argument('--verification-manifest-sha256')
+    args=parser.parse_args()
+    build(native_wheel=args.native_wheel,wheel_sha256=args.wheel_sha256,native_sha256=args.native_sha256,
+          output_root=args.output_root,verification_root=args.verification_root,
+          verification_manifest_sha256=args.verification_manifest_sha256)
