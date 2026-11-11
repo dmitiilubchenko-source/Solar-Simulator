@@ -47,18 +47,23 @@ def prepare():
   role='Compact evidence, NOT portableZIP; excludes already verified408binary payloads and recoverabledependencies/sourcecopies',
   files=[dict(name=n,source=str(f),size=f.stat().st_size,sha256=core.sha(f)) for n,f in selected])
  archive=C/'Solar-Simulator-stage409-evidence-20261111.zip'
- with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_DEFLATED,compresslevel=4) as z:
-  for n,f in selected:z.write(f,n)
-  z.writestr('MANIFEST.json',json.dumps(manifest,ensure_ascii=False,indent=2))
+ if not archive.exists():
+  with zipfile.ZipFile(archive,'x',compression=zipfile.ZIP_DEFLATED,compresslevel=4) as z:
+   for n,f in selected:z.write(f,n)
+   z.writestr('MANIFEST.json',json.dumps(manifest,ensure_ascii=False,indent=2))
  with zipfile.ZipFile(archive) as z:
+  saved=json.loads(z.read('MANIFEST.json'));assert saved['files']==manifest['files']
   assert z.testzip() is None
   for row in manifest['files']:
    b=z.read(row['name']);assert len(b)==row['size'] and hashlib.sha256(b).hexdigest()==row['sha256']
  assert core.review(archive) is None
  report=json.loads((R/'docs/portable-build-409.json').read_bytes());portable=Path(report['archive'])
  assert core.sha(portable)==report['archive_SHA256'] and portable.stat().st_size==report['archive_size']
+ # Keep automatic policy refusals in the standard queue. One held artifact must
+ # not prevent independent backup of the separately reviewed compact evidence.
  issue=core.review(portable)
- if issue:raise ValueError('Portable archive review: '+issue)
+ core.atomic_json(C/'portable-review-status.json',dict(sha256=core.sha(portable),issue=issue,
+  decision='REVIEW_REQUIRED; no policy bypass or upload' if issue else 'Eligible for normal filtered prepare'))
  # No concurrent prepare/config/manifest mutations; exclusive existing mechanism lock.
  with backup.lock():
   cfg=backup.read(BASE/'backup-config.json',{})
@@ -72,7 +77,9 @@ def prepare():
  m=backup.read(BASE/'backup-manifest.json',{})
  wanted={str(archive),str(portable)}
  parents=[x for x in m['files'] if x['project']=='Solar-Simulator' and x['source'] in wanted]
- assert len(parents)==2 and all(x['status'] in {'PENDING_UPLOAD','CHUNKED_TRANSPORT_PENDING'} for x in parents)
+ assert len(parents)==2
+ assert next(x for x in parents if x['source']==str(archive))['status']=='PENDING_UPLOAD'
+ assert all(x['status'] in {'PENDING_UPLOAD','CHUNKED_TRANSPORT_PENDING','REVIEW_REQUIRED'} for x in parents)
  hashes={x['sha256'] for x in parents}
  rows=[x for x in m['files'] if x['project']=='Solar-Simulator' and (x.get('transport_parent_sha256') in hashes or x['source'] in wanted or x['name']==f'Solar-Simulator-recovery-{commit}.json')]
  core.atomic_json(C/'queue.json',dict(git_commit=commit,rows=rows))
