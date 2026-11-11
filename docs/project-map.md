@@ -198,3 +198,6 @@ resource-history guard проверен и усилен; независимый 
 четырёхгрупп, guardedresume и отдельная full58offline assessment. TechnicalGO,
 [sealedplan399](../scripts/q2-qualification399-plan.json); выполнение отдельно
 разрешает владелец. Это validationtooling, не новый физический runtime.
+
+
+[Version migration407V](version-migration-407v.md): отдельный кандидат0.4.0, новый изолированный native, исторические032/033fixtures и план полной408. Main остаётся0.3.2; full408/release не выполнены.

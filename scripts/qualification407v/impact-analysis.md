@@ -1,0 +1,9 @@
+#407V impact analysis BEFORE implementation — 2026-11-11
+Base dev01aca787; isolated candidate starts EXACT828c798. Accepted032 and033candidate remain immutable.
+Current: six paired Python/Cargo metadata files (only local package versions); inspection.py single release-status literal; build_native.py optional output/target/locked/offline arguments with old defaults; release040 page and current project map/inventory.
+Historical: test_historical_sources407 current033 assumption must use immutable six-file Git828 metadata fixture; nodeid and historical033 expectations retained. prepare_qualification383 specifically prepares historical033 and remains unchanged. test_candidate_documents407 historical033page remains unchanged.
+Version-derived build_portable/check_portable use pyproject + paired manifests/wheel tags; no hardcoded current033 replacement needed. release_history strict historical archives/maps unchanged. Rust library CARGO_PKG_VERSION gives honest040version in newbinary without Rust algorithm change. solar_adaptive is separately research-only, not paired product metadata.
+Unchanged: every src file except one status literal; all Rust rs; forces, integrators, G/IC/settings/storage/recovery/schema/lifecycle/thresholds; old reports/receipts/snapshots/native and dependencies.
+New testing code: strict current040/binary/source binding audit, exact historical033 fixture, short version/compatibility negatives. Preserve3073nodeids; collect only full inventory. Static documentation closure, no portable build.
+Native pipeline: isolated target/wheels/env; same rustc1.99GNU/PyO3.29.3/cp314t Python3.14.2t; cached offline dependencies. Never install into384or407prefix. Frozen lock graph checked before compile.
+Scientific scope: source identity + short numerical dispatch contract only; no transfer of scientific receipts to newbinary. D1distanceFAIL and3historic380+4short402FAIL unchanged. No release qualification.

@@ -1,0 +1,46 @@
+{
+  "stage": "407V",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "base": "828c79805f7db4576b474206923285ce0b4541c4",
+  "candidate": "C:/Users/Admin/Desktop/Solar-candidate-040-version-407v",
+  "hard": {
+    "cpu_seconds": 600,
+    "wall_seconds": 1200,
+    "private_bytes": 3221225472,
+    "disk_bytes": 1610612736
+  },
+  "early": {
+    "cpu_seconds": 480,
+    "wall_seconds": 960,
+    "private_bytes": 2899102924,
+    "disk_bytes": 1449551462
+  },
+  "forecast_CPU": {
+    "setup": 40,
+    "native_build_and_supervision": 200,
+    "short_tests": 70,
+    "audit": 50,
+    "docs": 40,
+    "inventory": 30
+  },
+  "forecast_wall": 600,
+  "forecast_data_bytes": 1100000000,
+  "monitor_SHA256": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508",
+  "predeclared_controls": [
+    "test_native.py",
+    "test_native_forces.py",
+    "test_rust_backend.py",
+    "test_numeric_native.py",
+    "test_historical_sources407.py",
+    "test_candidate_documents407.py",
+    "test_qualification383.py::test_candidate_metadata_overlay_does_not_edit_other_values",
+    "fixed0.1s twoQ2 save-load-branch/recovery/settings/CLI compatibility; no scientific matrix"
+  ],
+  "backup": {
+    "cpu_seconds": 80,
+    "wall_seconds": 600,
+    "private_bytes": 1073741824,
+    "disk_bytes": 268435456
+  },
+  "impact_SHA256": "41c7e622d8ce6836df4f0482c1f75bfea931132678dada591365adc6e63a39b7"
+}

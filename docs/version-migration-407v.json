@@ -1,0 +1,404 @@
+{
+  "stage": "407V",
+  "date": "2026-11-11",
+  "base_dev": "01aca787bb55f5fe24738bdc7c9ebb7a843c05c2",
+  "base_candidate": "828c79805f7db4576b474206923285ce0b4541c4",
+  "candidate_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "candidate_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "branch": "codex/candidate-0.4.0-version-407v",
+  "source_fingerprint_SHA256": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "ABI": "cp314-cp314t-win_amd64",
+  "changed_paths": [
+    "docs/project-inventory.json",
+    "docs/project-map.md",
+    "docs/releases/v0.4.0.md",
+    "pyproject.toml",
+    "rust/solar_core/Cargo.lock",
+    "rust/solar_core/Cargo.toml",
+    "rust/solar_native/Cargo.lock",
+    "rust/solar_native/Cargo.toml",
+    "rust/solar_native/pyproject.toml",
+    "scripts/build_native.py",
+    "src/solar_simulator/inspection.py",
+    "tests/fixtures/metadata033-828c798.zip",
+    "tests/historical033_fixture407v.py",
+    "tests/test_historical_sources407.py",
+    "tests/test_qualification383.py",
+    "tests/test_version407v.py"
+  ],
+  "binding": {
+    "application_version": "0.4.0",
+    "native_version": "0.4.0",
+    "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-040-version-407v\\src\\solar_simulator\\__init__.py",
+    "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b"
+  },
+  "tests": {
+    "targeted.xml": 106,
+    "compatibility-tests.xml": 13,
+    "doc-fixed.xml": 10
+  },
+  "negative_controls": [
+    "old_native",
+    "native_mutated",
+    "physical_source_changed",
+    "0.3.2_as_current",
+    "current_as_0.3.2",
+    "0.3.3_as_current",
+    "current_as_0.3.3",
+    "Cargo_Python_mismatch",
+    "missing376bundle",
+    "old-native-metadata",
+    "package_source_mismatch",
+    "package_current_version_mismatch",
+    "missing_release040_document"
+  ],
+  "document_files": 338,
+  "document_links": 576,
+  "versions": {
+    "python": "0.4.0",
+    "core": "0.4.0",
+    "native": "0.4.0"
+  },
+  "inventory": {
+    "node_count": 3083,
+    "old3073_preserved": true,
+    "old3045_plus28_preserved": true,
+    "new": 10,
+    "SHA256": "664a8ddd681948a9f2fac32588e829674efcf01213ea55c32b2ea840ce644d07"
+  },
+  "historical033_fixture": {
+    "size": 3922,
+    "SHA256": "a1fe4cbdf213a6d97652a7d8e2108f584a1c0066ab8fcc5adb96bbc951b5c970",
+    "source_commit": "828c79805f7db4576b474206923285ce0b4541c4"
+  },
+  "numerical_identity_files": 103,
+  "compatibility": {
+    "binary_contract_exact": true,
+    "comparison_SHA256": "e8fb75f58333d3a7d5f07affad0dfae5e07c095a5f7c2e1c84c478e04309880c",
+    "historical_files": [
+      {
+        "name": "corrupt.json",
+        "expected_rejection": true
+      },
+      {
+        "name": "legacy-1.json",
+        "SHA256": "fada107fb7aa61c7e6454d7bfcf758d24d5c4c8899dba748d7946185aa4dfe67",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-2.json",
+        "SHA256": "1fbb75875f965364d2bf94b4cebf44c4bda6585fe5ea202fd25c5c840e34b2d7",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-3.json",
+        "SHA256": "adaa2b7015923548fb43f2812956b630959e118b93b305a82a4259d34273b9e2",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-4.json",
+        "SHA256": "a002b1e84e982d16f404b612bffa9b0b7efc26cb961e7a4d461ffc64c90a8566",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-5.json",
+        "SHA256": "7b3529dbf472469112fd196c068df997ec192fe6f7ed5e87452da10992dc5f14",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-6.json",
+        "SHA256": "eaf62aa7454348cdb993a85a93d2b0691cf60fe53475c7c40c07cd5a9cc5d0d4",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-7.json",
+        "SHA256": "99c51f97d4aa0d3076afb95cf8650c890d73b8cea313f1c57239244029dec37c",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-8.json",
+        "SHA256": "c8e721e0f14b90e6c628f5029a93e362cf108119174b313c3ac4db90f55854d6",
+        "roundtrip": true
+      },
+      {
+        "name": "legacy-9.json",
+        "SHA256": "0c2ae46ec5938dfebd8db18ab26f802a6f88ced45852e75b20815d7eee035ac2",
+        "roundtrip": true
+      },
+      {
+        "name": "one-q2-dop853-python.json",
+        "SHA256": "fc4f834c0cc3f1694fbb69937f9220a473dca57710641dd68d2c3fd5d1274b8f",
+        "roundtrip": true
+      },
+      {
+        "name": "one-q2-dop853-rust.json",
+        "SHA256": "214725c9480851cebcff5c26ae8e6efc7619cc5bd33eb598339346c4d2f44646",
+        "roundtrip": true
+      },
+      {
+        "name": "sun-earth-dop853-python.json",
+        "SHA256": "d74bdbed3fa4549edf94138a1f693254502b416a92a2df5520b12bb40f253552",
+        "roundtrip": true
+      },
+      {
+        "name": "sun-earth-dop853-rust.json",
+        "SHA256": "416d92d0addb02683a80d3f85436d78e766df1049583b220e8145de13ea5dcb7",
+        "roundtrip": true
+      },
+      {
+        "name": "sun-earth-moon-dop853-python.json",
+        "SHA256": "9d2b9a2c1d1bdd4bd471360500c1923a90530be8a628d180d0d64b6c489bfd83",
+        "roundtrip": true
+      },
+      {
+        "name": "sun-earth-moon-dop853-rust.json",
+        "SHA256": "695d093d5d68fcacfd9ba2af3c180ca085c1e65aecea36088a2425a266ada1c6",
+        "roundtrip": true
+      },
+      {
+        "name": "sun-earth-verlet-python.json",
+        "SHA256": "3fe612411f88bd7c6bec19358c5d5a2232baabc3e7218fedc20bbf35fe4e3fc2",
+        "roundtrip": true
+      },
+      {
+        "name": "sun-earth-verlet-rust.json",
+        "SHA256": "9f8bb112bcfaaeb3ef30b68ab60bff7a04b4e104cd400422da150482b745b373",
+        "roundtrip": true
+      },
+      {
+        "name": "unsupported.json",
+        "expected_rejection": true
+      },
+      {
+        "name": "accepted/branch.json",
+        "SHA256": "6f27aa8960e503abc0623bb289a31744e538eea44339dce36c5473bd602e43ba",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/one-q2-dop853-python/frame-1.json",
+        "SHA256": "bdb3ec1147785014646a8656bc38a5762c85d0ad5fb6c3f9d127b2a70f18c1dc",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/one-q2-dop853-python/frame-2.json",
+        "SHA256": "7dfdf92d33ec7ca6b4da3afd826ba9cd0bc31d69dab96488d8ff68b364108f00",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/one-q2-dop853-python/frame-3.json",
+        "SHA256": "7aac2b0b522e170de5fd29b19f398774467090203ba5a61a2365045704746e98",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/one-q2-dop853-rust/frame-1.json",
+        "SHA256": "053ae04ece2baea8880c1012ee970a48b10032f1359e2d67cb700ca6bed38dd8",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/one-q2-dop853-rust/frame-2.json",
+        "SHA256": "0fac1acd9376c3eb1aba6a15d1f90c764adc3de160efe036b80bfcc2d47670eb",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/one-q2-dop853-rust/frame-3.json",
+        "SHA256": "1b3bcfed122a8159881a56379c0b5c25e465dc0a8646ccd5fe736576cff251c9",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/recording/frame-000000.json",
+        "SHA256": "9fbe472658fc1884cfa4bc7f9714fdbc60664dad5ceaca2fed7426382db2f424",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/recording/frame-000001.json",
+        "SHA256": "d066e11ed8711f88f952b4678c90bda99c9543012890051d3b704911d5c052a8",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/recording/frame-000002.json",
+        "SHA256": "4d82cbfafd93a3301f568cbda1fe74bd10aea37eeb56b2dd33b484ca8653fc45",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-dop853-python/frame-1.json",
+        "SHA256": "8679896d3b2c6288070c05d67ec39f8b50999060ad0a8af990f15305a9fe9622",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-dop853-python/frame-2.json",
+        "SHA256": "1a3384518d21a52751bd72eadc7c30c570307af1048d53f0308e85798e8b9ccc",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-dop853-python/frame-3.json",
+        "SHA256": "5c0f79b4383d2656fd2b9f560aafbf5d6b584feb8319925c03d0a3d986495bb8",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-dop853-rust/frame-1.json",
+        "SHA256": "e934567b0d8485eba96ed5c23cc3b86135a5cb532ee0b0cf920aa638ae08066a",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-dop853-rust/frame-2.json",
+        "SHA256": "fd085f57018e32df490515ea93c07f80aa1c79e72052fe75a76f1c9513b53b32",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-dop853-rust/frame-3.json",
+        "SHA256": "2f29d4242f9266b456b060f7e5317714d4ae115085896b69e95ddc5d449b6a34",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-moon-dop853-python/frame-1.json",
+        "SHA256": "e08ce25adae7210888a9fa65bc7c1ded0db3b90dd72d357d000f066fed534188",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-moon-dop853-python/frame-2.json",
+        "SHA256": "438de3859c29865ccb0923203c4d6fe2e738b44e2823d5bdd55b26d29123b89a",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-moon-dop853-python/frame-3.json",
+        "SHA256": "033a18f1da0e6890d74d24c9f84fba0461969bc72d6e2651a7360d752778eb01",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-moon-dop853-rust/frame-1.json",
+        "SHA256": "4cd48a1a591a897a8014c25e9ae3b047d562c30e8dfebc24f8730f49030bc049",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-moon-dop853-rust/frame-2.json",
+        "SHA256": "3240efd229ded8c50e3a65cd0de1263af7bd51772caa2ca7378252c99552c910",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-moon-dop853-rust/frame-3.json",
+        "SHA256": "413d313c8f8c480f25d615dc17aded39d56e34d8f3465d6ca065594a56aecb75",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-verlet-python/frame-1.json",
+        "SHA256": "d066e11ed8711f88f952b4678c90bda99c9543012890051d3b704911d5c052a8",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-verlet-python/frame-2.json",
+        "SHA256": "4d82cbfafd93a3301f568cbda1fe74bd10aea37eeb56b2dd33b484ca8653fc45",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-verlet-python/frame-3.json",
+        "SHA256": "48c109a5f1a053e3f11f8da26d38d7ae08aa7e07c56de649e5503e1d43b95f74",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-verlet-rust/frame-1.json",
+        "SHA256": "91750f39e5e1cc5d1683ddbb295c5c4dc6a4592b2fa987c01c16c90453aafa85",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-verlet-rust/frame-2.json",
+        "SHA256": "6186fc076f68687e0f7988a5e6a12df872eab03921e34aa6b7332ab1dc1d8000",
+        "roundtrip": true
+      },
+      {
+        "name": "accepted/sun-earth-verlet-rust/frame-3.json",
+        "SHA256": "8b7c2f15ec5991b5a398f21398b16896a528e6d3f5e58e839c1169c8bb848efe",
+        "roundtrip": true
+      }
+    ],
+    "limitations": "No all-version guarantee; strict recipes remain source-bound; dynamicQ2 branching unsupported unchanged"
+  },
+  "resources": {
+    "charged_CPU_seconds": 315.28125,
+    "charged_active_wall_seconds": 239.9997175000026,
+    "peak_private_worker_tree_sampled": 844398592,
+    "W_disk_bytes": 513279399,
+    "external_source_reserve": 134217728,
+    "hard": {
+      "cpu_seconds": 600,
+      "wall_seconds": 1200,
+      "private_bytes": 3221225472,
+      "disk_bytes": 1610612736
+    },
+    "early": {
+      "cpu_seconds": 480,
+      "wall_seconds": 960,
+      "private_bytes": 2899102924,
+      "disk_bytes": 1449551462
+    },
+    "limitations": "Retained50ms385 monitor; memory/discovery sampled, not OS quotas. Combined supervisor+worker private checked by hook; peak field is worker only. Initial12CPU/25wall and wrapper1CPU/1wall tail conservative allowances. Finalization still charged separately; backup separate.",
+    "finalization_allowance": {
+      "charged_CPU_seconds": 25,
+      "charged_active_wall_seconds": 60,
+      "kind": "Conservative finalization allowance for Git/review/compactmetadata/privatecontext commands and unmetered reads; not measured; backup separate"
+    },
+    "supervisor_CPU_measured": 123.65625,
+    "worker_CPU_measured": 140.96875
+  },
+  "scientific_constraints": [
+    "A+D1 exact synthetic demo only",
+    "Historical402 numerical11/11;effects10/11;distance_AB0.244795m versus10m FAIL",
+    "FullD1 application NO-GO",
+    "3historic380+4short402 strictconvergenceFAIL retained",
+    "No universal error bound or arbitrarytwoQ2 qualification"
+  ],
+  "failures": [
+    "native-build1 missing maturin executable in newprefix, exact existing tool copied; no Rust/source change",
+    "setup wrapper output-name collision; exact monitor receipt retained and charged conservatively",
+    "compatibility1 wrong diagnostic import; binary controls completed and reused without rerun",
+    "audit1 actual new040doc missing399closure: failing regression saved; link now exact public Git399report",
+    "doc-failing1 wrong cwd collected wrong scriptsnamespace; corrected cwd reproduces real docFAIL",
+    "audit2 omitted known ERFA license destination in document-only harness; exact license copied as normal build would; no production code change"
+  ],
+  "verdicts": {
+    "VERSION_CONSISTENCY": "PASS",
+    "NATIVE_0_4_0": "PASS_LIMITED_ABI_BUILD_API",
+    "BACKWARD_COMPATIBILITY": "PASS_TESTED_SCOPE",
+    "NUMERICAL_SOURCE_IDENTITY": "PASS",
+    "HISTORICAL_PROVENANCE": "PASS_TESTED_BOUNDARIES",
+    "DOCUMENTATION_COMPOSITION": "PASS_STATIC_ONLY",
+    "READINESS_FOR_FULL_408": "GO_EXACT_CANDIDATE_NOT_EXECUTION_AUTHORIZATION",
+    "APPLICATION_D1": "NO-GO",
+    "RELEASE_READINESS": "NO-GO"
+  },
+  "cloud": {
+    "status": "CLOUD_UNVERIFIED_PENDING_BACKUP"
+  },
+  "unresolved": [
+    "Full3083source/native/GUI acceptance408 not executed",
+    "Portable build/relocation/acceptance not executed",
+    "Old scientific receipts not reissued for newnative SHA",
+    "Existing native has no own version symbol; wheel/Cargo/import/hash binding, no new source API"
+  ],
+  "decision": "GO TO FULL SOURCE ACCEPTANCE408 — exact0.4.0 candidate, not release approval.",
+  "resource_receipts": {
+    "compact-check-resources.json": "e3203c7ed6b9f84419b54b7bd153f8949a5c303796359d3ce39be4815f227d9a",
+    "compatibility-resources.json": "1882ef026a7bb8f5cb54233a85e6422be59e0c7fa18be4e7552b27664b11d247",
+    "compatibility2-resources.json": "c8e0aa9b6c8c9f1a7ab0c0b17b6b3826f5c39a5ac97a154b869a355b5d2d2b3e",
+    "doc-failing-resources.json": "fcc8058604f25ea2a9085bc57463b26971b6cb558c5ec3ed61f5536257db8ae3",
+    "doc-failing2-resources.json": "97aa1144b251335e71b48050af97954d26721b8e4eb9f7436ef87976f9e8c5ad",
+    "doc-fixed-resources.json": "49831aebc9e9228e54dd00d844706ba9bfdcfa236879e74d6745ab792e621972",
+    "finalization-resources.json": "b8a77d69ae06dd8192309b9048c2d806e029a992d25b26d95dabeee3f347fa03",
+    "independent-audit-resources.json": "c46042dcd4648a21def222ec8f51d3c330c70aa01da1c10215063652c6a9fb53",
+    "independent-audit2-resources.json": "0931db10be2c92bb701059f916a223a0a9ea20f98f1327c7e5fd598f847dd8d0",
+    "independent-audit3-resources.json": "e5e2e6664c94fd6311b5cfc1b279c374ce8540211a7ad04795c9aa25d5fd9ae8",
+    "initial-allowance-resources.json": "41e180defb7edcce87521fdb8a6ff7c54c56c69ce2b784e6f4ad37406a8e8ded",
+    "inventory-final-resources.json": "7f3c0d9c64c4e324699097707a6cbb349ac3f510a2488f49823fc31c1dcc0d7c",
+    "inventory-resources.json": "7ac92d006bae75d6475e2b3f01ebdb20f7f4cfaef9adf13737748c9adda3f8cd",
+    "native-build-resources.json": "d99fda3a14481aec9c006f6533a003047347f6b4139e3e9fedd41a74cbd4131a",
+    "native-build2-resources.json": "2b7f34a806bb184387f878e94332987f5c7aee5ce9f42107b1640fb14198bdfb",
+    "package-install-resources.json": "7652a01ca7dfb40d1f257039c231f63f85a8ba21a8cd557b27d04549acda78fd",
+    "report-resources.json": "a2dc19dec251317469e07815be9b463722a05962ff6fbad843de7beb244d5db6",
+    "rust-resources.json": "14728867da613c0387aee078b4c14fd458411d9a965a2ec8a3bc66119cbd2569",
+    "setup-resources.json": "6443928e5abbb460449555e46306a8e2dba1d9d64c1841c97c9be1ab4619e95b",
+    "targeted-resources.json": "f810683babeb01e02cbb81615104272821331c84cee0c8032942085c839b9cf3",
+    "toolchain-resources.json": "5cfd3d2b4d354758b5a6dadbcd2e9c4b20dd3d68e96de3d0417525099bd06416"
+  },
+  "independent_audit_SHA256": "ac192dc10a774a6c568b9803a9fd106dc860ee562c224c00e0913f1433faf50e"
+}

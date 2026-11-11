@@ -1,0 +1,7 @@
+from pathlib import Path
+import subprocess,sys,os,json
+W=Path('C:/Users/Admin/Documents/Codex/Solar407V-20261111');S=Path('C:/Users/Admin/Desktop/Solar-candidate-040-version-407v')
+os.environ['SOLAR_HISTORICAL376_BUNDLE']='C:/Users/Admin/Documents/Codex/Solar407-20261110/historical376-inputs.zip'
+selection=['tests/test_version407v.py','tests/test_historical_sources407.py','tests/test_historical376_inputs407.py','tests/test_candidate_documents407.py','tests/test_qualification383.py::test_candidate_metadata_overlay_does_not_edit_other_values','tests/test_qualification383_native.py','tests/test_numeric_native.py','tests/test_native.py','tests/test_rust_backend.py','tests/test_native_forces.py::test_native_total_and_amplified_pn_correction_against_two_independent_forces[2]','tests/test_native_forces.py::test_native_total_and_amplified_pn_correction_against_two_independent_forces[3]','tests/test_native_forces.py::test_missing_or_stale_native_module_has_an_explicit_rebuild_message','tests/test_two_q2.py::test_two_rotations_are_advanced_and_persisted_without_a_new_schema','tests/test_two_q2.py::test_same_packets_save_resume_and_reset_are_exact','tests/test_recovery_journey.py','tests/test_cli.py','tests/test_sandbox_branch.py']
+(W/'targeted-selection.json').write_text(json.dumps(selection,indent=2)+'\n')
+subprocess.run([sys.executable,'-X','utf8','-B','-m','pytest','-q','-p','no:cacheprovider','-p','scripts.native_audit','--junitxml='+str(W/'targeted.xml'),*selection],cwd=S,check=True)
