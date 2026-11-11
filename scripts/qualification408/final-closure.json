@@ -1,0 +1,116 @@
+{
+  "stage": 408,
+  "candidate": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "plan_SHA256": "ac32d2e14c46c134090657a843e5ac9b3dc4edcf2862e3a48c0f1755f4e32864",
+  "evidence_manifest_SHA256": "73f1118e6dfacdb7287109efa0ab684691f98658825782bdb638dfcdaec442e1",
+  "audit_SHA256": "e8632a27bdc8d7091f8d1d5211a3e728924b905f8c70d69e80e24fd9f8b80b60",
+  "all_launches_reconciled": [
+    {
+      "name": "audit",
+      "exit_code": 0,
+      "classification": "Completed phase",
+      "resource_SHA256": "26c91038703ebf89a6814b5bc0f94d200ed54e285fb509f5eb07b5ccdc3936ce",
+      "supervisor_SHA256": "e9acdec9e36c893e1788da60103338f8b426863ab003268fdf7743b8ebba93e3",
+      "launch_SHA256": "6d94f522c6764e4f40fb4e46825feebb3da4f76ad8e39277c1aee50813fabfb6"
+    },
+    {
+      "name": "census",
+      "exit_code": 0,
+      "classification": "Completed phase",
+      "resource_SHA256": "8d548b975b9f88522102f33499c9af71a4dcf95292db232846fb2273c94ada76",
+      "supervisor_SHA256": "6a382e599d8f65514a7fc6d9a96d9528e93482198ef10b7985dbb8823e5b9b20",
+      "launch_SHA256": "7b688bb33a0841bed09e6cb2fe829a70bbdd6fb90739c58669986ffceedaa1c7"
+    },
+    {
+      "name": "full-stock",
+      "exit_code": 0,
+      "classification": "Completed phase",
+      "resource_SHA256": "5c5a33bf34e939fe23c8b20532ab446a1fdb5286f91db3126a2da7cddee263ea",
+      "supervisor_SHA256": "8566239feedc31a015ce31816c9a01d7ffe01a7b5beba89687f6b49a5c9a444e",
+      "launch_SHA256": "044e23800e9304848e5327e6925ed4a48d953fd3633df0091d5fe8209ee59d37"
+    },
+    {
+      "name": "gui",
+      "exit_code": 0,
+      "classification": "Completed phase",
+      "resource_SHA256": "770130d492390d8e3cdf276abfa07c34070925fd02fc7091ad48c1f57e566de8",
+      "supervisor_SHA256": "0749cb906bb83011cbc47500062dedb9ff4b67275032b72d1c0ada163aff3e79",
+      "launch_SHA256": "c268478f18f74679c2d3d9bf0db96fa7c29bdee266236c62f501d71a9e76b250"
+    },
+    {
+      "name": "layout",
+      "exit_code": 0,
+      "classification": "Completed phase",
+      "resource_SHA256": "b02b36f9b12502cd432977f742ff105083dfd2706675ca0f6bbc51c230efcf32",
+      "supervisor_SHA256": "8c4f32c8b34fa85e4cfaf11c6eb83fb8f0efb62357a264af68a89e2a161bf9b2",
+      "launch_SHA256": "a4acd87ba4a391a2bb567fa5d4a660295ca06cc908fe6c1578529570bb5b6b4d"
+    },
+    {
+      "name": "preflight",
+      "exit_code": 0,
+      "classification": "Completed phase",
+      "resource_SHA256": "e85682aafa6b9b8568ad43209c76b0a678ddaaa0cd1208385d1cdc712d74e6f1",
+      "supervisor_SHA256": "fac7d4f22e3797571964d3134e2bd1239fde915c7fef5f292b0a6d607f9b2fba",
+      "launch_SHA256": "ffb7c2884e45ab1db500673b2fc3cb1501cc79012a2d4b90b19e654eccfa7ba7"
+    },
+    {
+      "name": "report",
+      "exit_code": 1,
+      "classification": "Preserved reporting-only self-receipt FileNotFoundError",
+      "resource_SHA256": "86e574cb870641bd84110b71f335ffe480da1e6234bec964c7fd9650c80080e8",
+      "supervisor_SHA256": "d32f11bd6d49fd02c5657498c16dfe652bc5fee94e1f269f8865411922b8ccc8",
+      "launch_SHA256": "51a27c2967e664c28cc866f64b393d04bf3ae0a21cc27f4bfd87c877e23fc48c"
+    },
+    {
+      "name": "report2",
+      "exit_code": 0,
+      "classification": "Completed phase",
+      "resource_SHA256": "a4d0a2788a7392e71010fd9564f68ad10c6f750c4100444bdaa3586375cd398c",
+      "supervisor_SHA256": "9cb6644905fcc1999e75b04fabd12e1cf3e8af07cfb09c9e631dbc56f835e42b",
+      "launch_SHA256": "42aac5971b302823fd731e0deadef6ab8b5410e71001efe317876b8da945822d"
+    }
+  ],
+  "resource_totals": {
+    "charged_CPU_seconds": 1385.921875,
+    "charged_active_wall_seconds": 844.4578323999995,
+    "worker_CPU_measured": 745.15625,
+    "supervisor_CPU_measured": 596.8125,
+    "peak_private_worker_tree_sampled": 1004916736,
+    "W_disk_bytes": 1150743956,
+    "external_new_source_reserve": 67108864,
+    "hard": {
+      "cpu_seconds": 2400,
+      "wall_seconds": 2700,
+      "private_bytes": 3221225472,
+      "disk_bytes": 2147483648
+    },
+    "early": {
+      "cpu_seconds": 1920,
+      "wall_seconds": 2160,
+      "private_bytes": 2899102924,
+      "disk_bytes": 1932735283
+    },
+    "limitations": "Exact38550msrequested monitor; memory/tree peaks sampled, not OSquota. Worker/supervisor charged; initial10CPU25wall and finalization20CPU45wall conservative allowances, not measured. Includes failed report helper; backup separate.",
+    "finalization_allowance": {
+      "charged_CPU_seconds": 20,
+      "charged_active_wall_seconds": 45,
+      "kind": "Predeclared finalization20CPU45wall upper charge, not measurement: compact audits/Git/privatecontext; backup operational budget separate"
+    }
+  },
+  "primary_acceptance_failures": 0,
+  "reporting_only_failed_attempts": 1,
+  "decision": "TECHNICAL SOURCE/NATIVE/GUI GO \u2014 exact Solar-Simulator 0.4.0 candidate, verified environment only.",
+  "not_release_approval": true,
+  "executor_source_SHA256": {
+    "scripts\\qualification408\\audit.py": "2cbf0e0a1ed6e13f6c2aedef0f4a90182bbf172f2732b58b1b4ffb88dfe78136",
+    "scripts\\qualification408\\census.py": "e6dcf54574342f8e6cf61ecf3e07e57b33f3f75fa4ae7e0008fd064d50e46aaa",
+    "scripts\\qualification408\\finalize.py": "3e427865bf214304ace9c68bc5164e85e86819321951335f17b38a890acde406",
+    "scripts\\qualification408\\guard.py": "fb942077220ee087cc3fc92fb7e019626058bc6b0bd658d134360c6a5e3c5c8b",
+    "scripts\\qualification408\\gui_journey.py": "11bcd941d8a9c180ae31c956641a8c316f9f6bace46605c2d1cae7551fd77bf6",
+    "scripts\\qualification408\\layout.py": "a0e37272835f9a1799137118ce8ea3a12b3e94c58c7ec22c0576515aa66d4b62",
+    "scripts\\qualification408\\preflight.py": "b8c171e84114133c3284f6f4a6cd439a113586f04fe77e846c2c582a04262846",
+    "scripts\\qualification408\\report.py": "f34ff375d447541b78b6f8e91bd13b02fac756d76f065c90c9cd0ca0c58661f9",
+    "scripts\\qualification408\\run_phase.py": "5449385d826bd5d66e4fa187ecf127f4417530d225ee5fca162c37e2df3c67c4"
+  }
+}

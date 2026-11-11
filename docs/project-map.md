@@ -201,3 +201,6 @@ resource-history guard проверен и усилен; независимый 
 
 
 [Version migration407V](version-migration-407v.md): отдельный кандидат0.4.0, новый изолированный native, исторические032/033fixtures и план полной408. Main остаётся0.3.2; full408/release не выполнены.
+
+
+[Full source/native/GUI acceptance408](release-source-acceptance-408.md): exact0.4.0candidate237f736,3083PythonPASS/core19PASS. Технический GO только проверенной среды, scientificD1/releaseNO-GO; portable не создавалась.

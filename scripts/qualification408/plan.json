@@ -1,0 +1,169 @@
+{
+  "stage": 408,
+  "status": "AUTHORIZED_SEALED_BEFORE_EXECUTION",
+  "candidate_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "candidate_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "candidate_branch": "codex/candidate-0.4.0-version-407v",
+  "source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "inventory": "scripts/qualification407v/inventory408.json",
+  "inventory_SHA256": "664a8ddd681948a9f2fac32588e829674efcf01213ea55c32b2ea840ce644d07",
+  "node_count": 3083,
+  "old_nodes": 3073,
+  "new_related_nodes": 10,
+  "selection": "Unchanged full check_project.py --require-native; no deselect/skip/xfail waiver. Stock Rust completion separately if pytest aborts; report every nonpass.",
+  "environment": {
+    "interpreter": "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\env\\Scripts\\python.exe",
+    "prefix": "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\env",
+    "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-040-version-407v",
+    "Python": "3.14.2t",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.0",
+    "ABI": "cp314-cp314t-win_amd64",
+    "qualified_stage": "407V limited version/ABI/short contracts; not full scientific qualification",
+    "native_wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb"
+  },
+  "source_temp": {
+    "source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-040-version-407v",
+    "TEMP": "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\full408-TEMP-MUST-BE-FRESH",
+    "output": "NEW ordinary output root, never overwrite407V or399-407; no private ancestor"
+  },
+  "required_external_inputs": [
+    {
+      "name": "historical376-inputs.zip",
+      "size": 706900,
+      "SHA256": "2326775712ab071ec6354b01f529ba2749c22bbee773e5f26948c11408cc38d5",
+      "purpose": "3forensic artifacts only, never import/execute; SOLAR_HISTORICAL376_BUNDLE explicit; must preflight before pytest",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar407-20261110\\historical376-inputs.zip"
+    },
+    {
+      "name": "public research63 input bundle",
+      "purpose": "Existing SHA-bound prepare_test_inputs; no private archives or scientific reruns"
+    },
+    {
+      "name": "immutable033metadata",
+      "source": "tests/fixtures/metadata033-828c798.zip",
+      "size": 3922,
+      "SHA256": "a1fe4cbdf213a6d97652a7d8e2108f584a1c0066ab8fcc5adb96bbc951b5c970",
+      "purpose": "Historical383/407 only; do not overlay into live040"
+    },
+    {
+      "name": "native040wheel",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\wheels\\solar_native-0.4.0-cp314-cp314t-win_amd64.whl",
+      "SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+      "purpose": "Exact already built qualified artifact; no oldnative033substitution"
+    }
+  ],
+  "monitor": {
+    "choice": "Retain exact385offline_monitor.py",
+    "SHA256": "fe0f4e83a5b1473a23404e813f3f98693fac8099181d936ca5980e3e1f80a508",
+    "prototype407": "NO-GO transient Windows directory race and lost finalreceipt; static speedup is insufficient",
+    "policy": "Same50ms requested cadence and same process/memory/disk checks. SHA-complete group receipts plus cumulative ledger, missing/partial stops; no budget resets; reserve finalization. Sparse samples not OS quota."
+  },
+  "proposed_hard_caps": {
+    "cpu_seconds": 2400,
+    "active_wall_seconds": 2700,
+    "private_bytes": 3221225472,
+    "disk_bytes": 2147483648
+  },
+  "proposed_early": {
+    "cpu_seconds": 1920,
+    "active_wall_seconds": 2160,
+    "private_bytes": 2899102924,
+    "disk_bytes": 1932735283
+  },
+  "forecast": {
+    "CPU_seconds": 1580,
+    "active_wall_seconds": 1150,
+    "data_bytes": 1572864000,
+    "uncertainty": "Planning estimate only. Previous406+407forecast1555CPU plus25CPU newtargeted nodes/version preflight; prior monitor overhead included. Full3083 NOT RUN. No new scientific acquisition. Stop if this cannot protect reserves."
+  },
+  "phase_reserves": {
+    "preflight_CPU": 40,
+    "standalone_Rust_CPU": 50,
+    "full_driver_CPU": 1430,
+    "GUI_and_independent_audit_CPU": 60,
+    "early_cpu_headroom": 365
+  },
+  "forbidden": [
+    "No portable build/relocated acceptance",
+    "No new58/22jobs/year/608series",
+    "No change main/tag/LATEST/thresholds/scientificFAIL",
+    "No old scientific receipt transfer to new runtime"
+  ],
+  "scientific_application_release": "D1 distanceFAIL;3historic380+4short402FAIL; fullD1/release0.4.0 NO-GO unchanged",
+  "candidate_version": "0.4.0",
+  "preflight": [
+    "Verify exact Git HEAD/tree and clean source",
+    "Recompute actual fingerprint/native SHA and real -I imports/prefix; no old033binary",
+    "Reverify Cargo locked/offline versions; no rebuild/install during acceptance",
+    "Recollect full inventory; require all3073 prior+10new nodes with no skip/xfail/deselection",
+    "Check exact external376 bundle before collection; old files are data only",
+    "Document-only composition including exact license destination; no portable build",
+    "Verify all budget and ledger reservations before launch"
+  ],
+  "required_independent_audits": [
+    "Every node outcome incl all FAIL/ERROR/SKIP; compare literal inventory",
+    "Current source and native origin/SHA/fingerprint + protected historical snapshots",
+    "Actual GUI own/foreign callbacks, settings, data immutability",
+    "Model-specific scientific applicability remains separate; do not convert D1 FAIL toPASS",
+    "Retained385monitor SHA/cadence/resource ledger and partial receipts",
+    "Filtered Project-Archives independent download SHA/size/owner/parent/member integrity"
+  ],
+  "date": "2026-11-11",
+  "dev_start": "ce79016a9430308faee8368d4d47ba7fb8883043",
+  "derived_plan_SHA256": "a6ccd64228afb1f317a94582905bd37ccaa7b3fa5e89b812c9e88af2948d195f",
+  "output": "C:\\Users\\Admin\\Documents\\Codex\\Solar408-20261111",
+  "candidate_source": "C:\\Users\\Admin\\Desktop\\Solar-candidate-040-version-407v",
+  "test_python": "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\env\\Scripts\\python.exe",
+  "hard": {
+    "cpu_seconds": 2400,
+    "wall_seconds": 2700,
+    "private_bytes": 3221225472,
+    "disk_bytes": 2147483648
+  },
+  "early": {
+    "cpu_seconds": 1920,
+    "wall_seconds": 2160,
+    "private_bytes": 2899102924,
+    "disk_bytes": 1932735283
+  },
+  "external_source_reserve": 67108864,
+  "phase_forecasts": {
+    "preflight": {
+      "CPU": 40,
+      "wall": 60
+    },
+    "full_stock": {
+      "CPU": 1430,
+      "wall": 1150
+    },
+    "rust_if_stock_aborts": {
+      "CPU": 50,
+      "wall": 90
+    },
+    "GUI_audit_finalization": {
+      "CPU": 60,
+      "wall": 110
+    }
+  },
+  "final_reserve": {
+    "CPU": 100,
+    "wall": 200
+  },
+  "backup_separate_caps": {
+    "CPU_seconds": 120,
+    "wall_seconds": 900,
+    "private_bytes": 1073741824,
+    "new_bytes": 536870912
+  },
+  "policy": "One stock full test run, report-only verbose/JUnit, no selection/config/source/criteria changes. Exact385monitor same50ms; cumulative worker+supervisor; missing receipt fail closed. Scientific58/22/year/380series and native rebuild forbidden. Backup separate.",
+  "reporting": {
+    "PYTEST_ADDOPTS": "-vv -ra --junitxml=C:/Users/Admin/Documents/Codex/Solar408-20261111/results/python.xml",
+    "TEMP": "C:\\Users\\Admin\\Documents\\Codex\\Solar408-20261111\\temp",
+    "CARGO_TARGET_DIR": "C:\\Users\\Admin\\Documents\\Codex\\Solar408-20261111\\cargo-target",
+    "CARGO_NET_OFFLINE": "true",
+    "capture": "-vv logs + raw full JUnit, no retry full suite; subprocess exact command timestamps/results immutable"
+  }
+}

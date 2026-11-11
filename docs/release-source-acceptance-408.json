@@ -1,0 +1,234 @@
+{
+  "stage": 408,
+  "date": "2026-11-11",
+  "candidate": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "candidate_branch": "codex/candidate-0.4.0-version-407v",
+  "dev_start": "ce79016a9430308faee8368d4d47ba7fb8883043",
+  "source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "ABI": "cp314-cp314t-win_amd64",
+  "actual_python": "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\env\\Scripts\\python.exe",
+  "prefix": "C:\\Users\\Admin\\Documents\\Codex\\Solar407V-20261111\\env",
+  "versions": {
+    "solar-simulator": "0.4.0",
+    "solar-native": "0.4.0",
+    "numpy": "2.5.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.0"
+  },
+  "original_inventory_SHA256": "664a8ddd681948a9f2fac32588e829674efcf01213ea55c32b2ea840ce644d07",
+  "inventory": {
+    "total": 3083,
+    "old3045": 3045,
+    "new407": 28,
+    "new407V": 10,
+    "removed": 0,
+    "unknown": 0,
+    "duplicates": {}
+  },
+  "Python": {
+    "PASS": 3083,
+    "FAIL": 0,
+    "ERROR": 0,
+    "SKIP": 0,
+    "stock_exit_code": 0,
+    "junit_SHA256": "21016f4275c464ad9d833a270c1e7d2b0f2ce5b569f8cab2d0d2d25d0b699bc9",
+    "pytest_wall_seconds": 722.57
+  },
+  "Rust": {
+    "core_PASS": 19,
+    "FAIL": 0,
+    "ignored": 0,
+    "core_fmt": "PASS",
+    "native_fmt": "PASS",
+    "locked_offline_metadata": "PASS",
+    "native_rebuilt": false,
+    "scope": "Actual stock408cargo fmt/core tests; PyO3 exact407Vartifact, not rebuilt"
+  },
+  "groups": {
+    "GUI": {
+      "count": 53,
+      "counts": {
+        "PASS": 53
+      }
+    },
+    "worker_recovery": {
+      "count": 26,
+      "counts": {
+        "PASS": 26
+      }
+    },
+    "native": {
+      "count": 145,
+      "counts": {
+        "PASS": 145
+      }
+    },
+    "storage_compatibility": {
+      "count": 71,
+      "counts": {
+        "PASS": 71
+      }
+    }
+  },
+  "GUI": {
+    "real_event_loop": true,
+    "layouts": [
+      {
+        "width": 1180,
+        "height": 820,
+        "settings_open": false,
+        "canvas_height": 511
+      },
+      {
+        "width": 1180,
+        "height": 820,
+        "settings_open": true,
+        "canvas_height": 407
+      },
+      {
+        "width": 1024,
+        "height": 768,
+        "settings_open": false,
+        "canvas_height": 347
+      },
+      {
+        "width": 1024,
+        "height": 768,
+        "settings_open": true,
+        "canvas_height": 243
+      },
+      {
+        "width": 900,
+        "height": 720,
+        "settings_open": false,
+        "canvas_height": 295
+      },
+      {
+        "width": 900,
+        "height": 720,
+        "settings_open": true,
+        "canvas_height": 191
+      }
+    ],
+    "callback_events": 77,
+    "background_errors": [],
+    "foreign_cancellations": [],
+    "genuine_ballistic_packets": [
+      1.0,
+      2.0
+    ],
+    "compiled_native_RHS_calls": 178,
+    "expected_recovery_write_failure": "Injected once then successful retry; no lost committed state",
+    "full_stderr_anomalies": []
+  },
+  "compatibility": {
+    "legacy_files": 47,
+    "scope": "SHA-bound historical032files/checkpoints/branch inputs via389/407V plus full ordinary regression set; not all formats of all versions",
+    "dynamic_rotation_branch": "Unsupported unchanged",
+    "strict_recipes": "Mismatch may reject; never weakened"
+  },
+  "documentation": {
+    "files": 338,
+    "relative_links": 576,
+    "stock_file_line_links": 1402,
+    "static_only": true,
+    "ERFA_license_destination": "runtime/Lib/site-packages/solar_simulator/data/ERFA-LICENSE.txt",
+    "source": "exact candidate only",
+    "no_portable_build": true
+  },
+  "historical_scope": {
+    "jobs399": 58,
+    "numerical402": "11/11",
+    "effects402": "10/11",
+    "distance_FAIL": {
+      "observable": "distance_AB",
+      "B": 1.0,
+      "Delta": 10.0,
+      "max_e": 5.777434443583898e-12,
+      "max_U_ref": 8.217012808336083e-12,
+      "max_N_sens": 6.355777086387995e-12,
+      "max_total": 2.026153305059729e-11,
+      "minimum_demonstrated_change": 0.24479543260761333,
+      "maximum_demonstrated_change": 0.2447954326139691,
+      "numerical_gate": "PASS",
+      "effect_gate": "FAIL"
+    },
+    "historical380_FAIL": 3,
+    "short402_FAIL": 4,
+    "fullD1": "NO-GO",
+    "new_native_not_scientifically_certified": true
+  },
+  "failures": [
+    {
+      "scope": "Reporting harness only",
+      "phase": "report",
+      "cause": "Attempted to read its own resource receipt before supervisor could publish it",
+      "preserved": "guard-report/stdout.log + report-resources.json + report-attempt1.py",
+      "resolution": "Exclude only currently running report2; final closure must reconcile every receipt incl preserved exit1. No candidate/test/science change or full suite rerun"
+    }
+  ],
+  "unresolved": [
+    "New native040 has no automatic scientific qualification from033receipts",
+    "FullD1 distance_AB effect remainsFAIL;3historical380+4short402convergenceFAIL retained",
+    "Portable build/relocated acceptance not authorized/not executed",
+    "Release not approved; no main/tag/LATEST changes"
+  ],
+  "resources": {
+    "charged_CPU_seconds": 1385.921875,
+    "charged_active_wall_seconds": 844.4578323999995,
+    "worker_CPU_measured": 745.15625,
+    "supervisor_CPU_measured": 596.8125,
+    "peak_private_worker_tree_sampled": 1004916736,
+    "W_disk_bytes": 1150743956,
+    "external_new_source_reserve": 67108864,
+    "hard": {
+      "cpu_seconds": 2400,
+      "wall_seconds": 2700,
+      "private_bytes": 3221225472,
+      "disk_bytes": 2147483648
+    },
+    "early": {
+      "cpu_seconds": 1920,
+      "wall_seconds": 2160,
+      "private_bytes": 2899102924,
+      "disk_bytes": 1932735283
+    },
+    "limitations": "Exact38550msrequested monitor; memory/tree peaks sampled, not OSquota. Worker/supervisor charged; initial10CPU25wall and finalization20CPU45wall conservative allowances, not measured. Includes failed report helper; backup separate.",
+    "finalization_allowance": {
+      "charged_CPU_seconds": 20,
+      "charged_active_wall_seconds": 45,
+      "kind": "Predeclared finalization20CPU45wall upper charge, not measurement: compact audits/Git/privatecontext; backup operational budget separate"
+    },
+    "auditor_own_receipt_reconciled": true
+  },
+  "independent_audit": {
+    "SHA256": "e8632a27bdc8d7091f8d1d5211a3e728924b905f8c70d69e80e24fd9f8b80b60",
+    "source_files_checked": 1263,
+    "all3083outcomes_reparsed": true,
+    "executor_PASS_flag_not_used_as_sole_proof": true,
+    "self_supervisor_reconciled": true,
+    "external_review": false
+  },
+  "evidence_manifest_SHA256": "73f1118e6dfacdb7287109efa0ab684691f98658825782bdb638dfcdaec442e1",
+  "verdicts": {
+    "SOURCE_ACCEPTANCE": "PASS_EXACT040_ENV_ONLY",
+    "RUST_NATIVE_ACCEPTANCE": "PASS_CORE19_FMT_ABI_NATIVE145_RELATED_TESTS",
+    "GUI_DESKTOP_ACCEPTANCE": "PASS_TESTED_ENV",
+    "WORKER_RECOVERY_ACCEPTANCE": "PASS_TESTED_PATHS",
+    "BACKWARD_COMPATIBILITY": "PASS_TESTED_SCOPE",
+    "DOCUMENTATION_COMPOSITION": "PASS_STATIC_ONLY",
+    "SCIENTIFIC_EVIDENCE_SCOPE": "PASS_HISTORICAL_SCOPE_PRESERVED_NOT_NEW_NATIVE_SCIENTIFIC_CERTIFICATION",
+    "APPLICATION_D1": "NO-GO_DISTANCE_EFFECT_FAIL",
+    "PORTABLE_READINESS": "NOT_BUILT_NOT_ACCEPTED_SEPARATE_PLANNING_ONLY",
+    "RELEASE_READINESS": "NO-GO_NO_OWNER_RELEASE_APPROVAL_PORTABLE_NOT_ACCEPTED_D1_UNMET"
+  },
+  "cloud": {
+    "status": "CLOUD_UNVERIFIED_PENDING_REVIEW_AND_DOWNLOAD"
+  },
+  "decision": "TECHNICAL SOURCE/NATIVE/GUI GO — exact Solar-Simulator 0.4.0 candidate, verified environment only.",
+  "next_step": "Plan a separate portable build/relocation acceptance and owner decision on disclosed experimentalQ2scope; no build/release now",
+  "final_closure_SHA256": "1066d00cbe609c50d22bd91e09b353ef906cc7431b9c956c119b6d39b1d0e073"
+}
