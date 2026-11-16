@@ -1,4 +1,4 @@
-#409 — cloud408 закрыт; portable0.4.0 собрана, допуск410 заблокирован verifier
+# 409 — cloud408 закрыт; portable0.4.0 собрана, допуск410 заблокирован verifier
 
 2026-11-11. **Сборка/smoke/целостность — GO. Полная410 не выполнена и пока
 не допущена: штатный fresh-year verifier отвергает source040 по историческим SHA.**
@@ -94,8 +94,8 @@ Source408и409buildsmoke не сертифицируют реальные тел
 
 На момент отчётаBcharged131.890625CPU/85.703552wall;
 CPU supervisor/неудачных попыток включён. Hard300/600/2GiB1GiB,
-early240/480/1.8GiB900MiB неизменны, exact385monitor. Finalization дополняется
-в том же budget, новыйbackup отдельно. Backup409 пока CLOUD_UNVERIFIED.
+early240/480/1.8GiB900MiB неизменны, exact385monitor. Finalization учтён
+в том же budget; новыйbackup409C учтён отдельно, итог ниже.
 
 Дальше — завершениеbackup409 и отдельно разрешённая подготовка year-source
 verifier410. Текущий результат не GO TO EXECUTABLE410 и не releaseapproval. STOP.
@@ -109,3 +109,46 @@ verifier410. Текущий результат не GO TO EXECUTABLE410 и не 
 Повтор в том же bounded409B guard с исходным env-контрактом прошёл. Исходники,
 native и ожидаемый fingerprint не менялись; этот отказ относится к запуску
 проверяющего скрипта, а не к packaged runtime. Его затраты входят в хвост20CPU/40wall.
+
+## Итог резервирования409 и остановка
+
+[Cloud receipt409](../scripts/qualification409/backup409.json): компактный evidenceZIP
+725004B, SHA256 `69970b3322200d74762b90caf3a00bae4b8e2b4e364bd321fed86de26780d721`,
+[Google Drive evidence](https://drive.google.com/file/d/1tCtsbQwwodMXLLHrNjFPa1wWYC_zuOZX/view).
+Его **новое независимое скачивание** подтвердило SHA/размер, CRC всех140members
+и139logicalentries; обе вложенные manifest-таблицы сверены. Git recovery recipe
+6b72cfe также независимо скачан/проверен. Owner-only, parent и аккаунт подтверждены.
+Личный контекст/SQLite/credentials/окружения и уже подтверждённые408bytes не включены.
+
+**Сам portableZIP: CLOUD_UNVERIFIED, не загружен.** Стандартная backup-политика
+отказала на публичном CA PEM в штатном ensurepip wheel. Ограниченная точечная
+проверка подтвердила147publicCA безprivatekey, пустую RECORD-запись SciPy, gzip-данные,
+встроенный TTF Aileron в Pillow и публичный пример в [CPython urllib](https://raw.githubusercontent.com/python/cpython/v3.14.2/Lib/urllib/request.py).
+Последняя попытка остановилась на стандартном `runtime/Lib/venv/__init__.py`,
+который generic scanner считает developer environment. Это **не доказательство**
+загрязнения пакета: независимая packageclosure уже различает qualifiedstdlib
+и developerenv. Полная policy-проверка portable не завершена, её дальнейшая
+адаптация вынесена за409; никаких постоянных policyисключений/подменыZIP/upload
+не сделано. Все четыре отказа и исходники диагностических попыток сохранены
+в проверенном evidenceZIP. Не выдаём частичную проверку за разрешение на upload.
+
+409Cfinalcharged86.703125CPU/133.725210activewall, включая connectorwall и
+консервативный хвост20CPU/40wall; hard240/3600/1GiB512MiB,early192/2880/900MiB450MiB.
+Это charged accounting с allowances, а не полностью измеренная операционная CPU.
+Старый408CPUUNRESOLVED не закрыт. Мониторинг sampled, не OSquota.
+
+Итог **PARTIAL**: cloud408 закрыт; build/smoke/ZIP integrity GO; evidence409cloudverified;
+portablebackupCLOUD_UNVERIFIED; executable410 NO-GO до reviewed current-source
+verifier и отдельной команды владельца. Main/tag/LATEST/принятая032 не тронуты. STOP.
+
+Финальные статические регрессии:11PASS (documentation navigation/project links),
+1455file/line-links и1477inventoryfiles PASS; AST/JSON/secret review PASS.
+При их первом запуске backupguard обнаружил отдельный connectorwall receipt
+как CPU-запись и отказал с KeyError до дочернего процесса. Обработчик конкретного
+wall-receipt исправлен с явной проверкой типа/конечности, затем та же команда прошла.
+Неизвестные CPU-записи по-прежнему отклоняются; лимиты не ослаблены.
+
+2026-11-16: после перерыва повторно сверены Git, точные сохранённые ZIP/readback
+байты, AST/JSON/secret checks,1477inventory и1455links — PASS. Научные вычисления
+не повторялись. Дополнительный консервативный хвост завершения10CPU/45wall
+даёт409Ccharged96.703125CPU/178.725210wall, в прежних лимитах.

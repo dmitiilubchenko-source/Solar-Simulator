@@ -283,8 +283,109 @@
     "arbitrary_twoQ2_and_real_bodies": "NOTQUALIFIED"
   },
   "new_backup": {
-    "status": "CLOUD_UNVERIFIED_PENDING409BACKUP",
-    "portableZIP_is_distinct_from_evidencearchive": true
+    "stage": 409,
+    "status": "PARTIAL_BACKUP_EVIDENCE_VERIFIED_PORTABLE_CLOUD_UNVERIFIED",
+    "files": [
+      {
+        "name": "Solar-Simulator-stage409-evidence-closure-20261111.zip",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar409-backup-20261111\\Solar-Simulator-stage409-evidence-closure-20261111.zip",
+        "size": 725004,
+        "sha256": "69970b3322200d74762b90caf3a00bae4b8e2b4e364bd321fed86de26780d721",
+        "git_commit": "6b72cfeb4f1cedc492a4091964d21b85bcbced74",
+        "cloud_location": "https://drive.google.com/file/d/1tCtsbQwwodMXLLHrNjFPa1wWYC_zuOZX/view",
+        "cloud_evidence": {
+          "file_id": "1tCtsbQwwodMXLLHrNjFPa1wWYC_zuOZX",
+          "sha256": "69970b3322200d74762b90caf3a00bae4b8e2b4e364bd321fed86de26780d721",
+          "size": 725004,
+          "parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+          "verified_at": "2026-11-11T20:24:56.547361+00:00",
+          "method": "Independent freshconnector HTTPS readback; actual local downloaded bytes SHA256/size"
+        },
+        "status": "CLOUD_VERIFIED_SHA256"
+      },
+      {
+        "name": "Solar-Simulator-recovery-6b72cfeb4f1cedc492a4091964d21b85bcbced74.json",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\Solar-Simulator-recovery-6b72cfeb4f1cedc492a4091964d21b85bcbced74.json",
+        "size": 582,
+        "sha256": "48bbefb5629c670b0faf3e36a3872c5504dbc4a2cf40ee7c92eb882f62ac5bf0",
+        "git_commit": "6b72cfeb4f1cedc492a4091964d21b85bcbced74",
+        "cloud_location": "https://drive.google.com/file/d/1KS547ekL_1M93G1wbeDyUCf92gi4Snj6/view",
+        "cloud_evidence": {
+          "file_id": "1KS547ekL_1M93G1wbeDyUCf92gi4Snj6",
+          "sha256": "48bbefb5629c670b0faf3e36a3872c5504dbc4a2cf40ee7c92eb882f62ac5bf0",
+          "size": 582,
+          "parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+          "verified_at": "2026-11-11T20:24:56.565668+00:00",
+          "method": "Independent freshconnector HTTPS readback; actual local downloaded bytes SHA256/size"
+        },
+        "status": "CLOUD_VERIFIED_SHA256"
+      }
+    ],
+    "cloud_ZIP_CRC_SHA": "PASS",
+    "cloud_ZIP_members": 140,
+    "cloud_logical_files": 139,
+    "portable": {
+      "status": "CLOUD_UNVERIFIED_REVIEW_REQUIRED",
+      "source": "C:/Users/Admin/Documents/Codex/Solar409-build-20261111/output/SolarSimulator-0.4.0-20261111-224857-409.zip",
+      "size": 112698889,
+      "sha256": "74247a863bd1c445ecfa736e1a0df60db43ad541cb34d7df5de909410781f3bd",
+      "uploaded": false,
+      "original_retained": true,
+      "stock_refusal": "Public certifi CA PEM requires review",
+      "latest_bounded_diagnostic": "ENVIRONMENT_IN_ARCHIVE for CPython standard-library runtime/Lib/venv/__init__.py",
+      "policy_unchanged": true,
+      "interpretation": "Not evidence of secret/developer-env contamination. Generic backup classifier is not a package scientific/content verdict; no claim of completed portablebackup."
+    },
+    "resources": {
+      "charged_CPU": 85.390625,
+      "charged_active_wall": 132.4109138000007,
+      "final_allowance_CPU": 20,
+      "final_allowance_wall": 40,
+      "early": {
+        "cpu_seconds": 192,
+        "wall_seconds": 2880,
+        "private_bytes": 943718400,
+        "disk_bytes": 471859200
+      },
+      "hard": {
+        "cpu_seconds": 240,
+        "wall_seconds": 3600,
+        "private_bytes": 1073741824,
+        "disk_bytes": 536870912
+      },
+      "disk_bytes_in_C": 2258947,
+      "limitations": "Covers all bounded failed attempts and conservative unmonitored final-review/queue allowances; sampledmemory, not OSquota; service CPU excluded. Connector wall included. No portable upload attempted.",
+      "peak_sampled_worker_private": 219836416
+    },
+    "review_failures_preserved": [
+      "prepare",
+      "exact-review",
+      "exact-review2",
+      "exact-review3"
+    ],
+    "diagnostic_source_copies_in_verified_evidence": true,
+    "resources_final": {
+      "charged_CPU": 86.703125,
+      "charged_active_wall": 133.72521020000423,
+      "final_allowance_CPU": 20,
+      "final_allowance_wall": 40,
+      "includes": "All bounded attempts including11 final documentation tests; connectorwall, conservative unmonitoredscan/finalizationallowances; not fullymeasured operationalCPU",
+      "peak_sampled_worker_private": 219836416
+    },
+    "followup_tooling_fault": {
+      "cause": "backup_guard initially read the separate connector wall record as a process CPU record: KeyError before launch",
+      "resolution": "Explicit validated connector-wall accounting, unknown process receipts still fail closed; same final-static command passed",
+      "cost": "Conservative finalization allowance; no cloud/scientific result altered"
+    },
+    "resume_20261116": {
+      "charged_CPU_seconds": 10,
+      "charged_active_wall_seconds": 45,
+      "kind": "Conservative resume/finalization allowance2026-11-16 including short byte/static checks, Git and private capture; not measured CPU; original caps unchanged"
+    },
+    "charged_with_resume": {
+      "CPU": 96.703125,
+      "active_wall": 178.72521020000423
+    }
   },
   "decision": "BUILD/SMOKE/CONTENTS GO; NO-GO TO EXECUTABLE410 UNTIL EXPLICIT CURRENT-YEAR VERIFIER SOURCE-BINDING PREPARATION. NOT RELEASE APPROVAL.",
   "resource_build_final": {
@@ -297,5 +398,19 @@
     "external_data_allowance": 134217728,
     "initial_and_final_allowances": "Conservative charges, not measured consumption",
     "measurement_limits": "Sampled process discovery/private peaks; not OSquota. Supervisor and failed attempts charged."
-  }
+  },
+  "stage_completion": "PARTIAL: build completed; evidence backup verified; portable backup held for review; executable410 blocked",
+  "finalization_environment_refusal": {
+    "cause": "Unsealed shell thread environment differs from qualified numerical fingerprint",
+    "resolution": "PASS using original bounded guard environment; no source/native/expectedfingerprint changes",
+    "cost": "Charged in20CPU/40wall conservative finalization allowance"
+  },
+  "final_static_checks": {
+    "documentation_tests": "11PASS",
+    "file_line_links": 1455,
+    "inventory_files": 1477,
+    "AST_JSON_secret_review": "PASS",
+    "physical_kernel_changed": false
+  },
+  "finalized_date": "2026-11-16"
 }

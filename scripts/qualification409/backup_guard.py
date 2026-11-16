@@ -4,8 +4,13 @@ from pathlib import Path
 import psutil
 R=Path(__file__).resolve().parents[2];W=Path('C:/Users/Admin/Documents/Codex/Solar409-backup-20261111')
 p=json.loads((W/'plan.json').read_bytes());name=sys.argv[1]
-rows=[json.loads(f.read_bytes()) for f in W.glob('*-resources.json')]
+rows=[json.loads(f.read_bytes()) for f in W.glob('*-resources.json') if f.name!='connector-resources.json']
 cpu=sum(x['charged_CPU_seconds'] for x in rows);wall=sum(x['charged_active_wall_seconds'] for x in rows)
+connector=W/'connector-resources.json'
+if connector.exists():
+ extra=json.loads(connector.read_bytes())['wall_seconds']
+ assert type(extra) in (int,float) and 0<=extra<float('inf'),'Invalid connector wall receipt'
+ wall+=extra  # Connector service CPU is unavailable; do not fabricate a local measurement.
 for f in W.glob('launch-*.json'):
  if not (W/(f.stem.removeprefix('launch-')+'-resources.json')).exists():raise RuntimeError('Missing previous receipt')
 assert cpu+float(sys.argv[2])+p['CPU_final_reserve']<p['early']['cpu_seconds']

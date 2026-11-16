@@ -1087,6 +1087,8 @@
       "scripts/qualification409/acceptance410-plan.json",
       "scripts/qualification409/assemble.py",
       "scripts/qualification409/assembly_guard.py",
+      "scripts/qualification409/backup409-readback.json",
+      "scripts/qualification409/backup409.json",
       "scripts/qualification409/backup409.py",
       "scripts/qualification409/backup_guard.py",
       "scripts/qualification409/build-plan.json",

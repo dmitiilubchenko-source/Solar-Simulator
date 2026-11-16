@@ -1,0 +1,238 @@
+{
+  "stage": 409,
+  "scope": "Raw independent cloud readback receipts and resource records, signed URLs excluded",
+  "receipts": {
+    "downloads\\evidence-completion.json": {
+      "label": "evidence",
+      "id": "1tCtsbQwwodMXLLHrNjFPa1wWYC_zuOZX",
+      "name": "Solar-Simulator-stage409-evidence-closure-20261111.zip",
+      "expected_SHA256": "69970b3322200d74762b90caf3a00bae4b8e2b4e364bd321fed86de26780d721",
+      "expected_size": 725004,
+      "actual_SHA256": "69970b3322200d74762b90caf3a00bae4b8e2b4e364bd321fed86de26780d721",
+      "actual_size": 725004,
+      "status": "VERIFIED_SHA256_SIZE",
+      "start_timestamp": 1794428649.1543982,
+      "end_timestamp": 1794428651.2288454,
+      "response": {
+        "status": 200,
+        "content_length": "725004",
+        "content_type": "application/zip"
+      },
+      "failure": null,
+      "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+    },
+    "evidence-resources.json": {
+      "record": {
+        "exit_code": 0,
+        "limit_reason": null,
+        "error": null,
+        "last_sample": {
+          "worker_cpu": 0.09375,
+          "parent_cpu": 0.109375,
+          "private_tree": 38850560,
+          "rss_tree": 36335616,
+          "disk": 2114897,
+          "elapsed": 2.111772899999778
+        },
+        "samples": 11,
+        "poll_seconds": 0.2,
+        "worker_CPU_seconds": 0.109375,
+        "root_final_CPU_seconds": 0.0,
+        "parent_supervision_CPU_seconds": 0.109375,
+        "parent_interjob_CPU_excluded": true,
+        "peak_private_tree_sampled": 38850560,
+        "processes": [
+          {
+            "pid": 2692,
+            "creation_time": 1794428649.0723727,
+            "CPU_seconds": 0.0,
+            "role": "launcher"
+          },
+          {
+            "pid": 23568,
+            "creation_time": 1794428649.0805767,
+            "CPU_seconds": 0.109375,
+            "role": "analyzer_or_audit_descendant"
+          }
+        ],
+        "peak_rss_tree_sampled": 36335616,
+        "wall_seconds": 2.3159169999998994,
+        "disk_bytes": 2251450,
+        "complete": true,
+        "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+      },
+      "charged_CPU_seconds": 0.5625,
+      "charged_active_wall_seconds": 2.567796300001646,
+      "total_CPU": 64.84375,
+      "total_wall": 71.44242909999957
+    },
+    "launch-evidence.json": {
+      "command": [
+        "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:/Users/Admin/Documents/Codex/Solar409-backup-20261111/read_object.py"
+      ],
+      "plan_SHA256": "4bb76da6457952328c33e1c2fe2999a4b5eb05dc4fd95fcc3bbb4298826fab33",
+      "monitor_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+      "prior_CPU": 64.28125,
+      "prior_active_wall": 68.87463279999793
+    },
+    "downloads\\recipe-completion.json": {
+      "label": "recipe",
+      "id": "1KS547ekL_1M93G1wbeDyUCf92gi4Snj6",
+      "name": "Solar-Simulator-recovery-6b72cfeb4f1cedc492a4091964d21b85bcbced74.json",
+      "expected_SHA256": "48bbefb5629c670b0faf3e36a3872c5504dbc4a2cf40ee7c92eb882f62ac5bf0",
+      "expected_size": 582,
+      "actual_SHA256": "48bbefb5629c670b0faf3e36a3872c5504dbc4a2cf40ee7c92eb882f62ac5bf0",
+      "actual_size": 582,
+      "status": "VERIFIED_SHA256_SIZE",
+      "start_timestamp": 1794428651.8097448,
+      "end_timestamp": 1794428653.2777042,
+      "response": {
+        "status": 200,
+        "content_length": "582",
+        "content_type": "application/json"
+      },
+      "failure": null,
+      "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+    },
+    "recipe-resources.json": {
+      "record": {
+        "exit_code": 0,
+        "limit_reason": null,
+        "error": null,
+        "last_sample": {
+          "worker_cpu": 0.09375,
+          "parent_cpu": 0.078125,
+          "private_tree": 38772736,
+          "rss_tree": 35983360,
+          "disk": 2254356,
+          "elapsed": 1.4874170999974012
+        },
+        "samples": 8,
+        "poll_seconds": 0.2,
+        "worker_CPU_seconds": 0.125,
+        "root_final_CPU_seconds": 0.015625,
+        "parent_supervision_CPU_seconds": 0.078125,
+        "parent_interjob_CPU_excluded": true,
+        "peak_private_tree_sampled": 38772736,
+        "processes": [
+          {
+            "pid": 10384,
+            "creation_time": 1794428651.7315457,
+            "CPU_seconds": 0.015625,
+            "role": "launcher"
+          },
+          {
+            "pid": 29208,
+            "creation_time": 1794428651.7394073,
+            "CPU_seconds": 0.109375,
+            "role": "analyzer_or_audit_descendant"
+          }
+        ],
+        "peak_rss_tree_sampled": 35983360,
+        "wall_seconds": 1.6912878999974055,
+        "disk_bytes": 2256323,
+        "complete": true,
+        "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+      },
+      "charged_CPU_seconds": 0.546875,
+      "charged_active_wall_seconds": 1.943484700001136,
+      "total_CPU": 65.390625,
+      "total_wall": 73.38591380000071
+    },
+    "launch-recipe.json": {
+      "command": [
+        "C:/Users/Admin/Desktop/Solar-candidate-033-384/.venv/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "C:/Users/Admin/Documents/Codex/Solar409-backup-20261111/read_object.py"
+      ],
+      "plan_SHA256": "4bb76da6457952328c33e1c2fe2999a4b5eb05dc4fd95fcc3bbb4298826fab33",
+      "monitor_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+      "prior_CPU": 64.84375,
+      "prior_active_wall": 71.44242909999957
+    }
+  },
+  "metadata": [
+    {
+      "i": 0,
+      "row": {
+        "name": "Solar-Simulator-stage409-evidence-closure-20261111.zip",
+        "source": "C:/Users/Admin/Documents/Codex/Solar409-backup-20261111/Solar-Simulator-stage409-evidence-closure-20261111.zip",
+        "size": 725004,
+        "sha256": "69970b3322200d74762b90caf3a00bae4b8e2b4e364bd321fed86de26780d721"
+      },
+      "metadata": {
+        "id": "1tCtsbQwwodMXLLHrNjFPa1wWYC_zuOZX",
+        "title": "Solar-Simulator-stage409-evidence-closure-20261111.zip",
+        "mime_type": null,
+        "size": "725004",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1tCtsbQwwodMXLLHrNjFPa1wWYC_zuOZX"
+    },
+    {
+      "i": 1,
+      "row": {
+        "name": "Solar-Simulator-recovery-6b72cfeb4f1cedc492a4091964d21b85bcbced74.json",
+        "source": "C:/Users/Admin/Documents/Codex/2026-10-29/files-pasted-by-the-user-codex/outputs/Solar-Simulator-recovery-6b72cfeb4f1cedc492a4091964d21b85bcbced74.json",
+        "size": 582,
+        "sha256": "48bbefb5629c670b0faf3e36a3872c5504dbc4a2cf40ee7c92eb882f62ac5bf0"
+      },
+      "metadata": {
+        "id": "1KS547ekL_1M93G1wbeDyUCf92gi4Snj6",
+        "title": "Solar-Simulator-recovery-6b72cfeb4f1cedc492a4091964d21b85bcbced74.json",
+        "mime_type": null,
+        "size": "582",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1KS547ekL_1M93G1wbeDyUCf92gi4Snj6"
+    }
+  ]
+}
