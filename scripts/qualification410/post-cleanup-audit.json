@@ -1,0 +1,24 @@
+{
+  "executed_harness_SHA256": "7249e2a10e6407c9e1b9f75dbf70c66e3414deef681373acd0f28399941a757e",
+  "checks": [
+    {
+      "pid": 15816,
+      "already_exited": true
+    },
+    {
+      "pid": 25148,
+      "already_exited": true
+    },
+    {
+      "pid": 24632,
+      "already_exited": true
+    },
+    {
+      "pid": 10040,
+      "already_exited": true
+    }
+  ],
+  "all_observed_processes_gone": true,
+  "harness_limitation": "First external cleanup killed the direct venv launcher; recursively owned interpreter may have remained until its5second self-limit. No unbounded fixture; no full410 started. ExtraCPU conservatively charged, not invented as a measured value.",
+  "CPU_post_monitor_fully_measured": false
+}

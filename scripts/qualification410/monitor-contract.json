@@ -1,0 +1,31 @@
+{
+  "kind": "exact-monitor-root-exit-cleanup-contract",
+  "status": "FAIL",
+  "monitor_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+  "root_exit_code": 0,
+  "monitor_complete": true,
+  "descendant_alive_after_monitor_return": true,
+  "descendant": {
+    "pid": 24632,
+    "creation_time": 1794858718.7333145,
+    "parent_after_monitor": 25148,
+    "CPU_at_probe": 0.015625
+  },
+  "observed_by_monitor": [
+    {
+      "pid": 24632,
+      "creation_time": 1794858718.7333145,
+      "CPU_seconds": 0.015625,
+      "role": "analyzer_or_audit_descendant"
+    }
+  ],
+  "cleanup": {
+    "external_harness_killed": true,
+    "final_CPU": 0.015625,
+    "alive_after_cleanup": false
+  },
+  "fixture_self_limit_seconds": 5,
+  "full410_admission": false,
+  "production_orbits_executed": 0,
+  "meaning": "A known owned live descendant must not continue after the guard reports completion; post-return CPU must be accounted or explicitly terminated."
+}

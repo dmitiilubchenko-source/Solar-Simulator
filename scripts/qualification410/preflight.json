@@ -1,0 +1,15 @@
+{
+  "stage": 410,
+  "status": "PASS_EXACT_INPUTS_NOT_PORTABLE_ACCEPTANCE",
+  "archive_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "members": 6005,
+  "source_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "source_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "acceptance_tool_SHA256": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+  "monitor_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+  "full_acceptance_executed": false,
+  "scientific_propagations": 0
+}

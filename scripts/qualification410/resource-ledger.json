@@ -1,0 +1,104 @@
+{
+  "stage": 410,
+  "rows": [
+    {
+      "path": "cleanup-allowance-resources.json",
+      "charged_CPU_seconds": 6,
+      "charged_active_wall_seconds": 10,
+      "kind": "Conservative upper allowance for possible remaining oneCPU finite5second test worker plus startup/cleanup; not measured CPU"
+    },
+    {
+      "path": "initial-resources.json",
+      "charged_CPU_seconds": 5,
+      "charged_active_wall_seconds": 10,
+      "kind": "Conservativeinitialread/setup allowance, not measured CPU"
+    },
+    {
+      "path": "monitor-contract-resources.json",
+      "charged_CPU_seconds": 1.46875,
+      "charged_active_wall_seconds": 1.3323286999948323,
+      "monitor_record": {
+        "exit_code": 0,
+        "limit_reason": null,
+        "error": null,
+        "last_sample": {
+          "worker_cpu": 0.84375,
+          "parent_cpu": 0.0625,
+          "private_tree": 107958272,
+          "rss_tree": 64659456,
+          "disk": 10250,
+          "elapsed": 0.8448620000272058
+        },
+        "samples": 5,
+        "poll_seconds": 0.2,
+        "worker_CPU_seconds": 1.046875,
+        "root_final_CPU_seconds": 0.0,
+        "parent_supervision_CPU_seconds": 0.0625,
+        "parent_interjob_CPU_excluded": true,
+        "peak_private_tree_sampled": 107958272,
+        "processes": [
+          {
+            "pid": 15816,
+            "creation_time": 1794858718.6513867,
+            "CPU_seconds": 0.0,
+            "role": "launcher"
+          },
+          {
+            "pid": 25148,
+            "creation_time": 1794858718.6562548,
+            "CPU_seconds": 0.078125,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "pid": 24632,
+            "creation_time": 1794858718.7333145,
+            "CPU_seconds": 0.015625,
+            "role": "analyzer_or_audit_descendant"
+          },
+          {
+            "pid": 10040,
+            "creation_time": 1794858718.7370477,
+            "CPU_seconds": 0.953125,
+            "role": "analyzer_or_audit_descendant"
+          }
+        ],
+        "peak_rss_tree_sampled": 64659456,
+        "wall_seconds": 1.0469040999887511,
+        "disk_bytes": 10250,
+        "complete": true,
+        "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+      },
+      "descendant_CPU_after_monitor_extra": 0,
+      "tail_allowance": 0.25
+    },
+    {
+      "path": "preflight-allowance-resources.json",
+      "charged_CPU_seconds": 5,
+      "charged_active_wall_seconds": 10,
+      "kind": "Additional conservative exactSHA/FP/resourcepreflight allowance; no production integration"
+    }
+  ],
+  "charged_CPU_seconds": 37.46875,
+  "charged_active_wall_seconds": 71.33232869999483,
+  "final_allowance": {
+    "CPU_seconds": 20,
+    "active_wall_seconds": 40
+  },
+  "hard": {
+    "cpu_seconds": 900,
+    "wall_seconds": 1200,
+    "private_bytes": 2147483648,
+    "disk_bytes": 2147483648
+  },
+  "early": {
+    "cpu_seconds": 720,
+    "wall_seconds": 960,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1932735283
+  },
+  "CPU_fully_measured": false,
+  "unmeasured_component": "Potential remaining finite fixture interpreter CPU after monitor completion. Conservative6CPU/10wall charged, not invented as measured CPU.",
+  "new_data_bytes": 20832,
+  "full410_runs": 0,
+  "scientific_propagations": 0
+}

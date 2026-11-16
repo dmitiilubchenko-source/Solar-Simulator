@@ -1,0 +1,42 @@
+{
+  "status": "CONFIRMED_MONITOR_ADMISSION_FAIL",
+  "exact_ZIP_CRC_native_SHA": "PASS",
+  "monitor_hash_unchanged": true,
+  "acceptance_tool_hash_unchanged": true,
+  "root_exit_code": 0,
+  "root_complete_flag": true,
+  "known_descendant_live_after_return": true,
+  "known_PID_creation_time_correlated": true,
+  "fixture_processes_now_gone": true,
+  "source_logic": "Guard polls only root; finally kills tree only if root is still alive. A root that has already exited skips descendant termination.",
+  "executed_harness_SHA256": "7249e2a10e6407c9e1b9f75dbf70c66e3414deef681373acd0f28399941a757e",
+  "test_cleanup_limitation": {
+    "executed_harness_SHA256": "7249e2a10e6407c9e1b9f75dbf70c66e3414deef681373acd0f28399941a757e",
+    "checks": [
+      {
+        "pid": 15816,
+        "already_exited": true
+      },
+      {
+        "pid": 25148,
+        "already_exited": true
+      },
+      {
+        "pid": 24632,
+        "already_exited": true
+      },
+      {
+        "pid": 10040,
+        "already_exited": true
+      }
+    ],
+    "all_observed_processes_gone": true,
+    "harness_limitation": "First external cleanup killed the direct venv launcher; recursively owned interpreter may have remained until its5second self-limit. No unbounded fixture; no full410 started. ExtraCPU conservatively charged, not invented as a measured value.",
+    "CPU_post_monitor_fully_measured": false
+  },
+  "production_runtime_defect_proven": false,
+  "full410_executed": false,
+  "year_or_continuous_propagations": 0,
+  "remaining_mandatory_checks": "All relocated runtime/GUI/recovery/legacy/replay/fresh-year/continuous stages NOT_RUN",
+  "decision": "STOP; separate monitor/tooling impact review and qualification required before full410"
+}

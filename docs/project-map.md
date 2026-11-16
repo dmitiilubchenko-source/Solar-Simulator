@@ -215,3 +215,8 @@ preflight и exact-asset security review нового ZIP при неизмен�
 Исторический verifier сохранён; full410 не выполнялась. Измерения сопоставимых
 исторических задач обосновывают инженерный прогноз; новыйplan410v3 требует отдельного
 разрешения. Backup нового ZIP независимо подтверждён, scientific/releaseGO не заявлены.
+
+[Admission410](portable-acceptance-410.md): точный ZIP подтверждён, но frozen
+supervisor провалил bounded root-exit/descendant-cleanup test. Full relocated,
+GUI/year/continuous acceptance NOT_RUN; NO-GO до отдельного исправления надзора.
+Runtime/native/ZIP не менялись, численный дефект Solar этим не установлен.

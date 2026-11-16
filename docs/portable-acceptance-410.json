@@ -1,0 +1,302 @@
+{
+  "stage": 410,
+  "date": "2026-11-16",
+  "runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "source_environment_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "packaging_commit": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+  "archive": {
+    "archive": "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+    "archive_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+    "archive_size": 114633711,
+    "member_count": 6005,
+    "changed_old": [
+      "Physics Verification.cmd"
+    ],
+    "added": [
+      "CURRENT-040-VERIFICATION.json",
+      "verification-current040/README.md",
+      "verification-current040/manifest-v1.json",
+      "verification-current040/recompute_current040_v1.py"
+    ],
+    "runtime_unchanged": true,
+    "asset_contract_SHA256": "969f44ec9d596f0165e59d037d5dc16a593ab9f2151791cfc1dfdea8e881ca9e",
+    "source_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+    "full410_executed": false
+  },
+  "current_manifest_SHA256": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b",
+  "current_verifier_SHA256": "efa1a533483f24b2a7785330d5f3820d115a2b62c2781f333408db73e2cbe85a",
+  "acceptance_tool": {
+    "path": "C:\\Users\\Admin\\Desktop\\Solar-packaging-040-4095\\scripts\\check_portable.py",
+    "SHA256": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+    "optin": "--current040-manifest-sha256",
+    "default_historical_unchanged": true
+  },
+  "monitor": {
+    "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification409\\monitor200.py",
+    "SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+    "poll_seconds": 0.2,
+    "scope": "combined child/process tree plus supervisorCPU; sampled notOSquota; missingreceipt failclosed"
+  },
+  "verdicts": {
+    "ISOLATED_RUNTIME": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "GUI_DESKTOP": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "WORKER_RECOVERY": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "HISTORICAL_REPLAY": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "CURRENT_040_FRESH_YEAR": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "CONTINUOUS_YEAR": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "CATALOG_ACCEPTANCE": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "BACKWARD_COMPATIBILITY": "NOT_RUN_BLOCKED_MONITOR_ADMISSION",
+    "PORTABLE_INTEGRITY": "PASS_EXACT_SEALED_ZIP6005MEMBERS",
+    "SUPERVISOR_LIFECYCLE": "FAIL_KNOWN_LIVE_DESCENDANT_AFTER_COMPLETE",
+    "INDEPENDENT_AUDIT": "PASS_LIMITED_TO_ADMISSION_FAILURE_NOT_FULL_ACCEPTANCE",
+    "PORTABLE_ACCEPTANCE": "NO-GO_PREFLIGHT_MONITOR_FAILURE",
+    "APPLICATION_D1": "NO-GO_HISTORICAL_UNCHANGED",
+    "RELEASE_READINESS": "NO-GO"
+  },
+  "executed": [
+    "Exact ZIP/source/native/tooling/IC binding checks",
+    "Bounded synthetic root-exit/child-lifetime monitor contract test",
+    "Independent read-only raw/code/ZIP/cleanup audit"
+  ],
+  "full410_started": false,
+  "relocated_output_created": false,
+  "fresh_year": {
+    "status": "NOT_RUN",
+    "solver_executed": false,
+    "packets": null,
+    "duration_seconds": null,
+    "states": null,
+    "per_body_residuals": {
+      "Sun": null,
+      "Mercury": null,
+      "Venus": null,
+      "Earth": null,
+      "Moon": null,
+      "Mars": null,
+      "Jupiter": null,
+      "Saturn": null,
+      "Uranus": null,
+      "Neptune": null
+    },
+    "moon_relative_residual": null,
+    "stored_reproduction": null,
+    "energy_residual": null
+  },
+  "continuous_year": {
+    "status": "NOT_RUN"
+  },
+  "catalog": {
+    "status": "NOT_RUN"
+  },
+  "monitor_failure": {
+    "kind": "exact-monitor-root-exit-cleanup-contract",
+    "status": "FAIL",
+    "monitor_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+    "root_exit_code": 0,
+    "monitor_complete": true,
+    "descendant_alive_after_monitor_return": true,
+    "descendant": {
+      "pid": 24632,
+      "creation_time": 1794858718.7333145,
+      "parent_after_monitor": 25148,
+      "CPU_at_probe": 0.015625
+    },
+    "observed_by_monitor": [
+      {
+        "pid": 24632,
+        "creation_time": 1794858718.7333145,
+        "CPU_seconds": 0.015625,
+        "role": "analyzer_or_audit_descendant"
+      }
+    ],
+    "cleanup": {
+      "external_harness_killed": true,
+      "final_CPU": 0.015625,
+      "alive_after_cleanup": false
+    },
+    "fixture_self_limit_seconds": 5,
+    "full410_admission": false,
+    "production_orbits_executed": 0,
+    "meaning": "A known owned live descendant must not continue after the guard reports completion; post-return CPU must be accounted or explicitly terminated."
+  },
+  "independent_audit": {
+    "status": "CONFIRMED_MONITOR_ADMISSION_FAIL",
+    "exact_ZIP_CRC_native_SHA": "PASS",
+    "monitor_hash_unchanged": true,
+    "acceptance_tool_hash_unchanged": true,
+    "root_exit_code": 0,
+    "root_complete_flag": true,
+    "known_descendant_live_after_return": true,
+    "known_PID_creation_time_correlated": true,
+    "fixture_processes_now_gone": true,
+    "source_logic": "Guard polls only root; finally kills tree only if root is still alive. A root that has already exited skips descendant termination.",
+    "executed_harness_SHA256": "7249e2a10e6407c9e1b9f75dbf70c66e3414deef681373acd0f28399941a757e",
+    "test_cleanup_limitation": {
+      "executed_harness_SHA256": "7249e2a10e6407c9e1b9f75dbf70c66e3414deef681373acd0f28399941a757e",
+      "checks": [
+        {
+          "pid": 15816,
+          "already_exited": true
+        },
+        {
+          "pid": 25148,
+          "already_exited": true
+        },
+        {
+          "pid": 24632,
+          "already_exited": true
+        },
+        {
+          "pid": 10040,
+          "already_exited": true
+        }
+      ],
+      "all_observed_processes_gone": true,
+      "harness_limitation": "First external cleanup killed the direct venv launcher; recursively owned interpreter may have remained until its5second self-limit. No unbounded fixture; no full410 started. ExtraCPU conservatively charged, not invented as a measured value.",
+      "CPU_post_monitor_fully_measured": false
+    },
+    "production_runtime_defect_proven": false,
+    "full410_executed": false,
+    "year_or_continuous_propagations": 0,
+    "remaining_mandatory_checks": "All relocated runtime/GUI/recovery/legacy/replay/fresh-year/continuous stages NOT_RUN",
+    "decision": "STOP; separate monitor/tooling impact review and qualification required before full410"
+  },
+  "resources": {
+    "stage": 410,
+    "rows": [
+      {
+        "path": "cleanup-allowance-resources.json",
+        "charged_CPU_seconds": 6,
+        "charged_active_wall_seconds": 10,
+        "kind": "Conservative upper allowance for possible remaining oneCPU finite5second test worker plus startup/cleanup; not measured CPU"
+      },
+      {
+        "path": "initial-resources.json",
+        "charged_CPU_seconds": 5,
+        "charged_active_wall_seconds": 10,
+        "kind": "Conservativeinitialread/setup allowance, not measured CPU"
+      },
+      {
+        "path": "monitor-contract-resources.json",
+        "charged_CPU_seconds": 1.46875,
+        "charged_active_wall_seconds": 1.3323286999948323,
+        "monitor_record": {
+          "exit_code": 0,
+          "limit_reason": null,
+          "error": null,
+          "last_sample": {
+            "worker_cpu": 0.84375,
+            "parent_cpu": 0.0625,
+            "private_tree": 107958272,
+            "rss_tree": 64659456,
+            "disk": 10250,
+            "elapsed": 0.8448620000272058
+          },
+          "samples": 5,
+          "poll_seconds": 0.2,
+          "worker_CPU_seconds": 1.046875,
+          "root_final_CPU_seconds": 0.0,
+          "parent_supervision_CPU_seconds": 0.0625,
+          "parent_interjob_CPU_excluded": true,
+          "peak_private_tree_sampled": 107958272,
+          "processes": [
+            {
+              "pid": 15816,
+              "creation_time": 1794858718.6513867,
+              "CPU_seconds": 0.0,
+              "role": "launcher"
+            },
+            {
+              "pid": 25148,
+              "creation_time": 1794858718.6562548,
+              "CPU_seconds": 0.078125,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 24632,
+              "creation_time": 1794858718.7333145,
+              "CPU_seconds": 0.015625,
+              "role": "analyzer_or_audit_descendant"
+            },
+            {
+              "pid": 10040,
+              "creation_time": 1794858718.7370477,
+              "CPU_seconds": 0.953125,
+              "role": "analyzer_or_audit_descendant"
+            }
+          ],
+          "peak_rss_tree_sampled": 64659456,
+          "wall_seconds": 1.0469040999887511,
+          "disk_bytes": 10250,
+          "complete": true,
+          "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+        },
+        "descendant_CPU_after_monitor_extra": 0,
+        "tail_allowance": 0.25
+      },
+      {
+        "path": "preflight-allowance-resources.json",
+        "charged_CPU_seconds": 5,
+        "charged_active_wall_seconds": 10,
+        "kind": "Additional conservative exactSHA/FP/resourcepreflight allowance; no production integration"
+      }
+    ],
+    "charged_CPU_seconds": 37.46875,
+    "charged_active_wall_seconds": 71.33232869999483,
+    "final_allowance": {
+      "CPU_seconds": 20,
+      "active_wall_seconds": 40
+    },
+    "hard": {
+      "cpu_seconds": 900,
+      "wall_seconds": 1200,
+      "private_bytes": 2147483648,
+      "disk_bytes": 2147483648
+    },
+    "early": {
+      "cpu_seconds": 720,
+      "wall_seconds": 960,
+      "private_bytes": 1932735283,
+      "disk_bytes": 1932735283
+    },
+    "CPU_fully_measured": false,
+    "unmeasured_component": "Potential remaining finite fixture interpreter CPU after monitor completion. Conservative6CPU/10wall charged, not invented as measured CPU.",
+    "new_data_bytes": 20832,
+    "full410_runs": 0,
+    "scientific_propagations": 0
+  },
+  "impact": {
+    "confirmed_defect": "Supervisor completion/cleanup, not Solar numerical runtime",
+    "cause": "Loop ends when root exits; finally terminates descendants only while root still alive; completion ignores remaining descendants.",
+    "possible_consequences": [
+      "Owned GUI/native workers may continue outside reported budget after an early parent exit",
+      "FinalCPU and file manifests can be incomplete if background writers remain"
+    ],
+    "not_proven": [
+      "This happened in previous408/409.5",
+      "Solar itself leaks a worker in the normal lifecycle",
+      "Current numerical error or failed JPL thresholds"
+    ]
+  },
+  "minimal_next_fix": [
+    "Keep exact old monitor and thisFAIL. Create separately reviewed controller/monitor revision, newSHA and admission amendment; do not rebuild ZIP or touchphysics.",
+    "Track known PID+creation-time/handles afterroot exit; terminate/wait live owned descendants, then sample finalCPU and onlythencommit receipt. Report an unexpected orphan asFAIL.",
+    "Validate root0/nonzero/crash/interrupt/timeout, child/grandchild lifetimes and CPU before/aftercleanup; test short-lived descendants. Use OS job accounting only if required by demonstrated accounting gaps.",
+    "Preserve410spent ledger, caps, rawoutputs andoldplan; no automaticfullrun/retry inthisstage."
+  ],
+  "historical_science": {
+    "equivalence399": "28/28",
+    "numericalD1": "11/11",
+    "effects": "10/11",
+    "distance_AB": "0.244795m versus10m FAIL",
+    "strict380_FAIL": 3,
+    "short402_FAIL": 4,
+    "fullD1": "NO-GO",
+    "Q2scope": "ExperimentalNewton M-Qtotaldegree2; noQ2Q2/tides/dissipation/EIHmixed/universalbound"
+  },
+  "backup_status": "PENDING_NEW_EVIDENCE_ONLY_NO_ZIP_REUPLOAD",
+  "main_tag_LATEST_release_changed": false
+}
