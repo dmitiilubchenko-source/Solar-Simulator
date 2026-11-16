@@ -1,7 +1,7 @@
-#409.5 — current040-verifier и проверка portable-архива
+# 409.5 — current040-verifier и проверка portable-архива
 
 2026-11-16. **Current-source preflight и целостность нового ZIP — PASS.
-Полная410 и выпуск — NO-GO: ресурсный preflight годовых проверок не подтверждён.**
+Подготовка к отдельно разрешённой полной410 — GO. Сама410 не выполнялась; выпуск — NO-GO.**
 
 [Машинный отчёт](portable-verifier-and-backup-4095.json),
 [инструменты и компактные результаты](../scripts/qualification4095/README.md).
@@ -67,15 +67,55 @@ historical refusal и raw negative logs; короткий packaged Tk/native smo
 учтены CPU supervisor/детей и все отказы, плюс conservative allowances. Sampled
 memory не OSquota. Ни один cap не увеличивался. Backup имеет отдельный budget.
 
-Не выполнялись fresh-year/continuous/full410/3083/399/402. Прогноз настоящих
-годовых затрат exact040 не подтверждён замерами409: короткий smoke не даёт
-обоснованной экстраполяции. Поэтому RESOURCE PREFLIGHT UNRESOLVED; новый immutable
-план410 не создан, прежний заблокированный план409 сохранён. Для запуска нужна
-отдельная авторизация и обоснованный общий бюджет, включая надзор/IO/continuous.
+Не выполнялись fresh-year/continuous/full410/3083/399/402. Первоначальный
+resource preflight был UNRESOLVED. Последующий read-only аудит первичных
+измерений дал основание для инженерного прогноза: [метод/числа/ограничения](../scripts/qualification4095/resource-forecast410.json).
+Strict385:15.2282205с/499пакетов; его IC/settings/origin/units точно совпадают с новым
+bundle. Continuous-year:1.4635815с; settings/origin совпадают. Для354тел проверены
+все начальные координаты/скорости против первого сохранённого кадра, а
+settings совпадают после штатного dataclass-asdict представления. Diagnostic
+settings не являются checkpoint: проба поместить их в документ была правильно
+отклонена storage; никакие данные/схемы ради сравнения не исправлялись.
+
+Взято худшее измерение каталожных controller/IO-вариантов8.885131с, включая
+более дорогой restart. Численные затраты умножены на4 — явный инженерный запас,
+не измеренное замедление040 и не статистическая граница. С прочимиGUI/IO/bindings
+worker budget округлён до250CPU. Измеренный максимумCPUнадзора/wall0.7674
+округлён до0.8;450wall дают360CPU надзора, ещё40CPU резерв: **650CPU/450wall**.
+ПрогнозRAM1.5GiB выше actualsource408peak1.005GB; disk1GiB покрываетZIP/одну
+распаковку/workflows/raw/logs. Это нижеearly720/960/1.8GiB/1.8GiB. Предпосылки:
+не менее2доступныхlogicalCPU, тот жеПК и сопоставимая нагрузка, threadvars=1,
+свежий ограниченный output-root без чужого кеша. Actualcost может выйти за прогноз;
+guard обязан остановиться, сохранивpartial, без повышенияcaps илиskip проверок.
+
+[Новый immutableплан410v3](../scripts/qualification4095/acceptance410-plan-v3.json)
+фиксирует exactZIP/source/native/verifier/acceptance-tool/monitor SHA и
+обязательные fresh/continuous/GUI/recovery/compatibility проверки. Старыйplan409
+не изменён. Внутренние неисполненные metadata-черновикиv2 сохранены отдельно;
+после добавления exact-byte recoveryrecipe создан новый finalv3, без исполнения.
+Полная410 требует **отдельного разрешения владельца**. Прогноз основан на прежних
+замерах сопоставимых задач, а не на новом годовом PASS040.
 
 Historical39928/28; D1numerical11/11, effects10/11, distance_AB0.244795м вместо10м
 FAIL,3old380+4short402FAIL и fullD1NO-GO остаются. Нет универсальной ошибки или
 аттестации arbitrary Q2/реальных тел. Current binding — не scientific certification.
 
-Cloud backup новогоZIP пока PENDING отдельного bounded upload/readback.
+Cloud backup новогоZIP **VERIFIED**: независимое скачивание10объектов,
+сборка7частей из новых облачных байтов, полный SHA/размер114633711B и все6005CRC/SHA
+совпали. Evidence409.5 и Git-рецепт также скачаны/сверены; owner-only/parent/account
+проверены. [Cloud receipt](../scripts/qualification4095/cloud-verification.json),
+[исходные readback/resource receipts](../scripts/qualification4095/cloud-readback-receipts.json).
 Evidence409 не загружается повторно. Main/tag/LATEST/принятая032 не меняются.
+
+Итог подготовки:225.078125chargedCPU/176.022966activewall, включая20CPU40wall
+консервативного хвоста. Новый backup отдельно:58.281250chargedCPU/
+192.025008activewall; все hard/early caps соблюдены. Source/raw arrays,
+исторические FAIL, все ZIP и реальные error/partial receipts сохранены.
+
+**GO TO SEPARATELY AUTHORIZED FULL PORTABLE ACCEPTANCE410 — exact new ZIP,
+preflight verified, not scientific or release approval.** Source/security/cloud
+блокеры409 закрыты; ресурсный прогноз обоснован указанными измерениями и
+допущениями. Ни full410, ни новая научная квалификация, ни выпуск не заявлены. STOP.
+
+Two-Q2 остаётся экспериментальной Newton total-degree-two M–Q моделью без
+Q2–Q2, высших мультиполей, приливов, диссипации и совместных EIH/Q2-членов.

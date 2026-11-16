@@ -212,5 +212,6 @@ Main/tag/LATEST/release не изменены. [Инструменты и пла
 
 [Portable verifier409.5](portable-verifier-and-backup-4095.md): отдельный current040
 preflight и exact-asset security review нового ZIP при неизменном runtime/native.
-Исторический verifier сохранён; full410 не выполнялась, ресурсный прогноз годовых
-расчётов пока UNRESOLVED. Backup нового ZIP проверяется отдельным этапным budget.
+Исторический verifier сохранён; full410 не выполнялась. Измерения сопоставимых
+исторических задач обосновывают инженерный прогноз; новыйplan410v3 требует отдельного
+разрешения. Backup нового ZIP независимо подтверждён, scientific/releaseGO не заявлены.

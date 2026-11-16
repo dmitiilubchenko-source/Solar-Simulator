@@ -1,0 +1,789 @@
+{
+  "assemble-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 2.296875,
+        "parent_cpu": 0.15625,
+        "private_tree": 76505088,
+        "rss_tree": 71413760,
+        "disk": 230952606,
+        "elapsed": 2.358436000009533
+      },
+      "samples": 12,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 2.390625,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.15625,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 102944768,
+      "processes": [
+        {
+          "pid": 25692,
+          "creation_time": 1794851124.8332248,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 28552,
+          "creation_time": 1794851124.8381562,
+          "CPU_seconds": 2.390625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 92848128,
+      "wall_seconds": 2.564233899989631,
+      "disk_bytes": 230963741,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 2.890625,
+    "charged_active_wall_seconds": 2.8162430999800563,
+    "total_CPU": 38.28125,
+    "total_wall": 152.02500809992617
+  },
+  "connector-resources.json": {
+    "wall_seconds": 93.208,
+    "meaning": "Measured connector call wall, service CPU not measured"
+  },
+  "evidence-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.125,
+        "parent_cpu": 0.046875,
+        "private_tree": 25427968,
+        "rss_tree": 33157120,
+        "disk": 116311099,
+        "elapsed": 0.6517666000290774
+      },
+      "samples": 4,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.140625,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.046875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 25427968,
+      "processes": [
+        {
+          "pid": 30764,
+          "creation_time": 1794851020.46197,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 37872,
+          "creation_time": 1794851020.4656749,
+          "CPU_seconds": 0.140625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33157120,
+      "wall_seconds": 0.8569701000233181,
+      "disk_bytes": 116311099,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.546875,
+    "charged_active_wall_seconds": 1.1094443000038154,
+    "total_CPU": 34.890625,
+    "total_wall": 114.23406279994593
+  },
+  "initial-resources.json": {
+    "charged_CPU_seconds": 5,
+    "charged_active_wall_seconds": 10,
+    "kind": "Conservativeinitialsetupallowance"
+  },
+  "manifest-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.109375,
+        "parent_cpu": 0.046875,
+        "private_tree": 24870912,
+        "rss_tree": 32813056,
+        "disk": 115498970,
+        "elapsed": 0.4369881000020541
+      },
+      "samples": 3,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.125,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 0.046875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24870912,
+      "processes": [
+        {
+          "pid": 23452,
+          "creation_time": 1794851016.562426,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 24984,
+          "creation_time": 1794851016.566712,
+          "CPU_seconds": 0.109375,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 32813056,
+      "wall_seconds": 0.644295299978694,
+      "disk_bytes": 115501441,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.515625,
+    "charged_active_wall_seconds": 0.8961029000056442,
+    "total_CPU": 34.34375,
+    "total_wall": 113.12461849994212
+  },
+  "part01-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.1875,
+        "parent_cpu": 0.109375,
+        "private_tree": 24928256,
+        "rss_tree": 33128448,
+        "disk": 16957204,
+        "elapsed": 2.5230844000179786
+      },
+      "samples": 13,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.265625,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.109375,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24928256,
+      "processes": [
+        {
+          "pid": 8756,
+          "creation_time": 1794850923.9623408,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 29796,
+          "creation_time": 1794850923.9660788,
+          "CPU_seconds": 0.265625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33128448,
+      "wall_seconds": 2.7255796000245027,
+      "disk_bytes": 17613913,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.75,
+    "charged_active_wall_seconds": 2.9779648999974597,
+    "total_CPU": 30.015625,
+    "total_wall": 96.30844149999972
+  },
+  "part02-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.15625,
+        "parent_cpu": 0.09375,
+        "private_tree": 24920064,
+        "rss_tree": 33140736,
+        "disk": 34394041,
+        "elapsed": 2.552095899998676
+      },
+      "samples": 13,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.171875,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.09375,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24920064,
+      "processes": [
+        {
+          "pid": 27836,
+          "creation_time": 1794850946.618229,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 28152,
+          "creation_time": 1794850946.6219673,
+          "CPU_seconds": 0.171875,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33140736,
+      "wall_seconds": 2.7543234000040684,
+      "disk_bytes": 34395404,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.65625,
+    "charged_active_wall_seconds": 3.0069574999797624,
+    "total_CPU": 30.671875,
+    "total_wall": 99.31539899997948
+  },
+  "part03-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.203125,
+        "parent_cpu": 0.078125,
+        "private_tree": 24932352,
+        "rss_tree": 33120256,
+        "disk": 50651243,
+        "elapsed": 1.9081402999872807
+      },
+      "samples": 10,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.21875,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.09375,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24932352,
+      "processes": [
+        {
+          "pid": 34100,
+          "creation_time": 1794850954.1480608,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 34000,
+          "creation_time": 1794850954.1519592,
+          "CPU_seconds": 0.21875,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33120256,
+      "wall_seconds": 2.1114251000108197,
+      "disk_bytes": 51176892,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.640625,
+    "charged_active_wall_seconds": 2.363609499996528,
+    "total_CPU": 31.3125,
+    "total_wall": 101.679008499976
+  },
+  "part04-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.203125,
+        "parent_cpu": 0.171875,
+        "private_tree": 24948736,
+        "rss_tree": 33136640,
+        "disk": 64549145,
+        "elapsed": 3.191877500008559
+      },
+      "samples": 16,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.25,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.171875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24948736,
+      "processes": [
+        {
+          "pid": 32004,
+          "creation_time": 1794850963.1779833,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 19152,
+          "creation_time": 1794850963.182064,
+          "CPU_seconds": 0.25,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33136640,
+      "wall_seconds": 3.40180020002299,
+      "disk_bytes": 67958378,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.75,
+    "charged_active_wall_seconds": 3.653683699987596,
+    "total_CPU": 32.0625,
+    "total_wall": 105.3326921999636
+  },
+  "part05-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.171875,
+        "parent_cpu": 0.125,
+        "private_tree": 24887296,
+        "rss_tree": 33091584,
+        "disk": 83427763,
+        "elapsed": 2.755475899990415
+      },
+      "samples": 14,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.1875,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 0.140625,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24887296,
+      "processes": [
+        {
+          "pid": 11964,
+          "creation_time": 1794850985.174608,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 23460,
+          "creation_time": 1794850985.1783984,
+          "CPU_seconds": 0.171875,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33091584,
+      "wall_seconds": 2.9593060999759473,
+      "disk_bytes": 84739844,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.671875,
+    "charged_active_wall_seconds": 3.211613599996781,
+    "total_CPU": 32.734375,
+    "total_wall": 108.54430579996038
+  },
+  "part06-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.109375,
+        "parent_cpu": 0.0625,
+        "private_tree": 24870912,
+        "rss_tree": 33107968,
+        "disk": 100536949,
+        "elapsed": 1.4872236999799497
+      },
+      "samples": 8,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.140625,
+      "root_final_CPU_seconds": 0.03125,
+      "parent_supervision_CPU_seconds": 0.0625,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24870912,
+      "processes": [
+        {
+          "pid": 8908,
+          "creation_time": 1794850991.9987507,
+          "CPU_seconds": 0.03125,
+          "role": "launcher"
+        },
+        {
+          "pid": 34928,
+          "creation_time": 1794850992.0025764,
+          "CPU_seconds": 0.109375,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33107968,
+      "wall_seconds": 1.6931247999891639,
+      "disk_bytes": 101521352,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.578125,
+    "charged_active_wall_seconds": 1.9454829999885987,
+    "total_CPU": 33.3125,
+    "total_wall": 110.48978879994898
+  },
+  "part07-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.125,
+        "parent_cpu": 0.03125,
+        "private_tree": 24895488,
+        "rss_tree": 33087488,
+        "disk": 115024696,
+        "elapsed": 1.2814374000008684
+      },
+      "samples": 7,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.140625,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.046875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24895488,
+      "processes": [
+        {
+          "pid": 5264,
+          "creation_time": 1794850997.5256972,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 32508,
+          "creation_time": 1794850997.52961,
+          "CPU_seconds": 0.140625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 33087488,
+      "wall_seconds": 1.4865522000181954,
+      "disk_bytes": 115496058,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.515625,
+    "charged_active_wall_seconds": 1.7387267999874894,
+    "total_CPU": 33.828125,
+    "total_wall": 112.22851559993647
+  },
+  "prepare-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 22.90625,
+        "parent_cpu": 0.953125,
+        "private_tree": 188260352,
+        "rss_tree": 160555008,
+        "disk": 808909,
+        "elapsed": 23.952447999996366
+      },
+      "samples": 116,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 22.96875,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.96875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 230809600,
+      "processes": [
+        {
+          "pid": 32896,
+          "creation_time": 1794850724.9280655,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 17900,
+          "creation_time": 1794850724.931281,
+          "CPU_seconds": 2.171875,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 30816,
+          "creation_time": 1794850726.3797195,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 33632,
+          "creation_time": 1794850726.38558,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 32472,
+          "creation_time": 1794850727.198919,
+          "CPU_seconds": 0.3125,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 23264,
+          "creation_time": 1794850727.4729662,
+          "CPU_seconds": 20.375,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 36052,
+          "creation_time": 1794850727.7020094,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 10552,
+          "creation_time": 1794850727.7079012,
+          "CPU_seconds": 0.0,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 12036,
+          "creation_time": 1794850727.7170975,
+          "CPU_seconds": 0.015625,
+          "role": "analyzer_or_audit_descendant"
+        },
+        {
+          "pid": 16000,
+          "creation_time": 1794850727.724758,
+          "CPU_seconds": 0.0625,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 186380288,
+      "wall_seconds": 24.159716499998467,
+      "disk_bytes": 820382,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 24.265625,
+    "charged_active_wall_seconds": 24.412476600002265,
+    "total_CPU": 29.265625,
+    "total_wall": 34.412476600002265
+  },
+  "recipe-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.09375,
+        "parent_cpu": 0.015625,
+        "private_tree": 24707072,
+        "rss_tree": 32047104,
+        "disk": 116314015,
+        "elapsed": 0.22632239997619763
+      },
+      "samples": 2,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.140625,
+      "root_final_CPU_seconds": 0.046875,
+      "parent_supervision_CPU_seconds": 0.03125,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24707072,
+      "processes": [
+        {
+          "pid": 29264,
+          "creation_time": 1794851024.2662013,
+          "CPU_seconds": 0.046875,
+          "role": "launcher"
+        },
+        {
+          "pid": 37272,
+          "creation_time": 1794851024.2707164,
+          "CPU_seconds": 0.09375,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 32047104,
+      "wall_seconds": 0.43154219997813925,
+      "disk_bytes": 116315982,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.5,
+    "charged_active_wall_seconds": 0.6847022000001743,
+    "total_CPU": 35.390625,
+    "total_wall": 114.9187649999461
+  },
+  "downloads\\evidence-completion.json": {
+    "label": "evidence",
+    "id": "1WhwTFuXprUEY8KtrOLcxu3LQVseJUCo8",
+    "name": "Solar-Simulator-4095-evidence-20261116.zip",
+    "expected_SHA256": "5d688719ce55329b8cbf5d6c100cc3737db85c94577b6f5f0e99babca9d99fd3",
+    "expected_size": 805377,
+    "actual_SHA256": "5d688719ce55329b8cbf5d6c100cc3737db85c94577b6f5f0e99babca9d99fd3",
+    "actual_size": 805377,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794851020.5326848,
+    "end_timestamp": 1794851021.1089854,
+    "response": {
+      "status": 200,
+      "content_length": "805377",
+      "content_type": "application/zip"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\manifest-completion.json": {
+    "label": "manifest",
+    "id": "10GpUvi5E1JspZUUwyUMpwhy1p_Lraqjg",
+    "name": "33114f5ac2234e01.parts.json",
+    "expected_SHA256": "c906e49b6e57f3cc39fe426f9ff985576e4b5924aa2e6440dd61b1d71ef574c8",
+    "expected_size": 1162,
+    "actual_SHA256": "c906e49b6e57f3cc39fe426f9ff985576e4b5924aa2e6440dd61b1d71ef574c8",
+    "actual_size": 1162,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794851016.6373525,
+    "end_timestamp": 1794851017.0611548,
+    "response": {
+      "status": 200,
+      "content_length": "1162",
+      "content_type": "application/json"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\part01-completion.json": {
+    "label": "part01",
+    "id": "1R9yQqJvWDlpkwj3hf45SpPQ2-yRDUI76",
+    "name": "33114f5ac2234e01-part0001-of0007.bin",
+    "expected_SHA256": "4fcff8853af56b0f2184c1cf317c4e343d0dda7590acd167e8c27a56761b3d02",
+    "expected_size": 16777216,
+    "actual_SHA256": "4fcff8853af56b0f2184c1cf317c4e343d0dda7590acd167e8c27a56761b3d02",
+    "actual_size": 16777216,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794850924.0374053,
+    "end_timestamp": 1794850926.5705082,
+    "response": {
+      "status": 200,
+      "content_length": "16777216",
+      "content_type": "application/x-zip"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\part02-completion.json": {
+    "label": "part02",
+    "id": "1okNer6cX3Ftf1nIHtVlY2dIwN3fhSta5",
+    "name": "33114f5ac2234e01-part0002-of0007.bin",
+    "expected_SHA256": "5f3a4be900e5e4943d80911f12369f1dee7233bb3717b6762fff2ea805ebbaf9",
+    "expected_size": 16777216,
+    "actual_SHA256": "5f3a4be900e5e4943d80911f12369f1dee7233bb3717b6762fff2ea805ebbaf9",
+    "actual_size": 16777216,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794850946.6921892,
+    "end_timestamp": 1794850949.1700113,
+    "response": {
+      "status": 200,
+      "content_length": "16777216",
+      "content_type": "application/octet-stream"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\part03-completion.json": {
+    "label": "part03",
+    "id": "1nb0ucMa3ipAiwudSOj0z0EIWlhJTeYXT",
+    "name": "33114f5ac2234e01-part0003-of0007.bin",
+    "expected_SHA256": "b94709896b0f8616d5fb684b715f499bc6fd5e3518a3883914b7f6d13a49e4c9",
+    "expected_size": 16777216,
+    "actual_SHA256": "b94709896b0f8616d5fb684b715f499bc6fd5e3518a3883914b7f6d13a49e4c9",
+    "actual_size": 16777216,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794850954.2230926,
+    "end_timestamp": 1794850956.077113,
+    "response": {
+      "status": 200,
+      "content_length": "16777216",
+      "content_type": "application/octet-stream"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\part04-completion.json": {
+    "label": "part04",
+    "id": "15SaE-mUDcSEkbM2POvOnxzmQzP8Z3mBC",
+    "name": "33114f5ac2234e01-part0004-of0007.bin",
+    "expected_SHA256": "4b1d7e91e9fc844b1d0b6a2354d985dae6769940efa54e36337b90918be1c621",
+    "expected_size": 16777216,
+    "actual_SHA256": "4b1d7e91e9fc844b1d0b6a2354d985dae6769940efa54e36337b90918be1c621",
+    "actual_size": 16777216,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794850963.2499223,
+    "end_timestamp": 1794850966.551865,
+    "response": {
+      "status": 200,
+      "content_length": "16777216",
+      "content_type": "application/octet-stream"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\part05-completion.json": {
+    "label": "part05",
+    "id": "1YQSqug0hiVf7aO7uPAzoVE48Q1u6ZFWl",
+    "name": "33114f5ac2234e01-part0005-of0007.bin",
+    "expected_SHA256": "bc39a4d4748a978d9e2b2078448fb57ad605622528dca0cbd2b15858de71dc8c",
+    "expected_size": 16777216,
+    "actual_SHA256": "bc39a4d4748a978d9e2b2078448fb57ad605622528dca0cbd2b15858de71dc8c",
+    "actual_size": 16777216,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794850985.250475,
+    "end_timestamp": 1794850988.0728395,
+    "response": {
+      "status": 200,
+      "content_length": "16777216",
+      "content_type": "application/octet-stream"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\part06-completion.json": {
+    "label": "part06",
+    "id": "1nKPPQMtN5EBG_wqcNv9X98rjfuQ104HP",
+    "name": "33114f5ac2234e01-part0006-of0007.bin",
+    "expected_SHA256": "7568832085099bb7218989dc2bd2fb49e4b5a5608c0b0d435526bbfec9495c49",
+    "expected_size": 16777216,
+    "actual_SHA256": "7568832085099bb7218989dc2bd2fb49e4b5a5608c0b0d435526bbfec9495c49",
+    "actual_size": 16777216,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794850992.0718477,
+    "end_timestamp": 1794850993.5979772,
+    "response": {
+      "status": 200,
+      "content_length": "16777216",
+      "content_type": "application/octet-stream"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\part07-completion.json": {
+    "label": "part07",
+    "id": "1sqweGY-ZZmTlXkTsVAcTRkzx01gSPtjb",
+    "name": "33114f5ac2234e01-part0007-of0007.bin",
+    "expected_SHA256": "a5cfa75d5cad5f7bb1d6dbcf8df8cf80ec9b33f1a3ff44de302262e177601c4a",
+    "expected_size": 13970415,
+    "actual_SHA256": "a5cfa75d5cad5f7bb1d6dbcf8df8cf80ec9b33f1a3ff44de302262e177601c4a",
+    "actual_size": 13970415,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794850997.5988925,
+    "end_timestamp": 1794850998.8519073,
+    "response": {
+      "status": 200,
+      "content_length": "13970415",
+      "content_type": "application/octet-stream"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "downloads\\recipe-completion.json": {
+    "label": "recipe",
+    "id": "13DZTLcR2cR7UCkLMQKgh7xAJ8Y_kwyXy",
+    "name": "Solar-Simulator-recovery-aaa8d4dd9a8aad268917c2311a30ddb543df8544.json",
+    "expected_SHA256": "f945512a870ba2d538958f34ada646f9c20bb5056a702b2d243f1dda43839eb1",
+    "expected_size": 582,
+    "actual_SHA256": "f945512a870ba2d538958f34ada646f9c20bb5056a702b2d243f1dda43839eb1",
+    "actual_size": 582,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794851024.3388073,
+    "end_timestamp": 1794851024.6270435,
+    "response": {
+      "status": 200,
+      "content_length": "582",
+      "content_type": "application/json"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  }
+}

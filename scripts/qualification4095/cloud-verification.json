@@ -1,0 +1,462 @@
+{
+  "stage": "409.5",
+  "status": "CLOUD_PORTABLE_VERIFIED",
+  "archive_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "archive_size": 114633711,
+  "member_count": 6005,
+  "evidence_member_count": 86,
+  "part_count": 7,
+  "objects": [
+    {
+      "i": 0,
+      "row": {
+        "name": "33114f5ac2234e01-part0001-of0007.bin",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01-part0001-of0007.bin",
+        "size": 16777216,
+        "sha256": "4fcff8853af56b0f2184c1cf317c4e343d0dda7590acd167e8c27a56761b3d02",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "1R9yQqJvWDlpkwj3hf45SpPQ2-yRDUI76",
+        "title": "33114f5ac2234e01-part0001-of0007.bin",
+        "mime_type": null,
+        "size": "16777216",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1R9yQqJvWDlpkwj3hf45SpPQ2-yRDUI76"
+    },
+    {
+      "i": 1,
+      "row": {
+        "name": "33114f5ac2234e01-part0002-of0007.bin",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01-part0002-of0007.bin",
+        "size": 16777216,
+        "sha256": "5f3a4be900e5e4943d80911f12369f1dee7233bb3717b6762fff2ea805ebbaf9",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "1okNer6cX3Ftf1nIHtVlY2dIwN3fhSta5",
+        "title": "33114f5ac2234e01-part0002-of0007.bin",
+        "mime_type": null,
+        "size": "16777216",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1okNer6cX3Ftf1nIHtVlY2dIwN3fhSta5"
+    },
+    {
+      "i": 2,
+      "row": {
+        "name": "33114f5ac2234e01-part0003-of0007.bin",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01-part0003-of0007.bin",
+        "size": 16777216,
+        "sha256": "b94709896b0f8616d5fb684b715f499bc6fd5e3518a3883914b7f6d13a49e4c9",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "1nb0ucMa3ipAiwudSOj0z0EIWlhJTeYXT",
+        "title": "33114f5ac2234e01-part0003-of0007.bin",
+        "mime_type": null,
+        "size": "16777216",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1nb0ucMa3ipAiwudSOj0z0EIWlhJTeYXT"
+    },
+    {
+      "i": 3,
+      "row": {
+        "name": "33114f5ac2234e01-part0004-of0007.bin",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01-part0004-of0007.bin",
+        "size": 16777216,
+        "sha256": "4b1d7e91e9fc844b1d0b6a2354d985dae6769940efa54e36337b90918be1c621",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "15SaE-mUDcSEkbM2POvOnxzmQzP8Z3mBC",
+        "title": "33114f5ac2234e01-part0004-of0007.bin",
+        "mime_type": null,
+        "size": "16777216",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "15SaE-mUDcSEkbM2POvOnxzmQzP8Z3mBC"
+    },
+    {
+      "i": 4,
+      "row": {
+        "name": "33114f5ac2234e01-part0005-of0007.bin",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01-part0005-of0007.bin",
+        "size": 16777216,
+        "sha256": "bc39a4d4748a978d9e2b2078448fb57ad605622528dca0cbd2b15858de71dc8c",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "1YQSqug0hiVf7aO7uPAzoVE48Q1u6ZFWl",
+        "title": "33114f5ac2234e01-part0005-of0007.bin",
+        "mime_type": null,
+        "size": "16777216",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1YQSqug0hiVf7aO7uPAzoVE48Q1u6ZFWl"
+    },
+    {
+      "i": 5,
+      "row": {
+        "name": "33114f5ac2234e01-part0006-of0007.bin",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01-part0006-of0007.bin",
+        "size": 16777216,
+        "sha256": "7568832085099bb7218989dc2bd2fb49e4b5a5608c0b0d435526bbfec9495c49",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "1nKPPQMtN5EBG_wqcNv9X98rjfuQ104HP",
+        "title": "33114f5ac2234e01-part0006-of0007.bin",
+        "mime_type": null,
+        "size": "16777216",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1nKPPQMtN5EBG_wqcNv9X98rjfuQ104HP"
+    },
+    {
+      "i": 6,
+      "row": {
+        "name": "33114f5ac2234e01-part0007-of0007.bin",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01-part0007-of0007.bin",
+        "size": 13970415,
+        "sha256": "a5cfa75d5cad5f7bb1d6dbcf8df8cf80ec9b33f1a3ff44de302262e177601c4a",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "1sqweGY-ZZmTlXkTsVAcTRkzx01gSPtjb",
+        "title": "33114f5ac2234e01-part0007-of0007.bin",
+        "mime_type": null,
+        "size": "13970415",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1sqweGY-ZZmTlXkTsVAcTRkzx01gSPtjb"
+    },
+    {
+      "i": 7,
+      "row": {
+        "name": "33114f5ac2234e01.parts.json",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\parts\\33114f5ac2234e01.parts.json",
+        "size": 1162,
+        "sha256": "c906e49b6e57f3cc39fe426f9ff985576e4b5924aa2e6440dd61b1d71ef574c8",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "10GpUvi5E1JspZUUwyUMpwhy1p_Lraqjg",
+        "title": "33114f5ac2234e01.parts.json",
+        "mime_type": null,
+        "size": "1162",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "10GpUvi5E1JspZUUwyUMpwhy1p_Lraqjg"
+    },
+    {
+      "i": 8,
+      "row": {
+        "name": "Solar-Simulator-4095-evidence-20261116.zip",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-backup-20261116\\Solar-Simulator-4095-evidence-20261116.zip",
+        "size": 805377,
+        "sha256": "5d688719ce55329b8cbf5d6c100cc3737db85c94577b6f5f0e99babca9d99fd3",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "1WhwTFuXprUEY8KtrOLcxu3LQVseJUCo8",
+        "title": "Solar-Simulator-4095-evidence-20261116.zip",
+        "mime_type": null,
+        "size": "805377",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "1WhwTFuXprUEY8KtrOLcxu3LQVseJUCo8"
+    },
+    {
+      "i": 9,
+      "row": {
+        "name": "Solar-Simulator-recovery-aaa8d4dd9a8aad268917c2311a30ddb543df8544.json",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\Solar-Simulator-recovery-aaa8d4dd9a8aad268917c2311a30ddb543df8544.json",
+        "size": 582,
+        "sha256": "f945512a870ba2d538958f34ada646f9c20bb5056a702b2d243f1dda43839eb1",
+        "status": "PENDING_UPLOAD"
+      },
+      "metadata": {
+        "id": "13DZTLcR2cR7UCkLMQKgh7xAJ8Y_kwyXy",
+        "title": "Solar-Simulator-recovery-aaa8d4dd9a8aad268917c2311a30ddb543df8544.json",
+        "mime_type": null,
+        "size": "582",
+        "url": null,
+        "file_or_folder": null,
+        "created_time": null,
+        "modified_time": null,
+        "parent_ids": [
+          "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI"
+        ],
+        "drive_id": null,
+        "current_user_can_share": null,
+        "has_augmented_permissions": null,
+        "shared": null,
+        "permissions": [
+          {
+            "type": "user",
+            "role": "owner",
+            "emailAddress": "dmitiilubchenko@gmail.com",
+            "domain": null,
+            "displayName": "Dmitriy Lubchenko",
+            "allowFileDiscovery": null
+          }
+        ],
+        "source_visibility_status": "permission_metadata_available"
+      },
+      "id": "13DZTLcR2cR7UCkLMQKgh7xAJ8Y_kwyXy"
+    }
+  ],
+  "transport": {
+    "format": "transport-parts-v1",
+    "name": "SolarSimulator-0.4.0-20261116-4095.zip",
+    "size": 114633711,
+    "sha256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+    "parts": [
+      {
+        "name": "33114f5ac2234e01-part0001-of0007.bin",
+        "size": 16777216,
+        "sha256": "4fcff8853af56b0f2184c1cf317c4e343d0dda7590acd167e8c27a56761b3d02"
+      },
+      {
+        "name": "33114f5ac2234e01-part0002-of0007.bin",
+        "size": 16777216,
+        "sha256": "5f3a4be900e5e4943d80911f12369f1dee7233bb3717b6762fff2ea805ebbaf9"
+      },
+      {
+        "name": "33114f5ac2234e01-part0003-of0007.bin",
+        "size": 16777216,
+        "sha256": "b94709896b0f8616d5fb684b715f499bc6fd5e3518a3883914b7f6d13a49e4c9"
+      },
+      {
+        "name": "33114f5ac2234e01-part0004-of0007.bin",
+        "size": 16777216,
+        "sha256": "4b1d7e91e9fc844b1d0b6a2354d985dae6769940efa54e36337b90918be1c621"
+      },
+      {
+        "name": "33114f5ac2234e01-part0005-of0007.bin",
+        "size": 16777216,
+        "sha256": "bc39a4d4748a978d9e2b2078448fb57ad605622528dca0cbd2b15858de71dc8c"
+      },
+      {
+        "name": "33114f5ac2234e01-part0006-of0007.bin",
+        "size": 16777216,
+        "sha256": "7568832085099bb7218989dc2bd2fb49e4b5a5608c0b0d435526bbfec9495c49"
+      },
+      {
+        "name": "33114f5ac2234e01-part0007-of0007.bin",
+        "size": 13970415,
+        "sha256": "a5cfa75d5cad5f7bb1d6dbcf8df8cf80ec9b33f1a3ff44de302262e177601c4a"
+      }
+    ]
+  },
+  "account": "dmitiilubchenko@gmail.com",
+  "parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+  "owner_only": true,
+  "CRC_SHA_all_members": true,
+  "original409_not_uploaded": true,
+  "no_full410": true,
+  "resources": {
+    "charged_CPU": 58.28125,
+    "charged_active_wall": 192.02500809992617,
+    "final_allowance_CPU": 20,
+    "final_allowance_wall": 40,
+    "private_tree_sampled_peak": 230809600,
+    "new_bytes_in_C": 230966208,
+    "new_external_parts": 114633711,
+    "connector_wall_seconds": 93.208,
+    "limitation": "Sampled not OSquota; child/supervisor CPU and conservative allowances included; remote connector service CPU unavailable, connector wall included"
+  },
+  "originals_preserved": true
+}

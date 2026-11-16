@@ -1,0 +1,15 @@
+{
+  "stage": "409.5",
+  "status": "FINAL_READ_ONLY_AUDIT_GO_FOR_SEPARATE410_AUTHORIZATION",
+  "actual_archive_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "cloud_matches_actual_archive": true,
+  "runtime_and_native_identity": "Previous independent auditor and6005fresh cloud members unchanged",
+  "forecast_primary_inputs_rechecked": true,
+  "plan_SHA256": "bab75d953b359dd36a476d32817d1adf95bc841d10cc540fdf5bc3065d2a3026",
+  "no_full410": true,
+  "not_scientific_or_release_approval": true,
+  "forecast_evidence_SHA256": "ec83c19cf3574bdbba490e6a18ac9360ae61618bb49ba280935a5576a8190e4d",
+  "source408_actual_private_peak_verified": true,
+  "plan_path": "scripts/qualification4095/acceptance410-plan-v3.json",
+  "planning_drafts_preserved_unexecuted": true
+}

@@ -1,0 +1,9 @@
+{
+  "repository": "dmitiilubchenko-source/Solar-Simulator",
+  "commit": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+  "path": "scripts/check_portable.py",
+  "raw_SHA256": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+  "canonical_SHA256": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+  "CRLF_line_indices_zero_based": [],
+  "instructions": "Read git show commit:path as bytes, splitlines keepends=True, replace final LF by CRLF on listed zero-based line indices. Compare raw_SHA256. Never change a sealed expectedSHA to accept a different checkout."
+}

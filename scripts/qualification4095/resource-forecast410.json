@@ -1,0 +1,67 @@
+{
+  "kind": "resource-forecast410-v1",
+  "status": "ENGINEERING_PREFLIGHT_GO_NOT_EXECUTION_OR_COST_GUARANTEE",
+  "inputs": {
+    "strict385": {
+      "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\.tools\\qualification385\\retry\\run-current\\rust_strict20-receipt.json",
+      "sha256": "a890c5ad8e88064e2661f773d50b195d0d8e996bb5c362f31040d67e56ca61dc"
+    },
+    "continuous": {
+      "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\docs\\continuous-integration-validation.json",
+      "sha256": "043164cf12c2271f4ba29ac345b82eb2cb7cf3e2453641e3212b66abab85b871"
+    },
+    "source408": {
+      "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\docs\\release-source-acceptance-408.json",
+      "sha256": "69669808fb7068edf9d86eb823423c7c99b9cf261d7266705e1f9e04964ba9ed"
+    }
+  },
+  "measurements": {
+    "strict385_wall_seconds": 15.228220499993768,
+    "strict385_packets": 499,
+    "continuous_year_wall_seconds": 1.4635814999928698,
+    "catalog_worst_measured_wall_seconds": 8.885130999988178,
+    "supervision_CPU_per_wall_max": 0.7673649708994352,
+    "source408_sampled_private_peak": 1004916736
+  },
+  "comparability": {
+    "strict_IC_settings_origin_units_exact": true,
+    "continuous_year_settings_origin_exact": true,
+    "catalog_settings_dataclass_normalization_exact": true,
+    "catalog_354_IC_matches_saved_first_state": true,
+    "ABI_and_numerical_dependencies_same_family": true,
+    "native040_binary_differs_from_old_measurement": true
+  },
+  "calculation": {
+    "numeric_base_wall": 25.576932999974815,
+    "numeric_variation_allowance": 4,
+    "GUI_bindings_replay_copy_IO_worker_allowance_CPU": 100,
+    "rounded_worker_CPU_budget": 250,
+    "operational_wall_allowance": 450,
+    "supervisor_CPU_rate_allowance": 0.8,
+    "supervisor_CPU_budget": 360,
+    "final_CPU_allowance": 40,
+    "total_CPU": 650
+  },
+  "forecast": {
+    "CPU_seconds": 650,
+    "active_wall_seconds": 450,
+    "private_bytes": 1610612736,
+    "new_data_bytes": 1073741824
+  },
+  "assumptions": [
+    "Factor4 is an engineering variability allowance, not an empirical quantile or a proven bound for040.",
+    "Thread variables OMP/OPENBLAS/MKL=1; at least2 available logical CPUs, no concurrent qualification.",
+    "Monitor only a fresh dedicated relocated output root; at most14000 files. Current measured max ratio0.768 rounded to0.8.",
+    "1.5GiB private allowance exceeds the observed exact040 source408 peak (~1.005GB); imports are already verified in packaged040.",
+    "1GiB disk allowance exceeds ZIP+one ~321MB runtime, workflows/raw/logs; full source tests/duplicated test runtime are excluded.",
+    "Before start recheck environment/load/freeRAM/disk and absence of stale receipts. Abort rather than extend budgets or skip probes."
+  ],
+  "limitations": [
+    "Historical timings are not measurements of completed040 full410.",
+    "No hard statistical upper cost bound; sampled memory is not an OS quota.",
+    "Actual resource or scientific FAIL must be retained without automatic retries/criteria changes."
+  ],
+  "no_new_integrations": true,
+  "no_source_or_physical_criteria_changes": true,
+  "current_logical_cpu_count": 16
+}

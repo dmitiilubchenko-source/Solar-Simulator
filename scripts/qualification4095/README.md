@@ -34,5 +34,10 @@ Synthetic secret/unsafe archive fixtures and the full duplicate test runtime
 stay local; preserve their hashes/exclusions, not an automatic cloud upload.
 Source recovery is Git; original qualified wheel remains the existing407V asset.
 
-Full410 resource forecast remains unresolved. Do not create/admit a new410 plan
-or run it automatically. Read the report for exact new ZIP/hash and backup status.
+Initial independent-audit.json is an intermediate pre-forecast snapshot. Final
+resource-forecast410.json rechecks primary historic IC/model/timing data;
+acceptance410-plan-v3.json is the authoritative new immutable plan, not executed.
+Its engineering estimate is not a guaranteed cost bound or scientific PASS.
+Read final-audit.json and the report. Require separate owner authorization for410.
+Restore exact acceptance-tool raw EOLs using tooling-raw-recovery.json; do not
+replace a sealed SHA to accept a different checkout.
