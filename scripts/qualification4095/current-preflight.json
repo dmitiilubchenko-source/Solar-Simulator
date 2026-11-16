@@ -1,0 +1,8 @@
+{
+  "status": "PREFLIGHT_PASS_NOT_SCIENTIFIC",
+  "folder": "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-4095",
+  "manifest_SHA256": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b",
+  "packaging_commit": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+  "historical_guard_refused": true,
+  "scientific_integrations": 0
+}

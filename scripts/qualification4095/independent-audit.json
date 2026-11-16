@@ -1,0 +1,16 @@
+{
+  "independent_ZIP_SHA_CRC": "PASS",
+  "member_count": 6005,
+  "old_runtime_and_historical_bundle_byte_identity": "PASS",
+  "source237_and_native_unchanged": true,
+  "tooling_diff": [
+    "scripts/check_portable.py",
+    "scripts/prepare_current040_v1.py",
+    "scripts/recompute_current040_v1.py"
+  ],
+  "raw_verifier_refusals_checked": 19,
+  "short_packaged_Tk_native_smoke": "PASS",
+  "full410_executed": false,
+  "fresh_year_and_continuous_resource_forecast": "UNRESOLVED: no exact040 full-duration measurement in409/409.5; no automatic admission or new410plan",
+  "scientific_PASS_not_claimed": true
+}

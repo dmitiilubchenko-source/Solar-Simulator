@@ -209,3 +209,8 @@ resource-history guard проверен и усилен; независимый 
 exact237f736/native407V упакованы отдельным tooling. Smoke/ZIP integrity PASS,
 полная410 не запускалась: историческая source-привязка fresh-year verifier — блокер.
 Main/tag/LATEST/release не изменены. [Инструменты и план410](../scripts/qualification409/README.md).
+
+[Portable verifier409.5](portable-verifier-and-backup-4095.md): отдельный current040
+preflight и exact-asset security review нового ZIP при неизменном runtime/native.
+Исторический verifier сохранён; full410 не выполнялась, ресурсный прогноз годовых
+расчётов пока UNRESOLVED. Backup нового ZIP проверяется отдельным этапным budget.

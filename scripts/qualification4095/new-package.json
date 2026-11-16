@@ -1,0 +1,19 @@
+{
+  "archive": "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+  "archive_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "archive_size": 114633711,
+  "member_count": 6005,
+  "changed_old": [
+    "Physics Verification.cmd"
+  ],
+  "added": [
+    "CURRENT-040-VERIFICATION.json",
+    "verification-current040/README.md",
+    "verification-current040/manifest-v1.json",
+    "verification-current040/recompute_current040_v1.py"
+  ],
+  "runtime_unchanged": true,
+  "asset_contract_SHA256": "969f44ec9d596f0165e59d037d5dc16a593ab9f2151791cfc1dfdea8e881ca9e",
+  "source_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "full410_executed": false
+}

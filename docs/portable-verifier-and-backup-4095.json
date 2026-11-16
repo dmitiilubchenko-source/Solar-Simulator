@@ -1,0 +1,66 @@
+{
+  "stage": "409.5",
+  "date": "2026-11-16",
+  "start_dev": "bf03956fcfd15ff457f3cb9e90af9b8e72d11e93",
+  "runtime": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "packaging": "d04dc9a",
+  "archive": {
+    "archive": "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+    "archive_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+    "archive_size": 114633711,
+    "member_count": 6005,
+    "changed_old": [
+      "Physics Verification.cmd"
+    ],
+    "added": [
+      "CURRENT-040-VERIFICATION.json",
+      "verification-current040/README.md",
+      "verification-current040/manifest-v1.json",
+      "verification-current040/recompute_current040_v1.py"
+    ],
+    "runtime_unchanged": true,
+    "asset_contract_SHA256": "969f44ec9d596f0165e59d037d5dc16a593ab9f2151791cfc1dfdea8e881ca9e",
+    "source_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+    "full410_executed": false
+  },
+  "resources": {
+    "charged_CPU": 225.078125,
+    "charged_active_wall": 176.0229660999903,
+    "final_allowance_CPU": 20,
+    "final_allowance_wall": 40,
+    "peak_sampled_private": 350031872,
+    "bytes_in_W": 761281458,
+    "external_worktree_reserve": 134217728,
+    "limitations": "Sampled notOSquota; supervisor/failedattempts charged. Includes conservative initial/final allowances, not entirely measuredCPU."
+  },
+  "verdicts": {
+    "HISTORICAL_VERIFIER_INTEGRITY": "PASS unchangedbytes and actual refusal retained",
+    "CURRENT_040_SOURCE_BINDING": "PREFLIGHT_PASS_NOT_SCIENTIFIC",
+    "JPL_PROTOCOL_PRESERVATION": "PASS same125epochs10bodiesIC/settings/reference/conventions and thresholds",
+    "BACKUP_POLICY_SECURITY": "PASS exactassetreview15negatives plus5hookcontrols",
+    "NEW_PORTABLE_PACKAGE_INTEGRITY": "PASS new6005membersCRC/SHA exactruntime",
+    "CLOUD_PORTABLE_VERIFICATION": "PENDING_NEW_BOUNDED_BACKUP",
+    "READINESS_FOR_FULL_410": "NO-GO_RESOURCE_PREFLIGHT_UNRESOLVED",
+    "APPLICATION_D1": "NO-GO unchangedhistoricaldistanceFAIL",
+    "RELEASE_READINESS": "NO-GO"
+  },
+  "scientific_runs_executed": 0,
+  "new410plan_created": false,
+  "reason": "No objective exact040 measurement of full fresh-year+continuous wall/CPU; no automatic admission. Existing blocked plan409 immutable.",
+  "failures_preserved": [
+    "preflightattempt1 incorrectly used ZIP relative paths withoutroot; checkerfixed, noinputmismatch",
+    "security1 overstrict TAR classifier rejected authenticatedinternal dateutil aliases; narrowinternal target/data checksadded",
+    "security2 rejected one qualifiedNumPyfixturepickle; exactSHA/path/staticopcodeparse, neverunpickled"
+  ],
+  "backup": "PENDING separatebudget, no409evidencereupload",
+  "science": {
+    "equivalence399": "28/28historical",
+    "numericalD1": "11/11historical",
+    "effects": "10/11historical",
+    "distance_AB": "0.244795m versus10m FAIL",
+    "historical380_FAIL": 3,
+    "short402_FAIL": 4,
+    "arbitrary_real_bodies": "NOT QUALIFIED",
+    "universal_error_bound": "NOT PROVED"
+  }
+}

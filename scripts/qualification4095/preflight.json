@@ -1,0 +1,20 @@
+{
+  "status": "PASS_EXACT409_INPUTS",
+  "runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+  "source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+  "old_ZIP_SHA256": "74247a863bd1c445ecfa736e1a0df60db43ad541cb34d7df5de909410781f3bd",
+  "old_ZIP_size": 112698889,
+  "old_members": 6001,
+  "numerical_source_files": 112,
+  "impact": [
+    "New opt-in versioned verifier outside immutable historical bundle",
+    "Exact manifest for every package/dependency/interpreter file and all historical inputs",
+    "No source/native/IC/settings/model/threshold changes",
+    "Narrow backup approval only after full authenticated asset closure and security controls",
+    "No full410 or fresh-year/continuous propagation; resource forecast remains separate"
+  ],
+  "historical_paths_unchanged": true
+}

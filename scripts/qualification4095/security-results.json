@@ -1,0 +1,81 @@
+{
+  "full_real_package_review": "PASS",
+  "security_negatives": [
+    {
+      "case": "private-key-PEM",
+      "rejected": true,
+      "reason": "ValueError: Secret filename: runtime/Lib/public.pem"
+    },
+    {
+      "case": "credentials-in-Python",
+      "rejected": true,
+      "reason": "ValueError: Secret content: runtime/Lib/credential.py"
+    },
+    {
+      "case": "unknown-stdlib",
+      "rejected": true,
+      "reason": "ValueError: Unlisted file: runtime/Lib/unknown.py"
+    },
+    {
+      "case": "changed-wheel",
+      "rejected": true,
+      "reason": "ValueError: Asset changed: runtime/Lib/ensurepip/_bundled/pip-25.3-py3-none-any.whl"
+    },
+    {
+      "case": "changed-resource",
+      "rejected": true,
+      "reason": "ValueError: Asset changed: runtime/Lib/site-packages/PIL/ImageFont.py"
+    },
+    {
+      "case": "symlink",
+      "rejected": true,
+      "reason": "ValueError: Duplicate/encrypted/symlink"
+    },
+    {
+      "case": "path-traversal",
+      "rejected": true,
+      "reason": "ValueError: Unsafe archive path"
+    },
+    {
+      "case": "developer-env",
+      "rejected": true,
+      "reason": "ValueError: Developer environment"
+    },
+    {
+      "case": "sqlite",
+      "rejected": true,
+      "reason": "ValueError: Private/opaque payload"
+    },
+    {
+      "case": "private-context",
+      "rejected": true,
+      "reason": "ValueError: Private/opaque payload"
+    },
+    {
+      "case": "unsafe-nested",
+      "rejected": true,
+      "reason": "ValueError: Unsafe archive path"
+    },
+    {
+      "case": "unverified-binary",
+      "rejected": true,
+      "reason": "ValueError: Unverified binary"
+    },
+    {
+      "case": "secret-in-public-directory",
+      "rejected": true,
+      "reason": "ValueError: Secret content: docs/usage.py"
+    },
+    {
+      "case": "changed-public-CA",
+      "rejected": true
+    },
+    {
+      "case": "wrong-contract-pin",
+      "rejected": true
+    }
+  ],
+  "permanent_global_exceptions_added": false,
+  "scanner_SHA256": "e6c1dbee97f35e686dccf368aad61c0f8e425fdc948860d020040fb07e3bf69d",
+  "contract_SHA256": "969f44ec9d596f0165e59d037d5dc16a593ab9f2151791cfc1dfdea8e881ca9e"
+}

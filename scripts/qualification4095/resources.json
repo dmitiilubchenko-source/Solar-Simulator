@@ -1,0 +1,10 @@
+{
+  "charged_CPU": 225.078125,
+  "charged_active_wall": 176.0229660999903,
+  "final_allowance_CPU": 20,
+  "final_allowance_wall": 40,
+  "peak_sampled_private": 350031872,
+  "bytes_in_W": 761281458,
+  "external_worktree_reserve": 134217728,
+  "limitations": "Sampled notOSquota; supervisor/failedattempts charged. Includes conservative initial/final allowances, not entirely measuredCPU."
+}

@@ -1,0 +1,10 @@
+{
+  "source_wrongsha_rejected": true,
+  "reviewer_wrongsha_rejected": true,
+  "contract_wrongsha_rejected": true,
+  "legacy_other_files_unchanged": true,
+  "secret_outside_optin_rejected": true,
+  "backup_core_SHA256": "20b65b12abe1940e5f168f99f6761ba03fc97b902358f5bdc64631f8bfc9a98c",
+  "backup_before_SHA256": "49779b10cba3c3d62ff6f6370fae119df49cab1ac9095ff2949ea2ceb082b652",
+  "backup_after_SHA256": "6f15978e8d42515c44dc944a141fd7d7352f2f91ffd8399a56b23dc201f2de2b"
+}

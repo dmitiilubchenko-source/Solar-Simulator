@@ -1,0 +1,101 @@
+{
+  "controls": [
+    {
+      "case": "source-experiment.py",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "source-native_forces.py",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "source-nbody_rotation.py",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "source-accuracy.py",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "input-initial.json",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "input-reference.json",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "ABI",
+      "rejected": true,
+      "expected_message": "Wrong Python ABI"
+    },
+    {
+      "case": "native-version",
+      "rejected": true,
+      "expected_message": "Wrong native lineage"
+    },
+    {
+      "case": "historical-presented-current",
+      "rejected": true,
+      "expected_message": "Not a current preflight manifest"
+    },
+    {
+      "case": "settings",
+      "rejected": true,
+      "expected_message": "Settings/frame mismatch"
+    },
+    {
+      "case": "epochs",
+      "rejected": true,
+      "expected_message": "Units/epochs mismatch"
+    },
+    {
+      "case": "units",
+      "rejected": true,
+      "expected_message": "Units/epochs mismatch"
+    },
+    {
+      "case": "frame",
+      "rejected": true,
+      "expected_message": "Settings/frame mismatch"
+    },
+    {
+      "case": "external-python",
+      "rejected": true,
+      "expected_message": "Packaged isolated Python required"
+    },
+    {
+      "case": "cached-trajectory-option",
+      "rejected": true,
+      "expected_message": "unrecognized arguments"
+    },
+    {
+      "case": "changed-native",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "actual033-native",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "actual033-metadata",
+      "rejected": true,
+      "expected_message": "Bound file mismatch"
+    },
+    {
+      "case": "raw-failure-preserved-before-propagation",
+      "rejected": true
+    }
+  ],
+  "acceptance_command_tests": "PASS legacy/current/wrongpin",
+  "scientific_integrations": 0,
+  "annual_results_not_claimed": true
+}
