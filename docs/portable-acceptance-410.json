@@ -297,6 +297,14 @@
     "fullD1": "NO-GO",
     "Q2scope": "ExperimentalNewton M-Qtotaldegree2; noQ2Q2/tides/dissipation/EIHmixed/universalbound"
   },
-  "backup_status": "PENDING_NEW_EVIDENCE_ONLY_NO_ZIP_REUPLOAD",
-  "main_tag_LATEST_release_changed": false
+  "backup_status": "CLOUD_VERIFIED_SHA256",
+  "main_tag_LATEST_release_changed": false,
+  "backup_receipts": "scripts/qualification410/backup-receipts.json",
+  "resources_including_backup": {
+    "charged_CPU_seconds": 53.4375,
+    "charged_active_wall_seconds": 114.91928580003184,
+    "CPU_fully_measured": false,
+    "whole_stage_peak_memory": null,
+    "note": "Includes explicit initial/final/cleanup conservative allowances and connector wall; remote service CPU unavailable. Not full410 resource measurement."
+  }
 }

@@ -80,5 +80,27 @@ IC/reference/thresholds менять не требуется. Автоматич
 Scientific39928/28; D1numerical11/11/effects10/11/distance0.244795m vs10mFAIL,
 3historical380+4short402FAIL иfullD1NO-GO неизменны. TwoQ2 экспериментален,
 безQ2–Q2/приливов/диссипации/EIHmixed/универсальной ошибки. Выпуск040 — NO-GO.
-Main/tag/LATEST/принятая032 не менялись. Новый evidence410 backup готовится
-отдельно; уже проверенный ZIP409.5 повторно не загружается. После отчёта STOP.
+Main/tag/LATEST/принятая032 не менялись. Новый evidence410 — CLOUD_VERIFIED_SHA256:
+14121B, SHA256 `2a5e98b983fe02303d0109940b8a44be41f58d8612477051f99b96adfe730e20`,
+Drive ID `1cM-Zrh_7VxdbYZsboSu8KKKleUUZoU6i`. Независимый download проверил
+размер/SHA, CRC и все17members, включая MANIFEST и16файлов raw. Отдельный
+Git recovery recipe582B тоже независимо проверен. Уже проверенный ZIP409.5
+повторно не загружался; private context не включён. [Backup receipts](../scripts/qualification410/backup-receipts.json).
+
+Backup-only direct stdlib download workers выполнены отдельным base interpreter
+без venv/site/subprocesses; после возврата проверены все наблюдавшиеся PID.
+Это узкая проверка leaf download, **не** допуск неисправного монитора к full410.
+Backup charged15.96875CPU /43.586957wall включает5/10setup и10/20final allowances,
+измеренный connectorwall и локальные download guards; CPU облачного сервиса неизвестен.
+Общий charged410+backup:53.4375CPU /114.919286wall; это учёт с резервами,
+не полностью измеренный operationalCPU. Пик всей410 не измерен: fixture sample
+107958272B относится только к synthetic test; нельзя выдавать его за full-run RAM.
+Новых raw41024364B и backup59781B на момент финального filesystem audit;
+большая relocated-распаковка не создавалась. Sampled limits не являются OSquota.
+
+Финализатор backup один раз отказал до изменения manifest из-за повторённого
+ключа cloud_location; исходник сохранён, dictionary merge исправлен. Download
+не повторялся, отказ покрыт allowance и указан в receipt. Это не новый Solar FAIL.
+AST/JSON/secret review, inventory1524,1458ссылок и documentation regression1/1 PASS; full check_project,
+научные регрессии и portable acceptance намеренно не запущены после admission FAIL.
+После отчёта STOP.

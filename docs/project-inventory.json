@@ -1145,6 +1145,7 @@
       "scripts/qualification4095/verifier_tests.py",
       "scripts/qualification410/README.md",
       "scripts/qualification410/audit.py",
+      "scripts/qualification410/backup-receipts.json",
       "scripts/qualification410/backup.py",
       "scripts/qualification410/backup_leaf.py",
       "scripts/qualification410/execution-plan.json",
