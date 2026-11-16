@@ -8,9 +8,26 @@ import subprocess
 import zipfile
 
 
+def fresh_year_command(folder,current_manifest_pin=None):
+    """Explicit opt-in; missing current files never fall back to historical mode."""
+    folder=Path(folder);runtime=folder/'runtime'
+    prefix=[str(runtime/'python.exe'),'-X','utf8','-B','-I']
+    if current_manifest_pin is None:
+        return prefix+[str(folder/'verification/recompute_jpl.py'),str(folder/'verification'),
+                       '--output',str(folder/'fresh-year-verification.json')]
+    import hashlib
+    manifest=folder/'verification-current040/manifest-v1.json'
+    if hashlib.sha256(manifest.read_bytes()).hexdigest()!=current_manifest_pin:
+        raise ValueError('Current040 manifest binding mismatch')
+    return prefix+[str(folder/'verification-current040/recompute_current040_v1.py'),str(folder),
+                   '--manifest-sha256',current_manifest_pin,'--run','--output',
+                   str(folder.parent/(folder.name+'-fresh-current040-raw'))]
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("archive",type=Path)
+    parser.add_argument('--current040-manifest-sha256')
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[1]
     target=root/".tools"/f"portable relocated {datetime.now():%Y%m%d-%H%M%S}"
@@ -224,9 +241,8 @@ print(json.dumps(dict(prefix=str(root),tcl=str(library),events=len(experiment.ev
     result["jpl_replay"]=json.loads(replay_output)
     if not result["jpl_replay"]["checks_passed"] or result["jpl_replay"]["solver_executed"]:
         raise ValueError("Replay scope or results failed")
-    fresh_output=subprocess.check_output([str(runtime/"python.exe"),"-X","utf8","-B","-I",
-        str(folder/"verification/recompute_jpl.py"),str(folder/"verification"),
-        "--output",str(folder/"fresh-year-verification.json")],cwd=folder,env=environment,text=True,encoding="utf-8")
+    fresh_output=subprocess.check_output(fresh_year_command(folder,args.current040_manifest_sha256),
+        cwd=folder,env=environment,text=True,encoding="utf-8")
     result["fresh_year"]=json.loads(fresh_output)
     if not result["fresh_year"]["checks_passed"] or not result["fresh_year"]["solver_executed"]:
         raise ValueError("Fresh production propagation failed")

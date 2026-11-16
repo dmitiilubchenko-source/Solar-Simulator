@@ -71,7 +71,7 @@ def propagate(root,pin,output):
     root=Path(root).resolve();output=Path(output).resolve()
     require(not output.is_relative_to(root),'Raw output must be outside sealed package')
     output.mkdir(parents=True,exist_ok=False)
-    result={'status':'STARTED','solver_executed':False,'samples':0,'packets':0,'scientific_PASS':False}
+    result={'status':'STARTED','solver_executed':False,'samples':0,'packets':0,'scientific_PASS':False,'checks_passed':False}
     try:
         m,checker=preflight(root,pin)
         import numpy as np
@@ -108,7 +108,7 @@ def propagate(root,pin,output):
         reproduction=all(r['stored_difference']['position_metres']<.1 and r['stored_difference']['velocity_m_per_s']<1e-5 for r in rows.values()) and old_lunar['position_metres']<.1 and old_lunar['velocity_m_per_s']<1e-5
         result.update(status='COMPLETE',results=rows,moon_relative_jpl=lunar,moon_relative_stored_difference=old_lunar,
                       energy_residual=energy_residual,physical_goals_passed=physical,stored_reproduction_passed=reproduction,
-                      scientific_PASS=physical and reproduction,duration_seconds=state.time,manifest_SHA256=pin)
+                      scientific_PASS=physical and reproduction,checks_passed=physical and reproduction,duration_seconds=state.time,manifest_SHA256=pin)
     except BaseException as exc:
         result.update(status='FAILED',error_type=type(exc).__name__,error=str(exc))
         (output/'failure.txt').write_text(traceback.format_exc(),encoding='utf8')
