@@ -45,8 +45,8 @@
     "total_wall": 152.02500809992617
   },
   "connector-resources.json": {
-    "wall_seconds": 93.208,
-    "meaning": "Measured connector call wall, service CPU not measured"
+    "wall_seconds": 106.755,
+    "meaning": "Measured connector wall incl finalmetadata; serviceCPU unavailable"
   },
   "evidence-resources.json": {
     "record": {
@@ -778,6 +778,134 @@
     "status": "VERIFIED_SHA256_SIZE",
     "start_timestamp": 1794851024.3388073,
     "end_timestamp": 1794851024.6270435,
+    "response": {
+      "status": 200,
+      "content_length": "582",
+      "content_type": "application/json"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "planning-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.125,
+        "parent_cpu": 0.046875,
+        "private_tree": 25378816,
+        "rss_tree": 32829440,
+        "disk": 230987476,
+        "elapsed": 0.4513507999945432
+      },
+      "samples": 3,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.140625,
+      "root_final_CPU_seconds": 0.015625,
+      "parent_supervision_CPU_seconds": 0.046875,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 25378816,
+      "processes": [
+        {
+          "pid": 38444,
+          "creation_time": 1794853622.251712,
+          "CPU_seconds": 0.015625,
+          "role": "launcher"
+        },
+        {
+          "pid": 16788,
+          "creation_time": 1794853622.255649,
+          "CPU_seconds": 0.125,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 32829440,
+      "wall_seconds": 0.6665206999750808,
+      "disk_bytes": 231007292,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.53125,
+    "charged_active_wall_seconds": 0.9184813999454491,
+    "total_CPU": 38.8125,
+    "total_wall": 152.94348949987162
+  },
+  "downloads\\planning-completion.json": {
+    "label": "planning",
+    "id": "1U9FN9OiaPSlq9z5S4_FA4tC21v_uATUa",
+    "name": "Solar-Simulator-4095-planning-raw-20261116.zip",
+    "expected_SHA256": "a55f292e2c668353438affd80db11690a570d459729f405f1fdab525699f4c13",
+    "expected_size": 18467,
+    "actual_SHA256": "a55f292e2c668353438affd80db11690a570d459729f405f1fdab525699f4c13",
+    "actual_size": 18467,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794853622.3232532,
+    "end_timestamp": 1794853622.714402,
+    "response": {
+      "status": 200,
+      "content_length": "18467",
+      "content_type": "application/zip"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "recipe-final-resources.json": {
+    "record": {
+      "exit_code": 0,
+      "limit_reason": null,
+      "error": null,
+      "last_sample": {
+        "worker_cpu": 0.09375,
+        "parent_cpu": 0.015625,
+        "private_tree": 24723456,
+        "rss_tree": 32010240,
+        "disk": 231010217,
+        "elapsed": 0.23359030002029613
+      },
+      "samples": 2,
+      "poll_seconds": 0.2,
+      "worker_CPU_seconds": 0.109375,
+      "root_final_CPU_seconds": 0.0,
+      "parent_supervision_CPU_seconds": 0.03125,
+      "parent_interjob_CPU_excluded": true,
+      "peak_private_tree_sampled": 24723456,
+      "processes": [
+        {
+          "pid": 8124,
+          "creation_time": 1794853628.5394697,
+          "CPU_seconds": 0.0,
+          "role": "launcher"
+        },
+        {
+          "pid": 27728,
+          "creation_time": 1794853628.5446007,
+          "CPU_seconds": 0.109375,
+          "role": "analyzer_or_audit_descendant"
+        }
+      ],
+      "peak_rss_tree_sampled": 32010240,
+      "wall_seconds": 0.4398871000157669,
+      "disk_bytes": 231012196,
+      "complete": true,
+      "measurement_limitations": "memory peaks and tree discovery sampled; final CPU of every discovered Windows process via retained handles; short unseen descendants possible; 200ms cap overshoot possible"
+    },
+    "charged_CPU_seconds": 0.484375,
+    "charged_active_wall_seconds": 0.6932721000048332,
+    "total_CPU": 39.296875,
+    "total_wall": 153.63676159987645
+  },
+  "downloads\\recipe-final-completion.json": {
+    "label": "recipe-final",
+    "id": "1aHVOIjF5uAXkogIpTlvFTjiHTf-_l5qO",
+    "name": "Solar-Simulator-recovery-6b3736e8f9566ea494f53ea0e32595de4b42d750.json",
+    "expected_SHA256": "817471b857d9dbd44565ee6fb3854489d29ea4aaeb849ca09a4bc0a8280020f8",
+    "expected_size": 582,
+    "actual_SHA256": "817471b857d9dbd44565ee6fb3854489d29ea4aaeb849ca09a4bc0a8280020f8",
+    "actual_size": 582,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1794853628.6093307,
+    "end_timestamp": 1794853628.9350839,
     "response": {
       "status": 200,
       "content_length": "582",

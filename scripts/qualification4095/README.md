@@ -41,3 +41,7 @@ Its engineering estimate is not a guaranteed cost bound or scientific PASS.
 Read final-audit.json and the report. Require separate owner authorization for410.
 Restore exact acceptance-tool raw EOLs using tooling-raw-recovery.json; do not
 replace a sealed SHA to accept a different checkout.
+
+In cloud-verification.json, objects[].row is the original pre-upload queue
+snapshot. Completed status comes from the top-level proof and independent
+completion receipts; the global backup manifest also has verified part rows.

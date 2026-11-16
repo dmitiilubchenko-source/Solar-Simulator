@@ -39,7 +39,7 @@
     "JPL_PROTOCOL_PRESERVATION": "PASS same125epochs10bodiesIC/settings/reference/conventions and thresholds",
     "BACKUP_POLICY_SECURITY": "PASS exactassetreview15negatives plus5hookcontrols",
     "NEW_PORTABLE_PACKAGE_INTEGRITY": "PASS new6005membersCRC/SHA exactruntime",
-    "CLOUD_PORTABLE_VERIFICATION": "PASS independent10objects/7parts/114633711B/6005membersCRC_SHA",
+    "CLOUD_PORTABLE_VERIFICATION": "PASS all12cloudobjects:7parts+manifest+2evidencearchives+2Gitrecoveryrecipes; independentSHA/size/CRC",
     "READINESS_FOR_FULL_410": "GO_PREFLIGHT_ONLY_SEPARATE_OWNER_AUTHORIZATION_REQUIRED",
     "APPLICATION_D1": "NO-GO unchangedhistoricaldistanceFAIL",
     "RELEASE_READINESS": "NO-GO"
@@ -608,5 +608,58 @@
     "plan_path": "scripts/qualification4095/acceptance410-plan-v3.json",
     "planning_drafts_preserved_unexecuted": true
   },
-  "acceptance410_plan": "scripts/qualification4095/acceptance410-plan-v3.json"
+  "acceptance410_plan": "scripts/qualification4095/acceptance410-plan-v3.json",
+  "final_closure": {
+    "extra_cloud_objects": [
+      {
+        "name": "Solar-Simulator-4095-planning-raw-20261116.zip",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-backup-20261116\\Solar-Simulator-4095-planning-raw-20261116.zip",
+        "size": 18467,
+        "sha256": "a55f292e2c668353438affd80db11690a570d459729f405f1fdab525699f4c13",
+        "git_commit": "6b3736e8f9566ea494f53ea0e32595de4b42d750",
+        "cloud_location": "https://drive.google.com/file/d/1U9FN9OiaPSlq9z5S4_FA4tC21v_uATUa/view",
+        "status": "CLOUD_VERIFIED_SHA256",
+        "cloud_evidence": {
+          "file_id": "1U9FN9OiaPSlq9z5S4_FA4tC21v_uATUa",
+          "sha256": "a55f292e2c668353438affd80db11690a570d459729f405f1fdab525699f4c13",
+          "size": 18467,
+          "parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+          "verified_at": "2026-11-16T18:32:47.127921+00:00",
+          "method": "Independent freshcloudbytes SHA/size, planningZIP CRC/memberSHA also verified"
+        }
+      },
+      {
+        "name": "Solar-Simulator-recovery-6b3736e8f9566ea494f53ea0e32595de4b42d750.json",
+        "source": "C:\\Users\\Admin\\Documents\\Codex\\2026-10-29\\files-pasted-by-the-user-codex\\outputs\\Solar-Simulator-recovery-6b3736e8f9566ea494f53ea0e32595de4b42d750.json",
+        "size": 582,
+        "sha256": "817471b857d9dbd44565ee6fb3854489d29ea4aaeb849ca09a4bc0a8280020f8",
+        "git_commit": "6b3736e8f9566ea494f53ea0e32595de4b42d750",
+        "cloud_location": "https://drive.google.com/file/d/1aHVOIjF5uAXkogIpTlvFTjiHTf-_l5qO/view",
+        "status": "CLOUD_VERIFIED_SHA256",
+        "cloud_evidence": {
+          "file_id": "1aHVOIjF5uAXkogIpTlvFTjiHTf-_l5qO",
+          "sha256": "817471b857d9dbd44565ee6fb3854489d29ea4aaeb849ca09a4bc0a8280020f8",
+          "size": 582,
+          "parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+          "verified_at": "2026-11-16T18:32:47.167652+00:00",
+          "method": "Independent freshcloudbytes SHA/size, planningZIP CRC/memberSHA also verified"
+        }
+      }
+    ],
+    "planningZIP_all_CRC_memberSHA_passed": true,
+    "current_plan_and_forecast_hash_match": true,
+    "new_scientific_integrations": false,
+    "resources_final": {
+      "charged_CPU": 59.296875,
+      "charged_active_wall": 207.18376159987645,
+      "final_allowance_CPU": 20,
+      "final_allowance_wall": 40,
+      "not_fully_measured_operational_CPU": true,
+      "connector_service_CPU_unknown": true
+    }
+  },
+  "old_scientific_FAILs_preserved": true,
+  "annual_propagations_executed": 0,
+  "continuous_year_propagations_executed": 0,
+  "short_existing_native_smoke_executed": true
 }

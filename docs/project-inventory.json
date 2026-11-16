@@ -1118,6 +1118,7 @@
       "scripts/qualification4095/backup-hook-tests.json",
       "scripts/qualification4095/backup_guard.py",
       "scripts/qualification4095/backup_stage.py",
+      "scripts/qualification4095/closure.json",
       "scripts/qualification4095/cloud-readback-receipts.json",
       "scripts/qualification4095/cloud-verification.json",
       "scripts/qualification4095/current-preflight.json",

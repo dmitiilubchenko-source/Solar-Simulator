@@ -119,3 +119,12 @@ preflight verified, not scientific or release approval.** Source/security/cloud
 
 Two-Q2 остаётся экспериментальной Newton total-degree-two M–Q моделью без
 Q2–Q2, высших мультиполей, приливов, диссипации и совместных EIH/Q2-членов.
+
+Final planning metadata/drafts/primary timing receipt сохранены отдельно:
+18467B, SHA256 a55f292e2c668353438affd80db11690a570d459729f405f1fdab525699f4c13;
+cloud1U9FN9OiaPSlq9z5S4_FA4tC21v_uATUa. Его rawEOL/всеCRC/memberSHA независимо
+проверены; plan↔forecast pin совпал. При проверке воспроизводимости генератора
+обнаружена LF/CRLF-разница, восстановлены именно исходные pinnedbytes, ожидаемый
+SHA не заменялся. Генератор теперь явно воспроизводит заданный CRLF-формат.
+Финальный backup charged59.296875CPU/207.183762activewall,
+включая conservative allowances; [closure](../scripts/qualification4095/closure.json).
