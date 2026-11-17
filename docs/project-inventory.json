@@ -1160,6 +1160,7 @@
       "scripts/qualification410/resource-ledger.json",
       "scripts/qualification4101/admission-amendment410.json",
       "scripts/qualification4101/audit.py",
+      "scripts/qualification4101/backup-receipts.json",
       "scripts/qualification4101/independent-audit.json",
       "scripts/qualification4101/monitor-diff.txt",
       "scripts/qualification4101/monitor.py",

@@ -1,0 +1,38 @@
+{
+  "status": "CLOUD_UNVERIFIED",
+  "archive": {
+    "name": "Solar-Simulator-4101-supervisor-20261117-reviewed.zip",
+    "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar4101-backup-20261117\\Solar-Simulator-4101-supervisor-20261117-reviewed.zip",
+    "project": "Solar-Simulator",
+    "project_root": "C:\\Users\\Admin\\Desktop\\Solar-simulator",
+    "host": "DESKTOP-6DHG18S",
+    "git_commit": "ebde749d11405c0fdeca640d9d515be6db61a59b",
+    "git_status": "",
+    "cloud_parent_id": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+    "cloud_location": null,
+    "size": 206467,
+    "sha256": "5e24ff655f95926eaa745b026eda28b8d8f6c4fc1638e5b51d78e7597faeaa0d",
+    "checked_at": "2026-11-17T19:47:07.923532+00:00",
+    "status": "PENDING_UPLOAD",
+    "coverage": "COMPLETE_SELECTED_SCOPE",
+    "source_files_unavailable": 0,
+    "source_files_excluded": 0,
+    "scan_git_commit": "ebde749d11405c0fdeca640d9d515be6db61a59b",
+    "scan_git_status": ""
+  },
+  "tooling_commit": "eba8966dd122c798db1e918c23f888ce7395b948",
+  "reason": "Connector upload did not return usable structured confirmation; subsequent exact parent/name search returned no file. No independent cloud download possible. No retry after40wall backup allocation.",
+  "local_review": "CRC/security review passed; rejected initial archive retained because test folder named venv; reviewed archive aliases only that folder to launcher-case and preserves original paths/SHA. No environment included.",
+  "upload_attempts": 1,
+  "remote_ID": null,
+  "local_originals_retained": true,
+  "private_context_included": false,
+  "portable_reuploaded": false,
+  "backup_accounting": {
+    "charged_CPU_allowance": 20,
+    "charged_wall_allowance": 40,
+    "CPU_fully_measured": false,
+    "connector_elapsed_fully_recorded": false
+  },
+  "restore": "Clone tooling branch commit from embedded MANIFEST; restore local raw archive; do not execute prototype or full410."
+}

@@ -82,3 +82,9 @@ impact/непроверенные негативные контроли в от�
 ресурсный forecast. Не править физику, ZIP, native, историческиеFAIL или caps.
 Все научные ограничения399/380/402 и fullD1 NO-GO сохранены. Main/tag/LATEST/
 accepted032 не менялись. После отчёта STOP; релиза нет.
+
+## Сохранение и финальная самопроверка
+
+Локальный reviewed raw ZIP206467B SHA256 `5e24ff655f95926eaa745b026eda28b8d8f6c4fc1638e5b51d78e7597faeaa0d` сохранён. Cloud status **CLOUD_UNVERIFIED**: upload не вернул пригодного подтверждения, последующий exact parent/name search пуст. Нет cloud ID/readback; успешного резервирования не заявляем.40wall backup allowance исчерпан консервативно, без повторной передачи. Первый архив отклонён за имя тестового каталога venv; сохранён. Reviewed ZIP содержит alias launcher-case с исходными путями и SHA в manifest; проверки безопасности не ослаблялись. Private context и portable исключены. [Backup status](../scripts/qualification4101/backup-receipts.json).
+
+AST/JSON/secret review, inventory1533 и1458ссылок прошли до добавления последнего backup receipt; финальный inventory обновлён отдельно. git diff --check предупредил о пробелах в контекстных строках точного unified diff; это артефакт diff, не пробелы нового Python. Монитор и научные критерии не менялись после последнего прогона. Изолированная tooling-ветка опубликована, dev не менялся; prototype не включён в acceptance. Нужна отдельная квалификация после CPU расследования, не научный прогон.

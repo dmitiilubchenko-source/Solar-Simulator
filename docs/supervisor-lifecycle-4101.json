@@ -545,6 +545,7 @@
     "PORTABLE_ACCEPTANCE": "NOT_RUN",
     "RELEASE_READINESS": "NO_GO"
   },
-  "backup": "PENDING",
-  "history_unchanged": true
+  "backup": "CLOUD_UNVERIFIED",
+  "history_unchanged": true,
+  "backup_receipts": "scripts/qualification4101/backup-receipts.json"
 }
