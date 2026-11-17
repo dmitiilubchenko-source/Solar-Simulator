@@ -1,0 +1,193 @@
+"""Windows-only research supervisor. No changes to the frozen409 monitor.
+
+Job membership is established while the root is suspended. Job accounting
+includes exited and unsampled processes; individual process discovery is sampled.
+The job handle is non-inheritable and KILL_ON_JOB_CLOSE is a crash backstop.
+"""
+import ctypes as c
+from ctypes import wintypes as w
+import hashlib
+import importlib.util
+import os
+from pathlib import Path
+import subprocess
+import time
+
+import psutil
+
+OLD = Path(__file__).resolve().parents[1]/'qualification409/monitor200.py'
+spec = importlib.util.spec_from_file_location('old_guard_helpers', OLD)
+old = importlib.util.module_from_spec(spec); spec.loader.exec_module(old)
+save, disk_size, exceeded = old.save, old.disk_size, old.exceeded
+K = c.WinDLL('kernel32', use_last_error=True)
+H, D, P = w.HANDLE, w.DWORD, c.c_void_p
+
+
+class Basic(c.Structure):
+    _fields_ = [(n, c.c_int64) for n in ('user', 'kernel', 'period_user', 'period_kernel')]+[(n,D) for n in ('faults','total','active','terminated')]
+
+
+class Limits(c.Structure):
+    _fields_ = [('process_time',c.c_int64),('job_time',c.c_int64),('flags',D),('min_ws',c.c_size_t),('max_ws',c.c_size_t),('active',D),('affinity',c.c_size_t),('priority',D),('scheduling',D)]
+
+
+class Extended(c.Structure):
+    _fields_ = [('basic',Limits),('io',c.c_uint64*6),('process_memory',c.c_size_t),('job_memory',c.c_size_t),('peak_process',c.c_size_t),('peak_job',c.c_size_t)]
+
+
+class Startup(c.Structure):
+    _fields_ = [('cb',D),('reserved',w.LPWSTR),('desktop',w.LPWSTR),('title',w.LPWSTR)]+[(n,D) for n in ('x','y','xs','ys','xc','yc','fill','flags')]+[('show',w.WORD),('cb2',w.WORD),('reserved2',P),('stdin',H),('stdout',H),('stderr',H)]
+
+
+class Process(c.Structure):
+    _fields_ = [('process',H),('thread',H),('pid',D),('tid',D)]
+
+
+def api(name, types, result=w.BOOL):
+    f=getattr(K,name);f.argtypes=types;f.restype=result;return f
+
+
+create_job=api('CreateJobObjectW',[P,w.LPCWSTR],H)
+query_job=api('QueryInformationJobObject',[H,c.c_int,P,D,P])
+set_job=api('SetInformationJobObject',[H,c.c_int,P,D])
+assign=api('AssignProcessToJobObject',[H,H])
+terminate_job=api('TerminateJobObject',[H,w.UINT])
+close=api('CloseHandle',[H])
+wait=api('WaitForSingleObject',[H,D],D)
+get_exit=api('GetExitCodeProcess',[H,c.POINTER(D)])
+create=api('CreateProcessW',[w.LPCWSTR,w.LPWSTR,P,P,w.BOOL,D,P,w.LPCWSTR,c.POINTER(Startup),c.POINTER(Process)])
+resume=api('ResumeThread',[H],D)
+terminate_process=api('TerminateProcess',[H,w.UINT])
+open_process=api('OpenProcess',[D,w.BOOL,D],H)
+is_in_job=api('IsProcessInJob',[H,H,c.POINTER(w.BOOL)])
+
+
+def process_handle(pid):
+    return checked(open_process(0x1000|0x100000,False,pid)) # query + SYNCHRONIZE
+
+
+def checked(ok):
+    if not ok: raise c.WinError(c.get_last_error())
+    return ok
+
+
+def accounting(job):
+    a=Basic();checked(query_job(job,1,c.byref(a),c.sizeof(a),None))
+    return dict(CPU_seconds=(a.user+a.kernel)/1e7,active=a.active,total=a.total)
+
+
+def members(job):
+    # Refuse overflow rather than silently truncate ownership discovery.
+    class IDs(c.Structure):
+        _fields_=[('assigned',D),('count',D),('pids',c.c_size_t*1024)]
+    a=IDs();checked(query_job(job,3,c.byref(a),c.sizeof(a),None))
+    if a.count>1024 or a.assigned>a.count: raise RuntimeError('Incomplete job PID list')
+    return list(a.pids[:a.count])
+
+
+def identity(handle):
+    values=[c.c_uint64() for _ in range(4)]
+    f=api('GetProcessTimes',[H]+[c.POINTER(c.c_uint64)]*4)
+    checked(f(handle,*(c.byref(x) for x in values)))
+    return values[0].value,(values[2].value+values[3].value)/1e7
+
+
+def monitor(command,out,stage_root,limits,*,used_cpu=0.,stage_start=None,hook=None,expected_sha=None):
+    """Same resource fields as409; receipts additionally require an empty Job.
+
+    No process is killed by PID. Termination targets only the owned kernel job.
+    hook is test-only after a genuine sample. Cleanup is bounded to five seconds.
+    """
+    if expected_sha is not None and hashlib.sha256(Path(__file__).read_bytes()).hexdigest()!=expected_sha:
+        raise ValueError('Tooling SHA mismatch before launch')
+    out=Path(out);out.mkdir(exist_ok=False);stage_root=Path(stage_root)
+    start=time.perf_counter();stage_start=start if stage_start is None else stage_start
+    parent_start=time.process_time();job=None;pi=Process();owned={};reason=None;errors=[];last=None;peak=0;samples=0;final=None;root_code=None;cleanup=False
+    try:
+        job=checked(create_job(None,None));ex=Extended();ex.basic.flags=0x2000
+        checked(set_job(job,9,c.byref(ex),c.sizeof(ex))) # KILL_ON_JOB_CLOSE, no breakaway
+        si=Startup();si.cb=c.sizeof(si)
+        # Non-inheritable job handle. No inherited arbitrary file handles.
+        cmd=c.create_unicode_buffer(subprocess.list2cmdline(command))
+        checked(create(None,cmd,None,None,False,4,None,None,c.byref(si),c.byref(pi)))
+        checked(assign(job,pi.process))
+        if resume(pi.thread)==0xffffffff: raise c.WinError(c.get_last_error())
+        while True:
+            a=accounting(job);private=0
+            for pid in members(job):
+                try:
+                    handle=process_handle(pid)
+                except OSError as exc:
+                    # A vanished short process is covered by kernel job CPU.
+                    if getattr(exc,'winerror',None)==87:continue
+                    raise
+                try:
+                    belongs=w.BOOL();checked(is_in_job(handle,job,c.byref(belongs)))
+                    if not belongs.value:raise RuntimeError('PID identity no longer belongs to owned job')
+                    birth,cpu=identity(handle);key=(pid,birth)
+                    if key not in owned:owned[key]=dict(handle=handle,last_CPU=cpu);handle=None
+                    else:owned[key]['last_CPU']=cpu
+                    try: private+=psutil.Process(pid).memory_info().private
+                    except psutil.NoSuchProcess:pass
+                finally:
+                    if handle:close(handle)
+            peak=max(peak,private);samples+=1
+            last=dict(worker_cpu=a['CPU_seconds'],parent_cpu=time.process_time()-parent_start,private_tree=private,disk=disk_size(stage_root))
+            reason=exceeded(last,limits,used_cpu,time.perf_counter()-stage_start)
+            if reason:break
+            if hook:hook(last)
+            if wait(pi.process,0)==0:
+                a=accounting(job) # do not mistake the root from an earlier sample for a surviving child
+                code=D();checked(get_exit(pi.process,c.byref(code)));root_code=code.value
+                if a['active']:reason='unexpected-owned-descendant'
+                elif root_code:reason='root-nonzero'
+                break
+            time.sleep(.2)
+    except BaseException as exc:
+        reason='interrupted' if isinstance(exc,KeyboardInterrupt) else 'monitor-error'
+        errors.append(dict(type=type(exc).__name__,message=str(exc)))
+    finally:
+        try:
+            if job:
+                a=accounting(job)
+                if a['active']:
+                    cleanup=True;checked(terminate_job(job,1));deadline=time.perf_counter()+5
+                    while accounting(job)['active'] and time.perf_counter()<deadline:time.sleep(.02)
+                final=accounting(job)
+                if final['active']:raise RuntimeError('Job still active after bounded cleanup')
+            if pi.process:
+                # Also covers failure to assign the still-suspended root.
+                if wait(pi.process,0)!=0 and (not job or not final or final['active']):checked(terminate_process(pi.process,1))
+                if wait(pi.process,5000)!=0:raise RuntimeError('Root cleanup not confirmed')
+                code=D();checked(get_exit(pi.process,c.byref(code)));root_code=code.value
+        except BaseException as exc:
+            reason=reason or 'cleanup-unresolved';errors.append(dict(type=type(exc).__name__,message=str(exc)))
+        processes=[]
+        deadline=time.perf_counter()+5
+        for (pid,birth),data in owned.items():
+            try:
+                if wait(data['handle'],max(0,int((deadline-time.perf_counter())*1000)))!=0:
+                    raise RuntimeError('Retained owned process termination not confirmed')
+                actual,cpu=identity(data['handle']);assert actual==birth
+                code=D();checked(get_exit(data['handle'],c.byref(code)))
+                alive=wait(data['handle'],0)!=0
+                if alive:raise RuntimeError('Retained owned process alive')
+                processes.append(dict(pid=pid,creation_FILETIME=birth,last_CPU_seconds=data['last_CPU'],final_CPU_seconds=cpu,exit_code=code.value,alive=False))
+            except BaseException as exc:
+                reason=reason or 'final-process-unresolved';errors.append(dict(type=type(exc).__name__,message=str(exc)))
+            finally:close(data['handle'])
+        parent=time.process_time()-parent_start
+        if job:
+            try:final=accounting(job)
+            except BaseException as exc:
+                final=None;reason=reason or 'final-accounting-unresolved';errors.append(dict(type=type(exc).__name__,message=str(exc)))
+        cpu=None if final is None else final['CPU_seconds']
+        if cpu is not None:
+            reason=reason or exceeded(dict(worker_cpu=cpu,parent_cpu=parent,private_tree=peak,disk=disk_size(stage_root)),limits,used_cpu,time.perf_counter()-stage_start)
+        complete=reason is None and not errors and root_code==0 and final is not None and final['active']==0
+        record=dict(complete=complete,exit_code=root_code,limit_reason=reason,error=errors,final_job=final,processes=processes,cleanup_performed=cleanup,worker_CPU_seconds=cpu,parent_supervision_CPU_seconds=parent,parent_interjob_CPU_excluded=True,wall_seconds=time.perf_counter()-start,peak_private_tree_sampled=peak,last_sample=last,samples=samples,poll_seconds=.2,disk_bytes=disk_size(stage_root),monitor_SHA256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),measurement_limitations='Kernel job CPU includes exited/unsampled processes; individual identities/memory sampled; unknown individual exits are not invented. No stdout redirection yet: native launcher qualification incomplete.')
+        try:save(out/'supervisor.json',record)
+        finally:
+            for h in [pi.thread,pi.process,job]:
+                if h:close(h)
+    return record

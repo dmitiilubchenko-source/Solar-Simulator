@@ -1,0 +1,528 @@
+{
+  "status": "PARTIAL_NO_GO",
+  "raw_suites": 4,
+  "probes": [
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "root0",
+      "executor_contract": false,
+      "record_sha": "9f9e1b2d6d6d31cd7dacb12f180c7974113684146cb2f78018e559ea89a0c0c9"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "joined",
+      "executor_contract": false,
+      "record_sha": "a6828f28f5fd32c48c366f502d60c2e8091c0b1d38105f3680a20ae756e8bc3b"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "child",
+      "executor_contract": true,
+      "record_sha": "cb8297c746aa4b19d2911470772b6a9cb280dd23cf7d79c1e452bbe6868548b2"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "grandchild",
+      "executor_contract": true,
+      "record_sha": "5402026b02fdc5b27f48fd74c46d0f45222ac18df75e5f86c25417549f33cdcb"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "venv",
+      "executor_contract": true,
+      "record_sha": "54b2c0960d7183ea50bf27d44d4cac41c8b652990ccc80a10f6b565d15e3acb7"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "nonzero",
+      "executor_contract": true,
+      "record_sha": "d27ec3b2ab661661f032e3a6eed0045a1b80abe5feddf96bea3f1f5c473f00db"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "crash",
+      "executor_contract": true,
+      "record_sha": "4e9b61dc0f0dbe6010fdd3e7b7e4edad3ae739feaaf2cdc9d65c0fea6dbc1a95"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "interrupt",
+      "executor_contract": true,
+      "record_sha": "61a306d3707053d4de504660060eb27665292937ab1271250f12f0afde0598fc"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "wall",
+      "executor_contract": true,
+      "record_sha": "757ce3ccb8276a18c5a1833ccd57afccbf3d16983201e94e2113654981c06942"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "cpu",
+      "executor_contract": true,
+      "record_sha": "6d9ec43ba8ffe0a86f496695c93734bf87bfb3b69f7d0708d91bf4bb71d567c3"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "memory",
+      "executor_contract": true,
+      "record_sha": "515bf2104d8317d5b9b8ed3ffa7e4575d9f1f944963951ff7c3ed1e503f96ade"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "disk",
+      "executor_contract": true,
+      "record_sha": "133fff8d1d9d848fcdd417b5923610d2f25085ff98b11d711b186d4439244f5b"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "cleanup-race",
+      "executor_contract": true,
+      "record_sha": "93b9dd5e592495d228236faaddf8eaf678acfd19d7ee560ff77aa1bd42efcd7c"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "acquisition-race",
+      "executor_contract": true,
+      "record_sha": "fdb496610591005fae51fb1e619ef36bc935bc88f447340c1b389f08c21bf17a"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "identity-mismatch",
+      "executor_contract": true,
+      "record_sha": "7c3c7f9fa380fce362d4c4b684d3189d8799194651dd8dddc5b90c1eab0ff2e2"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "access-denied",
+      "executor_contract": true,
+      "record_sha": "ce2f2fd2b9bf5e52b997362f727ff3b4abe3baaaccfc46c863bd2ff1efe5842c"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "receipt-write",
+      "executor_contract": true,
+      "record_sha": null
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "short-parent",
+      "executor_contract": true,
+      "record_sha": "75a42f1ae8baddc675511497f2cfbb5e84c57cc56f9d57a7b7d09e75d11d987b"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "repeat-termination",
+      "executor_contract": true,
+      "record_sha": "ddb8685784629fa84108bdb3dbd339043e4fe079500ce1ea586491a41dec0cdc"
+    },
+    {
+      "attempt": "Solar4101-20261117",
+      "case": "old-false-complete",
+      "executor_contract": true,
+      "record_sha": "fa75a070ecc0e97b56f15c54258d49bd283b581bfef2e2c0785f82ff2f3df75a"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "root0",
+      "executor_contract": false,
+      "record_sha": "db8796fbec195c16d4f0b4a1863865f1117b7d619b65183b8d5c5faf27cdf8c6"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "joined",
+      "executor_contract": false,
+      "record_sha": "a0ed71c6db3de4e56076d190adcc904746d86efc0e2c1a63a567284f23c7a715"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "child",
+      "executor_contract": true,
+      "record_sha": "d8badcdd604c58a67ecccf0b611f677737ca73acb97a2672127ed44eff218a00"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "grandchild",
+      "executor_contract": true,
+      "record_sha": "4213d34c6553ce93f9455fe30e37f4d4ce2170bd7798b583e14dde7bfccf587f"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "venv",
+      "executor_contract": true,
+      "record_sha": "658b3311f3d2330ec2e20537dff0a7fd002b708cef37e597b58192dbafd470af"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "nonzero",
+      "executor_contract": true,
+      "record_sha": "ccb949cc957f22bfca6ca4b03666d5e88cb453cbde8bb657f5ed7d12f3b54dfb"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "crash",
+      "executor_contract": true,
+      "record_sha": "990a2d3f9e8aeaf67b3204eb37f4f769dbdf6b3cc58805d439dd2c78f3df7e33"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "interrupt",
+      "executor_contract": true,
+      "record_sha": "56596b47d77bfaddb6926859d8f72d716d21a195ad7cac42cf22c9bde21c7fbb"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "wall",
+      "executor_contract": false,
+      "record_sha": "dd0abccdc1c7a3f3d97417e898100ef179c5af568eeb08cc9902e622fc284d51"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "cpu",
+      "executor_contract": false,
+      "record_sha": "67fee0a781f5fae7bafb38ab3b0087b74323e577227bf8172b7988da0dd45ddb"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "memory",
+      "executor_contract": true,
+      "record_sha": "ebd724d0afdc060593ec5fe08721cb6f92c30445d21e7d9f37aa5e4497031f20"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "disk",
+      "executor_contract": false,
+      "record_sha": "a08ec891045484e5a2d82121f4400c51da1bfb02c4da7ea80170f0a251d35aef"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "cleanup-race",
+      "executor_contract": true,
+      "record_sha": "559288ac61f009b74693d7689fa8c8a72f0b60eb3ce5ae30bca805a2f9f98910"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "acquisition-race",
+      "executor_contract": true,
+      "record_sha": "235435537e82af1aa131f79535598adf7cee0b49566d16996770f821c1adad5e"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "identity-mismatch",
+      "executor_contract": true,
+      "record_sha": "7b0f8540e9c4beda0b625ca282e948509c81bc2120b9bb49d8c0f28044418a52"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "access-denied",
+      "executor_contract": true,
+      "record_sha": "7d96d9a4cdc82a6702c5230550bb35d43b1cc4508d19bd2879158cebf0b79d12"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "receipt-write",
+      "executor_contract": true,
+      "record_sha": null
+    },
+    {
+      "attempt": "attempt2",
+      "case": "short-parent",
+      "executor_contract": true,
+      "record_sha": "a0b864ecf4e0ce0c2f9dcdd584d806d0db5a7268c5dcc29afb5730e33e5eebdc"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "repeat-termination",
+      "executor_contract": true,
+      "record_sha": "b8150ef4439e910b687b08a9ed0e8e167c157494aac7d7baf5453f0364f67e54"
+    },
+    {
+      "attempt": "attempt2",
+      "case": "old-false-complete",
+      "executor_contract": false,
+      "record_sha": "956e9d439d0d22536bd8c55b065077eeb2cbc67e0f881f01a5ae731d1aff4016"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "root0",
+      "executor_contract": true,
+      "record_sha": "0d26e75a3f846dd8adbebcbada1c9fcf36c539b34a5913b4bc6c2daa57474946"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "joined",
+      "executor_contract": true,
+      "record_sha": "bebbfcef5669859311d94b4abd1e068f456660d718c09af4c93732dde79429b4"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "child",
+      "executor_contract": false,
+      "record_sha": "b3d3eeb5f9086dd8048cd8c5566be8a43d29fea78905ce1524d407b83caf5f6a"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "grandchild",
+      "executor_contract": false,
+      "record_sha": "ba707cc2ca6a76c6792be39c71ca2c66a0f990aad40c91ef22e5bf3d7f924641"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "venv",
+      "executor_contract": false,
+      "record_sha": "03db36acb6e9f336ec9bf468451784fff4f65bd05d1ebc2252918fa7cfd123c2"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "nonzero",
+      "executor_contract": true,
+      "record_sha": "dde5aacf09d019f79e8b08b49e16ab45f7bb598034390be96d863c070ee3904f"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "crash",
+      "executor_contract": true,
+      "record_sha": "15a0254e5af6d735586bf0bc94a84938705c3f5a658c8ca45c4938fa2be85b2e"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "interrupt",
+      "executor_contract": true,
+      "record_sha": "90b6fcb26a978e6b7f8e487c8e6ae544b1ffbfa0faffa4e21b14dd6d445f0487"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "wall",
+      "executor_contract": false,
+      "record_sha": "25b7d334341b3aca9733f324a5a42b3c4a593102b2389e6696c098ed3bbcf005"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "cpu",
+      "executor_contract": false,
+      "record_sha": "b7f96b0ea8a820fd98c3f79ae529b413261cfa7adb6b44320ce97042c211b84d"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "memory",
+      "executor_contract": true,
+      "record_sha": "73fd291c5f887a3a7160d83c6d65f056215954234ec3ec9c748d63644b3ebd23"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "disk",
+      "executor_contract": true,
+      "record_sha": "943e2054f7fe73c814f93b31bd49e7b3e930f31fd355f8e236bf87507ae9ecc1"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "cleanup-race",
+      "executor_contract": false,
+      "record_sha": "c123ba85c1813688484b3ce338981c7205d3eb82cf695d49050e9347276c1232"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "acquisition-race",
+      "executor_contract": true,
+      "record_sha": "444ed122ef12a45ebcf8e84511e4f3df5e3d0a82db065fefbaa6ea1554ebf5ed"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "identity-mismatch",
+      "executor_contract": true,
+      "record_sha": "3ccc5fe4a1e7b7ee1d7fc3d6d46836ac532d0bed027cc915b24a0eb119ae9611"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "access-denied",
+      "executor_contract": true,
+      "record_sha": "68413ac7415c752b6bc452724ab6aeb96a7d5d4baeee6ed704f476a4415c5726"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "receipt-write",
+      "executor_contract": true,
+      "record_sha": null
+    },
+    {
+      "attempt": "attempt3",
+      "case": "short-parent",
+      "executor_contract": false,
+      "record_sha": "f0b46fb8046f897fe8c78d7385c83ec1a5bab9e00465fd15e988cbb5a2c83834"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "repeat-termination",
+      "executor_contract": true,
+      "record_sha": "0fe8ee97082aaef46320e39a22ae456532fbe107f2c7918f096269be64c8f612"
+    },
+    {
+      "attempt": "attempt3",
+      "case": "old-false-complete",
+      "executor_contract": false,
+      "record_sha": "c7c05c4c84e33e55028949c0db23f669ddc8c7138ed56e6e95bdc9b72e9f27aa"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "root0",
+      "executor_contract": true,
+      "record_sha": "0cf5a475ca0d6e1cceecddc23ef32c0e24102323a36a69ba64b209ffe622f346"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "joined",
+      "executor_contract": true,
+      "record_sha": "84e849218dad76366884a05dcf04b2460396763a44deddf6565c877b2fab41ec"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "child",
+      "executor_contract": true,
+      "record_sha": "2af6a55ad97ab54ba22b0a24db908029638c7b06eaf58cd27b8e1d3bcfe8dba3"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "grandchild",
+      "executor_contract": true,
+      "record_sha": "4354995e448888167c77af3a4429a69f7917db59c10df4286311d22479e506a2"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "venv",
+      "executor_contract": true,
+      "record_sha": "6cc1ba3a4634bee5d5b6113271e9ceff991bf123f64664ba79ce61c14121666d"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "nonzero",
+      "executor_contract": true,
+      "record_sha": "4e9d067c854938fe2ad87ba3308c11b5fe5f7a5869af31887d0f9a91e2b858af"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "crash",
+      "executor_contract": true,
+      "record_sha": "2e39483d2b976ca0eac113e1fab3fe91f8dea3e5b3e5e44498dfe186895df06a"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "interrupt",
+      "executor_contract": true,
+      "record_sha": "9ae3e313565f31d25579155cea5254e61e0dff2edb617fc2bef8e2233c4f946b"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "wall",
+      "executor_contract": true,
+      "record_sha": "dbc3890b777b6da4268672e51e16983150d4366dfed04a13cc0fbeaec3c9ca76"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "cpu",
+      "executor_contract": true,
+      "record_sha": "25646dbd3b34c254ac0d17fd9482a79b26f91d4bca21cd7bbd977039ecf1bbc6"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "memory",
+      "executor_contract": true,
+      "record_sha": "9f30169d0970fb77e4ef99c7cfa516951b1fae1c74d8483b911ab1dd44f9db9d"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "disk",
+      "executor_contract": true,
+      "record_sha": "f173297be570af021567117cf7af9f2675fb3ff083bb0c64bd4a4109c5aeaa08"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "cleanup-race",
+      "executor_contract": true,
+      "record_sha": "5ab5a15119e61a79826abded269194ebdb3933897f6fad8f82427e593e8ec3ca"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "acquisition-race",
+      "executor_contract": true,
+      "record_sha": "28871ac4a1821c61a61e2ad0c52df7b7b5a2362f1ebc3003461b5af0ec4bbb33"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "identity-mismatch",
+      "executor_contract": true,
+      "record_sha": "7de042c9be5c65acd7ac727fdeee54fabad7ef51e9d134ec2013a6370623c52c"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "access-denied",
+      "executor_contract": true,
+      "record_sha": "a53afe1ad3a4f3af4146b384373afa45294b729b91d824f557e20abfadf3b3b7"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "receipt-write",
+      "executor_contract": true,
+      "record_sha": null
+    },
+    {
+      "attempt": "attempt4",
+      "case": "short-parent",
+      "executor_contract": true,
+      "record_sha": "f908113470f2cabd27890ba5a25298cad6cdef761706d6eb28d69342ab3afcce"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "repeat-termination",
+      "executor_contract": true,
+      "record_sha": "4eb2a89e39f8d01ce80c0a9ee900b9cf13255496c0c735293dfef78370644caf"
+    },
+    {
+      "attempt": "attempt4",
+      "case": "old-false-complete",
+      "executor_contract": true,
+      "record_sha": "21315ddb07d42652e920c596e886688c7c94e22d59eeb9d6c16ac56ae38fe79e"
+    }
+  ],
+  "last_suite_expected_outcomes": 20,
+  "old_false_complete_reproduced": true,
+  "all_recorded_fixture_processes_gone": true,
+  "CPU_discrepancies": [
+    {
+      "case": "short-parent",
+      "job_CPU": 0.828125,
+      "retained_CPU": 0.84375,
+      "difference": 0.015625,
+      "status": "UNRESOLVED; no acceptance tolerance introduced"
+    }
+  ],
+  "job_CPU_not_double_counted": true,
+  "runtime_and_frozen_paths_unchanged": true,
+  "portable_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "old_monitor_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+  "new_monitor_SHA256": "5cf9e4598088a2ee90d67f8372c0a00a6d7fbcb51f1da8588c01f40ea3f44997",
+  "resources": {
+    "synthetic_CPU_including_four_missing_receipt_allowances": 25.1875,
+    "synthetic_wall": 27.34852400003001,
+    "review_CPU_allowance": 15,
+    "review_wall_allowance": 30,
+    "final_CPU_allowance": 10,
+    "final_wall_allowance": 20,
+    "backup_CPU_reserved": 20,
+    "backup_wall_reserved": 40,
+    "charged_CPU_with_backup_reserve": 70.1875,
+    "charged_wall_with_backup_reserve": 117.34852400003001,
+    "peak_fixture_private_sampled": 147820544,
+    "CPU_fully_measured": false,
+    "all_stage_private_peak": null,
+    "connector_remote_CPU": null,
+    "missing_write_receipt_allowance_each": 1
+  },
+  "unresolved": [
+    "Final CPU reconciliation failed for short-parent; no new tolerance or repeat to seek PASS. Investigate kernel accounting finalization/tick resolution independently before admission.",
+    "Native CreateProcess launcher is a changed launch path; no stdout capture or explicit sanitized environment block yet; existing acceptance wrappers/parsers have NOT been changed or qualified.",
+    "Probes13/14/15/19 do not fully demonstrate deterministic cleanup/discovery/PIDreuse/repeated termination races; injected exceptions are narrower evidence.",
+    "Actual unrelated-process survival, abrupt supervisor loss, cleanup failure, missing receipts/finalCPU negative consumer controls still need qualification.",
+    "No exhaustive individual process lifecycle log for processes between samples; group CPU and individual process CPU have an observed unresolved discrepancy.",
+    "Assign/nested job/breakaway and host policy compatibility not comprehensively qualified."
+  ]
+}

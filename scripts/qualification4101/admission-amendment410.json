@@ -1,0 +1,44 @@
+{
+  "status": "NO_GO_DRAFT_NOT_AUTHORIZATION",
+  "old_monitor_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+  "new_monitor_SHA256": "5cf9e4598088a2ee90d67f8372c0a00a6d7fbcb51f1da8588c01f40ea3f44997",
+  "helper_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+  "source_runtime": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "packaging": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+  "portable_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "stage410_spent": {
+    "CPU": 37.46875,
+    "wall": 71.332329
+  },
+  "stage410_with_previous_backup": {
+    "CPU": 53.4375,
+    "wall": 114.919286
+  },
+  "remaining_conservative": {
+    "early_CPU": 666.5625,
+    "early_wall": 845.080714,
+    "hard_CPU": 846.5625,
+    "hard_wall": 1085.080714
+  },
+  "forecast_original": {
+    "CPU": 650,
+    "wall": 450,
+    "private_GiB": 1.5,
+    "disk_GiB": 1
+  },
+  "forecast_new": null,
+  "memory_and_disk_headroom": "Full410 output not created; require fresh available RAM/disk check; fixture memory is not a full410 measurement",
+  "forecast_reason": "No qualified monitor overhead forecast. Conservative early CPU headroom beyond original650 is only16.5625s, before any new reserve; cannot grant admission.",
+  "execution_authorized": false,
+  "source_diff": "scripts/qualification4101/monitor-diff.txt",
+  "failure_policy": "No retries/full410; keep frozen plans and receipts. Fresh output roots required for future authorization; never overwrite old results.",
+  "blockers": [
+    "Final CPU reconciliation failed for short-parent; no new tolerance or repeat to seek PASS. Investigate kernel accounting finalization/tick resolution independently before admission.",
+    "Native CreateProcess launcher is a changed launch path; no stdout capture or explicit sanitized environment block yet; existing acceptance wrappers/parsers have NOT been changed or qualified.",
+    "Probes13/14/15/19 do not fully demonstrate deterministic cleanup/discovery/PIDreuse/repeated termination races; injected exceptions are narrower evidence.",
+    "Actual unrelated-process survival, abrupt supervisor loss, cleanup failure, missing receipts/finalCPU negative consumer controls still need qualification.",
+    "No exhaustive individual process lifecycle log for processes between samples; group CPU and individual process CPU have an observed unresolved discrepancy.",
+    "Assign/nested job/breakaway and host policy compatibility not comprehensively qualified."
+  ]
+}

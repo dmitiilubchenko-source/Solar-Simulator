@@ -1,0 +1,32 @@
+{
+  "stage": "410.1",
+  "hard": {
+    "cpu_seconds": 120,
+    "wall_seconds": 300,
+    "private_bytes": 1073741824,
+    "disk_bytes": 268435456
+  },
+  "early": {
+    "cpu_seconds": 96,
+    "wall_seconds": 240,
+    "private_bytes": 943718400,
+    "disk_bytes": 234881024
+  },
+  "forecast": {
+    "synthetic_CPU": 15,
+    "synthetic_wall": 45,
+    "review_CPU_allowance": 15,
+    "review_wall_allowance": 30,
+    "backup_CPU_allowance": 20,
+    "backup_wall_allowance": 40,
+    "final_CPU_allowance": 10,
+    "final_wall_allowance": 20
+  },
+  "stage410_spent_CPU": 37.46875,
+  "stage410_spent_wall": 71.332329,
+  "stage410_with_previous_backup_CPU": 53.4375,
+  "stage410_with_previous_backup_wall": 114.919286,
+  "no_full410": true,
+  "scope": "20 bounded synthetic scenarios only; fail/partial before exceeding early. No performance guarantee or scientific trajectories.",
+  "request_SHA256": "1e414e8e8c118775c843428566c6668201dc772f5892ce88472def2ace6b256a"
+}
