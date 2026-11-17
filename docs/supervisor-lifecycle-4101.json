@@ -547,5 +547,13 @@
   },
   "backup": "CLOUD_UNVERIFIED",
   "history_unchanged": true,
-  "backup_receipts": "scripts/qualification4101/backup-receipts.json"
+  "backup_receipts": "scripts/qualification4101/backup-receipts.json",
+  "finalization": {
+    "private_context": "Captured and verified locally; push deferred because fresh API privacy/owner query returned no usable metadata.",
+    "additional_remote_metadata_wall_charged_allowance": 32,
+    "charged_CPU_seconds": 70.1875,
+    "charged_active_wall_seconds": 149.348524,
+    "CPU_fully_measured": false,
+    "hard_caps_unchanged": true
+  }
 }
