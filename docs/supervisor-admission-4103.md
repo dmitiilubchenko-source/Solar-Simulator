@@ -95,3 +95,10 @@ CPU/wall, что выше прежнего допущения 0,8. В прогн
 Monitor410.3 SHA256 `8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17`.
 SHA прежних мониторов, wrapper, portable, native и immutable планов
 перечислены в amendment. Release readiness остаётся NO-GO.
+
+Новый архив свидетельств 410.3 в Project-Archives получил
+**CLOUD_VERIFIED_SHA256**. Независимое скачивание подтвердило 235 695 байт,
+SHA256 `3b236bfc5e1b135b3e276b9af6ea8362ff14a323d476d60334c5da66de545bf1`,
+CRC и SHA всех 348 перечисленных файлов, плюс наличие manifest. Архив
+привязан к точному коммиту `0602dc8`. Облачная копия имеет прежний
+приватный доступ. [Квитанция](../scripts/qualification4103/backup-receipts.json).

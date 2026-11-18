@@ -1182,6 +1182,7 @@
       "scripts/qualification4102/run.py",
       "scripts/qualification4103/admission-amendment410-v3.json",
       "scripts/qualification4103/audit.py",
+      "scripts/qualification4103/backup-receipts.json",
       "scripts/qualification4103/consumer.py",
       "scripts/qualification4103/fixture.py",
       "scripts/qualification4103/independent-audit.json",

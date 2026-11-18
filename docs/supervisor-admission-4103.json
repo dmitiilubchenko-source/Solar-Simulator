@@ -43,7 +43,7 @@
     "Win32 guard is a sampled limiter for wall/CPU/private memory/disk. Receipt writer CPU is separately included by the calling ledger.",
     "Old cross-counter discrepancies remain diagnostic, with no proven cause and no fitted tolerance."
   ],
-  "cloud_status": "PENDING",
+  "cloud_status": "CLOUD_VERIFIED_SHA256",
   "focused_finalization": {
     "repeated": [
       true,
@@ -75,5 +75,6 @@
     "supervisor_CPU": 0.015625,
     "wall": 1.1597131000016816,
     "source_sha": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17"
-  }
+  },
+  "backup_receipt": "scripts/qualification4103/backup-receipts.json"
 }
