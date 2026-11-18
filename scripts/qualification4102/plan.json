@@ -1,0 +1,45 @@
+{
+  "hard": {
+    "CPU": 180,
+    "wall": 600,
+    "private": 1073741824,
+    "disk": 268435456
+  },
+  "early": {
+    "CPU": 144,
+    "wall": 480,
+    "private": 943718400,
+    "disk": 234881024
+  },
+  "allocation": {
+    "initial": [
+      10,
+      20
+    ],
+    "targeted_and_one_regression": [
+      50,
+      120
+    ],
+    "review": [
+      20,
+      60
+    ],
+    "backup": [
+      25,
+      150
+    ],
+    "final": [
+      10,
+      30
+    ],
+    "reserve": [
+      20,
+      60
+    ]
+  },
+  "forecast_CPU": 135,
+  "forecast_wall": 440,
+  "no_full410": true,
+  "CPU_comparison": "Job counters primary per Win32 API; preserve every discrepancy; no tolerance introduced; admission UNRESOLVED if ownership or final accounting stability not proven.",
+  "prior_attempts_immutable": true
+}

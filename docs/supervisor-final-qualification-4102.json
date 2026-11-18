@@ -1,0 +1,1523 @@
+{
+  "status": "NO_GO_PARTIAL",
+  "new_monitor_SHA256": "6d6d6c7a3d033a4110f335d6a67982d5c77ae9627747ecbbf623c737dc364162",
+  "baseline4101_SHA256": "5cf9e4598088a2ee90d67f8372c0a00a6d7fbcb51f1da8588c01f40ea3f44997",
+  "old4101_difference_preserved": true,
+  "records": [
+    {
+      "path": "echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "1565501d0f0af1db88ad624b16f98fc64ef895176f956d1bc86a2e36f65ed38c",
+      "root": 1,
+      "complete": false,
+      "reason": "root-nonzero"
+    },
+    {
+      "path": "controls2/handle/supervisor.json",
+      "sha256": "fedf43917a24f7724c5ac543728ffec95ea6a2965a38b3005b58357937ed6e94",
+      "root": 0,
+      "complete": true,
+      "reason": null
+    },
+    {
+      "path": "controls2/identity/supervisor.json",
+      "sha256": "3261f4372c1b3b9ce83ab313b50fd1957c3de39cdf1f7a674ed3fe0f7830947e",
+      "root": 1,
+      "complete": false,
+      "reason": "monitor-error"
+    },
+    {
+      "path": "controls/handle/supervisor.json",
+      "sha256": "4bf9823625dcb0c787556d5f7b7ef42b19e8a7424207c0182544df41f1bc5a38",
+      "root": 0,
+      "complete": true,
+      "reason": null
+    },
+    {
+      "path": "controls/identity/supervisor.json",
+      "sha256": "880dbfcc48bb1470f0c8f78df66cbc7bf0c41435bd4da892f12f610f208d100d",
+      "root": 1,
+      "complete": false,
+      "reason": "monitor-error"
+    },
+    {
+      "path": "attempt2/wall output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "e5c3c131ace1bebcbad84ffea240cac792284057c7f4ce581be3d6ad9194af9f",
+      "root": 1,
+      "complete": false,
+      "reason": "stage-wall"
+    },
+    {
+      "path": "attempt2/short output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "9a555f80bf3ca64c85d3231c532ecbe8d620c4f95d4447cb828d3adb2cae89e9",
+      "root": 0,
+      "complete": false,
+      "reason": "unexpected-owned-descendant"
+    },
+    {
+      "path": "attempt2/root0 output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "b9c768686fc7e93dc8d3e9c91398a6b610a3d5c040488cb0b7793991c02e57ef",
+      "root": 0,
+      "complete": true,
+      "reason": null
+    },
+    {
+      "path": "attempt2/resume output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "c3bbb4605d4778929f072a60680dcc58f7c69aa663bf1695e2ecbcb0c23d9fbd",
+      "root": 1,
+      "complete": false,
+      "reason": "monitor-error"
+    },
+    {
+      "path": "attempt2/orphan output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "e0656c43bc65ee5c2177bc1208280f569512a23957819e51a7c3b5145ea0231f",
+      "root": 0,
+      "complete": false,
+      "reason": "unexpected-owned-descendant"
+    },
+    {
+      "path": "attempt2/nonzero output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "ceeac03b40e26e6b5a127031672ddc23fc2d0a179b10f9d7487d8da3c3e3c6f4",
+      "root": 7,
+      "complete": false,
+      "reason": "root-nonzero"
+    },
+    {
+      "path": "attempt2/memory output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "4e5eb1df3ae3d658d9633bb46a76ed877c1a2bcae989155c0c6131cf0fe1ecee",
+      "root": 1,
+      "complete": false,
+      "reason": "private-memory"
+    },
+    {
+      "path": "attempt2/joined output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "c75637fe8543f9903bd97bc6b0233ddf406d15405e045babe981f781bf6082d7",
+      "root": 0,
+      "complete": true,
+      "reason": null
+    },
+    {
+      "path": "attempt2/interrupt output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "ed16b09b8816a31718f94013e4cc86078fb50502f8729771cc7f3252fe81e0e9",
+      "root": 1,
+      "complete": false,
+      "reason": "interrupted"
+    },
+    {
+      "path": "attempt2/gui output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "2a3250e5e81b931dd4022d46ae39aadd4e462495aed61e8e53cfda7867217d59",
+      "root": 0,
+      "complete": true,
+      "reason": null
+    },
+    {
+      "path": "attempt2/grand output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "a5c40eba14bfe2de16a6491f4ed3efecde8c61b638fc5ec468734577b70787e5",
+      "root": 0,
+      "complete": false,
+      "reason": "unexpected-owned-descendant"
+    },
+    {
+      "path": "attempt2/finalcpu output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "b7166905f91221cb909f558cb3b0e8d2df2681d8289cc35e9f480661d21804c9",
+      "root": null,
+      "complete": false,
+      "reason": "monitor-error"
+    },
+    {
+      "path": "attempt2/echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "b888779578da56c7989c71a5f6f9c381d142b03947bb4c9f2b6976c32dfc4127",
+      "root": 0,
+      "complete": true,
+      "reason": null
+    },
+    {
+      "path": "attempt2/disk output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "1f8f151c12d15b51081cd430c146565766531f147b1853aa209bf194067dcce2",
+      "root": 1,
+      "complete": false,
+      "reason": "stage-disk"
+    },
+    {
+      "path": "attempt2/create output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "dc7dc728583c6836337b4a8a36261f496563b4cce72cdd04c81db5b13e2812fb",
+      "root": null,
+      "complete": false,
+      "reason": "monitor-error"
+    },
+    {
+      "path": "attempt2/crash output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "cd124b53f471fe4c2039426410d826fd9eeae75de9a420c38ab26b8e294c0b2d",
+      "root": 9,
+      "complete": false,
+      "reason": "root-nonzero"
+    },
+    {
+      "path": "attempt2/cpu output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "aafc12808af63d6cff8dc6dbd4c0fe0d36f3b63029dcfcc1f9683fd958b349f1",
+      "root": 1,
+      "complete": false,
+      "reason": "stage-CPU"
+    },
+    {
+      "path": "attempt2/cleanup output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "b29347145212c65210b77d5bdc88c5bd943c6eae767803d3c05846e6a29b91fc",
+      "root": 0,
+      "complete": false,
+      "reason": "unexpected-owned-descendant"
+    },
+    {
+      "path": "attempt2/assign output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "457a43bbc6196f037e0f2896c9a3778a8dc87e3a76bb9b557791b59bb2907205",
+      "root": 1,
+      "complete": false,
+      "reason": "monitor-error"
+    },
+    {
+      "path": "attempt2/access output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "sha256": "7f6d04fcaed192646ed7a73452c08703725c438494bc37011a2de5d9c4f5de73",
+      "root": 1,
+      "complete": false,
+      "reason": "monitor-error"
+    }
+  ],
+  "stable_snapshots": [
+    {
+      "path": "echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          156250,
+          625000,
+          0
+        ],
+        [
+          156250,
+          625000,
+          0
+        ],
+        [
+          156250,
+          625000,
+          0
+        ],
+        [
+          156250,
+          625000,
+          0
+        ],
+        [
+          156250,
+          625000,
+          0
+        ],
+        [
+          156250,
+          625000,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "controls2/handle/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          312500,
+          156250,
+          0
+        ],
+        [
+          312500,
+          156250,
+          0
+        ],
+        [
+          312500,
+          156250,
+          0
+        ],
+        [
+          312500,
+          156250,
+          0
+        ],
+        [
+          312500,
+          156250,
+          0
+        ],
+        [
+          312500,
+          156250,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "controls2/identity/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "controls/handle/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "controls/identity/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/wall output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/short output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          3593750,
+          2500000,
+          0
+        ],
+        [
+          3593750,
+          2500000,
+          0
+        ],
+        [
+          3593750,
+          2500000,
+          0
+        ],
+        [
+          3593750,
+          2500000,
+          0
+        ],
+        [
+          3593750,
+          2500000,
+          0
+        ],
+        [
+          3593750,
+          2500000,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/root0 output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          625000,
+          0
+        ],
+        [
+          0,
+          625000,
+          0
+        ],
+        [
+          0,
+          625000,
+          0
+        ],
+        [
+          0,
+          625000,
+          0
+        ],
+        [
+          0,
+          625000,
+          0
+        ],
+        [
+          0,
+          625000,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/resume output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/orphan output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          3125000,
+          2968750,
+          0
+        ],
+        [
+          3125000,
+          2968750,
+          0
+        ],
+        [
+          3125000,
+          2968750,
+          0
+        ],
+        [
+          3125000,
+          2968750,
+          0
+        ],
+        [
+          3125000,
+          2968750,
+          0
+        ],
+        [
+          3125000,
+          2968750,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/nonzero output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ],
+        [
+          156250,
+          312500,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/memory output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/joined output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          25468750,
+          5468750,
+          0
+        ],
+        [
+          25468750,
+          5468750,
+          0
+        ],
+        [
+          25468750,
+          5468750,
+          0
+        ],
+        [
+          25468750,
+          5468750,
+          0
+        ],
+        [
+          25468750,
+          5468750,
+          0
+        ],
+        [
+          25468750,
+          5468750,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/interrupt output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/gui output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          468750,
+          625000,
+          0
+        ],
+        [
+          468750,
+          625000,
+          0
+        ],
+        [
+          468750,
+          625000,
+          0
+        ],
+        [
+          468750,
+          625000,
+          0
+        ],
+        [
+          468750,
+          625000,
+          0
+        ],
+        [
+          468750,
+          625000,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/grand output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          3281250,
+          2812500,
+          0
+        ],
+        [
+          3281250,
+          2812500,
+          0
+        ],
+        [
+          3281250,
+          2812500,
+          0
+        ],
+        [
+          3281250,
+          2812500,
+          0
+        ],
+        [
+          3281250,
+          2812500,
+          0
+        ],
+        [
+          3281250,
+          2812500,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/finalcpu output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": false,
+      "observations": []
+    },
+    {
+      "path": "attempt2/echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/disk output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          312500,
+          0,
+          0
+        ],
+        [
+          312500,
+          0,
+          0
+        ],
+        [
+          312500,
+          0,
+          0
+        ],
+        [
+          312500,
+          0,
+          0
+        ],
+        [
+          312500,
+          0,
+          0
+        ],
+        [
+          312500,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/create output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/crash output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ],
+        [
+          468750,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/cpu output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          2656250,
+          1250000,
+          0
+        ],
+        [
+          2656250,
+          1250000,
+          0
+        ],
+        [
+          2656250,
+          1250000,
+          0
+        ],
+        [
+          2656250,
+          1250000,
+          0
+        ],
+        [
+          2656250,
+          1250000,
+          0
+        ],
+        [
+          2656250,
+          1250000,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/cleanup output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          28125000,
+          2500000,
+          0
+        ],
+        [
+          28125000,
+          2500000,
+          0
+        ],
+        [
+          28125000,
+          2500000,
+          0
+        ],
+        [
+          28125000,
+          2500000,
+          0
+        ],
+        [
+          28125000,
+          2500000,
+          0
+        ],
+        [
+          28125000,
+          2500000,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/assign output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "path": "attempt2/access output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "stable": true,
+      "observations": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "CPU_differences": [
+    {
+      "path": "echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.078125,
+      "process_sum": 0.015625
+    },
+    {
+      "path": "controls2/handle/supervisor.json",
+      "job": 0.046875,
+      "process_sum": 0.0
+    },
+    {
+      "path": "controls2/identity/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0
+    },
+    {
+      "path": "controls/handle/supervisor.json",
+      "job": 0.046875,
+      "process_sum": 0.015625
+    },
+    {
+      "path": "controls/identity/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0
+    },
+    {
+      "path": "attempt2/wall output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.046875,
+      "process_sum": 0.046875
+    },
+    {
+      "path": "attempt2/short output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.609375,
+      "process_sum": 0.5625
+    },
+    {
+      "path": "attempt2/root0 output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.0625,
+      "process_sum": 0.0
+    },
+    {
+      "path": "attempt2/resume output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0
+    },
+    {
+      "path": "attempt2/orphan output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.609375,
+      "process_sum": 0.625
+    },
+    {
+      "path": "attempt2/nonzero output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.046875,
+      "process_sum": 0.0
+    },
+    {
+      "path": "attempt2/memory output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0.0
+    },
+    {
+      "path": "attempt2/joined output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 3.09375,
+      "process_sum": 3.109375
+    },
+    {
+      "path": "attempt2/interrupt output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0.0
+    },
+    {
+      "path": "attempt2/gui output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.109375,
+      "process_sum": 0.109375
+    },
+    {
+      "path": "attempt2/grand output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.609375,
+      "process_sum": 0.546875
+    },
+    {
+      "path": "attempt2/echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.046875,
+      "process_sum": 0.0
+    },
+    {
+      "path": "attempt2/disk output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.03125,
+      "process_sum": 0.0625
+    },
+    {
+      "path": "attempt2/create output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0
+    },
+    {
+      "path": "attempt2/crash output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.046875,
+      "process_sum": 0.0
+    },
+    {
+      "path": "attempt2/cpu output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.390625,
+      "process_sum": 0.40625
+    },
+    {
+      "path": "attempt2/cleanup output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 3.0625,
+      "process_sum": 3.09375
+    },
+    {
+      "path": "attempt2/assign output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0
+    },
+    {
+      "path": "attempt2/access output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+      "job": 0.0,
+      "process_sum": 0
+    }
+  ],
+  "all_recorded_process_handles_gone": true,
+  "resources": {
+    "visible_job_CPU": 8.9375,
+    "visible_harness_parent_CPU": 0.21875,
+    "visible_suites_wall": 13.28817189997062,
+    "missing_and_failed_allowance_CPU": 10,
+    "missing_and_failed_allowance_wall": 15,
+    "initial_CPU": 10,
+    "initial_wall": 20,
+    "review_CPU": 20,
+    "review_wall": 60,
+    "backup_reserved_CPU": 25,
+    "backup_reserved_wall": 150,
+    "final_CPU": 10,
+    "final_wall": 30,
+    "charged_CPU": 84.15625,
+    "charged_wall": 288.2881718999706,
+    "CPU_fully_measured": false,
+    "whole_stage_private_peak": null,
+    "peak_fixture_private": 108122112
+  },
+  "CPU_conclusion": "Job counters include all assigned active/exited processes per Microsoft contract; snapshots stable in measured non-injected cases. Stable cross-counter differences persist. Timing-of-read alone does not explain them; exact mechanism UNRESOLVED. No numerical tolerance or equality obligation inferred.",
+  "unresolved": [
+    "FinalCPU injection hit earlier path; no correct final-only control",
+    "Deterministic real exit/acquisition races and nested-job restrictions/breakaway not qualified",
+    "Current acceptance consumer/wrapper compatibility not qualified; only explicit new reader negative controls",
+    "Missing per-process provenance for historically unsampled4101 processes cannot be reconstructed",
+    "Monitor close/save/discovery failure races and CPU finalization overhead require further bounded audit"
+  ],
+  "regression_expected_outcomes": 20,
+  "regression_total": 21,
+  "control_outcomes": [
+    {
+      "name": "foreign-handle",
+      "ok": true,
+      "record": {
+        "complete": true,
+        "exit_code": 0,
+        "limit_reason": null,
+        "error": [],
+        "final_job": {
+          "CPU_seconds": 0.046875,
+          "active": 0,
+          "total": 2,
+          "user_100ns": 312500,
+          "kernel_100ns": 156250,
+          "terminated": 0,
+          "snapshot_perf": 443421.6576671
+        },
+        "processes": [
+          {
+            "pid": 23924,
+            "creation_FILETIME": 134395058897557463,
+            "last_CPU_seconds": 0.0,
+            "final_CPU_seconds": 0.0,
+            "exit_code": 0,
+            "alive": false,
+            "job_membership_confirmed": true,
+            "times": {
+              "creation_FILETIME": 134395058897557463,
+              "exit_FILETIME": 134395058898055954,
+              "kernel_100ns": 0,
+              "user_100ns": 0,
+              "CPU_seconds": 0.0
+            }
+          }
+        ],
+        "post_termination_snapshots": [
+          {
+            "job_before": {
+              "CPU_seconds": 0.046875,
+              "active": 0,
+              "total": 2,
+              "user_100ns": 312500,
+              "kernel_100ns": 156250,
+              "terminated": 0,
+              "snapshot_perf": 443421.5959407
+            },
+            "process_times": [
+              {
+                "pid": 23924,
+                "creation_FILETIME": 134395058897557463,
+                "exit_FILETIME": 134395058898055954,
+                "kernel_100ns": 0,
+                "user_100ns": 0,
+                "CPU_seconds": 0.0
+              }
+            ],
+            "job_after": {
+              "CPU_seconds": 0.046875,
+              "active": 0,
+              "total": 2,
+              "user_100ns": 312500,
+              "kernel_100ns": 156250,
+              "terminated": 0,
+              "snapshot_perf": 443421.5959624
+            }
+          },
+          {
+            "job_before": {
+              "CPU_seconds": 0.046875,
+              "active": 0,
+              "total": 2,
+              "user_100ns": 312500,
+              "kernel_100ns": 156250,
+              "terminated": 0,
+              "snapshot_perf": 443421.6163956
+            },
+            "process_times": [
+              {
+                "pid": 23924,
+                "creation_FILETIME": 134395058897557463,
+                "exit_FILETIME": 134395058898055954,
+                "kernel_100ns": 0,
+                "user_100ns": 0,
+                "CPU_seconds": 0.0
+              }
+            ],
+            "job_after": {
+              "CPU_seconds": 0.046875,
+              "active": 0,
+              "total": 2,
+              "user_100ns": 312500,
+              "kernel_100ns": 156250,
+              "terminated": 0,
+              "snapshot_perf": 443421.6164863
+            }
+          },
+          {
+            "job_before": {
+              "CPU_seconds": 0.046875,
+              "active": 0,
+              "total": 2,
+              "user_100ns": 312500,
+              "kernel_100ns": 156250,
+              "terminated": 0,
+              "snapshot_perf": 443421.6369954
+            },
+            "process_times": [
+              {
+                "pid": 23924,
+                "creation_FILETIME": 134395058897557463,
+                "exit_FILETIME": 134395058898055954,
+                "kernel_100ns": 0,
+                "user_100ns": 0,
+                "CPU_seconds": 0.0
+              }
+            ],
+            "job_after": {
+              "CPU_seconds": 0.046875,
+              "active": 0,
+              "total": 2,
+              "user_100ns": 312500,
+              "kernel_100ns": 156250,
+              "terminated": 0,
+              "snapshot_perf": 443421.6370907
+            }
+          }
+        ],
+        "cleanup_performed": false,
+        "worker_CPU_seconds": 0.046875,
+        "parent_supervision_CPU_seconds": 0.03125,
+        "parent_interjob_CPU_excluded": true,
+        "wall_seconds": 0.26957569998921826,
+        "peak_private_tree_sampled": 397312,
+        "last_sample": {
+          "worker_cpu": 0.046875,
+          "parent_cpu": 0.015625,
+          "private_tree": 0,
+          "disk": 71
+        },
+        "samples": 2,
+        "poll_seconds": 0.2,
+        "disk_bytes": 71,
+        "monitor_SHA256": "6d6d6c7a3d033a4110f335d6a67982d5c77ae9627747ecbbf623c737dc364162",
+        "measurement_limitations": "Job group CPU once; process CPU additional audit only, not added. Individual identities/memory sampled; cross-counter equality not assumed. Private/disk limits sampled, not OS quotas."
+      }
+    },
+    {
+      "name": "foreign-identity",
+      "ok": true,
+      "record": {
+        "complete": false,
+        "exit_code": 1,
+        "limit_reason": "monitor-error",
+        "error": [
+          {
+            "type": "RuntimeError",
+            "message": "PID identity no longer belongs to owned job"
+          }
+        ],
+        "final_job": {
+          "CPU_seconds": 0.0,
+          "active": 0,
+          "total": 1,
+          "user_100ns": 0,
+          "kernel_100ns": 0,
+          "terminated": 0,
+          "snapshot_perf": 443421.7557147
+        },
+        "processes": [],
+        "post_termination_snapshots": [
+          {
+            "job_before": {
+              "CPU_seconds": 0.0,
+              "active": 0,
+              "total": 1,
+              "user_100ns": 0,
+              "kernel_100ns": 0,
+              "terminated": 0,
+              "snapshot_perf": 443421.6945073
+            },
+            "process_times": [],
+            "job_after": {
+              "CPU_seconds": 0.0,
+              "active": 0,
+              "total": 1,
+              "user_100ns": 0,
+              "kernel_100ns": 0,
+              "terminated": 0,
+              "snapshot_perf": 443421.6945117
+            }
+          },
+          {
+            "job_before": {
+              "CPU_seconds": 0.0,
+              "active": 0,
+              "total": 1,
+              "user_100ns": 0,
+              "kernel_100ns": 0,
+              "terminated": 0,
+              "snapshot_perf": 443421.7148391
+            },
+            "process_times": [],
+            "job_after": {
+              "CPU_seconds": 0.0,
+              "active": 0,
+              "total": 1,
+              "user_100ns": 0,
+              "kernel_100ns": 0,
+              "terminated": 0,
+              "snapshot_perf": 443421.7148474
+            }
+          },
+          {
+            "job_before": {
+              "CPU_seconds": 0.0,
+              "active": 0,
+              "total": 1,
+              "user_100ns": 0,
+              "kernel_100ns": 0,
+              "terminated": 0,
+              "snapshot_perf": 443421.7350634
+            },
+            "process_times": [],
+            "job_after": {
+              "CPU_seconds": 0.0,
+              "active": 0,
+              "total": 1,
+              "user_100ns": 0,
+              "kernel_100ns": 0,
+              "terminated": 0,
+              "snapshot_perf": 443421.7350719
+            }
+          }
+        ],
+        "cleanup_performed": true,
+        "worker_CPU_seconds": 0.0,
+        "parent_supervision_CPU_seconds": 0.0,
+        "parent_interjob_CPU_excluded": true,
+        "wall_seconds": 0.0635430000256747,
+        "peak_private_tree_sampled": 0,
+        "last_sample": null,
+        "samples": 0,
+        "poll_seconds": 0.2,
+        "disk_bytes": 3746,
+        "monitor_SHA256": "6d6d6c7a3d033a4110f335d6a67982d5c77ae9627747ecbbf623c737dc364162",
+        "measurement_limitations": "Job group CPU once; process CPU additional audit only, not added. Individual identities/memory sampled; cross-counter equality not assumed. Private/disk limits sampled, not OS quotas."
+      },
+      "scope": "Real IsProcessInJob false path using held foreign process; simulated PID substitution, not real OS PID reuse"
+    },
+    {
+      "name": "repeated-termination-empty-job",
+      "ok": true
+    },
+    {
+      "name": "consumer-missing",
+      "ok": true,
+      "scope": "New explicit receipt reader only; existing acceptance consumers unchanged"
+    },
+    {
+      "name": "consumer-invalid",
+      "ok": true,
+      "scope": "New explicit receipt reader only; existing acceptance consumers unchanged"
+    },
+    {
+      "name": "consumer-noCPU",
+      "ok": true,
+      "scope": "New explicit receipt reader only; existing acceptance consumers unchanged"
+    },
+    {
+      "name": "consumer-wrongSHA",
+      "ok": true,
+      "scope": "New explicit receipt reader only; existing acceptance consumers unchanged"
+    },
+    {
+      "name": "supervisor-loss",
+      "ok": true,
+      "root_exit": 23,
+      "identities": [
+        [
+          10508,
+          134395058902704575
+        ],
+        [
+          9524,
+          134395058902736318
+        ]
+      ],
+      "confirmed_gone": [
+        true,
+        true
+      ]
+    },
+    {
+      "name": "unrelated-process-survival",
+      "ok": true,
+      "pid": 24820
+    }
+  ],
+  "backup4101": "PENDING",
+  "backup4102": "PENDING",
+  "no_full410": true,
+  "verdicts": {
+    "SUPERVISOR_LIFECYCLE": "PARTIAL",
+    "WINDOWS_JOB_OWNERSHIP": "PARTIAL",
+    "LAUNCHER_COMPATIBILITY": "PASS_TARGETED_NOT_FULL_WRAPPER",
+    "FINAL_CPU_ACCOUNTING": "UNRESOLVED",
+    "RESOURCE_GUARDS": "PASS_TARGETED_SAMPLED",
+    "RECEIPT_INTEGRITY": "PARTIAL",
+    "NEGATIVE_CONTROLS": "PARTIAL",
+    "BACKUP4101": "PENDING",
+    "TOOLING_SOURCE_IDENTITY": "PINNED_NEW_COPY",
+    "READY_FOR_PORTABLE410_CONTINUATION": "NO_GO",
+    "PORTABLE_ACCEPTANCE": "NOT_RUN",
+    "RELEASE_READINESS": "NO_GO"
+  }
+}

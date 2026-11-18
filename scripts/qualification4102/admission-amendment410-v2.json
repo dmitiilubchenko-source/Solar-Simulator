@@ -1,0 +1,20 @@
+{
+  "status": "NOT_ISSUED_NO_GO_RECORD_ONLY",
+  "full410_authorized": false,
+  "old409_SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+  "prototype4101_SHA256": "5cf9e4598088a2ee90d67f8372c0a00a6d7fbcb51f1da8588c01f40ea3f44997",
+  "new_SHA256": "6d6d6c7a3d033a4110f335d6a67982d5c77ae9627747ecbbf623c737dc364162",
+  "prior410_CPU": 53.4375,
+  "prior410_wall": 114.919286,
+  "early_remaining_CPU": 666.5625,
+  "early_remaining_wall": 845.080714,
+  "new_qualified_forecast": null,
+  "reason": [
+    "FinalCPU injection hit earlier path; no correct final-only control",
+    "Deterministic real exit/acquisition races and nested-job restrictions/breakaway not qualified",
+    "Current acceptance consumer/wrapper compatibility not qualified; only explicit new reader negative controls",
+    "Missing per-process provenance for historically unsampled4101 processes cannot be reconstructed",
+    "Monitor close/save/discovery failure races and CPU finalization overhead require further bounded audit"
+  ],
+  "old_amendment_unchanged": true
+}
