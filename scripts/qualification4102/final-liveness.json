@@ -1,0 +1,136 @@
+{
+  "checks": [
+    {
+      "pid": 38556,
+      "birth": 134395058651141812,
+      "gone": true
+    },
+    {
+      "pid": 40852,
+      "birth": 134395058897591400,
+      "gone": true
+    },
+    {
+      "pid": 39132,
+      "birth": 134395057362010352,
+      "gone": true
+    },
+    {
+      "pid": 9524,
+      "birth": 134395058902736318,
+      "gone": true
+    },
+    {
+      "pid": 31400,
+      "birth": 134395057779066001,
+      "gone": true
+    },
+    {
+      "pid": 41900,
+      "birth": 134395057778631093,
+      "gone": true
+    },
+    {
+      "pid": 11724,
+      "birth": 134395057766838311,
+      "gone": true
+    },
+    {
+      "pid": 41976,
+      "birth": 134395057759216662,
+      "gone": true
+    },
+    {
+      "pid": 8856,
+      "birth": 134395057772267296,
+      "gone": true
+    },
+    {
+      "pid": 41768,
+      "birth": 134395057692887385,
+      "gone": true
+    },
+    {
+      "pid": 42344,
+      "birth": 134395057810577939,
+      "gone": true
+    },
+    {
+      "pid": 33536,
+      "birth": 134395057710723687,
+      "gone": true
+    },
+    {
+      "pid": 4124,
+      "birth": 134395057710260731,
+      "gone": true
+    },
+    {
+      "pid": 41976,
+      "birth": 134395057709784681,
+      "gone": true
+    },
+    {
+      "pid": 41804,
+      "birth": 134395057695597924,
+      "gone": true
+    },
+    {
+      "pid": 19480,
+      "birth": 134395057716532042,
+      "gone": true
+    },
+    {
+      "pid": 40864,
+      "birth": 134395057717005919,
+      "gone": true
+    },
+    {
+      "pid": 41980,
+      "birth": 134395057756178737,
+      "gone": true
+    },
+    {
+      "pid": 41904,
+      "birth": 134395057703022860,
+      "gone": true
+    },
+    {
+      "pid": 41936,
+      "birth": 134395057703502172,
+      "gone": true
+    },
+    {
+      "pid": 42376,
+      "birth": 134395057813520822,
+      "gone": true
+    },
+    {
+      "pid": 41872,
+      "birth": 134395057700327533,
+      "gone": true
+    },
+    {
+      "pid": 30220,
+      "birth": 134395057749425517,
+      "gone": true
+    },
+    {
+      "pid": 37020,
+      "birth": 134395057749900939,
+      "gone": true
+    },
+    {
+      "pid": 5400,
+      "birth": 134395057750363910,
+      "gone": true
+    },
+    {
+      "pid": 19628,
+      "birth": 134395057761917070,
+      "gone": true
+    }
+  ],
+  "all_gone": true,
+  "scope": "Known recorded fixture PID + creation FILETIME; AccessDenied not treated as disappearance"
+}

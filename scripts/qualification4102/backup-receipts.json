@@ -1,0 +1,73 @@
+{
+  "status": "CLOUD_VERIFIED_SHA256",
+  "objects": [
+    {
+      "name": "Solar-Simulator-4101-supervisor-20261117-reviewed.zip",
+      "project": "Solar-Simulator",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar4101-backup-20261117\\Solar-Simulator-4101-supervisor-20261117-reviewed.zip",
+      "size": 206467,
+      "sha256": "5e24ff655f95926eaa745b026eda28b8d8f6c4fc1638e5b51d78e7597faeaa0d",
+      "cloud_id": "1UiX0s_O8VocAGM36FdRG363_CN7o6gwv",
+      "cloud_parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+      "status": "CLOUD_VERIFIED_SHA256",
+      "members": 261,
+      "readback": {
+        "label": "old",
+        "id": "1UiX0s_O8VocAGM36FdRG363_CN7o6gwv",
+        "name": "Solar-Simulator-4101-supervisor-20261117-reviewed.zip",
+        "expected_SHA256": "5e24ff655f95926eaa745b026eda28b8d8f6c4fc1638e5b51d78e7597faeaa0d",
+        "expected_size": 206467,
+        "actual_SHA256": "5e24ff655f95926eaa745b026eda28b8d8f6c4fc1638e5b51d78e7597faeaa0d",
+        "actual_size": 206467,
+        "status": "VERIFIED_SHA256_SIZE",
+        "start_timestamp": 1795032532.4306188,
+        "end_timestamp": 1795032533.6594236,
+        "response": {
+          "status": 200,
+          "content_length": "206467",
+          "content_type": "application/zip"
+        },
+        "failure": null,
+        "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+      },
+      "tooling_commit": "eba8966dd122c798db1e918c23f888ce7395b948",
+      "scope": "Owner-only verified; no permission changes; independent cloud bytes CRC and every member SHA"
+    },
+    {
+      "name": "Solar-Simulator-4102-supervisor-20261118.zip",
+      "project": "Solar-Simulator",
+      "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar4102-backup-20261118\\Solar-Simulator-4102-supervisor-20261118.zip",
+      "size": 92750,
+      "sha256": "156b987d831b6d1465c6f3176af5b5ff2a25ddcdc282c40286724c36d17179ad",
+      "cloud_id": "18dQfzLbn1qsp3LsMoJzJ-B2qO6vHQGRv",
+      "cloud_parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+      "status": "CLOUD_VERIFIED_SHA256",
+      "members": 121,
+      "readback": {
+        "label": "new",
+        "id": "18dQfzLbn1qsp3LsMoJzJ-B2qO6vHQGRv",
+        "name": "Solar-Simulator-4102-supervisor-20261118.zip",
+        "expected_SHA256": "156b987d831b6d1465c6f3176af5b5ff2a25ddcdc282c40286724c36d17179ad",
+        "expected_size": 92750,
+        "actual_SHA256": "156b987d831b6d1465c6f3176af5b5ff2a25ddcdc282c40286724c36d17179ad",
+        "actual_size": 92750,
+        "status": "VERIFIED_SHA256_SIZE",
+        "start_timestamp": 1795032534.2839181,
+        "end_timestamp": 1795032534.6775188,
+        "response": {
+          "status": 200,
+          "content_length": "92750",
+          "content_type": "application/zip"
+        },
+        "failure": null,
+        "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+      },
+      "tooling_commit": "4be0d3ab5e137d5f8077d8a6b41cec871f1a3172",
+      "scope": "Owner-only verified; no permission changes; independent cloud bytes CRC and every member SHA"
+    }
+  ],
+  "connector_wall": 15.783,
+  "resources": "Within preallocated25CPU150wall allowance; leaf records retained separately; not measured service CPU; old/new ZIP not portable4095",
+  "private_context_included": false,
+  "portable_reuploaded": false
+}

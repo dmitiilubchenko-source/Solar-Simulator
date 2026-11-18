@@ -89,3 +89,23 @@ Ledger41053.4375CPU/114.919286wall с прежним backup неизменен. 
 неопределённость. Short-test overhead не является стоимостью полного portable.
 Квалифицированного нового forecast нет; amendment **не выдан**. Ни caps, ни
 исторические FAIL, ни scientific criteria не изменены. После отчёта STOP.
+
+## Backup и итог
+
+410.1:206467B SHA256 `5e24ff655f95926eaa745b026eda28b8d8f6c4fc1638e5b51d78e7597faeaa0d`,
+Drive `1UiX0s_O8VocAGM36FdRG363_CN7o6gwv`,261members.
+410.2:92750B SHA256 `156b987d831b6d1465c6f3176af5b5ff2a25ddcdc282c40286724c36d17179ad`,
+Drive `18dQfzLbn1qsp3LsMoJzJ-B2qO6vHQGRv`,121members.
+Оба **CLOUD_VERIFIED_SHA256**: fresh readback, размер/SHA/CRC и каждый member SHA
+пересчитаны. [Квитанции](../scripts/qualification4102/backup-receipts.json).
+Старые UNVERIFIED receipts не переписаны. Стандартный filtered prepare только
+Solar-Simulator; owner/parent/account проверены; private context не включён,
+portable4095 повторно не загружался. Backup входит в заранее выделенные25CPU/150wall.
+
+Финальная read-only проверка PID+creation FILETIME: все известные записанные
+fixture процессы завершены; AccessDenied не выдаётся за исчезновение.
+[Liveness](../scripts/qualification4102/final-liveness.json). AST/JSON/review,
+inventory и file/line links проверены. Ни нового JPL, ни full check_project,
+ни full410 не выполнялось. Следующий узкий шаг — корректный final-only fault
+и независимая интерпретация CPU counters, затем оставшиеся ownership/wrapper
+контроли и отдельный ресурсный допуск. **Продолжение410 сейчас не разрешено.**
