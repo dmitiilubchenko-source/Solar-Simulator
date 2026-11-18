@@ -1,0 +1,89 @@
+{
+  "status": "TECHNICAL_GO_RESOURCE_NO_GO_NOT_AUTHORIZATION",
+  "monitor409": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+  "monitor4101": "5cf9e4598088a2ee90d67f8372c0a00a6d7fbcb51f1da8588c01f40ea3f44997",
+  "monitor4102": "6d6d6c7a3d033a4110f335d6a67982d5c77ae9627747ecbbf623c737dc364162",
+  "monitor4103": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17",
+  "consumer": "0ae10ef3f2ec04d8dbdafdb3ef7988a81070bbd3267ebc3d995f96269fb0cb5d",
+  "auditor": "fa3767009a9cc90e7fc99d54b0f86be5dbe24722faca3189dcc82d3aa8ba98c3",
+  "runtime": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "packaging": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+  "zip": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "native": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "acceptance_tool": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+  "immutable_parent_plan": "ba161621976b18a32ae00c90c6e919a0f0ee3144ba51391edbbb5eb5856d7714",
+  "unchanged_original_ledger_sha": "eda5aea3ef95c9db89934a9fde89f13dc4dc7e5362d5633ba4fd02b473a03103",
+  "prior_spent": {
+    "cpu": 53.4375,
+    "wall": 114.919286
+  },
+  "resource_forecast": {
+    "status": "PROJECTION_NOT_ADMITTED",
+    "source_forecast_sha": "ec83c19cf3574bdbba490e6a18ac9360ae61618bb49ba280935a5576a8190e4d",
+    "bench": {
+      "files": 14000,
+      "job_CPU": 0.046875,
+      "parent_CPU_before_receipt": 2.28125,
+      "parent_CPU_through_receipt": 3.40625,
+      "wall": 4.090470700000878,
+      "samples": 4
+    },
+    "observed_supervisor_CPU_per_wall": 0.8327281258851869,
+    "worker_cpu": 250,
+    "modeled_monitor_cpu_per_wall": 0.9,
+    "operational_wall": 450,
+    "modeled_monitor_cpu": 405,
+    "final_audit_backup_cpu": 40,
+    "base_projection_cpu": 695,
+    "uncertainty_reserve_cpu": 45,
+    "central_with_reserve_cpu": 740,
+    "final_wall_reserve": 50,
+    "projected_wall_including_reserve": 500,
+    "old_cumulative_spend": {
+      "cpu": 53.4375,
+      "wall": 114.919286
+    },
+    "old_early_remaining": {
+      "cpu": 666.5625,
+      "wall": 845.080714
+    },
+    "old_hard_remaining": {
+      "cpu": 846.5625,
+      "wall": 1085.080714
+    },
+    "cumulative_projected_including_reserve": {
+      "cpu": 793.4375,
+      "wall": 614.919286
+    },
+    "old_early_cpu_deficit": 73.4375,
+    "sampled_private_projection_bytes": 1610612736,
+    "artifact_projection_bytes": 1073741824,
+    "proposal_separate_attempt": {
+      "early_cpu": 780,
+      "hard_cpu": 900,
+      "early_wall": 600,
+      "hard_wall": 750,
+      "early_private_bytes": 1932735283,
+      "hard_private_bytes": 2147483648,
+      "early_disk_bytes": 1932735283,
+      "hard_disk_bytes": 2147483648,
+      "history_remains_separate_and_cumulative": true,
+      "authorized": false
+    },
+    "limitations": [
+      "Short Windows workload with14000 small files estimates monitor cost, not a measured full acceptance workload.",
+      "Use exact historical385/408/409.5 cost inputs and unchanged worker selection; no empirical upper bound.",
+      "Actual workload, Windows file cache, filesystem size distribution, and resource-stop overshoot may vary.",
+      "Recheck host and available RAM/disk, no other qualification, fresh receipts, exact input hashes and limits before separate authorization."
+    ]
+  },
+  "actual_acceptance": false,
+  "authorizes_execution": false,
+  "requirements": [
+    "Separate owner authorization and approved resource contract",
+    "Exact sealed args, fresh wrapper output and guard directories",
+    "Pass only after valid persisted supervisor receipt and independent acceptance results",
+    "Abort and preserve logs/partial on limit, nonzero, orphan, missing CPU or invalid receipt",
+    "No fallback to older monitor, threshold changes or repeated full runs"
+  ]
+}

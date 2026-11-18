@@ -1,0 +1,43 @@
+{
+  "base": "a5f85b2f25fa46cc756126a5ec6efc4715841705",
+  "request_sha": "d7f56c4de340ae38061a7d6a872f610f345efe42bc1091591974a41291f8c830",
+  "early": [
+    120,
+    360,
+    943718400,
+    234881024
+  ],
+  "hard": [
+    150,
+    450,
+    1073741824,
+    268435456
+  ],
+  "allocations": {
+    "provenance_and_setup": [
+      10,
+      30
+    ],
+    "targeted_and_final": [
+      35,
+      100
+    ],
+    "audit_and_reporting": [
+      17,
+      50
+    ],
+    "backup": [
+      15,
+      75
+    ],
+    "closure": [
+      12,
+      40
+    ],
+    "reserve": [
+      15,
+      50
+    ]
+  },
+  "no_full410": true
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PROJECTION_NOT_ADMITTED",
+  "source_forecast_sha": "ec83c19cf3574bdbba490e6a18ac9360ae61618bb49ba280935a5576a8190e4d",
+  "bench": {
+    "files": 14000,
+    "job_CPU": 0.046875,
+    "parent_CPU_before_receipt": 2.28125,
+    "parent_CPU_through_receipt": 3.40625,
+    "wall": 4.090470700000878,
+    "samples": 4
+  },
+  "observed_supervisor_CPU_per_wall": 0.8327281258851869,
+  "worker_cpu": 250,
+  "modeled_monitor_cpu_per_wall": 0.9,
+  "operational_wall": 450,
+  "modeled_monitor_cpu": 405,
+  "final_audit_backup_cpu": 40,
+  "base_projection_cpu": 695,
+  "uncertainty_reserve_cpu": 45,
+  "central_with_reserve_cpu": 740,
+  "final_wall_reserve": 50,
+  "projected_wall_including_reserve": 500,
+  "old_cumulative_spend": {
+    "cpu": 53.4375,
+    "wall": 114.919286
+  },
+  "old_early_remaining": {
+    "cpu": 666.5625,
+    "wall": 845.080714
+  },
+  "old_hard_remaining": {
+    "cpu": 846.5625,
+    "wall": 1085.080714
+  },
+  "cumulative_projected_including_reserve": {
+    "cpu": 793.4375,
+    "wall": 614.919286
+  },
+  "old_early_cpu_deficit": 73.4375,
+  "sampled_private_projection_bytes": 1610612736,
+  "artifact_projection_bytes": 1073741824,
+  "proposal_separate_attempt": {
+    "early_cpu": 780,
+    "hard_cpu": 900,
+    "early_wall": 600,
+    "hard_wall": 750,
+    "early_private_bytes": 1932735283,
+    "hard_private_bytes": 2147483648,
+    "early_disk_bytes": 1932735283,
+    "hard_disk_bytes": 2147483648,
+    "history_remains_separate_and_cumulative": true,
+    "authorized": false
+  },
+  "limitations": [
+    "Short Windows workload with14000 small files estimates monitor cost, not a measured full acceptance workload.",
+    "Use exact historical385/408/409.5 cost inputs and unchanged worker selection; no empirical upper bound.",
+    "Actual workload, Windows file cache, filesystem size distribution, and resource-stop overshoot may vary.",
+    "Recheck host and available RAM/disk, no other qualification, fresh receipts, exact input hashes and limits before separate authorization."
+  ]
+}

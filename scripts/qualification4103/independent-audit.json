@@ -1,0 +1,504 @@
+{
+  "cases": {
+    "normal": {
+      "reason": null,
+      "receipt_sha": "ccc771c32d3c553053600ed973507f749c96b7b0c0014384a8daf98fb9cd365f"
+    },
+    "wrapper-help": {
+      "reason": null,
+      "receipt_sha": "31e7a0069f8e0d1c73b1de513513e03a3cdf55f11ccf5c029daf457fa2566991"
+    },
+    "wrapper-child": {
+      "reason": null,
+      "receipt_sha": "6c3d8c2850788221c73a171ab3c689795741c71b52b7563945334c0bcb07c430"
+    },
+    "create": {
+      "reason": "monitor-error",
+      "receipt_sha": "262b5d3c9d77c4377e13094771c7b2fdc1a447b3edca2ea2b52957dea64bd09e"
+    },
+    "assign": {
+      "reason": "monitor-error",
+      "receipt_sha": "751c70c47f9ccc1188cc6c9883a9816ba7061ba6364b0259f347862969d8e6be"
+    },
+    "resume": {
+      "reason": "monitor-error",
+      "receipt_sha": "6f3cd4f0a23f08957c2e05d9fe9cb3a56086d300cc2d5405756d40f2d88144b1"
+    },
+    "nested": {
+      "reason": null,
+      "receipt_sha": "7ba0651484ee7a9bcf399a9b8708857b24d09f2af3753216a0aeac0c2af9b61c"
+    },
+    "nested-restricted": {
+      "reason": null,
+      "receipt_sha": "326646dc0b252c273e44f8bef3fcd908f1a92f7434c0328e1aec11b23d055ab8"
+    },
+    "breakaway": {
+      "reason": null,
+      "receipt_sha": "23a25ad03409d148b885693e03e8c1f5c14940a9ea16d9b7bd7d8246761a516c"
+    },
+    "parent": {
+      "reason": "unexpected-owned-descendant",
+      "receipt_sha": "dec07ee3eed032be2e88419eb392bd997121d11e62bd7dce37e12c21f9977b72"
+    },
+    "loss": {
+      "reason": "root-nonzero",
+      "receipt_sha": "63bc59fab6dbd28ecb49d4d4156b88189e03055bbfb9fc4d747ada4d73a92457"
+    },
+    "loss-suspended": {
+      "reason": "root-nonzero",
+      "receipt_sha": "5b2b3c4a9b126542cedb8a3e0ed576d86841266fc2866afb61126209f025930f"
+    },
+    "final-only": {
+      "reason": "final-accounting-unresolved",
+      "receipt_sha": "e1670540762eee74ba9da2e81d635ff7c775f84bd37241a12d775e698f4fb9cc"
+    },
+    "close": {
+      "reason": "close-unresolved",
+      "receipt_sha": "34cbd0a129f4bfe875cf4887dec5b6f9648a4285871efedf37d67c6939b15b87"
+    },
+    "write": {
+      "reason": "write-error",
+      "receipt": null
+    },
+    "grand": {
+      "reason": "unexpected-owned-descendant",
+      "receipt_sha": "b9e6841e816652b91e99b5a396fdf185ad190a59fd940f6b87c7befdd72a4fbc"
+    },
+    "joined": {
+      "reason": null,
+      "receipt_sha": "134fbb6e43d995bcf8bd72238df73db9d8bcbcaf970ca9032b3186f79f7def7f"
+    },
+    "enum-race": {
+      "reason": null,
+      "receipt_sha": "e6742518e82ec655d05eb5a8ce30a60e8c02b1e1094e7af240106fd66427c7d5"
+    },
+    "cleanup-race": {
+      "reason": "unexpected-owned-descendant",
+      "receipt_sha": "4574e0d598eb3756c4b8e981c47e2d5604199873184c6d720371687d9ab09c6f"
+    },
+    "nonzero": {
+      "reason": "root-nonzero",
+      "receipt_sha": "c3118afb1f6853fa7cf5f9f1fe70178f7f9ba3f8aa94a08d009754cb2ec877c4"
+    },
+    "crash": {
+      "reason": "root-nonzero",
+      "receipt_sha": "3035731fc2570e073de6ff5908654ce35a87c7684eaae9780f2c38585def679d"
+    },
+    "cpu": {
+      "reason": "stage-CPU",
+      "receipt_sha": "8da3bfc0f5c7051ffea68d96232afe9e83739db9f1a50d842e74080e7d346d7c"
+    },
+    "memory": {
+      "reason": "private-memory",
+      "receipt_sha": "145bb20aa9b5e9746673169d7aa5fadec057905cddb2b13a4ef6739d8dde382f"
+    },
+    "wall": {
+      "reason": "stage-wall",
+      "receipt_sha": "4593b427bf52ef65fad47e2bd893fb6fb837dccbcba3bd18917f8678053100e6"
+    },
+    "disk": {
+      "reason": "stage-disk",
+      "receipt_sha": "c57ada8af2a82abd10f71a59d747a0508c1218f62ba0efcb6bb05c97cf61972c"
+    },
+    "cleanup": {
+      "reason": "unexpected-owned-descendant",
+      "receipt_sha": "e9046c1934e6537e0313ec17463ac19eaf6f521c0d41e4132ad5aa40ebac7175"
+    },
+    "foreign": {
+      "reason": "monitor-error",
+      "receipt_sha": "5643bd898163b83c6f56b77d4fa6bac4f8e8057ff54c60d211016940bf5aedb7"
+    },
+    "benchmark": {
+      "reason": null,
+      "receipt_sha": "79b3bb7b124767b24e3dd6024b6d9231779ce985851bf9492791e0f656a86bab"
+    }
+  },
+  "identities_checked": 47,
+  "consumer_negatives": {
+    "missing": true,
+    "invalid": true,
+    "noCPU": true,
+    "wrongSHA": true,
+    "jobAlive": true,
+    "counterMismatch": true
+  },
+  "native_sha": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "portable_sha": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+  "monitor_sha": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17",
+  "old_CPU_differences": {
+    "410.1": [
+      {
+        "case": "short-parent",
+        "job_CPU": 0.828125,
+        "retained_CPU": 0.84375,
+        "difference": 0.015625,
+        "status": "UNRESOLVED; no acceptance tolerance introduced"
+      }
+    ],
+    "410.2": [
+      {
+        "path": "echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.078125,
+        "process_sum": 0.015625
+      },
+      {
+        "path": "controls2/handle/supervisor.json",
+        "job": 0.046875,
+        "process_sum": 0.0
+      },
+      {
+        "path": "controls2/identity/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0
+      },
+      {
+        "path": "controls/handle/supervisor.json",
+        "job": 0.046875,
+        "process_sum": 0.015625
+      },
+      {
+        "path": "controls/identity/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0
+      },
+      {
+        "path": "attempt2/wall output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.046875,
+        "process_sum": 0.046875
+      },
+      {
+        "path": "attempt2/short output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.609375,
+        "process_sum": 0.5625
+      },
+      {
+        "path": "attempt2/root0 output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.0625,
+        "process_sum": 0.0
+      },
+      {
+        "path": "attempt2/resume output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0
+      },
+      {
+        "path": "attempt2/orphan output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.609375,
+        "process_sum": 0.625
+      },
+      {
+        "path": "attempt2/nonzero output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.046875,
+        "process_sum": 0.0
+      },
+      {
+        "path": "attempt2/memory output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0.0
+      },
+      {
+        "path": "attempt2/joined output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 3.09375,
+        "process_sum": 3.109375
+      },
+      {
+        "path": "attempt2/interrupt output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0.0
+      },
+      {
+        "path": "attempt2/gui output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.109375,
+        "process_sum": 0.109375
+      },
+      {
+        "path": "attempt2/grand output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.609375,
+        "process_sum": 0.546875
+      },
+      {
+        "path": "attempt2/echo output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.046875,
+        "process_sum": 0.0
+      },
+      {
+        "path": "attempt2/disk output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.03125,
+        "process_sum": 0.0625
+      },
+      {
+        "path": "attempt2/create output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0
+      },
+      {
+        "path": "attempt2/crash output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.046875,
+        "process_sum": 0.0
+      },
+      {
+        "path": "attempt2/cpu output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.390625,
+        "process_sum": 0.40625
+      },
+      {
+        "path": "attempt2/cleanup output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 3.0625,
+        "process_sum": 3.09375
+      },
+      {
+        "path": "attempt2/assign output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0
+      },
+      {
+        "path": "attempt2/access output \u042e\u043d\u0438\u043a\u043e\u0434/guard/supervisor.json",
+        "job": 0.0,
+        "process_sum": 0
+      }
+    ]
+  },
+  "CPU_differences": [
+    {
+      "case": "normal",
+      "job": 0.03125,
+      "handles": 0.0,
+      "sampled": 1,
+      "total": 2
+    },
+    {
+      "case": "wrapper-help",
+      "job": 0.0625,
+      "handles": 0.0,
+      "sampled": 1,
+      "total": 2
+    },
+    {
+      "case": "wrapper-child",
+      "job": 0.125,
+      "handles": 0.015625,
+      "sampled": 1,
+      "total": 4
+    },
+    {
+      "case": "create",
+      "job": 0.0,
+      "handles": 0,
+      "sampled": 0,
+      "total": 0
+    },
+    {
+      "case": "assign",
+      "job": 0.0,
+      "handles": 0,
+      "sampled": 0,
+      "total": 1
+    },
+    {
+      "case": "resume",
+      "job": 0.0,
+      "handles": 0,
+      "sampled": 0,
+      "total": 1
+    },
+    {
+      "case": "nested",
+      "job": 0.171875,
+      "handles": 0.140625,
+      "sampled": 2,
+      "total": 4
+    },
+    {
+      "case": "nested-restricted",
+      "job": 0.265625,
+      "handles": 0.21875,
+      "sampled": 2,
+      "total": 4
+    },
+    {
+      "case": "breakaway",
+      "job": 0.09375,
+      "handles": 0.09375,
+      "sampled": 3,
+      "total": 3
+    },
+    {
+      "case": "parent",
+      "job": 0.09375,
+      "handles": 0.109375,
+      "sampled": 3,
+      "total": 3
+    },
+    {
+      "case": "loss",
+      "job": 0.203125,
+      "handles": 0.203125,
+      "sampled": 4,
+      "total": 4
+    },
+    {
+      "case": "loss-suspended",
+      "job": 0.15625,
+      "handles": 0.0,
+      "sampled": 1,
+      "total": 3
+    },
+    {
+      "case": "close",
+      "job": 0.0625,
+      "handles": 0.03125,
+      "sampled": 1,
+      "total": 2
+    },
+    {
+      "case": "grand",
+      "job": 0.171875,
+      "handles": 0.140625,
+      "sampled": 3,
+      "total": 4
+    },
+    {
+      "case": "joined",
+      "job": 0.875,
+      "handles": 0.890625,
+      "sampled": 3,
+      "total": 3
+    },
+    {
+      "case": "enum-race",
+      "job": 0.109375,
+      "handles": 0.109375,
+      "sampled": 3,
+      "total": 3
+    },
+    {
+      "case": "cleanup-race",
+      "job": 0.15625,
+      "handles": 0.15625,
+      "sampled": 3,
+      "total": 3
+    },
+    {
+      "case": "nonzero",
+      "job": 0.046875,
+      "handles": 0.0,
+      "sampled": 1,
+      "total": 2
+    },
+    {
+      "case": "crash",
+      "job": 0.046875,
+      "handles": 0.015625,
+      "sampled": 1,
+      "total": 2
+    },
+    {
+      "case": "cpu",
+      "job": 0.1875,
+      "handles": 0.203125,
+      "sampled": 2,
+      "total": 2
+    },
+    {
+      "case": "memory",
+      "job": 0.0,
+      "handles": 0.0,
+      "sampled": 1,
+      "total": 1
+    },
+    {
+      "case": "wall",
+      "job": 0.046875,
+      "handles": 0.046875,
+      "sampled": 2,
+      "total": 2
+    },
+    {
+      "case": "disk",
+      "job": 0.03125,
+      "handles": 0.03125,
+      "sampled": 2,
+      "total": 2
+    },
+    {
+      "case": "cleanup",
+      "job": 0.140625,
+      "handles": 0.140625,
+      "sampled": 3,
+      "total": 3
+    },
+    {
+      "case": "foreign",
+      "job": 0.0,
+      "handles": 0,
+      "sampled": 0,
+      "total": 1
+    },
+    {
+      "case": "benchmark",
+      "job": 0.046875,
+      "handles": 0.046875,
+      "sampled": 2,
+      "total": 2
+    }
+  ],
+  "resources": {
+    "worker_cpu": 3.125,
+    "supervisor_and_fixture_setup_cpu": 5.484375,
+    "active_wall": 19.31473649997497,
+    "earlier_visible_cpu": 9.703125,
+    "earlier_visible_wall": 24.6862942003645,
+    "missing_attempt_allowance": [
+      8,
+      15
+    ],
+    "review_prepare_backup_closure_allowance": [
+      54,
+      195
+    ],
+    "charged_cpu": 80.515625,
+    "charged_wall": 255.16074380034115,
+    "peak_fixture_private": 106438656,
+    "full_stage_peak_unknown": true
+  },
+  "benchmark": {
+    "files": 14000,
+    "job_CPU": 0.046875,
+    "parent_CPU_before_receipt": 2.28125,
+    "parent_CPU_through_receipt": 3.40625,
+    "wall": 4.090470700000878,
+    "samples": 4
+  },
+  "focused_finalization": {
+    "repeated": [
+      true,
+      true
+    ],
+    "closed_before_receipt": [
+      [
+        616,
+        false,
+        6
+      ],
+      [
+        612,
+        false,
+        6
+      ],
+      [
+        636,
+        false,
+        6
+      ],
+      [
+        604,
+        false,
+        6
+      ]
+    ],
+    "worker_CPU": 0.1875,
+    "supervisor_CPU": 0.015625,
+    "wall": 1.1597131000016816,
+    "source_sha": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17"
+  }
+}

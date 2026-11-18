@@ -1,0 +1,79 @@
+{
+  "stage": "410.3",
+  "base": "a5f85b2f25fa46cc756126a5ec6efc4715841705",
+  "verdicts": {
+    "SUPERVISOR_LIFECYCLE": "TECHNICAL_GO_TESTED_HOST",
+    "WINDOWS_JOB_OWNERSHIP": "PASS_TESTED_HOST",
+    "FINAL_JOB_CPU_ACCOUNTING": "PASS_AGGREGATE_INVARIANTS",
+    "FINAL_ONLY_CPU_FAULT": "PASS_FAIL_CLOSED",
+    "LAUNCHER_CONSUMER_COMPATIBILITY": "PASS_BOUNDED_WRAPPER_AND_RECEIPT_PATH",
+    "PROCESS_RACE_CONTROLS": "PASS_CONTROLLED_FIXTURES",
+    "RECEIPT_INTEGRITY": "PASS_TARGETED",
+    "RESOURCE_GUARDS": "PASS_SAMPLED",
+    "NUMERICAL_RUNTIME_IDENTITY": "EXACT_UNCHANGED",
+    "RESOURCE_ADMISSION410": "NO_GO_PRIOR_EARLY_CPU",
+    "PORTABLE_ACCEPTANCE": "NOT_RUN",
+    "RELEASE_READINESS": "NO_GO"
+  },
+  "independent_audit": "scripts/qualification4103/independent-audit.json",
+  "resource_forecast": "scripts/qualification4103/resource-forecast.json",
+  "tested_exact_source": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17",
+  "resources": {
+    "worker_cpu": 3.125,
+    "supervisor_and_fixture_setup_cpu": 5.484375,
+    "active_wall": 19.31473649997497,
+    "earlier_visible_cpu": 9.703125,
+    "earlier_visible_wall": 24.6862942003645,
+    "missing_attempt_allowance": [
+      8,
+      15
+    ],
+    "review_prepare_backup_closure_allowance": [
+      54,
+      195
+    ],
+    "charged_cpu": 80.515625,
+    "charged_wall": 255.16074380034115,
+    "peak_fixture_private": 106438656,
+    "full_stage_peak_unknown": true
+  },
+  "known_limitations": [
+    "Real Windows PID reuse was not induced. The test substitutes a live foreign handle and checks actual Job membership and independent survival.",
+    "The observed outer UI setting did not block the tested nested child on this host. Other external policies remain unsupported without a preflight.",
+    "Win32 guard is a sampled limiter for wall/CPU/private memory/disk. Receipt writer CPU is separately included by the calling ledger.",
+    "Old cross-counter discrepancies remain diagnostic, with no proven cause and no fitted tolerance."
+  ],
+  "cloud_status": "PENDING",
+  "focused_finalization": {
+    "repeated": [
+      true,
+      true
+    ],
+    "closed_before_receipt": [
+      [
+        616,
+        false,
+        6
+      ],
+      [
+        612,
+        false,
+        6
+      ],
+      [
+        636,
+        false,
+        6
+      ],
+      [
+        604,
+        false,
+        6
+      ]
+    ],
+    "worker_CPU": 0.1875,
+    "supervisor_CPU": 0.015625,
+    "wall": 1.1597131000016816,
+    "source_sha": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17"
+  }
+}
