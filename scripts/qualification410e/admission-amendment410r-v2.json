@@ -1,0 +1,70 @@
+{
+  "stage": "410E",
+  "status": "EVIDENCE_CONTRACT_TECHNICAL_GO_NOT_EXECUTION_AUTHORIZATION",
+  "old_wrapper_rejected_for": "Insufficient raw continuous-year evidence, prior STOP preserved.",
+  "new_wrapper_scope": "Evidence-only synthetic qualification; actual portable acceptance remains NOT_RUN.",
+  "exact_wrapper_commit": "1197ee526df40e08187adbbc43845cc8491ded9a",
+  "packaging_verifier_base": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+  "previous_wrapper_sha256": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+  "wrapper_sha256": "e9bd0550e1c9bebad88c1cf4781c3e785e600f7f4b30d90a896fd9d1a633ebdc",
+  "writer_sha256": "f0fad79918481690254aaf9d5273219793bf6e0f5516a40c175e5d3597e3536f",
+  "auditor_sha256": "00ebd9f16e8ef9f7f37b68a458916ac4492cc7f7deaf297f2753a0d4f7b35faf",
+  "schema": "solar-continuous-year-evidence-v1",
+  "source_diff_sha256": "2b55572a986bf3429399a37b7b8c64099b50477ebef47f52a7b35fe9556526db",
+  "numeric_identity_audit_sha256": "95193f31939206026f0c12ffbc146e257c8791be1a50066fe36ad5970bfec7ef",
+  "bindings": {
+    "portable_sha256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+    "runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+    "runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+    "native_sha256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+    "current_manifest_sha256": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b",
+    "reference": {
+      "path": "docs/continuous-integration-reference.npz",
+      "sha256": "e1cb054f6d5f2ca9b0e983e7f824fcd3e03e99c471266d8bfc3200bd74d67b55"
+    },
+    "scenario": {
+      "path": "scenarios/solar-sandbox-strict.json",
+      "sha256": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d"
+    },
+    "catalog_scenario": {
+      "path": "scenarios/solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json",
+      "sha256": "f31b26f31e9095f960bb36faa0a3168db831c31d65daf2ac980ac61dd483687d"
+    }
+  },
+  "supervisor_sha256": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17",
+  "receipt_consumer_sha256": "0ae10ef3f2ec04d8dbdafdb3ef7988a81070bbd3267ebc3d995f96269fb0cb5d",
+  "previous_plan_sha256": "ac6efa5c79a5655d9a94a482aa76cdca716e9d15e8c478191823ddf1be5af69e",
+  "historical_ledger_sha256": "1da69bac879ce596ce71b4c0fbe75a9aec1a22f945112e353aba08ab7bd37da3",
+  "historical_stop": {
+    "commit": "4fc6cebb53672e496d161e7bf2d01f25fbce9fa2",
+    "backup_sha256": "d560d1019dc603a86935854ee3d52fc913f85799a640d3342d69bfac17c84e76",
+    "worker_runs": 0
+  },
+  "original_hard": {
+    "cpu_seconds": 900,
+    "wall_seconds": 750,
+    "private_bytes": 2147483648,
+    "disk_bytes": 2147483648
+  },
+  "original_early": {
+    "cpu_seconds": 780,
+    "wall_seconds": 600,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1932735283
+  },
+  "acceptance_attempts_consumed": 0,
+  "authorizes_full410r": false,
+  "required": [
+    "Separate explicit owner authorization for the single full run on these exact new external tooling bytes.",
+    "Independent preflight of current host and resource scope. Monitor the new packaging worktree .tools including the sibling evidence directory.",
+    "Exact archive and --current040-manifest-sha256 from the previous plan with the new wrapper path and pin.",
+    "Use the one actual solver run. Audit both stdout and raw files read-only. Retain partials and stop on incomplete data, resource stops or criteria failure.",
+    "No change to ZIP, settings, IC, native, source, thresholds or selection. No release."
+  ],
+  "outputs": {
+    "absolute_root_rule": "Under the monitored relocation parent, outside extracted portable.",
+    "path": "continuous-year-raw/year-actual.npz + manifest.json",
+    "commit_marker": "manifest.json",
+    "catalog": "existing continuous-catalog-check/snapshots.csv + receipt.json"
+  }
+}
