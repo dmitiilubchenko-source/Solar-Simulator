@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "stage": "410R",
+  "request_sha": "31ca4d6895f2b1b84658e3c118eec95d2d8deecbcf10c89bce82fb1d50d24a60",
+  "sealed_parent_sha": "ba161621976b18a32ae00c90c6e919a0f0ee3144ba51391edbbb5eb5856d7714",
+  "amendment_sha": "5d50d67dfcbafdfcfa1a9a8bd065bbac5a718f06bd70670eb94632349d3e0851",
+  "bindings": {
+    "schema_version": 1,
+    "kind": "portable040-full-acceptance410-plan-v3",
+    "status": "FROZEN_GO_FOR_SEPARATE_AUTHORIZATION_NOT_EXECUTED",
+    "created_date": "2026-11-16",
+    "owner_authorization_to_execute": false,
+    "release_authorization": false,
+    "archive": {
+      "archive": "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+      "archive_SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+      "archive_size": 114633711,
+      "member_count": 6005,
+      "changed_old": [
+        "Physics Verification.cmd"
+      ],
+      "added": [
+        "CURRENT-040-VERIFICATION.json",
+        "verification-current040/README.md",
+        "verification-current040/manifest-v1.json",
+        "verification-current040/recompute_current040_v1.py"
+      ],
+      "runtime_unchanged": true,
+      "asset_contract_SHA256": "969f44ec9d596f0165e59d037d5dc16a593ab9f2151791cfc1dfdea8e881ca9e",
+      "source_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+      "full410_executed": false
+    },
+    "source_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+    "source_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+    "source_environment_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+    "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+    "wheel_SHA256": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+    "native_rebuild_forbidden": true,
+    "packaging_commit": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+    "current_manifest_SHA256": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b",
+    "current_verifier_SHA256": "efa1a533483f24b2a7785330d5f3820d115a2b62c2781f333408db73e2cbe85a",
+    "historical_verifier_SHA256": "34dd9d3a60b26f27db11a2442db08e847ad2e41cb6392524fc29f07a41babb0b",
+    "historical_manifest_SHA256": "22629c73c09b69bf9659ab7150197cac55dc41f5d403c892462d817edb921753",
+    "acceptance_tool": {
+      "path": "C:\\Users\\Admin\\Desktop\\Solar-packaging-040-4095\\scripts\\check_portable.py",
+      "SHA256": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+      "optin": "--current040-manifest-sha256",
+      "default_historical_unchanged": true
+    },
+    "monitor": {
+      "path": "C:\\Users\\Admin\\Desktop\\Solar-simulator\\scripts\\qualification409\\monitor200.py",
+      "SHA256": "6ec4c2ac55ff1a56e0a4b229760ae594fa61c00ca864f5b54ac62bf3aca6642b",
+      "poll_seconds": 0.2,
+      "scope": "combined child/process tree plus supervisorCPU; sampled notOSquota; missingreceipt failclosed"
+    },
+    "hard": {
+      "CPU_seconds": 900,
+      "active_wall_seconds": 1200,
+      "private_bytes": 2147483648,
+      "new_data_bytes": 2147483648
+    },
+    "early": {
+      "CPU_seconds": 720,
+      "active_wall_seconds": 960,
+      "private_bytes": 1932735283,
+      "new_data_bytes": 1932735283
+    },
+    "forecast": {
+      "CPU_seconds": 650,
+      "active_wall_seconds": 450,
+      "private_bytes": 1610612736,
+      "new_data_bytes": 1073741824
+    },
+    "forecast_evidence_SHA256": "ec83c19cf3574bdbba490e6a18ac9360ae61618bb49ba280935a5576a8190e4d",
+    "cloud_readback_proof_SHA256": "edd04a567c0c0b5b5d4646bc44b95488cbb527c4632d8b51119a8b40e8143675",
+    "numerical_contract": {
+      "units": "SI",
+      "center": "Solar System Barycenter",
+      "frame": "Ecliptic J2000",
+      "time_scale": "TDB",
+      "samples": 125,
+      "bodies": 10,
+      "period_seconds": 31557600,
+      "packet_steps": 20,
+      "IC_SHA256": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d",
+      "reference_SHA256": "f565c3d12394c6def8cc594ff614415ba8f05495bd89a1ac4b9dbc81c4609cbe",
+      "criteria": {
+        "body_position_m": 10000,
+        "moon_relative_position_m": 1000,
+        "stored_position_m": 0.1,
+        "stored_velocity_m_s": 1e-05
+      }
+    },
+    "preconditions": [
+      "Fresh output with spaces, no overwrites; authenticate ZIP/source/native/tooling/manifest before any child execution.",
+      "No PYTHONPATH/PYTHONHOME; packaged Python -I -B, OMP/OPENBLAS/MKL=1, no foreign imports.",
+      "At least2 available logical CPUs/comparable machine load; no concurrent scientific/qualification jobs.",
+      "Dedicated previously empty packaging/.tools output root for monitor, at most14000files; sufficient freeRAM/disk. Unknown existing data or receipts =>STOP.",
+      "Do not replace failed current propagation by saved arrays; raw and result files outside sealed bundle retained.",
+      "Abort at unchanged earlycaps, preserve every child/supervisor/timeout/partial receipt; do not extend budgets or skip mandatory checks.",
+      "This forecast is for the current PC; re-evaluate resources on another device. Restore exact acceptance-tool raw bytes using the pinned EOL recipe."
+    ],
+    "mandatory": [
+      "Exact ZIP/memberSHA/CRC/provenance/privatefiles checks",
+      "Actual relocated native/Python/TkGUI/save-load-recovery",
+      "Old save compatibility and docs/licenses",
+      "Unchanged historical saved JPL replay",
+      "Current-source bindings then actual fresh-year125epochs10bodies and unchanged physical/reproduction criteria",
+      "Actual continuous-year plus catalogue probes with original references/thresholds",
+      "Independent final audit from raw outputs, all source/input/resource SHA before andafter"
+    ],
+    "command_template": [
+      "qualified supervisor",
+      "C:\\Users\\Admin\\Desktop\\Solar-packaging-040-4095\\scripts\\check_portable.py",
+      "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+      "--current040-manifest-sha256",
+      "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b"
+    ],
+    "executed": false,
+    "scientific_PASS": false,
+    "limitations": [
+      "Forecast uses comparable historic measurements and explicit engineering factors, not a measured040 full410 or a statistical bound. Actual failures remain failures.",
+      "ApplicationD1 NO-GO,3historical380+4short402FAIL unchanged; no universal/arbitrary-real-body qualification.",
+      "No main/tag/LATEST/release operations."
+    ],
+    "execution_command": [
+      "C:/Users/Admin/Documents/Codex/Solar407V-20261111/env/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-B",
+      "C:\\Users\\Admin\\Desktop\\Solar-packaging-040-4095\\scripts\\check_portable.py",
+      "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+      "--current040-manifest-sha256",
+      "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b"
+    ],
+    "tooling_raw_recovery_SHA256": "ab9712b882a4263ccc6a00609fd40b0ebab977ef8440439b4be425cd0c5bc9b9",
+    "superseded_unexecuted_draft_SHA256": "8d9853e5196e677e255bdd741dfb87c3c815a735b282f597a2c3874f141472e8",
+    "qualified_supervisor_sha": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17",
+    "receipt_consumer_sha": "0ae10ef3f2ec04d8dbdafdb3ef7988a81070bbd3267ebc3d995f96269fb0cb5d",
+    "auditor_4103_sha": "fa3767009a9cc90e7fc99d54b0f86be5dbe24722faca3189dcc82d3aa8ba98c3",
+    "supervisor_commit": "0602dc8787f5ad5689c096514b5be0dead769bba",
+    "supervisor_tip": "0e8b01ee03ce18fb5144061c5f258872acd7877c"
+  },
+  "command": [
+    "C:/Users/Admin/Documents/Codex/Solar407V-20261111/env/Scripts/python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\Admin\\Desktop\\Solar-packaging-040-4095\\scripts\\check_portable.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+    "--current040-manifest-sha256",
+    "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b"
+  ],
+  "execution_count_limit": 1,
+  "initial_state": "PREFLIGHT_ONLY_UNTIL_ALL_GATES_PASS",
+  "output": {
+    "guard": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R 20261119\\supervisor",
+    "temp": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R 20261119\\isolated temporary files",
+    "archive_output_parent": "C:/Users/Admin/Desktop/Solar-packaging-040-4095/.tools"
+  },
+  "resource_scope": "The monitored root must encompass all worker outputs and temporary data. Fresh empty .tools, no unrelated artifacts. Independent audit and writer cost charged to attempt; backup accounted separately.",
+  "hard": {
+    "cpu_seconds": 900,
+    "wall_seconds": 750,
+    "private_bytes": 2147483648,
+    "disk_bytes": 2147483648
+  },
+  "early": {
+    "cpu_seconds": 780,
+    "wall_seconds": 600,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1932735283
+  },
+  "forecast": {
+    "worker_cpu": 250,
+    "supervisor_cpu": 405,
+    "audit_and_preservation_cpu": 40,
+    "uncertainty_cpu": 45,
+    "total_cpu": 740,
+    "wall": 500
+  },
+  "thresholds": {
+    "epochs": 125,
+    "bodies": 10,
+    "horizon_s": 31557600,
+    "packet_steps": 20,
+    "frame": "SSB/Ecliptic J2000",
+    "time_scale": "TDB",
+    "units": "SI",
+    "jpl_each_body_m_lt": 10000,
+    "moon_earth_m_lt": 1000,
+    "stored_pos_m_lt": 0.1,
+    "stored_vel_mps_lt": 1e-05
+  },
+  "historical410": {
+    "charged_cpu": 53.4375,
+    "active_wall": 114.919286,
+    "acceptance_only_cpu": 37.46875,
+    "acceptance_only_wall": 71.332329,
+    "attempts_started": 0
+  },
+  "mandatory": [
+    "ZIP security and all members/SHA/CRC",
+    "isolated CPython/native/Tk/Matplotlib and no external imports",
+    "GUI/backends/callback cleanup/save/load/parent/branch/recovery/CLI/CSV/record/replay/0-1-2 Q2/legacy/strict/doc/license",
+    "historical saved JPL replay",
+    "real current040 one year with states.jsonl/propagated.npz/result.json and diagnostics",
+    "real continuous year and catalog354 with auditable raw actual states/CSV and solver statistics",
+    "atomic validated supervisor receipt, exact host/source/resource binding and independent liveness",
+    "independent recalculation from raw states with original thresholds, no hidden SKIP",
+    "backup reviewed evidence"
+  ],
+  "preflight": [
+    "Exact pin verification",
+    "Native/ABI/host fingerprint",
+    "Win32 Job/nested scope and resource headroom",
+    "No concurrent qualification/stale results",
+    "Complete output coverage and evidence feasibility for all mandatory phases"
+  ],
+  "stop": [
+    "Preflight blocker: STOP before expensive run",
+    "No older monitor fallback",
+    "Early stop or mandatory failure: preserve partial and stop",
+    "No automatic retries, scientific/selection changes or release"
+  ],
+  "backup": {
+    "separate_operational_budget_cpu": 20,
+    "separate_operational_budget_wall": 100,
+    "private_bytes": 536870912,
+    "artifact_bytes": 33554432,
+    "scope": "Reviewed new preflight evidence if blocked; main raw backup requires sizing before upload. Read back exact size/SHA/CRC/members. Exclude old archives/ZIP/private/context/secrets/environments."
+  }
+}

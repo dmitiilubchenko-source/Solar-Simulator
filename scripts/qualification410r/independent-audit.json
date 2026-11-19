@@ -1,0 +1,62 @@
+{
+  "decision": "STOP_BEFORE_EXECUTION",
+  "reason": "CONTINUOUS_YEAR_RAW_ACTUAL_STATES_NOT_EXPORTED",
+  "source_sha": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+  "source_lines": {
+    "stock_call": [
+      27,
+      251
+    ],
+    "continuous": [
+      535,
+      580
+    ],
+    "probe": [
+      537,
+      576
+    ],
+    "annual_array": 567
+  },
+  "exported_summary_fields": [
+    "catalog_reproduction",
+    "year_reproduction",
+    "relative_independent",
+    "catalog_rhs_calls",
+    "catalog_packets",
+    "year_statistics",
+    "experimental",
+    "isolated",
+    "general_release_passed"
+  ],
+  "annual_array_written": false,
+  "catalogs_have_csv": true,
+  "reference_shapes": {
+    "year_continuous": [
+      125,
+      10,
+      6
+    ],
+    "year_independent": [
+      125,
+      10,
+      6
+    ],
+    "catalog_continuous": [
+      11,
+      354,
+      6
+    ],
+    "year_times": [
+      125
+    ],
+    "catalog_times": [
+      11
+    ]
+  },
+  "reference_sha": "e1cb054f6d5f2ca9b0e983e7f824fcd3e03e99c471266d8bfc3200bd74d67b55",
+  "audit_scope": "Static audit of the evidence channel. No portable worker outcome or scientific claim.",
+  "tool_executions": 0,
+  "scientific_propagations": 0,
+  "cpu_seconds": 0.046875,
+  "wall_seconds": 0.03358689998276532
+}

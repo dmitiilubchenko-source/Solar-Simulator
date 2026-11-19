@@ -1,0 +1,142 @@
+{
+  "stage": "410R",
+  "status": "STOP_BEFORE_EXECUTION",
+  "verdicts": {
+    "SUPERVISOR_COMPLETION": "NOT_RUN_PREFLIGHT_STOP",
+    "ISOLATED_RUNTIME": "NOT_RUN_PREFLIGHT_STOP",
+    "GUI_DESKTOP": "NOT_RUN_PREFLIGHT_STOP",
+    "WORKER_RECOVERY": "NOT_RUN_PREFLIGHT_STOP",
+    "HISTORICAL_REPLAY": "NOT_RUN_PREFLIGHT_STOP",
+    "CURRENT_040_FRESH_YEAR": "NOT_RUN_PREFLIGHT_STOP",
+    "CONTINUOUS_YEAR": "NOT_RUN_PREFLIGHT_STOP",
+    "CATALOG_ACCEPTANCE": "NOT_RUN_PREFLIGHT_STOP",
+    "BACKWARD_COMPATIBILITY": "NOT_RUN_PREFLIGHT_STOP",
+    "SOURCE_AND_PACKAGE_IDENTITY": "PASS_PREFLIGHT_BYTES",
+    "INDEPENDENT_AUDIT": "PASS_STATIC_BLOCKER_CONFIRMED",
+    "PORTABLE_ACCEPTANCE": "NO_GO_PREFLIGHT_MANDATORY_EVIDENCE",
+    "APPLICATION_D1": "NO_GO_HISTORICAL_UNCHANGED",
+    "CLOUD_BACKUP": "PENDING",
+    "RELEASE_READINESS": "NO_GO"
+  },
+  "hard": {
+    "cpu_seconds": 900,
+    "wall_seconds": 750,
+    "private_bytes": 2147483648,
+    "disk_bytes": 2147483648
+  },
+  "early": {
+    "cpu_seconds": 780,
+    "wall_seconds": 600,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1932735283
+  },
+  "resource_ledger": "scripts/qualification410r/resource-ledger.json",
+  "input_receipt": {
+    "identity": "PASS",
+    "members_crc_size_sha_verified": 6005,
+    "source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+    "archive_sha": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+    "asset_contract_sha": "969f44ec9d596f0165e59d037d5dc16a593ab9f2151791cfc1dfdea8e881ca9e",
+    "wheel_sha": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+    "native_sha": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+    "wrapper_sha": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+    "tooling_sha": {
+      "monitor.py": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17",
+      "consumer.py": "0ae10ef3f2ec04d8dbdafdb3ef7988a81070bbd3267ebc3d995f96269fb0cb5d",
+      "audit.py": "fa3767009a9cc90e7fc99d54b0f86be5dbe24722faca3189dcc82d3aa8ba98c3"
+    },
+    "plan_sha": "ac6efa5c79a5655d9a94a482aa76cdca716e9d15e8c478191823ddf1be5af69e",
+    "host_python": "3.14.2 free-threading build (tags/v3.14.2:df79316, Dec  5 2025, 17:11:07) [MSC v.1944 64 bit (AMD64)]",
+    "free_disk_bytes": 284168712192,
+    "attempt_started": false,
+    "packaging_output_exists": false,
+    "cpu_seconds": 3.5,
+    "wall_seconds": 5.113926599966362
+  },
+  "audit": {
+    "decision": "STOP_BEFORE_EXECUTION",
+    "reason": "CONTINUOUS_YEAR_RAW_ACTUAL_STATES_NOT_EXPORTED",
+    "source_sha": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+    "source_lines": {
+      "stock_call": [
+        27,
+        251
+      ],
+      "continuous": [
+        535,
+        580
+      ],
+      "probe": [
+        537,
+        576
+      ],
+      "annual_array": 567
+    },
+    "exported_summary_fields": [
+      "catalog_reproduction",
+      "year_reproduction",
+      "relative_independent",
+      "catalog_rhs_calls",
+      "catalog_packets",
+      "year_statistics",
+      "experimental",
+      "isolated",
+      "general_release_passed"
+    ],
+    "annual_array_written": false,
+    "catalogs_have_csv": true,
+    "reference_shapes": {
+      "year_continuous": [
+        125,
+        10,
+        6
+      ],
+      "year_independent": [
+        125,
+        10,
+        6
+      ],
+      "catalog_continuous": [
+        11,
+        354,
+        6
+      ],
+      "year_times": [
+        125
+      ],
+      "catalog_times": [
+        11
+      ]
+    },
+    "reference_sha": "e1cb054f6d5f2ca9b0e983e7f824fcd3e03e99c471266d8bfc3200bd74d67b55",
+    "audit_scope": "Static audit of the evidence channel. No portable worker outcome or scientific claim.",
+    "tool_executions": 0,
+    "scientific_propagations": 0,
+    "cpu_seconds": 0.046875,
+    "wall_seconds": 0.03358689998276532
+  },
+  "worker_runs": 0,
+  "annual": {
+    "epochs": null,
+    "packets": null,
+    "position_m": null,
+    "moon_earth_m": null,
+    "stored_position_m": null,
+    "stored_velocity_m_s": null,
+    "energy": null
+  },
+  "blocker": "Pinned wrapper stores catalog CSV but only prints annual maxima/statistics; 125x10x6 current annual continuous states never exported. Cannot redo a solver run under single-execution rule.",
+  "minimal_followup": "New explicitly pinned wrapper revision writing continuous year times/actual states and input/source metadata outside sealed package on the existing loop; preserve selection/thresholds/solver. Independent read-only deserialization and fault/partial controls prior to separately pinned execution.",
+  "historical_scientific_limits": {
+    "source408": "3083/3083",
+    "rust": "19/19",
+    "equivalence399": "28/28",
+    "D1_numeric": "11/11",
+    "effects": "10/11",
+    "distance_AB_m": 0.244795,
+    "minimum_distance_AB_m": 10,
+    "full_D1": "NO_GO",
+    "historical_380_FAIL": 3,
+    "short_402_FAIL": 4
+  }
+}

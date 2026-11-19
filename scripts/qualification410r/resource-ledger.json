@@ -1,0 +1,70 @@
+{
+  "stage": "410R",
+  "attempts_started": 0,
+  "supervisor_completion": null,
+  "scientific_jobs_started": 0,
+  "historical": {
+    "acceptance410": {
+      "acceptance_only": {
+        "cpu": 37.46875,
+        "wall": 71.332329
+      },
+      "with_backup": {
+        "cpu": 53.4375,
+        "wall": 114.919286
+      }
+    },
+    "tooling": {
+      "410.1": {
+        "cpu": 70.1875,
+        "wall": 149.348524
+      },
+      "410.2": {
+        "cpu": 84.15625,
+        "wall": 288.2881718999706
+      },
+      "410.3": {
+        "cpu": 80.515625,
+        "wall": 255.16074380034115
+      }
+    },
+    "definition": "Historical charged totals, mixing measurements with disclosed allowances. 410 with backup includes its acceptance-only cost; never add those two rows."
+  },
+  "prior_known_charged_total": {
+    "cpu": 288.296875,
+    "wall": 807.7167257003118,
+    "scope": "410 with backup and 410.1–410.3 only, charged/allowanced"
+  },
+  "new410R": {
+    "preflight_measured": {
+      "cpu": 3.546875,
+      "wall": 5.147513499949127
+    },
+    "setup_and_closure_allowance": {
+      "cpu": 12,
+      "wall": 60
+    },
+    "charged_cpu": 15.546875,
+    "charged_wall": 65.14751349994913,
+    "worker_CPU_seconds": null,
+    "sampled_private_peak": null,
+    "closure_allowance_scope": "Git, static inspections, host probe, documentation, final checks; measured values not invented.",
+    "backup_separate": {
+      "cpu_cap": 20,
+      "wall_cap": 100,
+      "status": "PENDING"
+    }
+  },
+  "hard": {
+    "cpu_seconds": 900,
+    "wall_seconds": 750,
+    "private_bytes": 2147483648,
+    "disk_bytes": 2147483648
+  },
+  "early": {
+    "cpu_seconds": 780,
+    "wall_seconds": 600,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1932735283
+  }
+}
