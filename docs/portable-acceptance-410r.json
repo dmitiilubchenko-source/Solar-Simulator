@@ -15,7 +15,7 @@
     "INDEPENDENT_AUDIT": "PASS_STATIC_BLOCKER_CONFIRMED",
     "PORTABLE_ACCEPTANCE": "NO_GO_PREFLIGHT_MANDATORY_EVIDENCE",
     "APPLICATION_D1": "NO_GO_HISTORICAL_UNCHANGED",
-    "CLOUD_BACKUP": "PENDING",
+    "CLOUD_BACKUP": "CLOUD_VERIFIED_SHA256",
     "RELEASE_READINESS": "NO_GO"
   },
   "hard": {
@@ -138,5 +138,6 @@
     "full_D1": "NO_GO",
     "historical_380_FAIL": 3,
     "short_402_FAIL": 4
-  }
+  },
+  "backup_receipt": "scripts/qualification410r/backup-receipts.json"
 }

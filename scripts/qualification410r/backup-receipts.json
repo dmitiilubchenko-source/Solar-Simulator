@@ -1,0 +1,51 @@
+{
+  "status": "CLOUD_VERIFIED_SHA256",
+  "project": "Solar-Simulator",
+  "name": "Solar-Simulator-410R-20261119-preflight.zip",
+  "size": 26277,
+  "sha256": "d560d1019dc603a86935854ee3d52fc913f85799a640d3342d69bfac17c84e76",
+  "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R Backup 20261119\\Solar-Simulator-410R-20261119-preflight.zip",
+  "cloud_id": "1rS-UHu3SumuhJdO23-LNfL3SbfZ0fCRZ",
+  "cloud_parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+  "git_commit": "94435bec7daec80163830e7e33be6f22c2639d20",
+  "members": 15,
+  "readback": {
+    "label": "evidence",
+    "id": "1rS-UHu3SumuhJdO23-LNfL3SbfZ0fCRZ",
+    "name": "Solar-Simulator-410R-20261119-preflight.zip",
+    "expected_SHA256": "d560d1019dc603a86935854ee3d52fc913f85799a640d3342d69bfac17c84e76",
+    "expected_size": 26277,
+    "actual_SHA256": "d560d1019dc603a86935854ee3d52fc913f85799a640d3342d69bfac17c84e76",
+    "actual_size": 26277,
+    "status": "VERIFIED_SHA256_SIZE",
+    "start_timestamp": 1795111150.6509793,
+    "end_timestamp": 1795111151.310182,
+    "response": {
+      "status": 200,
+      "content_length": "26277",
+      "content_type": "application/zip"
+    },
+    "failure": null,
+    "source": "Independent HTTPS cloud bytes via freshconnectorreference; no localpart fallback"
+  },
+  "resource_cost": {
+    "prepare": {
+      "parent_cpu": 0.09375,
+      "wall": 0.6549240999738686,
+      "shell_subprocess_CPU_measured": false,
+      "charge_shell_CPU_allowance": 4
+    },
+    "reader": {
+      "job_cpu": 0.09375,
+      "parent_cpu": 0,
+      "wall": 0.9035244999686256
+    },
+    "connector_wall": 8.009,
+    "final_allowance_cpu": 4,
+    "final_allowance_wall": 10,
+    "charged_cpu": 8.1875,
+    "charged_wall": 19.567448599942495
+  },
+  "existing_archives_uploaded": false,
+  "private_context_included": false
+}

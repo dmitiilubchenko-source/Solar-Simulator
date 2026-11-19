@@ -55,3 +55,11 @@ compatibility, historical replay, current040 fresh-year, continuous-year
 year и Moon–Earth ошибки из сохранённых данных. Это потребует новой
 явной привязки SHA wrapper. Физика, native, ZIP, выбор сценариев и
 пороги в 410R сохранены.
+
+Архив свидетельств в Project-Archives получил **CLOUD_VERIFIED_SHA256**.
+После независимого скачивания подтверждены размер 26 277 байт, SHA256
+`d560d1019dc603a86935854ee3d52fc913f85799a640d3342d69bfac17c84e76`,
+CRC всех 15 элементов и SHA файлов из manifest. В архиве только материалы
+preflight 410R и рецепт восстановления. Расход backup с allowances составил
+8,1875 CPU и 19,57 wall при отдельном лимите 20/100.
+[Квитанция backup](../scripts/qualification410r/backup-receipts.json).

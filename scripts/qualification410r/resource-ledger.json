@@ -52,7 +52,9 @@
     "backup_separate": {
       "cpu_cap": 20,
       "wall_cap": 100,
-      "status": "PENDING"
+      "status": "CLOUD_VERIFIED_SHA256",
+      "charged_cpu": 8.1875,
+      "charged_wall": 19.567448599942495
     }
   },
   "hard": {
@@ -66,5 +68,10 @@
     "wall_seconds": 600,
     "private_bytes": 1932735283,
     "disk_bytes": 1932735283
+  },
+  "known_combined_charged_total": {
+    "cpu": 312.03125,
+    "wall": 892.4316878002035,
+    "definition": "Charged quantities including reported allowances, not actual CPU/wall measurements for the whole project."
   }
 }

@@ -1193,6 +1193,7 @@
       "scripts/qualification4103/regression.py",
       "scripts/qualification4103/resource-forecast.json",
       "scripts/qualification410r/audit.py",
+      "scripts/qualification410r/backup-receipts.json",
       "scripts/qualification410r/execution-plan.json",
       "scripts/qualification410r/host.json",
       "scripts/qualification410r/independent-audit.json",
