@@ -1,0 +1,10 @@
+{
+  "attempts_consumed": 1,
+  "relocation_dirs": [
+    "portable relocated 20261119-234746"
+  ],
+  "parent_cpu_including_receipt": 93.890625,
+  "elapsed_wall": 146.38278800004628,
+  "worker_job_cpu": 140.8125,
+  "resource_guard_receipt": "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2\\.tools\\supervisor\\supervisor.json"
+}

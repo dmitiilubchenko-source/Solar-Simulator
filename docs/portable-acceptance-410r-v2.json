@@ -1,0 +1,214 @@
+{
+  "stage": "410R-v2",
+  "verdicts": {
+    "INPUT_BINDINGS": "PASS",
+    "SUPERVISOR_COMPLETION": "PASS",
+    "ISOLATED_RUNTIME": "PASS",
+    "GUI_DESKTOP": "PASS",
+    "WORKER_RECOVERY": "PASS",
+    "HISTORICAL_REPLAY": "PASS",
+    "CURRENT040_FRESH_YEAR": "PASS",
+    "CONTINUOUS_YEAR": "PASS",
+    "CONTINUOUS_RAW_EVIDENCE": "PASS",
+    "INDEPENDENT_YEAR_RECOMPUTATION": "PASS",
+    "INDEPENDENT_RELATIVE_RECOMPUTATION": "PASS",
+    "CATALOG_ACCEPTANCE": "PASS",
+    "BACKWARD_COMPATIBILITY": "PASS",
+    "RESOURCE_BUDGET": "PASS",
+    "INDEPENDENT_AUDIT": "PASS",
+    "BACKUP_INTEGRITY": "PENDING",
+    "PORTABLE_ACCEPTANCE": "TECHNICAL_GO_EXACT_ZIP_TESTED_SCOPE",
+    "APPLICATION_D1": "NO_GO_HISTORICAL",
+    "RELEASE_READINESS": "NO_GO"
+  },
+  "attempts_consumed": 1,
+  "full_worker_runs": 1,
+  "wrapper": {
+    "wrapper_sha": "e9bd0550e1c9bebad88c1cf4781c3e785e600f7f4b30d90a896fd9d1a633ebdc",
+    "writer_sha": "f0fad79918481690254aaf9d5273219793bf6e0f5516a40c175e5d3597e3536f",
+    "auditor_sha": "00ebd9f16e8ef9f7f37b68a458916ac4492cc7f7deaf297f2753a0d4f7b35faf",
+    "exact_410e_diff_sha": "c7188c9a00dd92f2c2ea4a439434720c109075282dd4861bc9bd3fdad826cd15",
+    "amendment_sha": "b388786ed847b040d381bfefc6ac9c318433f2db65970a5ffcac25896a906c5b"
+  },
+  "pins": {
+    "portable_sha256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+    "runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+    "runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+    "native_sha256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+    "current_manifest_sha256": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b",
+    "reference": {
+      "path": "docs/continuous-integration-reference.npz",
+      "sha256": "e1cb054f6d5f2ca9b0e983e7f824fcd3e03e99c471266d8bfc3200bd74d67b55"
+    },
+    "scenario": {
+      "path": "scenarios/solar-sandbox-strict.json",
+      "sha256": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d"
+    },
+    "catalog_scenario": {
+      "path": "scenarios/solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json",
+      "sha256": "f31b26f31e9095f960bb36faa0a3168db831c31d65daf2ac980ac61dd483687d"
+    }
+  },
+  "measured_cpu": 250.75,
+  "measured_wall": 162.90722040005494,
+  "timing_and_data_ledger": "scripts/qualification410r-v2/resource-ledger.json",
+  "independent_audit": "scripts/qualification410r-v2/independent-audit.json",
+  "fresh_year": {
+    "status": "COMPLETE",
+    "solver_executed": true,
+    "samples": 125,
+    "packets": 499,
+    "scientific_PASS": true,
+    "checks_passed": true,
+    "results": {
+      "Sun": {
+        "jpl_residual": {
+          "position_metres": 218.80481648173037,
+          "velocity_m_per_s": 1.3782271765462503e-05
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Mercury": {
+        "jpl_residual": {
+          "position_metres": 207.69144051820356,
+          "velocity_m_per_s": 2.6764437360386104e-05
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Venus": {
+        "jpl_residual": {
+          "position_metres": 257.4676708106836,
+          "velocity_m_per_s": 2.3301007064953958e-05
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Earth": {
+        "jpl_residual": {
+          "position_metres": 174.54953987985328,
+          "velocity_m_per_s": 4.14231002297057e-05
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Moon": {
+        "jpl_residual": {
+          "position_metres": 747.7552833229641,
+          "velocity_m_per_s": 0.0019663389696992005
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Mars": {
+        "jpl_residual": {
+          "position_metres": 571.3407868132052,
+          "velocity_m_per_s": 4.3723911297535495e-05
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Jupiter": {
+        "jpl_residual": {
+          "position_metres": 273.266259585045,
+          "velocity_m_per_s": 1.8870241624998703e-05
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Saturn": {
+        "jpl_residual": {
+          "position_metres": 31.079502796184933,
+          "velocity_m_per_s": 1.9113130591174613e-06
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Uranus": {
+        "jpl_residual": {
+          "position_metres": 17.16537133926731,
+          "velocity_m_per_s": 1.0823689129771043e-06
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      },
+      "Neptune": {
+        "jpl_residual": {
+          "position_metres": 64.70129994663056,
+          "velocity_m_per_s": 4.113520765396303e-06
+        },
+        "stored_difference": {
+          "position_metres": 0.0,
+          "velocity_m_per_s": 0.0
+        }
+      }
+    },
+    "moon_relative_jpl": {
+      "position_metres": 718.8247845205744,
+      "velocity_m_per_s": 0.0019776112363984583
+    },
+    "moon_relative_stored_difference": {
+      "position_metres": 0.0,
+      "velocity_m_per_s": 0.0
+    },
+    "energy_residual": 2.514650615461726e-14,
+    "physical_goals_passed": true,
+    "stored_reproduction_passed": true,
+    "duration_seconds": 31557600.0,
+    "manifest_SHA256": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b"
+  },
+  "continuous": {
+    "year": {
+      "position_metres": 0.0,
+      "velocity_m_per_s": 0.0
+    },
+    "relative": {
+      "position_metres": 0.0400733396033009,
+      "velocity_m_per_s": 8.55921045109164e-08
+    },
+    "epochs": 125,
+    "bodies": 10,
+    "catalog": {
+      "metrics": {
+        "position_metres": 0.0,
+        "velocity_m_per_s": 0.0
+      },
+      "rows": 3894,
+      "epochs": 11,
+      "bodies": 354
+    }
+  },
+  "coverage": [
+    "No new integrator beyond the single stock worker. Energy recomputed from raw states via the shipped diagnostics, not a second physics model.",
+    "Q2 presentation verified through the actual packaged method on three rotation counts, without creating a new Tk window.",
+    "Historical replay stored inputs SHA-checked; profile maxima independently recomputed. GUI outcomes based on original wrapper assertions plus workflow artifacts and receipts."
+  ],
+  "scientific_history": {
+    "D1_numeric": "11/11",
+    "educational_effects": "10/11",
+    "distance_AB_m": 0.244795,
+    "required_distance_AB_m": 10,
+    "convergence_380_fail": 3,
+    "short_402_fail": 4,
+    "two_Q2": "EXPERIMENTAL"
+  }
+}

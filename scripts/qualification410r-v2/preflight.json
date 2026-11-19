@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "machine": {
+    "build": 26200,
+    "logical_cpus": 16,
+    "available_ram": 4740423680,
+    "free_disk": 283509301248,
+    "cpu_percent": 7.6
+  },
+  "checks": {
+    "archive_crc_members": 6005,
+    "manifest_sha": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b",
+    "wheel_sha": "5c2db314218484f5cb8b436de4479d5ecb069b56a5bd621eaa6e5cd5c70a5adb",
+    "source_fingerprint": "f84294862fac710dedd03bdf854b537e541aa5c955f90938832e9b72840d2083",
+    "nested_job_pass": true,
+    "packaged_probe": {
+      "packaged_executable": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R v2 20261119\\preflight staging\\SolarSimulator-0.4.0-4095\\runtime\\python.exe",
+      "abi": "cp314t-win_amd64",
+      "native_module": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R v2 20261119\\preflight staging\\SolarSimulator-0.4.0-4095\\runtime\\Lib\\site-packages\\solar_native\\__init__.py",
+      "loaded_writer_sha": "f0fad79918481690254aaf9d5273219793bf6e0f5516a40c175e5d3597e3536f",
+      "numpy": "2.5.1",
+      "inputs": {
+        "docs/continuous-integration-reference.npz": "e1cb054f6d5f2ca9b0e983e7f824fcd3e03e99c471266d8bfc3200bd74d67b55",
+        "scenarios/solar-sandbox-strict.json": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d",
+        "scenarios/solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json": "f31b26f31e9095f960bb36faa0a3168db831c31d65daf2ac980ac61dd483687d"
+      },
+      "exact_norm_roundtrip": true,
+      "external_unicode_marker": true,
+      "child_isolated": true,
+      "solver_runs": 0
+    }
+  },
+  "measured_cpu": 9.171875,
+  "measured_wall": 11.55112099996768,
+  "preflight_data_bytes": 320387161,
+  "estimated_peak_private": 62472192,
+  "plan_sha": "536e174915a4df61c8b8a649eb25beb2494e5f2e864b2f06f1ac03d70ab6f892",
+  "attempts_consumed": 0,
+  "tool_sha": "dd4b71dd1382cc50981e625590c9f5a5378bca9238a17ea5686a520595c11c67",
+  "probe_sha": "ea94065a95247734548ceeee8cecb55c2d5b1ab509f7575f329cacfae43d100d"
+}

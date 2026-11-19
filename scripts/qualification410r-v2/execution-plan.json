@@ -1,0 +1,92 @@
+{
+  "stage": "410R-v2",
+  "request_sha": "a4364d15af53b5c32f86c9401e6764c14a35a166ee060bd241a8040b3bbf4a57",
+  "amendment_sha": "b388786ed847b040d381bfefc6ac9c318433f2db65970a5ffcac25896a906c5b",
+  "implementation_commit": "1197ee526df40e08187adbbc43845cc8491ded9a",
+  "evidence_tip": "e0f605252fce2a773d208f1bd93bb697f58a3e5f",
+  "historical_tip": "4fc6cebb53672e496d161e7bf2d01f25fbce9fa2",
+  "supervisor_tip": "0e8b01ee03ce18fb5144061c5f258872acd7877c",
+  "parent_plan_sha": "ac6efa5c79a5655d9a94a482aa76cdca716e9d15e8c478191823ddf1be5af69e",
+  "historical_ledger_sha": "1da69bac879ce596ce71b4c0fbe75a9aec1a22f945112e353aba08ab7bd37da3",
+  "pins": {
+    "portable_sha256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+    "runtime_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+    "runtime_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+    "native_sha256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+    "current_manifest_sha256": "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b",
+    "reference": {
+      "path": "docs/continuous-integration-reference.npz",
+      "sha256": "e1cb054f6d5f2ca9b0e983e7f824fcd3e03e99c471266d8bfc3200bd74d67b55"
+    },
+    "scenario": {
+      "path": "scenarios/solar-sandbox-strict.json",
+      "sha256": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d"
+    },
+    "catalog_scenario": {
+      "path": "scenarios/solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json",
+      "sha256": "f31b26f31e9095f960bb36faa0a3168db831c31d65daf2ac980ac61dd483687d"
+    }
+  },
+  "wrapper_sha": "e9bd0550e1c9bebad88c1cf4781c3e785e600f7f4b30d90a896fd9d1a633ebdc",
+  "writer_sha": "f0fad79918481690254aaf9d5273219793bf6e0f5516a40c175e5d3597e3536f",
+  "auditor_sha": "00ebd9f16e8ef9f7f37b68a458916ac4492cc7f7deaf297f2753a0d4f7b35faf",
+  "monitor_sha": "8a0571d04a35898b1e3e1f5f0d2ac8734920b32c286fc0a35e773d6853dfec17",
+  "consumer_sha": "0ae10ef3f2ec04d8dbdafdb3ef7988a81070bbd3267ebc3d995f96269fb0cb5d",
+  "schema": "solar-continuous-year-evidence-v1",
+  "command": [
+    "C:/Users/Admin/Documents/Codex/Solar407V-20261111/env/Scripts/python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2\\scripts\\check_portable.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+    "--current040-manifest-sha256",
+    "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b"
+  ],
+  "cwd": "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2",
+  "hard": {
+    "cpu_seconds": 900,
+    "wall_seconds": 750,
+    "private_bytes": 2147483648,
+    "disk_bytes": 2147483648
+  },
+  "early": {
+    "cpu_seconds": 780,
+    "wall_seconds": 600,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1932735283
+  },
+  "forecast": {
+    "worker_cpu": 250,
+    "supervisor_cpu": 405,
+    "audit_and_preservation_cpu": 40,
+    "uncertainty_cpu": 45,
+    "total_cpu": 740,
+    "wall": 500
+  },
+  "full_attempts_allowed": 1,
+  "outputs": {
+    "preflight": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R v2 20261119\\preflight staging",
+    "worker_disk_root": "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2\\.tools",
+    "external_evidence": "Sibling of the extracted package beneath the monitored .tools",
+    "worker_guard": ".tools/supervisor",
+    "isolated_temp": ".tools/isolated temporary files",
+    "attempt_ticket": "launch-reservation.json"
+  },
+  "budget_notes": "Preflight data count as a fixed addend to sampled worker disk cap. Before worker start charge measured preflight plus explicit 7 CPU/20 wall preflight/closure allowance and reserve 40 CPU/65 wall for audit and backup from early cap. The user-approved overall caps do not change.",
+  "gates": [
+    "ZIP security and all members/SHA/CRC",
+    "isolated CPython/native/Tk/Matplotlib and no external imports",
+    "GUI/backends/callback cleanup/save/load/parent/branch/recovery/CLI/CSV/record/replay/0-1-2 Q2/legacy/strict/doc/license",
+    "historical saved JPL replay",
+    "real current040 one year with states.jsonl/propagated.npz/result.json and diagnostics",
+    "real continuous year and catalog354 with auditable raw actual states/CSV and solver statistics",
+    "atomic validated supervisor receipt, exact host/source/resource binding and independent liveness",
+    "independent recalculation from raw states with original thresholds, no hidden SKIP",
+    "backup reviewed evidence",
+    "Use actual packaged Python, import native and writer in nested Job, exact metrics and read-only preflight.",
+    "Preserve the sole attempt and every exception or partial. Count worker start even if no later report."
+  ],
+  "backup": "Reviewed Project-Archives. If unavailable two locally verified copies, exclusive SHA manifest and explicit CLOUD_UNVERIFIED.",
+  "release_authorized": false
+}

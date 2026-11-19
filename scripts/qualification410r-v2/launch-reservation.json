@@ -1,0 +1,23 @@
+{
+  "command": [
+    "C:/Users/Admin/Documents/Codex/Solar407V-20261111/env/Scripts/python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2\\scripts\\check_portable.py",
+    "C:\\Users\\Admin\\Documents\\Codex\\Solar4095-20261116\\SolarSimulator-0.4.0-20261116-4095.zip",
+    "--current040-manifest-sha256",
+    "9251bc2e05381f16c197168c3b80035d2f07e03f35b27698e6feeb532465120b"
+  ],
+  "cwd": "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2",
+  "disk_root": "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2\\.tools",
+  "limits": {
+    "cpu_seconds": 780,
+    "wall_seconds": 535,
+    "private_bytes": 1932735283,
+    "disk_bytes": 1612348122
+  },
+  "temporary_root": "C:\\Users\\Admin\\Desktop\\Solar-acceptance-410R-v2\\.tools\\isolated temporary files",
+  "plan_sha": "536e174915a4df61c8b8a649eb25beb2494e5f2e864b2f06f1ac03d70ab6f892",
+  "worker_single_launch_lock": true
+}
