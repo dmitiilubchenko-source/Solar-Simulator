@@ -1,0 +1,46 @@
+{
+  "status": "LOCAL_VERIFIED_TWO_COPIES_CLOUD_UNVERIFIED",
+  "evidence_commit": "72978323f8e7afce0ea3cba90f86c6c006f3135f",
+  "project": "Solar-Simulator",
+  "copies": [
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R v2 Backup 20261119\\Solar-Simulator-410R-v2-single-shot-evidence.zip",
+      "size": 3524557,
+      "sha256": "e5adc6ac338c65e940808bd07c4a3770e88859d58be57e03176a4bc5e7e16a02",
+      "members": 149,
+      "verified_by": "Full reread of ZIP, CRC and all manifest member hashes"
+    },
+    {
+      "path": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R v2 Local Mirror 20261119\\Solar-Simulator-410R-v2-single-shot-evidence.zip",
+      "size": 3524557,
+      "sha256": "e5adc6ac338c65e940808bd07c4a3770e88859d58be57e03176a4bc5e7e16a02",
+      "members": 149,
+      "verified_by": "Full reread of ZIP, CRC and all manifest member hashes"
+    }
+  ],
+  "previous_410e": {
+    "sha256": "30f8a1196e38cdc90149bbe2313e79296a32cf4a0f9eedd4e560262d96eb9eec",
+    "bytes": 41624,
+    "locations": [
+      "C:\\Users\\Admin\\Documents\\Codex\\Solar 410E Backup 20261119\\Solar-Simulator-410E-evidence.zip",
+      "C:\\Users\\Admin\\Documents\\Codex\\Solar 410R v2 Local Mirror 20261119\\Solar-Simulator-410E-evidence.zip"
+    ]
+  },
+  "same_physical_volume": true,
+  "reason": "Drive connector HTTP403 for profile/metadata; no alternate local volume. Cloud copy not asserted.",
+  "cloud_upload_attempts": 0,
+  "unchanged_portable_reuploaded": false,
+  "private_context_included": false,
+  "local_immutable_manifest_sha": "88485ecda5b2eeaa11264571c526eba3dea37ef56b37b973138b7893bb1a5554",
+  "project_backup_prepare_ran": true,
+  "prepare_drive_status": "{\"review_required\": 1, \"drivefs\": {\"path\": null, \"status\": \"UNAVAILABLE\", \"reason\": \"Expected one mounted Project-Archives, found 0. Mount the verified account.\", \"checked_at\": \"2026-11-19T20:56:44.415703+00:00\"}}",
+  "resource_cost": {
+    "measured_parent_cpu": 3.453125,
+    "wall": 5.755574699956924,
+    "shell_CPU_allowance": 4,
+    "closure_allowance_CPU": 4,
+    "closure_allowance_wall": 15,
+    "charged_cpu": 11.453125,
+    "charged_wall": 20.755574699956924
+  }
+}

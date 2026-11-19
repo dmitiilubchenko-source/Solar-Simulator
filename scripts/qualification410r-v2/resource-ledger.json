@@ -139,6 +139,23 @@
     "private_bytes": 1932735283,
     "disk_bytes": 1932735283
   },
-  "backup_status": "PENDING",
-  "limitations": "Sampled process memory and disk, not OS quotas. Parent includes final receipt writer and runner overhead. Charged totals include conservative allowances."
+  "backup_status": "LOCAL_VERIFIED_TWO_COPIES_CLOUD_UNVERIFIED",
+  "limitations": "Sampled process memory and disk, not OS quotas. Parent includes final receipt writer and runner overhead. Charged totals include conservative allowances. Standalone preflight fingerprint child CPU was not separately sampled and belongs to the preparation allowance.",
+  "backup": {
+    "measured_parent_cpu": 3.453125,
+    "wall": 5.755574699956924,
+    "shell_CPU_allowance": 4,
+    "closure_allowance_CPU": 4,
+    "closure_allowance_wall": 15,
+    "charged_cpu": 11.453125,
+    "charged_wall": 20.755574699956924
+  },
+  "charged_cpu": 280.203125,
+  "charged_wall": 218.66279510001186,
+  "minimum_accounted_new_data_bytes": 658430776,
+  "consolidated_charged_scope": {
+    "cpu": 629.953125,
+    "wall": 1215.9149508002345,
+    "definition": "Known charged 410 family entries only, including allowances. No duplicate count of prior 410 preflight with its backup."
+  }
 }

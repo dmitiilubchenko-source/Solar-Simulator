@@ -16,7 +16,7 @@
     "BACKWARD_COMPATIBILITY": "PASS",
     "RESOURCE_BUDGET": "PASS",
     "INDEPENDENT_AUDIT": "PASS",
-    "BACKUP_INTEGRITY": "PENDING",
+    "BACKUP_INTEGRITY": "PASS_LOCAL_TWO_VERIFIED_COPIES",
     "PORTABLE_ACCEPTANCE": "TECHNICAL_GO_EXACT_ZIP_TESTED_SCOPE",
     "APPLICATION_D1": "NO_GO_HISTORICAL",
     "RELEASE_READINESS": "NO_GO"
@@ -210,5 +210,9 @@
     "convergence_380_fail": 3,
     "short_402_fail": 4,
     "two_Q2": "EXPERIMENTAL"
-  }
+  },
+  "cloud_backup": "CLOUD_UNVERIFIED",
+  "backup_receipt": "scripts/qualification410r-v2/backup-receipts.json",
+  "charged_cpu": 280.203125,
+  "charged_wall": 218.66279510001186
 }
