@@ -105,5 +105,6 @@
     "worker_runs": 0
   },
   "future_amendment": "scripts/qualification410e/admission-amendment410r-v2.json",
-  "backup_status": "PENDING"
+  "backup_status": "CLOUD_UNVERIFIED",
+  "backup_receipt": "scripts/qualification410e/backup-receipts.json"
 }

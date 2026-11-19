@@ -72,3 +72,16 @@ GO ограничена техническим контрактом записи
 D1 numerical 11/11, educational effects 10/11, distance_AB 0,244795 м
 при минимуме 10 м, три convergence FAIL380 и четыре FAIL402 сохранены.
 Two-Q2 остаётся экспериментальным, D1 и релиз 0.4.0 — NO-GO.
+
+Поправка для будущего запуска закрепляет коммит wrapper `1197ee5`,
+SHA writer, аудитора и схему. Она сохраняет исходную остановку 410R,
+его бюджет и нулевой счётчик запусков. Для полного прогона с новым
+wrapper требуется отдельное разрешение владельца.
+[Amendment](../scripts/qualification410e/admission-amendment410r-v2.json).
+
+Локальный архив 41 624 байта прошёл проверку SHA-256, CRC и каждого
+элемента manifest. Drive connector вернул HTTP 403, а подтверждённого
+DriveFS mount нет. Очередь сохранена со статусом **CLOUD_UNVERIFIED**.
+SHA архива `30f8a1196e38cdc90149bbe2313e79296a32cf4a0f9eedd4e560262d96eb9eec`.
+Исторические архивы сохранены отдельно.
+[Квитанция](../scripts/qualification410e/backup-receipts.json).

@@ -31,5 +31,13 @@
     "wall": 240,
     "private_bytes": 943718400,
     "data_bytes": 234881024
-  }
+  },
+  "backup_charged_allowance": {
+    "cpu": 5,
+    "wall": 15
+  },
+  "charged_CPU": 37.71875,
+  "charged_wall": 104.82046790001914,
+  "local_archive_bytes": 41624,
+  "data_bytes_at_close": 373188
 }

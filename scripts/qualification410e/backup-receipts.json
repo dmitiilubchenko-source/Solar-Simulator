@@ -1,0 +1,22 @@
+{
+  "status": "CLOUD_UNVERIFIED",
+  "archive": "Solar-Simulator-410E-evidence.zip",
+  "project": "Solar-Simulator",
+  "size": 41624,
+  "sha256": "30f8a1196e38cdc90149bbe2313e79296a32cf4a0f9eedd4e560262d96eb9eec",
+  "source": "C:\\Users\\Admin\\Documents\\Codex\\Solar 410E Backup 20261119\\Solar-Simulator-410E-evidence.zip",
+  "expected_cloud_parent": "1lMlX0WvaL3b14sU2UKMB_8DHobSofuYI",
+  "git_commit": "b975a37cd188549fe159aad3b5c9dfcaec5ea91d",
+  "members": 19,
+  "local_crc_and_member_hashes_verified": true,
+  "upload_attempts": 0,
+  "provider_error": "Drive profile and folder metadata returned HTTP 403.",
+  "drivefs": "No verified Project-Archives mount.",
+  "cloud_id": null,
+  "independent_cloud_readback": false,
+  "pending_queue_retained": true,
+  "existing_archives_uploaded": false,
+  "charged_cpu_allowance": 5,
+  "charged_wall_allowance": 15,
+  "measured_connector_service_CPU": null
+}
