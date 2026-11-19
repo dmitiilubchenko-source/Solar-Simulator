@@ -1,0 +1,35 @@
+{
+  "stage": "410E",
+  "final_fixtures_measured": {
+    "worker_cpu": 1.1875,
+    "parent_cpu": 0.53125,
+    "wall": 1.820467900019139,
+    "peak_private": 139419648,
+    "measured_test_scope": true
+  },
+  "conservative_allowance_other_work_cpu": 31,
+  "conservative_allowance_other_work_wall": 88,
+  "allowance_scope": "Initial30-case run, first unsuccessful edit/command, static/package proofs, Git and report closure.",
+  "separate_backup_budget": {
+    "cpu": 15,
+    "wall": 65
+  },
+  "pre_backup_charged_cpu": 32.71875,
+  "pre_backup_charged_wall": 89.82046790001914,
+  "max_sampled_fixture_private": 139419648,
+  "stage_wide_peak_unknown": true,
+  "scientific_compute_runs": 0,
+  "full410r_attempts_consumed": 0,
+  "hard": {
+    "cpu": 120,
+    "wall": 300,
+    "private_bytes": 1073741824,
+    "data_bytes": 268435456
+  },
+  "early": {
+    "cpu": 96,
+    "wall": 240,
+    "private_bytes": 943718400,
+    "data_bytes": 234881024
+  }
+}

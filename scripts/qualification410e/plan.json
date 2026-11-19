@@ -1,0 +1,44 @@
+{
+  "stage": "410E",
+  "request_sha": "89de44a5862dfd7d292651199fd5df8895751a298c25e2030de6a2b633e1808b",
+  "base": "d04dc9aa5ca3d95659fc996ea560f042016ce67e",
+  "historical_410r": "4fc6cebb53672e496d161e7bf2d01f25fbce9fa2",
+  "old_wrapper": "e332fca075e4dd686c3011a0f644c19e2af2210025badffb8117f516d74687a7",
+  "hard": {
+    "cpu": 120,
+    "wall": 300,
+    "private_bytes": 1073741824,
+    "data_bytes": 268435456
+  },
+  "early": {
+    "cpu": 96,
+    "wall": 240,
+    "private_bytes": 943718400,
+    "data_bytes": 234881024
+  },
+  "allocation": {
+    "preparation": [
+      10,
+      25
+    ],
+    "tests": [
+      25,
+      50
+    ],
+    "audit": [
+      12,
+      25
+    ],
+    "backup": [
+      15,
+      65
+    ],
+    "closure": [
+      12,
+      40
+    ]
+  },
+  "case_set": "A-T deterministic synthetic fixtures, exact wrapper byte+AST projection, read-only ZIP checks",
+  "no_solver_or_GUI": true,
+  "partial_policy": "Retain temporary sibling and already published NPZ for forensics; no completion manifest on failure; refuse existing output directory"
+}

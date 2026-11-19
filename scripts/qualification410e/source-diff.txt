@@ -1,0 +1,56 @@
+--- frozen409.5/check_portable.py
++++ 410E/check_portable.py
+@@ -249 +249,19 @@
+-    result["continuous"]=check_continuous(folder,environment)
++    evidence = None
++    if args.current040_manifest_sha256 is not None:
++        import hashlib
++        wrapper = Path(__file__).resolve()
++        writer = wrapper.parent/"qualification410e/writer.py"
++        data = (folder/"verification-current040/manifest-v1.json").read_bytes()
++        if hashlib.sha256(data).hexdigest() != args.current040_manifest_sha256:
++            raise ValueError("Evidence current040 manifest binding mismatch")
++        manifest = json.loads(data)
++        provenance = dict(
++            wrapper_sha256=hashlib.sha256(wrapper.read_bytes()).hexdigest(),
++            writer_sha256=hashlib.sha256(writer.read_bytes()).hexdigest(),
++            portable_sha256=hashlib.sha256(args.archive.read_bytes()).hexdigest(),
++            runtime_commit=manifest["source_commit"], runtime_tree=manifest["source_tree"],
++            native_sha256=manifest["native_SHA256"],
++            current_manifest_sha256=args.current040_manifest_sha256,
++        )
++        evidence = [str(writer), str(target/"continuous-year-raw"), json.dumps(provenance)]
++    result["continuous"]=check_continuous(folder,environment,evidence=evidence)
+@@ -535 +553 @@
+-def check_continuous(folder,environment):
++def check_continuous(folder,environment,*,evidence=None):
+@@ -545,0 +564,10 @@
++if len(sys.argv)>1:
++    import runpy
++    provenance=json.loads(sys.argv[3])
++    if hashlib.sha256(pathlib.Path(sys.argv[1]).read_bytes()).hexdigest()!=provenance['writer_sha256']:
++        raise ValueError('Continuous evidence writer binding mismatch')
++    evidence_api=runpy.run_path(sys.argv[1])
++    inputs_before=evidence_api['observe_inputs'](root,provenance)
++    actual_epochs_seconds=[]
++else:
++    evidence_api=None
+@@ -563,0 +592,2 @@
++if evidence_api:
++    body_names=tuple(b.name for b in seed.bodies)
+@@ -566 +596,6 @@
+-    values.append(matrix(session.current))
++    current=session.current
++    values.append(matrix(current))
++    if evidence_api:
++        actual_epochs_seconds.append(float(current.time))
++        if tuple(b.name for b in current.bodies)!=body_names:
++            raise ValueError('Continuous evidence body order changed')
+@@ -569,0 +605,4 @@
++if evidence_api:
++    evidence_api['write_year'](sys.argv[2],root,provenance,inputs_before,actual,
++        actual_epochs_seconds,sample['year_times'],body_names,sample['year_continuous'].shape,
++        year,relative,session.statistics)
+@@ -577 +616 @@
+-    process=subprocess.run([str(folder/'runtime/python.exe'),'-X','utf8','-B','-I','-c',probe],cwd=folder,
++    process=subprocess.run([str(folder/'runtime/python.exe'),'-X','utf8','-B','-I','-c',probe,*(evidence or ())],cwd=folder,
