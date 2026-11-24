@@ -1,11 +1,14 @@
 {
   "status": "PASS",
+  "public_source_commit": "c95f0de40181671dfc39d1f2ff3972ae4e5eced5",
+  "public_source_tree": "23af0932b558eb8cc2beef22713ed189719f6959",
   "published_parent": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "new_objects_checked": 63,
   "object_types": {
-    "commit": 1,
+    "commit": 2,
     "tag": 1,
-    "tree": 11,
-    "blob": 41
+    "tree": 15,
+    "blob": 45
   },
   "nested_archive_members_checked": 15,
   "findings": [],
@@ -24,7 +27,7 @@
     "refs/tags/v0.4.0"
   ],
   "scope": "All newly reachable objects compared with all existing origin refs, plus initial full-tree location scan. Previously published history is inherited without retrospective rewriting; historical public documentary paths are not claimed to have been erased.",
-  "public_release_ref": "refs/tags/v0.4.0",
-  "audit_scope_note": "Completed source content and preliminary new objects audit. Final commit/tag object IDs and final audit are provided in release sidecar and subsequent report-only commit; no cyclic self-commit SHA.",
-  "initial_objects_audited": 54
+  "extended_secret_pattern_audit": "PASS",
+  "private_cloud_identifiers_checked": 5,
+  "new_secret_or_private_id_matches": 0
 }

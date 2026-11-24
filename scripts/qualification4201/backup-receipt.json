@@ -5,5 +5,10 @@
   "portable_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
   "private_cloud_identifiers": "Excluded from public source; detailed receipts retained privately",
   "retries": 0,
-  "qualified_source_restorable": true
+  "qualified_source_restorable": true,
+  "required_archive_scope": "Frozen419 portable,419closure,419evidence and418source+incremental bundles",
+  "full_download_reconstruction": true,
+  "full_SHA256_and_CRC": true,
+  "new_public_source_recovery": "GitHub public source tagv0.4.0 and branch; exact original669 remains recoverable via private verified source chain",
+  "post_release_evidence": "One compact420.1stage archive, no recursive receipt archives; detailed locator receipt remains private"
 }

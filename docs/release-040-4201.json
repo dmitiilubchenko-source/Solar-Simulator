@@ -1,16 +1,134 @@
 {
   "stage": "420.1",
-  "PUBLICATION_STATUS": "AUTHORIZED_READY_FOR_PUBLICATION",
-  "original_qualified_commit": "669478e0c88b7520bf2473e22f237f4f5c42ecbd",
-  "public_release_ref": "refs/tags/v0.4.0",
-  "self_reference_policy": "exact source commit/tree and download verification recorded by subsequent report-only commit and release equivalence asset",
-  "ZIP_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
+  "status": "SOLAR-SIMULATOR 0.4.0 RELEASED",
   "PUBLIC_HISTORY_PRIVACY": "PASS",
   "PUBLIC_SOURCE_EQUIVALENCE": "PASS",
   "QUALIFIED_ZIP_IDENTITY": "PASS",
   "REQUIRED_BACKUP": "CLOUD_VERIFIED",
   "TECHNICAL_RELEASE_READINESS": "GO",
-  "LICENSE_COMPLIANCE": "PASS_WITHIN_FILE_INVENTORY_REVIEW",
   "PUBLICATION_AUTHORIZATION": "APPROVED",
-  "REMOTE_CONFLICTS": "NONE_AT_PREFLIGHT"
+  "PUBLICATION_STATUS": "RELEASED",
+  "original_qualified_commit": "669478e0c88b7520bf2473e22f237f4f5c42ecbd",
+  "original_qualified_tree": "872789f206d55a9af056d45162fffd54b8cda70c",
+  "public_release_commit": "c95f0de40181671dfc39d1f2ff3972ae4e5eced5",
+  "public_release_tree": "23af0932b558eb8cc2beef22713ed189719f6959",
+  "tag": "v0.4.0",
+  "release_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/tag/v0.4.0",
+  "download_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/download/v0.4.0/SolarSimulator-0.4.0-final-419-public.zip",
+  "published_at_UTC": "2026-11-24T20:58:14Z",
+  "closure_local_date": "2026-11-25",
+  "ZIP": {
+    "name": "SolarSimulator-0.4.0-final-419-public.zip",
+    "bytes": 113122339,
+    "SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
+    "download_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/download/v0.4.0/SolarSimulator-0.4.0-final-419-public.zip",
+    "asset_id": 788765932
+  },
+  "download_verification": {
+    "status": "PASS_INDEPENDENT_UNAUTHENTICATED_PUBLIC_DOWNLOAD",
+    "release_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/tag/v0.4.0",
+    "published_at_UTC": "2026-11-24T20:58:14Z",
+    "tag": "v0.4.0",
+    "public_source_commit": "c95f0de40181671dfc39d1f2ff3972ae4e5eced5",
+    "public_source_tree": "23af0932b558eb8cc2beef22713ed189719f6959",
+    "assets": [
+      {
+        "name": "PUBLIC-HISTORY-AUDIT-0.4.0.json",
+        "bytes": 1320,
+        "SHA256": "3d56836ef58c39e7cea4158ac2401e8f2b474b5d0fa376d75c18894ac40afc7c",
+        "download_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/download/v0.4.0/PUBLIC-HISTORY-AUDIT-0.4.0.json",
+        "asset_id": 788771764
+      },
+      {
+        "name": "SHA256SUMS.txt",
+        "bytes": 109,
+        "SHA256": "07c48e9b192d62ae46ce24b7473651f324636da44d4758eb6c174130a277a4ec",
+        "download_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/download/v0.4.0/SHA256SUMS.txt",
+        "asset_id": 788771644
+      },
+      {
+        "name": "SolarSimulator-0.4.0-final-419-public.zip",
+        "bytes": 113122339,
+        "SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
+        "download_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/download/v0.4.0/SolarSimulator-0.4.0-final-419-public.zip",
+        "asset_id": 788765932
+      },
+      {
+        "name": "SOURCE-EQUIVALENCE-0.4.0.json",
+        "bytes": 477434,
+        "SHA256": "58e04fdadce62ff5ae17c436f786fb55b1af27850379120684e2be628a28c014",
+        "download_url": "https://github.com/dmitiilubchenko-source/Solar-Simulator/releases/download/v0.4.0/SOURCE-EQUIVALENCE-0.4.0.json",
+        "asset_id": 788771690
+      }
+    ],
+    "ZIP_CRC": "PASS",
+    "ZIP_members": 6008,
+    "SHA256SUMS_matches": true,
+    "equivalence_asset_matches": true,
+    "public_history_asset_matches": true,
+    "remote_tag_matches": true,
+    "main_dev_unchanged": true,
+    "latest_GitHub_release": {
+      "status": "PASS",
+      "id": 457305347,
+      "tag": "v0.4.0"
+    },
+    "authentication_used": false,
+    "download_client": "Windows curl; TLS verification enabled; different client from uploader",
+    "metadata_basis": "Server response after publication; fresh latest metadata checked separately when available",
+    "network_failures_preserved": [
+      "Python urllib browser-download TLS handshake timeout before ZIP bytes",
+      "Windows curl api.github.com revocation-server offline during extra metadata check; all four assets already downloaded and verified",
+      "Release finalization transport failure; read actual draft state before one finalize retry; no asset reupload"
+    ]
+  },
+  "qualification419": {
+    "Python_PASS": 3119,
+    "Rust_PASS": 19,
+    "full_check_project_exit": 0,
+    "full_check_portable_exit": 0,
+    "fresh_year_JPL": "PASS",
+    "continuous": "PASS",
+    "GUI_CLI_guard": "PASS",
+    "qualification_executed_under_new_public_commit": false,
+    "integrations_repeated": 0
+  },
+  "scope": "0/1dynamicQ2,Python/native,supportedNewton/EIH/FixedJ2; Laboratory/save/load/recovery/record/replay/CSV",
+  "historic_limits": [
+    "APPLICATION_D1=NO_GO",
+    "3FAIL380",
+    "4FAIL402",
+    "D1effects10/11",
+    "D1numeric11/11"
+  ],
+  "JPL": {
+    "bodies": 10,
+    "epochs": 125,
+    "horizon_seconds": 31557600,
+    "moon_earth_max_position_metres": 718.824784521,
+    "limit_metres": 1000,
+    "universal_accuracy_claim": false
+  },
+  "LATEST": "Local artifact pointer updated only after independent public download; previous0.3.2files retained; GitHub latest readbackPASS",
+  "main_dev_unchanged": true,
+  "private_branches_published": false,
+  "old_tags_or_releases_changed": false,
+  "resource": {
+    "local_elapsed_wall_seconds": 3830.404967546463,
+    "initial_local_wall_plan_seconds": 1800,
+    "status": "INITIAL_LOCAL_ELAPSED_WALL_PLAN_EXCEEDED",
+    "retroactive_budget_increase": false,
+    "cloud_scoped_transport_wall_seconds": 271.462,
+    "cloud_hard_seconds": 1800,
+    "cloud_early_seconds": 1500,
+    "cloud_retries": 0,
+    "new_owned_bytes": 572836785,
+    "additional_latest_copy_bytes": 113122339,
+    "scientific_integrations": 0,
+    "full_suite_repeated": false,
+    "native_rebuilt": false,
+    "global_CPU_not_measured": true,
+    "note": "Elapsed wall includes network waits and orchestration. The self-imposed local elapsed plan was exceeded and is not claimed PASS. Required cloud transport completed within its finite budget; no user hard local elapsed budget was specified for420.1."
+  },
+  "post_release_policy": "STOP; no0.4.1ornewresearch"
 }

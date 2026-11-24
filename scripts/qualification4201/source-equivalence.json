@@ -5159,8 +5159,17 @@
     }
   ],
   "runtime_changed": false,
+  "public_release_commit": "c95f0de40181671dfc39d1f2ff3972ae4e5eced5",
+  "public_release_tree": "23af0932b558eb8cc2beef22713ed189719f6959",
+  "protected_git_blobs_identical": true,
+  "qualified_files_checked": 1288,
+  "packaged_source_files_identical": 85,
+  "new_commit_direct_scientific_qualification": false,
+  "source_bound_preflight": "PASS with original OMP/OPENBLAS/MKL=1; no solver. Initial environment guard rejection retained.",
   "original_qualified_tree": "872789f206d55a9af056d45162fffd54b8cda70c",
-  "public_release_ref": "refs/tags/v0.4.0",
+  "ZIP_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
+  "ZIP_bytes": 113122339,
+  "native_SHA256": "01b1c0978531d715b6e375fd566ec0ead85efc3ba0f2a0c470647c8f48e62072",
   "runtime_fingerprint": {
     "application_version": "0.4.0",
     "package_files": {
@@ -7702,7 +7711,15 @@
       "PYTHONHASHSEED": null
     }
   },
-  "ZIP_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
-  "new_commit_direct_scientific_qualification": false,
-  "explanation": "Private operational views/exclusions and public descriptions only. Production code, Rust, standard build drivers, dependencies, IC, scientific inputs, GUI/CLI, tests and storage contracts are unchanged. Original SHA identifiers are retained; exact public commit/tree is resolved in release asset to avoid a self-referential commit hash."
+  "scientific_bindings": {
+    "initial_SHA256": "65cd1b3eb5c815df11cd45a7106d8cc4ecb5828d10761715831aaf2571b3548d",
+    "reference_SHA256": "f565c3d12394c6def8cc594ff614415ba8f05495bd89a1ac4b9dbc81c4609cbe",
+    "verifier_SHA256": "9e0a4070e1fc703276930c57933a3e3cca547dfa5523617731c9d034112deac1"
+  },
+  "excluded_categories": [
+    "private backup locators/receipts",
+    "machine/process operational accounting",
+    "one single-machine sealing runner; standard build_portable.py retained"
+  ],
+  "identity_note": "Public release commit/tree is a cleaned source view. Qualification419 was executed on original669 and immutable ZIP, not under this new Git ID. No old source-bound SHA was substituted."
 }
