@@ -1,8 +1,16 @@
 {
   "stage": "420.1",
-  "PUBLICATION_STATUS": "PREFLIGHT_ONLY",
+  "PUBLICATION_STATUS": "AUTHORIZED_READY_FOR_PUBLICATION",
   "original_qualified_commit": "669478e0c88b7520bf2473e22f237f4f5c42ecbd",
   "public_release_ref": "refs/tags/v0.4.0",
   "self_reference_policy": "exact source commit/tree and download verification recorded by subsequent report-only commit and release equivalence asset",
-  "ZIP_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed"
+  "ZIP_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
+  "PUBLIC_HISTORY_PRIVACY": "PASS",
+  "PUBLIC_SOURCE_EQUIVALENCE": "PASS",
+  "QUALIFIED_ZIP_IDENTITY": "PASS",
+  "REQUIRED_BACKUP": "CLOUD_VERIFIED",
+  "TECHNICAL_RELEASE_READINESS": "GO",
+  "LICENSE_COMPLIANCE": "PASS_WITHIN_FILE_INVENTORY_REVIEW",
+  "PUBLICATION_AUTHORIZATION": "APPROVED",
+  "REMOTE_CONFLICTS": "NONE_AT_PREFLIGHT"
 }

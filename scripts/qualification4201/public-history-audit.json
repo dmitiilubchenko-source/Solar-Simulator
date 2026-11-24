@@ -1,6 +1,30 @@
 {
-  "status": "PENDING_FINAL_GIT_OBJECT_AUDIT",
-  "scope": "Every new reachable object relative to already public refs, including archive members; no notes or private branches will be pushed",
+  "status": "PASS",
   "published_parent": "237f73612c3c159acf92b32a15cf0289958fd921",
-  "retrospective_history_rewrite": false
+  "object_types": {
+    "commit": 1,
+    "tag": 1,
+    "tree": 11,
+    "blob": 41
+  },
+  "nested_archive_members_checked": 15,
+  "findings": [],
+  "synthetic_fixture_review": [
+    {
+      "path": "tests/test_public_export419.py",
+      "blob": "95e1b7dfe4fe2895d500a1f1439cdd58d8472040",
+      "count": 3,
+      "classification": "synthetic tmp_path inputs used to test rejection/redaction; no actual file access at those strings; test bytes preserved"
+    }
+  ],
+  "private_qualified_commits_reachable": false,
+  "notes_pushed": false,
+  "refs_to_publish": [
+    "refs/heads/codex/public-release-040-4201",
+    "refs/tags/v0.4.0"
+  ],
+  "scope": "All newly reachable objects compared with all existing origin refs, plus initial full-tree location scan. Previously published history is inherited without retrospective rewriting; historical public documentary paths are not claimed to have been erased.",
+  "public_release_ref": "refs/tags/v0.4.0",
+  "audit_scope_note": "Completed source content and preliminary new objects audit. Final commit/tag object IDs and final audit are provided in release sidecar and subsequent report-only commit; no cyclic self-commit SHA.",
+  "initial_objects_audited": 54
 }

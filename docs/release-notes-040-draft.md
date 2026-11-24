@@ -43,3 +43,6 @@ SHA-256 `1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed`.
 Квалификация419 относится к оригиналу и ZIP; новый Git ID не выдаётся за непосредственно прошедший старую suite.
 Точное соответствие public commit/tree записывается в `SOURCE-EQUIVALENCE-0.4.0.json` у релиза
 и в [отчёте публикации](release-040-4201.md). Старые SHA в verification не заменены.
+
+Численная квалификация419 выполнена при OMP_NUM_THREADS=1, OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1.
+Строгая проверка numerical recipe отличает это окружение от произвольного другого.
