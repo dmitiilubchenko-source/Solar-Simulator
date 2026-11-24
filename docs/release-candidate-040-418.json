@@ -1,0 +1,146 @@
+{
+  "stage": "418",
+  "date": "2026-11-24",
+  "status": "RELEASE CANDIDATE NO-GO",
+  "base_commit": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "base_tree": "5cf43fd9c5bb7d0d80a427d8a6d11ec8b81cb8e9",
+  "source_branch": "codex/release-040-limited-418",
+  "python_tests": {
+    "passed": 3106,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0
+  },
+  "rust_tests": {
+    "passed": 19,
+    "failed": 0
+  },
+  "links_verified": 1402,
+  "check_project": {
+    "first": {
+      "passed": 2995,
+      "failed": 44,
+      "skipped": 61,
+      "errors": 3
+    },
+    "second": "3106 Python tests passed; command resource-stopped during Cargo compile",
+    "completion": "Exact remaining cargo fmt/core tests and check_links completed separately within original1800CPU budget; no single exit0 full invocation",
+    "source_native_CPU_including_supervision": 1695.25
+  },
+  "workflow_matrix": {
+    "cells": 33,
+    "passed": 33,
+    "details": "release-workflows-418.md"
+  },
+  "visible_GUI": {
+    "passed": 4,
+    "headless": false
+  },
+  "old_numeric_states": {
+    "modes": [
+      0,
+      1
+    ],
+    "backends": [
+      "python",
+      "rust"
+    ],
+    "canonical_JSON_bytes_equal": true,
+    "only_CRLF_versus_LF_ignored": true
+  },
+  "native_SHA256": "a2b7e07573720a269efc712ee4fb74dcc747d24a4967d72d4c3d812158b3399b",
+  "historical_archives": [
+    {
+      "name": "SolarSimulator-0.4.0-20261116-4095.zip",
+      "bytes": 114633711,
+      "SHA256": "33114f5ac2234e01e1e248fae757187a50a81020e2b225ee6b746e28e1073e33",
+      "CRC": "PASS"
+    },
+    {
+      "name": "Solar-Simulator-413-MQ-scientific-evidence.zip",
+      "bytes": 275850,
+      "SHA256": "cec638ce916f5f07db52257c20bce487dabc9bbe214ca4f70b4d6d6e57d23e9e",
+      "CRC": "PASS"
+    },
+    {
+      "name": "Solar-MQ-Archived-Demo-416-v2.zip",
+      "bytes": 21235,
+      "SHA256": "0b341ac7fd1fc81e41d9451c7b681bb7ef14f4cc0b32acf447073f613ba2197a",
+      "CRC": "PASS"
+    }
+  ],
+  "caveats": [
+    "Initial red harness accidentally allowed short old2-Q2 solver calls; corrected red31cases then patched to forbid any solver",
+    "FirstGUI fixture expected batch1 without setting it; test corrected and rerun2PASS",
+    "VisibleGUI recorder had nonexistent.spin attribute; corrected to angular_momentum; raw failure retained",
+    "Baseline byte check initially differed only by CRLF; canonical numeric JSON text subsequently exactly equal",
+    "No new scientific2-Q2 qualification; previous D1 and scientific FAIL preserved"
+  ],
+  "verdicts": {
+    "LIMITED_Q2_GUARD": "PASS_SOURCE_AND_PORTABLE",
+    "ZERO_Q2_WORKFLOWS": "PASS_BOUNDED",
+    "ONE_Q2_WORKFLOWS": "PASS_BOUNDED",
+    "FIXED_J2_EIH_PRESERVATION": "PASS_BOUNDED_NOT_NEW_JPL_QUALIFICATION",
+    "NATIVE_BACKEND": "PASS_COMPILED_SOURCE_AND_NEW_PORTABLE_BINARY",
+    "LEGACY_STORAGE": "PASS",
+    "GUI_ACCEPTANCE": "PASS_VISIBLE_AUTOMATED_SOURCE4_PORTABLE4",
+    "CLI_ACCEPTANCE": "PASS_UTF8_NONUTF8_REDIRECT_ESCAPED",
+    "PROJECT_TESTS": "PARTIAL_CURRENT_TREE_RUNTIME_AND_TARGETED_PASS",
+    "PORTABLE_CANDIDATE": "BUILT_FULL_ACCEPTANCE_FAILED_NO_GO",
+    "EVIDENCE_INTEGRITY": "PASS_SHA_CRC",
+    "HISTORICAL_FAIL_PRESERVATION": "PASS",
+    "RELEASE_READINESS": "NO_GO"
+  },
+  "packaging_fix": {
+    "cause": "Strict current-source JPL exporter refused changed experiment.py",
+    "solution": "Explicit --verification-archive plus --verification-sha256 reuses only saved verification from exactoldportable, using independent replay. Ordinary exporter unchanged and strict.",
+    "tests": {
+      "red_failed": 8,
+      "green_passed": 8,
+      "regression_passed": 61,
+      "failures": 0
+    },
+    "suite_scope": "Full3106 before packaging-only builder change;61 relevant tests afterwards. Runtime package/source equations unchanged.",
+    "no_current_runtime_JPL_qualification": true
+  },
+  "started": "2026-11-23",
+  "build_source_commit": "3a95d3df4c50116a39ff750117ec8993c19d0e06",
+  "build_source_tree": "0ea1046ec76abf46a69b08909e5845dd040754fc",
+  "runtime_source_commit": "cc7cf009fddb77ea646bbf238092a8577cbec59a",
+  "portable": {
+    "bytes": 112997349,
+    "SHA256": "8253c586b79aac673bc9aeed533ff4c40086737b44ac13987cd9547b0bf81dc6",
+    "files": 6004
+  },
+  "portable_archive_name": "SolarSimulator-0.4.0-limited-418-3a95d3df.zip",
+  "portable_full_acceptance": {
+    "exit_code": 1,
+    "reason": "Runtime scientific source changed: src/solar_simulator/experiment.py",
+    "stage": "old immutable verification/recompute_jpl.py before annual integration",
+    "source_bound_refusal_is_not_numerical_FAIL": true,
+    "continuous_phase_not_reached": true
+  },
+  "portable_limited": {
+    "positive": 4,
+    "negative": 15,
+    "CLI_UTF8": 5,
+    "manifest_files": 6004,
+    "CRC_SHA": "PASS",
+    "visible_GUI": 4,
+    "native_SHA256": "523864a0e4bd362695a4a39889afb166ae4af24cd715574851e5ca5546a03d4b",
+    "numeric_states_exact_source_baseline": true
+  },
+  "limitations": [
+    "No complete exit0 check_project invocation; source phases completed separately",
+    "Full3106 preceded packaging-only edits;61 and17 targeted checks subsequently passed; final whole-tree full suite not repeated",
+    "Old annual JPL driver correctly refuses newsourceSHA; fresh annual JPL not executed; fullportableacceptance failed",
+    "Without-Xutf8, redirected Russianstderr is ASCIIescaped in this Windowslocale; interactive defaultconsole NOT_VERIFIED",
+    "Early small commands unmetered; per-root disk monitoring missed siblingpytest/Cargooutputs; global CPU/diskpeak not fully verified"
+  ],
+  "APPLICATION_D1": "NO_GO",
+  "next_scope": "Separate bounded current-source scientific/technical qualification preserving all historicalSHA; repair accounting scope before expensive repetition. No automatic integration or retry.",
+  "backup_status": "PRIMARY_ARTIFACTS_CLOUD_VERIFIED_FINAL_CLOSURE_LOCAL_ONLY_RESOURCE_STOP",
+  "resource_closure": "RESOURCE_STOP_BACKUP_WALL",
+  "primary_cloud_artifacts": 3,
+  "closing_metadata_cloud_copy": "LOCAL_ONLY"
+}

@@ -1,0 +1,7 @@
+{
+  "kind": "public-operational-record-exclusion",
+  "stage": "qualification419",
+  "qualified_source_commit": "669478e0c88b7520bf2473e22f237f4f5c42ecbd",
+  "scope": "Private backup locations, machine/process accounting and operational receipts are excluded from this public source view. Scientific criteria and executable sources are unchanged.",
+  "historical_original": "Preserved in the original qualified history and private verified backups; not rewritten."
+}

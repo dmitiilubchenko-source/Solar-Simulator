@@ -47,9 +47,11 @@ class RotationState:
 
 
 def validate(bodies, rotations, settings=None):
-    """Validate; retain the legacy int index for one figure, tuple for two."""
+    """Validate the supported single-figure product mode before force evaluation."""
+    from .rotation import validate_dynamic_q2_count
+    validate_dynamic_q2_count(len(rotations))
     if type(rotations) is not tuple or len(rotations) not in (1,2) or any(not isinstance(s,RotationState) for s in rotations):
-        raise ValueError("Этот режим поддерживает одну или две динамические фигуры")
+        raise ValueError("Этот режим требует одну динамическую фигуру")
     names = [b.name for b in bodies]
     if (not bodies or len(set(names)) != len(names) or len({s.body for s in rotations})!=len(rotations)
             or any(s.body not in names for s in rotations)):
@@ -114,6 +116,8 @@ def corrections(positions,masses,sources,rotations,quaternions=None,pair_displac
     Each figure also interacts with the other's monopole, without Q-Q coupling.
     Raw stage quaternions are allowed; rotation_matrix validates/normalizes them.
     """
+    from .rotation import validate_dynamic_q2_count
+    validate_dynamic_q2_count(len(rotations))
     return _corrections(positions,masses,sources,rotations,quaternions,pair_displacement)
 
 
@@ -139,6 +143,9 @@ def _corrections(positions,masses,sources,rotations,quaternions=None,pair_displa
 
 
 def validate_experiment(experiment):
+    from .rotation import validate_dynamic_q2_count
+    validate_dynamic_q2_count(len(experiment.initial_rotations))
+    validate_dynamic_q2_count(len(experiment.rotations))
     validate(experiment.initial, experiment.initial_rotations, experiment.settings)
     validate(experiment.bodies, experiment.rotations, experiment.settings)
     if len(experiment.initial_rotations)!=len(experiment.rotations):
@@ -157,9 +164,12 @@ def validate_experiment(experiment):
 class RotationDOP853(DOP853):
     """Worst local 5(3) estimate over each r/v vector and separate q/S blocks."""
     def __init__(self, fun, t0, y0, t_bound, *, body_count, rotation_count=1, **kwargs):
+        from .rotation import validate_dynamic_q2_count
+        if type(rotation_count) is int:
+            validate_dynamic_q2_count(rotation_count)
         if (type(body_count) is not int or body_count<1 or type(rotation_count) is not int
                 or rotation_count not in (1,2) or np.size(y0)!=6*body_count+7*rotation_count):
-            raise ValueError("Нужна раскладка 6N + K*(q[4]+S[3]), K=1 или 2")
+            raise ValueError("Нужна раскладка 6N + q[4]+S[3] для одной динамической фигуры")
         self.blocks = [slice(k, k+3) for k in range(0, 6*body_count, 3)]
         for k in range(rotation_count):
             start=6*body_count+7*k

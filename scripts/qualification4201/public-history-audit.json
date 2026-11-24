@@ -1,0 +1,6 @@
+{
+  "status": "PENDING_FINAL_GIT_OBJECT_AUDIT",
+  "scope": "Every new reachable object relative to already public refs, including archive members; no notes or private branches will be pushed",
+  "published_parent": "237f73612c3c159acf92b32a15cf0289958fd921",
+  "retrospective_history_rewrite": false
+}

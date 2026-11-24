@@ -13,22 +13,27 @@ from solar_simulator.storage import to_document
 ROOT=Path(__file__).resolve().parents[1]
 
 
+def one_figure_state():
+    from scripts.two_q2_fixture380 import fixture
+    from solar_simulator.experiment import create_experiment
+    b,r,s=fixture()
+    return create_experiment(b,s,rotations=r[:1])
+
+
 def test_profile_is_the_exact_two_body_start_of380():
     from solar_simulator.application_profiles import two_q2_demo
     expected=json.loads((ROOT/'scripts/two-q2-380-plan.json').read_bytes())['cases'][0]['initial']
-    state=two_q2_demo()
-    assert to_document(state)==expected
-    assert state.origin is None and all('synthetic' in r.provenance for r in state.rotations)
-    other=two_q2_demo(backend='rust');expected['settings']['backend']='rust'
-    assert to_document(other)==expected
+    actual=json.loads((ROOT/'src/solar_simulator/data/two-q2-demo380.json').read_bytes())
+    assert actual==expected
+    with pytest.raises(ValueError,match='не более одного'):two_q2_demo()
 
 
-@pytest.mark.parametrize('count',[0,1,2])
+@pytest.mark.parametrize('count',[0,1])
 def test_snapshot_matches_independent_inertia_solve_and_preserves_all_state(count,monkeypatch):
     from dataclasses import replace
     from solar_simulator.application_profiles import two_q2_demo
     from solar_simulator.inspection_view import prepare_inspection
-    state=two_q2_demo();state=replace(state,rotations=state.rotations[:count],initial_rotations=state.initial_rotations[:count])
+    state=one_figure_state();state=replace(state,rotations=state.rotations[:count],initial_rotations=state.initial_rotations[:count])
     doc=to_document(state);before=json.dumps(doc,sort_keys=True)
     monkeypatch.setattr('solar_simulator.experiment.advance',lambda *a:pytest.fail('Read-only inspection integrated'))
     progress=Mock();result=prepare_inspection(doc,lambda:False,progress)
@@ -48,16 +53,16 @@ def test_cancelled_inspection_never_calls_the_evaluator(monkeypatch):
     from solar_simulator.application_profiles import two_q2_demo
     from solar_simulator.inspection_view import prepare_inspection
     monkeypatch.setattr('solar_simulator.inspection.report',lambda *a:pytest.fail('Cancelled work evaluated'))
-    with pytest.raises(CancelledError):prepare_inspection(to_document(two_q2_demo()),lambda:True,Mock())
+    with pytest.raises(CancelledError):prepare_inspection(to_document(one_figure_state()),lambda:True,Mock())
 
 
 @pytest.mark.parametrize('axes',[(0,1),(0,2),(1,2)])
 def test_projected_axes_are_inertial_columns_not_an_inferred_shape(axes):
     from solar_simulator.application_profiles import two_q2_demo
     from solar_simulator.inspection_view import projected_axes
-    state=two_q2_demo();original=to_document(state)
+    state=one_figure_state();original=to_document(state)
     segments=projected_axes(state,['A','B'],'A',axes)
-    assert len(segments)==6
+    assert len(segments)==3
     reference=np.array(original['bodies'][0]['position'])
     for k,(body,spin) in enumerate(zip(state.bodies,state.rotations)):
         p=np.array([body.position.x,body.position.y,body.position.z])-reference
@@ -74,7 +79,9 @@ def test_missing_native_is_explained_without_a_force_or_state_write(monkeypatch)
     from solar_simulator.inspection_view import prepare_inspection
     def unavailable(*a):raise ImportError('controlled absent native')
     monkeypatch.setattr('solar_simulator.recipe._native',unavailable)
-    doc=to_document(two_q2_demo(backend='rust'))
+    from dataclasses import replace
+    state=one_figure_state()
+    doc=to_document(replace(state,settings=replace(state.settings,backend='rust')))
     result=prepare_inspection(doc,lambda:False,Mock())
     assert result['numerical_reliability']['execution']['native']['status']=='unavailable'
     assert doc['settings']['backend']=='rust'
@@ -86,7 +93,7 @@ def test_changed_demo_data_is_rejected_before_any_scenario_replacement(monkeypat
         def joinpath(self,name):return self
         def read_bytes(self):return b'{}'
     monkeypatch.setattr('importlib.resources.files',lambda *a:ChangedResource())
-    with pytest.raises(ValueError,match='изменены'):two_q2_demo()
+    with pytest.raises(ValueError,match='не более одного'):two_q2_demo()
 
 
 @pytest.mark.parametrize('damage',['missing','corrupt'])

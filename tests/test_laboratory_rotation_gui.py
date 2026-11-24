@@ -2,6 +2,13 @@
 from pathlib import Path
 
 
+def one_figure_state():
+    from scripts.two_q2_fixture380 import fixture
+    from solar_simulator.experiment import create_experiment
+    b,r,s=fixture()
+    return create_experiment(b,s,rotations=r[:1])
+
+
 def _settle(loader):
     loader.future.result(timeout=10);loader._poll()
     assert hasattr(loader,'payload')
@@ -18,10 +25,10 @@ def _check_demo_journey(tmp_path):
         # Point scenario still has a read-only report and no rotation axes.
         plain=to_document(app.experiment);viewer=app._show_inspection();views.append(viewer);_settle(viewer)
         assert viewer.payload['rotations']==[] and to_document(app.experiment)==plain
-        app._open_two_q2();initial=to_document(app.experiment)
-        assert initial==to_document(two_q2_demo())
-        assert len(app._principal_axes.get_segments())==6
-        assert 'без Q2–Q2' in app.model_info.get() and 'Учебные' in app.model_info.get()
+        app._replace_experiment(one_figure_state());app.batch.set('1');initial=to_document(app.experiment)
+        assert initial==to_document(one_figure_state())
+        assert len(app._principal_axes.get_segments())==3
+        assert len(app.experiment.rotations)==1
         # Viewing does not apply pending controls or normalize stored q/S.
         app.dt.set('999');app.integrator.set('verlet');app.rtol.set('1e-3')
         view=app._show_inspection();views.append(view);_settle(view)
@@ -32,14 +39,14 @@ def _check_demo_journey(tmp_path):
         app._sync_settings(app.experiment.settings)
         for plane in ('XY','XZ','YZ'):
             app.plane.set(plane);app.reference.set('Тело: B');app._draw()
-            assert len(app._principal_axes.get_segments())==6 and to_document(app.experiment)==initial
+            assert len(app._principal_axes.get_segments())==3 and to_document(app.experiment)==initial
         app._start();app._poll();pending=app.future
         assert pending is not None
         app._pause();pending.result(timeout=10);app._poll()
         assert not app.running and app.future is None and app.experiment.time==50
         for _ in range(2):
             app._submit(1);app.future.result(timeout=10);app._poll()
-        assert app.experiment.time==150 and app.experiment.settings==two_q2_demo().settings
+        assert app.experiment.time==150 and app.experiment.settings==one_figure_state().settings
         # Existing stop/recovery writes only when explicitly requested.
         app._stop_and_save();saved=to_document(app.experiment)
         assert to_document(load(app.last_recovery_path))==saved
@@ -49,7 +56,7 @@ def _check_demo_journey(tmp_path):
         path=tmp_path/'two figures.json'
         with patch('solar_simulator.app.filedialog.asksaveasfilename',return_value=str(path)):app._save()
         assert to_document(load(path))==saved
-        assert view.payload['time_seconds']==0 and view.payload['rotations'][1]['quaternion']==initial['rotations'][1]['quaternion']
+        assert view.payload['time_seconds']==0 and view.payload['rotations'][0]['quaternion']==initial['rotations'][0]['quaternion']
         app.scenario.set('sun-earth');app._select_scenario();app._new()
         assert not app.experiment.rotations and not hasattr(app,'_principal_axes')
         app._open_lunar_rotation();one=to_document(app.experiment)
@@ -59,8 +66,8 @@ def _check_demo_journey(tmp_path):
         with patch('solar_simulator.app.filedialog.askopenfilename',return_value=str(path)):app._load()
         assert to_document(app.experiment)==saved
         app._submit(1);app.future.result(timeout=10);app._poll()
-        assert app.experiment.time==200 and app.experiment.settings==two_q2_demo().settings
-        assert app.experiment.initial_rotations==two_q2_demo().initial_rotations
+        assert app.experiment.time==200 and app.experiment.settings==one_figure_state().settings
+        assert app.experiment.initial_rotations==one_figure_state().initial_rotations
     finally:
         for view in views:
             if view.window.winfo_exists():view.close()
@@ -76,7 +83,7 @@ def _check_inspection_cancel_error_and_close(tmp_path):
     from solar_simulator.storage import to_document
     root=tk.Tk();root.withdraw();app=Laboratory(root)
     try:
-        app._open_two_q2();before=to_document(app.experiment);started=Event();release=Event()
+        app._replace_experiment(one_figure_state());before=to_document(app.experiment);started=Event();release=Event()
         children=root.winfo_children()
         with patch('solar_simulator.storage.to_document',side_effect=ValueError('controlled invalid snapshot')):
             try:app._show_inspection()

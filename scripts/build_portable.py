@@ -22,6 +22,7 @@ from packaging.utils import parse_wheel_filename
 from packaging.version import Version
 
 ROOT=Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:sys.path.insert(0,str(ROOT))
 PUBLIC_DOCUMENT_ARCHIVES={
     'docs/de441-reader-inputs.zip','docs/nominal-jpl440-inputs.zip',
     'docs/runtime-sources-before301.zip','tests/data/jpl-verification.zip',
@@ -113,7 +114,63 @@ def run_build_smokes(executable,output,probes):
                            env=environment,timeout=120)
 
 
-def build():
+def reuse_historical_verification(source, expected_sha256, output):
+    """Copy exact archived JPL evidence, never qualifying the current runtime.
+
+    The ordinary exporter retains its strict current-source checks. This explicit
+    alternative reads only verification/ from a separately SHA-pinned old ZIP;
+    it uses our reader, and never imports any code found inside that ZIP.
+    """
+    from pathlib import PurePosixPath, PureWindowsPath
+    from io import BytesIO
+    from stat import S_ISLNK
+    from scripts.replay_jpl import replay
+    source, output = Path(source), Path(output)
+    if output.exists():raise FileExistsError('Preserve existing verification')
+    if (type(expected_sha256) is not str or len(expected_sha256) != 64
+            or any(c not in '0123456789abcdef' for c in expected_sha256)):
+        raise ValueError('Expected explicit archive SHA256')
+    with source.open('rb') as stream:
+        raw_archive = stream.read(256*2**20 + 1)
+    if len(raw_archive) > 256*2**20:
+        raise ValueError('Historical verification archive exceeds256MiB')
+    if hashlib.sha256(raw_archive).hexdigest() != expected_sha256:
+        raise ValueError('Historical verification archive SHA256 mismatch')
+    with zipfile.ZipFile(BytesIO(raw_archive)) as archive:
+        prefixes = {PurePosixPath(n).parts[0]+'/verification/' for n in archive.namelist()
+                    if len(PurePosixPath(n).parts) >= 3 and PurePosixPath(n).parts[1] == 'verification'}
+        if len(prefixes) != 1:raise ValueError('Expected one archived verification root')
+        prefix = prefixes.pop()
+        members = [m for m in archive.infolist() if m.filename.startswith(prefix) and not m.is_dir()]
+        if sum(m.file_size for m in members) > 64*2**20:
+            raise ValueError('Historical verification input exceeds64MiB')
+        payloads = {}
+        for member in members:
+            name = member.filename[len(prefix):]
+            path = PurePosixPath(name); win = PureWindowsPath(name)
+            if (not name or '\\' in name or path.is_absolute() or '..' in path.parts
+                    or win.drive or win.root or S_ISLNK(member.external_attr >> 16)
+                    or name in payloads):
+                raise ValueError('Unsafe or duplicate historical verification path')
+            payloads[name] = archive.read(member)
+    # Publish a destination only after a complete independent data replay.
+    with tempfile.TemporaryDirectory(prefix='verification-history-', dir=output.parent) as temporary:
+        stage = Path(temporary)/'payload';stage.mkdir()
+        for name, raw in payloads.items():
+            target = stage/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(raw)
+        result = replay(stage)
+        if not result['checks_passed']:raise ValueError('Historical verification replay failed')
+        manifest_sha = hashlib.sha256((stage/'manifest.json').read_bytes()).hexdigest()
+        if output.exists():raise FileExistsError('Preserve existing verification')
+        stage.rename(output)
+    return dict(result, origin=dict(mode='copied_historical_exact_archive',
+        archive_sha256=expected_sha256, manifest_sha256=manifest_sha,
+        current_runtime_qualified=False, integration_performed=False))
+
+
+def build(*, verification_archive=None, verification_sha256=None):
+    if (verification_archive is None) != (verification_sha256 is None):
+        raise ValueError('verification_archive and verification_sha256 must be supplied together')
     if sys.platform!="win32" or sys.prefix==sys.base_prefix:
         raise RuntimeError("Build from the project Windows .venv")
     stamp=datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -223,15 +280,20 @@ def build():
     (output/"Solar Sandbox.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui "scenarios\\solar-sandbox-eih-fixed-j2.json"\r\nif errorlevel 1 pause\r\n',encoding="ascii")
     shutil.copy2(ROOT/"docs/solar-sandbox-strict-checkpoint.json",scenarios/"solar-sandbox-strict.json")
     (output/"Solar Sandbox Strict.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -m solar_simulator gui "scenarios\\solar-sandbox-strict.json"\r\nif errorlevel 1 pause\r\n',encoding="ascii")
-    verification_export=subprocess.run([sys.executable,"-X","utf8","-B","-m","scripts.export_jpl_bundle",
-        "--output",str(output/"verification")],cwd=ROOT,capture_output=True,text=True,encoding="utf-8")
-    if verification_export.returncode:raise RuntimeError("Verification bundle export failed:\n"+verification_export.stderr)
-    if not json.loads(verification_export.stdout)["checks_passed"]:raise RuntimeError("Exported JPL comparison failed")
+    if verification_archive is None:
+        verification_export=subprocess.run([sys.executable,"-X","utf8","-B","-m","scripts.export_jpl_bundle",
+            "--output",str(output/"verification")],cwd=ROOT,capture_output=True,text=True,encoding="utf-8")
+        if verification_export.returncode:raise RuntimeError("Verification bundle export failed:\n"+verification_export.stderr)
+        verification_result=json.loads(verification_export.stdout)
+    else:
+        verification_result=reuse_historical_verification(verification_archive,verification_sha256,output/'verification')
+    if not verification_result["checks_passed"]:raise RuntimeError("Exported JPL comparison failed")
     (output/"JPL Verification.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -I "verification\\replay_jpl.py" "verification"\r\npause\r\n',encoding="ascii")
     (output/"Physics Verification.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -B -I "verification\\recompute_jpl.py" "verification"\r\npause\r\n',encoding="ascii")
     (output/"Continuous Catalog Experimental.cmd").write_text('@echo off\r\ncd /d "%~dp0"\r\n"runtime\\python.exe" -X utf8 -B -I -m solar_simulator.continuous_cli --input "scenarios\\solar-system-asteroids-catalog-rust-1pn-solar-q2-relative.json" --target 720000 --packet-steps 20\r\npause\r\n',encoding="ascii")
     (output/"CURRENT-STATUS.md").write_text(
         "# Solar Simulator: текущая рабочая сборка\n\n"
+        "verification содержит сохранённые исторические траектории. Их replay не аттестует новый runtime.\n\n"
         "Запуск приложения: `Solar Simulator.cmd`. Опыт со свободным вращением Луны: `Moon Rotation.cmd`.\n"
         "В окне доступна кнопка «Луна: свободное вращение» и вид Земля–Луна; остальные тела остаются в расчёте.\n"
         "Готовые настройки и сохранения находятся в `scenarios`; руководство — [USER-GUIDE](USER-GUIDE.md).\n\n"
@@ -275,7 +337,8 @@ def build():
                                     "committed-packet-safe-close", "local-recovery-browser", "CLI-final-output-recovery",
                                     "recorded-trajectories", "independent-playback", "parent-child-comparison",
                                     "explicit-editor-units", "recording-recipes", "full-frame-replay"],
-                  physical_PN_lunar_rotation_certified=False)
+                  physical_PN_lunar_rotation_certified=False,
+                  verification_origin=verification_result.get('origin',dict(mode='strict_source_export',current_runtime_qualified=False)))
     (output/"BUILD-INFO.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding="utf-8")
     # Prove the copied runtime imports local packages and initializes real Tk.
     probe="import sys,pathlib,tkinter,solar_simulator,solar_native,numpy,matplotlib,scipy; from solar_simulator.experiment import advance,preset; r=tkinter.Tk(); r.withdraw(); r.destroy(); s=advance(preset('spheres',backend='rust'),2000); assert len(s.events)==2; from dataclasses import replace; a=preset('sun-earth'); a=replace(a,settings=replace(a.settings,integrator='dop853')); assert advance(a,20).time>0; assert len(advance(preset('solar-system'),20).bodies)==9; print(sys.prefix); print(pathlib.Path(solar_simulator.__file__).resolve()); print('portable Tk + native physics OK')"
@@ -424,4 +487,11 @@ def export_guide(source,target):
 
 
 if __name__=="__main__":
-    build()
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--verification-archive',type=Path)
+    parser.add_argument('--verification-sha256')
+    args=parser.parse_args()
+    if (args.verification_archive is None) != (args.verification_sha256 is None):
+        parser.error('--verification-archive and --verification-sha256 are required together')
+    build(verification_archive=args.verification_archive,verification_sha256=args.verification_sha256)

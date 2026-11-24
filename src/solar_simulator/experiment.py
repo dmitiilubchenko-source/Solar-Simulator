@@ -86,6 +86,11 @@ class Experiment:
     initial_rotations: tuple = ()
     rotations: tuple = ()
 
+    def __post_init__(self):
+        from .rotation import validate_dynamic_q2_count
+        validate_dynamic_q2_count(len(self.initial_rotations))
+        validate_dynamic_q2_count(len(self.rotations))
+
 
 def copy_bodies(bodies):
     return [Body(b.name,b.mass,Vector3(b.position.x,b.position.y,b.position.z),
@@ -96,6 +101,8 @@ def copy_bodies(bodies):
 def create_experiment(bodies: list[Body], settings: Settings, *, origin: EphemerisOrigin | None = None, rotations=()) -> Experiment:
     if type(rotations) is not tuple:
         raise ValueError("Вращения должны быть кортежем состояний")
+    from .rotation import validate_dynamic_q2_count
+    validate_dynamic_q2_count(len(rotations))
     if not bodies or len({b.name for b in bodies}) != len(bodies):
         raise ValueError("Нужны тела с уникальными именами")
     if settings.integrator == "dop853" and any(b.radius > 0 for b in bodies):
@@ -142,6 +149,9 @@ def validate_start(experiment: Experiment):
 def advance(experiment: Experiment, steps: int) -> Experiment:
     if type(steps) is not int or steps < 0:
         raise ValueError("steps должен быть неотрицательным целым")
+    from .rotation import validate_dynamic_q2_count
+    validate_dynamic_q2_count(len(experiment.initial_rotations))
+    validate_dynamic_q2_count(len(experiment.rotations))
     validate_start(experiment)
     if experiment.halted or steps == 0:
         return experiment

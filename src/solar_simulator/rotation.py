@@ -13,6 +13,18 @@ from .simulation import G
 from ._numbers import finite_number
 
 
+LIMITED_Q2_MESSAGE = (
+    "Режим двух и более динамически вращающихся несферических тел временно "
+    "недоступен в Solar-Simulator 0.4.0. Поддерживается не более одного такого тела."
+)
+
+
+def validate_dynamic_q2_count(count):
+    """Product scope only; FixedJ2 fields are not dynamic rotation states."""
+    if count > 1:
+        raise ValueError(LIMITED_Q2_MESSAGE)
+
+
 def _vector(value, size, name):
     # Inspect before float coercion erases bool/string/complex element types.
     if isinstance(value, np.ndarray) and value.dtype.kind not in "iufO":

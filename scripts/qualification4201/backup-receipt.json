@@ -1,0 +1,9 @@
+{
+  "status": "CLOUD_VERIFIED",
+  "scope": "Exact419portable reconstructed from all independently downloaded cloud parts; full SHA/size/CRC.419evidence,closure and418source restoration chain verified.",
+  "portable_bytes": 113122339,
+  "portable_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
+  "private_cloud_identifiers": "Excluded from public source; detailed receipts retained privately",
+  "retries": 0,
+  "qualified_source_restorable": true
+}

@@ -113,7 +113,6 @@ class Laboratory:
         self.scenario_info_widget.pack(fill="x",padx=12,pady=3)
         quick=ControlRow(self.root); quick.pack(fill="x",padx=8)
         self._button(quick,"Луна: свободное вращение",self._open_lunar_rotation)
-        self._button(quick,"Две Q2-фигуры — учебный",self._open_two_q2)
         self._button(quick,"Вращение и надёжность…",self._show_inspection)
         self._combo(quick,'Солн. профиль',self.solar_profile,('standard','strict'),width=9)
         self._button(quick,"Солнечная система: EIH + J2",self._open_solar_sandbox)

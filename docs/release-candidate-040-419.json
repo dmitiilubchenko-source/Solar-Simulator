@@ -1,0 +1,13 @@
+{
+  "kind": "public-qualification419-summary",
+  "original_source_commit": "669478e0c88b7520bf2473e22f237f4f5c42ecbd",
+  "tree": "872789f206d55a9af056d45162fffd54b8cda70c",
+  "ZIP_SHA256": "1f9ad65bb32b26296f2c82bc772061899e8c69bed41ffc28df983c5c8111e2ed",
+  "Python_PASS": 3119,
+  "Rust_PASS": 19,
+  "check_project_exit": 0,
+  "check_portable_exit": 0,
+  "qualification_scope": "original source and immutable ZIP; public source equivalence checked separately",
+  "APPLICATION_D1": "NO_GO",
+  "private_operational_records": "excluded, originals preserved"
+}

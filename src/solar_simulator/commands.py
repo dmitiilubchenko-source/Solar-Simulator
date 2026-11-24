@@ -132,6 +132,10 @@ def main(argv=None):
         save_experiment(experiment,args.output,parent_snapshot=snapshot)
         print(json.dumps(values,ensure_ascii=False,allow_nan=False,indent=2))
     except (ValueError,RuntimeError,OSError,OverflowError,ImportError) as error:
+        # Windows redirected stderr may use a locale unable to encode Cyrillic.
+        # Leave the interactive Windows console and test/StringIO streams alone.
+        if not sys.stderr.isatty() and hasattr(sys.stderr, 'reconfigure'):
+            sys.stderr.reconfigure(encoding='utf-8')
         parser.exit(2,f"Ошибка: {error}\n")
     return 0
 

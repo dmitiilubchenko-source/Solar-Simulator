@@ -8,6 +8,9 @@ from .branch_io import save_experiment
 
 
 def save_recovery(experiment, *, parent_snapshot=None, directory=None, reason='stopped'):
+    from .rotation import validate_dynamic_q2_count
+    validate_dynamic_q2_count(len(experiment.initial_rotations))
+    validate_dynamic_q2_count(len(experiment.rotations))
     if reason not in ('stopped', 'closed', 'interrupted', 'failed', 'replaced'):
         raise ValueError('Unknown recovery reason')
     if directory is None:directory = recovery_directory()

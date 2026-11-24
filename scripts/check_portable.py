@@ -8,9 +8,26 @@ import subprocess
 import zipfile
 
 
+def fresh_year_command(folder,current_manifest_pin=None):
+    """Explicit opt-in; missing current files never fall back to historical mode."""
+    folder=Path(folder);runtime=folder/'runtime'
+    prefix=[str(runtime/'python.exe'),'-X','utf8','-B','-I']
+    if current_manifest_pin is None:
+        return prefix+[str(folder/'verification/recompute_jpl.py'),str(folder/'verification'),
+                       '--output',str(folder/'fresh-year-verification.json')]
+    import hashlib
+    manifest=folder/'verification-current040/manifest-v1.json'
+    if hashlib.sha256(manifest.read_bytes()).hexdigest()!=current_manifest_pin:
+        raise ValueError('Current040 manifest binding mismatch')
+    return prefix+[str(folder/'verification-current040/recompute_current040_v1.py'),str(folder),
+                   '--manifest-sha256',current_manifest_pin,'--run','--output',
+                   str(folder.parent/(folder.name+'-fresh-current040-raw'))]
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("archive",type=Path)
+    parser.add_argument('--current040-manifest-sha256')
     args=parser.parse_args()
     root=Path(__file__).resolve().parents[1]
     target=root/".tools"/f"portable relocated {datetime.now():%Y%m%d-%H%M%S}"
@@ -224,13 +241,30 @@ print(json.dumps(dict(prefix=str(root),tcl=str(library),events=len(experiment.ev
     result["jpl_replay"]=json.loads(replay_output)
     if not result["jpl_replay"]["checks_passed"] or result["jpl_replay"]["solver_executed"]:
         raise ValueError("Replay scope or results failed")
-    fresh_output=subprocess.check_output([str(runtime/"python.exe"),"-X","utf8","-B","-I",
-        str(folder/"verification/recompute_jpl.py"),str(folder/"verification"),
-        "--output",str(folder/"fresh-year-verification.json")],cwd=folder,env=environment,text=True,encoding="utf-8")
+    fresh_output=subprocess.check_output(fresh_year_command(folder,args.current040_manifest_sha256),
+        cwd=folder,env=environment,text=True,encoding="utf-8")
     result["fresh_year"]=json.loads(fresh_output)
     if not result["fresh_year"]["checks_passed"] or not result["fresh_year"]["solver_executed"]:
         raise ValueError("Fresh production propagation failed")
-    result["continuous"]=check_continuous(folder,environment)
+    evidence = None
+    if args.current040_manifest_sha256 is not None:
+        import hashlib
+        wrapper = Path(__file__).resolve()
+        writer = wrapper.parent/"qualification410e/writer.py"
+        data = (folder/"verification-current040/manifest-v1.json").read_bytes()
+        if hashlib.sha256(data).hexdigest() != args.current040_manifest_sha256:
+            raise ValueError("Evidence current040 manifest binding mismatch")
+        manifest = json.loads(data)
+        provenance = dict(
+            wrapper_sha256=hashlib.sha256(wrapper.read_bytes()).hexdigest(),
+            writer_sha256=hashlib.sha256(writer.read_bytes()).hexdigest(),
+            portable_sha256=hashlib.sha256(args.archive.read_bytes()).hexdigest(),
+            runtime_commit=manifest["source_commit"], runtime_tree=manifest["source_tree"],
+            native_sha256=manifest["native_SHA256"],
+            current_manifest_sha256=args.current040_manifest_sha256,
+        )
+        evidence = [str(writer), str(target/"continuous-year-raw"), json.dumps(provenance)]
+    result["continuous"]=check_continuous(folder,environment,evidence=evidence)
     print(json.dumps(result,ensure_ascii=False,indent=2))
     print(f"RELOCATED_DIR={folder}")
 
@@ -516,7 +550,7 @@ print(json.dumps(result))
     return report
 
 
-def check_continuous(folder,environment):
+def check_continuous(folder,environment,*,evidence=None):
     """Recompute explicit profiles from the actual relocated package."""
     probe=r'''
 import csv,hashlib,json,pathlib,numpy as np,sys
@@ -527,6 +561,16 @@ root=pathlib.Path.cwd()
 receipt=json.loads((root/'docs/continuous-integration-validation.json').read_bytes())
 path=root/'docs/continuous-integration-reference.npz'
 assert hashlib.sha256(path.read_bytes()).hexdigest()==receipt['public_reference_sha256']
+if len(sys.argv)>1:
+    import runpy
+    provenance=json.loads(sys.argv[3])
+    if hashlib.sha256(pathlib.Path(sys.argv[1]).read_bytes()).hexdigest()!=provenance['writer_sha256']:
+        raise ValueError('Continuous evidence writer binding mismatch')
+    evidence_api=runpy.run_path(sys.argv[1])
+    inputs_before=evidence_api['observe_inputs'](root,provenance)
+    actual_epochs_seconds=[]
+else:
+    evidence_api=None
 with np.load(path,allow_pickle=False) as data:
     sample={k:data[k].copy() for k in data.files}
 def matrix(state):
@@ -545,12 +589,23 @@ catalog=difference(actual,sample['catalog_continuous'])
 assert catalog['position_metres']<.1 and catalog['velocity_m_per_s']<1e-6
 seed=load(root/'scenarios/solar-sandbox-strict.json')
 session=ContinuousRun(seed,float(sample['year_times'][-1]));values=[]
+if evidence_api:
+    body_names=tuple(b.name for b in seed.bodies)
 for time in sample['year_times']:
     while session.current.time<time:session.next(20,until=float(time))
-    values.append(matrix(session.current))
+    current=session.current
+    values.append(matrix(current))
+    if evidence_api:
+        actual_epochs_seconds.append(float(current.time))
+        if tuple(b.name for b in current.bodies)!=body_names:
+            raise ValueError('Continuous evidence body order changed')
 actual=np.array(values)
 year=difference(actual,sample['year_continuous'])
 relative=difference(actual[:,4]-actual[:,3],sample['year_independent'][:,4]-sample['year_independent'][:,3])
+if evidence_api:
+    evidence_api['write_year'](sys.argv[2],root,provenance,inputs_before,actual,
+        actual_epochs_seconds,sample['year_times'],body_names,sample['year_continuous'].shape,
+        year,relative,session.statistics)
 assert year['position_metres']<.1 and year['velocity_m_per_s']<1e-6
 assert relative['position_metres']<.1 and relative['velocity_m_per_s']<1e-5
 assert receipt['general_release_passed'] is False
@@ -558,7 +613,7 @@ print(json.dumps(dict(catalog_reproduction=catalog,year_reproduction=year,relati
     catalog_rhs_calls=result['rhs_calls'],catalog_packets=result['packets'],year_statistics=session.statistics,
     experimental=True,isolated=sys.flags.isolated,general_release_passed=False)))
 '''
-    process=subprocess.run([str(folder/'runtime/python.exe'),'-X','utf8','-B','-I','-c',probe],cwd=folder,
+    process=subprocess.run([str(folder/'runtime/python.exe'),'-X','utf8','-B','-I','-c',probe,*(evidence or ())],cwd=folder,
         env=environment,capture_output=True,text=True,encoding='utf-8',timeout=120)
     if process.returncode:raise RuntimeError('Relocated continuous mode failed:\n'+process.stdout+process.stderr)
     return json.loads(process.stdout)

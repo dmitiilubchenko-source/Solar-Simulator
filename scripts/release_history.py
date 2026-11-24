@@ -123,6 +123,8 @@ def ui_historical_sha(root,name,expected):
             return digest(files[name])
     from io import BytesIO
     for archive_name, archive_sha, names in (
+            (QUAL419_ARCHIVE, QUAL419_SHA, QUAL419_FILES),
+            (PRODUCT_LIMIT_ARCHIVE, PRODUCT_LIMIT_ARCHIVE_SHA, PRODUCT_LIMIT_FILES),
             (QUALIFICATION_ARCHIVE, QUALIFICATION_ARCHIVE_SHA, QUALIFICATION_FILES),
             (CI_ARCHIVE, CI_ARCHIVE_SHA, CI_FILES),
             (LABORATORY_ARCHIVE, LABORATORY_ARCHIVE_SHA, LABORATORY_FILES),
@@ -194,3 +196,18 @@ def verify_checkpoint_history(checkpoint, root):
     for name, expected in records.items():
         if ui_historical_sha(root, name, expected) != expected:
             raise ValueError('Historical checkpoint source SHA256 mismatch: '+name)
+
+
+# Exact pre418 sources, for offline history verification only.
+PRODUCT_LIMIT_ARCHIVE = 'scripts/validation/product-before418-sources.zip'
+PRODUCT_LIMIT_ARCHIVE_SHA = 'f9db8db280deba13692928fc799badbe39dcb48123340bdd04430ce6b26acd84'
+PRODUCT_LIMIT_FILES = ('src/solar_simulator/rotation.py','src/solar_simulator/experiment.py','src/solar_simulator/nbody_rotation.py','src/solar_simulator/recovery.py','src/solar_simulator/application_profiles.py','src/solar_simulator/app.py','scripts/release_history.py')
+HISTORICAL_FILES.update(PRODUCT_LIMIT_FILES)
+HISTORICAL_ARCHIVES += (PRODUCT_LIMIT_ARCHIVE,)
+
+# Exact pre419 bytes for offline replay only; current guards unchanged.
+QUAL419_ARCHIVE = 'scripts/validation/qualification-before419.zip'
+QUAL419_SHA = 'a2a96023fe142fd35300203be85bb0826aac065e57e048916bc27665173eaefb'
+QUAL419_FILES = ('src/solar_simulator/commands.py', 'scripts/check_portable.py', 'scripts/release_history.py')
+HISTORICAL_FILES.update(QUAL419_FILES)
+HISTORICAL_ARCHIVES += (QUAL419_ARCHIVE,)

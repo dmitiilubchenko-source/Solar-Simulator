@@ -5,16 +5,9 @@ from .experiment import create_experiment, preset
 
 
 def two_q2_demo(*, backend="python"):
-    """Exact synthetic two-body IC from380; no real planetary parameters."""
-    import hashlib
-    import json
-    from importlib.resources import files
-    from .storage import from_document
-    raw=files('solar_simulator.data').joinpath('two-q2-demo380.json').read_bytes()
-    if hashlib.sha256(raw).hexdigest()!='3f6fa9b5883db9e14653c43ddc7359e4cf795744e42d3345baf9ea018772428b':
-        raise ValueError('Учебные начальные данные двух Q2-фигур изменены')
-    result=from_document(json.loads(raw))
-    return replace(result,settings=replace(result.settings,backend=backend))
+    """Historical profile is unavailable in this limited product candidate."""
+    from .rotation import validate_dynamic_q2_count
+    validate_dynamic_q2_count(2)
 
 
 def scenario(name, *, backend="python", eccentricity=0.0):
